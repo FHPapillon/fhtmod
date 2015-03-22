@@ -1,0 +1,15 @@
+GeometryTemplate.create BundledMesh fht_radio_rp
+CollisionManager.createTemplate fht_radio_rp
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator SPIT:spitfire05
+ObjectTemplate.collisionMesh fht_radio_rp
+ObjectTemplate.mapMaterial 0 default 0
+ObjectTemplate.mapMaterial 1 wreck 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometry fht_radio_rp
+
+include fht_radio_rp.tweak

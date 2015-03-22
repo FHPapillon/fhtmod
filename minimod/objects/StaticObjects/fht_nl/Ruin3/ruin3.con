@@ -1,0 +1,14 @@
+GeometryTemplate.create StaticMesh ruin3
+CollisionManager.createTemplate ruin3
+
+ObjectTemplate.create SimpleObject ruin3
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator GAMEGRANATE:Dennis
+ObjectTemplate.collisionMesh ruin3
+ObjectTemplate.mapMaterial 0 col 0
+ObjectTemplate.mapMaterial 1 stairs_concrete 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.geometry ruin3
+
+include ruin3.tweak

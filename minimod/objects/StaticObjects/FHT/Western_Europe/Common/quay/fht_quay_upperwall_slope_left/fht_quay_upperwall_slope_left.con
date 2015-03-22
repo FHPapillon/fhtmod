@@ -1,0 +1,14 @@
+GeometryTemplate.create StaticMesh fht_quay_upperwall_slope_left
+CollisionManager.createTemplate fht_quay_upperwall_slope_left
+
+ObjectTemplate.create SimpleObject fht_quay_upperwall_slope_left
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator PANDA:Neri
+ObjectTemplate.collisionMesh fht_quay_upperwall_slope_left
+ObjectTemplate.mapMaterial 0 concrete 0
+ObjectTemplate.mapMaterial 1 rock 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.geometry fht_quay_upperwall_slope_left
+
+include fht_quay_upperwall_slope_left.tweak

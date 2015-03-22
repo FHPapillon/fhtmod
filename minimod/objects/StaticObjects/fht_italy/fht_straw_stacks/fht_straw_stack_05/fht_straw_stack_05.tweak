@@ -1,0 +1,19 @@
+rem *** Generated with Bf2Editor.exe [created: 2006/5/15 11:52]
+GeometryTemplate.doNotGenerateLightmaps 0
+GeometryTemplate.lightmapOverride 0
+GeometryTemplate.compressVertexData 1
+GeometryTemplate.maxTextureRepeat 16
+GeometryTemplate.glowing 0
+GeometryTemplate.noLighting 0
+ObjectTemplate.activeSafe SimpleObject fht_straw_stack_05
+ObjectTemplate.creator SORKEN:Sorken
+ObjectTemplate.modifiedByUser "HP_Ägaren"
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.cullRadiusScale 3
+ObjectTemplate.geometry fht_straw_stack_05
+ObjectTemplate.setCollisionMesh fht_straw_stack_05
+ObjectTemplate.mapMaterial 0 grass 5
+ObjectTemplate.hasMobilePhysics 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+

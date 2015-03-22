@@ -1,0 +1,37 @@
+include ../geoms.con
+ObjectTemplate.networkableInfo KitInfo
+ObjectTemplate.kitType Engineer
+ObjectTemplate.aiTemplate Engineer
+ObjectTemplate.geometry kitmesh_dep_dummy
+ObjectTemplate.geometry.kit c_kit_engineer
+ObjectTemplate.geometry.dropGeom c_drop_rifleassault
+ObjectTemplate.collisionMesh kit_collision
+ObjectTemplate.physicsType Point
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.hasMobilePhysics 0
+ObjectTemplate.mapMaterial 0 material 76
+ObjectTemplate.cullRadiusScale 4
+
+rem -------------------------------------
+ObjectTemplate.addTemplate wrench_pack
+include ../debug.con
+rem -------------------------------------
+
+ObjectTemplate.createComponent AbilityHud
+ObjectTemplate.abilityHud.ammoSound S_Resupply
+ObjectTemplate.abilityHud.healingSound S_Heal
+ObjectTemplate.abilityHud.repairingSound S_Repair
+
+ObjectTemplate.createComponent VehicleHud
+ObjectTemplate.vehicleHud.hudName 		"ENGINEER"
+ObjectTemplate.vehicleHud.miniMapIcon		"Ingame\Kits\Icons\kit_Engineer_outline.tga"
+ObjectTemplate.vehicleHud.vehicleIcon		"Ingame\Kits\Icons\kit_Engineer.tga"
+ObjectTemplate.vehicleHud.spottedIcon 		"Ingame\Player\Icons\Minimap\mini_Soldier.dds"
+ObjectTemplate.vehicleHud.pantingSound		S_SprintBreath
+ObjectTemplate.vehicleHud.injurySound		S_Injury
+ObjectTemplate.vehicleHud.vehicleType 		7
+
+ObjectTemplate.sprintStaminaDissipationFactor 0.6
+
+ObjectTemplate.createComponent Radio
+ObjectTemplate.Radio.spottedMessage	"infantry_spotted"

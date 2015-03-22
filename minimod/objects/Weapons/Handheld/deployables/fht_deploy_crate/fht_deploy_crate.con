@@ -1,0 +1,13 @@
+GeometryTemplate.create BundledMesh fht_deploy_crate
+CollisionManager.createTemplate fht_deploy_crate
+
+ObjectTemplate.create GenericFireArm fht_deploy_crate
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator TODDEL:Thorsten
+ObjectTemplate.collisionMesh fht_deploy_crate
+ObjectTemplate.mapMaterial 0 soldierweapon 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.geometry fht_deploy_crate
+
+include fht_deploy_crate.tweak

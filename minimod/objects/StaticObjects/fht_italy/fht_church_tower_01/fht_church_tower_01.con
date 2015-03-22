@@ -1,0 +1,15 @@
+GeometryTemplate.create StaticMesh fht_church_tower_01
+CollisionManager.createTemplate fht_church_tower_01
+
+ObjectTemplate.create SimpleObject fht_church_tower_01
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator SORKEN:HP_Ägaren
+ObjectTemplate.collisionMesh fht_church_tower_01
+ObjectTemplate.mapMaterial 0 concrete 0
+ObjectTemplate.mapMaterial 1 metal_solid 0
+ObjectTemplate.mapMaterial 2 stairs_concrete 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.geometry fht_church_tower_01
+
+include fht_church_tower_01.tweak

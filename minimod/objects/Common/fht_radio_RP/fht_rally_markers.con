@@ -1,0 +1,134 @@
+CollisionManager.createTemplate pusher
+
+ObjectTemplate.create PlayerControlObject fht_rally_marker_0
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_rally_marker_0
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_0.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_0.dds
+include fht_rally_marker.tweak
+
+ObjectTemplate.create PlayerControlObject fht_rally_marker_1
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_rally_marker_1
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_1.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_1.dds
+include fht_rally_marker.tweak
+
+ObjectTemplate.create PlayerControlObject fht_rally_marker_1_alt
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_rally_marker_1
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_1_alt.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_1_alt.dds
+include fht_rally_marker.tweak
+
+ObjectTemplate.create PlayerControlObject fht_rally_marker_2
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_rally_marker_2
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_2.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_2.dds
+include fht_rally_marker.tweak
+
+ObjectTemplate.create PlayerControlObject fht_rally_marker_2_alt
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_rally_marker_2
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_2_alt.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_2_alt.dds
+include fht_rally_marker.tweak
+
+ObjectTemplate.create PlayerControlObject fht_rally_marker_3
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_rally_marker_3
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_3.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_3.dds
+include fht_rally_marker.tweak
+
+ObjectTemplate.create PlayerControlObject fht_rally_marker_3_alt
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_rally_marker_3
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_3_alt.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_3_alt.dds
+include fht_rally_marker.tweak
+
+ObjectTemplate.create PlayerControlObject fht_rally_marker_4
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_rally_marker_4
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_4.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_4.dds
+include fht_rally_marker.tweak
+
+ObjectTemplate.create PlayerControlObject fht_rally_marker_4_alt
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_rally_marker_4
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_4_alt.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_4_alt.dds
+include fht_rally_marker.tweak
+
+ObjectTemplate.create PlayerControlObject fht_rally_marker_5
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_rally_marker_5
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_5.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_5.dds
+include fht_rally_marker.tweak
+
+ObjectTemplate.create PlayerControlObject fht_rally_marker_5_alt
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_rally_marker_5
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_5_alt.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_5_alt.dds
+include fht_rally_marker.tweak
+
+ObjectTemplate.create PlayerControlObject fht_rally_marker_6
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_rally_marker_6
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_6.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_6.dds
+include fht_rally_marker.tweak
+
+ObjectTemplate.create PlayerControlObject fht_rally_marker_6_alt
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_rally_marker_6
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_6_alt.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_6_alt.dds
+include fht_rally_marker.tweak
+
+ObjectTemplate.create PlayerControlObject fht_rally_marker_7
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_rally_marker_7
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_7.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_7.dds
+include fht_rally_marker.tweak
+
+ObjectTemplate.create PlayerControlObject fht_rally_marker_7_alt
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_rally_marker_7
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_7_alt.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_7_alt.dds
+include fht_rally_marker.tweak
+
+ObjectTemplate.create PlayerControlObject fht_rally_marker_8
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_rally_marker_8
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_8.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_8.dds
+include fht_rally_marker.tweak
+
+ObjectTemplate.create PlayerControlObject fht_rally_marker_8_alt
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_rally_marker_8
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_8_alt.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_8_alt.dds
+include fht_rally_marker.tweak
+
+ObjectTemplate.create PlayerControlObject fht_rally_marker_9
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_rally_marker_9
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_9.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_9.dds
+include fht_rally_marker.tweak
+
+ObjectTemplate.create PlayerControlObject fht_rally_marker_9_alt
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_rally_marker_9
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_9_alt.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_9_alt.dds
+include fht_rally_marker.tweak

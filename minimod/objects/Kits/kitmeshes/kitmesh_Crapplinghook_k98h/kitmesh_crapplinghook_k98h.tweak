@@ -1,0 +1,13 @@
+rem *** Generated with Bf2Editor.exe [created: 2006/5/15 11:52]
+GeometryTemplate.maxSkip3pLods 0
+GeometryTemplate.setSubGeometryLodDistance 0 0 10
+GeometryTemplate.setSubGeometryLodDistance 0 1 25
+GeometryTemplate.compressVertexData 1
+GeometryTemplate.maxTextureRepeat 16
+ObjectTemplate.activeSafe SimpleObject kitmesh_crapplinghook_k98h
+ObjectTemplate.creator Toddel
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.geometry kitmesh_crapplinghook_k98h
+ObjectTemplate.hasMobilePhysics 0
+

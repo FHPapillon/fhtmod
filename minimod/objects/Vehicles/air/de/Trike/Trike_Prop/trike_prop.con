@@ -1,0 +1,8 @@
+GeometryTemplate.create BundledMesh trike_prop
+
+ObjectTemplate.create Rotor trike_prop
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator HIT:JGibson
+ObjectTemplate.geometry trike_prop
+
+include trike_prop.tweak

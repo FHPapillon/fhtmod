@@ -1,0 +1,13 @@
+GeometryTemplate.create StaticMesh fht_smallruin_3
+CollisionManager.createTemplate fht_smallruin_3
+
+ObjectTemplate.create SimpleObject fht_smallruin_3
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator NYA:Martin
+ObjectTemplate.collisionMesh fht_smallruin_3
+ObjectTemplate.mapMaterial 0 concrete 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.geometry fht_smallruin_3
+
+include fht_smallruin_3.tweak

@@ -1,0 +1,6 @@
+ObjectTemplate.create GenericFireArm wrench_pack
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator PAN-1:pan
+ObjectTemplate.geometry wrench
+
+include wrench_pack.tweak

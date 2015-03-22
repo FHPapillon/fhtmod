@@ -1,0 +1,14 @@
+GeometryTemplate.create StaticMesh fht_barn_01
+CollisionManager.createTemplate fht_barn_01
+
+ObjectTemplate.create SimpleObject fht_barn_01
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator SORKEN:HP_Ägaren
+ObjectTemplate.collisionMesh fht_barn_01
+ObjectTemplate.mapMaterial 0 concrete 0
+ObjectTemplate.mapMaterial 1 wood 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.geometry fht_barn_01
+
+include fht_barn_01.tweak

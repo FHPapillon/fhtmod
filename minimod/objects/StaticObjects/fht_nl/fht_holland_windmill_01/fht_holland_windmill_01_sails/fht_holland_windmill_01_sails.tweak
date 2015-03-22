@@ -1,0 +1,21 @@
+rem *** Generated with Bf2Editor.exe [created: 2006/5/15 12:52]
+GeometryTemplate.doNotGenerateLightmaps 0
+GeometryTemplate.lightmapOverride 0
+GeometryTemplate.compressVertexData 1
+GeometryTemplate.maxTextureRepeat 16
+GeometryTemplate.glowing 0
+GeometryTemplate.noLighting 0
+ObjectTemplate.activeSafe SimpleObject fht_holland_windmill_01_sails
+ObjectTemplate.creator DEEPTHOUGHTIII:Lukas
+ObjectTemplate.modifiedByUser "Lukas"
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.cullRadiusScale 15
+ObjectTemplate.geometry fht_holland_windmill_01_sails
+ObjectTemplate.setCollisionMesh fht_holland_windmill_01_sails
+ObjectTemplate.mapMaterial 0 wood_solid 15
+ObjectTemplate.mapMaterial 1 penetrable_cloth 1002
+ObjectTemplate.mapMaterial 2 UNDEFINED 15
+ObjectTemplate.hasMobilePhysics 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+

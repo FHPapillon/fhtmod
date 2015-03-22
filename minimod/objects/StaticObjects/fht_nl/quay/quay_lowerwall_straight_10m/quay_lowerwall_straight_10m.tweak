@@ -1,0 +1,19 @@
+rem *** Generated with Bf2Editor.exe [created: 2006/5/15 11:52]
+GeometryTemplate.doNotGenerateLightmaps 0
+GeometryTemplate.lightmapOverride 0
+GeometryTemplate.compressVertexData 1
+GeometryTemplate.maxTextureRepeat 16
+GeometryTemplate.glowing 0
+GeometryTemplate.noLighting 0
+ObjectTemplate.activeSafe SimpleObject quay_lowerwall_straight_10m
+ObjectTemplate.creator Neri
+ObjectTemplate.modifiedByUser "Neri"
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.geometry quay_lowerwall_straight_10m
+ObjectTemplate.setCollisionMesh quay_lowerwall_straight_10m
+ObjectTemplate.mapMaterial 0 concrete 78
+ObjectTemplate.mapMaterial 1 rock 12
+ObjectTemplate.hasMobilePhysics 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+

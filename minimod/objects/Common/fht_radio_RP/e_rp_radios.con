@@ -1,0 +1,79 @@
+rem =============================================== AU ======================================================
+
+ObjectTemplate.create EffectBundle e_rp_au
+ObjectTemplate.addTemplate S_e_rp_au_Start
+include e_rp_radio.tweak
+
+ObjectTemplate.activeSafe Sound S_e_rp_au_Start
+ObjectTemplate.soundFilename "objects/common/fht_radio_rp/sound/radio_au.wav"
+include S_e_rp_radio.tweak
+
+rem =============================================== CN ======================================================
+
+ObjectTemplate.create EffectBundle e_rp_cn
+ObjectTemplate.addTemplate S_e_rp_cn_Start
+include e_rp_radio.tweak
+
+ObjectTemplate.activeSafe Sound S_e_rp_cn_Start
+ObjectTemplate.soundFilename "objects/common/fht_radio_rp/sound/radio_cn.wav"
+include S_e_rp_radio.tweak
+
+rem =============================================== DE ======================================================
+
+ObjectTemplate.create EffectBundle e_rp_de
+ObjectTemplate.addTemplate S_e_rp_de_Start
+include e_rp_radio.tweak
+
+ObjectTemplate.activeSafe Sound S_e_rp_de_Start
+ObjectTemplate.soundFilename "objects/common/fht_radio_rp/sound/radio_de.wav"
+include S_e_rp_radio.tweak
+
+rem =============================================== GB ======================================================
+
+ObjectTemplate.create EffectBundle e_rp_gb
+ObjectTemplate.addTemplate S_e_rp_gb_Start
+include e_rp_radio.tweak
+
+ObjectTemplate.activeSafe Sound S_e_rp_gb_Start
+ObjectTemplate.soundFilename "objects/common/fht_radio_rp/sound/radio_gb.wav"
+include S_e_rp_radio.tweak
+
+rem =============================================== IT ======================================================
+
+ObjectTemplate.create EffectBundle e_rp_it
+ObjectTemplate.addTemplate S_e_rp_it_Start
+include e_rp_radio.tweak
+
+ObjectTemplate.activeSafe Sound S_e_rp_it_Start
+ObjectTemplate.soundFilename "objects/common/fht_radio_rp/sound/radio_it.wav"
+include S_e_rp_radio.tweak
+
+rem =============================================== NZ ======================================================
+
+ObjectTemplate.create EffectBundle e_rp_nz
+ObjectTemplate.addTemplate S_e_rp_nz_Start
+include e_rp_radio.tweak
+
+ObjectTemplate.activeSafe Sound S_e_rp_nz_Start
+ObjectTemplate.soundFilename "objects/common/fht_radio_rp/sound/radio_gb.wav"
+include S_e_rp_radio.tweak
+
+rem =============================================== PL ======================================================
+
+ObjectTemplate.create EffectBundle e_rp_pl
+ObjectTemplate.addTemplate S_e_rp_pl_Start
+include e_rp_radio.tweak
+
+ObjectTemplate.activeSafe Sound S_e_rp_pl_Start
+ObjectTemplate.soundFilename "objects/common/fht_radio_rp/sound/radio_pl.wav"
+include S_e_rp_radio.tweak
+
+rem =============================================== US ======================================================
+
+ObjectTemplate.create EffectBundle e_rp_us
+ObjectTemplate.addTemplate S_e_rp_us_Start
+include e_rp_radio.tweak
+
+ObjectTemplate.activeSafe Sound S_e_rp_us_Start
+ObjectTemplate.soundFilename "objects/common/fht_radio_rp/sound/radio_us.wav"
+include S_e_rp_radio.tweak

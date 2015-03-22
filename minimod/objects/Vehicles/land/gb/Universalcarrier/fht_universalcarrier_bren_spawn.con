@@ -1,0 +1,28 @@
+GeometryTemplate.create BundledMesh universalcarrier
+GeometryTemplate.nrOfAnimatedUVMatrix 6
+CollisionManager.createTemplate universalcarrier
+
+ObjectTemplate.create PlayerControlObject fht_universalcarrier_bren_spawn
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator BUTTSLOL:jbp
+ObjectTemplate.collisionMesh universalcarrier
+ObjectTemplate.mapMaterial 0 main 0
+ObjectTemplate.mapMaterial 1 runninggear 0
+ObjectTemplate.mapMaterial 2 tracks 0
+ObjectTemplate.mapMaterial 3 wreck 0
+ObjectTemplate.mapMaterial 4 tank_tracks 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometry universalcarrier
+ObjectTemplate.addTemplate fht_universalcarrier_bren_spawn_asteeringwheel
+ObjectTemplate.setPosition 0.3179/0.1522/0.9956
+
+ObjectTemplate.create RotationalBundle fht_universalcarrier_bren_spawn_asteeringwheel
+ObjectTemplate.collisionPart 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 1
+
+include fht_universalcarrier_bren_spawn.tweak

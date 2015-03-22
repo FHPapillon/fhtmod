@@ -1,0 +1,22 @@
+ObjectTemplate.addTemplate mc202Physics_RudderFlap
+ObjectTemplate.setPosition 0/0/-5.15
+ObjectTemplate.setRotation 0/0/-90
+ObjectTemplate.addTemplate mc202Physics_PhyTailFlap
+ObjectTemplate.setPosition 0/0/-5.45
+ObjectTemplate.setRotation 0/0.5/0
+ObjectTemplate.addTemplate mc202Physics_BodyWingVertical
+ObjectTemplate.setPosition 0/0/2.95
+ObjectTemplate.setRotation 0/0/-90
+ObjectTemplate.addTemplate mc202Physics_PhyFlapsL
+ObjectTemplate.setPosition -4.15/-0.5/0
+ObjectTemplate.addTemplate mc202Physics_PhyFlapsR
+ObjectTemplate.setPosition 4.15/-0.5/0
+ObjectTemplate.addTemplate mc202_PhysicsEngine
+ObjectTemplate.setPosition 0/-0.03/2.75
+ObjectTemplate.addTemplate mc202_BodyWingHorizontal
+ObjectTemplate.setPosition 0/0/0.5
+
+ObjectTemplate.gravityModifier 2
+ObjectTemplate.drag 0.071
+ObjectTemplate.mass 3207
+ObjectTemplate.inertiaModifier 0.9/0.9/0.9

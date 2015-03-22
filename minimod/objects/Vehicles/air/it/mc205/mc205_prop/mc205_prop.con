@@ -1,0 +1,8 @@
+GeometryTemplate.create BundledMesh mc205_prop
+
+ObjectTemplate.create Rotor mc205_prop
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator DEEPTHOUGHTIII:Lukas
+ObjectTemplate.geometry mc205_prop
+
+include mc205_prop.tweak

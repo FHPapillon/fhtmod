@@ -1,0 +1,822 @@
+rem *** Generated with Bf2Editor.exe [created: 2006/5/15 11:52]
+GeometryTemplate.maxSkip3pLods 0
+GeometryTemplate.setSubGeometryLodDistance 1 0 60
+GeometryTemplate.setSubGeometryLodDistance 1 1 125
+GeometryTemplate.setSubGeometryLodDistance 2 0 60
+GeometryTemplate.setSubGeometryLodDistance 2 1 125
+GeometryTemplate.compressVertexData 1
+GeometryTemplate.maxTextureRepeat 16
+ObjectTemplate.activeSafe PlayerControlObject mc205
+ObjectTemplate.creator BUTTSLOL:jpixton
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.setNetworkableInfo BasicInfo
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.castsDynamicShadow 1
+ObjectTemplate.cullRadiusScale 6
+rem ---BeginComp:Armor ---
+ObjectTemplate.createComponent Armor
+ObjectTemplate.armor.anglemod 1
+ObjectTemplate.armor.maxHitPoints 400
+ObjectTemplate.armor.hitPoints 400
+ObjectTemplate.armor.defaultMaterial 240
+ObjectTemplate.armor.hpLostWhileUpSideDown 350
+ObjectTemplate.armor.hpLostWhileInWater 100
+ObjectTemplate.armor.hpLostWhileInDeepWater 200
+ObjectTemplate.armor.hpLostWhileCriticalDamage 0.2
+ObjectTemplate.armor.waterDamageDelay 1
+ObjectTemplate.armor.waterLevel -0.3
+ObjectTemplate.armor.explosionForce 15
+ObjectTemplate.armor.explosionForceMod 7
+ObjectTemplate.armor.explosionForceMax 4000
+ObjectTemplate.armor.explosionDamage 300
+ObjectTemplate.armor.explosionRadius 15
+ObjectTemplate.armor.explosionMaterial 99
+ObjectTemplate.armor.wreckExplosionForce 7
+ObjectTemplate.armor.wreckExplosionDamage 10
+ObjectTemplate.armor.wreckExplosionRadius 5
+ObjectTemplate.armor.wreckExplosionMaterial 70
+ObjectTemplate.armor.wreckHitPoints 1000
+ObjectTemplate.armor.CriticalDamage 60
+ObjectTemplate.armor.timeToStayAsWreck 60
+ObjectTemplate.armor.destroyOnSpectacularDeath 1
+ObjectTemplate.armor.hideChildrenOnSpectacularDeath 1
+ObjectTemplate.armor.addArmorEffect 75 e_dstate_jets_lightsmoke 0/0/2.23638 0/0/0
+ObjectTemplate.armor.addArmorEffect 50 e_dstate_jets_heavysmoke 0/0/2.08972 0/0/0
+ObjectTemplate.armor.addArmorEffect 15 e_dstate_jets_firesmoke 0/0/2.09788 0/0/0
+ObjectTemplate.armor.addArmorEffect 0 e_vexp_AirGeneric 0/0/0 0/0/0
+ObjectTemplate.armor.addArmorEffectSpectacular 0 e_vexp_AirGeneric 0/0/0 0/0/0
+ObjectTemplate.armor.addArmorEffect -25 e_dstate_Jets_wrecksmoke 0/0/0 0/0/0
+ObjectTemplate.armor.addArmorEffect -100 e_vexp_AirGeneric_2nd 3.7113e-007/6.11173e-006/0.892593 0/0/0
+rem ---EndComp ---
+rem ---BeginComp:Radio ---
+ObjectTemplate.createComponent Radio
+ObjectTemplate.Radio.spottedMessage air_spotted
+rem ---EndComp ---
+rem ---BeginComp:VehicleHud ---
+ObjectTemplate.createComponent VehicleHud
+ObjectTemplate.vehicleHud.useSelectionIcons 0
+ObjectTemplate.vehicleHud.hudName "Mc.205"
+ObjectTemplate.vehicleHud.miniMapIcon Ingame\Vehicles\Icons\Minimap\plane_single.dds
+ObjectTemplate.vehicleHud.miniMapIconLeaderSize Medium
+ObjectTemplate.vehicleHud.vehicleIconPos 1/1
+ObjectTemplate.vehicleHud.vehicleType 4
+ObjectTemplate.vehicleHud.vehicleIcon Ingame\Vehicles\Icons\Hud\VehicleIcons\Placeholder.dds
+rem ---EndComp ---
+rem ---BeginComp:HelpHud ---
+ObjectTemplate.createComponent HelpHud
+ObjectTemplate.HelpHud.helpStringKey "FH2_HELP_AIR_xSights"
+ObjectTemplate.HelpHud.helpSoundKey "fh2_tip"
+rem ---EndComp ---
+ObjectTemplate.geometry mc205
+ObjectTemplate.setCollisionMesh mc202
+ObjectTemplate.mapMaterial 0 plane_voulnerable 240
+ObjectTemplate.mapMaterial 1 plane_medium 241
+ObjectTemplate.mapMaterial 2 glass 19
+ObjectTemplate.mapMaterial 3 rubber 102
+ObjectTemplate.floaterMod 0.8
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.aiTemplate fw190AI
+rem -------------------------------------
+ObjectTemplate.addTemplate S_mc205_Ambient
+ObjectTemplate.addTemplate S_mc205_AmbientDamaged
+ObjectTemplate.addTemplate mc205_DriverEntry
+ObjectTemplate.addTemplate mc205_DummyEngine
+ObjectTemplate.addTemplate mc205_NoseMG
+ObjectTemplate.setPosition 0/0.66/2.7
+ObjectTemplate.addTemplate Plane_PilotCamera1p
+ObjectTemplate.setPosition 0/1.1/-0.1
+ObjectTemplate.addTemplate Plane_PilotGunCamera
+ObjectTemplate.setPosition 0/0.965/0.32
+ObjectTemplate.addTemplate mc205_WingMG
+ObjectTemplate.setPosition 0/-0.42078/0.87497
+include ..\..\common\mc205_wings.inc
+rem -------------------------------------
+ObjectTemplate.setSoldierExitLocation 0/2.00198/-0.4 0/0/0
+ObjectTemplate.exitSpeedMod 0.5
+ObjectTemplate.dontClearTeamOnExit 1
+ObjectTemplate.seatInformation mc205 0/1/0.4 0/0/0
+ObjectTemplate.seatAnimationSystem Objects/Vehicles/Common/Animations/3p_aircraftPilot_A_animSys.inc
+ObjectTemplate.soundFilter airplane
+ObjectTemplate.shakeFactor 10
+ObjectTemplate.sprintRecoverTime 1
+ObjectTemplate.sprintDissipationTime 100000
+ObjectTemplate.sprintLimit 0.2
+ObjectTemplate.sprintFactor 0.6
+ObjectTemplate.vehicleCategory VCAir
+ObjectTemplate.controlsCategory VCAir
+ObjectTemplate.setVehicleType VTFighter
+ObjectTemplate.listenerObstruction 0.3
+ObjectTemplate.damagedAmbientSoundLimit 0.15
+ObjectTemplate.crewKitIndex 8
+ObjectTemplate.hasRestrictedExit 1
+ObjectTemplate.isOpenVehicle 1
+
+ObjectTemplate.activeSafe Sound S_mc205_Ambient
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.soundFilename "objects/vehicles/air/common/sounds/Ambience/plane_ambience_01.wav"
+ObjectTemplate.loopCount 0
+ObjectTemplate.is3dSound 0
+ObjectTemplate.stopType 0
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 1
+ObjectTemplate.reverbLevel 1
+
+ObjectTemplate.activeSafe Sound S_mc205_AmbientDamaged
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe RotationalBundle mc205_canopy_l
+ObjectTemplate.setNetworkableInfo BasicInfo
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+rem -------------------------------------
+ObjectTemplate.addTemplate S_mc205_canopy_l_RotationRpm
+rem -------------------------------------
+ObjectTemplate.setMinRotation 0/0/-160
+ObjectTemplate.setMaxSpeed 0/0/200
+ObjectTemplate.setAcceleration 0/0/-20
+ObjectTemplate.setContinousRotationSpeed 0/0/15
+ObjectTemplate.setInputToRoll PIThrottle
+ObjectTemplate.restoreRotationOnExit 1
+
+ObjectTemplate.activeSafe Sound S_mc205_canopy_l_RotationRpm
+ObjectTemplate.modifiedByUser "jbp"
+
+
+ObjectTemplate.activeSafe RotationalBundle mc205_canopy_r
+ObjectTemplate.setNetworkableInfo BasicInfo
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+rem -------------------------------------
+ObjectTemplate.addTemplate S_mc205_canopy_r_RotationRpm
+rem -------------------------------------
+ObjectTemplate.setMaxRotation 0/0/160
+ObjectTemplate.setMaxSpeed 0/0/200
+ObjectTemplate.setAcceleration 0/0/20
+ObjectTemplate.setContinousRotationSpeed 0/0/-15
+ObjectTemplate.setInputToRoll PIThrottle
+ObjectTemplate.restoreRotationOnExit 1
+
+ObjectTemplate.activeSafe Sound S_mc205_canopy_r_RotationRpm
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe RotationalBundle mc205_elevators
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+rem -------------------------------------
+ObjectTemplate.addTemplate S_mc205_elevators_RotationRpm
+rem -------------------------------------
+ObjectTemplate.setMinRotation 0/-13/0
+ObjectTemplate.setMaxRotation 0/13/0
+ObjectTemplate.setMaxSpeed 0/13/0
+ObjectTemplate.setAcceleration 0/-26/0
+ObjectTemplate.setInputToPitch PIPitch
+ObjectTemplate.setAutomaticReset 1
+ObjectTemplate.rememberExcessInput 1
+
+ObjectTemplate.activeSafe Sound S_mc205_elevators_RotationRpm
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe RotationalBundle mc205_wheelBack_steer
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.setNetworkableInfo BasicInfo
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+rem -------------------------------------
+ObjectTemplate.addTemplate S_mc205_wheelBack_steer_RotationRpm
+rem -------------------------------------
+ObjectTemplate.setMinRotation -67.5/0/0
+ObjectTemplate.setMaxRotation 67.5/0/0
+ObjectTemplate.setMaxSpeed 150/0/0
+ObjectTemplate.setAcceleration -150/0/0
+ObjectTemplate.setInputToYaw PIYaw
+ObjectTemplate.setAutomaticReset 1
+
+ObjectTemplate.activeSafe Sound S_mc205_wheelBack_steer_RotationRpm
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe Spring mc205_wheelBack
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.grip 16
+rem -------------------------------------
+ObjectTemplate.addTemplate S_mc205_wheelBack_Rotation
+rem -------------------------------------
+ObjectTemplate.setStrength 100
+ObjectTemplate.setDamping 10
+
+ObjectTemplate.activeSafe Sound S_mc205_wheelBack_Rotation
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe RotationalBundle mc205_Aileron_Left
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+rem -------------------------------------
+ObjectTemplate.addTemplate S_mc205_Aileron_Left_RotationRpm
+rem -------------------------------------
+ObjectTemplate.setMinRotation 0/-13/0
+ObjectTemplate.setMaxRotation 0/13/0
+ObjectTemplate.setMaxSpeed 0/13/0
+ObjectTemplate.setAcceleration 0/-26/0
+ObjectTemplate.setInputToPitch PIRoll
+ObjectTemplate.setAutomaticReset 1
+
+ObjectTemplate.activeSafe Sound S_mc205_Aileron_Left_RotationRpm
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe LandingGear mc205_Flap_Left
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+rem -------------------------------------
+ObjectTemplate.addTemplate S_mc205_Flap_Left_RotationRpm
+rem -------------------------------------
+ObjectTemplate.setMaxRotation 0/39.4/0
+ObjectTemplate.setMaxSpeed 0/-50/0
+ObjectTemplate.setAcceleration 0/50/0
+ObjectTemplate.setGearDownHeight 40
+ObjectTemplate.setGearUpHeight 10
+ObjectTemplate.setGearDownSpeed 50
+ObjectTemplate.setGearUpSpeed 40
+ObjectTemplate.invertGear 1
+
+ObjectTemplate.activeSafe Sound S_mc205_Flap_Left_RotationRpm
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe LandingGear mc205_Landing_gear_L
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+rem -------------------------------------
+ObjectTemplate.addTemplate S_mc205_Landing_gear_L_RotationRpm
+rem -------------------------------------
+ObjectTemplate.setMaxRotation 0/0/90
+ObjectTemplate.setMaxSpeed 0/0/60
+ObjectTemplate.setAcceleration 0/0/110
+ObjectTemplate.setGearDownHeight 70
+ObjectTemplate.setGearUpHeight 10
+ObjectTemplate.setGearDownSpeed 50
+ObjectTemplate.setGearUpSpeed 40
+ObjectTemplate.setGearDownDelay 0.7
+
+ObjectTemplate.activeSafe Sound S_mc205_Landing_gear_L_RotationRpm
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe Spring mc205_wheelLeft
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.grip 16
+rem -------------------------------------
+ObjectTemplate.addTemplate S_mc205_wheelLeft_Rotation
+ObjectTemplate.addTemplate web_wheelBig
+rem -------------------------------------
+ObjectTemplate.setStrength 100
+ObjectTemplate.setDamping 10
+
+ObjectTemplate.activeSafe Sound S_mc205_wheelLeft_Rotation
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe RotationalBundle mc205_Aileron_Right
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+rem -------------------------------------
+ObjectTemplate.addTemplate S_mc205_Aileron_Right_RotationRpm
+rem -------------------------------------
+ObjectTemplate.setMinRotation 0/-13/0
+ObjectTemplate.setMaxRotation 0/13/0
+ObjectTemplate.setMaxSpeed 0/13/0
+ObjectTemplate.setAcceleration 0/26/0
+ObjectTemplate.setInputToPitch PIRoll
+ObjectTemplate.setAutomaticReset 1
+
+ObjectTemplate.activeSafe Sound S_mc205_Aileron_Right_RotationRpm
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe LandingGear mc205_Flap_Right
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+rem -------------------------------------
+ObjectTemplate.addTemplate S_mc205_Flap_Right_RotationRpm
+rem -------------------------------------
+ObjectTemplate.setMaxRotation 0/40.5/0
+ObjectTemplate.setMaxSpeed 0/-50/0
+ObjectTemplate.setAcceleration 0/50/0
+ObjectTemplate.setGearDownHeight 40
+ObjectTemplate.setGearUpHeight 10
+ObjectTemplate.setGearDownSpeed 50
+ObjectTemplate.setGearUpSpeed 40
+ObjectTemplate.invertGear 1
+
+ObjectTemplate.activeSafe Sound S_mc205_Flap_Right_RotationRpm
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe LandingGear mc205_landing_gear_strut_L
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+rem -------------------------------------
+ObjectTemplate.addTemplate S_mc205_landing_gear_strut_L_RotationRpm
+rem -------------------------------------
+ObjectTemplate.setMinRotation 0/0/-32.5
+ObjectTemplate.setMaxSpeed 0/0/-60
+ObjectTemplate.setAcceleration 0/0/110
+ObjectTemplate.setGearDownHeight 70
+ObjectTemplate.setGearUpHeight 10
+ObjectTemplate.setGearDownSpeed 50
+ObjectTemplate.setGearUpSpeed 40
+ObjectTemplate.setGearDownDelay 0.7
+
+ObjectTemplate.activeSafe Sound S_mc205_landing_gear_strut_L_RotationRpm
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe LandingGear mc205_landing_gear_strut_R
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+rem -------------------------------------
+ObjectTemplate.addTemplate S_mc205_landing_gear_strut_R_RotationRpm
+rem -------------------------------------
+ObjectTemplate.setMaxRotation 0/0/32.5
+ObjectTemplate.setMaxSpeed 0/0/60
+ObjectTemplate.setAcceleration 0/0/110
+ObjectTemplate.setGearDownHeight 70
+ObjectTemplate.setGearUpHeight 10
+ObjectTemplate.setGearDownSpeed 50
+ObjectTemplate.setGearUpSpeed 40
+ObjectTemplate.setGearDownDelay 0.7
+
+ObjectTemplate.activeSafe Sound S_mc205_landing_gear_strut_R_RotationRpm
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe LandingGear mc205_Landing_gear_R
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+rem -------------------------------------
+ObjectTemplate.addTemplate S_mc205_Landing_gear_R_RotationRpm
+rem -------------------------------------
+ObjectTemplate.setMinRotation 0/0/-90
+ObjectTemplate.setMaxSpeed 0/0/-60
+ObjectTemplate.setAcceleration 0/0/110
+ObjectTemplate.setGearDownHeight 70
+ObjectTemplate.setGearUpHeight 10
+ObjectTemplate.setGearDownSpeed 50
+ObjectTemplate.setGearUpSpeed 40
+ObjectTemplate.setGearDownDelay 0.7
+
+ObjectTemplate.activeSafe Sound S_mc205_Landing_gear_R_RotationRpm
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe Spring mc205_wheelRight
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.grip 16
+rem -------------------------------------
+ObjectTemplate.addTemplate S_mc205_wheelRight_Rotation
+ObjectTemplate.addTemplate web_wheelBig
+rem -------------------------------------
+ObjectTemplate.setStrength 100
+ObjectTemplate.setDamping 10
+
+ObjectTemplate.activeSafe Sound S_mc205_wheelRight_Rotation
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe RotationalBundle mc205_Rudder
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+rem -------------------------------------
+ObjectTemplate.addTemplate S_mc205_Rudder_RotationRpm
+rem -------------------------------------
+ObjectTemplate.setMinRotation -13/0/0
+ObjectTemplate.setMaxRotation 13/0/0
+ObjectTemplate.setMaxSpeed 13/0/0
+ObjectTemplate.setAcceleration -30/0/0
+ObjectTemplate.setInputToYaw PIYaw
+ObjectTemplate.setAutomaticReset 1
+ObjectTemplate.rememberExcessInput 1
+
+ObjectTemplate.activeSafe Sound S_mc205_Rudder_RotationRpm
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe RotationalBundle mc205_1p_stick
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+rem -------------------------------------
+ObjectTemplate.addTemplate S_mc205_1p_stick_RotationRpm
+rem -------------------------------------
+ObjectTemplate.setMinRotation 0/-50/-30
+ObjectTemplate.setMaxRotation 0/10/30
+ObjectTemplate.setMaxSpeed 0/25/25
+ObjectTemplate.setAcceleration 0/200/-100
+ObjectTemplate.setDeAcceleration 20/20/20
+ObjectTemplate.setInputToPitch PIPitch
+ObjectTemplate.setInputToRoll PIRoll
+ObjectTemplate.setAutomaticReset 1
+ObjectTemplate.setUseDeAcceleration 1
+ObjectTemplate.rememberExcessInput 1
+
+ObjectTemplate.activeSafe Sound S_mc205_1p_stick_RotationRpm
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.create EntryPoint mc205_DriverEntry
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.createdInEditor 1
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 0
+ObjectTemplate.setEntryRadius 3
+
+ObjectTemplate.create Engine mc205_dummyengine
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.setNetworkableInfo BasicInfo
+ObjectTemplate.createdInEditor 1
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+rem -------------------------------------
+ObjectTemplate.addTemplate S_mc205_dummyengine_RotationRpm
+ObjectTemplate.addTemplate S_mc205_dummyengine_Idle
+ObjectTemplate.addTemplate S_mc205_dummyengine_Rpm1
+ObjectTemplate.addTemplate S_mc205_dummyengine_Rpm2
+ObjectTemplate.addTemplate S_mc205_dummyengine_Load
+ObjectTemplate.addTemplate mc205_prop
+ObjectTemplate.setPosition 0/0.209/3.856
+ObjectTemplate.setRotation 0/0/-79.8013
+ObjectTemplate.addTemplate e_prop_exhaust
+ObjectTemplate.setPosition 0.980326/-0.0857549/0.917398
+ObjectTemplate.setRotation -24.7835/2.05594/-4.61421
+ObjectTemplate.addTemplate e_prop_exhaust_startup
+ObjectTemplate.setPosition 0.651856/-0.133379/1.41031
+ObjectTemplate.addTemplate e_prop_exhaust
+ObjectTemplate.setPosition -0.980326/-0.0857549/0.917398
+ObjectTemplate.setRotation 24.7835/2.05594/-4.61421
+ObjectTemplate.addTemplate e_prop_exhaust_startup
+ObjectTemplate.setPosition -0.651856/-0.133379/1.41031
+ObjectTemplate.addTemplate e_prop_exhaust_trail
+ObjectTemplate.setPosition 1.24522e-007/-0.198872/0.67063
+rem -------------------------------------
+ObjectTemplate.setMinRotation 0/0/55
+ObjectTemplate.setMaxRotation 0/0/300
+ObjectTemplate.setMaxSpeed 0/0/500
+ObjectTemplate.setAcceleration 0/0/10
+ObjectTemplate.setInputToRoll PIThrottle
+ObjectTemplate.setAutomaticReset 1
+ObjectTemplate.restoreRotationOnExit 1
+ObjectTemplate.setEngineType c_ETPlane
+ObjectTemplate.setTorque 0.1
+ObjectTemplate.setDifferential 0
+ObjectTemplate.setGearUp 0.7
+ObjectTemplate.setGearDown 0.3
+ObjectTemplate.propRotAxis 0
+
+ObjectTemplate.activeSafe Sound S_mc205_dummyengine_RotationRpm
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe Sound S_mc205_dummyengine_Idle
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe Sound S_mc205_dummyengine_Rpm1
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe Sound S_mc205_dummyengine_Rpm2
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe Sound S_mc205_dummyengine_Load
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.create GenericFireArm mc205_NoseMG
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.createdInEditor 1
+rem ---BeginComp:WeaponHud ---
+ObjectTemplate.createComponent WeaponHud
+ObjectTemplate.weaponHud.weaponIcon Ingame\Weapons\Icons\Hud\bomb.tga
+ObjectTemplate.weaponHud.hudName "KILLMESSAGE_VEHICLE_mc205"
+ObjectTemplate.weaponHud.guiIndex 1010
+ObjectTemplate.weaponHud.altguiIndex 1012
+ObjectTemplate.weaponHud.enablePostProcessingOnGuiIndex 1012
+ObjectTemplate.weaponHud.switchGuiOnCamera 1
+rem ---EndComp ---
+rem ---BeginComp:PostProcess ---
+ObjectTemplate.createComponent PostProcess
+ObjectTemplate.postProcess.tvinterference 0.003
+rem ---EndComp ---
+rem ---BeginComp:MultiFireComp ---
+ObjectTemplate.createComponent MultiFireComp
+ObjectTemplate.fire.roundsPerMinute 900
+ObjectTemplate.fire.addBarrelName mc205_NoseMG_barrel1
+ObjectTemplate.fire.addBarrelName mc205_NoseMG_barrel2
+rem ---EndComp ---
+rem ---BeginComp:DefaultAmmoComp ---
+ObjectTemplate.createComponent DefaultAmmoComp
+ObjectTemplate.ammo.nrOfMags 6
+ObjectTemplate.ammo.magSize 200
+ObjectTemplate.ammo.reloadtime 0.1
+ObjectTemplate.ammo.autoReload 1
+ObjectTemplate.ammo.minimumTimeUntilReload 0.01
+ObjectTemplate.ammo.reloadWithoutPlayer 1
+rem ---EndComp ---
+rem ---BeginComp:WeaponBasedRecoilComp ---
+ObjectTemplate.createComponent WeaponBasedRecoilComp
+ObjectTemplate.recoil.cameraRecoilSpeed 8
+ObjectTemplate.recoil.cameraRecoilSize 1
+rem ---EndComp ---
+rem ---BeginComp:SimpleDeviationComp ---
+ObjectTemplate.createComponent SimpleDeviationComp
+ObjectTemplate.deviation.minDev 0.35
+rem ---EndComp ---
+rem ---BeginComp:DefaultSoundComp ---
+ObjectTemplate.createComponent DefaultSoundComp
+rem ---EndComp ---
+rem ---BeginComp:DefaultAnimationComp ---
+ObjectTemplate.createComponent DefaultAnimationComp
+rem ---EndComp ---
+rem ---BeginComp:ToggleCameraComp ---
+ObjectTemplate.createComponent ToggleCameraComp
+ObjectTemplate.zoom.cameraInput PIFlareFire
+ObjectTemplate.zoom.zoomInput PIFlareFire
+ObjectTemplate.zoom.changeCameraId 3
+ObjectTemplate.zoom.changeCameraViewMode 1
+rem ---EndComp ---
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.aiTemplate mc205_NoseMGAI
+rem -------------------------------------
+ObjectTemplate.addTemplate S_mc205_NoseMG_Fire1P
+ObjectTemplate.addTemplate S_mc205_NoseMG_Fire1P_Outdoor
+ObjectTemplate.addTemplate S_mc205_NoseMG_Fire3P
+ObjectTemplate.addTemplate S_mc205_NoseMG_BoltClick
+ObjectTemplate.addTemplate S_mc205_NoseMG_TriggerClick
+ObjectTemplate.addTemplate S_mc205_NoseMG_SwitchFireRate
+ObjectTemplate.addTemplate S_mc205_NoseMG_Reload1P
+ObjectTemplate.addTemplate S_mc205_NoseMG_Reload3P
+ObjectTemplate.addTemplate S_mc205_NoseMG_Deploy1P
+ObjectTemplate.addTemplate S_mc205_NoseMG_Deploy3P
+ObjectTemplate.addTemplate S_mc205_NoseMG_Zoom
+ObjectTemplate.addTemplate mc205_NoseMG_barrel1
+ObjectTemplate.setPosition 0.2/0.1/0
+ObjectTemplate.addTemplate mc205_NoseMG_barrel2
+ObjectTemplate.setPosition -0.2/0.1/0
+rem -------------------------------------
+ObjectTemplate.projectileTemplate 13mm_Airplane_Projectile
+ObjectTemplate.keepProjectiles 5
+ObjectTemplate.velocity 823
+ObjectTemplate.heatAddWhenFire 0.001
+ObjectTemplate.coolDownPerSec 0.4
+ObjectTemplate.overheatPenalty 1.3
+
+ObjectTemplate.activeSafe Sound S_mc205_NoseMG_Fire1P
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/weapons/common/sounds/breda_50_1p3p.wav"
+ObjectTemplate.loopCount 0
+ObjectTemplate.is3dSound 0
+ObjectTemplate.stopType 2
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 1
+ObjectTemplate.pan 0.5
+ObjectTemplate.reverbLevel 1
+
+ObjectTemplate.activeSafe Sound S_mc205_NoseMG_Fire1P_Outdoor
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe Sound S_mc205_NoseMG_Fire3P
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/weapons/common/sounds/breda_50_1p3p.wav"
+ObjectTemplate.loopCount 0
+ObjectTemplate.is3dSound 1
+ObjectTemplate.stopType 2
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 1
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.minDistance 3
+ObjectTemplate.halfvolumedistance 25
+ObjectTemplate.soundRadius 1.5
+
+ObjectTemplate.activeSafe Sound S_mc205_NoseMG_BoltClick
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe Sound S_mc205_NoseMG_TriggerClick
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe Sound S_mc205_NoseMG_SwitchFireRate
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe Sound S_mc205_NoseMG_Reload1P
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe Sound S_mc205_NoseMG_Reload3P
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe Sound S_mc205_NoseMG_Deploy1P
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe Sound S_mc205_NoseMG_Deploy3P
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe Sound S_mc205_NoseMG_Zoom
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.create Bundle mc205_NoseMG_barrel1
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.createdInEditor 1
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 0
+rem -------------------------------------
+ObjectTemplate.addTemplate e_muzz_coax
+rem -------------------------------------
+
+ObjectTemplate.create Bundle mc205_NoseMG_barrel2
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.createdInEditor 1
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 0
+rem -------------------------------------
+ObjectTemplate.addTemplate e_muzz_coax
+rem -------------------------------------
+
+
+ObjectTemplate.create GenericFireArm mc205_WingMG
+ObjectTemplate.modifiedByUser "Lukas"
+ObjectTemplate.createdInEditor 1
+rem ---BeginComp:WeaponHud ---
+ObjectTemplate.createComponent WeaponHud
+ObjectTemplate.weaponHud.weaponIcon Ingame\Weapons\Icons\Hud\bomb.tga
+ObjectTemplate.weaponHud.hudName "mc205"
+ObjectTemplate.weaponHud.guiIndex -1
+rem ---EndComp ---
+rem ---BeginComp:MultiFireComp ---
+ObjectTemplate.createComponent MultiFireComp
+ObjectTemplate.fire.roundsPerMinute 450
+ObjectTemplate.fire.fireInput PIAltFire
+ObjectTemplate.fire.addBarrelName mc205_WingMG_barrel1
+ObjectTemplate.fire.addBarrelName mc205_WingMG_barrel2
+rem ---EndComp ---
+rem ---BeginComp:DefaultAmmoComp ---
+ObjectTemplate.createComponent DefaultAmmoComp
+ObjectTemplate.ammo.nrOfMags 1
+ObjectTemplate.ammo.magSize 200
+ObjectTemplate.ammo.reloadTime 0.1
+ObjectTemplate.ammo.minimumTimeUntilReload 0.01
+ObjectTemplate.ammo.autoReload 1
+ObjectTemplate.ammo.reloadWithoutPlayer 1
+rem ---EndComp ---
+rem ---BeginComp:WeaponBasedRecoilComp ---
+ObjectTemplate.createComponent WeaponBasedRecoilComp
+ObjectTemplate.recoil.cameraRecoilSpeed 8
+ObjectTemplate.recoil.cameraRecoilSize 1
+rem ---EndComp ---
+rem ---BeginComp:SimpleDeviationComp ---
+ObjectTemplate.createComponent SimpleDeviationComp
+ObjectTemplate.deviation.minDev 0.25
+rem ---EndComp ---
+rem ---BeginComp:DefaultSoundComp ---
+ObjectTemplate.createComponent DefaultSoundComp
+rem ---EndComp ---
+rem ---BeginComp:DefaultAnimationComp ---
+ObjectTemplate.createComponent DefaultAnimationComp
+rem ---EndComp ---
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.aiTemplate mc205_WingMGAI
+rem -------------------------------------
+ObjectTemplate.addTemplate S_mc205_WingMG_Fire1P
+ObjectTemplate.addTemplate S_mc205_WingMG_Fire1P_Outdoor
+ObjectTemplate.addTemplate S_mc205_WingMG_Fire3P
+ObjectTemplate.addTemplate S_mc205_WingMG_BoltClick
+ObjectTemplate.addTemplate S_mc205_WingMG_TriggerClick
+ObjectTemplate.addTemplate S_mc205_WingMG_SwitchFireRate
+ObjectTemplate.addTemplate S_mc205_WingMG_Reload1P
+ObjectTemplate.addTemplate S_mc205_WingMG_Reload3P
+ObjectTemplate.addTemplate S_mc205_WingMG_Deploy1P
+ObjectTemplate.addTemplate S_mc205_WingMG_Deploy3P
+ObjectTemplate.addTemplate S_mc205_WingMG_Zoom
+ObjectTemplate.addTemplate mc205_WingMG_barrel1
+ObjectTemplate.setPosition 1.82397/0.27974/1.57632
+ObjectTemplate.setRotation -0.413/0/0
+ObjectTemplate.addTemplate mc205_WingMG_barrel2
+ObjectTemplate.setPosition -1.83549/0.27974/1.57898
+ObjectTemplate.setRotation 0.413/0/0
+rem -------------------------------------
+ObjectTemplate.projectileTemplate 20x110mm_Airplane_Projectile
+ObjectTemplate.keepProjectiles 5
+ObjectTemplate.velocity 705
+ObjectTemplate.heatAddWhenFire 0.001
+ObjectTemplate.coolDownPerSec 0.4
+ObjectTemplate.overheatPenalty 1.3
+
+ObjectTemplate.activeSafe Sound S_mc205_WingMG_Fire1P
+ObjectTemplate.modifiedByUser "Lukas"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/weapons/common/sounds/aircraft/20mm450rpm_plane_1p.wav"
+ObjectTemplate.loopCount 0
+ObjectTemplate.is3dSound 0
+ObjectTemplate.stopType 1
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 1
+ObjectTemplate.pan 0.7
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.pitchEnvelope 0/1/0.9/1.1/1/1/0/0.985/1.03/
+ObjectTemplate.volumeEnvelope 0/1/0/1/1/1/0/0.9/1/
+
+ObjectTemplate.activeSafe Sound S_mc205_WingMG_Fire1P_Outdoor
+ObjectTemplate.modifiedByUser "Lukas"
+
+ObjectTemplate.activeSafe Sound S_mc205_WingMG_Fire3P
+ObjectTemplate.modifiedByUser "Lukas"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/weapons/common/sounds/aircraft/20mm450rpm_plane_3p.wav"
+ObjectTemplate.loopCount 0
+ObjectTemplate.is3dSound 1
+ObjectTemplate.stopType 1
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 1.05
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.pitchEnvelope 0/1/0.9/1.1/1/1/0/0.97/1.03/
+ObjectTemplate.volumeEnvelope 0/1/0/1/1/1/0/0.86/1/
+ObjectTemplate.minDistance 3
+ObjectTemplate.halfVolumeDistance 30
+ObjectTemplate.soundRadius 1.5
+
+ObjectTemplate.activeSafe Sound S_mc205_WingMG_BoltClick
+ObjectTemplate.modifiedByUser "Lukas"
+
+ObjectTemplate.activeSafe Sound S_mc205_WingMG_TriggerClick
+ObjectTemplate.modifiedByUser "Lukas"
+
+ObjectTemplate.activeSafe Sound S_mc205_WingMG_SwitchFireRate
+ObjectTemplate.modifiedByUser "Lukas"
+
+ObjectTemplate.activeSafe Sound S_mc205_WingMG_Reload1P
+ObjectTemplate.modifiedByUser "Lukas"
+
+ObjectTemplate.activeSafe Sound S_mc205_WingMG_Reload3P
+ObjectTemplate.modifiedByUser "Lukas"
+
+ObjectTemplate.activeSafe Sound S_mc205_WingMG_Deploy1P
+ObjectTemplate.modifiedByUser "Lukas"
+
+ObjectTemplate.activeSafe Sound S_mc205_WingMG_Deploy3P
+ObjectTemplate.modifiedByUser "Lukas"
+
+ObjectTemplate.activeSafe Sound S_mc205_WingMG_Zoom
+ObjectTemplate.modifiedByUser "Lukas"
+
+ObjectTemplate.create Bundle mc205_WingMG_barrel1
+ObjectTemplate.modifiedByUser "Lukas"
+ObjectTemplate.createdInEditor 1
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 0
+rem -------------------------------------
+ObjectTemplate.addTemplate e_muzz_coax
+rem -------------------------------------
+
+ObjectTemplate.create Bundle mc205_WingMG_barrel2
+ObjectTemplate.modifiedByUser "Lukas"
+ObjectTemplate.createdInEditor 1
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 0
+rem -------------------------------------
+ObjectTemplate.addTemplate e_muzz_coax
+rem -------------------------------------

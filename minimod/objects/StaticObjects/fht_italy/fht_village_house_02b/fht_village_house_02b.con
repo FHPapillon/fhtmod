@@ -1,0 +1,15 @@
+GeometryTemplate.create StaticMesh fht_village_house_02b
+CollisionManager.createTemplate fht_village_house_02b
+
+ObjectTemplate.create SimpleObject fht_village_house_02b
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator SORKEN:HP_Ägaren
+ObjectTemplate.collisionMesh fht_village_house_02b
+ObjectTemplate.mapMaterial 0 concrete 0
+ObjectTemplate.mapMaterial 1 metal 0
+ObjectTemplate.mapMaterial 2 stairs_concrete 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.geometry fht_village_house_02b
+
+include fht_village_house_02b.tweak

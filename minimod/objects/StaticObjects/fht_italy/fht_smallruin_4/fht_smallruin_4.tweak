@@ -1,0 +1,18 @@
+rem *** Generated with Bf2Editor.exe [created: 2006/5/15 12:52]
+GeometryTemplate.doNotGenerateLightmaps 0
+GeometryTemplate.lightmapOverride 0
+GeometryTemplate.compressVertexData 1
+GeometryTemplate.maxTextureRepeat 16
+GeometryTemplate.glowing 0
+GeometryTemplate.noLighting 0
+ObjectTemplate.activeSafe SimpleObject fht_smallruin_4
+ObjectTemplate.creator NYA:Martin
+ObjectTemplate.modifiedByUser "Martin"
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.geometry fht_smallruin_4
+ObjectTemplate.setCollisionMesh fht_smallruin_4
+ObjectTemplate.mapMaterial 0 concrete 78
+ObjectTemplate.hasMobilePhysics 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+

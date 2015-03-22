@@ -1,0 +1,22 @@
+rem *** Generated with Bf2Editor.exe [created: 2006/5/15 12:52]
+GeometryTemplate.compressVertexData 1
+GeometryTemplate.maxTextureRepeat 16
+ObjectTemplate.activeSafe RotationalBundle m4a1mid_eu_ca_rightwheel
+ObjectTemplate.creator BUTTSLOL:jbp
+ObjectTemplate.modifiedByUser "Phil"
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.cullRadiusScale 12
+ObjectTemplate.geometry M4A1mid_eu_brit_rightwheel
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.rotateAsAnimatedUV 1
+ObjectTemplate.rotateAsAnimatedUVReverse 0
+ObjectTemplate.rotateAsAnimatedUVObject M4A1mid_eu_ca_RightWheel1
+rem -------------------------------------
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_rightwheel_RotationRpm
+rem -------------------------------------
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_rightwheel_RotationRpm
+ObjectTemplate.modifiedByUser "Phil"
+

@@ -1,0 +1,14 @@
+GeometryTemplate.create StaticMesh quay_lowerwall_straight_10m
+CollisionManager.createTemplate quay_lowerwall_straight_10m
+
+ObjectTemplate.create SimpleObject quay_lowerwall_straight_10m
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator PANDA:Neri
+ObjectTemplate.collisionMesh quay_lowerwall_straight_10m
+ObjectTemplate.mapMaterial 0 concrete 0
+ObjectTemplate.mapMaterial 1 rock 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.geometry quay_lowerwall_straight_10m
+
+include quay_lowerwall_straight_10m.tweak

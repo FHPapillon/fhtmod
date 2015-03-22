@@ -1,0 +1,1047 @@
+rem ==============================================================================
+rem ==============================================================================
+rem ================================= Ability Templates ==========================
+rem ==============================================================================
+rem ==============================================================================
+
+ObjectTemplate.create RemoteControlledObject MarkStrategicTeamOnly
+ObjectTemplate.rcType RCNone
+
+rem ================================= Supply Template ====================================
+
+ObjectTemplate.create SupplyObject fht_radio_rp_SupplyObject
+ObjectTemplate.radius 1.8
+ObjectTemplate.refillAmmoSpeed 5
+ObjectTemplate.restoreSpeed 5
+ObjectTemplate.ammoStorageSize 50
+
+rem ================================= Repair Template for Fallback ====================================
+
+ObjectTemplate.create SupplyObject fht_radio_rp_Repair_Dummy
+ObjectTemplate.radius 0.1
+ObjectTemplate.workOnVehicles 1
+ObjectTemplate.workOnSoldiers 0
+ObjectTemplate.healSpeed 50
+ObjectTemplate.refillAmmoSpeed 0
+
+
+rem ===============================================================================
+rem ===============================================================================
+rem ================================= Squad Rally Points ==========================
+rem ===============================================================================
+rem ===============================================================================
+
+rem ================================= Team DE, Squad 1 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_de_1
+ObjectTemplate.addTemplate rally_stuff_de
+ObjectTemplate.addTemplate e_rp_de 
+ObjectTemplate.addTemplate fht_radio_rp_1_1_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team DE, Squad 2 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_de_2
+ObjectTemplate.addTemplate rally_stuff_de
+ObjectTemplate.addTemplate e_rp_de 
+ObjectTemplate.addTemplate fht_radio_rp_1_2_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team DE, Squad 3 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_de_3
+ObjectTemplate.addTemplate rally_stuff_de
+ObjectTemplate.addTemplate e_rp_de 
+ObjectTemplate.addTemplate fht_radio_rp_1_3_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team DE, Squad 4 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_de_4
+ObjectTemplate.addTemplate rally_stuff_de
+ObjectTemplate.addTemplate e_rp_de 
+ObjectTemplate.addTemplate fht_radio_rp_1_4_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team DE, Squad 5 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_de_5
+ObjectTemplate.addTemplate rally_stuff_de
+ObjectTemplate.addTemplate e_rp_de 
+ObjectTemplate.addTemplate fht_radio_rp_1_5_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team DE, Squad 6 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_de_6
+ObjectTemplate.addTemplate rally_stuff_de
+ObjectTemplate.addTemplate e_rp_de 
+ObjectTemplate.addTemplate fht_radio_rp_1_6_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team DE, Squad 7 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_de_7
+ObjectTemplate.addTemplate rally_stuff_de
+ObjectTemplate.addTemplate e_rp_de 
+ObjectTemplate.addTemplate fht_radio_rp_1_7_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team DE, Squad 8 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_de_8
+ObjectTemplate.addTemplate rally_stuff_de
+ObjectTemplate.addTemplate e_rp_de 
+ObjectTemplate.addTemplate fht_radio_rp_1_8_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team DE, Squad 9 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_de_9
+ObjectTemplate.addTemplate rally_stuff_de
+ObjectTemplate.addTemplate e_rp_de 
+ObjectTemplate.addTemplate fht_radio_rp_1_9_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team GB, Squad 1 ====================================
+GeometryTemplate.create BundledMesh fht_radio_rp_gb
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_gb_1
+ObjectTemplate.addTemplate rally_stuff_gb
+ObjectTemplate.addTemplate e_rp_gb 
+ObjectTemplate.addTemplate fht_radio_rp_2_1_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team GB, Squad 2 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_gb_2
+ObjectTemplate.addTemplate rally_stuff_gb
+ObjectTemplate.addTemplate e_rp_gb 
+ObjectTemplate.addTemplate fht_radio_rp_2_2_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team GB, Squad 3 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_gb_3
+ObjectTemplate.addTemplate rally_stuff_gb
+ObjectTemplate.addTemplate e_rp_gb 
+ObjectTemplate.addTemplate fht_radio_rp_2_3_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team GB, Squad 4 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_gb_4
+ObjectTemplate.addTemplate rally_stuff_gb
+ObjectTemplate.addTemplate e_rp_gb 
+ObjectTemplate.addTemplate fht_radio_rp_2_4_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team GB, Squad 5 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_gb_5
+ObjectTemplate.addTemplate rally_stuff_gb
+ObjectTemplate.addTemplate e_rp_gb 
+ObjectTemplate.addTemplate fht_radio_rp_2_5_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team GB, Squad 6 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_gb_6
+ObjectTemplate.addTemplate rally_stuff_gb
+ObjectTemplate.addTemplate e_rp_gb 
+ObjectTemplate.addTemplate fht_radio_rp_2_6_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team GB, Squad 7 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_gb_7
+ObjectTemplate.addTemplate rally_stuff_gb
+ObjectTemplate.addTemplate e_rp_gb 
+ObjectTemplate.addTemplate fht_radio_rp_2_7_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team GB, Squad 8 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_gb_8
+ObjectTemplate.addTemplate rally_stuff_gb
+ObjectTemplate.addTemplate e_rp_gb 
+ObjectTemplate.addTemplate fht_radio_rp_2_8_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team GB, Squad 9 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_gb_9
+ObjectTemplate.addTemplate rally_stuff_gb
+ObjectTemplate.addTemplate e_rp_gb 
+ObjectTemplate.addTemplate fht_radio_rp_2_9_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team IT, Squad 1 ====================================
+GeometryTemplate.create BundledMesh fht_radio_rp_it
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_it_1
+ObjectTemplate.addTemplate rally_stuff_it
+ObjectTemplate.addTemplate e_rp_it 
+ObjectTemplate.addTemplate fht_radio_rp_1_1_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team IT, Squad 2 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_it_2
+ObjectTemplate.addTemplate rally_stuff_it
+ObjectTemplate.addTemplate e_rp_it 
+ObjectTemplate.addTemplate fht_radio_rp_1_2_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team IT, Squad 3 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_it_3
+ObjectTemplate.addTemplate rally_stuff_it
+ObjectTemplate.addTemplate e_rp_it 
+ObjectTemplate.addTemplate fht_radio_rp_1_3_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team IT, Squad 4 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_it_4
+ObjectTemplate.addTemplate rally_stuff_it
+ObjectTemplate.addTemplate e_rp_it 
+ObjectTemplate.addTemplate fht_radio_rp_1_4_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team IT, Squad 5 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_it_5
+ObjectTemplate.addTemplate rally_stuff_it
+ObjectTemplate.addTemplate e_rp_it 
+ObjectTemplate.addTemplate fht_radio_rp_1_5_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team IT, Squad 6 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_it_6
+ObjectTemplate.addTemplate rally_stuff_it
+ObjectTemplate.addTemplate e_rp_it 
+ObjectTemplate.addTemplate fht_radio_rp_1_6_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team IT, Squad 7 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_it_7
+ObjectTemplate.addTemplate rally_stuff_it
+ObjectTemplate.addTemplate e_rp_it 
+ObjectTemplate.addTemplate fht_radio_rp_1_7_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team IT, Squad 8 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_it_8
+ObjectTemplate.addTemplate rally_stuff_it
+ObjectTemplate.addTemplate e_rp_it 
+ObjectTemplate.addTemplate fht_radio_rp_1_8_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team IT, Squad 9 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_it_9
+ObjectTemplate.addTemplate rally_stuff_it
+ObjectTemplate.addTemplate e_rp_it 
+ObjectTemplate.addTemplate fht_radio_rp_1_9_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team CN, Squad 1 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_cn_1
+ObjectTemplate.addTemplate rally_stuff_cn
+ObjectTemplate.addTemplate e_rp_cn 
+ObjectTemplate.addTemplate fht_radio_rp_2_1_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team CN, Squad 2 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_cn_2
+ObjectTemplate.addTemplate rally_stuff_cn
+ObjectTemplate.addTemplate e_rp_cn 
+ObjectTemplate.addTemplate fht_radio_rp_2_2_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team CN, Squad 3 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_cn_3
+ObjectTemplate.addTemplate rally_stuff_cn
+ObjectTemplate.addTemplate e_rp_cn 
+ObjectTemplate.addTemplate fht_radio_rp_2_3_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team CN, Squad 4 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_cn_4
+ObjectTemplate.addTemplate rally_stuff_cn
+ObjectTemplate.addTemplate e_rp_cn 
+ObjectTemplate.addTemplate fht_radio_rp_2_4_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team CN, Squad 5 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_cn_5
+ObjectTemplate.addTemplate rally_stuff_cn
+ObjectTemplate.addTemplate e_rp_cn 
+ObjectTemplate.addTemplate fht_radio_rp_2_5_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team CN, Squad 6 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_cn_6
+ObjectTemplate.addTemplate rally_stuff_cn
+ObjectTemplate.addTemplate e_rp_cn 
+ObjectTemplate.addTemplate fht_radio_rp_2_6_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team CN, Squad 7 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_cn_7
+ObjectTemplate.addTemplate rally_stuff_cn
+ObjectTemplate.addTemplate e_rp_cn 
+ObjectTemplate.addTemplate fht_radio_rp_2_7_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team CN, Squad 8 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_cn_8
+ObjectTemplate.addTemplate rally_stuff_cn
+ObjectTemplate.addTemplate e_rp_cn 
+ObjectTemplate.addTemplate fht_radio_rp_2_8_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team CN, Squad 9 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_cn_9
+ObjectTemplate.addTemplate rally_stuff_cn
+ObjectTemplate.addTemplate e_rp_cn 
+ObjectTemplate.addTemplate fht_radio_rp_2_9_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team US, Squad 1 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_us_1
+ObjectTemplate.addTemplate rally_stuff_us
+ObjectTemplate.addTemplate e_rp_us 
+ObjectTemplate.addTemplate fht_radio_rp_2_1_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team US, Squad 2 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_us_2
+ObjectTemplate.addTemplate rally_stuff_us
+ObjectTemplate.addTemplate e_rp_us 
+ObjectTemplate.addTemplate fht_radio_rp_2_2_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team US, Squad 3 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_us_3
+ObjectTemplate.addTemplate rally_stuff_us
+ObjectTemplate.addTemplate e_rp_us 
+ObjectTemplate.addTemplate fht_radio_rp_2_3_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team US, Squad 4 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_us_4
+ObjectTemplate.addTemplate rally_stuff_us
+ObjectTemplate.addTemplate e_rp_us 
+ObjectTemplate.addTemplate fht_radio_rp_2_4_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team US, Squad 5 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_us_5
+ObjectTemplate.addTemplate rally_stuff_us
+ObjectTemplate.addTemplate e_rp_us 
+ObjectTemplate.addTemplate fht_radio_rp_2_5_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team US, Squad 6 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_us_6
+ObjectTemplate.addTemplate rally_stuff_us
+ObjectTemplate.addTemplate e_rp_us 
+ObjectTemplate.addTemplate fht_radio_rp_2_6_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team US, Squad 7 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_us_7
+ObjectTemplate.addTemplate rally_stuff_us
+ObjectTemplate.addTemplate e_rp_us 
+ObjectTemplate.addTemplate fht_radio_rp_2_7_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team US, Squad 8 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_us_8
+ObjectTemplate.addTemplate rally_stuff_us
+ObjectTemplate.addTemplate e_rp_us 
+ObjectTemplate.addTemplate fht_radio_rp_2_8_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team US, Squad 9 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_us_9
+ObjectTemplate.addTemplate rally_stuff_us
+ObjectTemplate.addTemplate e_rp_us 
+ObjectTemplate.addTemplate fht_radio_rp_2_9_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team AU, Squad 1 ====================================
+GeometryTemplate.create BundledMesh fht_radio_rp_au
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_au_1
+ObjectTemplate.addTemplate rally_stuff_au
+ObjectTemplate.addTemplate e_rp_au 
+ObjectTemplate.addTemplate fht_radio_rp_2_1_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team AU, Squad 2 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_au_2
+ObjectTemplate.addTemplate rally_stuff_au
+ObjectTemplate.addTemplate e_rp_au 
+ObjectTemplate.addTemplate fht_radio_rp_2_2_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team AU, Squad 3 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_au_3
+ObjectTemplate.addTemplate rally_stuff_au
+ObjectTemplate.addTemplate e_rp_au 
+ObjectTemplate.addTemplate fht_radio_rp_2_3_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team AU, Squad 4 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_au_4
+ObjectTemplate.addTemplate rally_stuff_au
+ObjectTemplate.addTemplate e_rp_au 
+ObjectTemplate.addTemplate fht_radio_rp_2_4_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team AU, Squad 5 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_au_5
+ObjectTemplate.addTemplate rally_stuff_au
+ObjectTemplate.addTemplate e_rp_au 
+ObjectTemplate.addTemplate fht_radio_rp_2_5_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team AU, Squad 6 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_au_6
+ObjectTemplate.addTemplate rally_stuff_au
+ObjectTemplate.addTemplate e_rp_au 
+ObjectTemplate.addTemplate fht_radio_rp_2_6_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team AU, Squad 7 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_au_7
+ObjectTemplate.addTemplate rally_stuff_au
+ObjectTemplate.addTemplate e_rp_au 
+ObjectTemplate.addTemplate fht_radio_rp_2_7_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team AU, Squad 8 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_au_8
+ObjectTemplate.addTemplate rally_stuff_au
+ObjectTemplate.addTemplate e_rp_au 
+ObjectTemplate.addTemplate fht_radio_rp_2_8_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team AU, Squad 9 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_au_9
+ObjectTemplate.addTemplate rally_stuff_au
+ObjectTemplate.addTemplate e_rp_au 
+ObjectTemplate.addTemplate fht_radio_rp_2_9_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team NZ, Squad 1 ====================================
+GeometryTemplate.create BundledMesh fht_radio_rp_nz
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_nz_1
+ObjectTemplate.addTemplate rally_stuff_nz
+ObjectTemplate.addTemplate e_rp_nz 
+ObjectTemplate.addTemplate fht_radio_rp_2_1_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team NZ, Squad 2 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_nz_2
+ObjectTemplate.addTemplate rally_stuff_nz
+ObjectTemplate.addTemplate e_rp_nz 
+ObjectTemplate.addTemplate fht_radio_rp_2_2_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team NZ, Squad 3 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_nz_3
+ObjectTemplate.addTemplate rally_stuff_nz
+ObjectTemplate.addTemplate e_rp_nz 
+ObjectTemplate.addTemplate fht_radio_rp_2_3_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team NZ, Squad 4 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_nz_4
+ObjectTemplate.addTemplate rally_stuff_nz
+ObjectTemplate.addTemplate e_rp_nz 
+ObjectTemplate.addTemplate fht_radio_rp_2_4_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team NZ, Squad 5 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_nz_5
+ObjectTemplate.addTemplate rally_stuff_nz
+ObjectTemplate.addTemplate e_rp_nz 
+ObjectTemplate.addTemplate fht_radio_rp_2_5_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team NZ, Squad 6 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_nz_6
+ObjectTemplate.addTemplate rally_stuff_nz
+ObjectTemplate.addTemplate e_rp_nz 
+ObjectTemplate.addTemplate fht_radio_rp_2_6_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team NZ, Squad 7 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_nz_7
+ObjectTemplate.addTemplate rally_stuff_nz
+ObjectTemplate.addTemplate e_rp_nz 
+ObjectTemplate.addTemplate fht_radio_rp_2_7_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team NZ, Squad 8 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_nz_8
+ObjectTemplate.addTemplate rally_stuff_nz
+ObjectTemplate.addTemplate e_rp_nz 
+ObjectTemplate.addTemplate fht_radio_rp_2_8_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team NZ, Squad 9 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_nz_9
+ObjectTemplate.addTemplate rally_stuff_nz
+ObjectTemplate.addTemplate e_rp_nz 
+ObjectTemplate.addTemplate fht_radio_rp_2_9_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team PL, Squad 1 ====================================
+GeometryTemplate.create BundledMesh fht_radio_rp_pl
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_pl_1
+ObjectTemplate.addTemplate rally_stuff_pl
+ObjectTemplate.addTemplate e_rp_pl 
+ObjectTemplate.addTemplate fht_radio_rp_2_1_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team PL, Squad 2 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_pl_2
+ObjectTemplate.addTemplate rally_stuff_pl
+ObjectTemplate.addTemplate e_rp_pl 
+ObjectTemplate.addTemplate fht_radio_rp_2_2_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team PL, Squad 3 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_pl_3
+ObjectTemplate.addTemplate rally_stuff_pl
+ObjectTemplate.addTemplate e_rp_pl 
+ObjectTemplate.addTemplate fht_radio_rp_2_3_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team PL, Squad 4 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_pl_4
+ObjectTemplate.addTemplate rally_stuff_pl
+ObjectTemplate.addTemplate e_rp_pl 
+ObjectTemplate.addTemplate fht_radio_rp_2_4_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team PL, Squad 5 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_pl_5
+ObjectTemplate.addTemplate rally_stuff_pl
+ObjectTemplate.addTemplate e_rp_pl 
+ObjectTemplate.addTemplate fht_radio_rp_2_5_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team PL, Squad 6 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_pl_6
+ObjectTemplate.addTemplate rally_stuff_pl
+ObjectTemplate.addTemplate e_rp_pl 
+ObjectTemplate.addTemplate fht_radio_rp_2_6_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team PL, Squad 7 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_pl_7
+ObjectTemplate.addTemplate rally_stuff_pl
+ObjectTemplate.addTemplate e_rp_pl 
+ObjectTemplate.addTemplate fht_radio_rp_2_7_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team PL, Squad 8 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_pl_8
+ObjectTemplate.addTemplate rally_stuff_pl
+ObjectTemplate.addTemplate e_rp_pl 
+ObjectTemplate.addTemplate fht_radio_rp_2_8_SpawnPoint
+include fht_radio_rp.tweak
+
+rem ================================= Team PL, Squad 9 ====================================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_pl_9
+ObjectTemplate.addTemplate rally_stuff_pl
+ObjectTemplate.addTemplate e_rp_pl 
+ObjectTemplate.addTemplate fht_radio_rp_2_9_SpawnPoint
+include fht_radio_rp.tweak
+
+
+rem ==================================================================================
+rem ==================================================================================
+rem ================================= Fallback Rally Points ==========================
+rem ==================================================================================
+rem ==================================================================================
+
+rem ================================= Team DE, Squad 0 (Fallback)==========================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_de_0
+ObjectTemplate.addTemplate rally_stuff_de
+ObjectTemplate.addTemplate e_rp_de 
+include fht_radio_rp_fallback.tweak
+
+rem ================================= Team GB, Squad 0 (Fallback)==========================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_gb_0
+ObjectTemplate.addTemplate rally_stuff_gb
+ObjectTemplate.addTemplate e_rp_gb 
+include fht_radio_rp_fallback.tweak
+
+rem ================================= Team IT, Squad 0 (Fallback)==========================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_it_0
+ObjectTemplate.addTemplate rally_stuff_it
+ObjectTemplate.addTemplate e_rp_it 
+include fht_radio_rp_fallback.tweak
+
+rem ================================= Team CN, Squad 0 (Fallback)==========================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_cn_0
+ObjectTemplate.addTemplate rally_stuff_cn
+ObjectTemplate.addTemplate e_rp_cn 
+include fht_radio_rp_fallback.tweak
+
+rem ================================= Team US, Squad 0 (Fallback)==========================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_us_0
+ObjectTemplate.addTemplate rally_stuff_us
+ObjectTemplate.addTemplate e_rp_us 
+include fht_radio_rp_fallback.tweak
+
+rem ================================= Team AU, Squad 0 (Fallback)==========================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_au_0
+ObjectTemplate.addTemplate rally_stuff_au
+ObjectTemplate.addTemplate e_rp_au 
+include fht_radio_rp_fallback.tweak
+
+rem ================================= Team NZ, Squad 0 (Fallback)==========================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_nz_0
+ObjectTemplate.addTemplate rally_stuff_nz
+ObjectTemplate.addTemplate e_rp_nz 
+include fht_radio_rp_fallback.tweak
+
+rem ================================= Team PL, Squad 0 (Fallback)==========================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_pl_0
+ObjectTemplate.addTemplate rally_stuff_pl
+ObjectTemplate.addTemplate e_rp_pl 
+include fht_radio_rp_fallback.tweak
+
+rem ===============================================================================
+rem ===============================================================================
+rem ================================= Dummy Rally Points ==========================
+rem ===============================================================================
+rem ===============================================================================
+
+GeometryTemplate.create BundledMesh fht_radio_rp
+CollisionManager.createTemplate fht_radio_rp
+ObjectTemplate.create PlayerControlObject fht_radio_rp
+
+ObjectTemplate.vehicleHud.miniMapIcon Ingame\Vehicles\Icons\Minimap\mini_Radio.dds
+ObjectTemplate.vehicleHud.miniMapIconLeaderSize Medium
+include fht_radio_rp_dummy.tweak
+
+rem ================================= AU Dummy ==========================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_au
+ObjectTemplate.addTemplate rally_stuff_au
+rem ObjectTemplate.addTemplate e_rp_au 
+include fht_radio_rp_dummy.tweak
+
+rem ================================= CN Dummy ==========================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_cn
+ObjectTemplate.addTemplate rally_stuff_cn
+rem ObjectTemplate.addTemplate e_rp_cn 
+include fht_radio_rp_dummy.tweak
+
+rem ================================= DE Dummy ==========================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_de
+ObjectTemplate.addTemplate rally_stuff_de
+rem ObjectTemplate.addTemplate e_rp_de 
+include fht_radio_rp_dummy.tweak
+
+rem ================================= GB Dummy ==========================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_gb
+ObjectTemplate.addTemplate rally_stuff_gb
+rem ObjectTemplate.addTemplate e_rp_gb 
+include fht_radio_rp_dummy.tweak
+
+rem ================================= IT Dummy ==========================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_it
+ObjectTemplate.addTemplate rally_stuff_it
+rem ObjectTemplate.addTemplate e_rp_it 
+include fht_radio_rp_dummy.tweak
+
+rem ================================= NZ Dummy ==========================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_nz
+ObjectTemplate.addTemplate rally_stuff_nz
+rem ObjectTemplate.addTemplate e_rp_nz 
+include fht_radio_rp_dummy.tweak
+
+rem ================================= PL Dummy ==========================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_pl
+ObjectTemplate.addTemplate rally_stuff_pl
+rem ObjectTemplate.addTemplate e_rp_pl 
+include fht_radio_rp_dummy.tweak
+
+rem ================================= US Dummy ==========================
+
+ObjectTemplate.create PlayerControlObject fht_radio_rp_us
+ObjectTemplate.addTemplate rally_stuff_us
+rem ObjectTemplate.addTemplate e_rp_us 
+include fht_radio_rp_dummy.tweak
+
+rem =================================================================================
+rem =================================================================================
+rem ================================= Rally Point Spawners ==========================
+rem =================================================================================
+rem =================================================================================
+
+ObjectTemplate.create ObjectSpawner fht_radio_rp_spawner_autogenerated
+ObjectTemplate.activeSafe ObjectSpawner fht_radio_rp_spawner_autogenerated
+ObjectTemplate.isNotSaveable 1
+ObjectTemplate.hasMobilePhysics 0
+ObjectTemplate.setObjectTemplate 0 fht_radio_rp
+ObjectTemplate.setObjectTemplate 1 fht_radio_rp
+ObjectTemplate.setObjectTemplate 2 fht_radio_rp
+
+rem ================================= Rally Point Spawner AU ==========================
+
+ObjectTemplate.create ObjectSpawner fht_radio_rp_au_spawner_autogenerated
+ObjectTemplate.activeSafe ObjectSpawner fht_radio_rp_au_spawner_autogenerated
+ObjectTemplate.isNotSaveable 1
+ObjectTemplate.hasMobilePhysics 0
+ObjectTemplate.setObjectTemplate 0 fht_radio_rp_au
+ObjectTemplate.setObjectTemplate 1 fht_radio_rp_au
+ObjectTemplate.setObjectTemplate 2 fht_radio_rp_au
+
+rem ================================= Rally Point Spawner CN ==========================
+
+ObjectTemplate.create ObjectSpawner fht_radio_rp_cn_spawner_autogenerated
+ObjectTemplate.activeSafe ObjectSpawner fht_radio_rp_cn_spawner_autogenerated
+ObjectTemplate.isNotSaveable 1
+ObjectTemplate.hasMobilePhysics 0
+ObjectTemplate.setObjectTemplate 0 fht_radio_rp_cn
+ObjectTemplate.setObjectTemplate 1 fht_radio_rp_cn
+ObjectTemplate.setObjectTemplate 2 fht_radio_rp_cn
+
+rem ================================= Rally Point Spawner DE ==========================
+
+ObjectTemplate.create ObjectSpawner fht_radio_rp_de_spawner_autogenerated
+ObjectTemplate.activeSafe ObjectSpawner fht_radio_rp_de_spawner_autogenerated
+ObjectTemplate.isNotSaveable 1
+ObjectTemplate.hasMobilePhysics 0
+ObjectTemplate.setObjectTemplate 0 fht_radio_rp_de
+ObjectTemplate.setObjectTemplate 1 fht_radio_rp_de
+ObjectTemplate.setObjectTemplate 2 fht_radio_rp_de
+
+rem ================================= Rally Point Spawner GB ==========================
+
+ObjectTemplate.create ObjectSpawner fht_radio_rp_gb_spawner_autogenerated
+ObjectTemplate.activeSafe ObjectSpawner fht_radio_rp_gb_spawner_autogenerated
+ObjectTemplate.isNotSaveable 1
+ObjectTemplate.hasMobilePhysics 0
+ObjectTemplate.setObjectTemplate 0 fht_radio_rp_gb
+ObjectTemplate.setObjectTemplate 1 fht_radio_rp_gb
+ObjectTemplate.setObjectTemplate 2 fht_radio_rp_gb
+
+rem ================================= Rally Point Spawner IT ==========================
+
+ObjectTemplate.create ObjectSpawner fht_radio_rp_it_spawner_autogenerated
+ObjectTemplate.activeSafe ObjectSpawner fht_radio_rp_it_spawner_autogenerated
+ObjectTemplate.isNotSaveable 1
+ObjectTemplate.hasMobilePhysics 0
+ObjectTemplate.setObjectTemplate 0 fht_radio_rp_it
+ObjectTemplate.setObjectTemplate 1 fht_radio_rp_it
+ObjectTemplate.setObjectTemplate 2 fht_radio_rp_it
+
+rem ================================= Rally Point Spawner NZ ==========================
+
+ObjectTemplate.create ObjectSpawner fht_radio_rp_nz_spawner_autogenerated
+ObjectTemplate.activeSafe ObjectSpawner fht_radio_rp_nz_spawner_autogenerated
+ObjectTemplate.isNotSaveable 1
+ObjectTemplate.hasMobilePhysics 0
+ObjectTemplate.setObjectTemplate 0 fht_radio_rp_nz
+ObjectTemplate.setObjectTemplate 1 fht_radio_rp_nz
+ObjectTemplate.setObjectTemplate 2 fht_radio_rp_nz
+
+rem ================================= Rally Point Spawner PL ==========================
+
+ObjectTemplate.create ObjectSpawner fht_radio_rp_pl_spawner_autogenerated
+ObjectTemplate.activeSafe ObjectSpawner fht_radio_rp_pl_spawner_autogenerated
+ObjectTemplate.isNotSaveable 1
+ObjectTemplate.hasMobilePhysics 0
+ObjectTemplate.setObjectTemplate 0 fht_radio_rp_pl
+ObjectTemplate.setObjectTemplate 1 fht_radio_rp_pl
+ObjectTemplate.setObjectTemplate 2 fht_radio_rp_pl
+
+rem ================================= Rally Point Spawner US ==========================
+
+ObjectTemplate.create ObjectSpawner fht_radio_rp_us_spawner_autogenerated
+ObjectTemplate.activeSafe ObjectSpawner fht_radio_rp_us_spawner_autogenerated
+ObjectTemplate.isNotSaveable 1
+ObjectTemplate.hasMobilePhysics 0
+ObjectTemplate.setObjectTemplate 0 fht_radio_rp_us
+ObjectTemplate.setObjectTemplate 1 fht_radio_rp_us
+ObjectTemplate.setObjectTemplate 2 fht_radio_rp_us
+
+rem ===============================================================================
+rem ===============================================================================
+rem ================================= RallyStuff Objects ==========================
+rem ===============================================================================
+rem ===============================================================================
+
+rem ================================= RallyStuff AU ==========================
+
+GeometryTemplate.create BundledMesh rally_stuff_au
+CollisionManager.createTemplate rally_stuff_au
+ObjectTemplate.create Bundle rally_stuff_au
+ObjectTemplate.collisionMesh rally_stuff_au
+ObjectTemplate.mapMaterial 0 cloth 10
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.geometry rally_stuff_au
+
+rem ================================= RallyStuff CN ==========================
+
+GeometryTemplate.create BundledMesh rally_stuff_cn
+CollisionManager.createTemplate rally_stuff_cn
+ObjectTemplate.create Bundle rally_stuff_cn
+ObjectTemplate.collisionMesh rally_stuff_cn
+ObjectTemplate.mapMaterial 0 cloth 10
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.geometry rally_stuff_cn
+
+rem ================================= RallyStuff DE ==========================
+
+GeometryTemplate.create BundledMesh rally_stuff_de
+CollisionManager.createTemplate rally_stuff_de
+ObjectTemplate.create Bundle rally_stuff_de
+ObjectTemplate.collisionMesh rally_stuff_de
+ObjectTemplate.mapMaterial 0 cloth 10
+ObjectTemplate.mapMaterial 1 helmet 26
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.geometry rally_stuff_de
+
+rem ================================= RallyStuff GB ==========================
+
+GeometryTemplate.create BundledMesh rally_stuff_gb
+CollisionManager.createTemplate rally_stuff_gb
+ObjectTemplate.create Bundle rally_stuff_gb
+ObjectTemplate.collisionMesh rally_stuff_gb
+ObjectTemplate.mapMaterial 0 cloth 10
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.geometry rally_stuff_gb
+
+rem ================================= RallyStuff IT ==========================
+
+GeometryTemplate.create BundledMesh rally_stuff_it
+CollisionManager.createTemplate rally_stuff_it
+ObjectTemplate.create Bundle rally_stuff_it
+ObjectTemplate.collisionMesh rally_stuff_it
+ObjectTemplate.mapMaterial 0 cloth 10
+ObjectTemplate.mapMaterial 1 helmet 26
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.geometry rally_stuff_it
+
+rem ================================= RallyStuff NZ ==========================
+
+GeometryTemplate.create BundledMesh rally_stuff_nz
+CollisionManager.createTemplate rally_stuff_nz
+ObjectTemplate.create Bundle rally_stuff_nz
+ObjectTemplate.collisionMesh rally_stuff_nz
+ObjectTemplate.mapMaterial 0 cloth 10
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.geometry rally_stuff_nz
+
+rem ================================= RallyStuff NZ ==========================
+
+GeometryTemplate.create BundledMesh rally_stuff_pl
+CollisionManager.createTemplate rally_stuff_pl
+ObjectTemplate.create Bundle rally_stuff_pl
+ObjectTemplate.collisionMesh rally_stuff_pl
+ObjectTemplate.mapMaterial 0 cloth 10
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.geometry rally_stuff_pl
+
+rem ================================= RallyStuff US ==========================
+
+GeometryTemplate.create BundledMesh rally_stuff_us
+CollisionManager.createTemplate rally_stuff_us
+ObjectTemplate.create Bundle rally_stuff_us
+ObjectTemplate.collisionMesh rally_stuff_us
+ObjectTemplate.mapMaterial 0 cloth 10
+ObjectTemplate.mapMaterial 1 helmet 26
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.geometry rally_stuff_us
+
+rem ================================= Spawnpoint Template ====================================
+
+ObjectTemplate.create SpawnPoint fht_radio_rp_1_1_SpawnPoint
+ObjectTemplate.isNotSaveable 1
+ObjectTemplate.setEnterOnSpawn 0
+ObjectTemplate.setScatterSpawnPositions 1
+ObjectTemplate.setAllowSpawnCloseToVehicle 1
+
+ObjectTemplate.create SpawnPoint fht_radio_rp_1_2_SpawnPoint
+ObjectTemplate.isNotSaveable 1
+ObjectTemplate.setEnterOnSpawn 0
+ObjectTemplate.setScatterSpawnPositions 1
+ObjectTemplate.setAllowSpawnCloseToVehicle 1
+
+ObjectTemplate.create SpawnPoint fht_radio_rp_1_3_SpawnPoint
+ObjectTemplate.isNotSaveable 1
+ObjectTemplate.setEnterOnSpawn 0
+ObjectTemplate.setScatterSpawnPositions 1
+ObjectTemplate.setAllowSpawnCloseToVehicle 1
+
+ObjectTemplate.create SpawnPoint fht_radio_rp_1_4_SpawnPoint
+ObjectTemplate.isNotSaveable 1
+ObjectTemplate.setEnterOnSpawn 0
+ObjectTemplate.setScatterSpawnPositions 1
+ObjectTemplate.setAllowSpawnCloseToVehicle 1
+
+ObjectTemplate.create SpawnPoint fht_radio_rp_1_5_SpawnPoint
+ObjectTemplate.isNotSaveable 1
+ObjectTemplate.setEnterOnSpawn 0
+ObjectTemplate.setScatterSpawnPositions 1
+ObjectTemplate.setAllowSpawnCloseToVehicle 1
+
+ObjectTemplate.create SpawnPoint fht_radio_rp_1_6_SpawnPoint
+ObjectTemplate.isNotSaveable 1
+ObjectTemplate.setEnterOnSpawn 0
+ObjectTemplate.setScatterSpawnPositions 1
+ObjectTemplate.setAllowSpawnCloseToVehicle 1
+
+ObjectTemplate.create SpawnPoint fht_radio_rp_1_7_SpawnPoint
+ObjectTemplate.isNotSaveable 1
+ObjectTemplate.setEnterOnSpawn 0
+ObjectTemplate.setScatterSpawnPositions 1
+ObjectTemplate.setAllowSpawnCloseToVehicle 1
+
+ObjectTemplate.create SpawnPoint fht_radio_rp_1_8_SpawnPoint
+ObjectTemplate.isNotSaveable 1
+ObjectTemplate.setEnterOnSpawn 0
+ObjectTemplate.setScatterSpawnPositions 1
+ObjectTemplate.setAllowSpawnCloseToVehicle 1
+
+ObjectTemplate.create SpawnPoint fht_radio_rp_1_9_SpawnPoint
+ObjectTemplate.isNotSaveable 1
+ObjectTemplate.setEnterOnSpawn 0
+ObjectTemplate.setScatterSpawnPositions 1
+ObjectTemplate.setAllowSpawnCloseToVehicle 1
+
+ObjectTemplate.create SpawnPoint fht_radio_rp_2_1_SpawnPoint
+ObjectTemplate.isNotSaveable 1
+ObjectTemplate.setEnterOnSpawn 0
+ObjectTemplate.setScatterSpawnPositions 1
+ObjectTemplate.setAllowSpawnCloseToVehicle 1
+
+ObjectTemplate.create SpawnPoint fht_radio_rp_2_2_SpawnPoint
+ObjectTemplate.isNotSaveable 1
+ObjectTemplate.setEnterOnSpawn 0
+ObjectTemplate.setScatterSpawnPositions 1
+ObjectTemplate.setAllowSpawnCloseToVehicle 1
+
+ObjectTemplate.create SpawnPoint fht_radio_rp_2_3_SpawnPoint
+ObjectTemplate.isNotSaveable 1
+ObjectTemplate.setEnterOnSpawn 0
+ObjectTemplate.setScatterSpawnPositions 1
+ObjectTemplate.setAllowSpawnCloseToVehicle 1
+
+ObjectTemplate.create SpawnPoint fht_radio_rp_2_4_SpawnPoint
+ObjectTemplate.isNotSaveable 1
+ObjectTemplate.setEnterOnSpawn 0
+ObjectTemplate.setScatterSpawnPositions 1
+ObjectTemplate.setAllowSpawnCloseToVehicle 1
+
+ObjectTemplate.create SpawnPoint fht_radio_rp_2_5_SpawnPoint
+ObjectTemplate.isNotSaveable 1
+ObjectTemplate.setEnterOnSpawn 0
+ObjectTemplate.setScatterSpawnPositions 1
+ObjectTemplate.setAllowSpawnCloseToVehicle 1
+
+ObjectTemplate.create SpawnPoint fht_radio_rp_2_6_SpawnPoint
+ObjectTemplate.isNotSaveable 1
+ObjectTemplate.setEnterOnSpawn 0
+ObjectTemplate.setScatterSpawnPositions 1
+ObjectTemplate.setAllowSpawnCloseToVehicle 1
+
+ObjectTemplate.create SpawnPoint fht_radio_rp_2_7_SpawnPoint
+ObjectTemplate.isNotSaveable 1
+ObjectTemplate.setEnterOnSpawn 0
+ObjectTemplate.setScatterSpawnPositions 1
+ObjectTemplate.setAllowSpawnCloseToVehicle 1
+
+ObjectTemplate.create SpawnPoint fht_radio_rp_2_8_SpawnPoint
+ObjectTemplate.isNotSaveable 1
+ObjectTemplate.setEnterOnSpawn 0
+ObjectTemplate.setScatterSpawnPositions 1
+ObjectTemplate.setAllowSpawnCloseToVehicle 1
+
+ObjectTemplate.create SpawnPoint fht_radio_rp_2_9_SpawnPoint
+ObjectTemplate.isNotSaveable 1
+ObjectTemplate.setEnterOnSpawn 0
+ObjectTemplate.setScatterSpawnPositions 1
+ObjectTemplate.setAllowSpawnCloseToVehicle 1

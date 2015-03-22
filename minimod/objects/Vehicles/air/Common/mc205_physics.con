@@ -1,0 +1,219 @@
+ObjectTemplate.create Wing mc202Physics_RudderFlap
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.setNetworkableInfo BasicInfo
+ObjectTemplate.createdInEditor 1
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+rem -------------------------------------
+ObjectTemplate.addTemplate S_mc202Physics_RudderFlap_RotationRpm
+rem -------------------------------------
+ObjectTemplate.setMinRotation 0/-11/0
+ObjectTemplate.setMaxRotation 0/11/0
+ObjectTemplate.setMaxSpeed 0/5/0
+ObjectTemplate.setAcceleration 0/35/0
+ObjectTemplate.setInputToPitch PIYaw
+ObjectTemplate.setAutomaticReset 1
+ObjectTemplate.setPositionOffset 0/0/0
+ObjectTemplate.setWingLift 2
+ObjectTemplate.setFlapLift 2
+
+ObjectTemplate.activeSafe Sound S_mc202Physics_RudderFlap_RotationRpm
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.create Wing mc202Physics_PhyTailFlap
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.setNetworkableInfo BasicInfo
+ObjectTemplate.createdInEditor 1
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+rem -------------------------------------
+ObjectTemplate.addTemplate S_mc202Physics_PhyTailFlap_RotationRpm
+rem -------------------------------------
+ObjectTemplate.setMinRotation 0/-12/0
+ObjectTemplate.setMaxRotation 0/15/0
+ObjectTemplate.setMaxSpeed 0/5/0
+ObjectTemplate.setAcceleration 0/-23/0
+ObjectTemplate.setInputToPitch PIPitch
+ObjectTemplate.setAutomaticReset 1
+ObjectTemplate.setPositionOffset 0/0/0
+ObjectTemplate.setWingLift 4
+ObjectTemplate.setFlapLift 2
+
+ObjectTemplate.activeSafe Sound S_mc202Physics_PhyTailFlap_RotationRpm
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.create Wing mc202Physics_BodyWingVertical
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.createdInEditor 1
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 0
+rem -------------------------------------
+ObjectTemplate.addTemplate S_mc202Physics_BodyWingVertical_RotationRpm
+rem -------------------------------------
+ObjectTemplate.setAutomaticReset 1
+ObjectTemplate.setPositionOffset 0/0/0
+ObjectTemplate.setWingLift 2
+ObjectTemplate.setFlapLift 0
+
+ObjectTemplate.activeSafe Sound S_mc202Physics_BodyWingVertical_RotationRpm
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.create Wing mc202Physics_PhyFlapsL
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.setNetworkableInfo BasicInfo
+ObjectTemplate.createdInEditor 1
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+rem -------------------------------------
+ObjectTemplate.addTemplate S_mc202Physics_PhyFlapsL_RotationRpm
+rem -------------------------------------
+ObjectTemplate.setMinRotation 0/-14/0
+ObjectTemplate.setMaxRotation 0/14/0
+ObjectTemplate.setMaxSpeed 0/5/0
+ObjectTemplate.setAcceleration 0/-15/0
+ObjectTemplate.setInputToPitch PIRoll
+ObjectTemplate.setAutomaticReset 1
+ObjectTemplate.setPositionOffset 0/0/1
+ObjectTemplate.setWingLift 1.6
+ObjectTemplate.setFlapLift 3
+
+ObjectTemplate.activeSafe Sound S_mc202Physics_PhyFlapsL_RotationRpm
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.create Wing mc202Physics_PhyFlapsR
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.setNetworkableInfo BasicInfo
+ObjectTemplate.createdInEditor 1
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+rem -------------------------------------
+ObjectTemplate.addTemplate S_mc202Physics_PhyFlapsR_RotationRpm
+rem -------------------------------------
+ObjectTemplate.setMinRotation 0/-14/0
+ObjectTemplate.setMaxRotation 0/14/0
+ObjectTemplate.setMaxSpeed 0/5/0
+ObjectTemplate.setAcceleration 0/15/0
+ObjectTemplate.setInputToPitch PIRoll
+ObjectTemplate.setAutomaticReset 1
+ObjectTemplate.setPositionOffset 0/0/1
+ObjectTemplate.setWingLift 1.6
+ObjectTemplate.setFlapLift 3
+
+ObjectTemplate.activeSafe Sound S_mc202Physics_PhyFlapsR_RotationRpm
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.create Engine mc202_PhysicsEngine
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.setNetworkableInfo BasicInfo
+ObjectTemplate.createdInEditor 1
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+rem -------------------------------------
+ObjectTemplate.addTemplate S_mc202_PhysicsEngine_RotationRpm
+ObjectTemplate.addTemplate S_mc202_PhysicsEngine_Idle
+ObjectTemplate.addTemplate S_mc202_PhysicsEngine_Rpm1
+ObjectTemplate.setRotation 180/0/0
+ObjectTemplate.addTemplate S_mc202_PhysicsEngine_Rpm2
+ObjectTemplate.setPosition -4.24538e-007/0.335214/-0.0572352
+ObjectTemplate.setRotation 0/90/0
+ObjectTemplate.addTemplate S_mc202_PhysicsEngine_Load
+ObjectTemplate.addTemplate ade_heliDraft
+ObjectTemplate.addTemplate e_contrail
+ObjectTemplate.setPosition 5.09157/0.104581/-2.53318
+ObjectTemplate.addTemplate e_contrail
+ObjectTemplate.setPosition -5.09157/0.104581/-2.53318
+rem -------------------------------------
+ObjectTemplate.setMinRotation 0/0/-1000
+ObjectTemplate.setMaxRotation 0/0/5000
+ObjectTemplate.setMaxSpeed 0/0/5500
+ObjectTemplate.setAcceleration 0/0/400
+ObjectTemplate.setDeAcceleration 0/0/400
+ObjectTemplate.setInputToRoll PIThrottle
+ObjectTemplate.setAutomaticReset 1
+ObjectTemplate.setUseDeAcceleration 1
+ObjectTemplate.restoreRotationOnExit 1
+ObjectTemplate.setEngineType c_ETPlane
+ObjectTemplate.setTorque 47
+ObjectTemplate.setDifferential 25
+ObjectTemplate.setGearUp 0.7
+ObjectTemplate.setGearDown 0.3
+ObjectTemplate.noPropellerEffectatSpeed 295
+ObjectTemplate.noPropellerEffectatSpeed 295
+ObjectTemplate.noEffectAtPerpSpeed 295
+
+
+ObjectTemplate.activeSafe Sound S_mc202_PhysicsEngine_RotationRpm
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/vehicles/air/Common/Sounds/RPM/bf109_F4_rpm1.wav"
+ObjectTemplate.loopCount 0
+ObjectTemplate.is3dSound 1
+ObjectTemplate.stopType 1
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 0.66
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.pitchEnvelope 0/1/0/3/0/3/0/0.660232/0/0.281853/1.27413/0/0.996139/2.54826/0/
+ObjectTemplate.volumeEnvelope 0/1/0/1/0/3/0/0/0/0.150579/0.65251/0/0.289575/1/0/
+ObjectTemplate.minDistance 15
+ObjectTemplate.halfvolumedistance 35
+ObjectTemplate.coneDirection 0.0174525/0/-0.999848
+ObjectTemplate.coneInnerAngle 140
+ObjectTemplate.coneOuterVolume 0.7
+
+
+ObjectTemplate.activeSafe Sound S_mc202_PhysicsEngine_Idle
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/vehicles/air/Common/Sounds/Start_Idle_Stop/bf109_F4_startup_idle_stop.wav"
+ObjectTemplate.loopCount 0
+ObjectTemplate.is3dSound 1
+ObjectTemplate.stopType 2
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 1
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.pitchEnvelope 0/1/0/3/0/3/0/0.648649/0/0.250965/1.00772/0/0.996139/2.51351/0/
+ObjectTemplate.volumeEnvelope 0/1/0/1/0/3/0.003861/0.849421/0/0.0965251/1/0/0.992278/1/0/
+ObjectTemplate.minDistance 15
+ObjectTemplate.halfvolumedistance 25
+ObjectTemplate.coneDirection 0.0174525/0/-0.999848
+ObjectTemplate.coneInnerAngle 100
+ObjectTemplate.coneOuterAngle 180
+ObjectTemplate.coneOuterVolume 0.7
+ObjectTemplate.soundRadius 3
+
+ObjectTemplate.activeSafe Sound S_mc202_PhysicsEngine_Rpm1
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe Sound S_mc202_PhysicsEngine_Rpm2
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/vehicles/air/Common/Sounds/RPM/bf109_F4_rpm2.wav"
+ObjectTemplate.loopCount 0
+ObjectTemplate.is3dSound 1
+ObjectTemplate.stopType 1
+ObjectTemplate.volume 0.75
+ObjectTemplate.pitch 0.66
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.pitchEnvelope 0/1/0/3/0/3/0/0.660232/0/0.281853/1.27413/0/0.996139/2.54826/0/
+ObjectTemplate.volumeEnvelope 0/1/0/1/0/3/0.00772201/0/0/0.146718/0.841699/0/0.293436/1/0/
+ObjectTemplate.position -4.24538e-007/0.335214/-0.0572352
+ObjectTemplate.minDistance 20
+ObjectTemplate.halfvolumedistance 75
+ObjectTemplate.soundRadius 6
+ObjectTemplate.activeSafe Sound S_mc202_PhysicsEngine_Load
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.create Wing mc202_BodyWingHorizontal
+ObjectTemplate.modifiedByUser "Phil"
+ObjectTemplate.createdInEditor 1
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 0
+rem -------------------------------------
+ObjectTemplate.addTemplate S_mc202_BodyWingHorizontal_RotationRpm
+rem -------------------------------------
+ObjectTemplate.setPositionOffset 0/0/0
+ObjectTemplate.setWingLift 10
+ObjectTemplate.setFlapLift 0

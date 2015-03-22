@@ -1,0 +1,1196 @@
+rem *** Generated with Bf2Editor.exe [created: 2006/5/15 12:52]
+GeometryTemplate.setSubGeometryLodDistance 1 0 30
+GeometryTemplate.setSubGeometryLodDistance 1 1 60
+GeometryTemplate.setSubGeometryLodDistance 1 2 100
+GeometryTemplate.setSubGeometryLodDistance 2 0 40
+GeometryTemplate.setSubGeometryLodDistance 2 1 80
+GeometryTemplate.compressVertexData 1
+GeometryTemplate.maxTextureRepeat 16
+ObjectTemplate.activeSafe PlayerControlObject m4a1mid_eu_ca
+ObjectTemplate.creator ATI4870:Administrator
+ObjectTemplate.modifiedByUser "Phil"
+ObjectTemplate.setNetworkableInfo BasicInfo
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.castsDynamicShadow 1
+ObjectTemplate.cullRadiusScale 6
+rem ---BeginComp:Armor ---
+ObjectTemplate.createComponent Armor
+ObjectTemplate.armor.angleMod 0
+ObjectTemplate.armor.maxHitPoints 1000
+ObjectTemplate.armor.hitPoints 1000
+ObjectTemplate.armor.defaultMaterial 126
+ObjectTemplate.armor.hpLostWhileUpSideDown 150
+ObjectTemplate.armor.hpLostWhileInDeepWater 150
+ObjectTemplate.armor.hpLostWhileCriticalDamage 0
+ObjectTemplate.armor.waterDamageDelay 0
+ObjectTemplate.armor.deepWaterDamageDelay 0
+ObjectTemplate.armor.waterLevel -0.3
+ObjectTemplate.armor.explosionForce 15
+ObjectTemplate.armor.explosionForceMod 8
+ObjectTemplate.armor.explosionForceMax 5000
+ObjectTemplate.armor.explosionDamage 200
+ObjectTemplate.armor.explosionRadius 3
+ObjectTemplate.armor.explosionMaterial 99
+ObjectTemplate.armor.wreckExplosionForce 12
+ObjectTemplate.armor.wreckExplosionForceMod 6
+ObjectTemplate.armor.wreckExplosionForceMax 200
+ObjectTemplate.armor.wreckExplosionDamage 1
+ObjectTemplate.armor.wreckExplosionRadius 8
+ObjectTemplate.armor.wreckExplosionMaterial 70
+ObjectTemplate.armor.wreckHitPoints 1000
+ObjectTemplate.armor.timeToStayAsWreck 60
+ObjectTemplate.armor.criticalDamage 165
+ObjectTemplate.armor.destroyOnSpectacularDeath 0
+ObjectTemplate.armor.hideChildrenOnSpectacularDeath 1
+ObjectTemplate.armor.addArmorEffect 50 e_dstate_land_lightsmoke -0.199909/0.371683/-1.92563 0/0/0
+ObjectTemplate.armor.addArmorEffect 50 e_dstate_land_sparks 1.21668/-0.747398/-2.54365 0/0/0
+ObjectTemplate.armor.addArmorEffect 25 e_dstate_land_MediumSmoke -0.199933/0.61174/-1.99233 0/0/0
+ObjectTemplate.armor.addArmorEffect 25 e_dstate_land_heavysmoke -0.199887/0.49074/-2.14061 0/0/0
+ObjectTemplate.armor.addArmorEffect 15 e_dstate_land_critical -0.199919/0.402054/-2.0437 0/0/0
+ObjectTemplate.armor.addArmorEffect 0 e_vexp_tank 0/0/0 0/0/0
+ObjectTemplate.armor.addArmorEffectSpectacular 0 e_vexp_tank_spec 0/0/0 0/0/0
+ObjectTemplate.armor.addArmorEffect -20 e_dstate_static_fire 0.044305/1.06468/-0.467855 0/0/0
+ObjectTemplate.armor.addArmorEffect -100 e_vexp_tank_2nd 0/0/-0.5 0/0/0
+rem ---EndComp ---
+rem ---BeginComp:Radio ---
+ObjectTemplate.createComponent Radio
+ObjectTemplate.Radio.spottedMessage tank_spotted
+rem ---EndComp ---
+rem ---BeginComp:VehicleHud ---
+ObjectTemplate.createComponent VehicleHud
+ObjectTemplate.vehicleHud.hudName "Sherman II"
+ObjectTemplate.vehicleHud.typeIcon Ingame\Vehicles\Icons\Hud\MenuIcons\menuIcon_tank.tga
+ObjectTemplate.vehicleHud.miniMapIcon Ingame\Vehicles\Icons\Minimap\tank_medium.dds
+ObjectTemplate.vehicleHud.miniMapIconLeaderSize Medium
+ObjectTemplate.vehicleHud.hasTurretIcon 1
+ObjectTemplate.vehicleHud.vehicleIconPos 48/13
+ObjectTemplate.vehicleHud.vehicleType 0
+ObjectTemplate.vehicleHud.vehicleIcon Ingame\Vehicles\Icons\Hud\VehicleIcons\Placeholder.dds
+rem ---EndComp ---
+rem ---BeginComp:HelpHud ---
+ObjectTemplate.createComponent HelpHud
+ObjectTemplate.HelpHud.helpStringKey "FH2_HELP_TANK_xSightsMultipleAmmo"
+ObjectTemplate.HelpHud.helpSoundKey "fh2_tip"
+rem ---EndComp ---
+ObjectTemplate.geometry m4a1mid_eu_ca
+ObjectTemplate.setCollisionMesh m4a1mid_eu_brit
+ObjectTemplate.mapMaterial 0 38mm 126
+ObjectTemplate.mapMaterial 1 60mm 128
+ObjectTemplate.mapMaterial 2 25mm 124
+ObjectTemplate.mapMaterial 3 19mm 123
+ObjectTemplate.mapMaterial 4 tanktrax 86
+ObjectTemplate.mapMaterial 5 Wreck 60
+ObjectTemplate.mapMaterial 6 76mm 130
+ObjectTemplate.mapMaterial 7 51mm 127
+ObjectTemplate.mapMaterial 8 76mm+25mm 132
+ObjectTemplate.drag 2
+ObjectTemplate.mass 15150
+ObjectTemplate.inertiaModifier 0.75/2/2
+ObjectTemplate.gravityModifier 1.5
+ObjectTemplate.floaterMod 0.25
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.aiTemplate M4A1mid_eu_britAI
+rem -------------------------------------
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_Ambient
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_AmbientDamaged
+ObjectTemplate.addTemplate m4a1mid_eu_ca_entry
+ObjectTemplate.addTemplate TankRider_Kneeling360
+ObjectTemplate.setPosition 0.5866/1.81199/-1.95735
+ObjectTemplate.addTemplate TankRider_Kneeling360
+ObjectTemplate.setPosition -0.697357/1.87584/-1.95725
+ObjectTemplate.addTemplate e_amphib_wake
+ObjectTemplate.setPosition -0.00217/-0.51983/3.55929
+ObjectTemplate.addTemplate e_amphib_wake
+ObjectTemplate.setPosition -0.00217001/-0.51983/-3.35093
+ObjectTemplate.setRotation 180/0/0
+ObjectTemplate.addTemplate e_amphib_wake_sound
+ObjectTemplate.setPosition -0.00217/-0.51983/0
+ObjectTemplate.addTemplate e_sinking_vehicle
+ObjectTemplate.addTemplate e_enter_hatch
+ObjectTemplate.setPosition -0.191018/1.35196/-0.410155
+ObjectTemplate.addTemplate e_exit_hatch
+ObjectTemplate.setPosition 0.0755142/1.33848/-0.491439
+rem -------------------------------------
+ObjectTemplate.setPcoId 0
+ObjectTemplate.setSoldierExitLocation 0.399213/2.40636/-0.39022 0/0/0
+ObjectTemplate.altSoldierExitPosition 0/0.1/-3.7449
+ObjectTemplate.exitSpeedMod 0.5
+ObjectTemplate.dontClearTeamOnExit 1
+ObjectTemplate.soundFilter vehicle
+ObjectTemplate.shakeFactor 4
+ObjectTemplate.controlsCategory VCHelicopter
+ObjectTemplate.setVehicleType VTHeavyTank
+ObjectTemplate.listenerObstruction 0.825
+ObjectTemplate.groundContactVolume 1
+ObjectTemplate.damagedAmbientSoundLimit 0.15
+ObjectTemplate.hasRestrictedExit 1
+ObjectTemplate.altSoldierExitPosition 0/0.1/-3.7449
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_Ambient
+ObjectTemplate.modifiedByUser "Phil"
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_AmbientDamaged
+ObjectTemplate.modifiedByUser "Phil"
+
+ObjectTemplate.activeSafe Engine m4a1mid_eu_ca_aaMotor
+ObjectTemplate.modifiedByUser "Phil"
+ObjectTemplate.setNetworkableInfo BasicInfo
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+rem -------------------------------------
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_aaMotor_RotationRpm
+ObjectTemplate.setPosition -0.507886/-1.09084e-008/0.433987
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_aaMotor_Idle
+ObjectTemplate.setPosition -0.664945/0.641349/1.52434
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_aaMotor_Rpm1
+ObjectTemplate.setPosition -0.63592/0.73412/1.82892
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_aaMotor_Rpm2
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_aaMotor_Load
+ObjectTemplate.setPosition -0.184432/0/0.591951
+ObjectTemplate.addTemplate e_exhaust
+ObjectTemplate.setPosition -0.468353/-0.256124/-4.11815
+ObjectTemplate.setRotation 0.140657/55.5761/0.0161494
+ObjectTemplate.addTemplate e_exhaust_startup
+ObjectTemplate.setPosition -0.410728/-0.566433/-4.16432
+ObjectTemplate.setRotation 0.140657/55.5761/0.0161494
+rem -------------------------------------
+ObjectTemplate.setMinRotation -1/0/-5
+ObjectTemplate.setMaxRotation 1/0/10
+ObjectTemplate.setMaxSpeed 4/0/50
+ObjectTemplate.setAcceleration 10/0/10
+ObjectTemplate.setInputToYaw PIYaw
+ObjectTemplate.setInputToRoll PIThrottle
+ObjectTemplate.setAutomaticReset 1
+ObjectTemplate.snapToZeroOnNoInput 1
+ObjectTemplate.setEngineType c_ETTank
+ObjectTemplate.setTorque 22
+ObjectTemplate.setDifferential 8
+ObjectTemplate.setGearUp 0.7
+ObjectTemplate.setGearDown 0.3
+ObjectTemplate.trackTurnAcceleration 6
+ObjectTemplate.trackTurnSpeed 0.3
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_aaMotor_RotationRpm
+ObjectTemplate.modifiedByUser "Phil"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/vehicles/land/common/sounds/heavy_tracks.wav,objects/vehicles/land/common/sounds/matilda_tracks.wav"
+ObjectTemplate.loopCount 0
+ObjectTemplate.is3dSound 1
+ObjectTemplate.stopType 1
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 1
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.pitchEnvelope 0/1/0/3/0/3/0/0.746/0/0.612/0.944/0/0.995/1.135/0/
+ObjectTemplate.volumeEnvelope 0/1/0/1/0/2/0/0/0/0.995/1/0/
+ObjectTemplate.minDistance 3
+ObjectTemplate.halfvolumedistance 12
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_aaMotor_Idle
+ObjectTemplate.modifiedByUser "Phil"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/vehicles/land/gb/m3grant/sounds/M3Grant_Start_idle_stop.wav"
+ObjectTemplate.loopCount 0
+ObjectTemplate.is3dSound 1
+ObjectTemplate.stopType 1
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 1
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.pitchEnvelope 0/1/0/3/0/2/0/0.701/0/0.997/1.188/0/
+ObjectTemplate.volumeEnvelope 0/1/0/1/0/3/0.008/0.878/0/0.48/1/0/0.995/0/0/
+ObjectTemplate.minDistance 3
+ObjectTemplate.halfvolumedistance 14
+ObjectTemplate.soundRadius 3
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_aaMotor_Rpm1
+ObjectTemplate.modifiedByUser "Phil"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/vehicles/land/common/sounds/sherman_m4a1-high.wav"
+ObjectTemplate.loopCount 0
+ObjectTemplate.is3dSound 1
+ObjectTemplate.stopType 0
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 1
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.pitchEnvelope 0/1/0/3/0/3/0/0.451737/0/0.50193/0.799228/0/0.992278/1.16988/0/
+ObjectTemplate.volumeEnvelope 0/1/0/1/0/3/0.112/0/0/0.424/1/0/0.995/1/0/
+ObjectTemplate.minDistance 3
+ObjectTemplate.halfvolumedistance 14
+ObjectTemplate.soundRadius 3
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_aaMotor_Rpm2
+ObjectTemplate.modifiedByUser "Phil"
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_aaMotor_Load
+ObjectTemplate.modifiedByUser "Phil"
+
+ObjectTemplate.activeSafe RotationalBundle m4a1mid_eu_ca_FrontLeftDrive
+ObjectTemplate.modifiedByUser "Phil"
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.rotateAsAnimatedUV 1
+ObjectTemplate.rotateAsAnimatedUVReverse 0
+ObjectTemplate.rotateAsAnimatedUVObject m4a1mid_eu_ca_LeftWheel1
+rem -------------------------------------
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_FrontLeftDrive_RotationRpm
+rem -------------------------------------
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_FrontLeftDrive_RotationRpm
+ObjectTemplate.modifiedByUser "Phil"
+
+ObjectTemplate.activeSafe RotationalBundle m4a1mid_eu_ca_FrontRightDrive
+ObjectTemplate.modifiedByUser "Phil"
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.rotateAsAnimatedUV 1
+ObjectTemplate.rotateAsAnimatedUVReverse 0
+ObjectTemplate.rotateAsAnimatedUVObject m4a1mid_eu_ca_RightWheel1
+rem -------------------------------------
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_FrontRightDrive_RotationRpm
+rem -------------------------------------
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_FrontRightDrive_RotationRpm
+ObjectTemplate.modifiedByUser "Phil"
+
+ObjectTemplate.activeSafe Spring m4a1mid_eu_ca_LeftWheel1
+ObjectTemplate.modifiedByUser "Phil"
+ObjectTemplate.setNetworkableInfo SpringInfo
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.grip 8
+ObjectTemplate.animatedUVTranslation 1
+ObjectTemplate.animatedUVTranslationSpeed 0/0
+ObjectTemplate.animatedUVTranslationMax 1/0
+ObjectTemplate.animatedUVTranslationSize 10/0
+ObjectTemplate.animatedUVTranslationReverse 1
+ObjectTemplate.animatedUVTranslationIndex 2
+ObjectTemplate.animatedUVRotation 1
+ObjectTemplate.animatedUVRotationRadius 0.4
+ObjectTemplate.animatedUVRotationScale 1/1
+ObjectTemplate.animatedUVRotationIndex 1
+ObjectTemplate.animatedUVRotationReverse 1
+rem -------------------------------------
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_LeftWheel1_Rotation
+ObjectTemplate.addTemplate m4a1mid_eu_ca_leftwheel
+rem -------------------------------------
+ObjectTemplate.setStrength 40
+ObjectTemplate.setDamping 5
+ObjectTemplate.rotateUV 1
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_LeftWheel1_Rotation
+ObjectTemplate.modifiedByUser "Phil"
+
+ObjectTemplate.activeSafe Spring m4a1mid_eu_ca_LeftWheel2
+ObjectTemplate.modifiedByUser "Phil"
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.grip 128
+rem -------------------------------------
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_LeftWheel2_Rotation
+ObjectTemplate.addTemplate m4a1mid_eu_ca_leftwheel
+ObjectTemplate.addTemplate web_tracked
+ObjectTemplate.setPosition 0.00067771/-0.441314/1.05967e-007
+rem -------------------------------------
+ObjectTemplate.setStrength 0
+ObjectTemplate.setDamping 0
+ObjectTemplate.rotateUV 1
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_LeftWheel2_Rotation
+ObjectTemplate.modifiedByUser "Phil"
+
+ObjectTemplate.activeSafe Spring m4a1mid_eu_ca_LeftWheel3
+ObjectTemplate.modifiedByUser "Phil"
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.grip 128
+rem -------------------------------------
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_LeftWheel3_Rotation
+ObjectTemplate.addTemplate m4a1mid_eu_ca_leftwheel
+rem -------------------------------------
+ObjectTemplate.setStrength 0
+ObjectTemplate.setDamping 0
+ObjectTemplate.rotateUV 1
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_LeftWheel3_Rotation
+ObjectTemplate.modifiedByUser "Phil"
+
+ObjectTemplate.activeSafe Spring m4a1mid_eu_ca_LeftWheel4
+ObjectTemplate.modifiedByUser "Phil"
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.grip 128
+rem -------------------------------------
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_LeftWheel4_Rotation
+ObjectTemplate.addTemplate m4a1mid_eu_ca_leftwheel
+rem -------------------------------------
+ObjectTemplate.setStrength 0
+ObjectTemplate.setDamping 0
+ObjectTemplate.rotateUV 1
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_LeftWheel4_Rotation
+ObjectTemplate.modifiedByUser "Phil"
+
+ObjectTemplate.activeSafe Spring m4a1mid_eu_ca_LeftWheel5
+ObjectTemplate.modifiedByUser "Phil"
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.grip 128
+rem -------------------------------------
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_LeftWheel5_Rotation
+ObjectTemplate.addTemplate m4a1mid_eu_ca_leftwheel
+rem -------------------------------------
+ObjectTemplate.setStrength 0
+ObjectTemplate.setDamping 0
+ObjectTemplate.rotateUV 1
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_LeftWheel5_Rotation
+ObjectTemplate.modifiedByUser "Phil"
+
+ObjectTemplate.activeSafe Spring m4a1mid_eu_ca_LeftWheel6
+ObjectTemplate.modifiedByUser "Phil"
+ObjectTemplate.setNetworkableInfo SpringInfo
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.grip 8
+ObjectTemplate.animatedUVTranslation 1
+ObjectTemplate.animatedUVTranslationSpeed 0/0
+ObjectTemplate.animatedUVTranslationMax 0/1
+ObjectTemplate.animatedUVTranslationSize 0/-5.5
+ObjectTemplate.animatedUVTranslationReverse 0
+ObjectTemplate.animatedUVTranslationIndex 6
+rem -------------------------------------
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_LeftWheel6_Rotation
+ObjectTemplate.addTemplate m4a1mid_eu_ca_leftwheel
+ObjectTemplate.addTemplate web_tracked
+ObjectTemplate.setPosition 0.00067771/-0.441314/1.05967e-007
+ObjectTemplate.addTemplate web_trackedSmoke
+ObjectTemplate.setPosition 0.0220005/-0.370004/-7.49051e-007
+rem -------------------------------------
+ObjectTemplate.setStrength 40
+ObjectTemplate.setDamping 5
+ObjectTemplate.rotateUV 1
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_LeftWheel6_Rotation
+ObjectTemplate.modifiedByUser "Phil"
+
+ObjectTemplate.activeSafe RotationalBundle m4a1mid_eu_ca_RearLeftDrive
+ObjectTemplate.modifiedByUser "Phil"
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.rotateAsAnimatedUV 1
+ObjectTemplate.rotateAsAnimatedUVReverse 0
+ObjectTemplate.rotateAsAnimatedUVObject m4a1mid_eu_ca_LeftWheel1
+rem -------------------------------------
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_RearLeftDrive_RotationRpm
+rem -------------------------------------
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_RearLeftDrive_RotationRpm
+ObjectTemplate.modifiedByUser "Phil"
+
+ObjectTemplate.activeSafe RotationalBundle m4a1mid_eu_ca_RearRightDrive
+ObjectTemplate.modifiedByUser "Phil"
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.rotateAsAnimatedUV 1
+ObjectTemplate.rotateAsAnimatedUVReverse 0
+ObjectTemplate.rotateAsAnimatedUVObject m4a1mid_eu_ca_RightWheel1
+rem -------------------------------------
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_RearRightDrive_RotationRpm
+rem -------------------------------------
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_RearRightDrive_RotationRpm
+ObjectTemplate.modifiedByUser "Phil"
+
+ObjectTemplate.activeSafe Spring m4a1mid_eu_ca_RightWheel1
+ObjectTemplate.modifiedByUser "Phil"
+ObjectTemplate.setNetworkableInfo SpringInfo
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.grip 8
+ObjectTemplate.animatedUVTranslation 1
+ObjectTemplate.animatedUVTranslationSpeed 0/0
+ObjectTemplate.animatedUVTranslationMax 1/0
+ObjectTemplate.animatedUVTranslationSize 10/0
+ObjectTemplate.animatedUVTranslationReverse 1
+ObjectTemplate.animatedUVTranslationIndex 4
+ObjectTemplate.animatedUVRotation 1
+ObjectTemplate.animatedUVRotationRadius 0.4
+ObjectTemplate.animatedUVRotationScale 1/1
+ObjectTemplate.animatedUVRotationIndex 3
+ObjectTemplate.animatedUVRotationReverse 1
+rem -------------------------------------
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_RightWheel1_Rotation
+ObjectTemplate.addTemplate m4a1mid_eu_ca_rightwheel
+ObjectTemplate.addTemplate web_tracked
+ObjectTemplate.setPosition 0.00067771/-0.441314/1.05967e-007
+rem -------------------------------------
+ObjectTemplate.setStrength 40
+ObjectTemplate.setDamping 5
+ObjectTemplate.rotateUV 1
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_RightWheel1_Rotation
+ObjectTemplate.modifiedByUser "Phil"
+
+ObjectTemplate.activeSafe Spring m4a1mid_eu_ca_RightWheel2
+ObjectTemplate.modifiedByUser "Phil"
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.grip 128
+rem -------------------------------------
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_RightWheel2_Rotation
+ObjectTemplate.addTemplate m4a1mid_eu_ca_rightwheel
+rem -------------------------------------
+ObjectTemplate.setStrength 0
+ObjectTemplate.setDamping 0
+ObjectTemplate.rotateUV 1
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_RightWheel2_Rotation
+ObjectTemplate.modifiedByUser "Phil"
+
+ObjectTemplate.activeSafe Spring m4a1mid_eu_ca_RightWheel3
+ObjectTemplate.modifiedByUser "Phil"
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.grip 128
+rem -------------------------------------
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_RightWheel3_Rotation
+ObjectTemplate.addTemplate m4a1mid_eu_ca_rightwheel
+rem -------------------------------------
+ObjectTemplate.setStrength 0
+ObjectTemplate.setDamping 0
+ObjectTemplate.rotateUV 1
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_RightWheel3_Rotation
+ObjectTemplate.modifiedByUser "Phil"
+
+ObjectTemplate.activeSafe Spring m4a1mid_eu_ca_RightWheel4
+ObjectTemplate.modifiedByUser "Phil"
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.grip 128
+rem -------------------------------------
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_RightWheel4_Rotation
+ObjectTemplate.addTemplate m4a1mid_eu_ca_rightwheel
+rem -------------------------------------
+ObjectTemplate.setStrength 0
+ObjectTemplate.setDamping 0
+ObjectTemplate.rotateUV 1
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_RightWheel4_Rotation
+ObjectTemplate.modifiedByUser "Phil"
+
+ObjectTemplate.activeSafe Spring m4a1mid_eu_ca_RightWheel5
+ObjectTemplate.modifiedByUser "Phil"
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.grip 128
+rem -------------------------------------
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_RightWheel5_Rotation
+ObjectTemplate.addTemplate m4a1mid_eu_ca_rightwheel
+rem -------------------------------------
+ObjectTemplate.setStrength 0
+ObjectTemplate.setDamping 0
+ObjectTemplate.rotateUV 1
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_RightWheel5_Rotation
+ObjectTemplate.modifiedByUser "Phil"
+
+ObjectTemplate.activeSafe Spring m4a1mid_eu_ca_RightWheel6
+ObjectTemplate.modifiedByUser "Phil"
+ObjectTemplate.setNetworkableInfo SpringInfo
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.grip 8
+ObjectTemplate.animatedUVTranslation 1
+ObjectTemplate.animatedUVTranslationSpeed 0/0
+ObjectTemplate.animatedUVTranslationMax 0/1
+ObjectTemplate.animatedUVTranslationSize 0/-5.5
+ObjectTemplate.animatedUVTranslationReverse 0
+ObjectTemplate.animatedUVTranslationIndex 5
+rem -------------------------------------
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_RightWheel6_Rotation
+ObjectTemplate.addTemplate m4a1mid_eu_ca_rightwheel
+ObjectTemplate.addTemplate web_tracked
+ObjectTemplate.setPosition 0.00067771/-0.441314/1.05967e-007
+ObjectTemplate.addTemplate web_trackedSmoke
+ObjectTemplate.setPosition 0.0220005/-0.370004/-7.49051e-007
+rem -------------------------------------
+ObjectTemplate.setStrength 40
+ObjectTemplate.setDamping 5
+ObjectTemplate.rotateUV 1
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_RightWheel6_Rotation
+ObjectTemplate.modifiedByUser "Phil"
+
+ObjectTemplate.activeSafe PlayerControlObject m4a1mid_eu_ca_hullmachinegun
+ObjectTemplate.modifiedByUser "Phil"
+ObjectTemplate.setNetworkableInfo BasicInfo
+rem ---BeginComp:VehicleHud ---
+ObjectTemplate.createComponent VehicleHud
+ObjectTemplate.vehicleHud.miniMapIconLeaderSize Medium
+ObjectTemplate.vehicleHud.vehicleIconPos 18/10
+ObjectTemplate.vehicleHud.useSelectionIcons 0
+rem ---EndComp ---
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+rem -------------------------------------
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_hullmachinegun_Ambient
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_hullmachinegun_AmbientDamaged
+rem -------------------------------------
+ObjectTemplate.setPcoId 1
+ObjectTemplate.dontClearTeamOnExit 1
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_hullmachinegun_Ambient
+ObjectTemplate.modifiedByUser "Phil"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/vehicles/land/common/Oggsounds/sherman_interior_ambience.ogg"
+ObjectTemplate.loopCount 0
+ObjectTemplate.is3dSound 0
+ObjectTemplate.stopType 0
+ObjectTemplate.volume 0.35
+ObjectTemplate.pitch 1
+ObjectTemplate.pan 0.5
+ObjectTemplate.reverbLevel 1
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_hullmachinegun_AmbientDamaged
+ObjectTemplate.modifiedByUser "Phil"
+
+ObjectTemplate.activeSafe RotationalBundle m4a1mid_eu_ca_HullMG
+ObjectTemplate.modifiedByUser "Phil"
+ObjectTemplate.setNetworkableInfo BasicInfo
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+rem -------------------------------------
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_HullMG_RotationRpm
+ObjectTemplate.setPosition -0.507886/-1.09084e-008/0.433987
+ObjectTemplate.addTemplate Coaxial_Cal30_Main
+ObjectTemplate.setPosition 0.00287487/0.0121775/0.431996
+ObjectTemplate.addTemplate Tank_HullGunnerCamera
+ObjectTemplate.setPosition 4.01681e-006/0.237562/-0.615986
+rem -------------------------------------
+ObjectTemplate.setMinRotation -25/-25/0
+ObjectTemplate.setMaxRotation 25/15/0
+ObjectTemplate.setMaxSpeed 50/50/0
+ObjectTemplate.setAcceleration 200/200/0
+ObjectTemplate.setInputToYaw PIMouseLookX
+ObjectTemplate.setInputToPitch PIMouseLookY
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_HullMG_RotationRpm
+ObjectTemplate.modifiedByUser "Phil"
+
+ObjectTemplate.activeSafe RotationalBundle m4a1mid_eu_ca_turret
+ObjectTemplate.creator Kev4000
+ObjectTemplate.modifiedByUser "Phil"
+ObjectTemplate.setNetworkableInfo BasicInfo
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+rem -------------------------------------
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_turret_RotationRpm
+ObjectTemplate.setPosition -0.507886/-1.09084e-008/0.433987
+ObjectTemplate.addTemplate Tank_DriverCamera_geom0
+ObjectTemplate.setPosition 0.473129/1.17013/-0.230607
+rem -------------------------------------
+ObjectTemplate.setMaxSpeed 36/0/0
+ObjectTemplate.setAcceleration 36/0/0
+ObjectTemplate.setInputToYaw PIRoll
+ObjectTemplate.rememberexcessinput 1
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_turret_RotationRpm
+ObjectTemplate.modifiedByUser "Phil"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/vehicles/land/common/sounds/turret_electric.wav"
+ObjectTemplate.loopCount 0
+ObjectTemplate.is3dSound 1
+ObjectTemplate.stopType 0
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 0.8
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.pitchEnvelope 0/1/0.1/3/0/2/0.013/0.1/0.1/0.995/0.954/0.1/
+ObjectTemplate.volumeEnvelope 0/1/0/1/0/3/0.003/0/0/0.005/0.48/0/0.99/1/0/
+ObjectTemplate.minDistance 2.5
+ObjectTemplate.halfvolumedistance 9
+
+ObjectTemplate.activeSafe RotationalBundle m4a1mid_eu_ca_pitch
+ObjectTemplate.modifiedByUser "Phil"
+ObjectTemplate.setNetworkableInfo BasicInfo
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+rem -------------------------------------
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_pitch_RotationRpm
+ObjectTemplate.setPosition -0.507886/-1.09084e-008/0.433987
+ObjectTemplate.addTemplate Coaxial_Cal30_Cam3
+ObjectTemplate.setPosition -0.399321/-0.0243983/0.535084
+ObjectTemplate.addTemplate Tank_GunnerCamera
+ObjectTemplate.setPosition 0.29260/-0.00730/-0.3
+ObjectTemplate.addTemplate m4a1mid_eu_ca_75mm1
+ObjectTemplate.setPosition 0.008/-0.0301/-0.699
+ObjectTemplate.addTemplate m4a1mid_eu_ca_75mm2
+ObjectTemplate.setPosition 0.008/-0.0301/-0.699
+rem -------------------------------------
+ObjectTemplate.setMinRotation 0/-25/0
+ObjectTemplate.setMaxRotation 0/12/0
+ObjectTemplate.setMaxSpeed 0/36/0
+ObjectTemplate.setAcceleration 0/36/0
+ObjectTemplate.setInputToPitch PIPitch
+ObjectTemplate.rememberexcessinput 1
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_pitch_RotationRpm
+ObjectTemplate.modifiedByUser "Phil"
+
+ObjectTemplate.activeSafe GenericFireArm m4a1mid_eu_ca_75mm
+ObjectTemplate.modifiedByUser "Phil"
+rem ---BeginComp:WeaponHud ---
+ObjectTemplate.createComponent WeaponHud
+ObjectTemplate.weaponHud.weaponIcon Ingame\Weapons\Icons\Hud\bomb.tga
+ObjectTemplate.weaponHud.selectIcon Ingame\Rounds\75mmAPCBC.dds
+ObjectTemplate.weaponHud.hudName "75MM GUN AP"
+ObjectTemplate.weaponHud.guiIndex 1001
+ObjectTemplate.weaponHud.altGuiIndex 1004
+ObjectTemplate.weaponHud.enablePostProcessingOnGuiindex 1001
+ObjectTemplate.weaponHud.switchGuiOnCamera 1
+ObjectTemplate.weaponHud.hasFireRate 0
+ObjectTemplate.weaponHud.addShowOnCamMode 2
+ObjectTemplate.weaponHud.displaySelectOnActivation 1
+rem ---EndComp ---
+rem ---BeginComp:PostProcess ---
+ObjectTemplate.createComponent PostProcess
+ObjectTemplate.postProcess.tvinterference 0.003
+rem ---EndComp ---
+rem ---BeginComp:SingleFireComp ---
+ObjectTemplate.createComponent SingleFireComp
+ObjectTemplate.fire.roundsPerMinute 360
+ObjectTemplate.fire.addFireRate 0
+rem ---EndComp ---
+rem ---BeginComp:DefaultAmmoComp ---
+ObjectTemplate.createComponent DefaultAmmoComp
+ObjectTemplate.ammo.nrOfMags 44
+ObjectTemplate.ammo.magSize 1
+ObjectTemplate.ammo.reloadTime 4
+ObjectTemplate.ammo.minimumTimeUntilReload 0.75
+ObjectTemplate.ammo.autoReload 1
+ObjectTemplate.ammo.reloadWithoutPlayer 1
+rem ---EndComp ---
+rem ---BeginComp:WeaponBasedRecoilComp ---
+ObjectTemplate.createComponent WeaponBasedRecoilComp
+ObjectTemplate.recoil.recoilSize 15
+ObjectTemplate.recoil.recoilSpeed 10
+ObjectTemplate.recoil.recoilSpeedGB 5
+ObjectTemplate.recoil.recoilForce 15.5
+ObjectTemplate.recoil.cameraRecoilSpeed 8
+ObjectTemplate.recoil.cameraRecoilSize 6
+rem ---EndComp ---
+rem ---BeginComp:SimpleDeviationComp ---
+ObjectTemplate.createComponent SimpleDeviationComp
+ObjectTemplate.deviation.minDev 0.15
+rem ---EndComp ---
+rem ---BeginComp:DefaultSoundComp ---
+ObjectTemplate.createComponent DefaultSoundComp
+rem ---EndComp ---
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.aiTemplate M4A1mid_eu_britMainGun
+rem -------------------------------------
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_75mm_Fire1P
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_75mm_Fire1P_Outdoor
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_75mm_Fire3P
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_75mm_BoltClick
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_75mm_TriggerClick
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_75mm_SwitchFireRate
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_75mm_Reload1P
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_75mm_Reload3P
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_75mm_Deploy1P
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_75mm_Deploy3P
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_75mm_Zoom
+ObjectTemplate.addTemplate e_muzz_tank
+ObjectTemplate.setPosition 0.0116189/0.0179848/1.17884
+ObjectTemplate.addTemplate geb_tank
+ObjectTemplate.setPosition -6.13987e-006/6.59379e-006/1.01775
+rem -------------------------------------
+ObjectTemplate.projectileTemplate 75mmL40-APCBC-Projectile
+ObjectTemplate.keepProjectiles 5
+objecttemplate.velocity 441
+ObjectTemplate.itemIndex 1
+ObjectTemplate.delayToUse 4.75
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_75mm_Fire1P
+ObjectTemplate.modifiedByUser "Phil"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/weapons/common/sounds/75mm_fire_1p.wav"
+ObjectTemplate.loopCount 0
+ObjectTemplate.is3dSound 0
+ObjectTemplate.stopType 1
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 1
+ObjectTemplate.pan 0.5
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.pitchEnvelope 0/1/0.9/1.1/1/1/0/0.97/1.03/
+ObjectTemplate.volumeEnvelope 0/1/0/1/1/1/0/0.9/1/
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_75mm_Fire1P_Outdoor
+ObjectTemplate.modifiedByUser "Phil"
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_75mm_Fire3P
+ObjectTemplate.modifiedByUser "Phil"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/weapons/common/sounds/75mm_fire_3p.wav"
+ObjectTemplate.loopCount 0
+ObjectTemplate.is3dSound 1
+ObjectTemplate.stopType 1
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 1
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.minDistance 20
+ObjectTemplate.halfvolumedistance 35
+ObjectTemplate.soundRadius 5
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_75mm_BoltClick
+ObjectTemplate.modifiedByUser "Phil"
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_75mm_TriggerClick
+ObjectTemplate.modifiedByUser "Phil"
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_75mm_SwitchFireRate
+ObjectTemplate.modifiedByUser "natty"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "Objects/Vehicles/Land/Common/OggSounds/tankreload-pt2.ogg"
+ObjectTemplate.loopCount 1
+ObjectTemplate.is3dSound 0
+ObjectTemplate.stopType 1
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 1
+ObjectTemplate.pan 0.5
+ObjectTemplate.reverbLevel 1
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_75mm_Reload1P
+ObjectTemplate.modifiedByUser "natty"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/vehicles/land/common/Oggsounds/tankreload_1p.wav"
+ObjectTemplate.loopCount 1
+ObjectTemplate.is3dSound 0
+ObjectTemplate.stopType 0
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 1
+ObjectTemplate.pan 0.5
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.pitchEnvelope 0/1/0.9/1.1/1/1/0/0.97/1.03/
+ObjectTemplate.volumeEnvelope 0/1/0/1/1/1/0/0.9/1/
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_75mm_Reload3P
+ObjectTemplate.modifiedByUser "Phil"
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_75mm_Deploy1P
+ObjectTemplate.modifiedByUser "natty"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/vehicles/land/common/Oggsounds/tank_switch.wav"
+ObjectTemplate.loopCount 1
+ObjectTemplate.is3dSound 0
+ObjectTemplate.stopType 0
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 1
+ObjectTemplate.pan 0.5
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.pitchEnvelope 0/1/0.9/1.1/1/1/0/0.97/1.03/
+ObjectTemplate.volumeEnvelope 0/1/0/1/1/1/0/0.9/1/
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_75mm_Deploy3P
+ObjectTemplate.modifiedByUser "Phil"
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_75mm_Zoom
+ObjectTemplate.modifiedByUser "Phil"
+
+ObjectTemplate.create GenericFireArm m4a1mid_eu_ca_75mm1
+ObjectTemplate.modifiedByUser "Phil"
+ObjectTemplate.createdInEditor 1
+rem ---BeginComp:WeaponHud ---
+ObjectTemplate.createComponent WeaponHud
+ObjectTemplate.weaponHud.weaponIcon Ingame\Weapons\Icons\Hud\bomb.tga
+ObjectTemplate.weaponHud.selectIcon Ingame\Rounds\75mmHE.dds
+ObjectTemplate.weaponHud.hudName "75MM GUN HE"
+ObjectTemplate.weaponHud.guiIndex 1001
+ObjectTemplate.weaponHud.altGuiIndex 1004
+ObjectTemplate.weaponHud.enablePostProcessingOnGuiindex 1001
+ObjectTemplate.weaponHud.switchGuiOnCamera 1
+ObjectTemplate.weaponHud.hasFireRate 0
+ObjectTemplate.weaponHud.addShowOnCamMode 2
+ObjectTemplate.weaponHud.displaySelectOnActivation 1
+rem ---EndComp ---
+rem ---BeginComp:PostProcess ---
+ObjectTemplate.createComponent PostProcess
+ObjectTemplate.postProcess.tvinterference 0.003
+rem ---EndComp ---
+rem ---BeginComp:SingleFireComp ---
+ObjectTemplate.createComponent SingleFireComp
+ObjectTemplate.fire.roundsPerMinute 360
+ObjectTemplate.fire.addFireRate 0
+rem ---EndComp ---
+rem ---BeginComp:DefaultAmmoComp ---
+ObjectTemplate.createComponent DefaultAmmoComp
+ObjectTemplate.ammo.nrOfMags 49
+ObjectTemplate.ammo.magSize 1
+ObjectTemplate.ammo.reloadTime 4
+ObjectTemplate.ammo.minimumTimeUntilReload 0.75
+ObjectTemplate.ammo.autoReload 1
+ObjectTemplate.ammo.reloadWithoutPlayer 1
+rem ---EndComp ---
+rem ---BeginComp:WeaponBasedRecoilComp ---
+ObjectTemplate.createComponent WeaponBasedRecoilComp
+ObjectTemplate.recoil.recoilSize 15
+ObjectTemplate.recoil.recoilSpeed 10
+ObjectTemplate.recoil.recoilSpeedGB 5
+ObjectTemplate.recoil.recoilForce 15.5
+ObjectTemplate.recoil.cameraRecoilSpeed 8
+ObjectTemplate.recoil.cameraRecoilSize 6
+rem ---EndComp ---
+rem ---BeginComp:SimpleDeviationComp ---
+ObjectTemplate.createComponent SimpleDeviationComp
+ObjectTemplate.deviation.minDev 0.215
+rem ---EndComp ---
+rem ---BeginComp:DefaultSoundComp ---
+ObjectTemplate.createComponent DefaultSoundComp
+rem ---EndComp ---
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.aiTemplate M4A1mid_eu_britMainGunHE
+rem -------------------------------------
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_75mm1_Fire1P
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_75mm1_Fire1P_Outdoor
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_75mm1_Fire3P
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_75mm1_BoltClick
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_75mm1_TriggerClick
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_75mm1_SwitchFireRate
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_75mm1_Reload1P
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_75mm1_Reload3P
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_75mm1_Deploy1P
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_75mm1_Deploy3P
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_75mm1_Zoom
+ObjectTemplate.addTemplate e_muzz_tank
+ObjectTemplate.setPosition 0.0116189/0.0179848/1.17884
+ObjectTemplate.addTemplate geb_tank
+ObjectTemplate.setPosition -6.13987e-006/6.59379e-006/1.01775
+rem -------------------------------------
+ObjectTemplate.projectileTemplate 75mmL40-HE-Projectile
+ObjectTemplate.keepProjectiles 5
+objecttemplate.velocity 395
+ObjectTemplate.itemIndex 2
+ObjectTemplate.delayToUse 4.75
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_75mm1_Fire1P
+ObjectTemplate.modifiedByUser "Phil"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/weapons/common/sounds/75mm_fire_1p.wav"
+ObjectTemplate.loopCount 0
+ObjectTemplate.is3dSound 0
+ObjectTemplate.stopType 1
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 1
+ObjectTemplate.pan 0.5
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.pitchEnvelope 0/1/0.9/1.1/1/1/0/0.97/1.03/
+ObjectTemplate.volumeEnvelope 0/1/0/1/1/1/0/0.9/1/
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_75mm1_Fire1P_Outdoor
+ObjectTemplate.modifiedByUser "Phil"
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_75mm1_Fire3P
+ObjectTemplate.modifiedByUser "Phil"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/weapons/common/sounds/75mm_fire_3p.wav"
+ObjectTemplate.loopCount 0
+ObjectTemplate.is3dSound 1
+ObjectTemplate.stopType 1
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 1
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.minDistance 20
+ObjectTemplate.halfvolumedistance 35
+ObjectTemplate.soundRadius 5
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_75mm1_BoltClick
+ObjectTemplate.modifiedByUser "Phil"
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_75mm1_TriggerClick
+ObjectTemplate.modifiedByUser "Phil"
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_75mm1_SwitchFireRate
+ObjectTemplate.modifiedByUser "natty"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "Objects/Vehicles/Land/Common/OggSounds/tankreload-pt2.ogg"
+ObjectTemplate.loopCount 1
+ObjectTemplate.is3dSound 0
+ObjectTemplate.stopType 1
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 1
+ObjectTemplate.pan 0.5
+ObjectTemplate.reverbLevel 1
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_75mm1_Reload1P
+ObjectTemplate.modifiedByUser "natty"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/vehicles/land/common/Oggsounds/tankreload_1p.wav"
+ObjectTemplate.loopCount 1
+ObjectTemplate.is3dSound 0
+ObjectTemplate.stopType 0
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 1
+ObjectTemplate.pan 0.5
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.pitchEnvelope 0/1/0.9/1.1/1/1/0/0.97/1.03/
+ObjectTemplate.volumeEnvelope 0/1/0/1/1/1/0/0.9/1/
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_75mm1_Reload3P
+ObjectTemplate.modifiedByUser "Phil"
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_75mm1_Deploy1P
+ObjectTemplate.modifiedByUser "natty"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/vehicles/land/common/Oggsounds/tank_switch.wav"
+ObjectTemplate.loopCount 1
+ObjectTemplate.is3dSound 0
+ObjectTemplate.stopType 0
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 1
+ObjectTemplate.pan 0.5
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.pitchEnvelope 0/1/0.9/1.1/1/1/0/0.97/1.03/
+ObjectTemplate.volumeEnvelope 0/1/0/1/1/1/0/0.9/1/
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_75mm1_Deploy3P
+ObjectTemplate.modifiedByUser "Phil"
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_75mm1_Zoom
+ObjectTemplate.modifiedByUser "Phil"
+
+ObjectTemplate.create GenericFireArm m4a1mid_eu_ca_75mm2
+ObjectTemplate.modifiedByUser "Phil"
+ObjectTemplate.createdInEditor 1
+rem ---BeginComp:WeaponHud ---
+ObjectTemplate.createComponent WeaponHud
+ObjectTemplate.weaponHud.weaponIcon Ingame\Weapons\Icons\Hud\bomb.tga
+ObjectTemplate.weaponHud.selectIcon Ingame\Rounds\SmokeRound.dds
+ObjectTemplate.weaponHud.hudName "75MM GUN SMOKE"
+ObjectTemplate.weaponHud.guiIndex 1001
+ObjectTemplate.weaponHud.altGuiIndex 1004
+ObjectTemplate.weaponHud.enablePostProcessingOnGuiindex 1001
+ObjectTemplate.weaponHud.switchGuiOnCamera 1
+ObjectTemplate.weaponHud.hasFireRate 0
+ObjectTemplate.weaponHud.addShowOnCamMode 2
+ObjectTemplate.weaponHud.displaySelectOnActivation 1
+rem ---EndComp ---
+rem ---BeginComp:PostProcess ---
+ObjectTemplate.createComponent PostProcess
+ObjectTemplate.postProcess.tvinterference 0.003
+rem ---EndComp ---
+rem ---BeginComp:SingleFireComp ---
+ObjectTemplate.createComponent SingleFireComp
+ObjectTemplate.fire.roundsPerMinute 360
+ObjectTemplate.fire.addFireRate 0
+rem ---EndComp ---
+rem ---BeginComp:DefaultAmmoComp ---
+ObjectTemplate.createComponent DefaultAmmoComp
+ObjectTemplate.ammo.nrOfMags 10
+ObjectTemplate.ammo.magSize 1
+ObjectTemplate.ammo.reloadTime 4
+ObjectTemplate.ammo.minimumTimeUntilReload 0.75
+ObjectTemplate.ammo.autoReload 1
+ObjectTemplate.ammo.reloadWithoutPlayer 1
+rem ---EndComp ---
+rem ---BeginComp:WeaponBasedRecoilComp ---
+ObjectTemplate.createComponent WeaponBasedRecoilComp
+ObjectTemplate.recoil.recoilSize 15
+ObjectTemplate.recoil.recoilSpeed 10
+ObjectTemplate.recoil.recoilSpeedGB 5
+ObjectTemplate.recoil.recoilForce 15.5
+ObjectTemplate.recoil.cameraRecoilSpeed 8
+ObjectTemplate.recoil.cameraRecoilSize 6
+rem ---EndComp ---
+rem ---BeginComp:SimpleDeviationComp ---
+ObjectTemplate.createComponent SimpleDeviationComp
+ObjectTemplate.deviation.minDev 0.5
+rem ---EndComp ---
+rem ---BeginComp:DefaultSoundComp ---
+ObjectTemplate.createComponent DefaultSoundComp
+rem ---EndComp ---
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.aiTemplate M4A1mid_eu_britMainGunSmoke
+rem -------------------------------------
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_75mm2_Fire1P
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_75mm2_Fire1P_Outdoor
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_75mm2_Fire3P
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_75mm2_BoltClick
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_75mm2_TriggerClick
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_75mm2_SwitchFireRate
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_75mm2_Reload1P
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_75mm2_Reload3P
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_75mm2_Deploy1P
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_75mm2_Deploy3P
+ObjectTemplate.addTemplate S_m4a1mid_eu_ca_75mm2_Zoom
+ObjectTemplate.addTemplate e_muzz_tank
+ObjectTemplate.setPosition 0.0116189/0.0179848/1.17884
+ObjectTemplate.addTemplate geb_tank
+ObjectTemplate.setPosition -6.13987e-006/6.59379e-006/1.01775
+rem -------------------------------------
+ObjectTemplate.projectileTemplate MediumSize-Smoke-Projectile
+ObjectTemplate.keepProjectiles 5
+objecttemplate.velocity 350
+ObjectTemplate.itemIndex 3
+ObjectTemplate.delayToUse 4.75
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_75mm2_Fire1P
+ObjectTemplate.modifiedByUser "Phil"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/weapons/common/sounds/75mm_fire_1p.wav"
+ObjectTemplate.loopCount 0
+ObjectTemplate.is3dSound 0
+ObjectTemplate.stopType 1
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 1
+ObjectTemplate.pan 0.5
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.pitchEnvelope 0/1/0.9/1.1/1/1/0/0.97/1.03/
+ObjectTemplate.volumeEnvelope 0/1/0/1/1/1/0/0.9/1/
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_75mm2_Fire1P_Outdoor
+ObjectTemplate.modifiedByUser "Phil"
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_75mm2_Fire3P
+ObjectTemplate.modifiedByUser "Phil"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/weapons/common/sounds/75mm_fire_3p.wav"
+ObjectTemplate.loopCount 0
+ObjectTemplate.is3dSound 1
+ObjectTemplate.stopType 1
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 1
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.minDistance 20
+ObjectTemplate.halfvolumedistance 35
+ObjectTemplate.soundRadius 5
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_75mm2_BoltClick
+ObjectTemplate.modifiedByUser "Phil"
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_75mm2_TriggerClick
+ObjectTemplate.modifiedByUser "Phil"
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_75mm2_SwitchFireRate
+ObjectTemplate.modifiedByUser "natty"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "Objects/Vehicles/Land/Common/OggSounds/tankreload-pt2.ogg"
+ObjectTemplate.loopCount 1
+ObjectTemplate.is3dSound 0
+ObjectTemplate.stopType 1
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 1
+ObjectTemplate.pan 0.5
+ObjectTemplate.reverbLevel 1
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_75mm2_Reload1P
+ObjectTemplate.modifiedByUser "natty"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/vehicles/land/common/Oggsounds/tankreload_1p.wav"
+ObjectTemplate.loopCount 1
+ObjectTemplate.is3dSound 0
+ObjectTemplate.stopType 0
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 1
+ObjectTemplate.pan 0.5
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.pitchEnvelope 0/1/0.9/1.1/1/1/0/0.97/1.03/
+ObjectTemplate.volumeEnvelope 0/1/0/1/1/1/0/0.9/1/
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_75mm2_Reload3P
+ObjectTemplate.modifiedByUser "Phil"
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_75mm2_Deploy1P
+ObjectTemplate.modifiedByUser "natty"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/vehicles/land/common/Oggsounds/tank_switch.wav"
+ObjectTemplate.loopCount 1
+ObjectTemplate.is3dSound 0
+ObjectTemplate.stopType 0
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 1
+ObjectTemplate.pan 0.5
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.pitchEnvelope 0/1/0.9/1.1/1/1/0/0.97/1.03/
+ObjectTemplate.volumeEnvelope 0/1/0/1/1/1/0/0.9/1/
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_75mm2_Deploy3P
+ObjectTemplate.modifiedByUser "Phil"
+
+ObjectTemplate.activeSafe Sound S_m4a1mid_eu_ca_75mm2_Zoom
+ObjectTemplate.modifiedByUser "Phil"
+
+ObjectTemplate.create EntryPoint m4a1mid_eu_ca_entry
+ObjectTemplate.modifiedByUser "Phil"
+ObjectTemplate.createdInEditor 1
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 0
+ObjectTemplate.setEntryRadius 3
+

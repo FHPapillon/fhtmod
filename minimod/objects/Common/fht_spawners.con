@@ -1,0 +1,757 @@
+rem ***** Rally Point Object *****
+ObjectTemplate.create ObjectSpawner fht_radio_rp_spawner
+ObjectTemplate.activeSafe ObjectSpawner fht_radio_rp_spawner
+ObjectTemplate.isNotSaveable 1
+ObjectTemplate.hasMobilePhysics 0
+ObjectTemplate.setObjectTemplate 0 fht_radio_rp
+ObjectTemplate.setObjectTemplate 1 fht_radio_rp
+ObjectTemplate.setObjectTemplate 2 fht_radio_rp
+ObjectTemplate.TimeToLive 10
+
+ObjectTemplate.create ObjectSpawner fht_drone_spawner
+ObjectTemplate.activeSafe ObjectSpawner fht_drone_spawner
+ObjectTemplate.isNotSaveable 1
+ObjectTemplate.hasMobilePhysics 0
+ObjectTemplate.setObjectTemplate 0 fht_drone
+ObjectTemplate.setObjectTemplate 1 fht_drone
+ObjectTemplate.setObjectTemplate 2 fht_drone
+
+ObjectTemplate.create ObjectSpawner uncap_ne_spawner
+ObjectTemplate.activeSafe ObjectSpawner uncap_ne_spawner
+ObjectTemplate.isNotSaveable 1
+ObjectTemplate.hasMobilePhysics 0
+ObjectTemplate.setObjectTemplate 0 uncap_ne
+ObjectTemplate.setObjectTemplate 1 uncap_ne
+ObjectTemplate.setObjectTemplate 2 uncap_ne
+
+ObjectTemplate.create ObjectSpawner uncap_se_spawner
+ObjectTemplate.activeSafe ObjectSpawner uncap_se_spawner
+ObjectTemplate.isNotSaveable 1
+ObjectTemplate.hasMobilePhysics 0
+ObjectTemplate.setObjectTemplate 0 uncap_se
+ObjectTemplate.setObjectTemplate 1 uncap_se
+ObjectTemplate.setObjectTemplate 2 uncap_se
+
+ObjectTemplate.create ObjectSpawner uncap_sw_spawner
+ObjectTemplate.activeSafe ObjectSpawner uncap_sw_spawner
+ObjectTemplate.isNotSaveable 1
+ObjectTemplate.hasMobilePhysics 0
+ObjectTemplate.setObjectTemplate 0 uncap_sw
+ObjectTemplate.setObjectTemplate 1 uncap_sw
+ObjectTemplate.setObjectTemplate 2 uncap_sw
+
+ObjectTemplate.create ObjectSpawner uncap_nw_spawner
+ObjectTemplate.activeSafe ObjectSpawner uncap_nw_spawner
+ObjectTemplate.isNotSaveable 1
+ObjectTemplate.hasMobilePhysics 0
+ObjectTemplate.setObjectTemplate 0 uncap_nw
+ObjectTemplate.setObjectTemplate 1 uncap_nw
+ObjectTemplate.setObjectTemplate 2 uncap_nw
+
+run rally_spawners.con
+
+ObjectTemplate.activeSafe Engine KubelDAK_zMotor
+include kubel_fixes.inc
+ObjectTemplate.activeSafe Engine kubelwagen_zMotor
+include kubel_fixes.inc
+ObjectTemplate.activeSafe Engine kubelwagen_fr_zMotor
+include kubel_fixes.inc
+ObjectTemplate.activeSafe Engine kubelwagen_fr_alt_zMotor
+include kubel_fixes.inc
+ObjectTemplate.activeSafe Engine kubelwagen_win_zMotor
+include kubel_fixes.inc
+ObjectTemplate.activeSafe Engine kubelwagen_win_alt_zMotor
+include kubel_fixes.inc
+
+
+
+ObjectTemplate.activeSafe GenericProjectile panzerschreck_rocket
+ObjectTemplate.damage 55
+ObjectTemplate.minDamage 55
+ObjectTemplate.activeSafe PlayerControlObject bf109e7_greece
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject bf109e7_trop
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject bf109e7_greecealt
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject bf109e7_tropalt
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject bf109f4
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject bf109f4_alt250kg
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject bf109f4_alt50kg
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject bf109f4_trop
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject bf109f4_trop_alt250kg
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject bf109f4_trop_alt50kg
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject fw190
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject fw190_alt
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject ju52
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject JU52Rider_Left
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject JU52Rider_Right
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject ju87b2
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject ju87b2alt
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject ju87b2_greece
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject ju87b2_libya
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject ju87d1_trop
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject storch_france
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject storch_trop
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject beaufightermk1
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject beaufightermk1_b
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject hardy
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject horsa_glider
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject hurricanemki
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject hurricanemki_b
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject hurricanemkiic
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject hurricanemkiic_alt_b
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject hurricanemkiic_b
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject hurricanemkiid
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject pipercub_gb
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject spitfiremkv
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject spitfiremkvb
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject spitfiremkvb_usaaf
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject Spitfire_IX
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject swordfish
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject swordfish_b
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject typhoon_mk1b_late
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject mc200
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject mc200_alt
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject mc202
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject AIX_P51D
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject AIX_P51D_Bombs
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject AIX_P51D_Rockets
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject c47
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject c47_spawn_flyover
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject p-40e
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject p-40e_120lb
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject p-40e_250lb
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject p-40e_500lb
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject p-40e_kittyhawk
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject p38_lightning
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject p38_r_lightning
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject p47_d
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject p47_d_alt
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject p47_d_rocket
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject pipercub_us
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject kidplane
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject carrom13_40_au
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject 50_turret_gunner
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject hetzer
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject hetzer_alt
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject hetzer_win
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject jagdpanther
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject jagdpanther_alt
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject jagdpanther_win
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject jagdpanther_win_alt
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject jagdpanzeriv
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject jagdpanzeriv_win
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject marder1_39
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject marder_i
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject marder_iii
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject panthera
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject panthera_alt
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject panthera_late
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject panthera_late_alt
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject pantherg
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject panther_g_ard
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject panther_g_ard_alt
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject panther_g_win
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject panther_g_win_alt
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject puma
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject pziic
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject pziic_greece
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject pziif
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject pziii_je_dak
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject pziii_je_greece
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject pziii_jl_dak
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject pziii_l_dak
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject pziii_m
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject pziii_n
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject pziii_n_dak
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject pziii_hullmg
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject pzivd_greece
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject pzivd_na
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject pzivf1
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject pzivf2
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject pzivh
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject pzivh_811
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject pzivh_ard
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject pzivh_ard_win
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject pzivh_noskirt
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject sdkfz222
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject sdkfz222_pan
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject sdkfz222_win
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject sdkfz231_1
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject sdkfz231_1_france
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject sdkfz231_1_pan
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject sdkfz250_3
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject sdkfz251_d_spawn
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject sdkfz251_d_sf
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject stuka_fuzz_rocketpod
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject stug40
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject stug40r
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject stug40_g
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject stug40_g_alt
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject stug_iv
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject stug_iv_alt
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject stuh42
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject tiger_dak
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject kingtiger_1944easternfall
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject kingtiger_1944fall
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject kingtiger_1944winter
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject kingtiger_1945spring
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject kingtiger_night
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject kingtiger_standard
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject tiger_broken
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject tiger_late
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject tiger_late_132
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject tiger_late_222
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject wespe
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject wirbelwind
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject wirbelwind_win
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject achilles_iic
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject aecdorchester
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject aecdorchester_de
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject aecdorchester_france
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject bishop
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject churchillmkiii
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject churchillmkiv_6pdr
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject churchillmkiv_75mm
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject churchillmkiv_avre
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject cromwell
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject cromwell_95
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject cromwell_irishguard
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject cromwell_polish
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject cruiseriv
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject crusadermk1early
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject crusadermk1late
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject crusadermk3
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject crusadermk3_aa
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject daimlermk1
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject m3grant
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject m3stuarthoney
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject m4a1early_eu_brit
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject m4a1mid_eu_brit
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject m5a1_halftrack_spawn
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject markvi
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject marmonherringtonmk3a
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject matildaii
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject sherman_vc_early
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject sherman_vc_early_olive
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject sherman_vc_late
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject sherman_vc_late_olive
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject sherman_v_hullmg
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject sherman_v_hullmg_olive
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject sherman_v_late
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject sherman_v_late_olive
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject sherman_v_late_alt
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject sherman_v_late_alt_olive
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject sherman_v_mid
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject sherman_v_mid_olive
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject valentineii
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject carrom11_39
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject carrom11_39_au
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject carrom13_40
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject fiatl6_40
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject semoventel40
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject gmc_m3_75mm
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject m10
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject m10_win
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject m18_hellcat
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject m18_hellcat_win
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject m24_chaffee
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject m24_chaffee_win
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject m26_pershing
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject m36
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject m36_win
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject m3a1_spawn
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject m3a1_stuart
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject m3_lee
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject m4a1
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject m4a1_76mm
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject m4a1_early
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject m4a1_early_hullmachinegun
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject m4a1early_eu
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject m4a1mid_eu
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject m4a1_turret_gunner
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject m4a1_turret_gunner_alt
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject m4a3
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject m4a3_105
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject m4a3_76
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject m4a3_76_win
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject m4a3_76_win_alt
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject m4a3_win
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject m4a3e2_jumbo75
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject m4a3e2_jumbo75_win
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject m4a3e2_jumbo76
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject m4a3e2_jumbo76_win
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject m5a1_stuart
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject m5a1_stuart_recon
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject m8_greyhound
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject m8_greyhound_win
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject m8_greyhoundnf
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject m8_greyhound_winnf
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject sturmboot39
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject sturmboot39_passenger
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject subviib
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject subviib2
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject U47
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject audacity
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject agassiz
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject landingcraftassault
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject libertyship
+ObjectTemplate.dontClearTeamOnExit 0
+ 
+ObjectTemplate.activeSafe PlayerControlObject lcvp
+ObjectTemplate.dontClearTeamOnExit 0
+
+ObjectTemplate.activeSafe PlayerControlObject m4a1mid_eu_ca
+ObjectTemplate.dontClearTeamOnExit 0
+
+ObjectTemplate.activeSafe PlayerControlObject mc205
+ObjectTemplate.dontClearTeamOnExit 0
+

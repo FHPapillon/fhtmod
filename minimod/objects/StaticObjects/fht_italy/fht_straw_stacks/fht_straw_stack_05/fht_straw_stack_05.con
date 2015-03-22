@@ -1,0 +1,13 @@
+GeometryTemplate.create StaticMesh fht_straw_stack_05
+CollisionManager.createTemplate fht_straw_stack_05
+
+ObjectTemplate.create SimpleObject fht_straw_stack_05
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator SORKEN:Sorken
+ObjectTemplate.collisionMesh fht_straw_stack_05
+ObjectTemplate.mapMaterial 0 grass 5
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.geometry fht_straw_stack_05
+
+include fht_straw_stack_05.tweak

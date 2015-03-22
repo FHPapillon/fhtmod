@@ -1,0 +1,13 @@
+GeometryTemplate.create StaticMesh fht_high_wall_10m
+CollisionManager.createTemplate fht_high_wall_10m
+
+ObjectTemplate.create SimpleObject fht_high_wall_10m
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator SORKEN:HP_Ägaren
+ObjectTemplate.collisionMesh fht_high_wall_10m
+ObjectTemplate.mapMaterial 0 concrete 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.geometry fht_high_wall_10m
+
+include fht_high_wall_10m.tweak

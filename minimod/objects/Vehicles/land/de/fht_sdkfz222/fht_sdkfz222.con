@@ -1,0 +1,113 @@
+GeometryTemplate.create BundledMesh fht_sdkfz222
+CollisionManager.createTemplate fht_sdkfz222
+
+ObjectTemplate.create PlayerControlObject fht_sdkfz222
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator PHILSCH-Z4KV58U:Phil
+ObjectTemplate.collisionMesh fht_sdkfz222
+ObjectTemplate.mapMaterial 0 5mm 0
+ObjectTemplate.mapMaterial 1 canvas 0
+ObjectTemplate.mapMaterial 2 wreck 0
+ObjectTemplate.mapMaterial 3 heavy_rubber 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometry fht_sdkfz222
+ObjectTemplate.addTemplate fht_sdkfz222_turret
+ObjectTemplate.setPosition -0.0833/0.3212/-0.6268
+ObjectTemplate.addTemplate fht_sdkfz222_zMotor
+ObjectTemplate.setPosition -0.0774/-0.1885/-0.4035
+
+ObjectTemplate.create RotationalBundle fht_sdkfz222_turret
+ObjectTemplate.collisionPart 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 1
+ObjectTemplate.addTemplate fht_sdkfz222_gateleft
+ObjectTemplate.setPosition -0.5531/0.6986/0
+ObjectTemplate.addTemplate fht_sdkfz222_gateright
+ObjectTemplate.setPosition 0.5536/0.6992/0
+ObjectTemplate.addTemplate fht_sdkfz222_guns
+ObjectTemplate.setPosition 0.0029/0.6328/-0.1931
+
+ObjectTemplate.create RotationalBundle fht_sdkfz222_gateleft
+ObjectTemplate.collisionPart 2
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 2
+
+ObjectTemplate.create RotationalBundle fht_sdkfz222_gateright
+ObjectTemplate.collisionPart 3
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 3
+
+ObjectTemplate.create RotationalBundle fht_sdkfz222_guns
+ObjectTemplate.collisionPart 4
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 4
+ObjectTemplate.addTemplate fht_sdkfz222_20mmcannon
+
+ObjectTemplate.create GenericFireArm fht_sdkfz222_20mmcannon
+ObjectTemplate.collisionPart 5
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 5
+
+ObjectTemplate.create Engine fht_sdkfz222_zMotor
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 6
+ObjectTemplate.addTemplate fht_sdkfz222_whlrl
+ObjectTemplate.setPosition -0.8135/-0.2453/-1.2867
+ObjectTemplate.addTemplate fht_sdkfz222_whlrr
+ObjectTemplate.setPosition 0.8049/-0.2453/-1.2867
+ObjectTemplate.addTemplate fht_sdkfz222_steerleft
+ObjectTemplate.setPosition -0.8345/-0.2453/1.6276
+ObjectTemplate.addTemplate fht_sdkfz222_steerright
+ObjectTemplate.setPosition 0.8170/-0.2453/1.6276
+
+ObjectTemplate.create Spring fht_sdkfz222_whlrl
+ObjectTemplate.collisionPart 7
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 7
+
+ObjectTemplate.create Spring fht_sdkfz222_whlrr
+ObjectTemplate.collisionPart 8
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 8
+
+ObjectTemplate.create RotationalBundle fht_sdkfz222_steerleft
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.addTemplate fht_sdkfz222_whlfl
+ObjectTemplate.setPosition 0.0166/-0.0034/0
+
+ObjectTemplate.create Spring fht_sdkfz222_whlfl
+ObjectTemplate.collisionPart 9
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 9
+
+ObjectTemplate.create RotationalBundle fht_sdkfz222_steerright
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.addTemplate fht_sdkfz222_whlfr
+ObjectTemplate.setPosition -0.0121/0/0
+
+ObjectTemplate.create Spring fht_sdkfz222_whlfr
+ObjectTemplate.collisionPart 10
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 10
+
+include fht_sdkfz222.tweak

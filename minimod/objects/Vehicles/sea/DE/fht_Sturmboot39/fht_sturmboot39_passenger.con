@@ -1,0 +1,4 @@
+ObjectTemplate.create PlayerControlObject fht_sturmboot39_passenger
+ObjectTemplate.createdInEditor 1
+
+include fht_sturmboot39_passenger.tweak

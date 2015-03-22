@@ -1,0 +1,6 @@
+GeometryTemplate.create BundledMesh kitmesh_dep_dummy
+
+ObjectTemplate.create SimpleObject kitmesh_dep_dummy
+ObjectTemplate.geometry kitmesh_dep_dummy
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.hasMobilePhysics 0

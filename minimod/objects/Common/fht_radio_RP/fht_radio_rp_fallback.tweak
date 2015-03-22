@@ -1,0 +1,35 @@
+ObjectTemplate.setPosition 0/1/0
+ObjectTemplate.geometry fht_radio_rp
+ObjectTemplate.StrategicObject.isOnePiece 1
+ObjectTemplate.StrategicObject.3dMapIcon 0
+ObjectTemplate.collisionMesh fht_radio_rp
+ObjectTemplate.castsDynamicShadow 1
+ObjectTemplate.setNetworkableInfo BasicInfo
+ObjectTemplate.mapMaterial 0 metal 26
+ObjectTemplate.mapMaterial 1 cardboard 1011
+ObjectTemplate.mapMaterial 2 bullets 63
+ObjectTemplate.mapMaterial 3 wood 14
+ObjectTemplate.mapMaterial 4 wreck 26
+ObjectTemplate.physicsType 3
+ObjectTemplate.createComponent Armor
+ObjectTemplate.armor.maxHitPoints 5000
+ObjectTemplate.armor.hitPoints 5000
+ObjectTemplate.armor.defaultMaterial 26
+ObjectTemplate.armor.waterLevel -0.3
+ObjectTemplate.armor.wreckHitPoints 10
+ObjectTemplate.armor.timeToStayAsWreck 0
+ObjectTemplate.createComponent Radio
+ObjectTemplate.Radio.spottedMessage FH2_SPOTTED_Unit
+ObjectTemplate.hasMobilePhysics 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.createComponent VehicleHud
+ObjectTemplate.vehicleHud.useSelectionIcons 0
+ObjectTemplate.cullRadiusScale 6
+ObjectTemplate.DontClearTeamOnExit 1
+ObjectTemplate.addTemplate fht_radio_rp_SpawnPoint
+ObjectTemplate.addTemplate fht_radio_rp_SupplyObject
+ObjectTemplate.addTemplate fht_radio_rp_Repair_Dummy
+ObjectTemplate.addTemplate MarkStrategicTeamOnly
+
+

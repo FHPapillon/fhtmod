@@ -1,0 +1,63 @@
+GeometryTemplate.create BundledMesh 6pdr
+CollisionManager.createTemplate 6pdr
+
+ObjectTemplate.create PlayerControlObject 6pdr_HE_fht
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator TNPC:Toddel
+ObjectTemplate.collisionMesh 6pdr
+ObjectTemplate.mapMaterial 0 10mmarmor 0
+ObjectTemplate.mapMaterial 1 stairs_metal 0
+ObjectTemplate.mapMaterial 2 wreck 0
+ObjectTemplate.mapMaterial 3 rubber 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometry 6pdr
+ObjectTemplate.addTemplate 6Pdr_HE_shield
+ObjectTemplate.setPosition 0/0.1679/1.1940
+ObjectTemplate.addTemplate 6pdr_zMotor
+ObjectTemplate.setPosition 0/-0.2948/0
+
+ObjectTemplate.create RotationalBundle 6Pdr_HE_shield
+ObjectTemplate.collisionPart 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 1
+ObjectTemplate.addTemplate 6Pdr_HE_cannonbase
+ObjectTemplate.setPosition 0/0.0324/0.0153
+
+ObjectTemplate.create RotationalBundle 6Pdr_HE_cannonbase
+ObjectTemplate.collisionPart 2
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 2
+ObjectTemplate.addTemplate 6Pdr_HE_cannon_AP
+ObjectTemplate.addTemplate 6Pdr_HE_cannon
+ObjectTemplate.addTemplate 6Pdr_crank
+ObjectTemplate.setPosition -0.2052/-0.0720/-0.3204
+
+ObjectTemplate.create GenericFirearm 6Pdr_HE_cannon
+ObjectTemplate.collisionPart 3
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 3
+ObjectTemplate.addTemplate 6Pdr_breach
+ObjectTemplate.setPosition 0/0.0885/-0.7099
+ObjectTemplate.addTemplate 6Pdr_firelever
+ObjectTemplate.setPosition 0.1403/-0.0261/-0.6058
+
+ObjectTemplate.create GenericFirearm 6Pdr_HE_cannon_AP
+ObjectTemplate.collisionPart 3
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 3
+ObjectTemplate.addTemplate 6Pdr_breach
+ObjectTemplate.setPosition 0/0.0885/-0.7099
+ObjectTemplate.addTemplate 6Pdr_firelever
+ObjectTemplate.setPosition 0.1403/-0.0261/-0.6058
+
+include fht_6pdr_HE.tweak

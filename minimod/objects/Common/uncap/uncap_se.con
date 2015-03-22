@@ -1,0 +1,13 @@
+CollisionManager.createTemplate pusher
+
+ObjectTemplate.create PlayerControlObject uncap_se
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator BUTTSLOL:jbp
+ObjectTemplate.collisionMesh pusher
+ObjectTemplate.mapMaterial 0 dummy 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+
+include uncap_se.tweak
+

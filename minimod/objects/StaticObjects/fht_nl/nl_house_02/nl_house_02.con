@@ -1,0 +1,17 @@
+GeometryTemplate.create StaticMesh nl_house_02
+CollisionManager.createTemplate nl_house_02
+
+ObjectTemplate.create SimpleObject nl_house_02
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator PANDA:Neri
+ObjectTemplate.collisionMesh nl_house_02
+ObjectTemplate.mapMaterial 0 bricks 0
+ObjectTemplate.mapMaterial 1 wood 0
+ObjectTemplate.mapMaterial 2 concrete 0
+ObjectTemplate.mapMaterial 3 glass 0
+ObjectTemplate.mapMaterial 4 roof 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.geometry nl_house_02
+
+include nl_house_02.tweak

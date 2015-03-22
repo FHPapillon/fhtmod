@@ -1,0 +1,14 @@
+GeometryTemplate.create StaticMesh swing
+CollisionManager.createTemplate swing
+
+ObjectTemplate.create SimpleObject swing
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator GAMEGRANATE:Dennis
+ObjectTemplate.collisionMesh swing
+ObjectTemplate.mapMaterial 0 col 0
+ObjectTemplate.mapMaterial 1 wood 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.geometry swing
+
+include swing.tweak

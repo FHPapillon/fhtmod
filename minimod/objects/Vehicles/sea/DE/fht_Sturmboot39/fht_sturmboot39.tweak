@@ -1,0 +1,420 @@
+rem *** Generated with Bf2Editor.exe [created: 2011/6/13 8:16]
+GeometryTemplate.compressVertexData 1
+GeometryTemplate.maxTextureRepeat 16
+ObjectTemplate.activeSafe PlayerControlObject fht_sturmboot39
+ObjectTemplate.creator HIGHLANDER:Johannes
+ObjectTemplate.modifiedByUser "Johannes"
+ObjectTemplate.setNetworkableInfo BasicInfo
+ObjectTemplate.saveInSeparateFile 1
+rem ---BeginComp:Armor ---
+ObjectTemplate.createComponent Armor
+ObjectTemplate.armor.maxHitPoints 350
+ObjectTemplate.armor.hitPoints 350
+ObjectTemplate.armor.defaultMaterial 14
+ObjectTemplate.armor.waterLevel -0.3
+ObjectTemplate.armor.explosionForce 10
+ObjectTemplate.armor.explosionForceMod 12
+ObjectTemplate.armor.explosionForceMax 5000
+ObjectTemplate.armor.explosionDamage 1
+ObjectTemplate.armor.explosionRadius 1
+ObjectTemplate.armor.wreckHitPoints 100
+ObjectTemplate.armor.timeToStayAsWreck 40
+ObjectTemplate.armor.criticalDamage 40
+ObjectTemplate.armor.HpLostWhileCriticalDamage 4
+ObjectTemplate.armor.canBeRepairedWhenWreck 1
+ObjectTemplate.armor.addArmorEffect 50 e_dstate_land_lightsmoke -4.40429e-006/0.757169/-1.38235 0/0/0
+ObjectTemplate.armor.addArmorEffect 30 e_dstate_land_mediumsmoke 3.86873e-007/0.72009/-1.37868 0/0/0
+ObjectTemplate.armor.addArmorEffect 10 e_dstate_land_heavysmoke 3.20831e-007/0.486031/-1.43063 0/0/0
+ObjectTemplate.armor.addArmorEffect 10 e_dstate_land_fire 0/0.625255/-1.4825 0/0/0
+ObjectTemplate.armor.addArmorEffect 0 e_vexp_Rib 1.22819e-006/0.797559/-1.4821 0/0/0
+ObjectTemplate.armor.addArmorEffect 0 e_dstate_static_fire 2.12468e-007/0.660314/-1.3117 0/0/0
+ObjectTemplate.armor.addArmorEffect -100 e_vexp_tank_2nd 0/0.35298/3.86355 0/0/0
+rem ---EndComp ---
+rem ---BeginComp:Radio ---
+ObjectTemplate.createComponent Radio
+ObjectTemplate.Radio.spottedMessage boat_spotted
+rem ---EndComp ---
+rem ---BeginComp:VehicleHud ---
+ObjectTemplate.createComponent VehicleHud
+ObjectTemplate.vehicleHud.hudName "Sturmboot 39"
+ObjectTemplate.vehicleHud.typeIcon Ingame\Vehicles\Icons\Hud\MenuIcons\menuIcon_boat.tga
+ObjectTemplate.vehicleHud.miniMapIcon Ingame\Vehicles\Icons\Minimap\mini_rib.tga
+ObjectTemplate.vehicleHud.miniMapIconLeaderSize Medium
+ObjectTemplate.vehicleHud.vehicleType 6
+ObjectTemplate.vehicleHud.displaySelectionOnEnter 1
+ObjectTemplate.vehicleHud.vehicleIcon Ingame\Vehicles\Icons\Hud\VehicleIcons\rib.tga
+rem ---EndComp ---
+ObjectTemplate.geometry fht_sturmboot39
+ObjectTemplate.setCollisionMesh fht_sturmboot39
+ObjectTemplate.mapMaterial 0 wood 14
+ObjectTemplate.mapMaterial 1 wreck 60
+ObjectTemplate.drag 1
+ObjectTemplate.dragModifier 1/1/0.5
+ObjectTemplate.mass 500
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_sturmboot39_Ambient
+ObjectTemplate.addTemplate S_fht_sturmboot39_AmbientDamaged
+ObjectTemplate.addTemplate fht_sturmboot39_drivercam
+ObjectTemplate.setPosition 0/0.9/0.6
+ObjectTemplate.setRotation -0.4/0/0
+ObjectTemplate.addTemplate fht_sturmboot39_FloatingBundlefl
+ObjectTemplate.setPosition -1/-0.1/3
+ObjectTemplate.addTemplate fht_sturmboot39_FloatingBundlefr
+ObjectTemplate.setPosition 1/-0.1/3
+ObjectTemplate.addTemplate fht_sturmboot39_FloatingBundlerr
+ObjectTemplate.setPosition 1/0.03/-2.5
+ObjectTemplate.addTemplate fht_sturmboot39_FloatingBundlerl
+ObjectTemplate.setPosition -1/0.03/-2.5
+ObjectTemplate.addTemplate fht_sturmboot39_driver_entry
+ObjectTemplate.setPosition 0/0.655919/-0.32917
+ObjectTemplate.addTemplate fht_sturmboot39_VerticalBodyWing_RotationRpm
+ObjectTemplate.setPosition 0/0/-2
+ObjectTemplate.setRotation 0/0/-90
+ObjectTemplate.addTemplate fht_sturmboot39_Rudder
+ObjectTemplate.setPosition 0/-0.5/-5
+ObjectTemplate.setRotation 0/0/-90
+ObjectTemplate.addTemplate e_rib_wake
+ObjectTemplate.setPosition 0/-1/-1.55
+ObjectTemplate.addTemplate e_rib_BowSpray
+ObjectTemplate.setPosition 0/-0.4/0.5
+ObjectTemplate.addTemplate fht_sturmboot39_passenger
+ObjectTemplate.setPosition -0.459443/0.777239/1.84068
+ObjectTemplate.setRotation -0.745527/-20.5803/1.40264
+ObjectTemplate.addTemplate fht_sturmboot39_passenger
+ObjectTemplate.setPosition -0.420055/0.765629/0.745892
+ObjectTemplate.setRotation -0.834063/-24.8368/-0.598623
+ObjectTemplate.addTemplate fht_sturmboot39_passenger
+ObjectTemplate.setPosition 0.23969/0.73965/2.04128
+ObjectTemplate.setRotation -6.79197/-22.4258/-8.11838
+ObjectTemplate.addTemplate fht_sturmboot39_passenger
+ObjectTemplate.setPosition 0.30932/0.77861/0.67208
+ObjectTemplate.setRotation 8.3/-24.85/-4.1
+rem -------------------------------------
+ObjectTemplate.setSoldierExitLocation 0/1/1 0/0/0
+ObjectTemplate.regulateYawInput PIMouseLookX
+ObjectTemplate.regulateYaw 0/0
+ObjectTemplate.regulatePitchInput PIMouseLookY
+ObjectTemplate.regulatePitch 0/0
+ObjectTemplate.seatInformation fht_sturmboot39 0.4/0.8/-1 0/0/0
+ObjectTemplate.seatAnimationSystem Objects/Vehicles/Common/Animations/3p_passenger_B_animSys.inc
+ObjectTemplate.seatLeftRotationLimit -110
+ObjectTemplate.seatRightRotationLimit 110
+ObjectTemplate.cockpitSubGeom 1
+ObjectTemplate.vehicleCategory VCSea
+ObjectTemplate.controlsCategory VCSea
+ObjectTemplate.allowDucking 1
+ObjectTemplate.isOpenVehicle 1
+ObjectTemplate.neverDrawAs1p 1
+ObjectTemplate.setPcoId 0
+
+ObjectTemplate.activeSafe Sound S_fht_sturmboot39_Ambient
+ObjectTemplate.modifiedByUser "Johannes"
+
+ObjectTemplate.activeSafe Sound S_fht_sturmboot39_AmbientDamaged
+ObjectTemplate.modifiedByUser "Johannes"
+
+ObjectTemplate.activeSafe RotationalBundle fht_sturmboot39_Backengine
+ObjectTemplate.modifiedByUser "Johannes"
+ObjectTemplate.setNetworkableInfo BasicInfo
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_sturmboot39_Backengine_RotationRpm
+ObjectTemplate.addTemplate fht_sturmboot39_Motor
+ObjectTemplate.setPosition 0/-0.780742/-2.13816
+ObjectTemplate.setRotation 0/15/0
+rem -------------------------------------
+ObjectTemplate.setMinRotation -10/0/0
+ObjectTemplate.setMaxRotation 10/0/0
+ObjectTemplate.setMaxSpeed 60/0/0
+ObjectTemplate.setAcceleration -40/0/0
+ObjectTemplate.setInputToYaw PIYaw
+ObjectTemplate.setAutomaticReset 1
+ObjectTemplate.restoreRotationOnExit 1
+
+ObjectTemplate.activeSafe Sound S_fht_sturmboot39_Backengine_RotationRpm
+ObjectTemplate.modifiedByUser "Johannes"
+
+
+ObjectTemplate.create RotationalBundle fht_sturmboot39_IKdummy
+ObjectTemplate.modifiedByUser "Johannes"
+rem ---BeginComp:Ik ---
+ObjectTemplate.createComponent Ik
+ObjectTemplate.ik.positionLeft 0.204523/-0.126401/0.965231
+ObjectTemplate.ik.rotationLeft 22.1902/-61.1682/162.243
+ObjectTemplate.ik.positionRight 0.733169/-0.095922/0.690592
+ObjectTemplate.ik.rotationRight -136.07/56.0187/-10.0151
+rem ---EndComp ---
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_sturmboot39_IKdummy_RotationRpm
+rem -------------------------------------
+
+ObjectTemplate.activeSafe Sound S_fht_sturmboot39_IKdummy_RotationRpm
+ObjectTemplate.modifiedByUser "Johannes"
+
+
+ObjectTemplate.activeSafe RotationalBundle fht_sturmboot39_Propellers
+ObjectTemplate.modifiedByUser "Johannes"
+ObjectTemplate.setNetworkableInfo BasicInfo
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_sturmboot39_Propellers_RotationRpm
+rem -------------------------------------
+ObjectTemplate.setMaxSpeed 0/0/1800
+ObjectTemplate.setMaxResetSpeed 0/0/200
+ObjectTemplate.setAcceleration 0/0/3000
+ObjectTemplate.setInputToRoll PIThrottle
+ObjectTemplate.rememberExcessInput 1
+ObjectTemplate.restoreRotationOnExit 1
+
+ObjectTemplate.activeSafe Sound S_fht_sturmboot39_Propellers_RotationRpm
+ObjectTemplate.modifiedByUser "Johannes"
+
+ObjectTemplate.create Engine fht_sturmboot39_Motor
+ObjectTemplate.modifiedByUser "Johannes"
+ObjectTemplate.setNetworkableInfo BasicInfo
+ObjectTemplate.createdInEditor 1
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_sturmboot39_Motor_RotationRpm
+ObjectTemplate.setPosition 0/0.95/2.4
+ObjectTemplate.addTemplate S_fht_sturmboot39_Motor_Idle
+ObjectTemplate.setPosition 2.05404e-006/1.03868/2.78549
+ObjectTemplate.addTemplate S_fht_sturmboot39_Motor_Rpm1
+ObjectTemplate.setPosition 1.6738e-006/1.02223/2.75427
+ObjectTemplate.addTemplate S_fht_sturmboot39_Motor_Rpm2
+ObjectTemplate.setPosition 0/0.95/2.4
+ObjectTemplate.addTemplate S_fht_sturmboot39_Motor_Load
+ObjectTemplate.setPosition 0/0.95/2.4
+ObjectTemplate.addTemplate e_rib_waterjet
+ObjectTemplate.setPosition 1e-005/0.31415/-0.45971
+ObjectTemplate.addTemplate e_exhaust_startup
+ObjectTemplate.setPosition 0/0.870762/2.38175
+ObjectTemplate.setRotation -4.69055/-47.5953/6.4532
+ObjectTemplate.addTemplate e_exhaust
+ObjectTemplate.setPosition 0.0140376/0.297639/-0.026618
+ObjectTemplate.setRotation 5.51867/51.6365/6.81647
+rem -------------------------------------
+ObjectTemplate.setMinRotation 0/0/-1
+ObjectTemplate.setMaxRotation 0/0/1
+ObjectTemplate.setMaxSpeed 0/0/200
+ObjectTemplate.setAcceleration 0/0/22
+ObjectTemplate.setDeAcceleration 0/0/17
+ObjectTemplate.setInputToRoll PIThrottle
+ObjectTemplate.setAutomaticReset 1
+ObjectTemplate.restoreRotationOnExit 1
+ObjectTemplate.setEngineType c_ETShip
+ObjectTemplate.setTorque 10
+ObjectTemplate.setDifferential 2
+ObjectTemplate.setGearUp 0.7
+ObjectTemplate.setGearDown 0.3
+ObjectTemplate.setGearRatios 3.5 2.2 1.5 1.1 0.94 
+ObjectTemplate.noPropellerEffectAtSpeed 70
+ObjectTemplate.noPropellerEffectAtSpeed 70
+
+ObjectTemplate.activeSafe Sound S_fht_sturmboot39_Motor_RotationRpm
+ObjectTemplate.modifiedByUser "Johannes"
+
+ObjectTemplate.activeSafe Sound S_fht_sturmboot39_Motor_Idle
+ObjectTemplate.modifiedByUser "Johannes"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/vehicles/air/common/sounds/rpm/ju52_start_idle_stop.wav"
+ObjectTemplate.loopCount 1
+ObjectTemplate.is3dSound 1
+ObjectTemplate.stopType 2
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 1.5
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.pitchEnvelope 0/1/0/1.5/0/2/0.003861/0.741313/0/0.988417/1.19305/0/
+ObjectTemplate.volumeEnvelope 0/1/0/1/0/3/0.00772201/0.660232/0/0.239382/0.660232/0/0.528958/0/0/
+ObjectTemplate.position 2.05404e-006/1.03868/2.78549
+ObjectTemplate.minDistance 3
+ObjectTemplate.halfVolumeDistance 6
+
+ObjectTemplate.activeSafe Sound S_fht_sturmboot39_Motor_Rpm1
+ObjectTemplate.modifiedByUser "Johannes"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/vehicles/air/common/sounds/rpm/typhoon_rpm1.wav"
+ObjectTemplate.loopCount 0
+ObjectTemplate.is3dSound 1
+ObjectTemplate.stopType 1
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 0.9
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.pitchEnvelope 0/1/0/3/0/6/0.003861/0.996139/0/0.405405/1.44788/0/0.617761/1.66795/0/0.818533/1.96911/0/0.911197/2.17761/0/0.996139/2.44402/0/
+ObjectTemplate.volumeEnvelope 0/1/0/1/0/3/0/0.200772/0/0.189189/0.911197/0/0.53668/1/0/
+ObjectTemplate.position 1.6738e-006/1.02223/2.75427
+ObjectTemplate.minDistance 15
+ObjectTemplate.halfVolumeDistance 35
+ObjectTemplate.coneDirection 0/0/1
+ObjectTemplate.coneInnerAngle 140
+ObjectTemplate.coneOuterVolume 0.7
+
+ObjectTemplate.activeSafe Sound S_fht_sturmboot39_Motor_Rpm2
+ObjectTemplate.modifiedByUser "Johannes"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/vehicles/air/common/sounds/rpm/typhoon_rpm2.wav"
+ObjectTemplate.loopCount 0
+ObjectTemplate.is3dSound 1
+ObjectTemplate.stopType 1
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 1.8
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.pitchEnvelope 0/1/0/3/0/3/0.00772201/1.78378/0/0.281853/2.05019/0/0.996139/2.77992/0/
+ObjectTemplate.volumeEnvelope 0/1/0/1/0/4/0.185328/0/0/0.401544/0.436293/0/0.629344/0.671815/0/0.988417/0.737452/0/
+ObjectTemplate.position 0/0.95/2.4
+ObjectTemplate.minDistance 3
+ObjectTemplate.halfVolumeDistance 35
+ObjectTemplate.coneDirection 0/0/1
+ObjectTemplate.coneInnerAngle 180
+ObjectTemplate.coneOuterAngle 200
+ObjectTemplate.coneOuterVolume 0.3
+
+ObjectTemplate.activeSafe Sound S_fht_sturmboot39_Motor_Load
+ObjectTemplate.modifiedByUser "Johannes"
+
+ObjectTemplate.create Camera fht_sturmboot39_drivercam
+ObjectTemplate.modifiedByUser "Johannes"
+ObjectTemplate.createdInEditor 1
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 0
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_sturmboot39_drivercam_RotationRpm
+rem -------------------------------------
+ObjectTemplate.setMinRotation -110/-80/0
+ObjectTemplate.setMaxRotation 110/25/0
+ObjectTemplate.setMaxSpeed 300/250/250
+ObjectTemplate.setAcceleration 300/250/250
+ObjectTemplate.setInputToYaw PIMouseLookX
+ObjectTemplate.setInputToPitch PIMouseLookY
+ObjectTemplate.restoreRotationOnExit 1
+ObjectTemplate.worldFOV 1.2
+ObjectTemplate.insideFOV 1.2
+ObjectTemplate.worldFOV 1.2
+ObjectTemplate.insideFOV 1.2
+ObjectTemplate.allowInsideDynamicLights 1
+ObjectTemplate.allowInsideStaticSun 0
+ObjectTemplate.insideStaticSunDirection -0.25/-0.5/0.75
+ObjectTemplate.insideStaticSunColor 1/1/1
+ObjectTemplate.insideStaticSunDamageColor 1/0/0
+ObjectTemplate.insideDamageFrequency 3
+ObjectTemplate.insideDamageThreshold 0.15
+ObjectTemplate.insideStaticSunAmbientColor 0.7/0.7/0.7
+
+ObjectTemplate.activeSafe Sound S_fht_sturmboot39_drivercam_RotationRpm
+ObjectTemplate.modifiedByUser "Johannes"
+
+ObjectTemplate.create FloatingBundle fht_sturmboot39_FloatingBundlefl
+ObjectTemplate.modifiedByUser "Johannes"
+ObjectTemplate.createdInEditor 1
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 0
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_sturmboot39_FloatingBundlefl_RotationRpm
+rem -------------------------------------
+ObjectTemplate.setFloatMaxLift 3
+ObjectTemplate.setFloatMinLift 2
+
+ObjectTemplate.activeSafe Sound S_fht_sturmboot39_FloatingBundlefl_RotationRpm
+ObjectTemplate.modifiedByUser "Johannes"
+
+ObjectTemplate.create FloatingBundle fht_sturmboot39_FloatingBundlefr
+ObjectTemplate.modifiedByUser "Johannes"
+ObjectTemplate.createdInEditor 1
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 0
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_sturmboot39_FloatingBundlefr_RotationRpm
+rem -------------------------------------
+ObjectTemplate.setFloatMaxLift 3
+ObjectTemplate.setFloatMinLift 2
+
+ObjectTemplate.activeSafe Sound S_fht_sturmboot39_FloatingBundlefr_RotationRpm
+ObjectTemplate.modifiedByUser "Johannes"
+
+ObjectTemplate.create FloatingBundle fht_sturmboot39_FloatingBundlerr
+ObjectTemplate.modifiedByUser "Johannes"
+ObjectTemplate.createdInEditor 1
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 0
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_sturmboot39_FloatingBundlerr_RotationRpm
+rem -------------------------------------
+ObjectTemplate.setFloatMaxLift 4.2
+ObjectTemplate.setFloatMinLift 3
+
+ObjectTemplate.activeSafe Sound S_fht_sturmboot39_FloatingBundlerr_RotationRpm
+ObjectTemplate.modifiedByUser "Johannes"
+
+ObjectTemplate.create FloatingBundle fht_sturmboot39_FloatingBundlerl
+ObjectTemplate.modifiedByUser "Johannes"
+ObjectTemplate.createdInEditor 1
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 0
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_sturmboot39_FloatingBundlerl_RotationRpm
+rem -------------------------------------
+ObjectTemplate.setFloatMaxLift 4.2
+ObjectTemplate.setFloatMinLift 3
+
+ObjectTemplate.activeSafe Sound S_fht_sturmboot39_FloatingBundlerl_RotationRpm
+ObjectTemplate.modifiedByUser "Johannes"
+
+ObjectTemplate.create EntryPoint fht_sturmboot39_driver_entry
+ObjectTemplate.modifiedByUser "Johannes"
+ObjectTemplate.createdInEditor 1
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 0
+ObjectTemplate.setEntryRadius 2.5
+
+ObjectTemplate.create Wing fht_sturmboot39_VerticalBodyWing_RotationRpm
+ObjectTemplate.modifiedByUser "Johannes"
+ObjectTemplate.setNetworkableInfo BasicInfo
+ObjectTemplate.createdInEditor 1
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 0
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_sturmboot39_VerticalBodyWing_RotationRpm_RotationRpm
+ObjectTemplate.addTemplate S_fht_sturmboot39_VerticalBodyWing_RotationRpm
+rem -------------------------------------
+ObjectTemplate.setAutomaticReset 1
+ObjectTemplate.setPositionOffset 0/0/0
+ObjectTemplate.setFlapLift 0
+
+ObjectTemplate.activeSafe Sound S_fht_sturmboot39_VerticalBodyWing_RotationRpm_RotationRpm
+ObjectTemplate.modifiedByUser "Johannes"
+
+ObjectTemplate.create Wing fht_sturmboot39_Rudder
+ObjectTemplate.modifiedByUser "Johannes"
+ObjectTemplate.setNetworkableInfo BasicInfo
+ObjectTemplate.createdInEditor 1
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_sturmboot39_Rudder_RotationRpm
+rem -------------------------------------
+ObjectTemplate.setMinRotation 0/-65/0
+ObjectTemplate.setMaxRotation 0/65/0
+ObjectTemplate.setMaxSpeed 0/25/0
+ObjectTemplate.setAcceleration 0/25/0
+ObjectTemplate.setInputToPitch PIYaw
+ObjectTemplate.setAutomaticReset 1
+ObjectTemplate.setPositionOffset 0/0/0
+ObjectTemplate.setWingLift 0.3
+ObjectTemplate.setFlapLift 4
+
+ObjectTemplate.activeSafe Sound S_fht_sturmboot39_Rudder_RotationRpm
+ObjectTemplate.modifiedByUser "Johannes"
+
+

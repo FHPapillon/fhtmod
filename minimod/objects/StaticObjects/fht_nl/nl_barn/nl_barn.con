@@ -1,0 +1,8 @@
+GeometryTemplate.create StaticMesh nl_barn
+
+ObjectTemplate.create SimpleObject nl_barn
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator PANDA:Neri
+ObjectTemplate.geometry nl_barn
+
+include nl_barn.tweak

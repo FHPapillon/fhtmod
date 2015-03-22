@@ -1,0 +1,43 @@
+rem *** Generated with Bf2Editor.exe [created: 2006/5/15 11:52]
+ObjectTemplate.activeSafe PlayerControlObject uncap_se
+ObjectTemplate.creator BUTTSLOL:jbp
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.setNetworkableInfo ControlPointInfo
+ObjectTemplate.saveInSeparateFile 1
+rem ---BeginComp:Armor ---
+ObjectTemplate.createComponent Armor
+ObjectTemplate.armor.angleMod 1
+ObjectTemplate.armor.maxHitPoints 20
+ObjectTemplate.armor.hitPoints 20
+ObjectTemplate.armor.defaultMaterial 114
+ObjectTemplate.armor.waterLevel 0
+ObjectTemplate.armor.explosionForceMod 0
+ObjectTemplate.armor.explosionForceMax 0
+ObjectTemplate.armor.wreckHitPoints 0
+ObjectTemplate.armor.timeToStayAsWreck 0
+ObjectTemplate.armor.criticalDamage 1
+rem ---EndComp ---
+rem ---BeginComp:VehicleHud ---
+ObjectTemplate.createComponent VehicleHud
+ObjectTemplate.vehicleHud.miniMapIcon Ingame\Vehicles\Icons\Minimap\uncap_se.dds
+ObjectTemplate.vehicleHud.miniMapIconSize 50
+ObjectTemplate.vehicleHud.miniMapIconLeaderSize Medium
+ObjectTemplate.vehicleHud.useSelectionIcons 0
+rem ---EndComp ---
+ObjectTemplate.setCollisionMesh pusher
+ObjectTemplate.mapMaterial 0 dummy 0
+ObjectTemplate.mass 10000
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 0
+ObjectTemplate.physicsType Mesh
+rem -------------------------------------
+ObjectTemplate.addTemplate S_uncap_se_Ambient
+ObjectTemplate.addTemplate S_uncap_se_AmbientDamaged
+rem -------------------------------------
+
+ObjectTemplate.activeSafe Sound S_uncap_se_Ambient
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe Sound S_uncap_se_AmbientDamaged
+ObjectTemplate.modifiedByUser "jbp"
+

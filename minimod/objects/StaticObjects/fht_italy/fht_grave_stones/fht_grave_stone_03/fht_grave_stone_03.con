@@ -1,0 +1,13 @@
+GeometryTemplate.create StaticMesh fht_grave_stone_03
+CollisionManager.createTemplate fht_grave_stone_03
+
+ObjectTemplate.create SimpleObject fht_grave_stone_03
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator SORKEN:HP_Ägaren
+ObjectTemplate.collisionMesh fht_grave_stone_03
+ObjectTemplate.mapMaterial 0 concrete 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.geometry fht_grave_stone_03
+
+include fht_grave_stone_03.tweak

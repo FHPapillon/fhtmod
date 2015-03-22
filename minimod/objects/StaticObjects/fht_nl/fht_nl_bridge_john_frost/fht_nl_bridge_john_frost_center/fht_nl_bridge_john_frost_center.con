@@ -1,0 +1,13 @@
+GeometryTemplate.create StaticMesh fht_nl_bridge_john_frost_center
+CollisionManager.createTemplate fht_nl_bridge_john_frost_center
+
+ObjectTemplate.create SimpleObject fht_nl_bridge_john_frost_center
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator WIN-7DG0TX7FZLF:TASS
+ObjectTemplate.collisionMesh fht_nl_bridge_john_frost_center
+ObjectTemplate.mapMaterial 0 steel 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.geometry fht_nl_bridge_john_frost_center
+
+include fht_nl_bridge_john_frost_center.tweak

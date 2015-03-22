@@ -1,0 +1,18 @@
+rem *** handcrafted by hitznitch
+GeometryTemplate.compressVertexData 1
+GeometryTemplate.maxTextureRepeat 16
+ObjectTemplate.activeSafe Rotor trike_prop
+ObjectTemplate.creator bfa:hit
+ObjectTemplate.modifiedByUser "MeBaby"
+ObjectTemplate.setNetworkableInfo BasicInfo
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.geometry trike_prop
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 0
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.changeLodAt 0.15
+ObjectTemplate.tolerance 0.1
+ObjectTemplate.rotationSpeedMod 2.5
+ObjectTemplate.rotationSpeedModBlur 0.1
+ObjectTemplate.rotationAxle 2
+ObjectTemplate.engineName trike_motor

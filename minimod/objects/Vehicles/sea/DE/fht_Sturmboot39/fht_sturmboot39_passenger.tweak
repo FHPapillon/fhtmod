@@ -1,0 +1,102 @@
+rem *** Generated with Bf2Editor.exe [created: 2006/5/15 11:52]
+ObjectTemplate.activeSafe PlayerControlObject fht_sturmboot39_passenger
+ObjectTemplate.creator ctz
+ObjectTemplate.modifiedByUser "Marcus"
+ObjectTemplate.setNetworkableInfo BasicInfo
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.createdInEditor 1
+rem ---BeginComp:VehicleHud ---
+ObjectTemplate.createComponent VehicleHud
+ObjectTemplate.vehicleHud.hudName "Sturmboot 39"
+ObjectTemplate.vehicleHud.miniMapIconLeaderSize Medium
+ObjectTemplate.vehicleHud.showCrosshair 0
+ObjectTemplate.vehicleHud.vehicleIconPos 1/1
+ObjectTemplate.vehicleHud.useSelectionIcons 0
+ObjectTemplate.vehicleHud.vehicleIcon Ingame\Vehicles\Icons\Hud\VehicleIcons\Placeholder.dds
+rem ---EndComp ---
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 0
+ObjectTemplate.aiTemplate m3grant_Passenger1
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_sturmboot39_passenger_Ambient
+ObjectTemplate.addTemplate S_fht_sturmboot39_passenger_AmbientDamaged
+ObjectTemplate.addTemplate fht_sturmboot39_passenger_Camera
+ObjectTemplate.setPosition 0/0.0431517/-0.193839
+ObjectTemplate.addTemplate fht_sturmboot39_passenger_IKDummy
+ObjectTemplate.setPosition -0.10226/-0.75/0.5
+rem -------------------------------------
+ObjectTemplate.setSoldierExitLocation 0.7/1/0 0/0/0
+ObjectTemplate.altSoldierExitPosition 0.5/1/0
+ObjectTemplate.dontClearTeamOnExit 1
+ObjectTemplate.regulateYawInput PICameraX
+ObjectTemplate.regulateYaw 1/1
+ObjectTemplate.regulatePitchInput PICameraY
+ObjectTemplate.regulatePitch 1/1
+ObjectTemplate.seatInformation fht_sturmboot39_passenger 2.40413e-008/-0.0210919/2.46355e-008 0/25/0
+ObjectTemplate.seatAnimationSystem Objects/Vehicles/Common/Animations/3p_prone_animSys.inc
+ObjectTemplate.seatLeftRotationLimit -10
+ObjectTemplate.seatRightRotationLimit 10
+ObjectTemplate.soundFilter vehicle
+ObjectTemplate.cockpitSubGeom 1
+ObjectTemplate.vehicleCategory VCAir
+ObjectTemplate.setVehicleType VTFighter
+ObjectTemplate.isOpenVehicle 1
+ObjectTemplate.neverDrawAs1p 1
+
+ObjectTemplate.activeSafe Sound S_fht_sturmboot39_passenger_Ambient
+ObjectTemplate.modifiedByUser "Marcus"
+
+ObjectTemplate.activeSafe Sound S_fht_sturmboot39_passenger_AmbientDamaged
+ObjectTemplate.modifiedByUser "Marcus"
+
+ObjectTemplate.create Camera fht_sturmboot39_passenger_Camera
+ObjectTemplate.modifiedByUser "Marcus"
+ObjectTemplate.createdInEditor 1
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 0
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_sturmboot39_passenger_Camera_RotationRpm
+rem -------------------------------------
+ObjectTemplate.setMinRotation -45/-60/0
+ObjectTemplate.setMaxRotation 45/30/0
+ObjectTemplate.setMaxSpeed 135/135/0
+ObjectTemplate.setAcceleration 250/250/0
+ObjectTemplate.setInputToYaw PIMouseLookX
+ObjectTemplate.setInputToPitch PIMouseLookY
+ObjectTemplate.worldFOV 1.2
+ObjectTemplate.insideFOV 1.2
+ObjectTemplate.worldFOV 1.2
+ObjectTemplate.insideFOV 1.2
+ObjectTemplate.allowInsideDynamicLights 1
+ObjectTemplate.allowInsideStaticSun 0
+ObjectTemplate.insideStaticSunDirection -0.25/-0.5/0.75
+ObjectTemplate.insideStaticSunColor 1/1/1
+ObjectTemplate.insideStaticSunDamageColor 1/0/0
+ObjectTemplate.insideDamageFrequency 3
+ObjectTemplate.insideDamageThreshold 0.15
+ObjectTemplate.insideStaticSunAmbientColor 0.7/0.7/0.7
+
+ObjectTemplate.activeSafe Sound S_fht_sturmboot39_passenger_Camera_RotationRpm
+ObjectTemplate.modifiedByUser "Marcus"
+
+ObjectTemplate.create RotationalBundle fht_sturmboot39_passenger_IKDummy
+ObjectTemplate.modifiedByUser "Marcus"
+ObjectTemplate.createdInEditor 1
+rem ---BeginComp:Ik ---
+ObjectTemplate.createComponent Ik
+ObjectTemplate.ik.positionLeft -0.030958/-0.216207/-0.233299
+ObjectTemplate.ik.rotationLeft -73.2917/-89.9031/-101.211
+ObjectTemplate.ik.poleVectorLeft -0.146942/0.0289595/-0.0772422
+ObjectTemplate.ik.positionRight 0.252709/-0.20764/-0.20252
+ObjectTemplate.ik.rotationRight -130.693/65.5772/47.388
+ObjectTemplate.ik.poleVectorRight 0.113406/0.062/0
+rem ---EndComp ---
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 0
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_sturmboot39_passenger_IKDummy_RotationRpm
+rem -------------------------------------
+
+ObjectTemplate.activeSafe Sound S_fht_sturmboot39_passenger_IKDummy_RotationRpm
+ObjectTemplate.modifiedByUser "Marcus"
+

@@ -1,0 +1,8 @@
+GeometryTemplate.create BundledMesh m4a1mid_eu_ca_rightwheel
+
+ObjectTemplate.create RotationalBundle m4a1mid_eu_ca_rightwheel
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator PHILSCH-Z4KV58U:Phil
+ObjectTemplate.geometry m4a1mid_eu_brit_rightwheel
+
+include m4a1mid_eu_ca_rightwheel.tweak

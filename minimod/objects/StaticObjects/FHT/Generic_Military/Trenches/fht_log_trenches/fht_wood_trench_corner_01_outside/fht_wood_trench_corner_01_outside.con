@@ -1,0 +1,14 @@
+GeometryTemplate.create StaticMesh fht_wood_trench_corner_01_outside
+CollisionManager.createTemplate fht_wood_trench_corner_01_outside
+
+ObjectTemplate.create SimpleObject fht_wood_trench_corner_01_outside
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator SORKEN:HP_Ägaren
+ObjectTemplate.collisionMesh fht_wood_trench_corner_01_outside
+ObjectTemplate.mapMaterial 0 wood 0
+ObjectTemplate.mapMaterial 1 dirt 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.geometry fht_wood_trench_corner_01_outside
+
+include fht_wood_trench_corner_01_outside.tweak

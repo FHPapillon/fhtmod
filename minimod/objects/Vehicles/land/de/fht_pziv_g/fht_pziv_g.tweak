@@ -1,0 +1,1176 @@
+rem *** Generated with Bf2Editor.exe [created: 2006/5/15 11:52]
+GeometryTemplate.maxSkipWreckLods 0
+GeometryTemplate.setSubGeometryLodDistance 1 0 15
+GeometryTemplate.setSubGeometryLodDistance 1 1 30
+GeometryTemplate.setSubGeometryLodDistance 1 2 80
+GeometryTemplate.setSubGeometryLodDistance 1 3 150
+GeometryTemplate.setMaterialReflectionScale 1 0 0 0.7
+GeometryTemplate.setSpecularStaticGloss 0 0 0 0
+GeometryTemplate.setSpecularStaticGloss 0 0 1 0
+GeometryTemplate.setSpecularStaticGloss 0 0 2 0
+GeometryTemplate.setSpecularStaticGloss 0 0 3 0
+GeometryTemplate.compressVertexData 1
+GeometryTemplate.maxTextureRepeat 16
+ObjectTemplate.activeSafe PlayerControlObject fht_pziv_g
+ObjectTemplate.creator BUTTSLOL:jbp
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.setNetworkableInfo BasicInfo
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.castsDynamicShadow 1
+ObjectTemplate.cullRadiusScale 6
+rem ---BeginComp:Armor ---
+ObjectTemplate.createComponent Armor
+ObjectTemplate.armor.angleMod 0
+ObjectTemplate.armor.maxHitPoints 575
+ObjectTemplate.armor.hitPoints 575
+ObjectTemplate.armor.defaultMaterial 126
+ObjectTemplate.armor.hpLostWhileUpSideDown 100
+ObjectTemplate.armor.hpLostWhileInDeepWater 335
+ObjectTemplate.armor.hpLostWhileCriticalDamage 0
+ObjectTemplate.armor.waterDamageDelay 0
+ObjectTemplate.armor.deepWaterDamageDelay 0
+ObjectTemplate.armor.waterLevel 0.3
+ObjectTemplate.armor.deepWaterLevel 0.8
+ObjectTemplate.armor.explosionForce 15
+ObjectTemplate.armor.explosionForceMod 8
+ObjectTemplate.armor.explosionForceMax 5000
+ObjectTemplate.armor.explosionDamage 300
+ObjectTemplate.armor.explosionRadius 7
+ObjectTemplate.armor.explosionMaterial 99
+ObjectTemplate.armor.wreckExplosionRadius 5
+ObjectTemplate.armor.wreckExplosionMaterial 70
+ObjectTemplate.armor.wreckHitPoints 1000
+ObjectTemplate.armor.timeToStayAsWreck 60
+ObjectTemplate.armor.criticalDamage 200
+ObjectTemplate.armor.hideChildrenOnSpectacularDeath 1
+ObjectTemplate.armor.addArmorEffect 50 e_dstate_land_lightsmoke 0.0525058/0.81159/-1.94868 0/0/0
+ObjectTemplate.armor.addArmorEffect 50 e_dstate_land_sparks 1.21698/-0.169338/-2.30482 0/0/0
+ObjectTemplate.armor.addArmorEffect 35 e_dstate_land_MediumSmoke -0.19998/0.839713/-1.88487 0/0/0
+ObjectTemplate.armor.addArmorEffect 30 e_dstate_land_heavysmoke -0.00373519/0.809557/-1.96604 0/0/0
+ObjectTemplate.armor.addArmorEffect 25 e_dstate_land_critical -7.74047e-007/0.810888/-1.51886 0/0/0
+ObjectTemplate.armor.addArmorEffect 0 e_vexp_tank 0/0/0 0/0/0
+ObjectTemplate.armor.addArmorEffectSpectacular 0 e_vexp_tank_spec 0/0/0 0/0/0
+ObjectTemplate.armor.addArmorEffect -20 e_dstate_static_fire 0.135799/1.61766/-0.70093 0/0/0
+ObjectTemplate.armor.addArmorEffect -100 e_vexp_tank_2nd 0/0/-0.5 0/0/0
+rem ---EndComp ---
+rem ---BeginComp:Radio ---
+ObjectTemplate.createComponent Radio
+ObjectTemplate.Radio.spottedMessage tank_spotted
+rem ---EndComp ---
+rem ---BeginComp:VehicleHud ---
+ObjectTemplate.createComponent VehicleHud
+ObjectTemplate.vehicleHud.hudName "Pz IV Ausf. G"
+ObjectTemplate.vehicleHud.typeIcon Ingame\Vehicles\Icons\Hud\MenuIcons\menuIcon_tank.tga
+ObjectTemplate.vehicleHud.miniMapIcon Ingame\Vehicles\Icons\Minimap\tank_medium.dds
+ObjectTemplate.vehicleHud.miniMapIconLeaderSize Medium
+ObjectTemplate.vehicleHud.hasTurretIcon 1
+ObjectTemplate.vehicleHud.vehicleIconPos 48/14
+ObjectTemplate.vehicleHud.vehicleType 0
+ObjectTemplate.vehicleHud.vehicleIcon Ingame\Vehicles\Icons\Hud\VehicleIcons\Placeholder.dds
+rem ---EndComp ---
+rem ---BeginComp:HelpHud ---
+ObjectTemplate.createComponent HelpHud
+ObjectTemplate.HelpHud.helpStringKey "FH2_HELP_TANK_xSightsMultipleAmmo"
+ObjectTemplate.HelpHud.helpSoundKey "fh2_tip"
+rem ---EndComp ---
+ObjectTemplate.geometry fht_pziv_g
+ObjectTemplate.setCollisionMesh PZIVF2
+ObjectTemplate.mapMaterial 0 80mm 130
+ObjectTemplate.mapMaterial 1 30mm 125
+ObjectTemplate.mapMaterial 2 15mm 122
+ObjectTemplate.mapMaterial 3 20mm 123
+ObjectTemplate.mapMaterial 4 55mm_Track 128
+ObjectTemplate.mapMaterial 5 wreck 60
+ObjectTemplate.mapMaterial 6 TankTracks 86
+ObjectTemplate.drag 2.0
+ObjectTemplate.mass 12500
+ObjectTemplate.inertiaModifier 0.75/2/2
+ObjectTemplate.gravityModifier 1.4
+ObjectTemplate.floaterMod 0.25
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.aiTemplate PZIVF2_AI
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_pziv_g_Ambient
+ObjectTemplate.addTemplate S_fht_pziv_g_AmbientDamaged
+ObjectTemplate.addTemplate fht_pziv_g_EntryPoint
+ObjectTemplate.addTemplate e_amphib_wake
+ObjectTemplate.setPosition -0.00217/-0.51983/3.55929
+ObjectTemplate.addTemplate e_amphib_wake
+ObjectTemplate.setPosition -0.00217001/-0.51983/-3.35093
+ObjectTemplate.setRotation -180/0/0
+ObjectTemplate.addTemplate e_amphib_wake_sound
+ObjectTemplate.setPosition -0.00217/-0.51983/0
+ObjectTemplate.addTemplate e_sinking_vehicle
+ObjectTemplate.addTemplate antenna
+ObjectTemplate.setPosition 1.3403/0.720825/0.5913
+ObjectTemplate.addTemplate TankRider_Kneeling360
+ObjectTemplate.setPosition 0.624919/1.77391/-2.07281
+ObjectTemplate.setRotation 128.991/0/0
+ObjectTemplate.addTemplate TankRider_Kneeling360
+ObjectTemplate.setPosition -0.424324/1.78626/-2.14289
+ObjectTemplate.setRotation -66.4832/0/0
+ObjectTemplate.addTemplate TankRider_Edge40
+ObjectTemplate.setPosition 1.43108/1.1053/1.6013
+ObjectTemplate.setRotation 92.3043/-5.38948/0.109985
+ObjectTemplate.addTemplate Tank_SmokeDispenser-idx3
+ObjectTemplate.setPosition 0/-0.58565/-2.20913
+ObjectTemplate.setRotation 0/90/0
+ObjectTemplate.addTemplate e_enter_hatch
+ObjectTemplate.setPosition 0/1.6227/-0.773788
+ObjectTemplate.addTemplate e_exit_hatch
+ObjectTemplate.setPosition 0/1.60671/-0.79789
+rem -------------------------------------
+ObjectTemplate.setPcoId 0
+ObjectTemplate.setSoldierExitLocation 0.0628431/3.01634/-0.645352 0/0/0
+ObjectTemplate.altSoldierExitPosition -0.629432/1.76205/2.4419
+ObjectTemplate.exitSpeedMod 0.5
+ObjectTemplate.dontClearTeamOnExit 1
+ObjectTemplate.soundFilter vehicle
+ObjectTemplate.shakeFactor 4
+ObjectTemplate.controlsCategory VCHelicopter
+ObjectTemplate.setVehicleType VTHeavyTank
+ObjectTemplate.listenerObstruction 0.755
+ObjectTemplate.groundContactVolume 1
+ObjectTemplate.damagedAmbientSoundLimit 0.15
+ObjectTemplate.hasRestrictedExit 1
+ObjectTemplate.altSoldierExitPosition -0.629432/1.76205/2.4419
+
+ObjectTemplate.activeSafe Sound S_fht_pziv_g_Ambient
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/vehicles/land/common/Oggsounds/panzer_interior_ambience.ogg"
+ObjectTemplate.loopCount 0
+ObjectTemplate.is3dSound 0
+ObjectTemplate.stopType 0
+ObjectTemplate.volume 0.15
+ObjectTemplate.pitch 1
+ObjectTemplate.pan 0.5
+ObjectTemplate.reverbLevel 1
+
+ObjectTemplate.activeSafe Sound S_fht_pziv_g_AmbientDamaged
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe Engine fht_pziv_g_aaMotor
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.setNetworkableInfo BasicInfo
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_pziv_g_aaMotor_RotationRpm
+ObjectTemplate.setPosition 0/0/-2.08
+ObjectTemplate.addTemplate S_fht_pziv_g_aaMotor_Idle
+ObjectTemplate.setPosition 0/0/-2.08
+ObjectTemplate.addTemplate S_fht_pziv_g_aaMotor_Rpm1
+ObjectTemplate.setPosition 0/0/-2.08
+ObjectTemplate.addTemplate S_fht_pziv_g_aaMotor_Rpm2
+ObjectTemplate.setPosition 0/0/-2.08
+ObjectTemplate.addTemplate S_fht_pziv_g_aaMotor_Load
+ObjectTemplate.setPosition 0/0/-2.08
+ObjectTemplate.addTemplate e_exhaust_startup
+ObjectTemplate.setPosition -0.62/0.205/-1.993
+ObjectTemplate.addTemplate e_exhaust
+ObjectTemplate.setPosition -0.62/0.205/-1.993
+ObjectTemplate.addTemplate e_exhaust_startup
+ObjectTemplate.setPosition 0.62/0.20477/-1.98971
+ObjectTemplate.addTemplate e_exhaust
+ObjectTemplate.setPosition 0.62/0.205/-1.993
+rem -------------------------------------
+ObjectTemplate.setMinRotation -1/0/-5
+ObjectTemplate.setMaxRotation 1/0/10
+ObjectTemplate.setMaxSpeed 4/0/50
+ObjectTemplate.setAcceleration 10/0/10
+ObjectTemplate.setInputToYaw PIYaw
+ObjectTemplate.setInputToRoll PIThrottle
+ObjectTemplate.setAutomaticReset 1
+ObjectTemplate.snapToZeroOnNoInput 1
+ObjectTemplate.setEngineType c_ETTank
+ObjectTemplate.setTorque 22
+ObjectTemplate.setDifferential 8
+ObjectTemplate.setGearUp 0.7
+ObjectTemplate.setGearDown 0.3
+ObjectTemplate.trackTurnAcceleration 5
+ObjectTemplate.trackTurnSpeed 0.2
+
+ObjectTemplate.activeSafe Sound S_fht_pziv_g_aaMotor_RotationRpm
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/vehicles/land/common/sounds/heavy_tracks.wav"
+ObjectTemplate.loopCount 0
+ObjectTemplate.is3dSound 1
+ObjectTemplate.stopType 1
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 1
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.pitchEnvelope 0/1/0/3/0/3/0/0.746/0/0.612/0.944/0/0.995/1.036/0/
+ObjectTemplate.volumeEnvelope 0/1/0/1/0/4/0/0/0/0.096/0.294/0/0.35/1/0/0.987/1/0/
+ObjectTemplate.position 0/0/-2.08
+ObjectTemplate.minDistance 3
+ObjectTemplate.halfVolumeDistance 10
+
+ObjectTemplate.activeSafe Sound S_fht_pziv_g_aaMotor_Idle
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/vehicles/land/common/sounds/panzer_start_idle_stop.wav"
+ObjectTemplate.loopCount 0
+ObjectTemplate.is3dSound 1
+ObjectTemplate.stopType 2
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 1
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.pitchEnvelope 0/1/0/3/0/3/0.003/0.602/0/0.48/0.822/0/0.995/1.02/0/
+ObjectTemplate.volumeEnvelope 0/1/0/1/0/3/0.003/0.888/0/0.173/1/0/0.997/0/0/
+ObjectTemplate.position 0/0/-2.08
+ObjectTemplate.minDistance 3
+ObjectTemplate.halfvolumedistance 12
+
+ObjectTemplate.activeSafe Sound S_fht_pziv_g_aaMotor_Rpm1
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/vehicles/land/common/sounds/tiger_rpm_2.wav"
+ObjectTemplate.loopCount 0
+ObjectTemplate.is3dSound 1
+ObjectTemplate.stopType 1
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 1
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.pitchEnvelope 0/1/0/3/0/3/0.008/0.586/0/0.508/0.799/0/0.99/1.104/0/
+ObjectTemplate.volumeEnvelope 0/1/0/1/0/3/0.249/0/0/0.279/1/0/0.99/1/0/
+ObjectTemplate.position 0/0/-2.08
+ObjectTemplate.minDistance 3
+ObjectTemplate.halfVolumeDistance 10
+
+ObjectTemplate.activeSafe Sound S_fht_pziv_g_aaMotor_Rpm2
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename ""
+ObjectTemplate.loopCount 0
+ObjectTemplate.is3dSound 1
+ObjectTemplate.stopType 0
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 1
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.pitchEnvelope 0/1/0/3/0/3/0/0.487/0/0.609/0.99/0/0.98/1.31/0/
+ObjectTemplate.volumeEnvelope 0/1/0/1/0/3/0/0/0/0.259/0.987/0/0.754/1/0/
+ObjectTemplate.position 0/0/-2.08
+ObjectTemplate.minDistance 15
+ObjectTemplate.halfvolumedistance 53
+
+ObjectTemplate.activeSafe Sound S_fht_pziv_g_aaMotor_Load
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/vehicles/common/sound/gear_shift_01.wav,objects/vehicles/common/sound/gear_shift_01.wav,objects/vehicles/common/sound/gear_shift_02.wav,objects/vehicles/common/sound/gear_shift_03.wav,objects/vehicles/common/sound/gear_shift_04.wav"
+ObjectTemplate.loopCount 1
+ObjectTemplate.is3dSound 1
+ObjectTemplate.stopType 1
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 0.85
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.position 0/0/-2.08
+ObjectTemplate.minDistance 2
+ObjectTemplate.halfvolumedistance 5
+
+ObjectTemplate.activeSafe RotationalBundle fht_pziv_g_LF_DriveWheel
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.castsDynamicShadow 1
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.rotateAsAnimatedUV 1
+ObjectTemplate.rotateAsAnimatedUVReverse 1
+ObjectTemplate.rotateAsAnimatedUVObject fht_pziv_g_whl_L_01
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_pziv_g_LF_DriveWheel_RotationRpm
+rem -------------------------------------
+
+ObjectTemplate.activeSafe Sound S_fht_pziv_g_LF_DriveWheel_RotationRpm
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe RotationalBundle fht_pziv_g_LR_DriveWheel
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.castsDynamicShadow 1
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.rotateAsAnimatedUV 1
+ObjectTemplate.rotateAsAnimatedUVReverse 1
+ObjectTemplate.rotateAsAnimatedUVObject fht_pziv_g_whl_L_01
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_pziv_g_LR_DriveWheel_RotationRpm
+rem -------------------------------------
+
+ObjectTemplate.activeSafe Sound S_fht_pziv_g_LR_DriveWheel_RotationRpm
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe RotationalBundle fht_pziv_g_RF_DriveWheel
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.castsDynamicShadow 1
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.rotateAsAnimatedUV 1
+ObjectTemplate.rotateAsAnimatedUVReverse 1
+ObjectTemplate.rotateAsAnimatedUVObject fht_pziv_g_whl_R_01
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_pziv_g_RF_DriveWheel_RotationRpm
+rem -------------------------------------
+
+ObjectTemplate.activeSafe Sound S_fht_pziv_g_RF_DriveWheel_RotationRpm
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe RotationalBundle fht_pziv_g_RR_DriveWheel
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.castsDynamicShadow 1
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.rotateAsAnimatedUV 1
+ObjectTemplate.rotateAsAnimatedUVReverse 1
+ObjectTemplate.rotateAsAnimatedUVObject fht_pziv_g_whl_R_01
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_pziv_g_RR_DriveWheel_RotationRpm
+rem -------------------------------------
+
+ObjectTemplate.activeSafe Sound S_fht_pziv_g_RR_DriveWheel_RotationRpm
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe Spring fht_pziv_g_whl_L_01
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.setNetworkableInfo SpringInfo
+ObjectTemplate.castsDynamicShadow 1
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.grip 8
+ObjectTemplate.animatedUVTranslation 1
+ObjectTemplate.animatedUVTranslationSpeed 0/0
+ObjectTemplate.animatedUVTranslationMax 0.1/0
+ObjectTemplate.animatedUVTranslationSize 25/0
+ObjectTemplate.animatedUVTranslationReverse 0
+ObjectTemplate.animatedUVTranslationIndex 2
+ObjectTemplate.animatedUVRotation 1
+ObjectTemplate.animatedUVRotationRadius 0.35
+ObjectTemplate.animatedUVRotationScale 0.5/1
+ObjectTemplate.animatedUVRotationIndex 1
+ObjectTemplate.animatedUVRotationReverse 0
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_pziv_g_whl_L_01_Rotation
+ObjectTemplate.addTemplate web_tracked
+ObjectTemplate.setPosition 0.0126973/-0.249306/-1.07288e-006
+rem -------------------------------------
+ObjectTemplate.setStrength 45
+ObjectTemplate.setDamping 5
+ObjectTemplate.rotateUV 1
+
+ObjectTemplate.activeSafe Sound S_fht_pziv_g_whl_L_01_Rotation
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe Spring fht_pziv_g_whl_L_02
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.castsDynamicShadow 1
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.grip 128
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_pziv_g_whl_L_02_Rotation
+rem -------------------------------------
+ObjectTemplate.setStrength 0
+ObjectTemplate.setDamping 0
+ObjectTemplate.rotateUV 1
+
+ObjectTemplate.activeSafe Sound S_fht_pziv_g_whl_L_02_Rotation
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe Spring fht_pziv_g_whl_L_03
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.castsDynamicShadow 1
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.grip 128
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_pziv_g_whl_L_03_Rotation
+rem -------------------------------------
+ObjectTemplate.setStrength 0
+ObjectTemplate.setDamping 0
+ObjectTemplate.rotateUV 1
+
+ObjectTemplate.activeSafe Sound S_fht_pziv_g_whl_L_03_Rotation
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe Spring fht_pziv_g_whl_L_04
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.castsDynamicShadow 1
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.grip 128
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_pziv_g_whl_L_04_Rotation
+rem -------------------------------------
+ObjectTemplate.setStrength 0
+ObjectTemplate.setDamping 0
+ObjectTemplate.rotateUV 1
+
+ObjectTemplate.activeSafe Sound S_fht_pziv_g_whl_L_04_Rotation
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe Spring fht_pziv_g_whl_L_05
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.castsDynamicShadow 1
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.grip 128
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_pziv_g_whl_L_05_Rotation
+rem -------------------------------------
+ObjectTemplate.setStrength 0
+ObjectTemplate.setDamping 0
+ObjectTemplate.rotateUV 1
+
+ObjectTemplate.activeSafe Sound S_fht_pziv_g_whl_L_05_Rotation
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe Spring fht_pziv_g_whl_L_06
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.castsDynamicShadow 1
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.grip 128
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_pziv_g_whl_L_06_Rotation
+rem -------------------------------------
+ObjectTemplate.setStrength 0
+ObjectTemplate.setDamping 0
+ObjectTemplate.rotateUV 1
+
+ObjectTemplate.activeSafe Sound S_fht_pziv_g_whl_L_06_Rotation
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe Spring fht_pziv_g_whl_L_07
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.castsDynamicShadow 1
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.grip 128
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_pziv_g_whl_L_07_Rotation
+rem -------------------------------------
+ObjectTemplate.setStrength 0
+ObjectTemplate.setDamping 0
+ObjectTemplate.rotateUV 1
+
+ObjectTemplate.activeSafe Sound S_fht_pziv_g_whl_L_07_Rotation
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe Spring fht_pziv_g_whl_L_08
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.setNetworkableInfo SpringInfo
+ObjectTemplate.castsDynamicShadow 1
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.grip 8
+ObjectTemplate.animatedUVTranslation 1
+ObjectTemplate.animatedUVTranslationSpeed 0/0
+ObjectTemplate.animatedUVTranslationMax 10/0.0273
+ObjectTemplate.animatedUVTranslationSize 0/-6
+ObjectTemplate.animatedUVTranslationReverse 0
+ObjectTemplate.animatedUVTranslationIndex 6
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_pziv_g_whl_L_08_Rotation
+ObjectTemplate.addTemplate web_tracked
+ObjectTemplate.setPosition 0.0126973/-0.249306/-1.07288e-006
+ObjectTemplate.addTemplate web_trackedSmoke
+ObjectTemplate.setPosition 0.0220005/-0.370004/-7.49051e-007
+rem -------------------------------------
+ObjectTemplate.setStrength 45
+ObjectTemplate.setDamping 5
+ObjectTemplate.rotateUV 1
+
+ObjectTemplate.activeSafe Sound S_fht_pziv_g_whl_L_08_Rotation
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe Spring fht_pziv_g_whl_R_01
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.setNetworkableInfo SpringInfo
+ObjectTemplate.castsDynamicShadow 1
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.grip 8
+ObjectTemplate.animatedUVTranslation 1
+ObjectTemplate.animatedUVTranslationSpeed 0/0
+ObjectTemplate.animatedUVTranslationMax 0.1/0
+ObjectTemplate.animatedUVTranslationSize 25/0
+ObjectTemplate.animatedUVTranslationReverse 0
+ObjectTemplate.animatedUVTranslationIndex 4
+ObjectTemplate.animatedUVRotation 1
+ObjectTemplate.animatedUVRotationRadius 0.35
+ObjectTemplate.animatedUVRotationScale 0.5/1
+ObjectTemplate.animatedUVRotationIndex 3
+ObjectTemplate.animatedUVRotationReverse 0
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_pziv_g_whl_R_01_Rotation
+ObjectTemplate.addTemplate web_tracked
+ObjectTemplate.setPosition 0.0126973/-0.249306/-1.07288e-006
+rem -------------------------------------
+ObjectTemplate.setStrength 45
+ObjectTemplate.setDamping 5
+ObjectTemplate.rotateUV 1
+
+ObjectTemplate.activeSafe Sound S_fht_pziv_g_whl_R_01_Rotation
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe Spring fht_pziv_g_whl_R_02
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.castsDynamicShadow 1
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.grip 128
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_pziv_g_whl_R_02_Rotation
+rem -------------------------------------
+ObjectTemplate.setStrength 0
+ObjectTemplate.setDamping 0
+ObjectTemplate.rotateUV 1
+
+ObjectTemplate.activeSafe Sound S_fht_pziv_g_whl_R_02_Rotation
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe Spring fht_pziv_g_whl_R_03
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.castsDynamicShadow 1
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.grip 128
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_pziv_g_whl_R_03_Rotation
+rem -------------------------------------
+ObjectTemplate.setStrength 0
+ObjectTemplate.setDamping 0
+ObjectTemplate.rotateUV 1
+
+ObjectTemplate.activeSafe Sound S_fht_pziv_g_whl_R_03_Rotation
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe Spring fht_pziv_g_whl_R_04
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.castsDynamicShadow 1
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.grip 128
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_pziv_g_whl_R_04_Rotation
+rem -------------------------------------
+ObjectTemplate.setStrength 0
+ObjectTemplate.setDamping 0
+ObjectTemplate.rotateUV 1
+
+ObjectTemplate.activeSafe Sound S_fht_pziv_g_whl_R_04_Rotation
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe Spring fht_pziv_g_whl_R_05
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.castsDynamicShadow 1
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.grip 128
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_pziv_g_whl_R_05_Rotation
+rem -------------------------------------
+ObjectTemplate.setStrength 0
+ObjectTemplate.setDamping 0
+ObjectTemplate.rotateUV 1
+
+ObjectTemplate.activeSafe Sound S_fht_pziv_g_whl_R_05_Rotation
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe Spring fht_pziv_g_whl_R_06
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.castsDynamicShadow 1
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.grip 128
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_pziv_g_whl_R_06_Rotation
+rem -------------------------------------
+ObjectTemplate.setStrength 0
+ObjectTemplate.setDamping 0
+ObjectTemplate.rotateUV 1
+
+ObjectTemplate.activeSafe Sound S_fht_pziv_g_whl_R_06_Rotation
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe Spring fht_pziv_g_whl_R_07
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.castsDynamicShadow 1
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.grip 128
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_pziv_g_whl_R_07_Rotation
+rem -------------------------------------
+ObjectTemplate.setStrength 0
+ObjectTemplate.setDamping 0
+ObjectTemplate.rotateUV 1
+
+ObjectTemplate.activeSafe Sound S_fht_pziv_g_whl_R_07_Rotation
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe Spring fht_pziv_g_whl_R_08
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.setNetworkableInfo SpringInfo
+ObjectTemplate.castsDynamicShadow 1
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.grip 8
+ObjectTemplate.animatedUVTranslation 1
+ObjectTemplate.animatedUVTranslationSpeed 0/0
+ObjectTemplate.animatedUVTranslationMax 10/0.0273
+ObjectTemplate.animatedUVTranslationSize 0/-6
+ObjectTemplate.animatedUVTranslationReverse 0
+ObjectTemplate.animatedUVTranslationIndex 5
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_pziv_g_whl_R_08_Rotation
+ObjectTemplate.addTemplate web_tracked
+ObjectTemplate.setPosition 0.0126973/-0.249306/-1.07288e-006
+ObjectTemplate.addTemplate web_trackedSmoke
+ObjectTemplate.setPosition 0.0220005/-0.370004/-7.49051e-007
+rem -------------------------------------
+ObjectTemplate.setStrength 45
+ObjectTemplate.setDamping 5
+ObjectTemplate.rotateUV 1
+
+ObjectTemplate.activeSafe Sound S_fht_pziv_g_whl_R_08_Rotation
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe PlayerControlObject fht_pziv_g_hullmgpco
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.setNetworkableInfo BasicInfo
+rem ---BeginComp:VehicleHud ---
+ObjectTemplate.createComponent VehicleHud
+ObjectTemplate.vehicleHud.hudName "KILLMESSAGE_VEHICLE_fht_pziv_g"
+ObjectTemplate.vehicleHud.miniMapIconLeaderSize Medium
+ObjectTemplate.vehicleHud.vehicleIconPos 60/18
+ObjectTemplate.vehicleHud.useSelectionIcons 0
+rem ---EndComp ---
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 0
+ObjectTemplate.aiTemplate fht_pziv_g_BowGunnerAI
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_pziv_g_hullmgpco_Ambient
+ObjectTemplate.addTemplate S_fht_pziv_g_hullmgpco_AmbientDamaged
+rem -------------------------------------
+ObjectTemplate.setPcoId 1
+ObjectTemplate.dontClearTeamOnExit 1
+ObjectTemplate.hasRestrictedExit 1
+
+ObjectTemplate.activeSafe Sound S_fht_pziv_g_hullmgpco_Ambient
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe Sound S_fht_pziv_g_hullmgpco_AmbientDamaged
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe RotationalBundle fht_pziv_g_hullmg
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.setNetworkableInfo BasicInfo
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_pziv_g_hullmg_RotationRpm
+ObjectTemplate.addTemplate Tank_HullGunnerCamera
+ObjectTemplate.setPosition 0.0209/0.147/-0.6
+ObjectTemplate.addTemplate Coaxial_MG34_Main
+ObjectTemplate.setPosition 0.0174944/0.0129025/0.363406
+rem -------------------------------------
+ObjectTemplate.setMinRotation -15/-20/0
+ObjectTemplate.setMaxRotation 15/10/0
+ObjectTemplate.setMaxSpeed 50/50/0
+ObjectTemplate.setAcceleration 200/200/0
+ObjectTemplate.setInputToYaw PIMouseLookX
+ObjectTemplate.setInputToPitch PIMouseLookY
+
+ObjectTemplate.activeSafe Sound S_fht_pziv_g_hullmg_RotationRpm
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe RotationalBundle fht_pziv_g_turret
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.setNetworkableInfo BasicInfo
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_pziv_g_turret_RotationRpm
+ObjectTemplate.addTemplate Tank_DriverCamera_geom0
+ObjectTemplate.setPosition 0/0.402874/0.6
+ObjectTemplate.addTemplate fht_pziv_g_lookout
+ObjectTemplate.setPosition -0.029841/0.25/-0.576879
+rem -------------------------------------
+ObjectTemplate.setMaxSpeed 36/0/0
+ObjectTemplate.setAcceleration 36/0/0
+ObjectTemplate.setInputToYaw PIRoll
+ObjectTemplate.rememberexcessinput 1
+rem
+
+ObjectTemplate.activeSafe Sound S_fht_pziv_g_turret_RotationRpm
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/vehicles/land/common/sounds/turret_electric.wav"
+ObjectTemplate.loopCount 0
+ObjectTemplate.is3dSound 1
+ObjectTemplate.stopType 0
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 0.8
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.pitchEnvelope 0/1/0.1/3/0/2/0.013/0.1/0.1/0.995/0.954/0.1/
+ObjectTemplate.volumeEnvelope 0/1/0/1/0/3/0.003/0/0/0.005/0.48/0/0.99/1/0/
+ObjectTemplate.minDistance 2.5
+ObjectTemplate.halfvolumedistance 9
+
+ObjectTemplate.activeSafe RotationalBundle fht_pziv_g_cannon_base
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.setNetworkableInfo BasicInfo
+ObjectTemplate.castsDynamicShadow 1
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_pziv_g_cannon_base_RotationRpm
+ObjectTemplate.addTemplate Coaxial_MG34_Cam3
+ObjectTemplate.setPosition 0.3701/0.00324/0.4152
+ObjectTemplate.addTemplate Tank_GunnerCamera
+ObjectTemplate.setPosition -0.42738/-0.0185/-0.50001
+ObjectTemplate.addTemplate fht_pziv_g_cannonHE
+rem -------------------------------------
+ObjectTemplate.setMinRotation 0/-20/0
+ObjectTemplate.setMaxRotation 0/10/0
+ObjectTemplate.setMaxSpeed 0/36/0
+ObjectTemplate.setAcceleration 0/36/0
+ObjectTemplate.setInputToPitch PIPitch
+ObjectTemplate.rememberexcessinput 1
+
+ObjectTemplate.activeSafe Sound S_fht_pziv_g_cannon_base_RotationRpm
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe GenericFireArm fht_pziv_g_cannon
+ObjectTemplate.modifiedByUser "jbp"
+rem ---BeginComp:WeaponHud ---
+ObjectTemplate.createComponent WeaponHud
+ObjectTemplate.weaponHud.weaponIcon Ingame\Weapons\Icons\Hud\bomb.tga
+ObjectTemplate.weaponHud.selectIcon Ingame\Rounds\75mmAP.tga
+ObjectTemplate.weaponHud.hudName "75MM GUN AP"
+ObjectTemplate.weaponHud.guiIndex 1001
+ObjectTemplate.weaponHud.altGuiIndex 1004
+ObjectTemplate.weaponHud.enablePostProcessingOnGuiindex 1001
+ObjectTemplate.weaponHud.switchGuiOnCamera 1
+ObjectTemplate.weaponHud.hasFireRate 0
+ObjectTemplate.weaponHud.addShowOnCamMode 2
+ObjectTemplate.weaponHud.displaySelectOnActivation 1
+rem ---EndComp ---
+rem ---BeginComp:PostProcess ---
+ObjectTemplate.createComponent PostProcess
+ObjectTemplate.postProcess.tvinterference 0.003
+rem ---EndComp ---
+rem ---BeginComp:SingleFireComp ---
+ObjectTemplate.createComponent SingleFireComp
+ObjectTemplate.fire.roundsPerMinute 30
+ObjectTemplate.fire.addFireRate 0
+rem ---EndComp ---
+rem ---BeginComp:DefaultAmmoComp ---
+ObjectTemplate.createComponent DefaultAmmoComp
+ObjectTemplate.ammo.nrOfMags 47
+ObjectTemplate.ammo.magSize 1
+ObjectTemplate.ammo.reloadTime 5.8
+ObjectTemplate.ammo.autoReload 1
+ObjectTemplate.ammo.reloadWithoutPlayer 1
+rem ---EndComp ---
+rem ---BeginComp:WeaponBasedRecoilComp ---
+ObjectTemplate.createComponent WeaponBasedRecoilComp
+ObjectTemplate.recoil.recoilSize 25
+ObjectTemplate.recoil.recoilSpeed 25
+ObjectTemplate.recoil.recoilSpeedGB 10
+ObjectTemplate.recoil.recoilForce 40
+ObjectTemplate.recoil.cameraRecoilSpeed 8
+ObjectTemplate.recoil.cameraRecoilSize 8
+rem ---EndComp ---
+rem ---BeginComp:SimpleDeviationComp ---
+ObjectTemplate.createComponent SimpleDeviationComp
+ObjectTemplate.deviation.minDev 0.15
+rem ---EndComp ---
+rem ---BeginComp:DefaultSoundComp ---
+ObjectTemplate.createComponent DefaultSoundComp
+rem ---EndComp ---
+rem ---BeginComp:DefaultAnimationComp ---
+ObjectTemplate.createComponent DefaultAnimationComp
+rem ---EndComp ---
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.aiTemplate fht_pziv_gMainGun
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_pziv_g_cannon_Fire1P
+ObjectTemplate.addTemplate S_fht_pziv_g_cannon_Fire1P_Outdoor
+ObjectTemplate.addTemplate S_fht_pziv_g_cannon_Fire3P
+ObjectTemplate.addTemplate S_fht_pziv_g_cannon_BoltClick
+ObjectTemplate.addTemplate S_fht_pziv_g_cannon_TriggerClick
+ObjectTemplate.addTemplate S_fht_pziv_g_cannon_SwitchFireRate
+ObjectTemplate.addTemplate S_fht_pziv_g_cannon_Reload1P
+ObjectTemplate.addTemplate S_fht_pziv_g_cannon_Reload3P
+ObjectTemplate.addTemplate S_fht_pziv_g_cannon_Deploy1P
+ObjectTemplate.addTemplate S_fht_pziv_g_cannon_Deploy3P
+ObjectTemplate.addTemplate S_fht_pziv_g_cannon_Zoom
+ObjectTemplate.addTemplate e_muzz_axis_tank
+ObjectTemplate.setPosition 0/0/2.59466
+ObjectTemplate.addTemplate geb_tank
+ObjectTemplate.setPosition 0/0/2.59466
+rem -------------------------------------
+ObjectTemplate.projectileTemplate 75mmL43-AP-Projectile
+ObjectTemplate.keepProjectiles 5
+rem ObjectTemplate.velocity 547
+ObjectTemplate.itemIndex 1
+ObjectTemplate.delayToUse 6
+
+ObjectTemplate.activeSafe Sound S_fht_pziv_g_cannon_Fire1P
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/weapons/common/sounds/75mm_Fire_axis_1p.wav"
+ObjectTemplate.loopCount 0
+ObjectTemplate.is3dSound 0
+ObjectTemplate.stopType 1
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 1
+ObjectTemplate.pan 0.5
+ObjectTemplate.reverbLevel 1
+
+ObjectTemplate.activeSafe Sound S_fht_pziv_g_cannon_Fire1P_Outdoor
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe Sound S_fht_pziv_g_cannon_Fire3P
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/weapons/common/sounds/75mm_Fire_axis_3p.wav"
+ObjectTemplate.loopCount 0
+ObjectTemplate.is3dSound 1
+ObjectTemplate.stopType 1
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 1
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.minDistance 10
+ObjectTemplate.halfVolumeDistance 15
+ObjectTemplate.soundRadius 5
+
+ObjectTemplate.activeSafe Sound S_fht_pziv_g_cannon_BoltClick
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe Sound S_fht_pziv_g_cannon_TriggerClick
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/vehicles/land/ustnk_m1a2/sounds/vehicle_weapon_trigger_click.wav"
+ObjectTemplate.loopCount 1
+ObjectTemplate.is3dSound 0
+ObjectTemplate.stopType 1
+ObjectTemplate.volume 0.41
+ObjectTemplate.pitch 1
+ObjectTemplate.pan 0.5
+ObjectTemplate.reverbLevel 0.3
+
+ObjectTemplate.activeSafe Sound S_fht_pziv_g_cannon_SwitchFireRate
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe Sound S_fht_pziv_g_cannon_Reload1P
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/vehicles/land/common/Oggsounds/tankreload-pt1.ogg"
+ObjectTemplate.loopCount 1
+ObjectTemplate.is3dSound 0
+ObjectTemplate.stopType 0
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 1
+ObjectTemplate.pan 0.5
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.pitchEnvelope 0/1/0.9/1.1/1/1/0/0.97/1.03/
+ObjectTemplate.volumeEnvelope 0/1/0/1/1/1/0/0.9/1/
+
+ObjectTemplate.activeSafe Sound S_fht_pziv_g_cannon_Reload3P
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe Sound S_fht_pziv_g_cannon_Deploy1P
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/vehicles/land/common/Oggsounds/tankreload-pt2.ogg"
+ObjectTemplate.loopCount 1
+ObjectTemplate.is3dSound 0
+ObjectTemplate.stopType 0
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 1
+ObjectTemplate.pan 0.5
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.pitchEnvelope 0/1/0.9/1.1/1/1/0/0.97/1.03/
+ObjectTemplate.volumeEnvelope 0/1/0/1/1/1/0/0.9/1/
+
+ObjectTemplate.activeSafe Sound S_fht_pziv_g_cannon_Deploy3P
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe Sound S_fht_pziv_g_cannon_Zoom
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.create GenericFireArm fht_pziv_g_cannonHE
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.createdInEditor 1
+rem ---BeginComp:WeaponHud ---
+ObjectTemplate.createComponent WeaponHud
+ObjectTemplate.weaponHud.weaponIcon Ingame\Weapons\Icons\Hud\bomb.tga
+ObjectTemplate.weaponHud.selectIcon Ingame\Rounds\75mmHE.tga
+ObjectTemplate.weaponHud.hudName "75MM GUN HE"
+ObjectTemplate.weaponHud.guiIndex 1001
+ObjectTemplate.weaponHud.altGuiIndex 1004
+ObjectTemplate.weaponHud.enablePostProcessingOnGuiindex 1001
+ObjectTemplate.weaponHud.switchGuiOnCamera 1
+ObjectTemplate.weaponHud.hasFireRate 0
+ObjectTemplate.weaponHud.addShowOnCamMode 2
+ObjectTemplate.weaponHud.displaySelectOnActivation 1
+rem ---EndComp ---
+rem ---BeginComp:PostProcess ---
+ObjectTemplate.createComponent PostProcess
+ObjectTemplate.postProcess.tvinterference 0.003
+rem ---EndComp ---
+rem ---BeginComp:SingleFireComp ---
+ObjectTemplate.createComponent SingleFireComp
+ObjectTemplate.fire.roundsPerMinute 30
+ObjectTemplate.fire.addFireRate 0
+rem ---EndComp ---
+rem ---BeginComp:DefaultAmmoComp ---
+ObjectTemplate.createComponent DefaultAmmoComp
+ObjectTemplate.ammo.nrOfMags 23
+ObjectTemplate.ammo.magSize 1
+ObjectTemplate.ammo.reloadTime 5.8
+ObjectTemplate.ammo.autoReload 1
+ObjectTemplate.ammo.reloadWithoutPlayer 1
+rem ---EndComp ---
+rem ---BeginComp:WeaponBasedRecoilComp ---
+ObjectTemplate.createComponent WeaponBasedRecoilComp
+ObjectTemplate.recoil.recoilSize 25
+ObjectTemplate.recoil.recoilSpeed 25
+ObjectTemplate.recoil.recoilSpeedGB 10
+ObjectTemplate.recoil.recoilForce 40
+ObjectTemplate.recoil.cameraRecoilSpeed 8
+ObjectTemplate.recoil.cameraRecoilSize 8
+rem ---EndComp ---
+rem ---BeginComp:SimpleDeviationComp ---
+ObjectTemplate.createComponent SimpleDeviationComp
+ObjectTemplate.deviation.minDev 0.2
+rem ---EndComp ---
+rem ---BeginComp:DefaultSoundComp ---
+ObjectTemplate.createComponent DefaultSoundComp
+rem ---EndComp ---
+rem ---BeginComp:DefaultAnimationComp ---
+ObjectTemplate.createComponent DefaultAnimationComp
+rem ---EndComp ---
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+rem ObjectTemplate.aiTemplate fht_pziv_gMainGunHE
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_pziv_g_cannonHE_Fire1P
+ObjectTemplate.addTemplate S_fht_pziv_g_cannonHE_Fire1P_Outdoor
+ObjectTemplate.addTemplate S_fht_pziv_g_cannonHE_Fire3P
+ObjectTemplate.addTemplate S_fht_pziv_g_cannonHE_BoltClick
+ObjectTemplate.addTemplate S_fht_pziv_g_cannonHE_TriggerClick
+ObjectTemplate.addTemplate S_fht_pziv_g_cannonHE_SwitchFireRate
+ObjectTemplate.addTemplate S_fht_pziv_g_cannonHE_Reload1P
+ObjectTemplate.addTemplate S_fht_pziv_g_cannonHE_Reload3P
+ObjectTemplate.addTemplate S_fht_pziv_g_cannonHE_Deploy1P
+ObjectTemplate.addTemplate S_fht_pziv_g_cannonHE_Deploy3P
+ObjectTemplate.addTemplate S_fht_pziv_g_cannonHE_Zoom
+ObjectTemplate.addTemplate e_muzz_axis_tank
+ObjectTemplate.setPosition 0/0/2.59466
+ObjectTemplate.addTemplate geb_tank
+ObjectTemplate.setPosition 0/0/2.59466
+rem -------------------------------------
+ObjectTemplate.projectileTemplate 75mmL43-HE-Projectile
+ObjectTemplate.keepProjectiles 5
+rem ObjectTemplate.velocity 377
+ObjectTemplate.itemIndex 2
+ObjectTemplate.delayToUse 6
+
+ObjectTemplate.activeSafe Sound S_fht_pziv_g_cannonHE_Fire1P
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/weapons/common/sounds/75mm_Fire_axis_1p.wav"
+ObjectTemplate.loopCount 0
+ObjectTemplate.is3dSound 0
+ObjectTemplate.stopType 1
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 1
+ObjectTemplate.pan 0.5
+ObjectTemplate.reverbLevel 1
+
+ObjectTemplate.activeSafe Sound S_fht_pziv_g_cannonHE_Fire1P_Outdoor
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe Sound S_fht_pziv_g_cannonHE_Fire3P
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/weapons/common/sounds/75mm_Fire_axis_3p.wav"
+ObjectTemplate.loopCount 0
+ObjectTemplate.is3dSound 1
+ObjectTemplate.stopType 1
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 1
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.minDistance 10
+ObjectTemplate.halfVolumeDistance 15
+ObjectTemplate.soundRadius 5
+
+ObjectTemplate.activeSafe Sound S_fht_pziv_g_cannonHE_BoltClick
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe Sound S_fht_pziv_g_cannonHE_TriggerClick
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/vehicles/land/ustnk_m1a2/sounds/vehicle_weapon_trigger_click.wav"
+ObjectTemplate.loopCount 1
+ObjectTemplate.is3dSound 0
+ObjectTemplate.stopType 1
+ObjectTemplate.volume 0.41
+ObjectTemplate.pitch 1
+ObjectTemplate.pan 0.5
+ObjectTemplate.reverbLevel 0.3
+
+ObjectTemplate.activeSafe Sound S_fht_pziv_g_cannonHE_SwitchFireRate
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe Sound S_fht_pziv_g_cannonHE_Reload1P
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/vehicles/land/common/Oggsounds/tankreload-pt1.ogg"
+ObjectTemplate.loopCount 1
+ObjectTemplate.is3dSound 0
+ObjectTemplate.stopType 0
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 1
+ObjectTemplate.pan 0.5
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.pitchEnvelope 0/1/0.9/1.1/1/1/0/0.97/1.03/
+ObjectTemplate.volumeEnvelope 0/1/0/1/1/1/0/0.9/1/
+
+ObjectTemplate.activeSafe Sound S_fht_pziv_g_cannonHE_Reload3P
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe Sound S_fht_pziv_g_cannonHE_Deploy1P
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/vehicles/land/common/Oggsounds/tankreload-pt2.ogg"
+ObjectTemplate.loopCount 1
+ObjectTemplate.is3dSound 0
+ObjectTemplate.stopType 0
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 1
+ObjectTemplate.pan 0.5
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.pitchEnvelope 0/1/0.9/1.1/1/1/0/0.97/1.03/
+ObjectTemplate.volumeEnvelope 0/1/0/1/1/1/0/0.9/1/
+
+ObjectTemplate.activeSafe Sound S_fht_pziv_g_cannonHE_Deploy3P
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe Sound S_fht_pziv_g_cannonHE_Zoom
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.create PlayerControlObject fht_pziv_g_lookout
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.setNetworkableInfo BasicInfo
+ObjectTemplate.createdInEditor 1
+rem ---BeginComp:VehicleHud ---
+ObjectTemplate.createComponent VehicleHud
+ObjectTemplate.vehicleHud.hudName "KILLMESSAGE_VEHICLE_fht_pziv_g"
+ObjectTemplate.vehicleHud.miniMapIconLeaderSize Medium
+ObjectTemplate.vehicleHud.useChildHud 1
+ObjectTemplate.vehicleHud.guiIndex 2
+ObjectTemplate.vehicleHud.vehicleIconPos 33/14
+ObjectTemplate.vehicleHud.useSelectionIcons 1
+rem ---EndComp ---
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 0
+ObjectTemplate.aiTemplate fht_pziv_g_lookoutAI
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_pziv_g_lookout_Ambient
+ObjectTemplate.addTemplate S_fht_pziv_g_lookout_AmbientDamaged
+rem -------------------------------------
+ObjectTemplate.setPcoId 2
+ObjectTemplate.dontClearTeamOnExit 1
+ObjectTemplate.seatInformation fht_pziv_g_lookout -0.1/0.65/0.25 -10/0/0
+ObjectTemplate.seatAnimationSystem Objects/Vehicles/Land/Common/Animations/3p_tanktop_b_animSys.inc
+ObjectTemplate.isOpenVehicle 1
+
+ObjectTemplate.activeSafe Sound S_fht_pziv_g_lookout_Ambient
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe Sound S_fht_pziv_g_lookout_AmbientDamaged
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.create EntryPoint fht_pziv_g_EntryPoint
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.createdInEditor 1
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 0
+ObjectTemplate.setEntryRadius 3.5
+

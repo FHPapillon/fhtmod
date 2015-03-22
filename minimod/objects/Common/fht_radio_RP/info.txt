@@ -1,0 +1,8 @@
+values for all normal rallies are changed inside fht_radio_tp.tweak. 
+no changes should be made in fht_radio_rps.con unless new factions have to be added and the person doing so knows what he's doing.
+
+values for all rally sounds (like distance and volume) are changed inside S_e_ro_radio.tweak
+
+dummy rps can be put on maps for decorative purposes
+
+fallback rps are placed by python if a fallback location is set

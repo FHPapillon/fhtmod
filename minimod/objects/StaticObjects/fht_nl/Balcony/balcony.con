@@ -1,0 +1,13 @@
+GeometryTemplate.create StaticMesh balcony
+CollisionManager.createTemplate balcony
+
+ObjectTemplate.create SimpleObject balcony
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator GAMEGRANATE:Dennis
+ObjectTemplate.collisionMesh balcony
+ObjectTemplate.mapMaterial 0 col 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.geometry balcony
+
+include balcony.tweak

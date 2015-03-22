@@ -1,0 +1,18 @@
+GeometryTemplate.create StaticMesh fht_italy_house_4s_01
+CollisionManager.createTemplate fht_italy_house_4s_01
+
+ObjectTemplate.create SimpleObject fht_italy_house_4s_01
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator TOMPC:Tom
+ObjectTemplate.collisionMesh fht_italy_house_4s_01
+ObjectTemplate.mapMaterial 0 concrete 0
+ObjectTemplate.mapMaterial 1 wood 0
+ObjectTemplate.mapMaterial 2 glass 0
+ObjectTemplate.mapMaterial 3 Tiles 0
+ObjectTemplate.mapMaterial 4 Metal 0
+ObjectTemplate.mapMaterial 5 StairsStone 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.geometry fht_italy_house_4s_01
+
+include fht_italy_house_4s_01.tweak

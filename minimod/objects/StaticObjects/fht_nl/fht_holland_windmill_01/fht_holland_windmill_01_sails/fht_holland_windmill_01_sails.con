@@ -1,0 +1,15 @@
+GeometryTemplate.create StaticMesh fht_holland_windmill_01_sails
+CollisionManager.createTemplate fht_holland_windmill_01_sails
+
+ObjectTemplate.create SimpleObject fht_holland_windmill_01_sails
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator DEEPTHOUGHTIII:Lukas
+ObjectTemplate.collisionMesh fht_holland_windmill_01_sails
+ObjectTemplate.mapMaterial 0 wood_solid 0
+ObjectTemplate.mapMaterial 1 penetrable_cloth 0
+ObjectTemplate.mapMaterial 2 UNDEFINED 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.geometry fht_holland_windmill_01_sails
+
+include fht_holland_windmill_01_sails.tweak

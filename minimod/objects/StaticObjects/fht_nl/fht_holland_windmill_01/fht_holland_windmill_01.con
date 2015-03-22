@@ -1,0 +1,19 @@
+GeometryTemplate.create StaticMesh fht_holland_windmill_01
+CollisionManager.createTemplate fht_holland_windmill_01
+
+ObjectTemplate.create bundle fht_holland_windmill_01
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator DEEPTHOUGHTIII:Lukas
+ObjectTemplate.collisionMesh fht_holland_windmill_01
+ObjectTemplate.mapMaterial 0 wood_solid 0
+ObjectTemplate.mapMaterial 1 concrete 0
+ObjectTemplate.mapMaterial 2 wood_thin 0
+ObjectTemplate.mapMaterial 3 metal_thin 0
+ObjectTemplate.mapMaterial 4 glass 0
+ObjectTemplate.mapMaterial 5 col_stairs_concrete 0
+ObjectTemplate.mapMaterial 6 UNDEFINED 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.geometry fht_holland_windmill_01
+
+include fht_holland_windmill_01.tweak

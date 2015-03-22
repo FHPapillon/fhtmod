@@ -1,0 +1,60 @@
+rem *** Generated with Bf2Editor.exe [created: 2006/5/15 11:52]
+GeometryTemplate.compressVertexData 1
+GeometryTemplate.maxTextureRepeat 16
+ObjectTemplate.activeSafe GenericProjectile fht_deploy_marker
+ObjectTemplate.creator BUTTSLOL:jbp
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.setNetworkableInfo BasicInfo
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.createNotInGrid 1
+rem ---BeginComp:StickyCollisionComp ---
+ObjectTemplate.createComponent StickyCollisionComp
+ObjectTemplate.collision.bouncing 1
+ObjectTemplate.collision.maxStickAngle 30
+ObjectTemplate.collision.stickToStaticObjects 1
+ObjectTemplate.collision.stickToVehicles 0
+ObjectTemplate.collision.stickToTerrain 1
+rem ---EndComp ---
+rem ---BeginComp:DefaultDetonationComp ---
+ObjectTemplate.createComponent DefaultDetonationComp
+ObjectTemplate.detonation.explosionMaterial 113
+ObjectTemplate.detonation.explosionRadius 0
+ObjectTemplate.detonation.explosionForce 0
+ObjectTemplate.detonation.explosionDamage 0
+ObjectTemplate.detonation.detonateOnWaterCollision 0
+ObjectTemplate.detonation.useMMOnEndEffect 1
+ObjectTemplate.detonation.detectionRadius 1.5
+ObjectTemplate.detonation.maxDepthForExplosion 2
+rem ---EndComp ---
+rem ---BeginComp:DefaultProjSoundComp ---
+ObjectTemplate.createComponent DefaultProjSoundComp
+rem ---EndComp ---
+rem ---BeginComp:DefaultPenetrateComp ---
+ObjectTemplate.createComponent DefaultPenetrateComp
+ObjectTemplate.penetrate.allowSolidPenetration 0
+rem ---EndComp ---
+ObjectTemplate.setCollisionMesh fht_deploy_marker
+ObjectTemplate.geometry fht_deploy_marker
+ObjectTemplate.mapMaterial 0 dummy 113
+ObjectTemplate.mass 5
+ObjectTemplate.drag 1
+ObjectTemplate.gravityModifier 2
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.collisionGroups 8
+ObjectTemplate.material 113
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_deploy_marker_Looping
+rem -------------------------------------
+ObjectTemplate.timeToLive CRD_NONE/60/0/0
+ObjectTemplate.material 113
+ObjectTemplate.hasOnTimeEffect 1
+ObjectTemplate.damage 0
+ObjectTemplate.visibleOn3dMap 1
+ObjectTemplate.3dMapIcon 6
+
+ObjectTemplate.activeSafe Sound S_fht_deploy_marker_Looping
+ObjectTemplate.modifiedByUser "jbp"
+

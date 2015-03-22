@@ -1,0 +1,21 @@
+rem *** Generated with Bf2Editor.exe [created: 2006/5/15 11:52]
+GeometryTemplate.setSubGeometryLodDistance 0 0 30
+GeometryTemplate.setSubGeometryLodDistance 0 1 65
+GeometryTemplate.doNotGenerateLightmaps 0
+GeometryTemplate.lightmapOverride 0
+GeometryTemplate.compressVertexData 1
+GeometryTemplate.maxTextureRepeat 16
+GeometryTemplate.glowing 0
+GeometryTemplate.noLighting 0
+ObjectTemplate.activeSafe SimpleObject fht_wood_trench_01_one_sided
+ObjectTemplate.creator Sorken
+ObjectTemplate.modifiedByUser "HP_Ägaren"
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.geometry fht_wood_trench_01_one_sided
+ObjectTemplate.setCollisionMesh fht_wood_trench_01_one_sided
+ObjectTemplate.mapMaterial 0 wood 15
+ObjectTemplate.mapMaterial 1 dirt 8
+ObjectTemplate.hasMobilePhysics 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+

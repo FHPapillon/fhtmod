@@ -1,0 +1,22 @@
+rem *** Generated with Bf2Editor.exe [created: 2006/5/15 11:52]
+GeometryTemplate.setSpecularStaticGloss 1 0 0 0
+GeometryTemplate.compressVertexData 1
+GeometryTemplate.maxTextureRepeat 16
+ObjectTemplate.activeSafe Rotor mc205_prop
+ObjectTemplate.creator BUTTSLOLjpixton
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.castsDynamicShadow 1
+ObjectTemplate.cullRadiusScale 6
+ObjectTemplate.geometry mc205_prop
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.changeLodAt 0.15
+ObjectTemplate.tolerance 0
+ObjectTemplate.rotationSpeedMod -0.7
+ObjectTemplate.rotationSpeedModBlur -0.15
+ObjectTemplate.rotationAxle 2
+ObjectTemplate.engineName mc205_dummyengine
+

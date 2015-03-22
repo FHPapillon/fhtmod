@@ -1,0 +1,13 @@
+GeometryTemplate.create StaticMesh fht_pillbox_01
+CollisionManager.createTemplate fht_pillbox_01
+
+ObjectTemplate.create SimpleObject fht_pillbox_01
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator TOMPC:Tom
+ObjectTemplate.collisionMesh fht_pillbox_01
+ObjectTemplate.mapMaterial 0 Stairs_concrete 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.geometry fht_pillbox_01
+
+include fht_pillbox_01.tweak

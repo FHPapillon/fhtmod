@@ -1,0 +1,30 @@
+ObjectTemplate.StrategicObject.isOnePiece 1
+ObjectTemplate.StrategicObject.3dMapIcon 0
+ObjectTemplate.collisionMesh pusher
+ObjectTemplate.mapMaterial 0 dummy 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.setNetworkableInfo ControlPointInfo
+ObjectTemplate.createComponent Armor
+ObjectTemplate.armor.angleMod 1
+ObjectTemplate.armor.maxHitPoints 20
+ObjectTemplate.armor.hitPoints 20
+ObjectTemplate.armor.defaultMaterial 114
+ObjectTemplate.armor.waterLevel 0
+ObjectTemplate.armor.explosionForceMod 0
+ObjectTemplate.armor.explosionForceMax 0
+ObjectTemplate.armor.wreckHitPoints 0
+ObjectTemplate.armor.timeToStayAsWreck 0
+ObjectTemplate.armor.criticalDamage 1
+ObjectTemplate.createComponent VehicleHud
+ObjectTemplate.vehicleHud.useSelectionIcons 0
+ObjectTemplate.setCollisionMesh pusher
+ObjectTemplate.mapMaterial 0 dummy 0
+ObjectTemplate.mass 10000
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 0
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.addTemplate MarkStrategicTeamOnly
+
+

@@ -1,0 +1,13 @@
+GeometryTemplate.create StaticMesh fht_stone_wall_3m
+CollisionManager.createTemplate fht_stone_wall_3m
+
+ObjectTemplate.create SimpleObject fht_stone_wall_3m
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator SORKEN:HP_Ägaren
+ObjectTemplate.collisionMesh fht_stone_wall_3m
+ObjectTemplate.mapMaterial 0 concrete 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.geometry fht_stone_wall_3m
+
+include fht_stone_wall_3m.tweak

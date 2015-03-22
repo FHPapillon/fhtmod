@@ -1,0 +1,16 @@
+GeometryTemplate.create StaticMesh fht_farmhouse_02
+CollisionManager.createTemplate fht_farmhouse_02
+
+ObjectTemplate.create SimpleObject fht_farmhouse_02
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator TOMPC:Tom
+ObjectTemplate.collisionMesh fht_farmhouse_02
+ObjectTemplate.mapMaterial 0 Concrete 78
+ObjectTemplate.mapMaterial 1 Ceramic_tiles 82
+ObjectTemplate.mapMaterial 2 Wood_solid 15
+ObjectTemplate.mapMaterial 3 Metal_plate_thin 20
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.geometry fht_farmhouse_02
+
+include fht_farmhouse_02.tweak

@@ -1,0 +1,189 @@
+rem *** Generated with Bf2Editor.exe [created: 2006/5/15 11:52]
+GeometryTemplate.maxSkip3pLods 0
+GeometryTemplate.maxSkipWreckLods 0
+GeometryTemplate.setSubGeometryLodDistance 1 0 25
+GeometryTemplate.setSubGeometryLodDistance 1 1 50
+GeometryTemplate.setSubGeometryLodDistance 1 2 100
+GeometryTemplate.setSubGeometryLodDistance 2 0 10
+GeometryTemplate.setSubGeometryLodDistance 2 1 25
+GeometryTemplate.setSubGeometryLodDistance 2 2 50
+GeometryTemplate.compressVertexData 1
+GeometryTemplate.maxTextureRepeat 16
+ObjectTemplate.activeSafe PlayerControlObject fht_universalcarrier_france_bren_spawn
+ObjectTemplate.creator BUTTSLOL:jbp
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.setNetworkableInfo BasicInfo
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.castsDynamicShadow 1
+ObjectTemplate.cullRadiusScale 6
+rem ---BeginComp:Armor ---
+ObjectTemplate.createComponent Armor
+ObjectTemplate.armor.angleMod 0
+ObjectTemplate.armor.maxHitPoints 250
+ObjectTemplate.armor.hitPoints 250
+ObjectTemplate.armor.defaultMaterial 121
+ObjectTemplate.armor.hpLostWhileUpSideDown 10
+ObjectTemplate.armor.hpLostWhileInWater 10
+ObjectTemplate.armor.hpLostWhileInDeepWater 50
+ObjectTemplate.armor.hpLostWhileCriticalDamage 0.3
+ObjectTemplate.armor.waterDamageDelay 5
+ObjectTemplate.armor.deepWaterDamageDelay 3
+ObjectTemplate.armor.waterLevel 0
+ObjectTemplate.armor.deepWaterLevel 0.7
+ObjectTemplate.armor.explosionForce 10
+ObjectTemplate.armor.explosionForceMod 15
+ObjectTemplate.armor.explosionForceMax 5000
+ObjectTemplate.armor.explosionDamage 300
+ObjectTemplate.armor.explosionRadius 6
+ObjectTemplate.armor.explosionMaterial 101
+ObjectTemplate.armor.wreckExplosionForce 7
+ObjectTemplate.armor.wreckExplosionDamage 1
+ObjectTemplate.armor.wreckExplosionRadius 2
+ObjectTemplate.armor.wreckExplosionMaterial 70
+ObjectTemplate.armor.wreckHitPoints 750
+ObjectTemplate.armor.timeToStayAsWreck 100
+ObjectTemplate.armor.criticalDamage 10
+ObjectTemplate.armor.addArmorEffect 50 e_dstate_land_lightsmoke -1.13711e-005/0.453045/1.7126 0/0/0
+ObjectTemplate.armor.addArmorEffect 25 e_dstate_land_mediumsmoke -4.55617e-005/0.453271/1.65807 0/0/0
+ObjectTemplate.armor.addArmorEffect 15 e_dstate_land_heavysmoke -1.33592e-005/0.433391/1.57956 0/0/0
+ObjectTemplate.armor.addArmorEffect 15 e_dstate_land_fire -1.61714e-005/0.373522/1.67926 0/0/0
+ObjectTemplate.armor.addArmorEffect 0 e_vexp_armoredcar 0/0/0 0/0/0
+ObjectTemplate.armor.addArmorEffect 0 e_vexp_tank_2nd 0/0/0 0/0/0
+ObjectTemplate.armor.addArmorEffectSpectacular 0 e_vexp_armoredcar 0/0/0 0/0/0
+ObjectTemplate.armor.addArmorEffectSpectacular 0 e_vexp_tank_2nd 0/0/0 0/0/0
+ObjectTemplate.armor.addArmorEffect -100 e_vexp_armoredcar_2nd 0/0/0 0/0/0
+ObjectTemplate.armor.addArmorEffect -20 e_dstate_static_fire -0.0958437/0.444372/1.66997 0/0/0
+rem ---EndComp ---
+rem ---BeginComp:Radio ---
+ObjectTemplate.createComponent Radio
+ObjectTemplate.Radio.spottedMessage vehicle_spotted
+rem ---EndComp ---
+rem ---BeginComp:VehicleHud ---
+ObjectTemplate.createComponent VehicleHud
+ObjectTemplate.vehicleHud.hudName "Bren Carrier"
+ObjectTemplate.vehicleHud.typeIcon Ingame\Vehicles\Icons\Hud\MenuIcons\menuIcon_jeep.tga
+ObjectTemplate.vehicleHud.miniMapIcon Ingame\Vehicles\Icons\Minimap\truck.tga
+ObjectTemplate.vehicleHud.miniMapIconLeaderSize Medium
+ObjectTemplate.vehicleHud.vehicleIconPos 44/10
+ObjectTemplate.vehicleHud.vehicleType 3
+ObjectTemplate.vehicleHud.useSelectionIcons 0
+ObjectTemplate.vehicleHud.vehicleIcon Ingame\Vehicles\Icons\Hud\VehicleIcons\Placeholder.dds
+rem ---EndComp ---
+ObjectTemplate.geometry universalcarrier_france
+ObjectTemplate.setCollisionMesh universalcarrier_france
+ObjectTemplate.mapMaterial 0 main 121
+ObjectTemplate.mapMaterial 1 runninggear 121
+ObjectTemplate.mapMaterial 2 tracks 121
+ObjectTemplate.mapMaterial 3 wreck 60
+ObjectTemplate.mapMaterial 4 tank_tracks 86
+ObjectTemplate.drag 1.0
+ObjectTemplate.mass 1973
+ObjectTemplate.inertiaModifier 2/2/2
+ObjectTemplate.gravityModifier 1.5
+ObjectTemplate.floaterMod 0.3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.aiTemplate universalcarrier
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_universalcarrier_france_bren_spawn_Ambient
+ObjectTemplate.addTemplate S_fht_universalcarrier_france_bren_spawn_AmbientDamaged
+ObjectTemplate.addTemplate e_amphib_wake
+ObjectTemplate.setPosition -0.00217/-0.51983/3.55929
+ObjectTemplate.addTemplate e_amphib_wake
+ObjectTemplate.setPosition -0.00217001/-0.51983/-3.35093
+ObjectTemplate.setRotation 180/0/0
+ObjectTemplate.addTemplate e_amphib_wake_sound
+ObjectTemplate.setPosition -0.00217/-0.51983/0
+ObjectTemplate.addTemplate e_sinking_vehicle
+ObjectTemplate.addTemplate universalcarrier_france_DriverCamera
+ObjectTemplate.setPosition 0.38051/0.663665/0.643073
+ObjectTemplate.addTemplate universalcarrier_france_EntryPoint
+ObjectTemplate.setPosition -0.0607065/0.371866/0.101568
+
+ObjectTemplate.addTemplate fht_universalcarrier_bren_Gunner
+ObjectTemplate.setPosition -0.36/0.648286/0.841124
+ObjectTemplate.setRotation 0/3/0
+
+ObjectTemplate.addTemplate UniversalCarrier_Passenger1
+ObjectTemplate.setPosition 0.418822/0.573868/-0.08
+ObjectTemplate.setRotation -175.067/-0.444142/1.26569
+ObjectTemplate.addTemplate UniversalCarrier_Passenger2
+ObjectTemplate.setPosition 0.486984/0.882968/-0.982925
+ObjectTemplate.setRotation -180/0/0
+ObjectTemplate.addTemplate UniversalCarrier_Passenger3
+ObjectTemplate.setPosition -0.426646/0.615056/-0.5
+ObjectTemplate.addTemplate UniversalCarrier_Passenger4
+ObjectTemplate.setPosition -0.501528/0.881644/0.19747
+
+ObjectTemplate.addTemplate UniversalCarrier_France_drivewheel_left
+ObjectTemplate.setPosition -0.8360/-0.3595/-1.4941
+ObjectTemplate.addTemplate UniversalCarrier_France_drivewheel_right
+ObjectTemplate.setPosition 0.8741/-0.3595/-1.4941
+ObjectTemplate.addTemplate UniversalCarrier_France_frontwheel_left
+ObjectTemplate.setPosition -0.7839/-0.3261/1.5008
+ObjectTemplate.addTemplate UniversalCarrier_France_frontwheel_right
+ObjectTemplate.setPosition 0.8155/-0.3261/1.5008
+ObjectTemplate.addTemplate UniversalCarrier_France_SmallWheels_left
+ObjectTemplate.setPosition -0.7801/-0.1863/0.1771
+ObjectTemplate.addTemplate UniversalCarrier_France_SmallWheels_right
+ObjectTemplate.setPosition 0.8309/-0.1863/0.1771
+ObjectTemplate.addTemplate UniversalCarrier_France_zMotor
+ObjectTemplate.addTemplate antenna
+ObjectTemplate.setPosition -0.480371/0.575522/0.364782
+ObjectTemplate.addTemplate antennaYpennant
+ObjectTemplate.setPosition 0.409315/0.542678/-1.1601
+ObjectTemplate.addTemplate UniversalCarrier_France_SupplyObject
+rem -------------------------------------
+ObjectTemplate.setSoldierExitLocation 1.92077/-0.473438/0.295536 0/0/0
+ObjectTemplate.altSoldierExitPosition 0/0.346352/-2.59816
+ObjectTemplate.exitSpeedMod 0.5
+ObjectTemplate.seatInformation fht_universalcarrier_france_bren_spawn 0.3/-0.25/0.85 0/0/0
+ObjectTemplate.seatAnimationSystem Objects/Vehicles/Land/GB/universalcarrier/animations/3p_uni_carrier_animSys.inc
+ObjectTemplate.soundFilter vehicle
+ObjectTemplate.controlsCategory VCLand
+ObjectTemplate.setVehicleType VTHeavyTank
+ObjectTemplate.listenerObstruction 0.55
+ObjectTemplate.groundContactVolume 1
+ObjectTemplate.damagedAmbientSoundLimit 0.15
+ObjectTemplate.hasRestrictedExit 1
+ObjectTemplate.isOpenVehicle 1
+ObjectTemplate.altSoldierExitPosition 0/0.346352/-2.59816
+ObjectTemplate.addTemplate fht_universalcarrier_france_bren_spawn_SpawnPoint
+
+ObjectTemplate.activeSafe Sound S_fht_universalcarrier_france_bren_spawn_Ambient
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe Sound S_fht_universalcarrier_france_bren_spawn_AmbientDamaged
+ObjectTemplate.modifiedByUser "jbp"
+
+ObjectTemplate.activeSafe RotationalBundle fht_universalcarrier_france_bren_spawn_asteeringwheel
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.setNetworkableInfo BasicInfo
+rem ---BeginComp:Ik ---
+ObjectTemplate.createComponent Ik
+ObjectTemplate.ik.positionLeft -0.189672/-3.96386e-007/-0.114504
+ObjectTemplate.ik.rotationLeft -78.7404/0.948662/-71.471
+ObjectTemplate.ik.positionRight 0.194421/-6.79636e-006/-0.107666
+ObjectTemplate.ik.rotationRight -114.784/3.01868/111.49
+rem ---EndComp ---
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+rem -------------------------------------
+ObjectTemplate.addTemplate S_UniversalCarrier_France_asteeringwheel_RotationRpm
+rem -------------------------------------
+ObjectTemplate.setMinRotation 0/0/-70
+ObjectTemplate.setMaxRotation 0/0/70
+ObjectTemplate.setMaxSpeed 0/0/150
+ObjectTemplate.setAcceleration 0/0/-250
+ObjectTemplate.setInputToRoll PIYaw
+ObjectTemplate.setAutomaticReset 1
+ObjectTemplate.regulateRoll -0.05/-0.1
+
+ObjectTemplate.create SpawnPoint fht_universalcarrier_france_bren_spawn_SpawnPoint
+ObjectTemplate.modifiedByUser "Taz18"
+ObjectTemplate.isNotSaveable 1
+ObjectTemplate.createdInEditor 1
+ObjectTemplate.setEnterOnSpawn 1

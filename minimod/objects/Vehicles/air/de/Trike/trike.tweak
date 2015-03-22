@@ -1,0 +1,461 @@
+rem *** Generated with Bf2Editor.exe [created: 2006/5/15 11:52]
+GeometryTemplate.setSubGeometryLodDistance 1 0 80
+GeometryTemplate.setSubGeometryLodDistance 2 0 80
+GeometryTemplate.compressVertexData 1
+GeometryTemplate.maxTextureRepeat 16
+ObjectTemplate.activeSafe PlayerControlObject trike
+ObjectTemplate.creator XWW2:mscho
+ObjectTemplate.modifiedByUser "JGibson"
+ObjectTemplate.setNetworkableInfo BasicInfo
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.castsDynamicShadow 1
+rem ---BeginComp:Armor ---
+ObjectTemplate.createComponent Armor
+ObjectTemplate.armor.maxHitPoints 500
+ObjectTemplate.armor.hitPoints 500
+ObjectTemplate.armor.defaultMaterial 32
+ObjectTemplate.armor.hpLostWhileInWater 15
+ObjectTemplate.armor.hpLostWhileInDeepWater 110
+ObjectTemplate.armor.hpLostWhileCriticalDamage 5
+ObjectTemplate.armor.waterLevel 0.2
+ObjectTemplate.armor.deepWaterLevel 0.7
+ObjectTemplate.armor.explosionForce 4
+ObjectTemplate.armor.explosionDamage 25
+ObjectTemplate.armor.explosionRadius 3
+ObjectTemplate.armor.explosionMaterial 97
+ObjectTemplate.armor.wreckExplosionForceMax 5
+ObjectTemplate.armor.wreckExplosionMaterial 60
+ObjectTemplate.armor.wreckHitPoints 9999
+ObjectTemplate.armor.timeToStayAsWreck 90
+ObjectTemplate.armor.timeToStayAfterDestroyed 60
+ObjectTemplate.armor.criticalDamage 101
+ObjectTemplate.armor.hideChildrenOnSpectacularDeath 1
+ObjectTemplate.armor.addArmorEffect 385 e_dstate_jets_lightsmoke -0.129624/0.635258/1.3354 0/0/0
+ObjectTemplate.armor.addArmorEffect 250 e_dstate_land_heavyysmoke -0.245938/0.20547/0.720896 0/0/0
+ObjectTemplate.armor.addArmorEffect 100 e_dstate_land_heavyysmoke -0.545938/0.20547/0.720896 0/0/0
+ObjectTemplate.armor.addArmorEffect 100 e_dstate_land_heavyysmoke 0.545938/0.20547/0.720896 0/0/0
+ObjectTemplate.armor.addArmorEffect 50 e_dstate_jets_firesmoke -0.245843/0.677518/1.33259 0/0/0
+ObjectTemplate.armor.addArmorEffect 25 e_dstate_jets_firesmoke -0.64555/0.701611/1.25619 0/0/0
+ObjectTemplate.armor.addArmorEffect 25 e_dstate_jets_firesmoke 0.645723/0.467502/1.409 0/0/0
+ObjectTemplate.armor.addArmorEffect 0 e_vexp_AirGeneric 3.75509e-008/0.556813/8.27483e-006 0/0/0
+ObjectTemplate.armor.addArmorEffect 0 e_vexp_armoredcar_small 2.46135e-008/0.481179/5.5745e-006 0/0/0
+ObjectTemplate.armor.addArmorEffectSpectacular 0 e_vexp_Humvee 0/0.5/-0.5 0/0/0
+ObjectTemplate.armor.addArmorEffectSpectacular 0 e_vexp_armoredcar_spec 2.70672e-008/0.523842/6.12299e-006 0/0/0
+ObjectTemplate.armor.addArmorEffect 0 e_dstate_jets_firesmoke 0.107234/0.558957/1.6248 0/0/0
+ObjectTemplate.armor.addArmorEffect 0 e_dstate_jets_firesmoke -0.139189/-0.132742/1.98632 0/0/0
+ObjectTemplate.armor.addArmorEffect -1 e_dstate_static_fire 0.136539/0.662441/0.332388 0/0/0
+ObjectTemplate.armor.addArmorEffect -1 e_sAmb_wreckfire 1.10354/-0.286884/0.830196 0/0/0
+rem ---EndComp ---
+rem ---BeginComp:Ability ---
+ObjectTemplate.createComponent Ability
+ObjectTemplate.Ability.radarRadius 300
+rem ---EndComp ---
+rem ---BeginComp:Radio ---
+ObjectTemplate.createComponent Radio
+ObjectTemplate.Radio.spottedMessage air_spotted
+rem ---EndComp ---
+rem ---BeginComp:VehicleHud ---
+ObjectTemplate.createComponent VehicleHud
+ObjectTemplate.vehicleHud.hudName "Trike"
+ObjectTemplate.vehicleHud.typeIcon Ingame\Vehicles\Icons\Hud\MenuIcons\menuIcon_plane.tga
+ObjectTemplate.vehicleHud.miniMapIcon Ingame\Vehicles\Icons\Minimap\mini_Jet.tga
+ObjectTemplate.vehicleHud.miniMapIconLeaderSize Medium
+ObjectTemplate.vehicleHud.standardHelpEnabled 0
+ObjectTemplate.vehicleHud.vehicleIconPos 58/14
+ObjectTemplate.vehicleHud.vehicleType 4
+ObjectTemplate.vehicleHud.vehicleIcon Ingame\Vehicles\Icons\Hud\VehicleIcons\AIR_a10.tga
+rem ---EndComp ---
+ObjectTemplate.geometry trike
+ObjectTemplate.setCollisionMesh trike
+ObjectTemplate.mapMaterial 0 cloth 10
+ObjectTemplate.mapMaterial 1 metal 31
+ObjectTemplate.mapMaterial 2 plastic 11
+ObjectTemplate.mapMaterial 3 2 31
+ObjectTemplate.mapMaterial 4 rubber 22
+ObjectTemplate.drag 1.3
+ObjectTemplate.mass 3300
+ObjectTemplate.centerOfCollisionOffset 0/0/1.8
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.aiTemplate J10
+rem -------------------------------------
+ObjectTemplate.addTemplate S_trike_Ambient
+ObjectTemplate.addTemplate S_trike_AmbientDamaged
+ObjectTemplate.addTemplate trike_Camera
+ObjectTemplate.setPosition 0.0196903/0.619074/0.269911
+ObjectTemplate.addTemplate trike_motor
+ObjectTemplate.setPosition 0.00011/0/2.04896
+ObjectTemplate.addTemplate trike_EntryPoint
+ObjectTemplate.setPosition 1.79339/-1.04569/0.446249
+ObjectTemplate.addTemplate trike_bodyWing
+ObjectTemplate.addTemplate trike_ElevatorWing
+ObjectTemplate.setPosition 2.77457/0.832421/-6.36343
+ObjectTemplate.setRotation -180/-4/-180
+ObjectTemplate.addTemplate trike_AileronLWing
+ObjectTemplate.setPosition -3.5/0/0
+ObjectTemplate.addTemplate trike_AileronRWing
+ObjectTemplate.setPosition 3.5/0/0
+ObjectTemplate.addTemplate trike_prop
+ObjectTemplate.setPosition 0/0.345/-1.23
+ObjectTemplate.setRotation 0/0/-4.6
+ObjectTemplate.addTemplate trike_rudderWing
+ObjectTemplate.setPosition 0/1.07669/-6.32259
+ObjectTemplate.setRotation 0/0/-90
+ObjectTemplate.addTemplate trike_passenger_Seat
+ObjectTemplate.setPosition 0/1/-1
+rem -------------------------------------
+ObjectTemplate.setSoldierExitLocation -2.2/-0.5/-2.5 0/0/0
+ObjectTemplate.seatInformation trike 0/0.45/0.1 0/0/0
+ObjectTemplate.seatAnimationSystem Objects/Vehicles/Common/Animations/3p_driver_A_animSys.inc
+ObjectTemplate.vehicleCategory VCAir
+ObjectTemplate.controlsCategory VCAir
+ObjectTemplate.crewKitIndex 3
+ObjectTemplate.hasRestrictedExit 1
+ObjectTemplate.isOpenVehicle 1
+ObjectTemplate.sprintFactor 1
+
+ObjectTemplate.activeSafe Sound S_trike_Ambient
+ObjectTemplate.modifiedByUser "JGibson"
+
+ObjectTemplate.activeSafe Sound S_trike_AmbientDamaged
+ObjectTemplate.modifiedByUser "JGibson"
+
+ObjectTemplate.activeSafe Spring Trike_FL
+ObjectTemplate.modifiedByUser "JGibson"
+ObjectTemplate.setNetworkableInfo SpringInfo
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.grip 16
+rem -------------------------------------
+ObjectTemplate.addTemplate S_Trike_FL_Rotation
+rem -------------------------------------
+ObjectTemplate.setStrength 50
+ObjectTemplate.setDamping 8
+
+ObjectTemplate.activeSafe Sound S_Trike_FL_Rotation
+ObjectTemplate.modifiedByUser "JGibson"
+
+ObjectTemplate.activeSafe Spring Trike_FR
+ObjectTemplate.modifiedByUser "JGibson"
+ObjectTemplate.setNetworkableInfo SpringInfo
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.grip 16
+rem -------------------------------------
+ObjectTemplate.addTemplate S_Trike_FR_Rotation
+rem -------------------------------------
+ObjectTemplate.setStrength 50
+ObjectTemplate.setDamping 8
+
+ObjectTemplate.activeSafe Sound S_Trike_FR_Rotation
+ObjectTemplate.modifiedByUser "JGibson"
+
+ObjectTemplate.activeSafe RotationalBundle Trike_Kite
+ObjectTemplate.modifiedByUser "JGibson"
+ObjectTemplate.setNetworkableInfo BasicInfo
+rem ---BeginComp:Ik ---
+ObjectTemplate.createComponent Ik
+ObjectTemplate.ik.positionLeft -0.219938/-1.03484/0.976681
+ObjectTemplate.ik.rotationLeft -165.058/-71.8217/-1.0425
+ObjectTemplate.ik.positionRight 0.21998/-1.05552/0.98607
+ObjectTemplate.ik.rotationRight 13.0604/58.5423/-170.574
+rem ---EndComp ---
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.otherCollisionLod 1
+rem -------------------------------------
+ObjectTemplate.addTemplate S_Trike_Kite_RotationRpm
+rem -------------------------------------
+ObjectTemplate.setMinRotation -5/-10/-10
+ObjectTemplate.setMaxRotation 5/5/10
+ObjectTemplate.setMaxSpeed 150/150/150
+ObjectTemplate.setMaxResetSpeed 0.1/0.1/0.1
+ObjectTemplate.setAcceleration 140/140/-140
+ObjectTemplate.setDeAcceleration 900/900/900
+ObjectTemplate.setInputToYaw PIYaw
+ObjectTemplate.setInputToPitch PIPitch
+ObjectTemplate.setInputToRoll PIRoll
+ObjectTemplate.automaticYawStabilization 1
+ObjectTemplate.automaticPitchStabilization 1
+
+ObjectTemplate.activeSafe Sound S_Trike_Kite_RotationRpm
+ObjectTemplate.modifiedByUser "JGibson"
+
+ObjectTemplate.activeSafe Spring Trike_RL
+ObjectTemplate.modifiedByUser "JGibson"
+ObjectTemplate.setNetworkableInfo SpringInfo
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.grip 16
+rem -------------------------------------
+ObjectTemplate.addTemplate S_Trike_RL_Rotation
+rem -------------------------------------
+ObjectTemplate.setStrength 50
+ObjectTemplate.setDamping 8
+
+ObjectTemplate.activeSafe Sound S_Trike_RL_Rotation
+ObjectTemplate.modifiedByUser "JGibson"
+
+ObjectTemplate.activeSafe Spring Trike_RR
+ObjectTemplate.modifiedByUser "JGibson"
+ObjectTemplate.setNetworkableInfo BasicInfo
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.grip 16
+rem -------------------------------------
+ObjectTemplate.addTemplate S_Trike_RR_Rotation
+rem -------------------------------------
+ObjectTemplate.setStrength 50
+ObjectTemplate.setDamping 8
+
+ObjectTemplate.activeSafe Sound S_Trike_RR_Rotation
+ObjectTemplate.modifiedByUser "JGibson"
+
+ObjectTemplate.create Camera trike_Camera
+ObjectTemplate.modifiedByUser "JGibson"
+ObjectTemplate.createdInEditor 1
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 0
+rem -------------------------------------
+ObjectTemplate.addTemplate S_trike_Camera_RotationRpm
+rem -------------------------------------
+ObjectTemplate.setAutomaticReset 1
+ObjectTemplate.CVMNose 1
+ObjectTemplate.nosePos 0/0/4.3
+ObjectTemplate.chaseDistance -16
+ObjectTemplate.chaseOffset 0/4/0
+ObjectTemplate.worldFOV 1.2
+ObjectTemplate.insideFOV 1.2
+ObjectTemplate.worldFOV 1.2
+ObjectTemplate.insideFOV 1.2
+ObjectTemplate.allowInsideDynamicLights 1
+ObjectTemplate.allowInsideStaticSun 0
+ObjectTemplate.insideStaticSunDirection -0.25/-0.5/0.75
+ObjectTemplate.insideStaticSunColor 1/1/1
+ObjectTemplate.insideStaticSunDamageColor 1/0/0
+ObjectTemplate.insideDamageFrequency 3
+ObjectTemplate.insideDamageThreshold 0.15
+ObjectTemplate.insideStaticSunAmbientColor 0.7/0.7/0.7
+
+ObjectTemplate.activeSafe Sound S_trike_Camera_RotationRpm
+ObjectTemplate.modifiedByUser "JGibson"
+
+ObjectTemplate.create Engine trike_motor
+ObjectTemplate.modifiedByUser "JGibson"
+ObjectTemplate.setNetworkableInfo BasicInfo
+ObjectTemplate.createdInEditor 1
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+rem -------------------------------------
+ObjectTemplate.addTemplate S_trike_motor_RotationRpm
+ObjectTemplate.addTemplate S_trike_motor_Idle
+ObjectTemplate.addTemplate S_trike_motor_Rpm1
+ObjectTemplate.setPosition 0/0/-0.011502
+ObjectTemplate.addTemplate S_trike_motor_Rpm2
+ObjectTemplate.addTemplate S_trike_motor_Load
+rem -------------------------------------
+ObjectTemplate.setMinRotation 0/0/5
+ObjectTemplate.setMaxRotation 0/0/3000
+ObjectTemplate.setMaxSpeed 0/0/3000
+ObjectTemplate.setAcceleration 0/0/485
+ObjectTemplate.setDeAcceleration 0/0/800
+ObjectTemplate.setInputToRoll PIThrottle
+ObjectTemplate.setAutomaticReset 1
+ObjectTemplate.setUseDeAcceleration 1
+ObjectTemplate.setEngineType c_ETPlane
+ObjectTemplate.setTorque 120
+ObjectTemplate.setDifferential 5
+ObjectTemplate.setGearUp 0.7
+ObjectTemplate.setGearDown 0.3
+ObjectTemplate.noPropellerEffectAtSpeed 400
+ObjectTemplate.noPropellerEffectAtSpeed 400
+ObjectTemplate.defaultAngleOfAttack 25
+ObjectTemplate.maxAngleOfAttack 83
+ObjectTemplate.attackSpeed 45
+
+ObjectTemplate.activeSafe Sound S_trike_motor_RotationRpm
+ObjectTemplate.modifiedByUser "JGibson"
+
+ObjectTemplate.activeSafe Sound S_trike_motor_Idle
+ObjectTemplate.modifiedByUser "JGibson"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/vehicles/land/jeep_faav/sounds/start_idle_stop.wav"
+ObjectTemplate.loopCount 0
+ObjectTemplate.is3dSound 1
+ObjectTemplate.stopType 2
+ObjectTemplate.volume 0.89
+ObjectTemplate.pitch 1
+ObjectTemplate.reverbLevel 0
+ObjectTemplate.pitchEnvelope 0/1/0/1.5/0/2/0.003/0.518/0/0.614/1.5/0/
+ObjectTemplate.volumeEnvelope 0/1/0/1/0/3/0/0.642/0/0.497/0.642/0/0.997/0.005/0/
+ObjectTemplate.minDistance 3
+ObjectTemplate.halfVolumeDistance 6
+
+ObjectTemplate.activeSafe Sound S_trike_motor_Rpm1
+ObjectTemplate.modifiedByUser "JGibson"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/vehicles/land/jeep_faav/sounds/rpm_load.wav"
+ObjectTemplate.loopCount 0
+ObjectTemplate.is3dSound 1
+ObjectTemplate.stopType 2
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 1.7
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.pitchEnvelope 0/1/0/1.5/0/3/0.003/0.373/0/0.5/0.407/0/0.997/1.374/0/
+ObjectTemplate.volumeEnvelope 0/1/0/1/0/4/0.008/0.015/0/0.505/0.985/0/0.749/0.99/0/0.995/0.99/0/
+ObjectTemplate.position 0/0/-0.011502
+ObjectTemplate.minDistance 5
+ObjectTemplate.halfVolumeDistance 15
+
+ObjectTemplate.activeSafe Sound S_trike_motor_Rpm2
+ObjectTemplate.modifiedByUser "JGibson"
+
+ObjectTemplate.activeSafe Sound S_trike_motor_Load
+ObjectTemplate.modifiedByUser "JGibson"
+
+ObjectTemplate.create EntryPoint trike_EntryPoint
+ObjectTemplate.modifiedByUser "JGibson"
+ObjectTemplate.createdInEditor 1
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 0
+ObjectTemplate.setEntryRadius 3.5
+
+ObjectTemplate.create Wing trike_bodyWing
+ObjectTemplate.modifiedByUser "JGibson"
+ObjectTemplate.createdInEditor 1
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 0
+rem -------------------------------------
+ObjectTemplate.addTemplate S_trike_bodyWing_RotationRpm
+rem -------------------------------------
+ObjectTemplate.setPositionOffset 0/0/0
+ObjectTemplate.setWingLift 3.5
+ObjectTemplate.setFlapLift 0
+
+ObjectTemplate.activeSafe Sound S_trike_bodyWing_RotationRpm
+ObjectTemplate.modifiedByUser "JGibson"
+
+ObjectTemplate.create Wing trike_ElevatorWing
+ObjectTemplate.modifiedByUser "JGibson"
+ObjectTemplate.setNetworkableInfo BasicInfo
+ObjectTemplate.createdInEditor 1
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 0
+rem -------------------------------------
+ObjectTemplate.addTemplate S_trike_ElevatorWing_RotationRpm
+rem -------------------------------------
+ObjectTemplate.setMinRotation 0/-20/0
+ObjectTemplate.setMaxRotation 0/20/0
+ObjectTemplate.setMaxSpeed 0/140/0
+ObjectTemplate.setAcceleration 0/-65/0
+ObjectTemplate.setInputToPitch PIPitch
+ObjectTemplate.setAutomaticReset 1
+ObjectTemplate.setPositionOffset 0/0/0
+ObjectTemplate.setWingLift 0
+ObjectTemplate.setFlapLift 2.2
+
+ObjectTemplate.activeSafe Sound S_trike_ElevatorWing_RotationRpm
+ObjectTemplate.modifiedByUser "JGibson"
+
+ObjectTemplate.create Wing trike_AileronLWing
+ObjectTemplate.modifiedByUser "JGibson"
+ObjectTemplate.setNetworkableInfo BasicInfo
+ObjectTemplate.createdInEditor 1
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 0
+rem -------------------------------------
+ObjectTemplate.addTemplate S_trike_AileronLWing_RotationRpm
+rem -------------------------------------
+ObjectTemplate.setMinRotation 0/-15/0
+ObjectTemplate.setMaxRotation 0/15/0
+ObjectTemplate.setMaxSpeed 0/140/0
+ObjectTemplate.setAcceleration 0/-100/0
+ObjectTemplate.setInputToPitch PIRoll
+ObjectTemplate.setAutomaticReset 1
+ObjectTemplate.setPositionOffset 0/0/0
+ObjectTemplate.setWingLift 0.5
+ObjectTemplate.setFlapLift 1.5
+
+ObjectTemplate.activeSafe Sound S_trike_AileronLWing_RotationRpm
+ObjectTemplate.modifiedByUser "JGibson"
+
+ObjectTemplate.create Wing trike_AileronRWing
+ObjectTemplate.modifiedByUser "JGibson"
+ObjectTemplate.setNetworkableInfo BasicInfo
+ObjectTemplate.createdInEditor 1
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 0
+rem -------------------------------------
+ObjectTemplate.addTemplate S_trike_AileronRWing_RotationRpm
+rem -------------------------------------
+ObjectTemplate.setMinRotation 0/-15/0
+ObjectTemplate.setMaxRotation 0/15/0
+ObjectTemplate.setMaxSpeed 0/140/0
+ObjectTemplate.setAcceleration 0/100/0
+ObjectTemplate.setInputToPitch PIRoll
+ObjectTemplate.setAutomaticReset 1
+ObjectTemplate.setPositionOffset 0/0/0
+ObjectTemplate.setWingLift 0.5
+ObjectTemplate.setFlapLift 1.5
+
+ObjectTemplate.activeSafe Sound S_trike_AileronRWing_RotationRpm
+ObjectTemplate.modifiedByUser "JGibson"
+
+ObjectTemplate.create Wing trike_rudderWing
+ObjectTemplate.modifiedByUser "JGibson"
+ObjectTemplate.setNetworkableInfo BasicInfo
+ObjectTemplate.createdInEditor 1
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 0
+rem -------------------------------------
+ObjectTemplate.addTemplate S_trike_rudderWing_RotationRpm
+rem -------------------------------------
+ObjectTemplate.setMinRotation 0/-25/0
+ObjectTemplate.setMaxRotation 0/25/0
+ObjectTemplate.setMaxSpeed 0/300/0
+ObjectTemplate.setAcceleration 0/50/0
+ObjectTemplate.setInputToPitch PIYaw
+ObjectTemplate.setAutomaticReset 1
+ObjectTemplate.setPositionOffset 0/0/-.5
+ObjectTemplate.setWingLift 3
+ObjectTemplate.setFlapLift 12
+
+ObjectTemplate.activeSafe Sound S_trike_rudderWing_RotationRpm
+ObjectTemplate.modifiedByUser "JGibson"
+
+ObjectTemplate.create PlayerControlObject trike_passenger_Seat
+ObjectTemplate.modifiedByUser "JGibson"
+ObjectTemplate.setNetworkableInfo BasicInfo
+ObjectTemplate.createdInEditor 1
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 0
+rem -------------------------------------
+ObjectTemplate.addTemplate S_trike_passenger_Seat_Ambient
+ObjectTemplate.addTemplate S_trike_passenger_Seat_AmbientDamaged
+ObjectTemplate.addTemplate S_RightWing_Seat2_Ambient
+ObjectTemplate.addTemplate S_RightWing_Seat2_AmbientDamaged
+rem -------------------------------------
+ObjectTemplate.seatInformation trike_passenger_Seat 0/-0.35/0.7 0/0/0
+ObjectTemplate.seatAnimationSystem Objects/Vehicles/Common/Animations/3p_passenger_A_animSys.inc
+ObjectTemplate.toggleWeapon 1
+ObjectTemplate.allowDucking 1
+ObjectTemplate.disableInputWhileDucking 0
+ObjectTemplate.isOpenVehicle 1
+
+ObjectTemplate.activeSafe Sound S_trike_passenger_Seat_Ambient
+ObjectTemplate.modifiedByUser "JGibson"
+
+ObjectTemplate.activeSafe Sound S_trike_passenger_Seat_AmbientDamaged
+ObjectTemplate.modifiedByUser "JGibson"
+

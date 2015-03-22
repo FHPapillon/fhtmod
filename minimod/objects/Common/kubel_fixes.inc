@@ -1,0 +1,11 @@
+ObjectTemplate.setAcceleration 0/0/18
+ObjectTemplate.setTorque 35
+ObjectTemplate.setGearDown 0.35
+ObjectTemplate.setGearChangeTime 0.18
+ObjectTemplate.newCar2.wheelInertia 12.2513
+ObjectTemplate.newCar2.engineFeedbackMod 0.2
+ObjectTemplate.newCar2.brakeTorque 1500
+ObjectTemplate.newCar2.engineBrakeTorque 200
+ObjectTemplate.newCar2.frictionMod 1.25
+ObjectTemplate.newCar2.slopeTorqueMod 1
+ObjectTemplate.newCar2.wheelLongScale 0.1

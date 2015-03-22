@@ -1,0 +1,13 @@
+GeometryTemplate.create StaticMesh fht_italy_pillboxlarge_01
+CollisionManager.createTemplate fht_italy_pillboxlarge_01
+
+ObjectTemplate.create SimpleObject fht_italy_pillboxlarge_01
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator HAUER-PC:Hauer
+ObjectTemplate.collisionMesh fht_italy_pillboxlarge_01
+ObjectTemplate.mapMaterial 0 concrete 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.geometry fht_italy_pillboxlarge_01
+
+include fht_italy_pillboxlarge_01.tweak

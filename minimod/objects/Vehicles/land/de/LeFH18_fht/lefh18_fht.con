@@ -1,0 +1,61 @@
+GeometryTemplate.create BundledMesh lefh18_fht
+CollisionManager.createTemplate lefh18_fht
+
+ObjectTemplate.create PlayerControlObject lefh18_fht
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator TNPC:Toddel
+ObjectTemplate.collisionMesh lefh18_fht
+ObjectTemplate.mapMaterial 0 main 0
+ObjectTemplate.mapMaterial 1 wreck 0
+ObjectTemplate.mapMaterial 2 metal_stairs 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometry lefh18_fht
+ObjectTemplate.addTemplate lefh18_fht_base
+ObjectTemplate.setPosition 0/-0.3383/0
+
+ObjectTemplate.create RotationalBundle lefh18_fht_base
+ObjectTemplate.collisionPart 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 1
+ObjectTemplate.addTemplate lefh18_fht_leftwheel
+ObjectTemplate.setPosition -0.7645/0.6031/-0.0068
+ObjectTemplate.addTemplate lefh18_fht_rail
+ObjectTemplate.setPosition 0/1.1851/-0.2877
+ObjectTemplate.addTemplate lefh18_fht_rightwheel
+ObjectTemplate.setPosition 0.7645/0.6031/-0.0068
+
+ObjectTemplate.create RotationalBundle lefh18_fht_leftwheel
+ObjectTemplate.collisionPart 2
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 2
+
+ObjectTemplate.create RotationalBundle lefh18_fht_rail
+ObjectTemplate.collisionPart 3
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 3
+ObjectTemplate.addTemplate lefh18_fht_gun
+ObjectTemplate.setPosition 0.0141/0.0326/0.9323
+
+ObjectTemplate.create GenericFireArm lefh18_fht_gun
+ObjectTemplate.collisionPart 4
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 4
+
+ObjectTemplate.create RotationalBundle lefh18_fht_rightwheel
+ObjectTemplate.collisionPart 5
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 5
+
+include lefh18_fht.tweak

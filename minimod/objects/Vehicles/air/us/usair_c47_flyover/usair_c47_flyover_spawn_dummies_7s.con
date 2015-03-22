@@ -1,0 +1,11 @@
+ObjectTemplate.create PlayerControlObject usair_c47_flyover_spawn_dummies_7s
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator WIZARDS:Guedoe
+ObjectTemplate.collisionMesh usair_c47_flyover
+ObjectTemplate.mapMaterial 0 airplane 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometry usair_c47_flyover
+
+includeusair_c47_flyover_spawn_dummies_7s.tweak

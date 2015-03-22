@@ -1,0 +1,244 @@
+GeometryTemplate.create BundledMesh fht_pziv_g
+GeometryTemplate.nrOfAnimatedUVMatrix 6
+CollisionManager.createTemplate fht_pziv_g
+
+ObjectTemplate.create PlayerControlObject fht_pziv_g
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator PHILSCH-Z4KV58U:Phil
+ObjectTemplate.collisionMesh pzivf2
+ObjectTemplate.mapMaterial 0 80mm 0
+ObjectTemplate.mapMaterial 1 30mm 0
+ObjectTemplate.mapMaterial 2 15mm 0
+ObjectTemplate.mapMaterial 3 20mm 0
+ObjectTemplate.mapMaterial 4 55mm_Track 0
+ObjectTemplate.mapMaterial 5 wreck 0
+ObjectTemplate.mapMaterial 6 TankTracks 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometry fht_pziv_g
+ObjectTemplate.addTemplate fht_pziv_g_aaMotor
+ObjectTemplate.setPosition 0.0013/0.5659/0.3682
+ObjectTemplate.addTemplate fht_pziv_g_hullmgpco
+ObjectTemplate.setPosition 0.6410/0.5284/1.6819
+ObjectTemplate.addTemplate fht_pziv_g_turret
+ObjectTemplate.setPosition -0.0347/1.1525/-0.1157
+
+ObjectTemplate.create Engine fht_pziv_g_aaMotor
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 1
+ObjectTemplate.addTemplate fht_pziv_g_LF_DriveWheel
+ObjectTemplate.setPosition -1.1919/-0.7103/2.0086
+ObjectTemplate.addTemplate fht_pziv_g_LR_DriveWheel
+ObjectTemplate.setPosition -1.2358/-0.8316/-2.8095
+ObjectTemplate.addTemplate fht_pziv_g_RF_DriveWheel
+ObjectTemplate.setPosition 1.1608/-0.7103/2.0086
+ObjectTemplate.addTemplate fht_pziv_g_RR_DriveWheel
+ObjectTemplate.setPosition 1.2059/-0.8316/-2.8095
+ObjectTemplate.addTemplate fht_pziv_g_whl_L_01
+ObjectTemplate.setPosition -1.2327/-1.1249/1.4318
+ObjectTemplate.addTemplate fht_pziv_g_whl_L_02
+ObjectTemplate.setPosition -1.2327/-1.1249/0.9318
+ObjectTemplate.addTemplate fht_pziv_g_whl_L_03
+ObjectTemplate.setPosition -1.2327/-1.1249/0.4318
+ObjectTemplate.addTemplate fht_pziv_g_whl_L_04
+ObjectTemplate.setPosition -1.2327/-1.1249/-0.0682
+ObjectTemplate.addTemplate fht_pziv_g_whl_L_05
+ObjectTemplate.setPosition -1.2327/-1.1249/-0.5682
+ObjectTemplate.addTemplate fht_pziv_g_whl_L_06
+ObjectTemplate.setPosition -1.2327/-1.1249/-1.0682
+ObjectTemplate.addTemplate fht_pziv_g_whl_L_07
+ObjectTemplate.setPosition -1.2327/-1.1249/-1.5682
+ObjectTemplate.addTemplate fht_pziv_g_whl_L_08
+ObjectTemplate.setPosition -1.2327/-1.1249/-2.0682
+ObjectTemplate.addTemplate fht_pziv_g_whl_R_01
+ObjectTemplate.setPosition 1.2297/-1.1249/1.4318
+ObjectTemplate.addTemplate fht_pziv_g_whl_R_02
+ObjectTemplate.setPosition 1.2297/-1.1249/0.9318
+ObjectTemplate.addTemplate fht_pziv_g_whl_R_03
+ObjectTemplate.setPosition 1.2297/-1.1249/0.4318
+ObjectTemplate.addTemplate fht_pziv_g_whl_R_04
+ObjectTemplate.setPosition 1.2297/-1.1249/-0.0682
+ObjectTemplate.addTemplate fht_pziv_g_whl_R_05
+ObjectTemplate.setPosition 1.2297/-1.1249/-0.5682
+ObjectTemplate.addTemplate fht_pziv_g_whl_R_06
+ObjectTemplate.setPosition 1.2297/-1.1249/-1.0682
+ObjectTemplate.addTemplate fht_pziv_g_whl_R_07
+ObjectTemplate.setPosition 1.2297/-1.1249/-1.5682
+ObjectTemplate.addTemplate fht_pziv_g_whl_R_08
+ObjectTemplate.setPosition 1.2297/-1.1249/-2.0682
+
+ObjectTemplate.create RotationalBundle fht_pziv_g_LF_DriveWheel
+ObjectTemplate.collisionPart 2
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 2
+
+ObjectTemplate.create RotationalBundle fht_pziv_g_LR_DriveWheel
+ObjectTemplate.collisionPart 3
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 3
+
+ObjectTemplate.create RotationalBundle fht_pziv_g_RF_DriveWheel
+ObjectTemplate.collisionPart 4
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 4
+
+ObjectTemplate.create RotationalBundle fht_pziv_g_RR_DriveWheel
+ObjectTemplate.collisionPart 5
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 5
+
+ObjectTemplate.create Spring fht_pziv_g_whl_L_01
+ObjectTemplate.collisionPart 6
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 6
+
+ObjectTemplate.create Spring fht_pziv_g_whl_L_02
+ObjectTemplate.collisionPart 7
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 7
+
+ObjectTemplate.create Spring fht_pziv_g_whl_L_03
+ObjectTemplate.collisionPart 8
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 8
+
+ObjectTemplate.create Spring fht_pziv_g_whl_L_04
+ObjectTemplate.collisionPart 9
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 9
+
+ObjectTemplate.create Spring fht_pziv_g_whl_L_05
+ObjectTemplate.collisionPart 10
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 10
+
+ObjectTemplate.create Spring fht_pziv_g_whl_L_06
+ObjectTemplate.collisionPart 11
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 11
+
+ObjectTemplate.create Spring fht_pziv_g_whl_L_07
+ObjectTemplate.collisionPart 12
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 12
+
+ObjectTemplate.create Spring fht_pziv_g_whl_L_08
+ObjectTemplate.collisionPart 13
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 13
+
+ObjectTemplate.create Spring fht_pziv_g_whl_R_01
+ObjectTemplate.collisionPart 14
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 14
+
+ObjectTemplate.create Spring fht_pziv_g_whl_R_02
+ObjectTemplate.collisionPart 15
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 15
+
+ObjectTemplate.create Spring fht_pziv_g_whl_R_03
+ObjectTemplate.collisionPart 16
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 16
+
+ObjectTemplate.create Spring fht_pziv_g_whl_R_04
+ObjectTemplate.collisionPart 17
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 17
+
+ObjectTemplate.create Spring fht_pziv_g_whl_R_05
+ObjectTemplate.collisionPart 18
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 18
+
+ObjectTemplate.create Spring fht_pziv_g_whl_R_06
+ObjectTemplate.collisionPart 19
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 19
+
+ObjectTemplate.create Spring fht_pziv_g_whl_R_07
+ObjectTemplate.collisionPart 20
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 20
+
+ObjectTemplate.create Spring fht_pziv_g_whl_R_08
+ObjectTemplate.collisionPart 21
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 21
+
+ObjectTemplate.create PlayerControlObject fht_pziv_g_hullmgpco
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.addTemplate fht_pziv_g_hullmg
+ObjectTemplate.setPosition -0.0139/0.0199/0.1494
+
+ObjectTemplate.create RotationalBundle fht_pziv_g_hullmg
+ObjectTemplate.collisionPart 22
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 22
+
+ObjectTemplate.create RotationalBundle fht_pziv_g_turret
+ObjectTemplate.collisionPart 23
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 23
+ObjectTemplate.addTemplate fht_pziv_g_cannon_base
+ObjectTemplate.setPosition -0.0260/-0.0231/0.8996
+
+ObjectTemplate.create RotationalBundle fht_pziv_g_cannon_base
+ObjectTemplate.collisionPart 24
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 24
+ObjectTemplate.addTemplate fht_pziv_g_cannon
+
+ObjectTemplate.create GenericFireArm fht_pziv_g_cannon
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 25
+
+include fht_pziv_g.tweak

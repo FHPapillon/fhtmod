@@ -1,0 +1,104 @@
+rem *** Generated with Bf2Editor.exe [created: 2009/9/30 16:1]
+GeometryTemplate.compressVertexData 1
+GeometryTemplate.maxTextureRepeat 16
+ObjectTemplate.activeSafe PlayerControlObject usair_c47_flyover_spawn_dummies_2s
+ObjectTemplate.creator TASS
+ObjectTemplate.modifiedByUser "TASS"
+ObjectTemplate.setNetworkableInfo BasicInfo
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.isNotSaveable 1
+ObjectTemplate.cullRadiusScale 10
+ObjectTemplate.castsDynamicShadow 1
+rem ---BeginComp:Armor ---
+ObjectTemplate.createComponent Armor
+ObjectTemplate.armor.maxHitPoints 650
+ObjectTemplate.armor.hitPoints 650
+ObjectTemplate.armor.defaultMaterial 241
+ObjectTemplate.armor.hpLostWhileUpSideDown 100
+ObjectTemplate.armor.hpLostWhileInDeepWater 335
+ObjectTemplate.armor.hpLostWhileCriticalDamage 18
+ObjectTemplate.armor.waterDamageDelay 0
+ObjectTemplate.armor.deepWaterDamageDelay 30
+ObjectTemplate.armor.waterLevel 0.3
+ObjectTemplate.armor.deepWaterLevel 1.5
+ObjectTemplate.armor.explosionForce 15
+ObjectTemplate.armor.explosionForceMod 8
+ObjectTemplate.armor.explosionForceMax 5000
+ObjectTemplate.armor.explosionDamage 300
+ObjectTemplate.armor.explosionRadius 7
+ObjectTemplate.armor.explosionMaterial 99
+ObjectTemplate.armor.wreckExplosionForce 50
+ObjectTemplate.armor.wreckExplosionDamage 30
+ObjectTemplate.armor.wreckExplosionRadius 5
+ObjectTemplate.armor.wreckExplosionMaterial 70
+ObjectTemplate.armor.wreckHitPoints 150
+ObjectTemplate.armor.timeToStayAsWreck 0
+ObjectTemplate.armor.criticalDamage 165
+ObjectTemplate.armor.hideChildrenOnSpectacularDeath 1
+ObjectTemplate.armor.destroyOnSpectacularDeath 1
+ObjectTemplate.armor.addArmorEffect 0 e_vexp_air_c47 0/0/0 0/0/0
+ObjectTemplate.armor.addArmorEffect 75 e_dstate_jets_lightsmoke -4.28662/-0.711952/4.03544 0/0/0
+ObjectTemplate.armor.addArmorEffect 50 e_dstate_jets_heavysmoke -4.28662/-0.711952/4.03544 0/0/0
+ObjectTemplate.armor.addArmorEffect 75 e_dstate_jets_lightsmoke 4.38777/-0.46898/4.11648 0/0/0
+ObjectTemplate.armor.addArmorEffect 50 e_dstate_jets_heavysmoke 4.38777/-0.46898/4.11648 0/0/0
+ObjectTemplate.armor.addArmorEffect 75 e_dstate_jets_lightsmoke -0.0471038/0.275745/7.36095 0/0/0
+ObjectTemplate.armor.addArmorEffect 50 e_dstate_jets_heavysmoke -0.0471038/0.275745/7.36095 0/0/0
+ObjectTemplate.armor.addArmorEffect 10 e_dstate_jets_firesmoke -0.0471038/0.275745/7.36095 0/0/0
+ObjectTemplate.armor.addArmorEffect 10 e_dstate_jets_firesmoke 4.38777/-0.46898/4.11648 0/0/0
+ObjectTemplate.armor.addArmorEffect 10 e_dstate_jets_firesmoke -4.28662/-0.711952/4.03544 0/0/0
+ObjectTemplate.armor.addArmorEffect -20 e_dstate_Jets_wrecksmoke 0/0/0 0/0/0
+ObjectTemplate.armor.addArmorEffect -100 e_vexp_air_c47_big_parts 0/0/0 0/0/0
+rem ---EndComp ---
+rem ---BeginComp:Radio ---
+ObjectTemplate.createComponent Radio
+ObjectTemplate.Radio.spottedMessage air_spotted
+rem ---EndComp ---
+rem ---BeginComp:VehicleHud ---
+ObjectTemplate.createComponent VehicleHud
+ObjectTemplate.vehicleHud.hudName "C47 'Sky Train"
+ObjectTemplate.vehicleHud.miniMapIconLeaderSize Medium
+ObjectTemplate.vehicleHud.showCrosshair 0
+ObjectTemplate.vehicleHud.vehicleIconPos 56/13
+ObjectTemplate.vehicleHud.vehicleType 4
+rem ---EndComp ---
+ObjectTemplate.geometry usair_c47_flyover
+ObjectTemplate.setCollisionMesh usair_c47_flyover
+ObjectTemplate.mapMaterial 0 airplane 241
+ObjectTemplate.mass 1000
+ObjectTemplate.gravityModifier 0
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+rem -------------------------------------
+ObjectTemplate.addTemplate S_usair_c47_flyover_Ambient
+ObjectTemplate.addTemplate S_usair_c47_flyover_AmbientDamaged
+ObjectTemplate.addTemplate usair_c47_flyover_prop
+ObjectTemplate.setPosition 2.8177/-0.593176/3.4071
+ObjectTemplate.addTemplate usair_c47_flyover_prop
+ObjectTemplate.setPosition -2.8177/-0.593176/3.4071
+ObjectTemplate.addTemplate usair_c47_flyover_ForceObject
+ObjectTemplate.addTemplate usair_c47_flyover_spawn_dummies_2s_SpawnPoint
+ObjectTemplate.setPosition 0/-5/0
+ObjectTemplate.addTemplate usair_c47_flyover_spawn_dummies_2s_decoySpawner
+ObjectTemplate.setPosition 0/10/0  
+ObjectTemplate.setRotation -90.0/0.0/0.0
+rem -------------------------------------
+
+ObjectTemplate.create SpawnPoint usair_c47_flyover_spawn_dummies_2s_SpawnPoint
+ObjectTemplate.modifiedByUser "TASS"
+ObjectTemplate.isNotSaveable 1
+ObjectTemplate.createdInEditor 1
+
+ObjectTemplate.create ObjectSpawner usair_c47_flyover_spawn_dummies_2s_decoySpawner
+ObjectTemplate.modifiedByUser "TASS"
+ObjectTemplate.isNotSaveable 1
+ObjectTemplate.createdInEditor 1 
+ObjectTemplate.setObjectTemplate 1 decoy_test
+ObjectTemplate.setObjectTemplate 2 decoy_test
+ObjectTemplate.team 2
+ObjectTemplate.minSpawnDelay 2
+ObjectTemplate.maxSpawnDelay 2
+rem ObjectTemplate.TimeToLive 5
+ObjectTemplate.teamOnVehicle 1
+ObjectTemplate.maxNrOfObjectSpawned 15

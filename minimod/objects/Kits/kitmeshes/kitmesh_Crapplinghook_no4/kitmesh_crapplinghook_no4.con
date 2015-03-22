@@ -1,0 +1,8 @@
+GeometryTemplate.create BundledMesh kitmesh_crapplinghook_no4
+
+ObjectTemplate.create SimpleObject kitmesh_crapplinghook_no4
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator TODDEL:Thorsten
+ObjectTemplate.geometry kitmesh_crapplinghook_no4
+
+include kitmesh_crapplinghook_no4.tweak

@@ -1,0 +1,13 @@
+GeometryTemplate.create StaticMesh fht_cobble_3_end
+CollisionManager.createTemplate fht_cobble_3_end
+
+ObjectTemplate.create SimpleObject fht_cobble_3_end
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator SORKEN:HP_Ägaren
+ObjectTemplate.collisionMesh fht_cobble_3_end
+ObjectTemplate.mapMaterial 0 02_-_Default 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.geometry fht_cobble_3_end
+
+include fht_cobble_3_end.tweak

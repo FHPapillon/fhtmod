@@ -1,0 +1,969 @@
+rem *** Generated with Bf2Editor.exe [created: 2006/5/15 12:52]
+GeometryTemplate.maxSkip3pLods 0
+GeometryTemplate.setSubGeometryLodDistance 1 0 15
+GeometryTemplate.setSubGeometryLodDistance 1 1 50
+GeometryTemplate.setSubGeometryLodDistance 1 2 75
+GeometryTemplate.compressVertexData 1
+GeometryTemplate.maxTextureRepeat 16
+ObjectTemplate.activeSafe PlayerControlObject fht_sdkfz222
+ObjectTemplate.creator BUTTSLOL:jbp
+ObjectTemplate.modifiedByUser "Lister"
+ObjectTemplate.setNetworkableInfo BasicInfo
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.castsDynamicShadow 1
+ObjectTemplate.cullRadiusScale 6
+rem ---BeginComp:Armor ---
+ObjectTemplate.createComponent Armor
+ObjectTemplate.armor.maxHitPoints 200
+ObjectTemplate.armor.hitPoints 200
+ObjectTemplate.armor.defaultMaterial 121
+ObjectTemplate.armor.hpLostWhileUpSideDown 90
+ObjectTemplate.armor.hpLostWhileInWater 75
+ObjectTemplate.armor.hpLostWhileInDeepWater 250
+ObjectTemplate.armor.hpLostWhileCriticalDamage 12
+ObjectTemplate.armor.waterDamageDelay 1
+ObjectTemplate.armor.deepWaterDamageDelay 0
+ObjectTemplate.armor.waterLevel 0.1
+ObjectTemplate.armor.deepWaterLevel 0.3
+ObjectTemplate.armor.explosionForce 10
+ObjectTemplate.armor.explosionForceMod 15
+ObjectTemplate.armor.explosionForceMax 5000
+ObjectTemplate.armor.explosionDamage 300
+ObjectTemplate.armor.explosionRadius 6
+ObjectTemplate.armor.explosionMaterial 101
+ObjectTemplate.armor.wreckExplosionForce 50
+ObjectTemplate.armor.wreckExplosionForceMax 60
+ObjectTemplate.armor.wreckExplosionDamage 50
+ObjectTemplate.armor.wreckExplosionRadius 2
+ObjectTemplate.armor.wreckExplosionMaterial 70
+ObjectTemplate.armor.wreckHitPoints 750
+ObjectTemplate.armor.timeToStayAsWreck 100
+ObjectTemplate.armor.criticalDamage 76
+ObjectTemplate.armor.addArmorEffect 40 e_dstate_land_lightsmoke -2.70776e-005/0.0369925/2.07079 0/0/0
+ObjectTemplate.armor.addArmorEffect 25 e_dstate_land_mediumsmoke -1.23254e-005/0.0369889/2.21741 0/0/0
+ObjectTemplate.armor.addArmorEffect 10 e_dstate_land_heavysmoke -1.61889e-005/0.0369902/2.06139 0/0/0
+ObjectTemplate.armor.addArmorEffect 0 e_vexp_armoredcar 0/0/0 0/0/0
+ObjectTemplate.armor.addArmorEffectSpectacular 0 e_vexp_armoredcar 0/0/0 0/0/0
+ObjectTemplate.armor.addArmorEffect -20 e_dstate_static_fire 0.323952/0.617897/1.46789 0/0/0
+ObjectTemplate.armor.addArmorEffect -100 e_vexp_armoredcar_2nd -5.38229e-006/1.27758e-007/1.9087 0/0/0
+rem ---EndComp ---
+rem ---BeginComp:VehicleHud ---
+ObjectTemplate.createComponent VehicleHud
+ObjectTemplate.vehicleHud.hudName "SdKfz 222"
+ObjectTemplate.vehicleHud.typeIcon Ingame\Vehicles\Icons\Hud\MenuIcons\menuIcon_jeep.tga
+ObjectTemplate.vehicleHud.miniMapIcon Ingame\Vehicles\Icons\Minimap\tank_light.dds
+ObjectTemplate.vehicleHud.miniMapIconLeaderSize Medium
+ObjectTemplate.vehicleHud.hasTurretIcon 1
+ObjectTemplate.vehicleHud.vehicleIconPos 34/9
+ObjectTemplate.vehicleHud.vehicleType 3
+ObjectTemplate.vehicleHud.vehicleIcon Ingame\Vehicles\Icons\Hud\VehicleIcons\Placeholder.dds
+rem ---EndComp ---
+rem ---BeginComp:HelpHud ---
+ObjectTemplate.createComponent HelpHud
+ObjectTemplate.HelpHud.helpStringKey "FH2_HELP_TANK_xSightsMultipleAmmo"
+ObjectTemplate.HelpHud.helpSoundKey "fh2_tip"
+rem ---EndComp ---
+ObjectTemplate.geometry sdkfz222
+ObjectTemplate.setCollisionMesh sdkfz222
+ObjectTemplate.mapMaterial 0 5mm 121
+ObjectTemplate.mapMaterial 1 canvas 60
+ObjectTemplate.mapMaterial 2 wreck 60
+ObjectTemplate.mapMaterial 3 heavy_rubber 102
+ObjectTemplate.drag 1
+ObjectTemplate.mass 2400
+ObjectTemplate.gravityModifier 1.6
+ObjectTemplate.floaterMod 0.5
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.aiTemplate sdkfz222AI
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_sdkfz222_Ambient
+ObjectTemplate.addTemplate S_fht_sdkfz222_AmbientDamaged
+ObjectTemplate.addTemplate fht_sdkfz222_EntryPoint
+ObjectTemplate.addTemplate Tank_SmokeDispenser-idx3-ammo6
+ObjectTemplate.setPosition 0.000100428/-0.607524/2.27411
+ObjectTemplate.setRotation 0/-35.9203/0
+ObjectTemplate.addTemplate e_enter_hatch
+ObjectTemplate.setPosition 0/0.674068/-1.51494
+ObjectTemplate.addTemplate e_exit_hatch
+ObjectTemplate.setPosition 0/0.834288/-1.65937
+ObjectTemplate.addTemplate fht_sdkfz222_Passenger1
+ObjectTemplate.setPosition 1.07715/1.02519/1.1126
+ObjectTemplate.setRotation 88/0/0.2
+ObjectTemplate.addTemplate fht_sdkfz222_Passenger2
+ObjectTemplate.setPosition -0.10249/1.50377/-1.8471
+ObjectTemplate.setRotation -180/-28/1
+ObjectTemplate.addTemplate fht_sdkfz222_Passenger3
+ObjectTemplate.setPosition -1.26806/0.925238/-1.98239
+ObjectTemplate.setRotation -90/0/0
+ObjectTemplate.addTemplate fht_sdkfz222_Passenger4
+ObjectTemplate.setPosition -1.2873/0.972919/1.05468
+ObjectTemplate.setRotation -90/0/0.2
+ObjectTemplate.addTemplate fht_sdkfz222_SpawnPoint
+rem -------------------------------------
+ObjectTemplate.setSoldierExitLocation -1.59905/0/0 0/0/0
+ObjectTemplate.altSoldierExitPosition 0/0.2/-3.48363
+ObjectTemplate.dontClearTeamOnExit 1
+ObjectTemplate.seatInformation fht_sdkfz222_turret 0.3/0.8/-0.3 0/0/0
+ObjectTemplate.seatAnimationSystem Objects/Vehicles/Common/Animations/3p_driver_A_animSys.inc
+ObjectTemplate.groundContactVolume 1
+ObjectTemplate.hasRestrictedExit 1
+ObjectTemplate.altSoldierExitPosition 0/0.2/-3.48363
+ObjectTemplate.isOpenVehicle 1
+
+ObjectTemplate.activeSafe Sound S_fht_sdkfz222_Ambient
+ObjectTemplate.modifiedByUser "Lister"
+
+ObjectTemplate.activeSafe Sound S_fht_sdkfz222_AmbientDamaged
+ObjectTemplate.modifiedByUser "Lister"
+
+ObjectTemplate.activeSafe RotationalBundle fht_sdkfz222_turret
+ObjectTemplate.modifiedByUser "Lister"
+ObjectTemplate.setNetworkableInfo BasicInfo
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_sdkfz222_turret_RotationRpm
+ObjectTemplate.setPosition -5.91709e-007/0.334202/-1.48519e-006
+rem -------------------------------------
+ObjectTemplate.setMaxSpeed 20/0/0
+ObjectTemplate.setAcceleration 200/0/0
+ObjectTemplate.setInputToYaw PIMouseLookX
+
+ObjectTemplate.activeSafe Sound S_fht_sdkfz222_turret_RotationRpm
+ObjectTemplate.modifiedByUser "Lister"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/vehicles/land/common/sounds/turret_elev.wav"
+ObjectTemplate.loopCount 0
+ObjectTemplate.is3dSound 1
+ObjectTemplate.stopType 0
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 2
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.pitchEnvelope 0/1/0.1/3/0/3/0.003/0.431/0.1/0.122/0.475/0.1/0.995/0.49/0.1/
+ObjectTemplate.volumeEnvelope 0/1/0/1/0/3/0.003/0/0/0.307/0.084/0/0.995/0.751/0/
+ObjectTemplate.position -5.91709e-007/0.334202/-1.48519e-006
+ObjectTemplate.minDistance 2.5
+ObjectTemplate.halfVolumeDistance 9
+
+ObjectTemplate.activeSafe RotationalBundle fht_sdkfz222_gateleft
+ObjectTemplate.modifiedByUser "Lister"
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_sdkfz222_gateleft_RotationRpm
+rem -------------------------------------
+
+ObjectTemplate.activeSafe Sound S_fht_sdkfz222_gateleft_RotationRpm
+ObjectTemplate.modifiedByUser "Lister"
+
+ObjectTemplate.activeSafe RotationalBundle fht_sdkfz222_gateright
+ObjectTemplate.modifiedByUser "Lister"
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_sdkfz222_gateright_RotationRpm
+rem -------------------------------------
+
+ObjectTemplate.activeSafe Sound S_fht_sdkfz222_gateright_RotationRpm
+ObjectTemplate.modifiedByUser "Lister"
+
+ObjectTemplate.activeSafe RotationalBundle fht_sdkfz222_guns
+ObjectTemplate.modifiedByUser "Lister"
+ObjectTemplate.setNetworkableInfo BasicInfo
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_sdkfz222_guns_RotationRpm
+ObjectTemplate.setPosition 1.53674e-006/0.00352305/0.212762
+ObjectTemplate.addTemplate fht_sdkfz222_Camera
+ObjectTemplate.setPosition 0.32493/0.189671/-2.87932e-005
+ObjectTemplate.addTemplate Coaxial_MG34_Cam3
+ObjectTemplate.setPosition -0.353113/2.06602e-006/1.14076
+ObjectTemplate.addTemplate Tank_GunnerCamera_Light
+ObjectTemplate.setPosition 0.33832/0.00035/-0.05
+ObjectTemplate.addTemplate fht_sdkfz222_20mmcannon_he
+rem -------------------------------------
+ObjectTemplate.setMinRotation 0/-60/0
+ObjectTemplate.setMaxRotation 0/4/0
+ObjectTemplate.setMaxSpeed 0/20/0
+ObjectTemplate.setAcceleration 0/200/0
+ObjectTemplate.setInputToPitch PIMouseLookY
+
+ObjectTemplate.activeSafe Sound S_fht_sdkfz222_guns_RotationRpm
+ObjectTemplate.modifiedByUser "Lister"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/vehicles/land/common/sounds/turret_elev.wav"
+ObjectTemplate.loopCount 0
+ObjectTemplate.is3dSound 1
+ObjectTemplate.stopType 0
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 2
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.pitchEnvelope 0/1/0.1/3/0/3/0.003/0.431/0.1/0.122/0.475/0.1/0.995/0.49/0.1/
+ObjectTemplate.volumeEnvelope 0/1/0/1/0/3/0.003/0/0/0.208/0.071/0/0.997/0.305/0/
+ObjectTemplate.position 1.53674e-006/0.00352305/0.212762
+ObjectTemplate.minDistance 2.5
+ObjectTemplate.halfVolumeDistance 9
+
+ObjectTemplate.activeSafe GenericFireArm fht_sdkfz222_20mmcannon
+ObjectTemplate.modifiedByUser "Lister"
+rem ---BeginComp:WeaponHud ---
+ObjectTemplate.createComponent WeaponHud
+ObjectTemplate.weaponHud.weaponIcon Ingame\Weapons\Icons\Hud\bomb.tga
+ObjectTemplate.weaponHud.selectIcon Ingame\Rounds\20mmAP.dds
+ObjectTemplate.weaponHud.hudName "20MM AP"
+ObjectTemplate.weaponHud.guiIndex 1004
+ObjectTemplate.weaponHud.hasFireRate 0
+ObjectTemplate.weaponHud.addShowOnCamMode 2
+ObjectTemplate.weaponHud.displaySelectOnActivation 1
+ObjectTemplate.weaponHud.overheatSound S_Weapon_Vehicle_Overheat
+rem ---EndComp ---
+rem ---BeginComp:SingleFireComp ---
+ObjectTemplate.createComponent SingleFireComp
+ObjectTemplate.fire.roundsPerMinute 300
+ObjectTemplate.fire.addFireRate 2
+ObjectTemplate.fire.projectileStartPosition 0.05/0/0
+rem ---EndComp ---
+rem ---BeginComp:DefaultAmmoComp ---
+ObjectTemplate.createComponent DefaultAmmoComp
+ObjectTemplate.ammo.nrOfMags 18
+ObjectTemplate.ammo.magSize 10
+ObjectTemplate.ammo.reloadTime 1.6
+ObjectTemplate.ammo.minimumTimeUntilReload 0.1
+ObjectTemplate.ammo.instantReloadOnEnable 1
+ObjectTemplate.ammo.toggleWhenNoAmmo 1
+ObjectTemplate.ammo.reloadWithoutPlayer 1
+rem ---EndComp ---
+rem ---BeginComp:WeaponBasedRecoilComp ---
+ObjectTemplate.createComponent WeaponBasedRecoilComp
+ObjectTemplate.recoil.recoilSize 5
+ObjectTemplate.recoil.recoilSpeed 50
+ObjectTemplate.recoil.recoilSpeedGB 10
+ObjectTemplate.recoil.recoilForce 2
+ObjectTemplate.recoil.cameraRecoilSpeed 5
+ObjectTemplate.recoil.cameraRecoilSize 0.2
+rem ---EndComp ---
+rem ---BeginComp:SimpleDeviationComp ---
+ObjectTemplate.createComponent SimpleDeviationComp
+ObjectTemplate.deviation.minDev 0.25
+rem ---EndComp ---
+rem ---BeginComp:DefaultSoundComp ---
+ObjectTemplate.createComponent DefaultSoundComp
+rem ---EndComp ---
+rem ---BeginComp:DefaultAnimationComp ---
+ObjectTemplate.createComponent DefaultAnimationComp
+rem ---EndComp ---
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.aiTemplate sdkfz222MainGun
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_sdkfz222_20mmcannon_Fire1P
+ObjectTemplate.addTemplate S_fht_sdkfz222_20mmcannon_Fire1P_Outdoor
+ObjectTemplate.addTemplate S_fht_sdkfz222_20mmcannon_Fire3P
+ObjectTemplate.addTemplate S_fht_sdkfz222_20mmcannon_BoltClick
+ObjectTemplate.addTemplate S_fht_sdkfz222_20mmcannon_TriggerClick
+ObjectTemplate.addTemplate S_fht_sdkfz222_20mmcannon_SwitchFireRate
+ObjectTemplate.addTemplate S_fht_sdkfz222_20mmcannon_Reload1P
+ObjectTemplate.addTemplate S_fht_sdkfz222_20mmcannon_Reload3P
+ObjectTemplate.addTemplate S_fht_sdkfz222_20mmcannon_Deploy1P
+ObjectTemplate.addTemplate S_fht_sdkfz222_20mmcannon_Deploy3P
+ObjectTemplate.addTemplate S_fht_sdkfz222_20mmcannon_Zoom
+ObjectTemplate.addTemplate e_muzz_tunguska
+ObjectTemplate.setPosition -4.78348e-005/-4.55041e-005/2.12808
+rem -------------------------------------
+ObjectTemplate.projectileTemplate 20mmL55-AP-Projectile
+ObjectTemplate.keepProjectiles 5
+ObjectTemplate.velocity 555
+ObjectTemplate.itemIndex 1
+ObjectTemplate.delayToUse 1.6
+ObjectTemplate.heatAddWhenFire 0.04
+ObjectTemplate.coolDownPerSec 0.2
+ObjectTemplate.overheatPenalty 1
+
+ObjectTemplate.activeSafe Sound S_fht_sdkfz222_20mmcannon_Fire1P
+ObjectTemplate.modifiedByUser "Lister"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/weapons/common/sounds/20mmaa_fire_1p.wav"
+ObjectTemplate.loopCount 0
+ObjectTemplate.is3dSound 0
+ObjectTemplate.stopType 1
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 1
+ObjectTemplate.pan 0.5
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.minDistance 2
+
+ObjectTemplate.activeSafe Sound S_fht_sdkfz222_20mmcannon_Fire1P_Outdoor
+ObjectTemplate.modifiedByUser "Lister"
+
+ObjectTemplate.activeSafe Sound S_fht_sdkfz222_20mmcannon_Fire3P
+ObjectTemplate.modifiedByUser "Lister"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/weapons/common/sounds/20mmaa_fire_3p.wav"
+ObjectTemplate.loopCount 0
+ObjectTemplate.is3dSound 1
+ObjectTemplate.stopType 1
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 1
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.minDistance 10
+ObjectTemplate.halfVolumeDistance 35
+ObjectTemplate.soundRadius 3
+
+ObjectTemplate.activeSafe Sound S_fht_sdkfz222_20mmcannon_BoltClick
+ObjectTemplate.modifiedByUser "Lister"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/vehicles/land/ustnk_m1a2/sounds/vehicle_weapon_trigger_click.wav"
+ObjectTemplate.loopCount 1
+ObjectTemplate.is3dSound 0
+ObjectTemplate.stopType 0
+ObjectTemplate.volume 0.41
+ObjectTemplate.pitch 1
+ObjectTemplate.pan 0.5
+ObjectTemplate.reverbLevel 0.3
+
+ObjectTemplate.activeSafe Sound S_fht_sdkfz222_20mmcannon_TriggerClick
+ObjectTemplate.modifiedByUser "Lister"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/vehicles/land/ustnk_m1a2/sounds/vehicle_weapon_trigger_click.wav"
+ObjectTemplate.loopCount 1
+ObjectTemplate.is3dSound 0
+ObjectTemplate.stopType 0
+ObjectTemplate.volume 0.41
+ObjectTemplate.pitch 1
+ObjectTemplate.pan 0.5
+ObjectTemplate.reverbLevel 0.3
+
+ObjectTemplate.activeSafe Sound S_fht_sdkfz222_20mmcannon_SwitchFireRate
+ObjectTemplate.modifiedByUser "Lister"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/vehicles/land/ustnk_m1a2/sounds/vehicle_weapon_trigger_click.wav"
+ObjectTemplate.loopCount 1
+ObjectTemplate.is3dSound 0
+ObjectTemplate.stopType 0
+ObjectTemplate.volume 0.41
+ObjectTemplate.pitch 1
+ObjectTemplate.pan 0.5
+ObjectTemplate.reverbLevel 0.3
+
+ObjectTemplate.activeSafe Sound S_fht_sdkfz222_20mmcannon_Reload1P
+ObjectTemplate.modifiedByUser "Lister"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/vehicles/land/ustnk_m1a2/sounds/vehicle_weapon_trigger_click.wav"
+ObjectTemplate.loopCount 1
+ObjectTemplate.is3dSound 0
+ObjectTemplate.stopType 0
+ObjectTemplate.volume 0.41
+ObjectTemplate.pitch 1
+ObjectTemplate.pan 0.5
+ObjectTemplate.reverbLevel 0.3
+
+ObjectTemplate.activeSafe Sound S_fht_sdkfz222_20mmcannon_Reload3P
+ObjectTemplate.modifiedByUser "Lister"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/vehicles/land/ustnk_m1a2/sounds/vehicle_weapon_trigger_click.wav"
+ObjectTemplate.loopCount 1
+ObjectTemplate.is3dSound 1
+ObjectTemplate.stopType 0
+ObjectTemplate.volume 0.41
+ObjectTemplate.pitch 1
+ObjectTemplate.reverbLevel 0.3
+ObjectTemplate.minDistance 0.5
+ObjectTemplate.halfVolumeDistance 2
+
+ObjectTemplate.activeSafe Sound S_fht_sdkfz222_20mmcannon_Deploy1P
+ObjectTemplate.modifiedByUser "Lister"
+
+ObjectTemplate.activeSafe Sound S_fht_sdkfz222_20mmcannon_Deploy3P
+ObjectTemplate.modifiedByUser "Lister"
+
+ObjectTemplate.activeSafe Sound S_fht_sdkfz222_20mmcannon_Zoom
+ObjectTemplate.modifiedByUser "Lister"
+
+ObjectTemplate.create Camera fht_sdkfz222_Camera
+ObjectTemplate.modifiedByUser "Lister"
+ObjectTemplate.createdInEditor 1
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 0
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_sdkfz222_Camera_RotationRpm
+rem -------------------------------------
+ObjectTemplate.setMinRotation -15/-5/0
+ObjectTemplate.setMaxRotation 15/5/0
+ObjectTemplate.setPivotPosition 0/0/-0.5
+ObjectTemplate.setMaxSpeed 20/12/0
+ObjectTemplate.setAcceleration 1.5/0.75/0
+ObjectTemplate.setInputToYaw PIMouseLookX
+ObjectTemplate.setInputToPitch PIMouseLookY
+ObjectTemplate.setAutomaticReset 1
+ObjectTemplate.worldFOV 1.2
+ObjectTemplate.insideFOV 1.2
+ObjectTemplate.worldFOV 1.2
+ObjectTemplate.insideFOV 1.2
+ObjectTemplate.allowInsideDynamicLights 1
+ObjectTemplate.allowInsideStaticSun 0
+ObjectTemplate.insideStaticSunDirection -0.25/-0.5/0.75
+ObjectTemplate.insideStaticSunColor 1/1/1
+ObjectTemplate.insideStaticSunDamageColor 1/0/0
+ObjectTemplate.insideDamageFrequency 3
+ObjectTemplate.insideDamageThreshold 0.15
+ObjectTemplate.insideStaticSunAmbientColor 0.7/0.7/0.7
+
+ObjectTemplate.activeSafe Sound S_fht_sdkfz222_Camera_RotationRpm
+ObjectTemplate.modifiedByUser "Lister"
+
+ObjectTemplate.create GenericFireArm fht_sdkfz222_20mmcannon_he
+ObjectTemplate.modifiedByUser "Lister"
+ObjectTemplate.createdInEditor 1
+rem ---BeginComp:WeaponHud ---
+ObjectTemplate.createComponent WeaponHud
+ObjectTemplate.weaponHud.weaponIcon Ingame\Weapons\Icons\Hud\bomb.tga
+ObjectTemplate.weaponHud.selectIcon Ingame\Rounds\20mmHE.dds
+ObjectTemplate.weaponHud.hudName "20MM HE"
+ObjectTemplate.weaponHud.guiIndex 1004
+ObjectTemplate.weaponHud.hasFireRate 0
+ObjectTemplate.weaponHud.addShowOnCamMode 1
+ObjectTemplate.weaponHud.displaySelectOnActivation 1
+ObjectTemplate.weaponHud.overheatSound S_Weapon_Vehicle_Overheat
+rem ---EndComp ---
+rem ---BeginComp:SingleFireComp ---
+ObjectTemplate.createComponent SingleFireComp
+ObjectTemplate.fire.roundsPerMinute 300
+ObjectTemplate.fire.addFireRate 2
+ObjectTemplate.fire.projectileStartPosition 0.05/0/0
+rem ---EndComp ---
+rem ---BeginComp:DefaultAmmoComp ---
+ObjectTemplate.createComponent DefaultAmmoComp
+ObjectTemplate.ammo.nrOfMags 10
+ObjectTemplate.ammo.magSize 10
+ObjectTemplate.ammo.reloadTime 1.6
+ObjectTemplate.ammo.minimumTimeUntilReload 0.1
+ObjectTemplate.ammo.instantReloadOnEnable 1
+ObjectTemplate.ammo.toggleWhenNoAmmo 1
+ObjectTemplate.ammo.reloadWithoutPlayer 1
+rem ---EndComp ---
+rem ---BeginComp:WeaponBasedRecoilComp ---
+ObjectTemplate.createComponent WeaponBasedRecoilComp
+ObjectTemplate.recoil.recoilSize 3
+ObjectTemplate.recoil.recoilSpeed 50
+ObjectTemplate.recoil.recoilSpeedGB 10
+ObjectTemplate.recoil.recoilForce 2
+ObjectTemplate.recoil.cameraRecoilSpeed 5
+ObjectTemplate.recoil.cameraRecoilSize 0.2
+rem ---EndComp ---
+rem ---BeginComp:SimpleDeviationComp ---
+ObjectTemplate.createComponent SimpleDeviationComp
+ObjectTemplate.deviation.minDev 0.2
+rem ---EndComp ---
+rem ---BeginComp:DefaultSoundComp ---
+ObjectTemplate.createComponent DefaultSoundComp
+rem ---EndComp ---
+rem ---BeginComp:DefaultAnimationComp ---
+ObjectTemplate.createComponent DefaultAnimationComp
+rem ---EndComp ---
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.aiTemplate sdkfz222MainGunhe
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_sdkfz222_20mmcannon_he_Fire1P
+ObjectTemplate.addTemplate S_fht_sdkfz222_20mmcannon_he_Fire1P_Outdoor
+ObjectTemplate.addTemplate S_fht_sdkfz222_20mmcannon_he_Fire3P
+ObjectTemplate.addTemplate S_fht_sdkfz222_20mmcannon_he_BoltClick
+ObjectTemplate.addTemplate S_fht_sdkfz222_20mmcannon_he_TriggerClick
+ObjectTemplate.addTemplate S_fht_sdkfz222_20mmcannon_he_SwitchFireRate
+ObjectTemplate.addTemplate S_fht_sdkfz222_20mmcannon_he_Reload1P
+ObjectTemplate.addTemplate S_fht_sdkfz222_20mmcannon_he_Reload3P
+ObjectTemplate.addTemplate S_fht_sdkfz222_20mmcannon_he_Deploy1P
+ObjectTemplate.addTemplate S_fht_sdkfz222_20mmcannon_he_Deploy3P
+ObjectTemplate.addTemplate S_fht_sdkfz222_20mmcannon_he_Zoom
+ObjectTemplate.addTemplate e_muzz_tunguska
+ObjectTemplate.setPosition -4.78348e-005/-4.55041e-005/2.12808
+rem -------------------------------------
+ObjectTemplate.projectileTemplate 20mmL55-HE-Projectile
+ObjectTemplate.keepProjectiles 5
+ObjectTemplate.velocity 338
+ObjectTemplate.itemIndex 2
+ObjectTemplate.delayToUse 1.6
+ObjectTemplate.heatAddWhenFire 0.04
+ObjectTemplate.coolDownPerSec 0.2
+ObjectTemplate.overheatPenalty 1
+
+ObjectTemplate.activeSafe Sound S_fht_sdkfz222_20mmcannon_he_Fire1P
+ObjectTemplate.modifiedByUser "Lister"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/weapons/common/sounds/20mmaa_fire_1p.wav"
+ObjectTemplate.loopCount 0
+ObjectTemplate.is3dSound 0
+ObjectTemplate.stopType 1
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 1
+ObjectTemplate.pan 0.5
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.minDistance 2
+
+ObjectTemplate.activeSafe Sound S_fht_sdkfz222_20mmcannon_he_Fire1P_Outdoor
+ObjectTemplate.modifiedByUser "Lister"
+
+ObjectTemplate.activeSafe Sound S_fht_sdkfz222_20mmcannon_he_Fire3P
+ObjectTemplate.modifiedByUser "Lister"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/weapons/common/sounds/20mmaa_fire_3p.wav"
+ObjectTemplate.loopCount 0
+ObjectTemplate.is3dSound 1
+ObjectTemplate.stopType 1
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 1
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.minDistance 10
+ObjectTemplate.halfVolumeDistance 35
+ObjectTemplate.soundRadius 3
+
+ObjectTemplate.activeSafe Sound S_fht_sdkfz222_20mmcannon_he_BoltClick
+ObjectTemplate.modifiedByUser "Lister"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/vehicles/land/ustnk_m1a2/sounds/vehicle_weapon_trigger_click.wav"
+ObjectTemplate.loopCount 1
+ObjectTemplate.is3dSound 0
+ObjectTemplate.stopType 0
+ObjectTemplate.volume 0.41
+ObjectTemplate.pitch 1
+ObjectTemplate.pan 0.5
+ObjectTemplate.reverbLevel 0.3
+
+ObjectTemplate.activeSafe Sound S_fht_sdkfz222_20mmcannon_he_TriggerClick
+ObjectTemplate.modifiedByUser "Lister"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/vehicles/land/ustnk_m1a2/sounds/vehicle_weapon_trigger_click.wav"
+ObjectTemplate.loopCount 1
+ObjectTemplate.is3dSound 0
+ObjectTemplate.stopType 0
+ObjectTemplate.volume 0.41
+ObjectTemplate.pitch 1
+ObjectTemplate.pan 0.5
+ObjectTemplate.reverbLevel 0.3
+
+ObjectTemplate.activeSafe Sound S_fht_sdkfz222_20mmcannon_he_SwitchFireRate
+ObjectTemplate.modifiedByUser "Lister"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/vehicles/land/ustnk_m1a2/sounds/vehicle_weapon_trigger_click.wav"
+ObjectTemplate.loopCount 1
+ObjectTemplate.is3dSound 0
+ObjectTemplate.stopType 0
+ObjectTemplate.volume 0.41
+ObjectTemplate.pitch 1
+ObjectTemplate.pan 0.5
+ObjectTemplate.reverbLevel 0.3
+
+ObjectTemplate.activeSafe Sound S_fht_sdkfz222_20mmcannon_he_Reload1P
+ObjectTemplate.modifiedByUser "Lister"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/vehicles/land/ustnk_m1a2/sounds/vehicle_weapon_trigger_click.wav"
+ObjectTemplate.loopCount 1
+ObjectTemplate.is3dSound 0
+ObjectTemplate.stopType 0
+ObjectTemplate.volume 0.41
+ObjectTemplate.pitch 1
+ObjectTemplate.pan 0.5
+ObjectTemplate.reverbLevel 0.3
+
+ObjectTemplate.activeSafe Sound S_fht_sdkfz222_20mmcannon_he_Reload3P
+ObjectTemplate.modifiedByUser "Lister"
+
+ObjectTemplate.activeSafe Sound S_fht_sdkfz222_20mmcannon_he_Deploy1P
+ObjectTemplate.modifiedByUser "Lister"
+
+ObjectTemplate.activeSafe Sound S_fht_sdkfz222_20mmcannon_he_Deploy3P
+ObjectTemplate.modifiedByUser "Lister"
+
+ObjectTemplate.activeSafe Sound S_fht_sdkfz222_20mmcannon_he_Zoom
+ObjectTemplate.modifiedByUser "Lister"
+
+ObjectTemplate.activeSafe Engine fht_sdkfz222_zMotor
+ObjectTemplate.modifiedByUser "Lister"
+ObjectTemplate.setNetworkableInfo BasicInfo
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_sdkfz222_zMotor_RotationRpm
+ObjectTemplate.addTemplate S_fht_sdkfz222_zMotor_Idle
+ObjectTemplate.addTemplate S_fht_sdkfz222_zMotor_Rpm1
+ObjectTemplate.addTemplate S_fht_sdkfz222_zMotor_Rpm2
+ObjectTemplate.addTemplate S_fht_sdkfz222_zMotor_Load
+rem -------------------------------------
+ObjectTemplate.setMinRotation 0/0/-1
+ObjectTemplate.setMaxRotation 0/0/1
+ObjectTemplate.setMaxSpeed 0/0/10000
+ObjectTemplate.setAcceleration 0/0/10
+ObjectTemplate.setInputToRoll PIThrottle
+ObjectTemplate.setAutomaticReset 1
+ObjectTemplate.setEngineType c_ETNewCar2
+ObjectTemplate.setTorque 175
+ObjectTemplate.setDifferential 4
+ObjectTemplate.setNumberOfGears 5
+ObjectTemplate.setGearUp 0.85
+ObjectTemplate.setGearDown 0.4
+ObjectTemplate.setGearChangeTime 1.5
+ObjectTemplate.setGearRatios 3.25 2.6 2.4 2.2 1.25 
+ObjectTemplate.spinWhenNoEngineInAir 1
+ObjectTemplate.newCar2.minRpm 1000
+ObjectTemplate.newCar2.maxRpm 4000
+ObjectTemplate.newCar2.useClutchedTorque 0
+ObjectTemplate.newCar2.wheelInertia 100
+ObjectTemplate.newCar2.engineFeedbackMod 0.15
+ObjectTemplate.newCar2.brakeTorque 2500
+ObjectTemplate.newCar2.engineBrakeTorque 2000
+ObjectTemplate.newCar2.frictionTorque 100
+ObjectTemplate.newCar2.frictionMod 1.5
+ObjectTemplate.newCar2.slopeTorqueMod 0.25
+ObjectTemplate.newCar2.wheelLongFrictionMod 1
+ObjectTemplate.newCar2.wheelLongDriveFrictionMod 1.4
+ObjectTemplate.newCar2.wheelLongPeakAt 0.1
+ObjectTemplate.newCar2.wheelLongMinDynamicFriction 0.7
+ObjectTemplate.newCar2.wheelLongScale 0.1
+ObjectTemplate.newCar2.wheelLatFrictionMod 2
+ObjectTemplate.newCar2.wheelLatDriveFrictionMod 0.6
+ObjectTemplate.newCar2.wheelLatPeakAt 0.1
+ObjectTemplate.newCar2.wheelLatMinDynamicFriction 0.7
+ObjectTemplate.newCar2.wheelLatScale 0.1
+ObjectTemplate.audio.newStyleAudio 1
+
+ObjectTemplate.activeSafe Sound S_fht_sdkfz222_zMotor_RotationRpm
+ObjectTemplate.modifiedByUser "Lister"
+
+ObjectTemplate.activeSafe Sound S_fht_sdkfz222_zMotor_Idle
+ObjectTemplate.modifiedByUser "Lister"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/vehicles/land/common/sounds/sdkfz222_start_idle_stop.wav"
+ObjectTemplate.loopCount 0
+ObjectTemplate.is3dSound 1
+ObjectTemplate.stopType 1
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 1
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.pitchEnvelope 0/1/0/1.5/0/2/0.003/0.887/0/0.985/1.268/0/
+ObjectTemplate.volumeEnvelope 0/1/0/1/0/3/0.00772201/0.880309/0/0.378378/1/0/0.996139/0.656371/0/
+ObjectTemplate.minDistance 3
+ObjectTemplate.halfVolumeDistance 12
+ObjectTemplate.soundRadius 1.5
+
+ObjectTemplate.activeSafe Sound S_fht_sdkfz222_zMotor_Rpm1
+ObjectTemplate.modifiedByUser "Lister"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/vehicles/land/common/sounds/sdkfz222_rpm.wav"
+ObjectTemplate.loopCount 0
+ObjectTemplate.is3dSound 1
+ObjectTemplate.stopType 0
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 1
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.pitchEnvelope 0/1/0/1.5/0/2/0/0.781853/0/0.996139/1.31467/0/
+ObjectTemplate.volumeEnvelope 0/1/0/1/0/3/0.036/0.005/0/0.254/1/0/0.995/1/0/
+ObjectTemplate.minDistance 3
+ObjectTemplate.halfVolumeDistance 11
+ObjectTemplate.soundRadius 2
+
+ObjectTemplate.activeSafe Sound S_fht_sdkfz222_zMotor_Rpm2
+ObjectTemplate.modifiedByUser "Lister"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/vehicles/land/common/sounds/sdkfz222_rpm.wav"
+ObjectTemplate.loopCount 0
+ObjectTemplate.is3dSound 1
+ObjectTemplate.stopType 0
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 1
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.pitchEnvelope 0/1/0/1.5/0/2/0.00772201/0.579151/0/0.996139/1.27413/0/
+ObjectTemplate.volumeEnvelope 0/1/0/1/0/3/0.025/0.005/0/0.132/0.944/0/0.99/0.997/0/
+ObjectTemplate.minDistance 3
+ObjectTemplate.halfVolumeDistance 12
+ObjectTemplate.soundRadius 1.5
+
+ObjectTemplate.activeSafe Sound S_fht_sdkfz222_zMotor_Load
+ObjectTemplate.modifiedByUser "Lister"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/vehicles/common/sound/gear_shift_01.wav,objects/vehicles/common/sound/gear_shift_01.wav,objects/vehicles/common/sound/gear_shift_02.wav,objects/vehicles/common/sound/gear_shift_03.wav,objects/vehicles/common/sound/gear_shift_04.wav"
+ObjectTemplate.loopCount 1
+ObjectTemplate.is3dSound 1
+ObjectTemplate.stopType 1
+ObjectTemplate.volume 0.7
+ObjectTemplate.pitch 1.4
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.minDistance 1.7
+ObjectTemplate.halfVolumeDistance 4
+
+ObjectTemplate.activeSafe Spring fht_sdkfz222_whlrl
+ObjectTemplate.modifiedByUser "Lister"
+ObjectTemplate.setNetworkableInfo SpringInfo
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.grip 8
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_sdkfz222_whlrl_Rotation
+ObjectTemplate.addTemplate web_wheelBig
+rem -------------------------------------
+ObjectTemplate.setStrength 50
+ObjectTemplate.setDamping 5
+
+ObjectTemplate.activeSafe Sound S_fht_sdkfz222_whlrl_Rotation
+ObjectTemplate.modifiedByUser "Lister"
+
+ObjectTemplate.activeSafe Spring fht_sdkfz222_whlrr
+ObjectTemplate.modifiedByUser "Lister"
+ObjectTemplate.setNetworkableInfo SpringInfo
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.grip 8
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_sdkfz222_whlrr_Rotation
+ObjectTemplate.addTemplate web_wheelBig
+rem -------------------------------------
+ObjectTemplate.setStrength 50
+ObjectTemplate.setDamping 5
+
+ObjectTemplate.activeSafe Sound S_fht_sdkfz222_whlrr_Rotation
+ObjectTemplate.modifiedByUser "Lister"
+
+ObjectTemplate.activeSafe RotationalBundle fht_sdkfz222_steerleft
+ObjectTemplate.modifiedByUser "Lister"
+ObjectTemplate.setNetworkableInfo BasicInfo
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_sdkfz222_steerleft_RotationRpm
+rem -------------------------------------
+ObjectTemplate.setMinRotation -35/0/0
+ObjectTemplate.setMaxRotation 35/0/0
+ObjectTemplate.setMaxSpeed 75/0/0
+ObjectTemplate.setAcceleration 100/0/0
+ObjectTemplate.setInputToYaw PIYaw
+ObjectTemplate.setAutomaticReset 1
+ObjectTemplate.rememberExcessInput 1
+
+ObjectTemplate.activeSafe Sound S_fht_sdkfz222_steerleft_RotationRpm
+ObjectTemplate.modifiedByUser "Lister"
+
+ObjectTemplate.activeSafe Spring fht_sdkfz222_whlfl
+ObjectTemplate.modifiedByUser "Lister"
+ObjectTemplate.setNetworkableInfo SpringInfo
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.grip 8
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_sdkfz222_whlfl_Rotation
+ObjectTemplate.addTemplate web_wheelBig
+rem -------------------------------------
+ObjectTemplate.setStrength 50
+ObjectTemplate.setDamping 5
+
+ObjectTemplate.activeSafe Sound S_fht_sdkfz222_whlfl_Rotation
+ObjectTemplate.modifiedByUser "Lister"
+
+ObjectTemplate.activeSafe RotationalBundle fht_sdkfz222_steerright
+ObjectTemplate.modifiedByUser "Lister"
+ObjectTemplate.setNetworkableInfo BasicInfo
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_sdkfz222_steerright_RotationRpm
+rem -------------------------------------
+ObjectTemplate.setMinRotation -35/0/0
+ObjectTemplate.setMaxRotation 35/0/0
+ObjectTemplate.setMaxSpeed 75/0/0
+ObjectTemplate.setAcceleration 100/0/0
+ObjectTemplate.setInputToYaw PIYaw
+ObjectTemplate.setAutomaticReset 1
+ObjectTemplate.rememberExcessInput 1
+
+ObjectTemplate.activeSafe Sound S_fht_sdkfz222_steerright_RotationRpm
+ObjectTemplate.modifiedByUser "Lister"
+
+ObjectTemplate.activeSafe Spring fht_sdkfz222_whlfr
+ObjectTemplate.modifiedByUser "Lister"
+ObjectTemplate.setNetworkableInfo SpringInfo
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.grip 8
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_sdkfz222_whlfr_Rotation
+ObjectTemplate.addTemplate web_wheelBig
+rem -------------------------------------
+ObjectTemplate.setStrength 50
+ObjectTemplate.setDamping 5
+
+ObjectTemplate.activeSafe Sound S_fht_sdkfz222_whlfr_Rotation
+ObjectTemplate.modifiedByUser "Lister"
+
+ObjectTemplate.create EntryPoint fht_sdkfz222_EntryPoint
+ObjectTemplate.modifiedByUser "Lister"
+ObjectTemplate.createdInEditor 1
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 0
+ObjectTemplate.setEntryRadius 3
+
+ObjectTemplate.create PlayerControlObject fht_sdkfz222_Passenger1
+ObjectTemplate.modifiedByUser "Lister"
+ObjectTemplate.setNetworkableInfo BasicInfo
+ObjectTemplate.createdInEditor 1
+rem ---BeginComp:VehicleHud ---
+ObjectTemplate.createComponent VehicleHud
+ObjectTemplate.vehicleHud.hudName "Bedford QLT"
+ObjectTemplate.vehicleHud.miniMapIconLeaderSize Medium
+ObjectTemplate.vehicleHud.vehicleIconPos 1/1
+ObjectTemplate.vehicleHud.vehicleIcon Ingame\Vehicles\Icons\Hud\VehicleIcons\Placeholder.dds
+rem ---EndComp ---
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 0
+ObjectTemplate.aiTemplate bedfordoyd_Passenger1AI
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_sdkfz222_Passenger1_Ambient
+ObjectTemplate.addTemplate S_fht_sdkfz222_Passenger1_AmbientDamaged
+rem -------------------------------------
+ObjectTemplate.setSoldierExitLocation 4.15706/-1.02309/-1.04237e-006 0/0/0
+ObjectTemplate.seatInformation fht_sdkfz222_Passenger1 0/0/0 0/0/0
+ObjectTemplate.seatAnimationSystem Objects/Vehicles/Common/Animations/3p_passenger_A_animSys.inc
+ObjectTemplate.hasRestrictedExit 1
+ObjectTemplate.isOpenVehicle 1
+
+ObjectTemplate.activeSafe Sound S_fht_sdkfz222_Passenger1_Ambient
+ObjectTemplate.modifiedByUser "Lister"
+
+ObjectTemplate.activeSafe Sound S_fht_sdkfz222_Passenger1_AmbientDamaged
+ObjectTemplate.modifiedByUser "Lister"
+
+ObjectTemplate.create PlayerControlObject fht_sdkfz222_Passenger2
+ObjectTemplate.modifiedByUser "Lister"
+ObjectTemplate.setNetworkableInfo BasicInfo
+ObjectTemplate.createdInEditor 1
+rem ---BeginComp:VehicleHud ---
+ObjectTemplate.createComponent VehicleHud
+ObjectTemplate.vehicleHud.hudName "Bedford QLT"
+ObjectTemplate.vehicleHud.miniMapIconLeaderSize Medium
+ObjectTemplate.vehicleHud.vehicleIconPos 1/1
+ObjectTemplate.vehicleHud.vehicleIcon Ingame\Vehicles\Icons\Hud\VehicleIcons\Placeholder.dds
+rem ---EndComp ---
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 0
+ObjectTemplate.aiTemplate BedfordOYD_Passenger2AI
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_sdkfz222_Passenger2_Ambient
+ObjectTemplate.addTemplate S_fht_sdkfz222_Passenger2_AmbientDamaged
+rem -------------------------------------
+ObjectTemplate.setSoldierExitLocation 2.79407/-1.09317/1.34046e-006 0/0/0
+ObjectTemplate.seatInformation fht_sdkfz222_Passenger2 0/0/0 0/0/0
+ObjectTemplate.seatAnimationSystem Objects/Vehicles/Common/Animations/3p_passenger_A_animSys.inc
+ObjectTemplate.hasRestrictedExit 1
+ObjectTemplate.isOpenVehicle 1
+
+ObjectTemplate.activeSafe Sound S_fht_sdkfz222_Passenger2_Ambient
+ObjectTemplate.modifiedByUser "Lister"
+
+ObjectTemplate.activeSafe Sound S_fht_sdkfz222_Passenger2_AmbientDamaged
+ObjectTemplate.modifiedByUser "Lister"
+
+ObjectTemplate.create PlayerControlObject fht_sdkfz222_Passenger3
+ObjectTemplate.modifiedByUser "Lister"
+ObjectTemplate.setNetworkableInfo BasicInfo
+ObjectTemplate.createdInEditor 1
+rem ---BeginComp:VehicleHud ---
+ObjectTemplate.createComponent VehicleHud
+ObjectTemplate.vehicleHud.hudName "Bedford QLT"
+ObjectTemplate.vehicleHud.miniMapIconLeaderSize Medium
+ObjectTemplate.vehicleHud.vehicleIconPos 1/1
+ObjectTemplate.vehicleHud.vehicleIcon Ingame\Vehicles\Icons\Hud\VehicleIcons\Placeholder.dds
+rem ---EndComp ---
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 0
+ObjectTemplate.aiTemplate BedfordOYD_Passenger3AI
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_sdkfz222_Passenger3_Ambient
+ObjectTemplate.addTemplate S_fht_sdkfz222_Passenger3_AmbientDamaged
+rem -------------------------------------
+ObjectTemplate.setSoldierExitLocation 1.73591/-1.17362/-1.37868e-006 0/0/0
+ObjectTemplate.seatInformation fht_sdkfz222_Passenger3 0/0/0 0/0/0
+ObjectTemplate.seatAnimationSystem Objects/Vehicles/Common/Animations/3p_passenger_A_animSys.inc
+ObjectTemplate.hasRestrictedExit 1
+ObjectTemplate.isOpenVehicle 1
+
+ObjectTemplate.activeSafe Sound S_fht_sdkfz222_Passenger3_Ambient
+ObjectTemplate.modifiedByUser "Lister"
+
+ObjectTemplate.activeSafe Sound S_fht_sdkfz222_Passenger3_AmbientDamaged
+ObjectTemplate.modifiedByUser "Lister"
+
+ObjectTemplate.create PlayerControlObject fht_sdkfz222_Passenger4
+ObjectTemplate.modifiedByUser "Lister"
+ObjectTemplate.setNetworkableInfo BasicInfo
+ObjectTemplate.createdInEditor 1
+rem ---BeginComp:VehicleHud ---
+ObjectTemplate.createComponent VehicleHud
+ObjectTemplate.vehicleHud.hudName "Bedford QLT"
+ObjectTemplate.vehicleHud.miniMapIconLeaderSize Medium
+ObjectTemplate.vehicleHud.vehicleIconPos 1/1
+ObjectTemplate.vehicleHud.vehicleIcon Ingame\Vehicles\Icons\Hud\VehicleIcons\Placeholder.dds
+rem ---EndComp ---
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 0
+ObjectTemplate.aiTemplate BedfordOYD_Passenger4AI
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_sdkfz222_Passenger4_Ambient
+ObjectTemplate.addTemplate S_fht_sdkfz222_Passenger4_AmbientDamaged
+rem -------------------------------------
+ObjectTemplate.setSoldierExitLocation -3.56503/-1.06028/-2.4661e-006 0/0/0
+ObjectTemplate.seatInformation fht_sdkfz222_Passenger4 0/0/0 0/0/0
+ObjectTemplate.seatAnimationSystem Objects/Vehicles/Common/Animations/3p_passenger_A_animSys.inc
+ObjectTemplate.hasRestrictedExit 1
+ObjectTemplate.isOpenVehicle 1
+
+ObjectTemplate.activeSafe Sound S_fht_sdkfz222_Passenger4_Ambient
+ObjectTemplate.modifiedByUser "Lister"
+
+ObjectTemplate.activeSafe Sound S_fht_sdkfz222_Passenger4_AmbientDamaged
+ObjectTemplate.modifiedByUser "Lister"
+
+ObjectTemplate.create SpawnPoint fht_sdkfz222_SpawnPoint
+ObjectTemplate.modifiedByUser "Lister"
+ObjectTemplate.isNotSaveable 1
+ObjectTemplate.createdInEditor 1
+ObjectTemplate.setEnterOnSpawn 1
+

@@ -1,0 +1,35 @@
+ObjectTemplate.create GenericFireArm lefh18_fht_dials
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator BUTTSLOL:jbp
+ObjectTemplate.geometry artillerycamera_gb
+ObjectTemplate.addTemplate lefh18_fht_remotecam_azi_req_base
+ObjectTemplate.setPosition 0/-0.4600/0
+ObjectTemplate.addTemplate lefh18_fht_remotecam_elev_req_base
+ObjectTemplate.setPosition -0.4600/0/0
+ObjectTemplate.addTemplate lefh18_fht_remotecam_targetind
+ObjectTemplate.setPosition 0.0921/-0.0054/0.0077
+
+ObjectTemplate.create Bundle lefh18_fht_remotecam_azi_req_base
+ObjectTemplate.addTemplate lefh18_fht_remotecam_azi_req
+
+ObjectTemplate.create Bundle lefh18_fht_remotecam_elev_req_base
+ObjectTemplate.addTemplate lefh18_fht_remotecam_elev_req
+
+ObjectTemplate.create Bundle lefh18_fht_remotecam_azi_req
+ObjectTemplate.geometryPart 1
+ObjectTemplate.addTemplate lefh18_fht_remotecam_azi
+
+ObjectTemplate.create RotationalBundle lefh18_fht_remotecam_azi
+ObjectTemplate.geometryPart 2
+
+ObjectTemplate.create Bundle lefh18_fht_remotecam_elev_req
+ObjectTemplate.geometryPart 3
+ObjectTemplate.addTemplate lefh18_fht_remotecam_elev
+
+ObjectTemplate.create RotationalBundle lefh18_fht_remotecam_elev
+ObjectTemplate.geometryPart 4
+
+ObjectTemplate.create Bundle lefh18_fht_remotecam_targetind
+ObjectTemplate.geometryPart 5
+
+include lefh18_fht_remotecam.tweak

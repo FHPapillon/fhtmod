@@ -1,0 +1,199 @@
+GeometryTemplate.create BundledMesh m4a1mid_eu_ca
+GeometryTemplate.nrOfAnimatedUVMatrix 6
+CollisionManager.createTemplate m4a1mid_eu_ca
+
+ObjectTemplate.create PlayerControlObject m4a1mid_eu_ca
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator HIGHLANDER:Johannes
+ObjectTemplate.collisionMesh m4a1mid_eu_brit
+ObjectTemplate.mapMaterial 0 38mm 0
+ObjectTemplate.mapMaterial 1 60mm 0
+ObjectTemplate.mapMaterial 2 25mm 0
+ObjectTemplate.mapMaterial 3 19mm 0
+ObjectTemplate.mapMaterial 4 tanktrax 0
+ObjectTemplate.mapMaterial 5 Wreck 0
+ObjectTemplate.mapMaterial 6 76mm 0
+ObjectTemplate.mapMaterial 7 51mm 0
+ObjectTemplate.mapMaterial 8 76mm+25mm 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometry m4a1mid_eu_ca
+ObjectTemplate.addTemplate m4a1mid_eu_ca_aaMotor
+ObjectTemplate.setPosition 0.4804/0.4410/1.5646
+ObjectTemplate.addTemplate m4a1mid_eu_ca_hullmachinegun
+ObjectTemplate.setPosition 0.4984/0.4930/1.9548
+ObjectTemplate.addTemplate m4a1mid_eu_ca_turret
+ObjectTemplate.setPosition 0.0080/0.9670/-0.0510
+
+ObjectTemplate.create Engine m4a1mid_eu_ca_aaMotor
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 1
+ObjectTemplate.addTemplate m4a1mid_eu_ca_FrontLeftDrive
+ObjectTemplate.setPosition -1.5008/-0.5469/0.9306
+ObjectTemplate.addTemplate m4a1mid_eu_ca_FrontRightDrive
+ObjectTemplate.setPosition 0.5560/-0.5469/0.9306
+ObjectTemplate.addTemplate m4a1mid_eu_ca_LeftWheel1
+ObjectTemplate.setPosition -1.5380/-1.0970/0.4302
+ObjectTemplate.addTemplate m4a1mid_eu_ca_LeftWheel2
+ObjectTemplate.setPosition -1.5380/-1.0970/-0.3978
+ObjectTemplate.addTemplate m4a1mid_eu_ca_LeftWheel3
+ObjectTemplate.setPosition -1.5380/-1.0970/-1.0388
+ObjectTemplate.addTemplate m4a1mid_eu_ca_LeftWheel4
+ObjectTemplate.setPosition -1.5380/-1.0970/-1.8738
+ObjectTemplate.addTemplate m4a1mid_eu_ca_LeftWheel5
+ObjectTemplate.setPosition -1.5380/-1.0970/-2.5018
+ObjectTemplate.addTemplate m4a1mid_eu_ca_LeftWheel6
+ObjectTemplate.setPosition -1.5380/-1.0970/-3.3428
+ObjectTemplate.addTemplate m4a1mid_eu_ca_RearLeftDrive
+ObjectTemplate.setPosition -1.5381/-0.6341/-4.0785
+ObjectTemplate.addTemplate m4a1mid_eu_ca_RearRightDrive
+ObjectTemplate.setPosition 0.5930/-0.6341/-4.0785
+ObjectTemplate.setRotation -180.0000/0/0
+ObjectTemplate.addTemplate m4a1mid_eu_ca_RightWheel1
+ObjectTemplate.setPosition 0.5920/-1.0970/0.4302
+ObjectTemplate.addTemplate m4a1mid_eu_ca_RightWheel2
+ObjectTemplate.setPosition 0.5920/-1.0970/-0.3978
+ObjectTemplate.addTemplate m4a1mid_eu_ca_RightWheel3
+ObjectTemplate.setPosition 0.5920/-1.0970/-1.0388
+ObjectTemplate.addTemplate m4a1mid_eu_ca_RightWheel4
+ObjectTemplate.setPosition 0.5920/-1.0970/-1.8738
+ObjectTemplate.addTemplate m4a1mid_eu_ca_RightWheel5
+ObjectTemplate.setPosition 0.5920/-1.0970/-2.5018
+ObjectTemplate.addTemplate m4a1mid_eu_ca_RightWheel6
+ObjectTemplate.setPosition 0.5920/-1.0970/-3.3428
+
+ObjectTemplate.create Rotationalbundle m4a1mid_eu_ca_FrontLeftDrive
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 2
+
+ObjectTemplate.create Rotationalbundle m4a1mid_eu_ca_FrontRightDrive
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 3
+
+ObjectTemplate.create Spring m4a1mid_eu_ca_LeftWheel1
+ObjectTemplate.collisionPart 4
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 4
+
+ObjectTemplate.create Spring m4a1mid_eu_ca_LeftWheel2
+ObjectTemplate.collisionPart 5
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 5
+
+ObjectTemplate.create Spring m4a1mid_eu_ca_LeftWheel3
+ObjectTemplate.collisionPart 6
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 6
+
+ObjectTemplate.create Spring m4a1mid_eu_ca_LeftWheel4
+ObjectTemplate.collisionPart 7
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 7
+
+ObjectTemplate.create Spring m4a1mid_eu_ca_LeftWheel5
+ObjectTemplate.collisionPart 8
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 8
+
+ObjectTemplate.create Spring m4a1mid_eu_ca_LeftWheel6
+ObjectTemplate.collisionPart 9
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 9
+
+ObjectTemplate.create Rotationalbundle m4a1mid_eu_ca_RearLeftDrive
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 10
+
+ObjectTemplate.create Rotationalbundle m4a1mid_eu_ca_RearRightDrive
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 11
+
+ObjectTemplate.create Spring m4a1mid_eu_ca_RightWheel1
+ObjectTemplate.collisionPart 12
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 12
+
+ObjectTemplate.create Spring m4a1mid_eu_ca_RightWheel2
+ObjectTemplate.collisionPart 13
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 13
+
+ObjectTemplate.create Spring m4a1mid_eu_ca_RightWheel3
+ObjectTemplate.collisionPart 14
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 14
+
+ObjectTemplate.create Spring m4a1mid_eu_ca_RightWheel4
+ObjectTemplate.collisionPart 15
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 15
+
+ObjectTemplate.create Spring m4a1mid_eu_ca_RightWheel5
+ObjectTemplate.collisionPart 16
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 16
+
+ObjectTemplate.create Spring m4a1mid_eu_ca_RightWheel6
+ObjectTemplate.collisionPart 17
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 17
+
+ObjectTemplate.create PlayerControlObject m4a1mid_eu_ca_hullmachinegun
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.addTemplate m4a1mid_eu_ca_HullMG
+
+ObjectTemplate.create RotationalBundle m4a1mid_eu_ca_HullMG
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 18
+
+ObjectTemplate.create RotationalBundle m4a1mid_eu_ca_turret
+ObjectTemplate.collisionPart 19
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 19
+ObjectTemplate.addTemplate m4a1mid_eu_ca_pitch
+ObjectTemplate.setPosition -0.0078/0.3410/0.7648
+
+ObjectTemplate.create RotationalBundle m4a1mid_eu_ca_pitch
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 20
+ObjectTemplate.addTemplate m4a1mid_eu_ca_75mm
+ObjectTemplate.setPosition 0.0198/-0.0216/1.1062
+
+ObjectTemplate.create GenericFirearm m4a1mid_eu_ca_75mm
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 21
+
+include m4a1mid_eu_ca.tweak
+
+
+rem Autogenerated code
+
+ObjectTemplate.activeSafe PlayerControlObject m4a1mid_eu_ca_hullmachinegun
+ObjectTemplate.aiTemplate m4a1mid_eu_brit_hullmachinegun_auto_AI

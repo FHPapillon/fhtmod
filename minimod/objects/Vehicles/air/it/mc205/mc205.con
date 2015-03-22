@@ -1,0 +1,128 @@
+GeometryTemplate.create BundledMesh mc205
+CollisionManager.createTemplate mc205
+
+ObjectTemplate.create PlayerControlObject mc205
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator TOM-PC:TOM
+ObjectTemplate.collisionMesh mc202
+ObjectTemplate.mapMaterial 0 plane_voulnerable 0
+ObjectTemplate.mapMaterial 1 plane_medium 0
+ObjectTemplate.mapMaterial 2 glass 0
+ObjectTemplate.mapMaterial 3 rubber 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometry mc205
+ObjectTemplate.addTemplate mc205_1p_stick
+ObjectTemplate.setPosition 0/0.0966/0.5310
+ObjectTemplate.addTemplate mc205_Aileron_Left
+ObjectTemplate.setPosition -4.1620/-0.0240/0.8770
+ObjectTemplate.addTemplate mc205_Aileron_Right
+ObjectTemplate.setPosition 4.1620/-0.0240/0.8770
+ObjectTemplate.addTemplate mc205_Elevators
+ObjectTemplate.setPosition -0.0012/0.3687/-3.4499
+ObjectTemplate.addTemplate mc205_landing_gear_flap_l
+ObjectTemplate.setPosition -0.0773/-0.3899/1.7002
+ObjectTemplate.addTemplate mc205_landing_gear_flap_r
+ObjectTemplate.setPosition 0.0772/-0.3899/1.7002
+ObjectTemplate.addTemplate mc205_Landing_gear_L
+ObjectTemplate.setPosition -1.5660/-0.3470/1.4430
+ObjectTemplate.addTemplate mc205_Landing_gear_R
+ObjectTemplate.setPosition 1.5660/-0.3469/1.4430
+ObjectTemplate.addTemplate mc205_landing_gear_strut_L
+ObjectTemplate.setPosition -0.6733/-0.1904/1.4350
+ObjectTemplate.addTemplate mc205_landing_gear_strut_R
+ObjectTemplate.setPosition 0.6734/-0.1867/1.4286
+ObjectTemplate.addTemplate mc205_Rudder
+ObjectTemplate.setPosition 0.0023/1.1689/-3.6690
+ObjectTemplate.addTemplate mc205_wheelBack_steer
+ObjectTemplate.setPosition -0.0031/0.1762/-3.7191
+
+ObjectTemplate.create RotationalBundle mc205_1p_stick
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 1
+
+ObjectTemplate.create RotationalBundle mc205_Aileron_Left
+ObjectTemplate.collisionPart 2
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 2
+
+ObjectTemplate.create RotationalBundle mc205_Aileron_Right
+ObjectTemplate.collisionPart 3
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 3
+
+ObjectTemplate.create RotationalBundle mc205_Elevators
+ObjectTemplate.collisionPart 4
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 4
+
+ObjectTemplate.create Landinggear mc205_landing_gear_flap_l
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 5
+
+ObjectTemplate.create Landinggear mc205_landing_gear_flap_r
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 6
+
+ObjectTemplate.create Landinggear mc205_Landing_gear_L
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 7
+ObjectTemplate.addTemplate mc205_wheelLeft
+ObjectTemplate.setPosition 0.0973/-1.0724/0.3442
+
+ObjectTemplate.create spring mc205_wheelLeft
+ObjectTemplate.collisionPart 8
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 8
+
+ObjectTemplate.create Landinggear mc205_Landing_gear_R
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 9
+ObjectTemplate.addTemplate mc205_wheelRight
+ObjectTemplate.setPosition -0.0973/-1.0725/0.3442
+
+ObjectTemplate.create spring mc205_wheelRight
+ObjectTemplate.collisionPart 10
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 10
+
+ObjectTemplate.create Landinggear mc205_landing_gear_strut_L
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 11
+
+ObjectTemplate.create Landinggear mc205_landing_gear_strut_R
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 12
+
+ObjectTemplate.create RotationalBundle mc205_Rudder
+ObjectTemplate.collisionPart 13
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 13
+
+ObjectTemplate.create RotationalBundle mc205_wheelBack_steer
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 14
+ObjectTemplate.addTemplate mc205_wheelback
+ObjectTemplate.setPosition 0/-0.2025/-0.1258
+
+ObjectTemplate.create spring mc205_wheelback
+ObjectTemplate.collisionPart 15
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 15
+
+include mc205.tweak

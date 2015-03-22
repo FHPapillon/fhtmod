@@ -1,0 +1,11 @@
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 0
+ObjectTemplate.physicsType Point
+ObjectTemplate.setStartOnEffects 0
+ObjectTemplate.setStopOnEffects 0
+ObjectTemplate.timeToLive CRD_NONE/-1/0/0
+ObjectTemplate.randomAgeFactor CRD_NONE/1/0/0
+ObjectTemplate.startAtCreation 1
+ObjectTemplate.speedFromPhysics 0
+
+

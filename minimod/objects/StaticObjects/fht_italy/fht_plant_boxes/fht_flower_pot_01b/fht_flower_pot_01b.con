@@ -1,0 +1,13 @@
+GeometryTemplate.create StaticMesh fht_flower_pot_01b
+CollisionManager.createTemplate fht_flower_pot_01b
+
+ObjectTemplate.create SimpleObject fht_flower_pot_01b
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator SORKEN:HP_Ägaren
+ObjectTemplate.collisionMesh fht_flower_pot_01b
+ObjectTemplate.mapMaterial 0 concrete 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.geometry fht_flower_pot_01b
+
+include fht_flower_pot_01b.tweak

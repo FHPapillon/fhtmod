@@ -1,0 +1,183 @@
+GeometryTemplate.create BundledMesh fht_deploy_crate
+CollisionManager.createTemplate fht_deploy_crate
+
+rem -------------------------------------
+ObjectTemplate.create GenericFireArm flak18_dep
+ObjectTemplate.createComponent WeaponHud
+ObjectTemplate.weaponHud.selectIcon Ingame\Weapons\Icons\Hud\Selection\fht_redeps\flak18.dds
+include fht_deployer_weapons.tweak
+rem -------------------------------------
+rem -------------------------------------
+ObjectTemplate.create GenericFireArm flak18ns_dep
+ObjectTemplate.createComponent WeaponHud
+ObjectTemplate.weaponHud.selectIcon Ingame\Weapons\Icons\Hud\Selection\fht_redeps\flak18ns.dds
+include fht_deployer_weapons.tweak
+rem -------------------------------------
+rem -------------------------------------
+ObjectTemplate.create GenericFireArm flak37_dep
+ObjectTemplate.createComponent WeaponHud
+ObjectTemplate.weaponHud.selectIcon Ingame\Weapons\Icons\Hud\Selection\fht_redeps\flak37.dds
+include fht_deployer_weapons.tweak
+rem -------------------------------------
+rem -------------------------------------
+ObjectTemplate.create GenericFireArm flak38_dep
+ObjectTemplate.createComponent WeaponHud
+ObjectTemplate.weaponHud.selectIcon Ingame\Weapons\Icons\Hud\Selection\fht_redeps\flak38.dds
+include fht_deployer_weapons.tweak
+rem -------------------------------------
+rem -------------------------------------
+ObjectTemplate.create GenericFireArm flak43_dep
+ObjectTemplate.createComponent WeaponHud
+ObjectTemplate.weaponHud.selectIcon Ingame\Weapons\Icons\Hud\Selection\fht_redeps\flak43.dds
+include fht_deployer_weapons.tweak
+rem -------------------------------------
+rem -------------------------------------
+ObjectTemplate.create GenericFireArm flakvierling_dep
+ObjectTemplate.createComponent WeaponHud
+ObjectTemplate.weaponHud.selectIcon Ingame\Weapons\Icons\Hud\Selection\fht_redeps\flakvierling.dds
+include fht_deployer_weapons.tweak
+rem -------------------------------------
+rem -------------------------------------
+ObjectTemplate.create GenericFireArm kwk5cm_dep
+ObjectTemplate.createComponent WeaponHud
+ObjectTemplate.weaponHud.selectIcon Ingame\Weapons\Icons\Hud\Selection\fht_redeps\kwk.dds
+include fht_deployer_weapons.tweak
+rem -------------------------------------
+rem -------------------------------------
+ObjectTemplate.create GenericFireArm lefh18_dep
+ObjectTemplate.createComponent WeaponHud
+ObjectTemplate.weaponHud.selectIcon Ingame\Weapons\Icons\Hud\Selection\fht_redeps\lefh.dds
+include fht_deployer_weapons.tweak
+rem -------------------------------------
+rem -------------------------------------
+ObjectTemplate.create GenericFireArm nebelwerfer_dep
+ObjectTemplate.createComponent WeaponHud
+ObjectTemplate.weaponHud.selectIcon Ingame\Weapons\Icons\Hud\Selection\fht_redeps\nebelwerfer.dds
+include fht_deployer_weapons.tweak
+rem -------------------------------------
+rem -------------------------------------
+ObjectTemplate.create GenericFireArm pak35_dep
+ObjectTemplate.createComponent WeaponHud
+ObjectTemplate.weaponHud.selectIcon Ingame\Weapons\Icons\Hud\Selection\fht_redeps\pak35.dds
+include fht_deployer_weapons.tweak
+rem -------------------------------------
+rem -------------------------------------
+ObjectTemplate.create GenericFireArm pak38_dep
+ObjectTemplate.createComponent WeaponHud
+ObjectTemplate.weaponHud.selectIcon Ingame\Weapons\Icons\Hud\Selection\fht_redeps\pak38.dds
+include fht_deployer_weapons.tweak
+rem -------------------------------------
+rem -------------------------------------
+ObjectTemplate.create GenericFireArm pak40_dep
+ObjectTemplate.createComponent WeaponHud
+ObjectTemplate.weaponHud.selectIcon Ingame\Weapons\Icons\Hud\Selection\fht_redeps\pak40.dds
+include fht_deployer_weapons.tweak
+rem -------------------------------------
+rem -------------------------------------
+ObjectTemplate.create GenericFireArm sig33_dep
+ObjectTemplate.createComponent WeaponHud
+ObjectTemplate.weaponHud.selectIcon Ingame\Weapons\Icons\Hud\Selection\fht_redeps\sig33.dds
+include fht_deployer_weapons.tweak
+rem -------------------------------------
+rem -------------------------------------
+ObjectTemplate.create GenericFireArm wurfgerat_dep
+ObjectTemplate.createComponent WeaponHud
+ObjectTemplate.weaponHud.selectIcon Ingame\Weapons\Icons\Hud\Selection\fht_redeps\wurfgerat.dds
+include fht_deployer_weapons.tweak
+rem -------------------------------------
+rem -------------------------------------
+ObjectTemplate.create GenericFireArm 2pdr_dep
+ObjectTemplate.createComponent WeaponHud
+ObjectTemplate.weaponHud.selectIcon Ingame\Weapons\Icons\Hud\Selection\fht_redeps\2pdr.dds
+include fht_deployer_weapons.tweak
+rem -------------------------------------
+rem -------------------------------------
+ObjectTemplate.create GenericFireArm 25pdr_dep
+ObjectTemplate.createComponent WeaponHud
+ObjectTemplate.weaponHud.selectIcon Ingame\Weapons\Icons\Hud\Selection\fht_redeps\25pdr.dds
+include fht_deployer_weapons.tweak
+rem -------------------------------------
+rem -------------------------------------
+ObjectTemplate.create GenericFireArm 25pdr_mkiv_dep
+ObjectTemplate.createComponent WeaponHud
+ObjectTemplate.weaponHud.selectIcon Ingame\Weapons\Icons\Hud\Selection\fht_redeps\25pdriv.dds
+include fht_deployer_weapons.tweak
+rem -------------------------------------
+rem -------------------------------------
+ObjectTemplate.create GenericFireArm 6pdr_dep
+ObjectTemplate.createComponent WeaponHud
+ObjectTemplate.weaponHud.selectIcon Ingame\Weapons\Icons\Hud\Selection\fht_redeps\6pdr.dds
+include fht_deployer_weapons.tweak
+rem -------------------------------------
+rem -------------------------------------
+ObjectTemplate.create GenericFireArm 6pdr_mkiv_dep
+ObjectTemplate.createComponent WeaponHud
+ObjectTemplate.weaponHud.selectIcon Ingame\Weapons\Icons\Hud\Selection\fht_redeps\6pdriv.dds
+include fht_deployer_weapons.tweak
+rem -------------------------------------
+rem -------------------------------------
+ObjectTemplate.create GenericFireArm bofors_dep
+ObjectTemplate.createComponent WeaponHud
+ObjectTemplate.weaponHud.selectIcon Ingame\Weapons\Icons\Hud\Selection\fht_redeps\bofors.dds
+include fht_deployer_weapons.tweak
+rem -------------------------------------
+rem -------------------------------------
+ObjectTemplate.create GenericFireArm breda35_dep
+ObjectTemplate.createComponent WeaponHud
+ObjectTemplate.weaponHud.selectIcon Ingame\Weapons\Icons\Hud\Selection\fht_redeps\breda.dds
+include fht_deployer_weapons.tweak
+rem -------------------------------------
+rem -------------------------------------
+ObjectTemplate.create GenericFireArm cannone47_dep
+ObjectTemplate.createComponent WeaponHud
+ObjectTemplate.weaponHud.selectIcon Ingame\Weapons\Icons\Hud\Selection\fht_redeps\cannone47.dds
+include fht_deployer_weapons.tweak
+rem -------------------------------------
+rem -------------------------------------
+ObjectTemplate.create GenericFireArm schneider_1913_dep
+ObjectTemplate.createComponent WeaponHud
+ObjectTemplate.weaponHud.selectIcon Ingame\Weapons\Icons\Hud\Selection\fht_redeps\schneider.dds
+include fht_deployer_weapons.tweak
+rem -------------------------------------
+rem -------------------------------------
+ObjectTemplate.create GenericFireArm 37mm_dep
+ObjectTemplate.createComponent WeaponHud
+ObjectTemplate.weaponHud.selectIcon Ingame\Weapons\Icons\Hud\Selection\fht_redeps\37mm.dds
+include fht_deployer_weapons.tweak
+rem -------------------------------------
+rem -------------------------------------
+ObjectTemplate.create GenericFireArm 57mm_dep
+ObjectTemplate.createComponent WeaponHud
+ObjectTemplate.weaponHud.selectIcon Ingame\Weapons\Icons\Hud\Selection\fht_redeps\57mm.dds
+include fht_deployer_weapons.tweak
+rem -------------------------------------
+rem -------------------------------------
+ObjectTemplate.create GenericFireArm 76mm_dep
+ObjectTemplate.createComponent WeaponHud
+ObjectTemplate.weaponHud.selectIcon Ingame\Weapons\Icons\Hud\Selection\fht_redeps\76mm.dds
+include fht_deployer_weapons.tweak
+rem -------------------------------------
+rem -------------------------------------
+ObjectTemplate.create GenericFireArm 90mm_dep
+ObjectTemplate.createComponent WeaponHud
+ObjectTemplate.weaponHud.selectIcon Ingame\Weapons\Icons\Hud\Selection\fht_redeps\90mm.dds
+include fht_deployer_weapons.tweak
+rem -------------------------------------
+rem -------------------------------------
+ObjectTemplate.create GenericFireArm m2a1_dep
+ObjectTemplate.createComponent WeaponHud
+ObjectTemplate.weaponHud.selectIcon Ingame\Weapons\Icons\Hud\Selection\fht_redeps\105mm.dds
+include fht_deployer_weapons.tweak
+rem -------------------------------------
+rem -------------------------------------
+ObjectTemplate.create GenericFireArm m33_dep
+ObjectTemplate.createComponent WeaponHud
+ObjectTemplate.weaponHud.selectIcon Ingame\Weapons\Icons\Hud\Selection\fht_redeps\m33.dds
+include fht_deployer_weapons.tweak
+rem -------------------------------------
+rem -------------------------------------
+ObjectTemplate.create GenericFireArm m51_dep
+ObjectTemplate.createComponent WeaponHud
+ObjectTemplate.weaponHud.selectIcon Ingame\Weapons\Icons\Hud\Selection\fht_redeps\m51.dds
+include fht_deployer_weapons.tweak
+rem -------------------------------------

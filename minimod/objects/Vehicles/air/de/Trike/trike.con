@@ -1,0 +1,60 @@
+GeometryTemplate.create BundledMesh trike
+CollisionManager.createTemplate trike
+
+ObjectTemplate.create PlayerControlObject trike
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator XPSM1710:Randy_Mlinarcik
+ObjectTemplate.collisionMesh trike
+ObjectTemplate.mapMaterial 0 cloth 0
+ObjectTemplate.mapMaterial 1 metal 0
+ObjectTemplate.mapMaterial 2 plastic 0
+ObjectTemplate.mapMaterial 3 2 0
+ObjectTemplate.mapMaterial 4 rubber 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometry trike
+ObjectTemplate.addTemplate Trike_FL
+ObjectTemplate.setPosition -0.4307/-0.5909/0.8473
+ObjectTemplate.addTemplate Trike_FR
+ObjectTemplate.setPosition 0.4313/-0.5909/0.8473
+ObjectTemplate.addTemplate Trike_Kite
+ObjectTemplate.setPosition 0/1.1812/-0.8735
+ObjectTemplate.addTemplate Trike_RL
+ObjectTemplate.setPosition -0.8557/-0.5917/-0.8782
+ObjectTemplate.addTemplate Trike_RR
+ObjectTemplate.setPosition 0.8563/-0.5917/-0.8782
+
+ObjectTemplate.create Spring Trike_FL
+ObjectTemplate.collisionPart 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 1
+
+ObjectTemplate.create Spring Trike_FR
+ObjectTemplate.collisionPart 2
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 2
+
+ObjectTemplate.create RotationalBundle Trike_Kite
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 3
+
+ObjectTemplate.create Spring Trike_RL
+ObjectTemplate.collisionPart 4
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 4
+
+ObjectTemplate.create Spring Trike_RR
+ObjectTemplate.collisionPart 5
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.geometryPart 5
+
+include trike.tweak

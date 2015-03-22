@@ -1,0 +1,16 @@
+GeometryTemplate.create StaticMesh city_building_7
+CollisionManager.createTemplate city_building_7
+
+ObjectTemplate.create SimpleObject city_building_7
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator GAMEGRANATE:Dennis
+ObjectTemplate.collisionMesh city_building_7
+ObjectTemplate.mapMaterial 0 concrete 0
+ObjectTemplate.mapMaterial 1 glass 0
+ObjectTemplate.mapMaterial 2 metal 0
+ObjectTemplate.mapMaterial 3 UNDEFINED 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.geometry city_building_7
+
+include city_building_7.tweak

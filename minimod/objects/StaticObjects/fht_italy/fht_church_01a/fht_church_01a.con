@@ -1,0 +1,14 @@
+GeometryTemplate.create StaticMesh fht_church_01a
+CollisionManager.createTemplate fht_church_01a
+
+ObjectTemplate.create SimpleObject fht_church_01a
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator SORKEN:HP_Ägaren
+ObjectTemplate.collisionMesh fht_church_01a
+ObjectTemplate.mapMaterial 0 concrete 0
+ObjectTemplate.mapMaterial 1 glass 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.geometry fht_church_01a
+
+include fht_church_01a.tweak

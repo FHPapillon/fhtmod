@@ -1,0 +1,14 @@
+GeometryTemplate.create StaticMesh corner_building
+CollisionManager.createTemplate corner_building
+
+ObjectTemplate.create SimpleObject corner_building
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator GAMEGRANATE:Dennis
+ObjectTemplate.collisionMesh corner_building
+ObjectTemplate.mapMaterial 0 col 0
+ObjectTemplate.mapMaterial 1 stairs_col 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.geometry corner_building
+
+include corner_building.tweak

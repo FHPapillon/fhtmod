@@ -1,0 +1,55 @@
+rem *** Generated with Bf2Editor.exe [created: 2006/5/15 12:52]
+GeometryTemplate.compressVertexData 1
+GeometryTemplate.maxTextureRepeat 16
+ObjectTemplate.activeSafe PlayerControlObject fht_radio_rp
+ObjectTemplate.creator SPIT:spitfire05
+ObjectTemplate.modifiedByUser "spitfire05"
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.setNetworkableInfo BasicInfo
+rem ---BeginComp:Armor ---
+ObjectTemplate.createComponent Armor
+ObjectTemplate.armor.maxHitPoints 100
+ObjectTemplate.armor.hitPoints 100
+ObjectTemplate.armor.defaultMaterial 71
+ObjectTemplate.armor.waterLevel -0.3
+ObjectTemplate.armor.wreckHitPoints 50
+ObjectTemplate.armor.addArmorEffect 0 e_exp_medium 0.0922809/0.918816/0.016031 0/0/0
+ObjectTemplate.armor.addArmorEffectSpectacular 0 e_exp_medium 0.0922809/0.918816/0.016031 0/0/0
+ObjectTemplate.armor.addArmorEffect -1 e_dstate_static_sparks 0.0922809/0.918816/0.016031 23.7926/22.9757/-28.8103
+rem ---EndComp ---
+rem ---BeginComp:Radio ---
+ObjectTemplate.createComponent Radio
+ObjectTemplate.Radio.spottedMessage FH2_SPOTTED_Unit
+rem ---EndComp ---
+rem ---BeginComp:VehicleHud ---
+ObjectTemplate.createComponent VehicleHud
+ObjectTemplate.vehicleHud.miniMapIcon Ingame\Vehicles\Icons\Minimap\mini_Radio.dds
+ObjectTemplate.vehicleHud.miniMapIconLeaderSize Medium
+rem ---EndComp ---
+ObjectTemplate.geometry fht_radio_rp
+ObjectTemplate.setCollisionMesh fht_radio_rp
+ObjectTemplate.mapMaterial 0 default 26
+ObjectTemplate.mapMaterial 1 wreck 26
+ObjectTemplate.hasMobilePhysics 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+rem -------------------------------------
+ObjectTemplate.addTemplate S_fht_radio_rp_Ambient
+ObjectTemplate.addTemplate S_fht_radio_rp_AmbientDamaged
+ObjectTemplate.addTemplate fht_radio_rp_SpawnPoint
+rem -------------------------------------
+
+ObjectTemplate.activeSafe Sound S_fht_radio_rp_Ambient
+ObjectTemplate.modifiedByUser "spitfire05"
+
+ObjectTemplate.activeSafe Sound S_fht_radio_rp_AmbientDamaged
+ObjectTemplate.modifiedByUser "spitfire05"
+
+ObjectTemplate.create SpawnPoint fht_radio_rp_SpawnPoint
+ObjectTemplate.modifiedByUser "jbp"
+ObjectTemplate.isNotSaveable 1
+ObjectTemplate.createdInEditor 1
+ObjectTemplate.setEnterOnSpawn 0
+ObjectTemplate.setScatterSpawnPositions 1
+ObjectTemplate.setAllowSpawnCloseToVehicle 1
+

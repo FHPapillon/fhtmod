@@ -1,0 +1,12 @@
+xcopy /Q /C /H /R /Y fht_maps.utxt localization\chinese
+xcopy /Q /C /H /R /Y fht_maps.utxt localization\dutch
+xcopy /Q /C /H /R /Y fht_maps.utxt localization\english
+xcopy /Q /C /H /R /Y fht_maps.utxt localization\french
+xcopy /Q /C /H /R /Y fht_maps.utxt localization\german
+xcopy /Q /C /H /R /Y fht_maps.utxt localization\italian
+xcopy /Q /C /H /R /Y fht_maps.utxt localization\japanese
+xcopy /Q /C /H /R /Y fht_maps.utxt localization\korean
+xcopy /Q /C /H /R /Y fht_maps.utxt localization\polish
+xcopy /Q /C /H /R /Y fht_maps.utxt localization\spanish
+xcopy /Q /C /H /R /Y fht_maps.utxt localization\swedish
+xcopy /Q /C /H /R /Y fht_maps.utxt localization\thai

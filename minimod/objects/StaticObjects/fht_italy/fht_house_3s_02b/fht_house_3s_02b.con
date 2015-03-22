@@ -1,0 +1,14 @@
+GeometryTemplate.create StaticMesh fht_house_3s_02b
+CollisionManager.createTemplate fht_house_3s_02b
+
+ObjectTemplate.create SimpleObject fht_house_3s_02b
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator SORKEN:HP_Ägaren
+ObjectTemplate.collisionMesh fht_house_3s_02b
+ObjectTemplate.mapMaterial 0 concrete 0
+ObjectTemplate.mapMaterial 1 stairs_concrete 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.geometry fht_house_3s_02b
+
+include fht_house_3s_02b.tweak

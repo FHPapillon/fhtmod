@@ -1,0 +1,479 @@
+rem *** Generated with Bf2Editor.exe [created: 2006/5/15 12:52]
+GeometryTemplate.maxSkip3pLods 0
+GeometryTemplate.setSubGeometryLodDistance 1 0 15
+GeometryTemplate.setSubGeometryLodDistance 1 1 50
+GeometryTemplate.setSubGeometryLodDistance 1 2 100
+GeometryTemplate.compressVertexData 1
+GeometryTemplate.maxTextureRepeat 16
+ObjectTemplate.activeSafe PlayerControlObject 6pdr_HE_fht
+ObjectTemplate.creator BUTTSLOL:jpixton
+ObjectTemplate.modifiedByUser "Toddel"
+ObjectTemplate.setNetworkableInfo BasicInfo
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.castsDynamicShadow 1
+ObjectTemplate.cullRadiusScale 8
+rem ---BeginComp:Armor ---
+ObjectTemplate.createComponent Armor
+ObjectTemplate.armor.maxHitPoints 300
+ObjectTemplate.armor.hitPoints 300
+ObjectTemplate.armor.defaultMaterial 121
+ObjectTemplate.armor.hpLostWhileUpSideDown 10
+ObjectTemplate.armor.hpLostWhileInWater 10
+ObjectTemplate.armor.hpLostWhileInDeepWater 50
+ObjectTemplate.armor.hpLostWhileCriticalDamage 0.3
+ObjectTemplate.armor.waterDamageDelay 5
+ObjectTemplate.armor.deepWaterDamageDelay 3
+ObjectTemplate.armor.waterLevel 0
+ObjectTemplate.armor.deepWaterLevel 0.7
+ObjectTemplate.armor.wreckHitPoints 100
+ObjectTemplate.armor.timeToStayAsWreck 30
+ObjectTemplate.armor.addArmorEffect 0 e_vexp_fireball_generic 0/0/0 0/0/0
+ObjectTemplate.armor.addArmorEffectSpectacular 0 e_vexp_fireball_generic 0/0/0 0/0/0
+ObjectTemplate.armor.addArmorEffect -1 e_sAmb_wrecksmoke 0/0/0 0/0/0
+ObjectTemplate.armor.addArmorEffect -100 e_vexp_armoredcar_2nd 0/0/0 0/0/0
+rem ---EndComp ---
+rem ---BeginComp:VehicleHud ---
+ObjectTemplate.createComponent VehicleHud
+ObjectTemplate.vehicleHud.hudName "6 Pounder"
+ObjectTemplate.vehicleHud.miniMapIcon Ingame\Vehicles\Icons\Minimap\gun.dds
+ObjectTemplate.vehicleHud.miniMapIconLeaderSize Medium
+ObjectTemplate.vehicleHud.vehicleIconPos 35/13
+ObjectTemplate.vehicleHud.useSelectionIcons 0
+ObjectTemplate.vehicleHud.vehicleIcon Ingame\Weapons\Icons\Hud\StaticWeapons\ATS_TOW.tga
+rem ---EndComp ---
+rem ---BeginComp:HelpHud ---
+ObjectTemplate.createComponent HelpHud
+ObjectTemplate.HelpHud.helpStringKey "FH2_HELP_ATGUN_altFireSights"
+ObjectTemplate.HelpHud.helpSoundKey "fh2_tip"
+rem ---EndComp ---
+ObjectTemplate.geometry 6pdr
+ObjectTemplate.setCollisionMesh 6pdr
+ObjectTemplate.mapMaterial 0 10mmarmor 121
+ObjectTemplate.mapMaterial 1 stairs_metal 36
+ObjectTemplate.mapMaterial 2 wreck 60
+ObjectTemplate.mapMaterial 3 rubber 102
+ObjectTemplate.drag 8
+ObjectTemplate.mass 570
+ObjectTemplate.inertiaModifier 2/5/2
+ObjectTemplate.floaterMod 0.1
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.aiTemplate 6pdrAI
+rem -------------------------------------
+ObjectTemplate.addTemplate S_6Pdr_HE_Ambient
+ObjectTemplate.addTemplate S_6Pdr_HE_AmbientDamaged
+ObjectTemplate.addTemplate 6pdr_EntryPoint
+ObjectTemplate.addTemplate RightClickCameraSwitch
+ObjectTemplate.addTemplate FlareFireCameraSwitch
+rem -------------------------------------
+ObjectTemplate.altSoldierExitPosition 0/0.628036/-0.17917
+ObjectTemplate.seatInformation 6pdr_HE_fht -0.31/0.5/0.33 0/0/0
+ObjectTemplate.seatAnimationSystem Objects/Vehicles/Land/Common/Animations/3p_ATgunner_1_animSys.inc
+ObjectTemplate.seatLeftRotationLimit 5
+ObjectTemplate.seatRightRotationLimit 5
+ObjectTemplate.soundFilter ground
+ObjectTemplate.setVehicleType VTATGun
+ObjectTemplate.hasRestrictedExit 1
+ObjectTemplate.altSoldierExitPosition 0/0.628036/-0.17917
+ObjectTemplate.isOpenVehicle 1
+
+ObjectTemplate.activeSafe RotationalBundle 6Pdr_HE_shield
+ObjectTemplate.modifiedByUser "Toddel"
+ObjectTemplate.setNetworkableInfo BasicInfo
+ObjectTemplate.castsDynamicShadow 1
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+rem -------------------------------------
+ObjectTemplate.addTemplate S_6Pdr_HE_shield_RotationRpm
+ObjectTemplate.addTemplate 6pdr_Camera
+ObjectTemplate.setPosition -0.35351/0.5/-1.47029
+rem -------------------------------------
+ObjectTemplate.setMinRotation -40/0/0
+ObjectTemplate.setMaxRotation 40/0/0
+ObjectTemplate.setMaxSpeed 5/0/0
+ObjectTemplate.setAcceleration 250/0/0
+ObjectTemplate.setInputToYaw PIMouseLookX
+
+ObjectTemplate.activeSafe RotationalBundle 6Pdr_HE_cannonbase
+ObjectTemplate.modifiedByUser "Toddel"
+ObjectTemplate.setNetworkableInfo BasicInfo
+ObjectTemplate.castsDynamicShadow 1
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+rem -------------------------------------
+ObjectTemplate.addTemplate S_6Pdr_HE_cannonbase_RotationRpm
+ObjectTemplate.addTemplate 6pdr_GunCamera
+ObjectTemplate.setPosition -0.3205/0.072/-0.4
+rem -------------------------------------
+ObjectTemplate.setMinRotation 0/-16/0
+ObjectTemplate.setMaxRotation 0/5/0
+ObjectTemplate.setMaxSpeed 0/5/0
+ObjectTemplate.setAcceleration 0/250/0
+ObjectTemplate.setInputToPitch PIMouseLookY
+
+ObjectTemplate.activeSafe GenericFireArm 6Pdr_HE_cannon
+ObjectTemplate.modifiedByUser "Toddel"
+ObjectTemplate.setNetworkableInfo BasicInfo
+ObjectTemplate.castsDynamicShadow 1
+rem ---BeginComp:WeaponHud ---
+ObjectTemplate.createComponent WeaponHud
+ObjectTemplate.weaponHud.weaponIcon Ingame\Weapons\Icons\Hud\bomb.tga
+ObjectTemplate.weaponHud.selectIcon Ingame\Rounds\57mmHE.dds
+ObjectTemplate.weaponHud.hudName "57MM GUN HE"
+ObjectTemplate.weaponHud.guiIndex 1004
+ObjectTemplate.weaponHud.hasFireRate 0
+ObjectTemplate.weaponHud.addShowOnCamMode 2
+ObjectTemplate.weaponHud.displaySelectOnActivation 1
+rem ---EndComp ---
+rem ---BeginComp:SingleFireComp ---
+ObjectTemplate.createComponent SingleFireComp
+ObjectTemplate.fire.roundsPerMinute 30
+ObjectTemplate.fire.addFireRate 0
+rem ---EndComp ---
+rem ---BeginComp:DefaultAmmoComp ---
+ObjectTemplate.createComponent DefaultAmmoComp
+ObjectTemplate.ammo.nrOfMags 22
+ObjectTemplate.ammo.magSize 1
+ObjectTemplate.ammo.reloadTime 4.7
+ObjectTemplate.ammo.autoReload 1
+ObjectTemplate.ammo.reloadWithoutPlayer 1
+rem ---EndComp ---
+rem ---BeginComp:WeaponBasedRecoilComp ---
+ObjectTemplate.createComponent WeaponBasedRecoilComp
+ObjectTemplate.recoil.recoilSize 8
+ObjectTemplate.recoil.recoilSpeed 30
+ObjectTemplate.recoil.recoilSpeedGB 5
+ObjectTemplate.recoil.recoilForce 25
+ObjectTemplate.recoil.cameraRecoilSpeed 6
+ObjectTemplate.recoil.cameraRecoilSize 6
+rem ---EndComp ---
+rem ---BeginComp:SimpleDeviationComp ---
+ObjectTemplate.createComponent SimpleDeviationComp
+ObjectTemplate.deviation.minDev 0.15
+rem ---EndComp ---
+rem ---BeginComp:DefaultSoundComp ---
+ObjectTemplate.createComponent DefaultSoundComp
+rem ---EndComp ---
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.aiTemplate 6pdrgunAI
+rem -------------------------------------
+ObjectTemplate.addTemplate S_6Pdr_HE_cannon_Fire1P
+ObjectTemplate.addTemplate S_6Pdr_HE_cannon_Fire1P_Outdoor
+ObjectTemplate.addTemplate S_6Pdr_HE_cannon_Fire3P
+ObjectTemplate.addTemplate S_6Pdr_HE_cannon_BoltClick
+ObjectTemplate.addTemplate S_6Pdr_HE_cannon_TriggerClick
+ObjectTemplate.addTemplate S_6Pdr_HE_cannon_SwitchFireRate
+ObjectTemplate.addTemplate S_6Pdr_HE_cannon_Reload1P
+ObjectTemplate.addTemplate S_6Pdr_HE_cannon_Reload3P
+ObjectTemplate.addTemplate S_6Pdr_HE_cannon_Deploy1P
+ObjectTemplate.addTemplate S_6Pdr_HE_cannon_Deploy3P
+ObjectTemplate.addTemplate S_6Pdr_HE_cannon_Zoom
+ObjectTemplate.addTemplate e_muzz_tank
+ObjectTemplate.setPosition -0.0226757/0.0806755/1.52748
+ObjectTemplate.addTemplate e_shellejection_50mm
+ObjectTemplate.setPosition -1.64447e-006/-6.16711e-006/-0.777676
+ObjectTemplate.addTemplate geb_tank
+ObjectTemplate.setPosition 0/-0.0289731/3.72529
+rem -------------------------------------
+ObjectTemplate.projectileTemplate 6Pdr-HE-Projectile
+ObjectTemplate.keepProjectiles 5
+ObjectTemplate.velocity 300
+ObjectTemplate.itemIndex 2
+ObjectTemplate.delayToUse 3
+
+ObjectTemplate.activeSafe Sound S_6Pdr_HE_cannon_Fire1P
+ObjectTemplate.modifiedByUser "Toddel"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/weapons/common/sounds/6pdr_fire_1p.wav"
+ObjectTemplate.loopCount 0
+ObjectTemplate.is3dSound 0
+ObjectTemplate.stopType 1
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 1
+ObjectTemplate.pan 0.5
+ObjectTemplate.reverbLevel 1
+
+ObjectTemplate.activeSafe Sound S_6Pdr_HE_cannon_Fire1P_Outdoor
+ObjectTemplate.modifiedByUser "Toddel"
+
+ObjectTemplate.activeSafe Sound S_6Pdr_HE_cannon_Fire3P
+ObjectTemplate.modifiedByUser "Toddel"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/weapons/common/sounds/6pdr_fire_3p.wav"
+ObjectTemplate.loopCount 1
+ObjectTemplate.is3dSound 1
+ObjectTemplate.stopType 1
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 1
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.pitchEnvelope 0/1/0.9/1.1/1/1/0/0.97/1.064/
+ObjectTemplate.volumeEnvelope 0/1/0/1/1/1/0.602/1/1/
+ObjectTemplate.minDistance 25
+ObjectTemplate.halfVolumeDistance 50
+
+ObjectTemplate.activeSafe Sound S_6Pdr_HE_cannon_BoltClick
+ObjectTemplate.modifiedByUser "Toddel"
+
+ObjectTemplate.activeSafe Sound S_6Pdr_HE_cannon_TriggerClick
+ObjectTemplate.modifiedByUser "Toddel"
+
+ObjectTemplate.activeSafe Sound S_6Pdr_HE_cannon_SwitchFireRate
+ObjectTemplate.modifiedByUser "Toddel"
+
+ObjectTemplate.activeSafe Sound S_6Pdr_HE_cannon_Reload1P
+ObjectTemplate.modifiedByUser "Toddel"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/weapons/common/sounds/atgun_reloadmedium_1p3p.wav"
+ObjectTemplate.loopCount 1
+ObjectTemplate.is3dSound 0
+ObjectTemplate.stopType 0
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 1
+ObjectTemplate.pan 0.5
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.pitchEnvelope 0/1/0.9/1.1/1/1/0/0.97/1.03/
+ObjectTemplate.volumeEnvelope 0/1/0/1/1/1/0/0.9/1/
+
+ObjectTemplate.activeSafe Sound S_6Pdr_HE_cannon_Reload3P
+ObjectTemplate.modifiedByUser "Toddel"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/weapons/common/sounds/atgun_reloadmedium_1p3p.wav"
+ObjectTemplate.loopCount 1
+ObjectTemplate.is3dSound 1
+ObjectTemplate.stopType 0
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 1
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.pitchEnvelope 0/1/0.9/1.1/1/1/0/0.97/1.03/
+ObjectTemplate.volumeEnvelope 0/1/0/1/1/1/0/0.9/1/
+ObjectTemplate.minDistance 2
+ObjectTemplate.halfVolumeDistance 5
+ObjectTemplate.soundRadius 1
+
+ObjectTemplate.activeSafe Sound S_6Pdr_HE_cannon_Deploy1P
+ObjectTemplate.modifiedByUser "Toddel"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/weapons/common/sounds/atgun_reloadmedium_1p3p.wav"
+ObjectTemplate.loopCount 1
+ObjectTemplate.is3dSound 0
+ObjectTemplate.stopType 0
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 1
+ObjectTemplate.pan 0.5
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.pitchEnvelope 0/1/0.9/1.1/1/1/0/0.97/1.03/
+ObjectTemplate.volumeEnvelope 0/1/0/1/1/1/0/0.9/1/
+
+ObjectTemplate.activeSafe Sound S_6Pdr_HE_cannon_Deploy3P
+ObjectTemplate.modifiedByUser "Toddel"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/weapons/common/sounds/atgun_reloadmedium_1p3p.wav"
+ObjectTemplate.loopCount 1
+ObjectTemplate.is3dSound 1
+ObjectTemplate.stopType 0
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 1
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.pitchEnvelope 0/1/0.9/1.1/1/1/0/0.97/1.03/
+ObjectTemplate.volumeEnvelope 0/1/0/1/1/1/0/0.9/1/
+ObjectTemplate.minDistance 2
+ObjectTemplate.halfVolumeDistance 5
+ObjectTemplate.soundRadius 1
+
+ObjectTemplate.activeSafe Sound S_6Pdr_HE_cannon_Zoom
+ObjectTemplate.modifiedByUser "Toddel"
+
+ObjectTemplate.activeSafe GenericFireArm 6Pdr_HE_cannon_AP
+ObjectTemplate.modifiedByUser "Toddel"
+ObjectTemplate.setNetworkableInfo BasicInfo
+ObjectTemplate.castsDynamicShadow 1
+rem ---BeginComp:WeaponHud ---
+ObjectTemplate.createComponent WeaponHud
+ObjectTemplate.weaponHud.weaponIcon Ingame\Weapons\Icons\Hud\bomb.tga
+ObjectTemplate.weaponHud.selectIcon Ingame\Rounds\57mmAP.dds
+ObjectTemplate.weaponHud.hudName "57MM GUN AP"
+ObjectTemplate.weaponHud.guiIndex 1004
+ObjectTemplate.weaponHud.hasFireRate 0
+ObjectTemplate.weaponHud.addShowOnCamMode 2
+ObjectTemplate.weaponHud.displaySelectOnActivation 1
+rem ---EndComp ---
+rem ---BeginComp:SingleFireComp ---
+ObjectTemplate.createComponent SingleFireComp
+ObjectTemplate.fire.roundsPerMinute 30
+ObjectTemplate.fire.addFireRate 0
+rem ---EndComp ---
+rem ---BeginComp:DefaultAmmoComp ---
+ObjectTemplate.createComponent DefaultAmmoComp
+ObjectTemplate.ammo.nrOfMags 22
+ObjectTemplate.ammo.magSize 1
+ObjectTemplate.ammo.reloadTime 4.7
+ObjectTemplate.ammo.autoReload 1
+ObjectTemplate.ammo.reloadWithoutPlayer 1
+rem ---EndComp ---
+rem ---BeginComp:WeaponBasedRecoilComp ---
+ObjectTemplate.createComponent WeaponBasedRecoilComp
+ObjectTemplate.recoil.recoilSize 8
+ObjectTemplate.recoil.recoilSpeed 30
+ObjectTemplate.recoil.recoilSpeedGB 5
+ObjectTemplate.recoil.recoilForce 25
+ObjectTemplate.recoil.cameraRecoilSpeed 6
+ObjectTemplate.recoil.cameraRecoilSize 6
+rem ---EndComp ---
+rem ---BeginComp:SimpleDeviationComp ---
+ObjectTemplate.createComponent SimpleDeviationComp
+ObjectTemplate.deviation.minDev 0.15
+rem ---EndComp ---
+rem ---BeginComp:DefaultSoundComp ---
+ObjectTemplate.createComponent DefaultSoundComp
+rem ---EndComp ---
+ObjectTemplate.floaterMod 0
+ObjectTemplate.hasMobilePhysics 1
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.aiTemplate 6pdrgunAI
+rem -------------------------------------
+ObjectTemplate.addTemplate S_6Pdr_HE_cannon_AP_Fire1P
+ObjectTemplate.addTemplate S_6Pdr_HE_cannon_AP_Fire1P_Outdoor
+ObjectTemplate.addTemplate S_6Pdr_HE_cannon_AP_Fire3P
+ObjectTemplate.addTemplate S_6Pdr_HE_cannon_AP_BoltClick
+ObjectTemplate.addTemplate S_6Pdr_HE_cannon_AP_TriggerClick
+ObjectTemplate.addTemplate S_6Pdr_HE_cannon_AP_SwitchFireRate
+ObjectTemplate.addTemplate S_6Pdr_HE_cannon_AP_Reload1P
+ObjectTemplate.addTemplate S_6Pdr_HE_cannon_AP_Reload3P
+ObjectTemplate.addTemplate S_6Pdr_HE_cannon_AP_Deploy1P
+ObjectTemplate.addTemplate S_6Pdr_HE_cannon_AP_Deploy3P
+ObjectTemplate.addTemplate S_6Pdr_HE_cannon_AP_Zoom
+ObjectTemplate.addTemplate e_muzz_tank
+ObjectTemplate.setPosition -0.0226757/0.0806755/1.52748
+ObjectTemplate.addTemplate e_shellejection_50mm
+ObjectTemplate.setPosition -1.64447e-006/-6.16711e-006/-0.777676
+ObjectTemplate.addTemplate geb_tank
+ObjectTemplate.setPosition 0/-0.0289731/3.72529
+rem -------------------------------------
+ObjectTemplate.projectileTemplate 6Pdr-AP-Projectile
+ObjectTemplate.keepProjectiles 5
+ObjectTemplate.velocity 420
+ObjectTemplate.itemIndex 1
+ObjectTemplate.delayToUse 3
+
+ObjectTemplate.activeSafe Sound S_6Pdr_HE_cannon_AP_Fire1P
+ObjectTemplate.modifiedByUser "Toddel"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/weapons/common/sounds/6pdr_fire_1p.wav"
+ObjectTemplate.loopCount 0
+ObjectTemplate.is3dSound 0
+ObjectTemplate.stopType 1
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 1
+ObjectTemplate.pan 0.5
+ObjectTemplate.reverbLevel 1
+
+ObjectTemplate.activeSafe Sound S_6Pdr_HE_cannon_AP_Fire1P_Outdoor
+ObjectTemplate.modifiedByUser "Toddel"
+
+ObjectTemplate.activeSafe Sound S_6Pdr_HE_cannon_AP_Fire3P
+ObjectTemplate.modifiedByUser "Toddel"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/weapons/common/sounds/6pdr_fire_3p.wav"
+ObjectTemplate.loopCount 1
+ObjectTemplate.is3dSound 1
+ObjectTemplate.stopType 1
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 1
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.pitchEnvelope 0/1/0.9/1.1/1/1/0/0.97/1.064/
+ObjectTemplate.volumeEnvelope 0/1/0/1/1/1/0.602/1/1/
+ObjectTemplate.minDistance 25
+ObjectTemplate.halfVolumeDistance 50
+
+ObjectTemplate.activeSafe Sound S_6Pdr_HE_cannon_AP_BoltClick
+ObjectTemplate.modifiedByUser "Toddel"
+
+ObjectTemplate.activeSafe Sound S_6Pdr_HE_cannon_AP_TriggerClick
+ObjectTemplate.modifiedByUser "Toddel"
+
+ObjectTemplate.activeSafe Sound S_6Pdr_HE_cannon_AP_SwitchFireRate
+ObjectTemplate.modifiedByUser "Toddel"
+
+ObjectTemplate.activeSafe Sound S_6Pdr_HE_cannon_AP_Reload1P
+ObjectTemplate.modifiedByUser "Toddel"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/weapons/common/sounds/atgun_reloadmedium_1p3p.wav"
+ObjectTemplate.loopCount 1
+ObjectTemplate.is3dSound 0
+ObjectTemplate.stopType 0
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 1
+ObjectTemplate.pan 0.5
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.pitchEnvelope 0/1/0.9/1.1/1/1/0/0.97/1.03/
+ObjectTemplate.volumeEnvelope 0/1/0/1/1/1/0/0.9/1/
+
+ObjectTemplate.activeSafe Sound S_6Pdr_HE_cannon_AP_Reload3P
+ObjectTemplate.modifiedByUser "Toddel"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/weapons/common/sounds/atgun_reloadmedium_1p3p.wav"
+ObjectTemplate.loopCount 1
+ObjectTemplate.is3dSound 1
+ObjectTemplate.stopType 0
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 1
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.pitchEnvelope 0/1/0.9/1.1/1/1/0/0.97/1.03/
+ObjectTemplate.volumeEnvelope 0/1/0/1/1/1/0/0.9/1/
+ObjectTemplate.minDistance 2
+ObjectTemplate.halfVolumeDistance 5
+ObjectTemplate.soundRadius 1
+
+ObjectTemplate.activeSafe Sound S_6Pdr_HE_cannon_AP_Deploy1P
+ObjectTemplate.modifiedByUser "Toddel"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/weapons/common/sounds/atgun_reloadmedium_1p3p.wav"
+ObjectTemplate.loopCount 1
+ObjectTemplate.is3dSound 0
+ObjectTemplate.stopType 0
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 1
+ObjectTemplate.pan 0.5
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.pitchEnvelope 0/1/0.9/1.1/1/1/0/0.97/1.03/
+ObjectTemplate.volumeEnvelope 0/1/0/1/1/1/0/0.9/1/
+
+ObjectTemplate.activeSafe Sound S_6Pdr_HE_cannon_AP_Deploy3P
+ObjectTemplate.modifiedByUser "Toddel"
+ObjectTemplate.lowSamples 2147483647
+ObjectTemplate.mediumSamples 2147483647
+ObjectTemplate.soundFilename "objects/weapons/common/sounds/atgun_reloadmedium_1p3p.wav"
+ObjectTemplate.loopCount 1
+ObjectTemplate.is3dSound 1
+ObjectTemplate.stopType 0
+ObjectTemplate.volume 1
+ObjectTemplate.pitch 1
+ObjectTemplate.reverbLevel 1
+ObjectTemplate.pitchEnvelope 0/1/0.9/1.1/1/1/0/0.97/1.03/
+ObjectTemplate.volumeEnvelope 0/1/0/1/1/1/0/0.9/1/
+ObjectTemplate.minDistance 2
+ObjectTemplate.halfVolumeDistance 5
+ObjectTemplate.soundRadius 1
+
+ObjectTemplate.activeSafe Sound S_6Pdr_HE_cannon_AP_Zoom
+ObjectTemplate.modifiedByUser "Toddel"
