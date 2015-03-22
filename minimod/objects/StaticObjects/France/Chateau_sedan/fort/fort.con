@@ -1,0 +1,8 @@
+GeometryTemplate.create StaticMesh fort
+
+ObjectTemplate.create SimpleObject fort
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator PAPA-PC:Papa
+ObjectTemplate.geometry fort
+
+include fort.tweak

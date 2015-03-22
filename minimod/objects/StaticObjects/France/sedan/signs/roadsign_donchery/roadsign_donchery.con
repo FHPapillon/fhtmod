@@ -1,0 +1,13 @@
+GeometryTemplate.create StaticMesh roadsign_donchery
+CollisionManager.createTemplate roadsign_donchery
+
+ObjectTemplate.create SimpleObject roadsign_donchery
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator MRGREG-PC:Mr_Greg
+ObjectTemplate.collisionMesh roadsign_donchery
+ObjectTemplate.mapMaterial 0 01_-_Default 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.geometry roadsign_donchery
+
+include roadsign_donchery.tweak

@@ -1,0 +1,13 @@
+GeometryTemplate.create StaticMesh roadsign_wadelincourt
+CollisionManager.createTemplate roadsign_wadelincourt
+
+ObjectTemplate.create SimpleObject roadsign_wadelincourt
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator MRGREG-PC:Mr_Greg
+ObjectTemplate.collisionMesh roadsign_wadelincourt
+ObjectTemplate.mapMaterial 0 01_-_Default 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.geometry roadsign_wadelincourt
+
+include roadsign_wadelincourt.tweak

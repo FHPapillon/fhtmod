@@ -1,0 +1,13 @@
+GeometryTemplate.create StaticMesh mfa
+CollisionManager.createTemplate mfa
+
+ObjectTemplate.create Bundle mfa
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator HABU:MOah
+ObjectTemplate.collisionMesh mfa
+ObjectTemplate.mapMaterial 0 concrete 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.geometry mfa
+
+include mfa.tweak

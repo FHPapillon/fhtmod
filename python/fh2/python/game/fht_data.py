@@ -63,3 +63,11 @@ alliedStartTickets = None
 depSpawners = []
 depRegister = {}
 deployerKits = []
+
+#-------------------------------
+#    fht_bleedReinforcements.py
+#-------------------------------
+bleedCPAxis = ""
+bleedCPAllied = ""
+alliedCPsForAxisBleed = 0
+axisCPsForAlliedBleed = 0

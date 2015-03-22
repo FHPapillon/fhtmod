@@ -1,0 +1,13 @@
+GeometryTemplate.create StaticMesh roadsign_remilly
+CollisionManager.createTemplate roadsign_remilly
+
+ObjectTemplate.create SimpleObject roadsign_remilly
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator MRGREG-PC:Mr_Greg
+ObjectTemplate.collisionMesh roadsign_remilly
+ObjectTemplate.mapMaterial 0 01_-_Default 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.geometry roadsign_remilly
+
+include roadsign_remilly.tweak

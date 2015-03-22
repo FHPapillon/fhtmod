@@ -1,0 +1,14 @@
+GeometryTemplate.create StaticMesh 25mm
+CollisionManager.createTemplate 25mm
+
+ObjectTemplate.create SimpleObject 25mm
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator HABU:MOah
+ObjectTemplate.collisionMesh 25mm
+ObjectTemplate.mapMaterial 0 concrete 0
+ObjectTemplate.mapMaterial 1 Armor_1_metal_plating 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.geometry 25mm
+
+include 25mm.tweak

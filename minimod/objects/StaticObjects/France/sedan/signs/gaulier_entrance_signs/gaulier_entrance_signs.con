@@ -1,0 +1,14 @@
+GeometryTemplate.create StaticMesh gaulier_entrance_signs
+CollisionManager.createTemplate gaulier_entrance_signs
+
+ObjectTemplate.create SimpleObject gaulier_entrance_signs
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator MRGREG-PC:Mr_Greg
+ObjectTemplate.collisionMesh gaulier_entrance_signs
+ObjectTemplate.mapMaterial 0 Material_#35 0
+ObjectTemplate.mapMaterial 1 Material_#36 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.geometry gaulier_entrance_signs
+
+include gaulier_entrance_signs.tweak

@@ -1,0 +1,13 @@
+GeometryTemplate.create StaticMesh roadsign_belgique
+CollisionManager.createTemplate roadsign_belgique
+
+ObjectTemplate.create SimpleObject roadsign_belgique
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator MRGREG-PC:Mr_Greg
+ObjectTemplate.collisionMesh roadsign_belgique
+ObjectTemplate.mapMaterial 0 01_-_Default 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.geometry roadsign_belgique
+
+include roadsign_belgique.tweak

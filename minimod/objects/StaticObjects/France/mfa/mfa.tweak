@@ -1,0 +1,23 @@
+rem *** Generated with Bf2Editor.exe [created: 2006/5/15 12:52]
+GeometryTemplate.doNotGenerateLightmaps 0
+GeometryTemplate.lightmapOverride 0
+GeometryTemplate.compressVertexData 1
+GeometryTemplate.maxTextureRepeat 16
+GeometryTemplate.glowing 0
+GeometryTemplate.noLighting 0
+ObjectTemplate.activeSafe Bundle mfa
+ObjectTemplate.creator HABU:MOah
+ObjectTemplate.modifiedByUser "Administrateur"
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.geometry mfa
+ObjectTemplate.setCollisionMesh mfa
+ObjectTemplate.mapMaterial 0 concrete 78
+ObjectTemplate.hasMobilePhysics 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+rem -------------------------------------
+ObjectTemplate.addTemplate chalet
+ObjectTemplate.addTemplate e_sAmb_AlamSmoke_darker
+ObjectTemplate.setPosition 0.499115/0.503566/2.41481
+rem -------------------------------------
+

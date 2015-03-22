@@ -1,0 +1,14 @@
+GeometryTemplate.create StaticMesh sedan_propaganda_03
+CollisionManager.createTemplate sedan_propaganda_03
+
+ObjectTemplate.create SimpleObject sedan_propaganda_03
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator MRGREG-PC:Mr_Greg
+ObjectTemplate.collisionMesh sedan_propaganda_03
+ObjectTemplate.mapMaterial 0 Material_#1 0
+ObjectTemplate.mapMaterial 1 Material_#2 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.geometry sedan_propaganda_03
+
+include sedan_propaganda_03.tweak

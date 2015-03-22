@@ -1,0 +1,13 @@
+GeometryTemplate.create StaticMesh roadsign_charleville
+CollisionManager.createTemplate roadsign_charleville
+
+ObjectTemplate.create SimpleObject roadsign_charleville
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator MRGREG-PC:Mr_Greg
+ObjectTemplate.collisionMesh roadsign_charleville
+ObjectTemplate.mapMaterial 0 01_-_Default 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.geometry roadsign_charleville
+
+include roadsign_charleville.tweak

@@ -50,7 +50,7 @@ class fht_bleedReinforcements(base):
         
     def onCPChanged(self, cp, team):
         try:           
-            if cp.templateName in [ self.bleedCpAxis, self.bleedCpAllied ] or team is -1:
+            if cp.templateName in [ fhtd.bleedCPAxis, fhtd.bleedCPAllied ] or team is -1:
                 return
 
             areaValues = { 1: 0, 2: 0 }
@@ -60,14 +60,14 @@ class fht_bleedReinforcements(base):
                     areaValues[owner] +=  getattr(cp, "areaValue" + str(owner), 0)
 
 
-            alliedBleedCP = utils.getNamedCP(self.bleedCpAllied)        
+            alliedBleedCP = utils.getNamedCP(fhtd.bleedCPAllied)        
             alliedBleedTeam = int(alliedBleedCP.cp_getParam('team'))
             
-            axisBleedCP = utils.getNamedCP(self.bleedCpAxis)        
+            axisBleedCP = utils.getNamedCP(fhtd.bleedCPAxis)        
             axisBleedTeam = int(axisBleedCP.cp_getParam('team'))
 
             #Rule 1: Axis > 100 AreaValue, Allied < 100 AreaValue --> Allied Reinforcements
-            if areaValue1 > 100 and areaValue2 < 100:
+            if areaValues[1] > 100 and areaValues[2] < 100:
 
                 if alliedBleedTeam == 0:
                     utils.cp_setTeam(alliedBleedCP, 2, 0)
@@ -75,30 +75,30 @@ class fht_bleedReinforcements(base):
                     utils.sayAll("Activated Allied bleed (R1)")
                 if axisBleedTeam == 1:
                     utils.cp_setTeam(axisBleedCP, 0, 0)
-                    if DEBUG: print 'bleedReinforcements: De-Activated Axis Bleed reinforcements'
+                    #if DEBUG: print 'bleedReinforcements: De-Activated Axis Bleed reinforcements'
                     utils.sayAll("De-Activated Axis bleed (R1)")
 
 
             #Rule 2: Allied control at least the necessary flags for Axis bleed --> Activate axis bleed
-            if areaValue2 > 100 and areaValue1 < 100:
+            if areaValues[2] > 100 and areaValues[1] < 100:
                 if axisBleedTeam == 0:
                     utils.cp_setTeam(axisBleedCP, 1, 0)
-                    if DEBUG: print 'bleedReinforcements: Activated Axis bleed reinforcements'
+                    #if DEBUG: print 'bleedReinforcements: Activated Axis bleed reinforcements'
                     utils.sayAll("Activated Axis bleed (R2)")
                 if alliedBleedTeam == 2:
                     utils.cp_setTeam(alliedBleedCP, 0, 0)
-                    if DEBUG: print 'bleedReinforcements: De-Activated Allied bleed reinforcements'
+                    #if DEBUG: print 'bleedReinforcements: De-Activated Allied bleed reinforcements'
                     utils.sayAll("De-Activated Allied bleed (R2)")
 
             #Rule 3: no bleed --> deactivate all bleed reinforcements
-            if (areaValue1 < 100 and areaValue2 < 100) or (areaValue1 > 100 and areaValue2 > 100):
+            if (areaValues[1] < 100 and areaValues[2] < 100) or (areaValues[1] > 100 and areaValues[2] > 100):
                 if alliedBleedTeam == 2:
                     utils.cp_setTeam(alliedBleedCP, 0, 0)
-                    if DEBUG: print 'bleedReinforcements: De-Activated Allied bleed reinforcements'
+                    #if DEBUG: print 'bleedReinforcements: De-Activated Allied bleed reinforcements'
                     utils.sayAll("De-Activated Allied bleed (R3)")
                 if axisBleedTeam == 1:
                     utils.cp_setTeam(axisBleedCP, 0, 0)
-                    if DEBUG: print 'bleedReinforcements: De-Activated Axis bleed reinforcements'
+                    #if DEBUG: print 'bleedReinforcements: De-Activated Axis bleed reinforcements'
                     utils.sayAll("De-Activated Axis bleed (R3)")
         except Exception, e:
             fht.Debug("Exception in fht_bleedReinforcements.round_start(): " + str(e))

@@ -1,0 +1,14 @@
+GeometryTemplate.create StaticMesh chalet
+CollisionManager.createTemplate chalet
+
+ObjectTemplate.create SimpleObject chalet
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator HABU:MOah
+ObjectTemplate.collisionMesh chalet
+ObjectTemplate.mapMaterial 0 Wood_solid 0
+ObjectTemplate.mapMaterial 1 concrete 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.geometry chalet
+
+include chalet.tweak
