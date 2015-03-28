@@ -14,7 +14,7 @@ ObjectTemplate.dropHeadwear helmet
 ObjectTemplate.cullRadiusScale 4	
 
 rem -------------------------------------
-ObjectTemplate.addTemplate no4grenade
+ObjectTemplate.addTemplate m1garandfrag
 ObjectTemplate.addTemplate millsbomb-3
 ObjectTemplate.addTemplate m1garand
 ObjectTemplate.addTemplate m1garandbayonet
