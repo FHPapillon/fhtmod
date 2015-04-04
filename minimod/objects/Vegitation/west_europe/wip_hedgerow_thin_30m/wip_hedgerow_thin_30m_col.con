@@ -1,0 +1,11 @@
+CollisionManager.createTemplate wip_hedgerow_thin_30m
+
+ObjectTemplate.create SimpleObject wip_hedgerow_thin_30m_col
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator AMD64:Martijn
+ObjectTemplate.collisionMesh wip_hedgerow_thin_30m
+ObjectTemplate.mapMaterial 0 UNDEFINED 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+
+include wip_hedgerow_thin_30m_col.tweak

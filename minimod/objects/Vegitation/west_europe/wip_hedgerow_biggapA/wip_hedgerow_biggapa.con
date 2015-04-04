@@ -1,0 +1,14 @@
+GeometryTemplate.create StaticMesh wip_hedgerow_biggapa
+CollisionManager.createTemplate wip_hedgerow_biggapa
+
+ObjectTemplate.create SimpleObject wip_hedgerow_biggapa
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator AMD64:Martijn
+ObjectTemplate.collisionMesh wip_hedgerow_biggapa
+ObjectTemplate.mapMaterial 0 col_mud 0
+ObjectTemplate.mapMaterial 1 col_branch 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.geometry wip_hedgerow_biggapa
+
+include wip_hedgerow_biggapa.tweak

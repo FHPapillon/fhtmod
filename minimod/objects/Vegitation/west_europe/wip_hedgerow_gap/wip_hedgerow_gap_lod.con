@@ -1,0 +1,8 @@
+GeometryTemplate.create StaticMesh wip_hedgerow_gap_lod
+
+ObjectTemplate.create SimpleObject wip_hedgerow_gap_lod
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator AMD64:Martijn
+ObjectTemplate.geometry wip_hedgerow_gap_lod
+
+include wip_hedgerow_gap_lod.tweak

@@ -1,0 +1,14 @@
+GeometryTemplate.create StaticMesh wip_hedgerow_30m
+CollisionManager.createTemplate wip_hedgerow_30m
+
+ObjectTemplate.create SimpleObject wip_hedgerow_30m
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator AMD64:Martijn
+ObjectTemplate.collisionMesh wip_hedgerow_30m
+ObjectTemplate.mapMaterial 0 col_mud 0
+ObjectTemplate.mapMaterial 1 col_branch 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+ObjectTemplate.geometry wip_hedgerow_30m
+
+include wip_hedgerow_30m.tweak

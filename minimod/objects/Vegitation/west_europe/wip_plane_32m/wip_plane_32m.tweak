@@ -1,0 +1,18 @@
+rem *** Generated with Bf2Editor.exe [created: 2009/3/6 17:48]
+GeometryTemplate.doNotGenerateLightmaps 0
+GeometryTemplate.lightmapOverride 0
+GeometryTemplate.compressVertexData 1
+GeometryTemplate.maxTextureRepeat 16
+GeometryTemplate.glowing 0
+GeometryTemplate.noLighting 0
+ObjectTemplate.activeSafe SimpleObject wip_plane_32m
+ObjectTemplate.creator TODDEL:Thorsten
+ObjectTemplate.modifiedByUser "Thorsten"
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.geometry wip_plane_32m
+ObjectTemplate.setCollisionMesh wip_plane_32m
+ObjectTemplate.mapMaterial 0 col_trunk 93
+ObjectTemplate.hasMobilePhysics 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+ObjectTemplate.anchor 0/-13.5/0

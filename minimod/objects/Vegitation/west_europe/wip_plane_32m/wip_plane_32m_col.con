@@ -1,0 +1,11 @@
+CollisionManager.createTemplate wip_plane_32m
+
+ObjectTemplate.create SimpleObject wip_plane_32m_col
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator TODDEL:Thorsten
+ObjectTemplate.collisionMesh wip_plane_32m
+ObjectTemplate.mapMaterial 0 col_trunk 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType 3
+
+include wip_plane_32m_col.tweak

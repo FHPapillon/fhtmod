@@ -1,0 +1,21 @@
+rem *** Generated with Bf2Editor.exe [created: 2005/8/2 11:59]
+GeometryTemplate.setSubGeometryLodDistance 0 0 20
+GeometryTemplate.doNotGenerateLightmaps 0
+GeometryTemplate.lightmapOverride 0
+GeometryTemplate.compressVertexData 1
+GeometryTemplate.maxTextureRepeat 16
+GeometryTemplate.glowing 0
+GeometryTemplate.noLighting 0
+ObjectTemplate.activeSafe SimpleObject wip_hedgerow_end
+ObjectTemplate.creator AMD64:Martijn
+ObjectTemplate.modifiedByUser "Martijn"
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.geometry wip_hedgerow_end
+ObjectTemplate.setCollisionMesh wip_hedgerow_end
+ObjectTemplate.mapMaterial 0 col_mud 58
+ObjectTemplate.mapMaterial 1 col_branch 93
+ObjectTemplate.mapMaterial 2 col_stairs 8002
+ObjectTemplate.hasMobilePhysics 0
+ObjectTemplate.hasCollisionPhysics 1
+ObjectTemplate.physicsType Mesh
+

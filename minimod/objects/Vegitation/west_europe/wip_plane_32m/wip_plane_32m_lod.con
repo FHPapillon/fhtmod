@@ -1,0 +1,8 @@
+GeometryTemplate.create StaticMesh wip_plane_32m_lod
+
+ObjectTemplate.create SimpleObject wip_plane_32m_lod
+ObjectTemplate.saveInSeparateFile 1
+ObjectTemplate.creator TODDEL:Thorsten
+ObjectTemplate.geometry wip_plane_32m_lod
+
+include wip_plane_32m_lod.tweak
