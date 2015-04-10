@@ -101,6 +101,6 @@ class fht_bleedReinforcements(base):
                     #if DEBUG: print 'bleedReinforcements: De-Activated Axis bleed reinforcements'
                     utils.sayAll("De-Activated Axis bleed (R3)")
         except Exception, e:
-            fht.Debug("Exception in fht_bleedReinforcements.round_start(): " + str(e))
+            fht.Debug("Exception in fht_bleedReinforcements.onCPChanged(): " + str(e))
             
 
