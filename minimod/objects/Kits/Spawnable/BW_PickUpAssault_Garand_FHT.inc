@@ -17,11 +17,11 @@ ObjectTemplate.dropHeadwear helmet
 ObjectTemplate.cullRadiusScale 4	
 
 rem -------------------------------------
-ObjectTemplate.addTemplate no4grenade
-ObjectTemplate.addTemplate millsbomb-3
+ObjectTemplate.addTemplate mk2pineapple
 ObjectTemplate.addTemplate m1garand
+ObjectTemplate.addTemplate m1garandfrag
 ObjectTemplate.addTemplate m1garandbayonet
-ObjectTemplate.addTemplate dressing_gb
+ObjectTemplate.addTemplate carlisle_dressing
 include ../debug.con
 rem -------------------------------------
 
