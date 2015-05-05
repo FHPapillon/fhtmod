@@ -619,6 +619,12 @@ rem ================================= Fallback Rally Points ====================
 rem ==================================================================================
 rem ==================================================================================
 
+ObjectTemplate.create SpawnPoint fht_radio_rp_SpawnPoint
+ObjectTemplate.isNotSaveable 1
+ObjectTemplate.setEnterOnSpawn 0
+ObjectTemplate.setScatterSpawnPositions 1
+ObjectTemplate.setAllowSpawnCloseToVehicle 1
+
 rem ================================= Team DE, Squad 0 (Fallback)==========================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_de_0
