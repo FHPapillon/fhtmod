@@ -34,7 +34,7 @@ class fht_deploySpawnPoint(base):
         try:
             fhtd.dspRegister = []
             self.hooker = None
-            self.markerDaemon = rallyMarkerDaemon()
+            self.markerDaemon = markerDaemon.start()
             fhtd.revivalCenter = [(0, 0, 0), def_loc_team1, def_loc_team2]
 
 ##            #Calculate ttl. Apparently minimum ttl is 2:00 (120 secs) which are added to the value given in ttl
@@ -78,6 +78,10 @@ class fht_deploySpawnPoint(base):
             fht.Debug("Exception in fht_deploySpawnPoint.createFallbacks(): " + str(e))                 
 
     def clearMarkers(self, rally):
+        self.markerDaemon.add(rally.templateName.lower(), "fht_rally_marker_" + str(rally.squad), (2000.0, 0.0, 2000.0), team = rally.team)
+        self.hooker.later(0.01, self.continueClear, rally)
+
+    def continueClear(self, rally):
         self.markerDaemon.remove(rally.templateName.lower())
         
     def onVehicleDestroyed(self, rally, attacker):
@@ -354,7 +358,7 @@ class fht_deploySpawnPoint(base):
                         rally.sL = rSL
                         if not squad:
                             squad = "0"
-                        self.markerDaemon.add(rally.templateName.lower(), "fht_rally_marker_" + str(squad), cPos, team = rally.team, TTL = rTTL)
+                        self.markerDaemon.add(rally.templateName.lower(), "fht_rally_marker_" + str(squad), cPos, team = rally.team)
                         if rTTL and rTTL > 0.0:
                             self.hooker.later(rTTL, self.clearRally, rally)
                     else:
@@ -541,88 +545,4 @@ class fht_deploySpawnPoint(base):
             fht.Debug("Exception in fht_deploySpawnPoint.onRadioTrigger(): " + str(e))
 
 
-class rallyMarker(object):
-    
-    def __init__(self, template, pos, rot, team, TTL, daemon):
-        self.template = template
-        self.pos = pos
-        self.rot = rot
-        self.team = team
-        self.timestamp = host.timer_getWallTime()
-        self.TTL = TTL
-        self.daemon = daemon
-        utils.createObject(template, pos, rot, team, TTL)
-    
-    def __str__(self):
-        return "'%s', pos = %s, rot = %s, team = %d" % (self.template, self.pos, self.rot, self.team)
-    
-    def delete_object(self, on_round_end = False):
-        for oid in utils.listObjectsOfTemplate(self.template):
-            (opos, orot) = utils.objectTransform(oid)
-            if fht.sameTransform(opos, self.pos) and fht.sameTransform(orot, self.rot):
-                fht.Debug("Deleting: Found marker for " + str(self))
-                utils.deleteObject(oid)
-            else:
-                dt = host.timer_getWallTime() - self.timestamp
-                if dt >= 0.0 and dt < self.TTL:
-                    if not on_round_end:
-                        markerFound = False
-                        for (key, marker) in self.daemon.markers.items():
-                            if fht.sameTransform(opos, marker.pos) and fht.sameTransform(orot, marker.rot):
-                                fht.Debug("Skipping: Marker Object exists for " + str(self))
-                                markerFound = True
-                                break
-                        if not markerFound:
-                            fht.Debug("Deleting: Found marker for " + str(self.template))
-                            utils.deleteObject(oid)                                
-    
-    def is_equal(self, template, pos, rot, team):
-        if not (self.template.lower() == template.lower() and fht.sameTransform((self.pos[0], 0, self.pos[2]), (pos[0], 0, pos[2])) and fht.sameTransform((self.rot[0], 0, 0), (rot[0], 0, 0))):
-            return False
-        else:
-            return self.team == team
-
-
-
-class rallyMarkerDaemon(object):
-    
-    def __init__(self):
-        self.markers = { }
-        self.obj_ys = { }
-    
-    def on_round_end(self):
-        for (key, marker) in self.markers.items():
-            marker.delete_object(True)
-        
-        self.markers = { }
-        self.obj_ys = { }
-    
-    def add(self, key, template, pos, rot = (0, 0, 0), team = 0, TTL = None):
-        prev_marker = self.markers.get(key, None)
-        if prev_marker:
-            if prev_marker.is_equal(template, pos, rot, team):
-                return None
-            else:
-                self.kill_marker(key, prev_marker)
-        
-        template_key = template.lower()
-        new_y = self.obj_ys.get(template_key, None)
-        if new_y is None:
-            utils.verifyTemplateExistence('PlayerControlObject', template)
-            new_y = -10000.0
-        else:
-            new_y += 1.0
-        self.obj_ys[template_key] = new_y
-        if not TTL:
-            TTL = 99999.0
-        self.markers[key] = rallyMarker(template, (pos[0], new_y, pos[2]), rot, team, TTL, self)
-    
-    def remove(self, key):
-        marker = self.markers.get(key, None)
-        if marker:
-            self.kill_marker(key, marker)
-        
-    def kill_marker(self, key, marker):
-        marker.delete_object()
-        del self.markers[key]
 
