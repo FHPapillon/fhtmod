@@ -18,6 +18,7 @@
 from game.stats.constants import *
 
 startDelay = 1.0
+perimeterDelay = 15.0
 debugging = False
 
 doRallies = True
@@ -30,7 +31,7 @@ doShuffle = True
 #-------------------------------
 maxDistanceToSquadMember = 10
 minSquadPsNear = 2
-rallyRegisterDelay = 0.1
+rallyRegisterDelay = 0.4
 rallyDeployPosition = (0.0, -1.0, 0.0)	        # SP position relative to SL position (to fix floating SP objects)
 rallyTemplatePrefix = "fht_radio_rp"            # name of the deployable spawn point object template for team 0 (dummy, not used), 1 and 2 respectively
 rallySpawnSuffix = "_SpawnPoint"                # note that the object template(s) must be already defined in .con files and known to the map
@@ -142,8 +143,8 @@ fht_adminPowerLevels = {	    # Rights management. The lower the powerlevel, the 
         "rp":                   777,                                                            # Deploys Squad Rally Point.
         "rally":                777,                                                            #   --""--
         "rallypoint":           777,                                                            #   --""--
-        "rr":                   0,                                                            # Resets the rally point, to fix spawnpoint disappearing
-        "resetrally":           0,                                                            #   --""--
+        "rr":                   777,                                                            # Resets the rally point, to fix spawnpoint disappearing
+        "resetrally":           777,                                                            #   --""--
 }       
 
 

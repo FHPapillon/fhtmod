@@ -33,28 +33,14 @@ class fht_mainBaseKillCheck(base):
  
     def __init__(self, *args, **kwargs):
         try:
+            fht.Debug("mbkc happened")
             self.hooker = None
             self.markerDaemon = markerDaemon.start()
-            self.fh2pyAdditions()
         except Exception, e:
-            fht.Debug("Exception in fht_mainBaseKillCheck.init(): " + str(e))
-
-    def fh2pyAdditions(self):
-        try:
-##            vMd.artillery = vMd.artillery_info.keys()
-##            vMd.artillery_info['lefh18_fht'] = dict(barrel = 'lefh18_fht_gun', azimuth = 'lefh18_fht_remotecam_azi_req', elevation = 'lefh18_fht_remotecam_elev_req', camera = 'lefh18_fht_remotecam_holder', velocity = 480.0, gravitymod = 10.0, elevation_offset = -0.25, indicator = 'lefh18_fht_remotecam_targetind', static = True),
-            weaponTypeMap['wrench'] = WEAPON_TYPE_NONLETHAL
-            weaponTypeMap['no73atgrenade'] = WEAPON_TYPE_EXPLOSIVE
-            weaponTypeMap['wrench_pack'] = WEAPON_TYPE_ATGUN
-            vehicleTypeMap['mc205'] = VEHICLE_TYPE_AIR
-            vehicleTypeMap['lefh18_fht'] = VEHICLE_TYPE_ARTILLERY
-        except Exception, e:
-            fht.Debug("Exception in fht_mainBaseKillCheck.fh2pyAdditions(): " + str(e))
-            
-            
-            
+            fht.Debug("Exception in fht_mainBaseKillCheck.init(): " + str(e))        
     
     def round_start(self, hooker):
+        fht.Debug("fht_mainBaseKillCheck.round_start()" )
         try: 
             self.hooker = hooker
             hooker.register('PlayerSpawn', self.onPlayerSpawn)
@@ -67,23 +53,27 @@ class fht_mainBaseKillCheck(base):
             self.hooker.later(fhts.startDelay, self.initData)               
             fhtd.watchList = []
             fhtd.safeList = []
-            
+            fht.Debug("fht_mainBaseKillCheck.round_start() done" )
         except Exception, e:
             fht.Debug("Exception in fht_mainBaseKillCheck.round_start(): " + str(e))         
 
     def round_end(self, hooker):
         try:
+            fht.Debug("fht_mainBaseKillCheck.round_end self.hooker = None  " )
             self.hooker = None
+            fht.Debug("fht_mainBaseKillCheck.round_end self.hooker = None is done  " )
         except Exception, e:
             fht.Debug("Exception in fht_mainBaseKillCheck.round_end(): " + str(e))      
-            
+        fht.Debug("fht_mainBaseKillCheck.round_end finished" )
 
     def initData(self):
+        fht.Debug("fht_mainBaseKillCheck.initData()" )
         try:
             cp = fhtd.cpList[0]
             test = cp.cp_getParam('team')
             test2 = cp.cpID
             self.hooker.later(fhts.startDelay, self.reDrawMarkers)
+            fht.Debug("Not getting stuff.")
         except:
             fht.Debug("New Map. Getting Objects.")
             fht.getPluginObjects()

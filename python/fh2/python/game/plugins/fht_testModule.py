@@ -17,11 +17,14 @@
 # fht_testModule
 #
 import bf2, host, bf2.Timer, random, math, sys, string, os, default, new, re, time
-from game.gameplayPlugin import base
 import game.utilities as utils
 import game.fht_utilities as fht
 import game.fht_settings as fhts
 import game.fht_data as fhtd
+from game import markerDaemon
+from game import scoringCommon
+from game.gameplayPlugin import base, hookProxy
+from game.scoringCommon import hasPilotKit
 
 
 
@@ -69,224 +72,543 @@ import game.fht_data as fhtd
 ##            'DropKit': onDropKit
 ##            'Reset': onReset
 
-def extract_cameras(obj):
-    utils.active(obj.templateName)
-    type = utils.getType()
-    if type == 'camera':
-        return [
-            obj.templateName]
-    else:
-        out = []
-        for c in obj.getChildren():
-            out += extract_cameras(c)
-        
-        return out
-
-
 class testObject:
 
-    def __init__(self):
-        self.mgRegister = []
+        
+    def __init__(self, def_loc_team1 = (0.0, 0.0, 0.0), def_loc_team2 = (0.0, 0.0, 0.0), *args, **kwargs):
+        try:
+            fhtd.dspRegister = []
+            self.hooker = None
+            self.markerDaemon = markerDaemon.start()
+            fhtd.revivalCenter = [(0, 0, 0), def_loc_team1, def_loc_team2]
+            self.shutOff(True)
+
+##            #Calculate ttl. Apparently minimum ttl is 2:00 (120 secs) which are added to the value given in ttl
+##            #So, ensure that the map-defined ttl is done (if possible)
+##            #If a time of < 120 secs is giventtl is set to 0 so that 120 applies
+##            for this in [ fhts.rallyTTL, fhts.rallyTTLSL ]:
+##                if this < 120.0:
+##                    this = 0.0
+##                else:           
+##                    this = this - 120.0
+            
+        except Exception, e:
+            fht.Debug("Exception in fht_deploySpawnPoint.__init__(): " + str(e))
 
     def round_start(self, hooker):
-        self.hooker = hooker
+        try:
+            self.hooker = hooker
+            #hooker.register('RemoteCommand', self.onRemoteCommand)
+            #hooker.register('PlayerSpawn', self.onPlayerSpawn)
+            #hooker.register('VehicleDestroyed', self.onVehicleDestroyed)
+            self.shutOff(True)
+            if not fhts.doRallies: return
+            #self.createFallbacks()
+        except Exception, e:
+            fht.Debug("Exception in fht_deploySpawnPoint.round_start(): " + str(e))
+
+    def createFallbacks(self):
+        try:
+            if not fhts.doRallies: return
+            if not fhtd.revivalCenter[1] is (0.0, 0.0, 0.0):
+                template = fhts.rallyTemplatePrefix + '_' + bf2.gameLogic.getTeamName(1) + '_0'
+                utils.createObject(template, fhtd.revivalCenter[1], (0.0, 0.0, 0.0), 1, 99999)
+                self.hooker.later(fhts.rallyRegisterDelay, self.updateRegister, fhtd.revivalCenter[1], template, 1, None)
+
+            if not fhtd.revivalCenter[2] is (0.0, 0.0, 0.0):
+                template = fhts.rallyTemplatePrefix + '_' + bf2.gameLogic.getTeamName(2) + '_0'
+                utils.createObject(template, fhtd.revivalCenter[2], (0.0, 0.0, 0.0), 2, 99999)
+                self.hooker.later(fhts.rallyRegisterDelay, self.updateRegister, fhtd.revivalCenter[2], template, 2, None)
+             
+        except Exception, e:
+            fht.Debug("Exception in fht_deploySpawnPoint.createFallbacks(): " + str(e))                 
+        
+    def onVehicleDestroyed(self, rally, attacker):
+        try:
+            if not fhts.doRallies: return
+            if fhts.rallyTemplatePrefix in rally.templateName.lower():
+                if rally in fhtd.dspRegister:
+                    fhtd.dspRegister.remove(rally)
+                try:
+                    self.markerDaemon.remove(rally.templateName.lower())
+                except:
+                    pass
+                if not rally.templateName.lower()[-1:].isdigit():
+                    return
+                fht.Debug("Rally " + rally.templateName.lower() + " was destroyed.")
+                if not attacker == None:
+
+                    teamName = bf2.gameLogic.getTeamName(rally.team)
+                    template = ((fhts.rallyTemplatePrefix + '_') + teamName)
+                    self.hooker.later(0.01, self.dummySpawn, template, rally.pos, rally.getRotation(), rally.team)
+                    
+                    if rally.team is attacker.getTeam():
+                        scoringCommon.addScore(attacker, scoringCommon.SCORE_SUICIDE, scoringCommon.RPL)
+                        bf2.gameLogic.sendGameEvent(attacker, 11, 1)
+                    else:
+                        scoringCommon.addScore(attacker, 3, scoringCommon.SKILL)
+                        bf2.gameLogic.sendGameEvent(attacker, 10, 5)
+                
+        except Exception, e:
+            fht.Debug("Exception in fht_deploySpawnPoint.onVehicleDestroyed(): " + str(e))                 
+
+    def dummySpawn(self, template, pos, rot, team):
+        try:
+            if not fhts.doRallies: return            
+            utils.createObject(template, pos, rot, team)
+        except Exception, e:
+            fht.Debug("Exception in fht_deploySpawnPoint.dummySpawn(): " + str(e))   
+
+    def resetRally(self, p):
+        try:
+            if not fhts.doRallies or not p.isValid(): return    
+            pSquad = p.getSquadId()
+            fht.Debug("SquadID: " + str(pSquad))
+            if not pSquad: return
+            pTeam = p.getTeam()
+            fht.Debug("pTeam: " + str(pTeam))
+
+            for r in fhtd.dspRegister:
+                if not utils.reasonableObject(r):
+                    fhtd.dspRegister.remove(r)
+                    fht.Debug("Unreasonable removed")
+                elif not hasattr(r, 'pos'):
+                    fhtd.dspRegister.remove(r)
+                    fht.Debug("Unassigned removed")
+                    fht.deleteThing(r)
+                    try:
+                        self.markerDaemon.remove(r.templateName.lower())
+                    except:
+                        pass
+                else:
+                    if r.team is pTeam:
+                        if r.squad is pSquad:
+                            if fhts.testRallyDisable:
+                                self.forceDisable(r)
+                                return
+                            if r.isDisabled:
+                                fht.personalMessage("%s: Your squad's rally is currently disabled!"%(p.getName()), p)
+                                return                            
+                            rTemplate = r.templateName.lower()
+                            rPos = r.pos
+                            rRot = r.getRotation()
+                            rTeam = r.team
+                            rSquad = r.squad
+                            rSL = r.sL
+                            if rSL:
+                                fht.Debug("SL dep")
+                                info = self.lastDeploySLOnly
+                                if r.time:
+                                    last = r.time
+                                else:
+                                    last = info[pTeam][pSquad]
+                                rTTL = fhts.rallyTTLSL - host.timer_getWallTime() + last
+                                ttl = fhts.rallyTTLSL
+                            else:
+                                info = self.lastDeploy
+                                if r.time:
+                                    last = r.time
+                                else:
+                                    last = info[pTeam][pSquad]                                
+                                rTTL = fhts.rallyTTL - host.timer_getWallTime() + last
+                                ttl = fhts.rallyTTL
+                            fht.Debug(r.time)
+                            fht.Debug(str(rTTL) + " time: " + str(host.timer_getWallTime()) + " info: " + info[0] + " " + str(info[pTeam][pSquad]))
+                            fhtd.dspRegister.remove(r)
+                            fht.deleteThing(r)
+                            try:
+                                self.markerDaemon.remove(r.templateName.lower())
+                            except:
+                                pass
+                            fht.Debug("deleted")
+                            utils.createObject(rTemplate, rPos, rRot, rTeam, ttl)
+                            fht.Debug("created")
+                            self.hooker.later(fhts.rallyRegisterDelay, self.updateRegister, rPos, rTemplate, rTeam, rSquad, rSL, rTTL, last)
+                            return
+            fht.personalMessage("%s: Your squad does not have a rally."%(p.getName()), p)
+        except Exception, e:
+            fht.Debug("Exception in fht_deploySpawnPoint.resetRally(): " + str(e))   
+
+    def shutOff(self, resetOnly = False):
+        try:
+            now = host.timer_getWallTime() - fhts.waitTimeRally
+            self.lastRun = {}
+            
+            self.lastDeploy = [
+                "Normal",
+                ["", now, now, now, now, now, now, now, now, now, now],
+                ["", now, now, now, now, now, now, now, now, now, now]
+            ]
+
+            now = host.timer_getWallTime() - fhts.waitTimeRallySL
+            self.lastDeploySLOnly = [
+                "SL",
+                ["", now, now, now, now, now, now, now, now, now, now],
+                ["", now, now, now, now, now, now, now, now, now, now]
+            ]
+            for r in fhtd.dspRegister:
+                if utils.reasonableObject(r):
+                    try:
+                        self.markerDaemon.remove(r.templateName.lower())
+                    except:
+                        pass
+                    fht.deleteThing(r)
+                fhtd.dspRegister.remove(r)
+            fhtd.dspRegister = []
+            if resetOnly:
+                return
+            teams = [ 0, 1, 2]
+            squads = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+            for team in teams:
+                tName = bf2.gameLogic.getTeamName(team)
+                for squad in squads:
+                    rTemplate = (((fhts.rallyTemplatePrefix + '_') + tName) + '_') + str(squad)
+                    rTemplate = rTemplate.lower()
+                    try:
+                        self.markerDaemon.remove(rTemplate)
+                    except:
+                        pass
+                    for rally in bf2.objectManager.getObjectsOfTemplate(rTemplate):
+                        if not utils.reasonableObject(rally):
+                            continue
+                        else:
+                            try:
+                                self.markerDaemon.remove(rally.templateName.lower())
+                            except:
+                                pass
+                            fht.deleteThing(rally)
+               
+
+        except Exception, e:
+            fht.Debug("Exception in fht_deploySpawnPoint.shutOff(): " + str(e))            
+            
+    def onRemoteCommand(self, pId, cmd):
+        try:
+            if not fhts.doRallies: return
+            if not cmd == "FHT_SL_deploying_spawnpoint":    return
+            timeNow = host.timer_getWallTime()
+            if pId in self.lastRun.keys():
+                if (timeNow - self.lastRun[pId]) < 3.0:	return
+            self.lastRun[pId] = timeNow
+            
+            if pId is -1:
+                pId = 255
+            p =  bf2.playerManager.getPlayerByIndex(pId)
+            
+            if not p.isValid() or not p.isAlive():    return   
+
+            fht.Debug("This Happened")
+
+            pBody = p.getDefaultVehicle()
+            pPos =  pBody.getPosition()
+            pTeam = p.getTeam()
+            pSquad = p.getSquadId()
+
+            if pBody.getParent() or not p.getSquadId() or hasPilotKit(p):	return       
+            
+            rSL = False
+            nearbySquadPs = 0
+            for sP in fht.playersInSquad(pTeam, pSquad):
+                if sP.isValid() and sP.isAlive():
+                    sPV = sP.getVehicle()
+                    if utils.isInRange(pPos, sPV.getPosition(), fhts.maxDistanceToSquadMember):
+                        if not hasPilotKit(p):
+                            nearbySquadPs += 1
+            if nearbySquadPs < fhts.minSquadPsNear:
+                if p.isSquadLeader():
+                    info = self.lastDeploySLOnly
+                    wTime = fhts.waitTimeRallySL - host.timer_getWallTime() + info[pTeam][pSquad]
+                    if wTime > 0:
+                        fht.personalMessage("You cannot deploy a squadleader rally - previous deployment too recent, retry in %.1f seconds"%(wTime), p)
+                        return
+                    ttl = fhts.rallyTTLSL
+                    msg = "%s deployed a squadleader rally for your squad. It will be up for %.0f seconds. Next squadleader rally deployment possible in %.0f seconds"%(p.getName(), ttl, fhts.waitTimeRallySL)
+                    rSL = True
+
+                else:
+                    fht.squadMessage(p, "%s: You cannot deploy a rally - not enough squad members nearby (%d nearby, %d required)"%(p.getName(), nearbySquadPs, fhts.minSquadPsNear))
+                    return
+            else:
+                info = self.lastDeploy
+                wTime = fhts.waitTimeRally - host.timer_getWallTime() + info[pTeam][pSquad]
+                if wTime > 0:
+                    fht.squadMessage(p, "Your squad cannot deploy a rally - previous deployment too recent, retry in %.1f seconds"%(wTime))
+                    return
+                ttl = fhts.rallyTTL
+                msg = "%s deployed a rally for your squad. It will be up for %.0f seconds. Next rally deployment possible in %.0f seconds"%(p.getName(), ttl, fhts.waitTimeRally)
+
+
+            cp, dis = fht.nearestCP(pPos)
+            if cp:
+                utils.active(cp.templateName.lower())
+                disMin = float(cp.getTemplateProperty('radius')) + fhts.minDisFlag
+                if dis < disMin:
+                    fht.squadMessage(p, "%s: You cannot deploy a rally here - too close to flag (%.1fm away, %dm required)"%(p.getName(), dis, disMin))
+                    return
+
+            if fhts.doMainBaseCheck:
+                for mB in fhtd.mainBases:
+                    if mB.team and mB.team != pTeam:
+                        if utils.isInRange(pPos, mB.getPosition(), mB.safeRadius*math.sqrt(2) + fhts.mainBaseBuffer):
+                            fht.squadMessage(p, "%s: You cannot deploy a rally inside the enemy main base perimeter."%(p.getName()))
+                            return                    
+                  
+            for r in fhtd.dspRegister:
+                if not utils.reasonableObject(r):
+                    fhtd.dspRegister.remove(r)
+                elif not hasattr(r, 'pos'):
+                    try:
+                        self.markerDaemon.remove(r.templateName.lower())
+                    except:
+                        pass
+                    fhtd.dspRegister.remove(r)
+                    fht.deleteThing(r)                    
+                else:
+                    if r.team == pTeam:
+                        if r.squad:
+                            if not r.squad is pSquad:
+                                rDis = utils.vectorDistance(pPos, r.pos)
+                                if rDis < fhts.minDisTeamSP:
+                                    fht.squadMessage(p, "%s: You cannot deploy a rally here - too close to fireteam %s's rally. (%.1fm away, %dm required)"%(p.getName(), str(r.squad), rDis, fhts.minDisTeamSP))
+                                    return
+                            else:
+                                try:
+                                    self.markerDaemon.remove(r.templateName.lower())
+                                except:
+                                    pass
+                                fhtd.dspRegister.remove(r)
+                                fht.deleteThing(r)
+                            
+            pTName = bf2.gameLogic.getTeamName(pTeam)
+            rTemplate = (((fhts.rallyTemplatePrefix + '_') + pTName) + '_') + str(pSquad)
+            rTemplate = rTemplate.lower()
+            rPos = utils.denormalise(pPos, fhts.rallyDeployPosition)
+            utils.createObject(rTemplate, rPos, (0.0, 0.0, 0.0), pTeam, ttl)
+            info[pTeam][pSquad] = host.timer_getWallTime()
+            fht.Debug("Should have written info at " + str(host.timer_getWallTime()))
+            fht.Debug("Is actually: " + str(info[pTeam][pSquad]))
+            fht.squadMessage(p, msg)
+            self.hooker.later(fhts.rallyRegisterDelay, self.updateRegister, rPos, rTemplate, pTeam, pSquad,  rSL, None, host.timer_getWallTime() )
+        except Exception, e:
+            fht.Debug("Exception in fht_deploySpawnPoint.onRemoteCommand():" + str(e))
+    
+    
+    def updateRegister(self, pos, template, team, squad = None, rSL = False, rTTL = None, time = None):
+        try:
+            if not fhts.doRallies: return
+            for rally in bf2.objectManager.getObjectsOfTemplate(template):
+                if utils.reasonableObject(rally) and not rally in fhtd.dspRegister:
+                    cPos = rally.getPosition()
+                    if fht.sameTransform(pos, cPos):
+                        if squad:
+                            triggerId = bf2.triggerManager.createRadiusTrigger(rally, self.onRadioTrigger, '<<PCO>>', fhts.rallyRadius,  (1, 2, 3))
+                            rally.triggerId = triggerId
+                            rally.friends = []
+                            rally.enemies = []
+                        rally.time = time
+                        rally.missedSpawns = 0
+                        fhtd.dspRegister.append(rally)
+                        rally.isDisabled = False
+                        rally.squad = squad
+                        rally.team = team
+                        rally.pos = rally.getPosition()
+                        rally.sL = rSL
+                        if not squad:
+                            squad = "0"
+                        self.markerDaemon.add(rally.templateName.lower(), "fht_rally_marker_" + str(squad), cPos, team = rally.team)
+                        if rTTL and rTTL > 0.0:
+                            self.hooker.later(rTTL, self.clearRally, rally)
+                    else:
+                        fht.Debug("Found an unregistered rally.")
+                        self.clearRally(rally, True)
+        except Exception, e:
+            fht.Debug("Exception in fht_deploySpawnPoint.updateRegister(): " + str(e))
+
+    def clearRally(self, rally, unRegistered = False):
+        try:
+            if utils.reasonableObject(rally):
+                if unRegistered and rally in fhtd.dspRegister and hasattr(rally, 'pos'):
+                    return
+                try:
+                    self.markerDaemon.remove(rally.templateName.lower())
+                except:
+                    pass
+                fht.deleteThing(rally)
+            else:
+                fht.Debug("Rally was already destroyed before rTTL expired")
+        except Exception, e:
+            fht.Debug("Exception in fht_deploySpawnPoint.clearRally(): " + str(e))
 
     def onPlayerSpawn(self, p, pBody):
         try:
-            fht.Debug(p.getName())
-            p.currentMGDeployment = None
-            p.cancelMGDep = False
-            p.hasPendingMG = False
-        except Exception, e:
-            fht.Debug("Exception in fht_testModule.onPlayerSpawn(): " + str(e)) 
-
-
-    def getCount(self, p):
-        try:
-            for (wName, count) in p.score.bulletsFired:
-                if (fhts.depMGWeapon in wName.lower()):
-                    return int(count)
-        except Exception, e:
-            fht.Debug("Exception in fht_testModule.checkCount(): " + str(e))                     
-        
-
-    def onPlayerChangeWeapon(self, p, wFrom, wTo):
-        try:
-            if p.getDefaultVehicle().getParent():
-                fht.Debug("Ignoring inside vehicle")
-                return
-
-            if wFrom and 'm1919a6' in wFrom.templateName.lower():
-                p.cancelMGDep = False                
-
-            if wTo and 'm1919a6' in wTo.templateName.lower():
-                fht.Debug("Need Cancel!")
-                p.cancelMGDep = True
-                mg = p.currentMGDeployment
-                if utils.reasonableObject(mg):
-                    if not len(mg.getOccupyingPlayers()):
-                        if mg in self.mgRegister:
-                            self.mgRegister.remove(mg)                        
-                        fht.deleteThing(mg)
-                        fht.Debug("Changed back: Delete old one")
-                        mg = None
-                else:
-                    mg = None
-            
-            if wTo and fhts.depMGWeapon in wTo.templateName.lower():
-                p.depMGLastCount = self.getCount(p)
+            if not fhts.doRallies: return
+            if pBody.getParent() or p.isAIPlayer():	return
                 
-            if wFrom and fhts.depMGWeapon in wFrom.templateName.lower():
-                if p.getKit().templateName.lower() in fhts.depMachineGuns.keys():
-                    if self.getCount(p) > p.depMGLastCount:
-                        pPos = p.getDefaultVehicle().getPosition()
-                        self.hooker.later(fhts.depMGDelay, self.checkMarkers, p, pPos)
-                        fht.Debug("Checking Markers")
-        except Exception, e:
-            fht.Debug("Exception in fht_testModule.onPlayerChangeWeapon(): " + str(e))                     
+            pTeam = p.getTeam()
+            pPos =  pBody.getPosition()
+            pSquad = p.getSquadId()
 
-                    
-    def checkMarkers(self, p, pPos):
-        try:
-            mg = p.currentMGDeployment
-            if utils.reasonableObject(mg):
-                if not len(mg.getOccupyingPlayers()):
-                    self.mgRegister.remove(mg)                        
-                    fht.deleteThing(mg)
-                    fht.Debug("Changed back: Delete old one")
-                    mg = None
-                else:
-                    return
-            for obj in bf2.objectManager.getObjectsOfTemplate(fhts.depMGProjectile):
-                if utils.reasonableObject(obj):
-                    pos = obj.getPosition()
-                    rot = obj.getRotation()
-                    team = p.getTeam()
-                    kitName = p.getKit().templateName.lower()
-##                    template = fhts.depMachineGuns[kitName]
-                    template = 'm1919a6_emplaced'
+            for rally in fhtd.dspRegister:
+                
+                if not utils.reasonableObject(rally):
+                    fhtd.dspRegister.remove(rally)
+                    continue
+                elif not hasattr(rally, 'pos'):
                     try:
-                        test = utils.verifyTemplateExistence("PlayerControlObject", template)
-                        test = True
+                        self.markerDaemon.remove(rally.templateName.lower())
                     except:
-                        test = False
-                    if test:
-                        rot = utils.layFlat(rot)
-                        rot[0] =  rot[0] + 180.0
-                        if math.fabs( pPos[0] - pos[0] ) > 1.0:
-                            fht.deleteThing(obj)
-                            continue
-                        if math.fabs( pPos[2] - pos[2] ) > 1.0:
-                            fht.deleteThing(obj)
-                            continue
-                        fht.Debug("Vertical distance: %.3f"%(pPos[1] - pos[1]))
-                        if not ( pPos[1] - pos[1] ) < 0.16 or not ( pPos[1] - pos[1] ) > -0.45:
-                            fht.Debug("Too far away in vertical")
-                            fht.deleteThing(obj)
-                            continue
-                        pos = list(pos)
-                        pos[1] = pos[1] - 0.05
-                        utils.createObject(template, pos, rot, team, 9999)
-                        p.hasPendingMG = True
-                        self.hooker.later(0.5, self.registerMG, template, pos, rot, team, p)
-                        fht.deleteThing(obj)
-                    else:
-                        fht.Debug("Test Failed")
+                        pass
+                    fhtd.dspRegister.remove(rally)
+                    fht.deleteThing(rally)
+                    continue
+                elif rally.team is pTeam:
+                    if (utils.vectorDistance(rally.pos, pPos)) <= 12:
+                        if not pSquad:
+                            self.correctSpawn(p, rally.squad, 1)
+                            return
+                        if pSquad != rally.squad:  
+                            pSquadHasDSP = False
+                            for r in fhtd.dspRegister:
+                                if not utils.reasonableObject(r):
+                                    fhtd.dspRegister.remove(r)
+                                    continue
+                                elif not hasattr(r, 'pos'):
+                                    try:
+                                        self.markerDaemon.remove(rally.templateName.lower())
+                                    except:
+                                        pass
+                                    fhtd.dspRegister.remove(rally)
+                                    fht.deleteThing(rally)
+                                    continue
+                                elif r.team is pTeam and r.squad is pSquad:
+                                    pSquadHasDSP = True
+                                    if not r.isDisabled:
+                                        if not rally.squad:
+                                            msg = "You were moved to your squad rally."
+                                        else:
+                                            msg = "You selected the wrong rally (squad %d). You were moved to your squad rally."%(rally.squad)
+                                        fht.personalMessage(msg, p)
+                                        pBody.setPosition(r.pos)
+                                        r.missedSpawns += 1
+                                        if fhts.fixRallyAfter < r.missedSpawns:
+                                            self.resetRally(p)
+                                        return                                
+                                    else:
+                                        self.correctSpawn(p, rally.squad, 2)
+                                        return
+                            if not pSquadHasDSP:
+                                self.correctSpawn(p, rally.squad, 3)
+                                return
         except Exception, e:
-            fht.Debug("Exception in fht_testModule.checkMarkers(): " + str(e))
+            fht.Debug("Exception in fht_deploySpawnPoint.onPlayerSpawn(): " + str(e))
 
-    def registerMG(self, template, pos, rot, team, p):
+    def forceDisable(self, rally):
         try:
-            for mg in bf2.objectManager.getObjectsOfTemplate('m1919a6_emplaced'):
-                if not mg in self.mgRegister:
-                    if fht.sameTransform(pos, mg.getPosition()):
-                        if not p.cancelMGDep:
-                            self.mgRegister.append(mg)
-                            p.currentMGDeployment = mg
-                            mg.owner = p
-                            mg.team = team
-                            triggerId = bf2.triggerManager.createRadiusTrigger(mg, self.onRadioTrigger, '<<PCO>>', 0.75,  (1, 2, 3))
-                        else:
-                            fht.deleteThing(mg, True)
+            spTemplate = fhts.rallyTemplatePrefix + '_' + str(rally.team) + '_' + str(rally.squad) + fhts.rallySpawnSuffix
+            if not rally.isDisabled:
+                utils.active(spTemplate)
+                utils.rconExec('ObjectTemplate.setOnlyForAI 1')
+                fht.squadMessage(rally.squad, "Your rally has been disabled by enemy presence.", rally.team)
+                rally.isDisabled = True
+                self.markerDaemon.add(rally.templateName.lower(), "fht_rally_marker_" + str(rally.squad) + "_alt", rally.pos, team = rally.team)
+                return
+            if rally.isDisabled:
+                utils.active(spTemplate)
+                utils.rconExec('ObjectTemplate.setOnlyForAI 0')
+                rally.isDisabled = False
+                self.markerDaemon.add(rally.templateName.lower(), "fht_rally_marker_" + str(rally.squad), rally.pos, team = rally.team)
         except Exception, e:
-            fht.Debug("Exception in fht_testModule.registerMG(): " + str(e))
-
-    def onRadioTrigger(self, triggerId, mg, vehicle, enter, userData):
+            fht.Debug("Exception in fht_deploySpawnPoint.forceDisable(): " + str(e))        
+    	    	        
+    def correctSpawn(self, p, rSquad, case = 0):
         try:
-            fht.Debug(enter)
-            if mg:
+            pTeam = p.getTeam()
+            pBody = p.getDefaultVehicle()
+            pPos = pBody.getPosition()
+        
+            msg = ""
+            if case is 1:
+                if not rSquad:
+                    msg = "You are not in a squad, you were moved to the next flag."
+                else:
+                    msg = "You selected the wrong rally (squad " + str(rSquad) + ". You are not in a squad, you were moved to the next flag."
+            if case is 2:
+                msg = "You selected the wrong rally (squad " + str(rSquad) + "). Your squad rally is disabled, you were moved to the next flag."
+            if case is 3:
+                if not rSquad:
+                    msg = "Your squad does not have a rally, you were moved to the next flag."
+                else:
+                    msg = "You selected the wrong rally (squad " + str(rSquad) + "). Your squad does not have a rally, you were moved to the next flag."
+
+            if msg:
+                fht.personalMessage(msg, p)
+                
+            tPos, dis = fht.nearestSP(pPos, pTeam)
+            if dis is -1:            
+                tPos = fhtd.revivalCenter[pTeam]
+                if tPos is (0.0, 0.0, 0.0):
+                    pBody.setDamage(0.01)
+                    utils.sayAll('fht_deploySpawnPoint.py: spawn error detected for %s. Please report the error if it persists.'%p.getName())
+                    return                    
+            pBody.setPosition(tPos)
+        except Exception, e:
+            fht.Debug("Exception in fht_deploySpawnPoint.correctSpawn(): " + str(e))         
+    
+    def round_end(self, hooker):
+        try:
+            self.hooker = None
+            self.shutOff(True)
+        except Exception, e:
+            fht.Debug("Exception in fht_deploySpawnPoint.round_end(): " + str(e))               
+
+    def onRadioTrigger(self, triggerId, rally, vehicle, enter, userData):
+        try:
+            if not fhts.doRallies: return
+            if vehicle:    
                 for p in vehicle.getOccupyingPlayers():
                     pBody = p.getDefaultVehicle()
-                    if p.getTeam() is mg.team:
+                    if p.getTeam() is rally.team:
                         if enter:
-                            return
+                            if not [p, pBody] in rally.friends:
+                                if not hasPilotKit(p):
+                                    rally.friends.append([p, pBody])
                         else:
-                            if p is mg.owner:
-                                if not len(mg.getOccupyingPlayers()):
-                                    self.mgRegister.remove(mg)
-                                    fht.deleteThing(mg)
-                                    fht.Debug("Changed back: Delete old one")
-                            else:
-                                fht.Debug("but not owner?")
-                                
-##                    else:
-##                        if enter:
-##                            if not [p, pBody] in rally.enemies:
-##                                if not hasPilotKit(p):
-##                                    rally.enemies.append([p, pBody])
-##                        else:
-##                            if [p, pBody] in rally.enemies:
-##                                rally.enemies.remove([p, pBody])
-
-        except Exception, e:
-            fht.Debug("Exception in fht_testModule.onRadioTrigger(): " + str(e))            
-
-    def onExitVehicle(self, player, vehicle):
-        try:
-            if vehicle.templateName.lower() in 'm1919a6_emplaced':
-                fht.Debug("Counts as exit")
-                fht.deleteThing(vehicle, True)
-        except Exception, e:
-            fht.Debug("Exception in fht_testModule.onExitVehicle(): " + str(e))  
-
-    def onEnterVehicle(self, player, vehicle, freeSoldier = False):
-        try:
-
-            if vehicle.templateName.lower() in 'm1919a6_emplaced':
-                if hasattr(vehicle, 'owner'):
-                    if not vehicle.owner is player:
-                        player.getDefaultVehicle.setDamage(24)
+                            if [p, pBody] in rally.friends:
+                                rally.friends.remove([p, pBody])                     
                     else:
-                        fht.Debug("owner entered. all good")
+                        if enter:
+                            if not [p, pBody] in rally.enemies:
+                                if not hasPilotKit(p):
+                                    rally.enemies.append([p, pBody])
+                        else:
+                            if [p, pBody] in rally.enemies:
+                                rally.enemies.remove([p, pBody])
 
-            
+            for fP, fPBody  in rally.friends:
+                if not fP.isValid() or not fP.isAlive() or fP.isManDown() or not utils.reasonableObject(fPBody):
+                    rally.friends.remove([fP, fPBody])
 
-            
-            if not fhts.testDone:
-                ignore_subs = '25pdr mortar gwr34'.split()
-                for pco in bf2.objectManager.getObjectsOfType('dice.hfe.world.ObjectTemplate.PlayerControlObject'):
-                    cams = extract_cameras(pco)
-                    for cam in cams:
-                        do_it = 1
-                        for x in ignore_subs:
-                            if x in cam.lower():
-                                do_it = 0
-                                continue
-                        
-                        if do_it:
-                            utils.active(cam)
-                            utils.rconExec('ObjectTemplate.CVMChase 1')
-                            utils.rconExec('ObjectTemplate.CVMFrontChase 1')
-                            utils.rconExec('ObjectTemplate.CVMFlyBy 1')
-                            continue
-                fhts.testDone = True
-                fht.Debug("Bindair Dundat")
+            for eP, ePBody in rally.enemies:
+                if not eP.isValid() or not eP.isAlive() or eP.isManDown() or not utils.reasonableObject(ePBody):
+                    rally.enemies.remove([eP, ePBody])
+                               
+            spTemplate = fhts.rallyTemplatePrefix + '_' + str(rally.team) + '_' + str(rally.squad) + fhts.rallySpawnSuffix
+            if len(rally.enemies):
+                if ( len(rally.enemies) > len(rally.friends) ) or ( len(rally.enemies) > 3 ):
+                    if not rally.isDisabled:
+                        utils.active(spTemplate)
+                        utils.rconExec('ObjectTemplate.setOnlyForAI 1')
+                        fht.squadMessage(rally.squad, "Your rally has been disabled by enemy presence.", rally.team)
+                        rally.isDisabled = True
+                        self.markerDaemon.add(rally.templateName.lower(), "fht_rally_marker_" + str(rally.squad) + "_alt", rally.pos, team = rally.team)
+                    return
+            if rally.isDisabled:
+                utils.active(spTemplate)
+                utils.rconExec('ObjectTemplate.setOnlyForAI 0')
+                rally.isDisabled = False
+                self.markerDaemon.add(rally.templateName.lower(), "fht_rally_marker_" + str(rally.squad), rally.pos, team = rally.team)
         except Exception, e:
-            fht.Debug("Exception in fht_testModule.onEnterVehicle(): " + str(e))                 
-
-
-
-
+            fht.Debug("Exception in fht_deploySpawnPoint.onRadioTrigger(): " + str(e))
 
 
 

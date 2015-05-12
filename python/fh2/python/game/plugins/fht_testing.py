@@ -25,13 +25,17 @@ import game.fht_settings as fhts
 import game.fht_data as fhtd
 import fht_testModule
 
+test = True
 
 class fht_testing(base):
 
 
     def __init__(self, *args, **kwargs):
+        fht.Debug("Got here")
         self.hooker = None
-        self.testObject = fht_testModule.testObject()
+        self.waiting = None
+        self.testObject = fht_testModule.testObject(kwargs)
+        fht.Debug("Created Test Object")
     
     def bf2_init(self, hooker):
         try:
@@ -53,6 +57,7 @@ class fht_testing(base):
 
     def round_start(self, hooker, *args, **kwargs):
         self.hooker = hooker
+        fht.Debug("Calling Round Start")        
         self.testObject.hooker = hooker
         host.registerGameStatusHandler(self.onGameStatusChanged)
         hooker.register('ControlPointChangedOwner', self.onControlPointChangedOwner)
@@ -103,13 +108,13 @@ class fht_testing(base):
     def reloadModule(self, playerID, msgText, channel, flags):
         if len(msgText) > 1 and playerID != -1:
             if "!reset" in msgText:
-                import fht_testModule as test_reload
-                reload(test_reload)
-                newTestObject = test_reload.testObject()
-                self.testObject = newTestObject
-                self.testObject.hooker = self.hooker
-                fht.Debug("Reloaded Test Module and Object")
-
+                if test:
+                    import fht_testModule as test_reload
+                    reload(test_reload)
+                    newTestObject = test_reload.testObject()
+                    self.testObject = newTestObject
+                    self.testObject.hooker = self.hooker
+                    fht.Debug("Reloaded Test Module and Object")  
 
 
     def onGameStatusChanged(self, status):
@@ -131,7 +136,7 @@ class fht_testing(base):
         except AttributeError, e: pass
         except TypeError, e: fht.Debug(e)
 
-    def onRemoteCommand(self, playerId, cmd):
+    def onRemoteCommand(self, playerId, cmd):           
         try:
             self.testObject.onRemoteCommand(playerId, cmd)
         except AttributeError, e: pass

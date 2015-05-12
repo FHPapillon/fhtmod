@@ -37,6 +37,7 @@ from fht_mainBaseKillCheck import fht_mainBaseKillCheck
 from fht_hotFixer import fht_hotFixer
 from fht_reDeployables import fht_reDeployables
 from fht_flagShuffle import fht_flagShuffle
+from fht_testing import fht_testing
 
 def plugin(plg, **kwargs):
     return (plg, kwargs)

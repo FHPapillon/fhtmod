@@ -34,7 +34,7 @@ class fht_deploySpawnPoint(base):
         try:
             fhtd.dspRegister = []
             self.hooker = None
-            self.markerDaemon = markerDaemon.start()
+            self.markerDaemon = rallyMarkerDaemon()
             fhtd.revivalCenter = [(0, 0, 0), def_loc_team1, def_loc_team2]
 
 ##            #Calculate ttl. Apparently minimum ttl is 2:00 (120 secs) which are added to the value given in ttl
@@ -57,7 +57,7 @@ class fht_deploySpawnPoint(base):
             hooker.register('VehicleDestroyed', self.onVehicleDestroyed)
             self.shutOff(True)
             if not fhts.doRallies: return
-            # self.createFallbacks()
+            self.createFallbacks()
         except Exception, e:
             fht.Debug("Exception in fht_deploySpawnPoint.round_start(): " + str(e))
 
@@ -76,6 +76,9 @@ class fht_deploySpawnPoint(base):
              
         except Exception, e:
             fht.Debug("Exception in fht_deploySpawnPoint.createFallbacks(): " + str(e))                 
+
+    def clearMarkers(self, rally):
+        self.markerDaemon.remove(rally.templateName.lower())
         
     def onVehicleDestroyed(self, rally, attacker):
         try:
@@ -83,13 +86,13 @@ class fht_deploySpawnPoint(base):
             if fhts.rallyTemplatePrefix in rally.templateName.lower():
                 if rally in fhtd.dspRegister:
                     fhtd.dspRegister.remove(rally)
-                try:
-                    self.markerDaemon.remove(rally.templateName.lower())
-                except:
-                    pass
                 if not rally.templateName.lower()[-1:].isdigit():
                     return
+                self.clearMarkers(rally)
                 fht.Debug("Rally " + rally.templateName.lower() + " was destroyed.")
+                spTemplate = fhts.rallyTemplatePrefix + '_' + str(rally.team) + '_' + str(rally.squad) + fhts.rallySpawnSuffix
+                utils.active(spTemplate)
+                utils.rconExec('ObjectTemplate.setOnlyForAI 0')  
                 if not attacker == None:
 
                     teamName = bf2.gameLogic.getTeamName(rally.team)
@@ -131,7 +134,7 @@ class fht_deploySpawnPoint(base):
                     fht.Debug("Unassigned removed")
                     fht.deleteThing(r)
                     try:
-                        self.markerDaemon.remove(r.templateName.lower())
+                        self.clearMarkers(r)
                     except:
                         pass
                 else:
@@ -170,10 +173,7 @@ class fht_deploySpawnPoint(base):
                             fht.Debug(str(rTTL) + " time: " + str(host.timer_getWallTime()) + " info: " + info[0] + " " + str(info[pTeam][pSquad]))
                             fhtd.dspRegister.remove(r)
                             fht.deleteThing(r)
-                            try:
-                                self.markerDaemon.remove(r.templateName.lower())
-                            except:
-                                pass
+                            self.clearMarkers(r)
                             fht.Debug("deleted")
                             utils.createObject(rTemplate, rPos, rRot, rTeam, ttl)
                             fht.Debug("created")
@@ -202,10 +202,7 @@ class fht_deploySpawnPoint(base):
             ]
             for r in fhtd.dspRegister:
                 if utils.reasonableObject(r):
-                    try:
-                        self.markerDaemon.remove(r.templateName.lower())
-                    except:
-                        pass
+                    self.clearMarkers(r)
                     fht.deleteThing(r)
                 fhtd.dspRegister.remove(r)
             fhtd.dspRegister = []
@@ -218,18 +215,11 @@ class fht_deploySpawnPoint(base):
                 for squad in squads:
                     rTemplate = (((fhts.rallyTemplatePrefix + '_') + tName) + '_') + str(squad)
                     rTemplate = rTemplate.lower()
-                    try:
-                        self.markerDaemon.remove(rTemplate)
-                    except:
-                        pass
                     for rally in bf2.objectManager.getObjectsOfTemplate(rTemplate):
                         if not utils.reasonableObject(rally):
                             continue
                         else:
-                            try:
-                                self.markerDaemon.remove(rally.templateName.lower())
-                            except:
-                                pass
+                            self.clearMarkers(rally)
                             fht.deleteThing(rally)
                
 
@@ -309,10 +299,7 @@ class fht_deploySpawnPoint(base):
                 if not utils.reasonableObject(r):
                     fhtd.dspRegister.remove(r)
                 elif not hasattr(r, 'pos'):
-                    try:
-                        self.markerDaemon.remove(r.templateName.lower())
-                    except:
-                        pass
+                    self.clearMarkers(r)
                     fhtd.dspRegister.remove(r)
                     fht.deleteThing(r)                    
                 else:
@@ -324,10 +311,7 @@ class fht_deploySpawnPoint(base):
                                     fht.squadMessage(p, "%s: You cannot deploy a rally here - too close to fireteam %s's rally. (%.1fm away, %dm required)"%(p.getName(), str(r.squad), rDis, fhts.minDisTeamSP))
                                     return
                             else:
-                                try:
-                                    self.markerDaemon.remove(r.templateName.lower())
-                                except:
-                                    pass
+                                self.clearMarkers(r)
                                 fhtd.dspRegister.remove(r)
                                 fht.deleteThing(r)
                             
@@ -336,6 +320,9 @@ class fht_deploySpawnPoint(base):
             rTemplate = rTemplate.lower()
             rPos = utils.denormalise(pPos, fhts.rallyDeployPosition)
             utils.createObject(rTemplate, rPos, (0.0, 0.0, 0.0), pTeam, ttl)
+            spTemplate = fhts.rallyTemplatePrefix + '_' + str(pTeam) + '_' + str(pSquad) + fhts.rallySpawnSuffix
+            utils.active(spTemplate)
+            utils.rconExec('ObjectTemplate.setOnlyForAI 0')              
             info[pTeam][pSquad] = host.timer_getWallTime()
             fht.Debug("Should have written info at " + str(host.timer_getWallTime()))
             fht.Debug("Is actually: " + str(info[pTeam][pSquad]))
@@ -367,7 +354,7 @@ class fht_deploySpawnPoint(base):
                         rally.sL = rSL
                         if not squad:
                             squad = "0"
-                        self.markerDaemon.add(rally.templateName.lower(), "fht_rally_marker_" + str(squad), cPos, team = rally.team)
+                        self.markerDaemon.add(rally.templateName.lower(), "fht_rally_marker_" + str(squad), cPos, team = rally.team, TTL = rTTL)
                         if rTTL and rTTL > 0.0:
                             self.hooker.later(rTTL, self.clearRally, rally)
                     else:
@@ -381,10 +368,7 @@ class fht_deploySpawnPoint(base):
             if utils.reasonableObject(rally):
                 if unRegistered and rally in fhtd.dspRegister and hasattr(rally, 'pos'):
                     return
-                try:
-                    self.markerDaemon.remove(rally.templateName.lower())
-                except:
-                    pass
+                self.clearMarkers(rally)
                 fht.deleteThing(rally)
             else:
                 fht.Debug("Rally was already destroyed before rTTL expired")
@@ -406,10 +390,7 @@ class fht_deploySpawnPoint(base):
                     fhtd.dspRegister.remove(rally)
                     continue
                 elif not hasattr(rally, 'pos'):
-                    try:
-                        self.markerDaemon.remove(rally.templateName.lower())
-                    except:
-                        pass
+                    self.clearMarkers(rally)
                     fhtd.dspRegister.remove(rally)
                     fht.deleteThing(rally)
                     continue
@@ -425,10 +406,7 @@ class fht_deploySpawnPoint(base):
                                     fhtd.dspRegister.remove(r)
                                     continue
                                 elif not hasattr(r, 'pos'):
-                                    try:
-                                        self.markerDaemon.remove(rally.templateName.lower())
-                                    except:
-                                        pass
+                                    self.clearMarkers(r)
                                     fhtd.dspRegister.remove(rally)
                                     fht.deleteThing(rally)
                                     continue
@@ -563,4 +541,88 @@ class fht_deploySpawnPoint(base):
             fht.Debug("Exception in fht_deploySpawnPoint.onRadioTrigger(): " + str(e))
 
 
+class rallyMarker(object):
+    
+    def __init__(self, template, pos, rot, team, TTL, daemon):
+        self.template = template
+        self.pos = pos
+        self.rot = rot
+        self.team = team
+        self.timestamp = host.timer_getWallTime()
+        self.TTL = TTL
+        self.daemon = daemon
+        utils.createObject(template, pos, rot, team, TTL)
+    
+    def __str__(self):
+        return "'%s', pos = %s, rot = %s, team = %d" % (self.template, self.pos, self.rot, self.team)
+    
+    def delete_object(self, on_round_end = False):
+        for oid in utils.listObjectsOfTemplate(self.template):
+            (opos, orot) = utils.objectTransform(oid)
+            if fht.sameTransform(opos, self.pos) and fht.sameTransform(orot, self.rot):
+                fht.Debug("Deleting: Found marker for " + str(self))
+                utils.deleteObject(oid)
+            else:
+                dt = host.timer_getWallTime() - self.timestamp
+                if dt >= 0.0 and dt < self.TTL:
+                    if not on_round_end:
+                        markerFound = False
+                        for (key, marker) in self.daemon.markers.items():
+                            if fht.sameTransform(opos, marker.pos) and fht.sameTransform(orot, marker.rot):
+                                fht.Debug("Skipping: Marker Object exists for " + str(self))
+                                markerFound = True
+                                break
+                        if not markerFound:
+                            fht.Debug("Deleting: Found marker for " + str(self.template))
+                            utils.deleteObject(oid)                                
+    
+    def is_equal(self, template, pos, rot, team):
+        if not (self.template.lower() == template.lower() and fht.sameTransform((self.pos[0], 0, self.pos[2]), (pos[0], 0, pos[2])) and fht.sameTransform((self.rot[0], 0, 0), (rot[0], 0, 0))):
+            return False
+        else:
+            return self.team == team
+
+
+
+class rallyMarkerDaemon(object):
+    
+    def __init__(self):
+        self.markers = { }
+        self.obj_ys = { }
+    
+    def on_round_end(self):
+        for (key, marker) in self.markers.items():
+            marker.delete_object(True)
+        
+        self.markers = { }
+        self.obj_ys = { }
+    
+    def add(self, key, template, pos, rot = (0, 0, 0), team = 0, TTL = None):
+        prev_marker = self.markers.get(key, None)
+        if prev_marker:
+            if prev_marker.is_equal(template, pos, rot, team):
+                return None
+            else:
+                self.kill_marker(key, prev_marker)
+        
+        template_key = template.lower()
+        new_y = self.obj_ys.get(template_key, None)
+        if new_y is None:
+            utils.verifyTemplateExistence('PlayerControlObject', template)
+            new_y = -10000.0
+        else:
+            new_y += 1.0
+        self.obj_ys[template_key] = new_y
+        if not TTL:
+            TTL = 99999.0
+        self.markers[key] = rallyMarker(template, (pos[0], new_y, pos[2]), rot, team, TTL, self)
+    
+    def remove(self, key):
+        marker = self.markers.get(key, None)
+        if marker:
+            self.kill_marker(key, marker)
+        
+    def kill_marker(self, key, marker):
+        marker.delete_object()
+        del self.markers[key]
 

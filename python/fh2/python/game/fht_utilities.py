@@ -27,8 +27,9 @@ errorFileName = "mods/fh2/fht/fhterrors.log"
 
 
 def getPluginObjects():
+    Debug("fht_utilities.getPluginObjects")
     try:
-        
+        Debug("fht_utilities.getPluginObjects")
         fhtd.fhtPluginObjects = {}
         fhtd.allPluginObjects = {}
         fhtd.kitLimiters = {}
@@ -49,6 +50,7 @@ def getPluginObjects():
                     
     except Exception, e:
         Debug("Failed to get plugin Objects" + str(e))
+    Debug("fht_utilities.getPluginObjects done")
 
 def Debug(msg):
         msg = str(msg)
@@ -106,64 +108,90 @@ def sameTransform(x, y):
         return False
 
 def getControlPoints():
+    Debug("fht_utilities.getControlPoints")
     try:
         import game.gamemodes.gpm_cq
         fhtd.cpList = game.gamemodes.gpm_cq.g_controlPoints
     except:
         fhtd.cpList = []
+    try:
+        if not len(fhtd.cpList):
+            fhtd.cpList = bf2.objectManager.getObjectsOfType('dice.hfe.world.ObjectTemplate.ControlPoint')
+        for cp in fhtd.cpList:
+            utils.active(cp.templateName)
+            cp.cpID = int(utils.rconExec("ObjectTemplate.controlPointId"))
+            cp.areaValue1 = int(utils.templateProperty('areaValueTeam1'))
+            cp.areaValue2 = int(utils.templateProperty('areaValueTeam2'))
+            cp.showOnMinimap = int(utils.templateProperty('showonminimap'))
+    except Exception, e:
+        Debug("Exception in fht.getControlPoints(): " + str(e)) 
+    Debug("fht_utilities.getControlPoints done")
 
-    if not len(fhtd.cpList):
-        fhtd.cpList = bf2.objectManager.getObjectsOfType('dice.hfe.world.ObjectTemplate.ControlPoint')
-    for cp in fhtd.cpList:
-        utils.active(cp.templateName)
-        cp.cpID = int(utils.rconExec("ObjectTemplate.controlPointId"))
-        cp.areaValue1 = int(utils.templateProperty('areaValueTeam1'))
-        cp.areaValue2 = int(utils.templateProperty('areaValueTeam2'))
-        cp.showOnMinimap = int(utils.templateProperty('showonminimap'))
-            
 def getSpawnPoints():
-    fhtd.spList = []
-    fhtd.spCPIds = []
-    fhtd.spList = bf2.objectManager.getObjectsOfType('dice.bf.SpawnPoint')
-    for sp in fhtd.spList:
-        utils.active(sp.templateName)
-        sp.cpID = int(utils.templateProperty('setControlPointId'))
-        fhtd.spCPIds.append(sp.cpID)
-        if not (utils.templateProperty('setGroup')).isdigit():
-            sp.spawnGroup = None
-        else: 
-            sp.spawnGroup = int(utils.templateProperty('setGroup'))
-        
-        
-def getSpawners():
-    fhtd.objectSpawners = []
-    fhtd.depSpawners = []
-    fhtd.objectSpawners = bf2.objectManager.getObjectsOfType('dice.hfe.world.ObjectTemplate.ObjectSpawner')
-    for s in fhtd.objectSpawners:
-        if not utils.reasonableObject(s):
-            continue
+    Debug("fht_utilities.getSpawnPoints")
+    try:
+        fhtd.spList = []
+        fhtd.spCPIds = []
+        fhtd.spList = bf2.objectManager.getObjectsOfType('dice.bf.SpawnPoint')
+        for sp in fhtd.spList:
+            utils.active(sp.templateName)
+            sp.cpID = int(utils.templateProperty('setControlPointId'))
+            fhtd.spCPIds.append(sp.cpID)
+            if not (utils.templateProperty('setGroup')).isdigit():
+                sp.spawnGroup = None
+            else: 
+                sp.spawnGroup = int(utils.templateProperty('setGroup'))
+    except Exception, e:
+        Debug("Exception in fht.getSpawnPoints(): " + str(e)) 
+    Debug("fht_utilities.getSpawnPoints done")
 
-        utils.active(s.templateName)
-        s.templates = []
-        script = utils.printScriptTillItFuckingWorks()
-        parser = conParser.ConParser()
-        parser.run_string(script)
-        if len(parser.templates) != 1:
-            log.warn('parse failed for template script', s.templateName, ':')
-            log.warn(script)
-            continue
-        template = parser.templates[0]
-        for (team, object) in template.properties.get('objecttemplate.setobjecttemplate', []):            
-            s.templates.append(object.lower())
-            if s in fhtd.depSpawners:
+def getSpawners():
+    Debug("fht_utilities.getSpawners")
+    try:
+        fhtd.objectSpawners = []
+        fhtd.depSpawners = []
+        fhtd.objectSpawners = bf2.objectManager.getObjectsOfType('dice.hfe.world.ObjectTemplate.ObjectSpawner')
+        for s in fhtd.objectSpawners:
+            if not utils.reasonableObject(s):
                 continue
-            elif object.lower() in fhts.emplacements.keys():
-                fhtd.depSpawners.append(s)
-        s.id = getId(s)                                   
-        utils.activeObject(s.id)
-        s.cpID = utils.rconExec("Object.getControlPointId")
+            
+            #Debug("spawner: " + s.templateName) 
+            utils.active(s.templateName)
+            #Debug("active: " + s.templateName) 
+            s.templates = []
+            #Debug("templates: " + s.templateName) 
+            script = utils.printScriptTillItFuckingWorks()
+            #Debug("script: " + s.templateName) 
+            parser = conParser.ConParser()
+            #Debug("parser: " + s.templateName) 
+            parser.run_string(script)
+            #Debug("run_string: " + s.templateName) 
+            script_lines = utils.printScriptTillItFuckingWorks().lower().splitlines()
+           
+            for line in script_lines:
+                words = line.split()
+                if len(words) == 0 or words[0] != 'objecttemplate.setobjecttemplate':
+                    continue
+                #Debug("0: " + words[0]) 
+                #Debug("1: " + words[1]) 
+                #Debug("2: " + words[2]) 
+                s.templates.append(words[2])
+                         
+                if s in fhtd.depSpawners:
+                    continue
+                elif words[2].lower() in fhts.emplacements.keys():
+                    fhtd.depSpawners.append(s)
+            s.id = getId(s)    
+            #Debug("s.id: " + s.id) 
+            utils.activeObject(s.id)
+            s.cpID = utils.rconExec("Object.getControlPointId")
+            #Debug("s.cpID: " + s.cpID) 
+    except Exception, e:
+        Debug("Exception in fht.getSpawners(): " + str(e)) 	
+    Debug("fht_utilities.getSpawners done")
 
 def setCPSpawnPoints():
+    Debug("fht_utilities.setCPSpawnPoints")
     try:
         cpSpawnPoints = { }   
         for cp in fhtd.cpList:
@@ -178,10 +206,10 @@ def setCPSpawnPoints():
         for key in cpSpawnPoints.keys():
             Debug(str(key))
             Debug(str(cpSpawnPoints[key]))
-            
     except Exception, e:
         Debug("Exception in fht.setCPSpawnPoints(): " + str(e))        
-                                   
+    Debug("fht_utilities.setCPSpawnPoints done")
+
 def rot_X(w):
     w = math.radians(w)
     cos_w = math.cos(w)
@@ -442,6 +470,7 @@ def findPlayer(playerName):
 		return "none"
 
 def sortCPs():
+    Debug("fht_utilities.sortCPs")
     try:
         cpList = fhtd.cpList
         mbList = fhtd.mainBases
@@ -477,6 +506,7 @@ def sortCPs():
             fhtd.sortedCPs.append(item[0])
     except:
         Debug("Exception in sortCPs")
+    Debug("fht_utilities.sortCPs done")
 
 def getSortedCP(no, mainBases = False):
     if mainBases:
