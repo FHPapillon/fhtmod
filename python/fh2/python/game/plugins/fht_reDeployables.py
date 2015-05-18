@@ -16,7 +16,7 @@
 #
 # fht_reDeployables.py -- allows relocation of static emplacements
 #
-#  ©2014 Harmonikater for Forgotten Honor
+#  Â©2014 Harmonikater for Forgotten Honor
 import bf2, host, bf2.Timer, random, math
 from game.gameplayPlugin import base
 import game.utilities as utils
@@ -95,6 +95,7 @@ class fht_reDeployables(base):
                         if not ( hasattr(obj, 'DID') and obj.DID is DID ):
                             found = True
                             obj.DID = DID
+                            fht.Debug("fht_reDeployables.assignDID: %s registered on %d. attempt" %(template, attempt + 1))
                             if kit:
                                 fhtd.depRegister[DID]['active'] = True
                                 fhtd.depRegister[DID]['current'] = obj
@@ -110,12 +111,12 @@ class fht_reDeployables(base):
                         pos = utils.denormalise(pos, fht.rotateVector(rot, offset))
                         utils.createObject(template, pos, rot, 0, 9999)
                         attempt += 1
-                        self.hooker.later(fhts.respawnAttemptInterval, self.assignDID, template, pos, DID, attempt)
+                        self.hooker.later(fhts.respawnAttemptInterval, self.assignDID, template, pos, DID, None, attempt)
                         return
                     if pos is fhtd.depRegister[DID]['pos']:
                         self.hooker.later(fhts.respawnAttemptInterval, self.respawnEmplacement, DID)
         except Exception, e:
-            fht.Debug("Exception in fht_reDeployables.assignDID(): " + str(e))  
+            fht.Debug("Exception in fht_reDeployables.assignDID(): " + str(e)) 
 
 
 
