@@ -189,7 +189,7 @@ depRegisterDelay = 0.1
 packWeapon = 'wrench_pack'
 depRPS = 0.5
 depCorrFactor = 0.8
-respawnAttemptInterval = 5.0
+respawnAttemptInterval = 1.0
 crateHeight = 0.05
 depMaxAttempts = 3
 
