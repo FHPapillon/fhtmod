@@ -944,6 +944,12 @@ ObjectTemplate.geometry rally_stuff_us
 
 rem ================================= Spawnpoint Template ====================================
 
+ObjectTemplate.create SpawnPoint fht_radio_rp_SpawnPoint
+ObjectTemplate.isNotSaveable 1
+ObjectTemplate.setEnterOnSpawn 0
+ObjectTemplate.setScatterSpawnPositions 1
+ObjectTemplate.setAllowSpawnCloseToVehicle 1
+
 ObjectTemplate.create SpawnPoint fht_radio_rp_1_1_SpawnPoint
 ObjectTemplate.isNotSaveable 1
 ObjectTemplate.setEnterOnSpawn 0
