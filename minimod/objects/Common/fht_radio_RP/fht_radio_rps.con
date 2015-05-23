@@ -34,6 +34,10 @@ rem ============================================================================
 rem ================================= Team DE, Squad 1 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_de_1
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_de_1
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_1.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_1.dds
 ObjectTemplate.addTemplate rally_stuff_de
 ObjectTemplate.addTemplate e_rp_de 
 ObjectTemplate.addTemplate fht_radio_rp_1_1_SpawnPoint
@@ -42,6 +46,10 @@ include fht_radio_rp.tweak
 rem ================================= Team DE, Squad 2 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_de_2
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_de_2
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_2.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_2.dds
 ObjectTemplate.addTemplate rally_stuff_de
 ObjectTemplate.addTemplate e_rp_de 
 ObjectTemplate.addTemplate fht_radio_rp_1_2_SpawnPoint
@@ -50,6 +58,10 @@ include fht_radio_rp.tweak
 rem ================================= Team DE, Squad 3 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_de_3
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_de_3
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_3.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_3.dds
 ObjectTemplate.addTemplate rally_stuff_de
 ObjectTemplate.addTemplate e_rp_de 
 ObjectTemplate.addTemplate fht_radio_rp_1_3_SpawnPoint
@@ -58,6 +70,10 @@ include fht_radio_rp.tweak
 rem ================================= Team DE, Squad 4 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_de_4
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_de_4
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_4.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_4.dds
 ObjectTemplate.addTemplate rally_stuff_de
 ObjectTemplate.addTemplate e_rp_de 
 ObjectTemplate.addTemplate fht_radio_rp_1_4_SpawnPoint
@@ -66,6 +82,10 @@ include fht_radio_rp.tweak
 rem ================================= Team DE, Squad 5 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_de_5
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_de_5
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_5.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_5.dds
 ObjectTemplate.addTemplate rally_stuff_de
 ObjectTemplate.addTemplate e_rp_de 
 ObjectTemplate.addTemplate fht_radio_rp_1_5_SpawnPoint
@@ -74,6 +94,10 @@ include fht_radio_rp.tweak
 rem ================================= Team DE, Squad 6 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_de_6
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_de_6
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_6.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_6.dds
 ObjectTemplate.addTemplate rally_stuff_de
 ObjectTemplate.addTemplate e_rp_de 
 ObjectTemplate.addTemplate fht_radio_rp_1_6_SpawnPoint
@@ -82,6 +106,10 @@ include fht_radio_rp.tweak
 rem ================================= Team DE, Squad 7 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_de_7
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_de_7
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_7.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_7.dds
 ObjectTemplate.addTemplate rally_stuff_de
 ObjectTemplate.addTemplate e_rp_de 
 ObjectTemplate.addTemplate fht_radio_rp_1_7_SpawnPoint
@@ -90,6 +118,10 @@ include fht_radio_rp.tweak
 rem ================================= Team DE, Squad 8 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_de_8
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_de_8
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_8.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_8.dds
 ObjectTemplate.addTemplate rally_stuff_de
 ObjectTemplate.addTemplate e_rp_de 
 ObjectTemplate.addTemplate fht_radio_rp_1_8_SpawnPoint
@@ -98,6 +130,10 @@ include fht_radio_rp.tweak
 rem ================================= Team DE, Squad 9 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_de_9
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_de_9
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_9.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_9.dds
 ObjectTemplate.addTemplate rally_stuff_de
 ObjectTemplate.addTemplate e_rp_de 
 ObjectTemplate.addTemplate fht_radio_rp_1_9_SpawnPoint
@@ -107,6 +143,10 @@ rem ================================= Team GB, Squad 1 =========================
 GeometryTemplate.create BundledMesh fht_radio_rp_gb
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_gb_1
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_gb_1
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_1.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_1.dds
 ObjectTemplate.addTemplate rally_stuff_gb
 ObjectTemplate.addTemplate e_rp_gb 
 ObjectTemplate.addTemplate fht_radio_rp_2_1_SpawnPoint
@@ -115,6 +155,10 @@ include fht_radio_rp.tweak
 rem ================================= Team GB, Squad 2 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_gb_2
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_gb_2
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_2.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_2.dds
 ObjectTemplate.addTemplate rally_stuff_gb
 ObjectTemplate.addTemplate e_rp_gb 
 ObjectTemplate.addTemplate fht_radio_rp_2_2_SpawnPoint
@@ -123,6 +167,10 @@ include fht_radio_rp.tweak
 rem ================================= Team GB, Squad 3 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_gb_3
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_gb_3
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_3.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_3.dds
 ObjectTemplate.addTemplate rally_stuff_gb
 ObjectTemplate.addTemplate e_rp_gb 
 ObjectTemplate.addTemplate fht_radio_rp_2_3_SpawnPoint
@@ -131,6 +179,10 @@ include fht_radio_rp.tweak
 rem ================================= Team GB, Squad 4 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_gb_4
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_gb_4
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_4.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_4.dds
 ObjectTemplate.addTemplate rally_stuff_gb
 ObjectTemplate.addTemplate e_rp_gb 
 ObjectTemplate.addTemplate fht_radio_rp_2_4_SpawnPoint
@@ -139,6 +191,10 @@ include fht_radio_rp.tweak
 rem ================================= Team GB, Squad 5 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_gb_5
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_gb_5
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_5.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_5.dds
 ObjectTemplate.addTemplate rally_stuff_gb
 ObjectTemplate.addTemplate e_rp_gb 
 ObjectTemplate.addTemplate fht_radio_rp_2_5_SpawnPoint
@@ -147,6 +203,10 @@ include fht_radio_rp.tweak
 rem ================================= Team GB, Squad 6 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_gb_6
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_gb_6
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_6.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_6.dds
 ObjectTemplate.addTemplate rally_stuff_gb
 ObjectTemplate.addTemplate e_rp_gb 
 ObjectTemplate.addTemplate fht_radio_rp_2_6_SpawnPoint
@@ -155,6 +215,10 @@ include fht_radio_rp.tweak
 rem ================================= Team GB, Squad 7 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_gb_7
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_gb_7
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_7.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_7.dds
 ObjectTemplate.addTemplate rally_stuff_gb
 ObjectTemplate.addTemplate e_rp_gb 
 ObjectTemplate.addTemplate fht_radio_rp_2_7_SpawnPoint
@@ -163,6 +227,10 @@ include fht_radio_rp.tweak
 rem ================================= Team GB, Squad 8 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_gb_8
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_gb_8
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_8.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_8.dds
 ObjectTemplate.addTemplate rally_stuff_gb
 ObjectTemplate.addTemplate e_rp_gb 
 ObjectTemplate.addTemplate fht_radio_rp_2_8_SpawnPoint
@@ -171,6 +239,10 @@ include fht_radio_rp.tweak
 rem ================================= Team GB, Squad 9 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_gb_9
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_gb_9
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_9.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_9.dds
 ObjectTemplate.addTemplate rally_stuff_gb
 ObjectTemplate.addTemplate e_rp_gb 
 ObjectTemplate.addTemplate fht_radio_rp_2_9_SpawnPoint
@@ -180,6 +252,10 @@ rem ================================= Team IT, Squad 1 =========================
 GeometryTemplate.create BundledMesh fht_radio_rp_it
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_it_1
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_it_1
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_1.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_1.dds
 ObjectTemplate.addTemplate rally_stuff_it
 ObjectTemplate.addTemplate e_rp_it 
 ObjectTemplate.addTemplate fht_radio_rp_1_1_SpawnPoint
@@ -188,6 +264,10 @@ include fht_radio_rp.tweak
 rem ================================= Team IT, Squad 2 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_it_2
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_it_2
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_2.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_2.dds
 ObjectTemplate.addTemplate rally_stuff_it
 ObjectTemplate.addTemplate e_rp_it 
 ObjectTemplate.addTemplate fht_radio_rp_1_2_SpawnPoint
@@ -196,6 +276,10 @@ include fht_radio_rp.tweak
 rem ================================= Team IT, Squad 3 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_it_3
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_it_3
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_3.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_3.dds
 ObjectTemplate.addTemplate rally_stuff_it
 ObjectTemplate.addTemplate e_rp_it 
 ObjectTemplate.addTemplate fht_radio_rp_1_3_SpawnPoint
@@ -204,6 +288,10 @@ include fht_radio_rp.tweak
 rem ================================= Team IT, Squad 4 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_it_4
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_it_4
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_4.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_4.dds
 ObjectTemplate.addTemplate rally_stuff_it
 ObjectTemplate.addTemplate e_rp_it 
 ObjectTemplate.addTemplate fht_radio_rp_1_4_SpawnPoint
@@ -212,6 +300,10 @@ include fht_radio_rp.tweak
 rem ================================= Team IT, Squad 5 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_it_5
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_it_5
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_5.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_5.dds
 ObjectTemplate.addTemplate rally_stuff_it
 ObjectTemplate.addTemplate e_rp_it 
 ObjectTemplate.addTemplate fht_radio_rp_1_5_SpawnPoint
@@ -220,6 +312,10 @@ include fht_radio_rp.tweak
 rem ================================= Team IT, Squad 6 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_it_6
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_it_6
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_6.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_6.dds
 ObjectTemplate.addTemplate rally_stuff_it
 ObjectTemplate.addTemplate e_rp_it 
 ObjectTemplate.addTemplate fht_radio_rp_1_6_SpawnPoint
@@ -228,6 +324,10 @@ include fht_radio_rp.tweak
 rem ================================= Team IT, Squad 7 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_it_7
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_it_7
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_7.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_7.dds
 ObjectTemplate.addTemplate rally_stuff_it
 ObjectTemplate.addTemplate e_rp_it 
 ObjectTemplate.addTemplate fht_radio_rp_1_7_SpawnPoint
@@ -236,6 +336,10 @@ include fht_radio_rp.tweak
 rem ================================= Team IT, Squad 8 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_it_8
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_it_8
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_8.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_8.dds
 ObjectTemplate.addTemplate rally_stuff_it
 ObjectTemplate.addTemplate e_rp_it 
 ObjectTemplate.addTemplate fht_radio_rp_1_8_SpawnPoint
@@ -244,6 +348,10 @@ include fht_radio_rp.tweak
 rem ================================= Team IT, Squad 9 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_it_9
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_it_9
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_9.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_9.dds
 ObjectTemplate.addTemplate rally_stuff_it
 ObjectTemplate.addTemplate e_rp_it 
 ObjectTemplate.addTemplate fht_radio_rp_1_9_SpawnPoint
@@ -252,6 +360,10 @@ include fht_radio_rp.tweak
 rem ================================= Team CN, Squad 1 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_cn_1
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_cn_1
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_1.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_1.dds
 ObjectTemplate.addTemplate rally_stuff_cn
 ObjectTemplate.addTemplate e_rp_cn 
 ObjectTemplate.addTemplate fht_radio_rp_2_1_SpawnPoint
@@ -260,6 +372,10 @@ include fht_radio_rp.tweak
 rem ================================= Team CN, Squad 2 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_cn_2
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_cn_2
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_2.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_2.dds
 ObjectTemplate.addTemplate rally_stuff_cn
 ObjectTemplate.addTemplate e_rp_cn 
 ObjectTemplate.addTemplate fht_radio_rp_2_2_SpawnPoint
@@ -268,6 +384,10 @@ include fht_radio_rp.tweak
 rem ================================= Team CN, Squad 3 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_cn_3
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_cn_3
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_3.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_3.dds
 ObjectTemplate.addTemplate rally_stuff_cn
 ObjectTemplate.addTemplate e_rp_cn 
 ObjectTemplate.addTemplate fht_radio_rp_2_3_SpawnPoint
@@ -276,6 +396,10 @@ include fht_radio_rp.tweak
 rem ================================= Team CN, Squad 4 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_cn_4
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_cn_4
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_4.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_4.dds
 ObjectTemplate.addTemplate rally_stuff_cn
 ObjectTemplate.addTemplate e_rp_cn 
 ObjectTemplate.addTemplate fht_radio_rp_2_4_SpawnPoint
@@ -284,6 +408,10 @@ include fht_radio_rp.tweak
 rem ================================= Team CN, Squad 5 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_cn_5
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_cn_5
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_5.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_5.dds
 ObjectTemplate.addTemplate rally_stuff_cn
 ObjectTemplate.addTemplate e_rp_cn 
 ObjectTemplate.addTemplate fht_radio_rp_2_5_SpawnPoint
@@ -292,6 +420,10 @@ include fht_radio_rp.tweak
 rem ================================= Team CN, Squad 6 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_cn_6
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_cn_6
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_6.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_6.dds
 ObjectTemplate.addTemplate rally_stuff_cn
 ObjectTemplate.addTemplate e_rp_cn 
 ObjectTemplate.addTemplate fht_radio_rp_2_6_SpawnPoint
@@ -300,6 +432,10 @@ include fht_radio_rp.tweak
 rem ================================= Team CN, Squad 7 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_cn_7
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_cn_7
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_7.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_7.dds
 ObjectTemplate.addTemplate rally_stuff_cn
 ObjectTemplate.addTemplate e_rp_cn 
 ObjectTemplate.addTemplate fht_radio_rp_2_7_SpawnPoint
@@ -308,6 +444,10 @@ include fht_radio_rp.tweak
 rem ================================= Team CN, Squad 8 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_cn_8
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_cn_8
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_8.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_8.dds
 ObjectTemplate.addTemplate rally_stuff_cn
 ObjectTemplate.addTemplate e_rp_cn 
 ObjectTemplate.addTemplate fht_radio_rp_2_8_SpawnPoint
@@ -316,6 +456,10 @@ include fht_radio_rp.tweak
 rem ================================= Team CN, Squad 9 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_cn_9
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_cn_9
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_9.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_9.dds
 ObjectTemplate.addTemplate rally_stuff_cn
 ObjectTemplate.addTemplate e_rp_cn 
 ObjectTemplate.addTemplate fht_radio_rp_2_9_SpawnPoint
@@ -324,6 +468,10 @@ include fht_radio_rp.tweak
 rem ================================= Team US, Squad 1 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_us_1
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_us_1
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_1.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_1.dds
 ObjectTemplate.addTemplate rally_stuff_us
 ObjectTemplate.addTemplate e_rp_us 
 ObjectTemplate.addTemplate fht_radio_rp_2_1_SpawnPoint
@@ -332,6 +480,10 @@ include fht_radio_rp.tweak
 rem ================================= Team US, Squad 2 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_us_2
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_us_2
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_2.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_2.dds
 ObjectTemplate.addTemplate rally_stuff_us
 ObjectTemplate.addTemplate e_rp_us 
 ObjectTemplate.addTemplate fht_radio_rp_2_2_SpawnPoint
@@ -340,6 +492,10 @@ include fht_radio_rp.tweak
 rem ================================= Team US, Squad 3 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_us_3
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_us_3
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_3.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_3.dds
 ObjectTemplate.addTemplate rally_stuff_us
 ObjectTemplate.addTemplate e_rp_us 
 ObjectTemplate.addTemplate fht_radio_rp_2_3_SpawnPoint
@@ -348,6 +504,10 @@ include fht_radio_rp.tweak
 rem ================================= Team US, Squad 4 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_us_4
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_us_4
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_4.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_4.dds
 ObjectTemplate.addTemplate rally_stuff_us
 ObjectTemplate.addTemplate e_rp_us 
 ObjectTemplate.addTemplate fht_radio_rp_2_4_SpawnPoint
@@ -356,6 +516,10 @@ include fht_radio_rp.tweak
 rem ================================= Team US, Squad 5 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_us_5
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_us_5
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_5.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_5.dds
 ObjectTemplate.addTemplate rally_stuff_us
 ObjectTemplate.addTemplate e_rp_us 
 ObjectTemplate.addTemplate fht_radio_rp_2_5_SpawnPoint
@@ -364,6 +528,10 @@ include fht_radio_rp.tweak
 rem ================================= Team US, Squad 6 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_us_6
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_us_6
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_6.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_6.dds
 ObjectTemplate.addTemplate rally_stuff_us
 ObjectTemplate.addTemplate e_rp_us 
 ObjectTemplate.addTemplate fht_radio_rp_2_6_SpawnPoint
@@ -372,6 +540,10 @@ include fht_radio_rp.tweak
 rem ================================= Team US, Squad 7 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_us_7
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_us_7
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_7.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_7.dds
 ObjectTemplate.addTemplate rally_stuff_us
 ObjectTemplate.addTemplate e_rp_us 
 ObjectTemplate.addTemplate fht_radio_rp_2_7_SpawnPoint
@@ -380,6 +552,10 @@ include fht_radio_rp.tweak
 rem ================================= Team US, Squad 8 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_us_8
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_us_8
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_8.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_8.dds
 ObjectTemplate.addTemplate rally_stuff_us
 ObjectTemplate.addTemplate e_rp_us 
 ObjectTemplate.addTemplate fht_radio_rp_2_8_SpawnPoint
@@ -388,6 +564,10 @@ include fht_radio_rp.tweak
 rem ================================= Team US, Squad 9 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_us_9
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_us_9
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_9.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_9.dds
 ObjectTemplate.addTemplate rally_stuff_us
 ObjectTemplate.addTemplate e_rp_us 
 ObjectTemplate.addTemplate fht_radio_rp_2_9_SpawnPoint
@@ -397,6 +577,10 @@ rem ================================= Team AU, Squad 1 =========================
 GeometryTemplate.create BundledMesh fht_radio_rp_au
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_au_1
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_au_1
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_1.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_1.dds
 ObjectTemplate.addTemplate rally_stuff_au
 ObjectTemplate.addTemplate e_rp_au 
 ObjectTemplate.addTemplate fht_radio_rp_2_1_SpawnPoint
@@ -405,6 +589,10 @@ include fht_radio_rp.tweak
 rem ================================= Team AU, Squad 2 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_au_2
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_au_2
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_2.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_2.dds
 ObjectTemplate.addTemplate rally_stuff_au
 ObjectTemplate.addTemplate e_rp_au 
 ObjectTemplate.addTemplate fht_radio_rp_2_2_SpawnPoint
@@ -413,6 +601,10 @@ include fht_radio_rp.tweak
 rem ================================= Team AU, Squad 3 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_au_3
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_au_3
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_3.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_3.dds
 ObjectTemplate.addTemplate rally_stuff_au
 ObjectTemplate.addTemplate e_rp_au 
 ObjectTemplate.addTemplate fht_radio_rp_2_3_SpawnPoint
@@ -421,6 +613,10 @@ include fht_radio_rp.tweak
 rem ================================= Team AU, Squad 4 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_au_4
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_au_4
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_4.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_4.dds
 ObjectTemplate.addTemplate rally_stuff_au
 ObjectTemplate.addTemplate e_rp_au 
 ObjectTemplate.addTemplate fht_radio_rp_2_4_SpawnPoint
@@ -429,6 +625,10 @@ include fht_radio_rp.tweak
 rem ================================= Team AU, Squad 5 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_au_5
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_au_5
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_5.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_5.dds
 ObjectTemplate.addTemplate rally_stuff_au
 ObjectTemplate.addTemplate e_rp_au 
 ObjectTemplate.addTemplate fht_radio_rp_2_5_SpawnPoint
@@ -437,6 +637,10 @@ include fht_radio_rp.tweak
 rem ================================= Team AU, Squad 6 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_au_6
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_au_6
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_6.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_6.dds
 ObjectTemplate.addTemplate rally_stuff_au
 ObjectTemplate.addTemplate e_rp_au 
 ObjectTemplate.addTemplate fht_radio_rp_2_6_SpawnPoint
@@ -445,6 +649,10 @@ include fht_radio_rp.tweak
 rem ================================= Team AU, Squad 7 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_au_7
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_au_7
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_7.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_7.dds
 ObjectTemplate.addTemplate rally_stuff_au
 ObjectTemplate.addTemplate e_rp_au 
 ObjectTemplate.addTemplate fht_radio_rp_2_7_SpawnPoint
@@ -453,6 +661,10 @@ include fht_radio_rp.tweak
 rem ================================= Team AU, Squad 8 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_au_8
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_au_8
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_8.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_8.dds
 ObjectTemplate.addTemplate rally_stuff_au
 ObjectTemplate.addTemplate e_rp_au 
 ObjectTemplate.addTemplate fht_radio_rp_2_8_SpawnPoint
@@ -461,6 +673,10 @@ include fht_radio_rp.tweak
 rem ================================= Team AU, Squad 9 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_au_9
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_au_9
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_9.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_9.dds
 ObjectTemplate.addTemplate rally_stuff_au
 ObjectTemplate.addTemplate e_rp_au 
 ObjectTemplate.addTemplate fht_radio_rp_2_9_SpawnPoint
@@ -470,6 +686,10 @@ rem ================================= Team NZ, Squad 1 =========================
 GeometryTemplate.create BundledMesh fht_radio_rp_nz
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_nz_1
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_nz_1
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_1.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_1.dds
 ObjectTemplate.addTemplate rally_stuff_nz
 ObjectTemplate.addTemplate e_rp_nz 
 ObjectTemplate.addTemplate fht_radio_rp_2_1_SpawnPoint
@@ -478,6 +698,10 @@ include fht_radio_rp.tweak
 rem ================================= Team NZ, Squad 2 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_nz_2
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_nz_2
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_2.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_2.dds
 ObjectTemplate.addTemplate rally_stuff_nz
 ObjectTemplate.addTemplate e_rp_nz 
 ObjectTemplate.addTemplate fht_radio_rp_2_2_SpawnPoint
@@ -486,6 +710,10 @@ include fht_radio_rp.tweak
 rem ================================= Team NZ, Squad 3 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_nz_3
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_nz_3
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_3.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_3.dds
 ObjectTemplate.addTemplate rally_stuff_nz
 ObjectTemplate.addTemplate e_rp_nz 
 ObjectTemplate.addTemplate fht_radio_rp_2_3_SpawnPoint
@@ -494,6 +722,10 @@ include fht_radio_rp.tweak
 rem ================================= Team NZ, Squad 4 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_nz_4
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_nz_4
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_4.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_4.dds
 ObjectTemplate.addTemplate rally_stuff_nz
 ObjectTemplate.addTemplate e_rp_nz 
 ObjectTemplate.addTemplate fht_radio_rp_2_4_SpawnPoint
@@ -502,6 +734,10 @@ include fht_radio_rp.tweak
 rem ================================= Team NZ, Squad 5 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_nz_5
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_nz_5
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_5.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_5.dds
 ObjectTemplate.addTemplate rally_stuff_nz
 ObjectTemplate.addTemplate e_rp_nz 
 ObjectTemplate.addTemplate fht_radio_rp_2_5_SpawnPoint
@@ -510,6 +746,10 @@ include fht_radio_rp.tweak
 rem ================================= Team NZ, Squad 6 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_nz_6
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_nz_6
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_6.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_6.dds
 ObjectTemplate.addTemplate rally_stuff_nz
 ObjectTemplate.addTemplate e_rp_nz 
 ObjectTemplate.addTemplate fht_radio_rp_2_6_SpawnPoint
@@ -518,6 +758,10 @@ include fht_radio_rp.tweak
 rem ================================= Team NZ, Squad 7 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_nz_7
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_nz_7
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_7.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_7.dds
 ObjectTemplate.addTemplate rally_stuff_nz
 ObjectTemplate.addTemplate e_rp_nz 
 ObjectTemplate.addTemplate fht_radio_rp_2_7_SpawnPoint
@@ -526,6 +770,10 @@ include fht_radio_rp.tweak
 rem ================================= Team NZ, Squad 8 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_nz_8
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_nz_8
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_8.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_8.dds
 ObjectTemplate.addTemplate rally_stuff_nz
 ObjectTemplate.addTemplate e_rp_nz 
 ObjectTemplate.addTemplate fht_radio_rp_2_8_SpawnPoint
@@ -534,6 +782,10 @@ include fht_radio_rp.tweak
 rem ================================= Team NZ, Squad 9 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_nz_9
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_nz_9
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_9.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_9.dds
 ObjectTemplate.addTemplate rally_stuff_nz
 ObjectTemplate.addTemplate e_rp_nz 
 ObjectTemplate.addTemplate fht_radio_rp_2_9_SpawnPoint
@@ -543,6 +795,10 @@ rem ================================= Team PL, Squad 1 =========================
 GeometryTemplate.create BundledMesh fht_radio_rp_pl
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_pl_1
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_pl_1
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_1.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_1.dds
 ObjectTemplate.addTemplate rally_stuff_pl
 ObjectTemplate.addTemplate e_rp_pl 
 ObjectTemplate.addTemplate fht_radio_rp_2_1_SpawnPoint
@@ -551,6 +807,10 @@ include fht_radio_rp.tweak
 rem ================================= Team PL, Squad 2 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_pl_2
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_pl_2
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_2.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_2.dds
 ObjectTemplate.addTemplate rally_stuff_pl
 ObjectTemplate.addTemplate e_rp_pl 
 ObjectTemplate.addTemplate fht_radio_rp_2_2_SpawnPoint
@@ -559,6 +819,10 @@ include fht_radio_rp.tweak
 rem ================================= Team PL, Squad 3 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_pl_3
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_pl_3
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_3.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_3.dds
 ObjectTemplate.addTemplate rally_stuff_pl
 ObjectTemplate.addTemplate e_rp_pl 
 ObjectTemplate.addTemplate fht_radio_rp_2_3_SpawnPoint
@@ -567,6 +831,10 @@ include fht_radio_rp.tweak
 rem ================================= Team PL, Squad 4 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_pl_4
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_pl_4
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_4.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_4.dds
 ObjectTemplate.addTemplate rally_stuff_pl
 ObjectTemplate.addTemplate e_rp_pl 
 ObjectTemplate.addTemplate fht_radio_rp_2_4_SpawnPoint
@@ -575,6 +843,10 @@ include fht_radio_rp.tweak
 rem ================================= Team PL, Squad 5 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_pl_5
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_pl_5
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_5.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_5.dds
 ObjectTemplate.addTemplate rally_stuff_pl
 ObjectTemplate.addTemplate e_rp_pl 
 ObjectTemplate.addTemplate fht_radio_rp_2_5_SpawnPoint
@@ -583,6 +855,10 @@ include fht_radio_rp.tweak
 rem ================================= Team PL, Squad 6 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_pl_6
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_pl_6
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_6.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_6.dds
 ObjectTemplate.addTemplate rally_stuff_pl
 ObjectTemplate.addTemplate e_rp_pl 
 ObjectTemplate.addTemplate fht_radio_rp_2_6_SpawnPoint
@@ -591,6 +867,10 @@ include fht_radio_rp.tweak
 rem ================================= Team PL, Squad 7 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_pl_7
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_pl_7
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_7.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_7.dds
 ObjectTemplate.addTemplate rally_stuff_pl
 ObjectTemplate.addTemplate e_rp_pl 
 ObjectTemplate.addTemplate fht_radio_rp_2_7_SpawnPoint
@@ -599,6 +879,10 @@ include fht_radio_rp.tweak
 rem ================================= Team PL, Squad 8 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_pl_8
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_pl_8
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_8.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_8.dds
 ObjectTemplate.addTemplate rally_stuff_pl
 ObjectTemplate.addTemplate e_rp_pl 
 ObjectTemplate.addTemplate fht_radio_rp_2_8_SpawnPoint
@@ -607,6 +891,10 @@ include fht_radio_rp.tweak
 rem ================================= Team PL, Squad 9 ====================================
 
 ObjectTemplate.create PlayerControlObject fht_radio_rp_pl_9
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_pl_9
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_9.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_9.dds
 ObjectTemplate.addTemplate rally_stuff_pl
 ObjectTemplate.addTemplate e_rp_pl 
 ObjectTemplate.addTemplate fht_radio_rp_2_9_SpawnPoint
