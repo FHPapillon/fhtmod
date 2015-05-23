@@ -113,10 +113,10 @@ class fht_deploySpawnPoint(base):
         except Exception, e:
             fht.Debug("Exception in fht_deploySpawnPoint.dummySpawn(): " + str(e))   
 			
-    def clearMarker(rally):
+    def clearMarker(self, rally):
         try:
             if not fhts.doRallies: return
-            pos = random.randint(-1024, 1024)
+            pos = (random.randint(-1024, 1024), 0, random.randint(-1024, 1024))
             self.markerDaemon.add(rally.templateName.lower(), "fht_rally_active_dummy", pos)
         except Exception, e:
             fht.Debug("Exception in fht_deploySpawnPoint.clearMarker(): " + str(e))
