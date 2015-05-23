@@ -62,7 +62,7 @@ class fht_admin(base):
                     "drone":		            self.droneCreate,
                     "plugin":                       self.enablePlugin,
                     "exit":		            self.droneExit,
-            ##        "exec":                         self.executeRconFile,
+                    "exec":                         self.executePythonFile,
                     "getvalue":                     self.getValue,
                     "help":                         self.textHelp,
                     "import":                       self.reloadSettings,
@@ -185,7 +185,7 @@ class fht_admin(base):
                         prevent = True
                 if prevent:
                     fht.Debug("Admin doesn't have enough rights to use admin drone!")
-                    fht.personalMessage("§C1001You do not have permission to use this vehicle!", p)                            
+                    fht.personalMessage("Â§C1001You do not have permission to use this vehicle!", p)                            
                     fht.deleteThing(utils.rootParent(p.getVehicle()))                    
         except Exception, e:
             fht.Debug("Exception in fht_admin.onVehicleEntered(): " + str(e))    
@@ -224,15 +224,15 @@ class fht_admin(base):
             fht.Debug(args[0])
             fht.Debug(args[1])
             if not len(args) is 2 or not args[0].isdigit() or not args[1] in teams:
-                fht.personalMessage("§C1001Incorrect usage of '" + cmd + "'. Please specify the flag number 1,2,... (North - South)", p)
-                fht.personalMessage("§C1001 and the team to set it to (neutral/axis/allies)", p)
+                fht.personalMessage("Â§C1001Incorrect usage of '" + cmd + "'. Please specify the flag number 1,2,... (North - South)", p)
+                fht.personalMessage("Â§C1001 and the team to set it to (neutral/axis/allies)", p)
                 return
             else:
                 cp = fht.getSortedCP(args[0])
                 fht.Debug(cp)
                 if not cp:
-                    fht.personalMessage("§C1001Incorrect usage of '" + cmd + "'. Please specify the flag number 1,2,... (North - South)", p)
-                    fht.personalMessage("§C1001 and the team to set it to (neutral/axis/allies)", p)
+                    fht.personalMessage("Â§C1001Incorrect usage of '" + cmd + "'. Please specify the flag number 1,2,... (North - South)", p)
+                    fht.personalMessage("Â§C1001 and the team to set it to (neutral/axis/allies)", p)
                 else:
                     utils.cp_setTeam(cp, teams[args[1]], 1)           
         except Exception, e:
@@ -247,7 +247,7 @@ class fht_admin(base):
                 fht.adminPM(("You cannot call a round live after round start, please restart."), p)
             else:
                 fhtd.isLive = True
-                utils.rconExec('game.sayall "§3LIVE"')
+                utils.rconExec('game.sayall "Â§3LIVE"')
                 fht.adminPM("Round has been called live by: ", p)
                 fhtd.axisStartTickets = bf2.gameLogic.getTickets(1)
                 fhtd.alliedStartTickets = bf2.gameLogic.getTickets(2)
@@ -255,11 +255,20 @@ class fht_admin(base):
             fht.Debug("Exception in fht_admin.clearDrones(): " + str(e))
 
 
+    def executePythonFile(self, cmd, args, p):
+        try:
+            outglobals = { }
+            filename = utils.path.join(bf2.gameLogic.getModDir(), 'python', 'game', 'fht_emergencyCode.py')
+            execfile(filename, outglobals)
+        except Exception, e:
+            fht.Debug("Exception in fht_admin.executePythonFile(): " + str(e))            
+
+
     def setTickets(self, cmd, args, p):
         try:        
             teams = { "axis": 1, "allies": 2 }
             if not len(args) is 2 or not args[0].lower() in teams.keys() or not args[1].isdigit():
-                fht.personalMessage("§C1001Incorrect usage of '" + cmd + "'. Please specify a team (axis/allies) and the new bleed rate.", p)
+                fht.personalMessage("Â§C1001Incorrect usage of '" + cmd + "'. Please specify a team (axis/allies) and the new bleed rate.", p)
             else:
                 setDefaultTicketLossPerMin(teams[args[0].lower()], int(args[1]))
         except Exception, e:
@@ -270,7 +279,7 @@ class fht_admin(base):
         try:
             teams = { "axis": 1, "allies": 2 }
             if not len(args) is 2 or not args[0].lower() in teams.keys() or not args[1].isdigit():
-                fht.personalMessage("§C1001Incorrect usage of '" + cmd + "'. Please specify a team (axis/allies) and the new bleed rate.", p)
+                fht.personalMessage("Â§C1001Incorrect usage of '" + cmd + "'. Please specify a team (axis/allies) and the new bleed rate.", p)
             else:
                 setDefaultTicketLossPerMin(teams[args[0].lower()], int(args[1]))
                 utils.updateTicketLoss()
@@ -290,15 +299,15 @@ class fht_admin(base):
                     slot = int(args[1])
                     limit = float(args[2])
             except ValueError:
-                fht.personalMessage("§C1001Incorrect usage of '" + cmd + "'. Please specify a team 1/2 (axis/allied),", p)
-                fht.personalMessage("§C1001a slot(1-5) and the new limit (e.g. 0.15)", p)
+                fht.personalMessage("Â§C1001Incorrect usage of '" + cmd + "'. Please specify a team 1/2 (axis/allied),", p)
+                fht.personalMessage("Â§C1001a slot(1-5) and the new limit (e.g. 0.15)", p)
                 return
 
             if not team in fhtd.kitLimiters:
-                fht.personalMessage("§C1001Cannot change a non-existant kit limit.", p)
+                fht.personalMessage("Â§C1001Cannot change a non-existant kit limit.", p)
             else:
                 if not slot in fhtd.kitLimiters[team]:
-                    fht.personalMessage("§C1001Cannot change a non-existant kit limit.", p)
+                    fht.personalMessage("Â§C1001Cannot change a non-existant kit limit.", p)
                 else:
                     fhtd.kitLimiters[team][slot].info.limit = limit
                     
@@ -320,23 +329,23 @@ class fht_admin(base):
                     "none":         777,
                 }
                 if len(args) is not 2 or not args[1] in ranks.keys():
-                    fht.personalMessage("§C1001Incorrect usage of '" + cmd + "'. Please specify a name and a rank (Admin/HQ/CO/None)", p)
+                    fht.personalMessage("Â§C1001Incorrect usage of '" + cmd + "'. Please specify a name and a rank (Admin/HQ/CO/None)", p)
                 else:
                     foundP = fht.findPlayer(args[0])
                     if foundP is "none":
-                        fht.personalMessage("§C1001Sorry, no matching player found for '" + args[0] + "'", p)
+                        fht.personalMessage("Â§C1001Sorry, no matching player found for '" + args[0] + "'", p)
                     elif foundP is "more":
-                        fht.personalMessage("§C1001Multiple players found that match '" + args[0] + "'", p)
+                        fht.personalMessage("Â§C1001Multiple players found that match '" + args[0] + "'", p)
                     else:
                         if foundP is p:
-                            fht.personalMessage("§C1001You cannot change your own rank.", p)
+                            fht.personalMessage("Â§C1001You cannot change your own rank.", p)
                             return
                         elif fhts.fht_adminHashes[p.hash] > ranks[args[1]]:
-                            fht.personalMessage("§C1001You cannot assign a rank higher then your own.", p)
+                            fht.personalMessage("Â§C1001You cannot assign a rank higher then your own.", p)
                             return
                         elif fhts.fht_adminHashes[p.hash] > fhts.fht_adminPowerLevels["setlive"]:
                             if foundP.getTeam() is not p.getTeam():
-                                fht.personalMessage("§C1001You do not have permission to rank players on the enemy team!", p)
+                                fht.personalMessage("Â§C1001You do not have permission to rank players on the enemy team!", p)
                                 return
                         else:
                             try:
@@ -347,12 +356,12 @@ class fht_admin(base):
                             if foundP.hash is "":
                                 tHash = fht.getPlayerHash(foundP.getName())
                                 if not tHash:
-                                    fht.personalMessage("§C1001Couldn't assign rank to player '" + foundP.getName() + "'", p)                                    
+                                    fht.personalMessage("Â§C1001Couldn't assign rank to player '" + foundP.getName() + "'", p)                                    
                                     return
                                 else:
                                     foundP.hash = tHash
                             if fhts.fht_adminHashes.has_key(foundP.hash) and not fhts.fht_adminHashes[foundP.hash] > fhts.fht_adminHashes[p.hash]:
-                                fht.personalMessage("§C1001You can only assign a new rank to a player beneath your rank.", p)
+                                fht.personalMessage("Â§C1001You can only assign a new rank to a player beneath your rank.", p)
                             else:
                                 fhts.fht_adminHashes[foundP.hash] = ranks[args[1]]
         except Exception, e:
@@ -362,7 +371,7 @@ class fht_admin(base):
     def playerKick(self, cmd, args, p):
         try:
             if len(args) < 2:
-                fht.personalMessage("§C1001Incorrect usage of '" + cmd + "'. Please specify a name and a reason", p)
+                fht.personalMessage("Â§C1001Incorrect usage of '" + cmd + "'. Please specify a name and a reason", p)
             else:
                 i = 1
                 reason = ""
@@ -371,20 +380,20 @@ class fht_admin(base):
                     i += 1
                 foundP = fht.findPlayer(args[0])
                 if foundP is "none":
-                    fht.personalMessage("§C1001Sorry, no matching player found for '" + args[0] + "'", p)
+                    fht.personalMessage("Â§C1001Sorry, no matching player found for '" + args[0] + "'", p)
                 elif foundP is "more":
-                    fht.personalMessage("§C1001Multiple players found that match '" + args[0] + "'", p)
+                    fht.personalMessage("Â§C1001Multiple players found that match '" + args[0] + "'", p)
                 else:
                     if fhts.isDedicated and fhts.fht_adminHashes[p.hash] > fhts.fht_adminPowerLevels["setlive"]:
                         if foundP.getTeam() is not p.getTeam():
-                            fht.personalMessage("§C1001You do not have permission to kick players on the enemy team!", p)
+                            fht.personalMessage("Â§C1001You do not have permission to kick players on the enemy team!", p)
                             return
                     elif fhts.isDedicated and fhts.fht_adminHashes[p.hash] > fhts.fht_adminPowerLevels["mainbase"]:
                         if foundP.getSquad() is not p.getSquad():
-                            fht.personalMessage("§C1001You do not have permission to kick players outside your squad!", p)
+                            fht.personalMessage("Â§C1001You do not have permission to kick players outside your squad!", p)
                             return                        
-                    fht.adminPM("§C1001" + foundP.getName() + " has been kicked, " + reason, p)
-                    utils.sayAll("§C1001KICKING PLAYER %s, %s"%(foundP.getName(), reason))
+                    fht.adminPM("Â§C1001" + foundP.getName() + " has been kicked, " + reason, p)
+                    utils.sayAll("Â§C1001KICKING PLAYER %s, %s"%(foundP.getName(), reason))
                     utils.rconExec('admin.kickPlayer %d' % foundP.index)
         except Exception, e:
             fht.Debug("Exception in fht_admin.playerKick(): " + str(e)) 
@@ -396,7 +405,7 @@ class fht_admin(base):
                 fht.personalMessage(admMsg, p)
             else:
                 if not args[0].isdigit() or not len(args) is 1:
-                    fht.personalMessage("§C1001Incorrect usage of '" + cmd + "'. Please specify the new score modifier in %.", p)                                    
+                    fht.personalMessage("Â§C1001Incorrect usage of '" + cmd + "'. Please specify the new score modifier in %.", p)                                    
                 else:
                     fhts.scoreMod = int(args[0])
                     admMsg = ("Score Modifier has been set to %i%% by "%(int(fhts.scoreMod)))                            
@@ -409,7 +418,7 @@ class fht_admin(base):
     def md5Check(self, cmd, args, p):
         try:
             if not len(args) or not args[0].isdigit():
-                fht.personalMessage("§C1001Incorrect usage of '" + cmd + "'. Please select parameters 1 (enabled) or 0 (disabled).", p)
+                fht.personalMessage("Â§C1001Incorrect usage of '" + cmd + "'. Please select parameters 1 (enabled) or 0 (disabled).", p)
             else:
                 if int(args[0]):
                     utils.rconExec("pb_sv_load pbsvuser.cfg")
@@ -422,7 +431,7 @@ class fht_admin(base):
     def md5Time(self, cmd, args, p):
         try:
             if not len(args) or not args[0].isdigit():
-                fht.personalMessage("§C1001Incorrect usage of '" + cmd + "'. Please specify the new time in whole seconds (limited between 10 and 300).", p)
+                fht.personalMessage("Â§C1001Incorrect usage of '" + cmd + "'. Please specify the new time in whole seconds (limited between 10 and 300).", p)
             else:
                 if int(args[0]) > 300:
                     time = 300
@@ -448,38 +457,38 @@ class fht_admin(base):
                 if output is not "":
                     fht.personalMessage(output, p)
             else:
-                fht.personalMessage("§C1001Please specify a command to send.", p)
+                fht.personalMessage("Â§C1001Please specify a command to send.", p)
         except Exception, e:
             fht.Debug("Exception in fht_admin.rconCommand(): " + str(e)) 
 
     def droneExit(self, cmd, args, p):
         try:
             if not fhts.droneTemplate in p.getVehicle().templateName.lower():
-                fht.personalMessage("§C1001You can only this use command while in an admin drone.", p)
+                fht.personalMessage("Â§C1001You can only this use command while in an admin drone.", p)
             else:            
                 p.safeDroneExit = False
-                fht.personalMessage("§C1001You have decided not to be removed back to the ground on exit. Proceed with caution.", p)
+                fht.personalMessage("Â§C1001You have decided not to be removed back to the ground on exit. Proceed with caution.", p)
         except Exception, e:
             fht.Debug("Exception in fht_admin.droneExit(): " + str(e)) 
 
     def mainBaseUpdate(self, cmd, args, p):
         try:
             if not len(args) is 2 or ( args[0].isdigit() and args[1].isdigit() and int(args[0]) < 1 ):
-                fht.personalMessage("§C1001Incorrect usage of '" + cmd + "'. Please specify the main base (1,2,... from North to South)", p)
-                fht.personalMessage("§C1001and amount (negative to decrease).", p)
+                fht.personalMessage("Â§C1001Incorrect usage of '" + cmd + "'. Please specify the main base (1,2,... from North to South)", p)
+                fht.personalMessage("Â§C1001and amount (negative to decrease).", p)
             else:
                 cp = fht.getSortedCP(args[0], True)
                 if cp:
                     amount = float(args[1])
                     if ( cp.safeRadius + amount ) < 50.0:
-                        fht.personalMessage("§C1001Minimum safe radius is 50m.", p)
+                        fht.personalMessage("Â§C1001Minimum safe radius is 50m.", p)
                         amount = 50.0 - cp.safeRadius
                     mBKC = fhtd.fhtPluginObjects['fht_mainBaseKillCheck']
                     mBKC.hooker = self.hooker
                     mBKC.updateMainBaseSize(cp, amount)
                 else:
-                    fht.personalMessage("§C1001Incorrect usage of '" + cmd + "'. Please specify the main base (1,2,... from North to South)", p)
-                    fht.personalMessage("§C1001and amount (negative to decrease).", p)
+                    fht.personalMessage("Â§C1001Incorrect usage of '" + cmd + "'. Please specify the main base (1,2,... from North to South)", p)
+                    fht.personalMessage("Â§C1001and amount (negative to decrease).", p)
         except Exception, e:
             fht.Debug("Exception in fht_admin.updateMainBaseSize(): " + str(e))
 
@@ -501,7 +510,7 @@ class fht_admin(base):
             for key in fhts.__dict__.keys():
                 fhts.__dict__[key] = fhtsreload.__dict__[key]
             fhtd.deployerKits = [ x['kit'].lower() for x in fhts.emplacements.values() ]
-            fht.adminPM("§C1001FHT settings have been reloaded.", p)
+            fht.adminPM("Â§C1001FHT settings have been reloaded.", p)
         except Exception, e:
             fht.Debug("Exception in fht_admin.reloadSettings(): " + str(e))  
 
@@ -512,7 +521,7 @@ class fht_admin(base):
                 return False
             else:
                 if p.getVehicle().getParent():
-                    fht.personalMessage("§C1001You cannot be in a vehicle while requesting an admin drone.", p)
+                    fht.personalMessage("Â§C1001You cannot be in a vehicle while requesting an admin drone.", p)
                 else:
                     pos = p.getDefaultVehicle().getPosition()
                     offset = fht.rotateVector(p.getDefaultVehicle().getRotation(), (1.0, 0.5, 0.0))
@@ -526,21 +535,21 @@ class fht_admin(base):
     def droneTeleport(self, cmd, args, p):
         try:
             if not len(args) or not hasattr(args[0], 'lower'):
-                fht.personalMessage("§C1001Incorrect usage of '" + cmd + "'. Please specify a target player or the Grid reference in format C5", p)
+                fht.personalMessage("Â§C1001Incorrect usage of '" + cmd + "'. Please specify a target player or the Grid reference in format C5", p)
             else:
                 args = args[0]
                 if not fhts.droneTemplate in p.getVehicle().templateName.lower():
-                    fht.personalMessage("§C1001You can only this use command while in an admin drone.", p)
+                    fht.personalMessage("Â§C1001You can only this use command while in an admin drone.", p)
                 else:
                     if not p.isAlive() or p.isManDown():
-                        fht.personalMessage("§C1001You have to be alive to use this command.", p)
+                        fht.personalMessage("Â§C1001You have to be alive to use this command.", p)
                     else:
                         target = None
                         if len(args) is 2 and args[1].isdigit():
                             size = bf2.gameLogic.getWorldSize()[0]
                             grids = ( int( ord(args[0].lower()) - 96), int(args[1]) )
                             if ( grids[0] < 1 or grids[0] > 8 ) or ( grids[1] < 1 or grids[1] > 8 ):
-                                fht.personalMessage("§C1001You have to specify a grid square on the Map (A 1 to H 8).", p)
+                                fht.personalMessage("Â§C1001You have to specify a grid square on the Map (A 1 to H 8).", p)
                             else:
                                 fht.Debug("DroneTeleport(): Map Coordinates found.")
                                 x = fhts.mapCenter[0]
@@ -551,12 +560,12 @@ class fht_admin(base):
                         else:
                             foundP = fht.findPlayer(args)
                             if foundP is "none":
-                                fht.personalMessage("§C1001Sorry, no matching player found for '" + args[0] + "'", p)
+                                fht.personalMessage("Â§C1001Sorry, no matching player found for '" + args[0] + "'", p)
                             elif foundP is "more":
-                                fht.personalMessage("§C1001Multiple players found that match '" + args[0] + "'", p)
+                                fht.personalMessage("Â§C1001Multiple players found that match '" + args[0] + "'", p)
                             else:
                                 if not foundP.isAlive() or foundP.isManDown():
-                                    fht.personalMessage("§C1001" + foundP.getName() + " is currently dead or down", p)
+                                    fht.personalMessage("Â§C1001" + foundP.getName() + " is currently dead or down", p)
                                 else:                                                    
                                     target = foundP.getDefaultVehicle().getPosition()
                                     target = ( target[0], target[1] + 5.0, target[2] )
@@ -598,7 +607,7 @@ class fht_admin(base):
     def getValue(self, cmd, args, p):
         try:
             if not len(args) is 1:
-                fht.personalMessage("§C1001Incorrect usage of '" + cmd + "'. Please specify a object in fht_settings.py.", p)                
+                fht.personalMessage("Â§C1001Incorrect usage of '" + cmd + "'. Please specify a object in fht_settings.py.", p)                
             else:
                 if not "game." in args[0]:
                     module = args[0].split(".")[0]
@@ -618,13 +627,13 @@ class fht_admin(base):
                         oldVal = getattr(sys.modules[module], object)
                     except Exception, e:
                         fht.Debug(str(e))
-                        fht.personalMessage("§C1001" + args[0] + " not found.", p)
+                        fht.personalMessage("Â§C1001" + args[0] + " not found.", p)
                         return
 
                 needType = type(oldVal)
                 typeName = str(needType).split("'")
                 typeName = typeName[len(typeName)-2]
-                fht.personalMessage("§C1001" + module + "." + object + " currently set to " + str(oldVal) + " (Type: " + typeName + ")", p)
+                fht.personalMessage("Â§C1001" + module + "." + object + " currently set to " + str(oldVal) + " (Type: " + typeName + ")", p)
                 return
         except Exception, e:
             fht.Debug("Exception in fht_admin.getValue(): " + str(e)) 
@@ -632,7 +641,7 @@ class fht_admin(base):
     def setValue(self, cmd, args, p):
         try:
             if not len(args) is 2:
-                fht.personalMessage("§C1001Incorrect usage of '" + cmd + "'. Please specify a module's object and the value to set it to.", p)                
+                fht.personalMessage("Â§C1001Incorrect usage of '" + cmd + "'. Please specify a module's object and the value to set it to.", p)                
             else:
                 if not "game." in args[0]:
                     module = args[0].split(".")[0]
@@ -651,7 +660,7 @@ class fht_admin(base):
                     try:
                         oldVal = getattr(sys.modules[module], object)
                     except:
-                        fht.personalMessage("§C1001" + args[0] + " not found.", p)
+                        fht.personalMessage("Â§C1001" + args[0] + " not found.", p)
                         return
                                             
                 needType = type(oldVal)
@@ -670,9 +679,9 @@ class fht_admin(base):
                     typeName = typeName[len(typeName)-2]
                     givTypeName = str(givType).split("'")
                     givTypeName = givTypeName[len(givTypeName)-2]                    
-                    fht.personalMessage("§C1001" + args[0] + " requires a " + typeName + " argument. (" + givTypeName + " was given)", p)
+                    fht.personalMessage("Â§C1001" + args[0] + " requires a " + typeName + " argument. (" + givTypeName + " was given)", p)
                     return
-                fht.adminPM("§C1001" + args[0] + " has been set to " + str(arg), p)
+                fht.adminPM("Â§C1001" + args[0] + " has been set to " + str(arg), p)
         except Exception, e:
             fht.Debug("Exception in fht_admin.setValue(): " + str(e))         
 
@@ -685,7 +694,7 @@ class fht_admin(base):
                 }
             params = [ "0", "1" ]
             if not len(args) is 2 or not args[0].lower() in fhtPlugins or not args[1] in params:
-                fht.personalMessage("§C1001Incorrect usage of '" + cmd + "'. Please specify one of the following plugins: redeps, killcheck, rallies and a parameter 1/0 (on/off).", p)
+                fht.personalMessage("Â§C1001Incorrect usage of '" + cmd + "'. Please specify one of the following plugins: redeps, killcheck, rallies and a parameter 1/0 (on/off).", p)
             else:
                 param = int(args[1])
                 plugin = args[0].lower()
@@ -724,16 +733,16 @@ class fht_admin(base):
     def debugPlayer(self, cmd, args, p):
         try:
             if not len(args) is 1 or not args[0] in [ "0", "1" ]:
-                fht.personalMessage("§C1001Please specify a parameter (0/1) ", p)
+                fht.personalMessage("Â§C1001Please specify a parameter (0/1) ", p)
             else:
                 if int(args[0]):
                     if not p in fhtd.debugUsers:
                         fhtd.debugUsers.append(p)
-                        fht.personalMessage("§C1001Turned on debug messages for " + p.getName(), p)
+                        fht.personalMessage("Â§C1001Turned on debug messages for " + p.getName(), p)
                 else:
                     if p in fhtd.debugUsers:
                         fhtd.debugUsers.remove(p)
-                        fht.personalMessage("§C1001Turned off debug messages for " + p.getName(), p)
+                        fht.personalMessage("Â§C1001Turned off debug messages for " + p.getName(), p)
         except Exception, e:
             fht.Debug("Exception in fht_admin.debugPlayer(): " + str(e))   
 
@@ -741,14 +750,14 @@ class fht_admin(base):
     def debugGlobal(self, cmd, args, p):
         try:
             if not len(args) is 1 or not args[0] in [ "0", "1" ]:
-                fht.personalMessage("§C1001Please specify a parameter (0/1) ", p)
+                fht.personalMessage("Â§C1001Please specify a parameter (0/1) ", p)
             else:
                 bVar = bool(int(args[0]))
                 if fhts.debugging is bVar:
                     fht.personalMessage("Global debugging is already set to " + str(bVar), p)
                 else:
                     fhts.debugging = bVar
-                    fht.adminPM("§C1001Global debugging has been set to " + str(bVar), p)                    
+                    fht.adminPM("Â§C1001Global debugging has been set to " + str(bVar), p)                    
         except:
                 fht.Debug("Exception in PythonDebug")
             
@@ -802,7 +811,7 @@ class fht_admin(base):
                     fht.Debug("Hash found!")
                     if fhts.fht_adminHashes[p.hash] > fhts.fht_adminPowerLevels[command]:
                         fht.Debug("Admin doesn't have enough rights to execute this command!")
-                        fht.personalMessage("§C1001You do not have sufficient rights to execute this command", p)
+                        fht.personalMessage("Â§C1001You do not have sufficient rights to execute this command", p)
                         return False
                 else:
                     fht.Debug("Server is not dedicated (or an 'open' command was used), not performing hash check!")
@@ -830,10 +839,10 @@ class fht_admin(base):
         try:
             if fhtd.isLive:
                 fht.personalMessage("Round is live.", p)
-                utils.rconExec('game.sayall "§3Round is LIVE."')
+                utils.rconExec('game.sayall "Â§3Round is LIVE."')
             else:
                 fht.personalMessage("Round is NOT live.", p)
-                utils.rconExec('game.sayall "§3Round is NOT live."')
+                utils.rconExec('game.sayall "Â§3Round is NOT live."')
         except Exception, e:
             fht.Debug("Exception in fht_admin.textLive(): " + str(e))  
 
@@ -857,7 +866,7 @@ class fht_admin(base):
                     
     def textHelp(self, cmd, args, p):
         try:
-            fht.personalMessage("§C1001Custom fht commands:", p)
+            fht.personalMessage("Â§C1001Custom fht commands:", p)
             i = 0
             keys = ""
             for key in self.fht_adminCommands:
@@ -880,11 +889,11 @@ class fht_admin(base):
                     keys += ", "
                 keys += fhts.fht_commandSymbol + key
                 if i is 8:
-                    fht.personalMessage("§C1001" + keys, p)
+                    fht.personalMessage("Â§C1001" + keys, p)
                     keys = ""
                     i = 0
             if i > 0:
-                fht.personalMessage("§C1001" + keys, p)
+                fht.personalMessage("Â§C1001" + keys, p)
         except Exception, e:
             fht.Debug("Exception in fht_admin.textHelp(): " + str(e)) 
 
@@ -918,10 +927,10 @@ class fht_admin(base):
                     else:
                         s = "s"
 
-                    msg = "Total Remaining Tickets after %i Round%s: §C1001Axis: %i    Allies:  %i"%(self.rounds_played, s, self.axis_tickets, self.allied_tickets)
+                    msg = "Total Remaining Tickets after %i Round%s: Â§C1001Axis: %i    Allies:  %i"%(self.rounds_played, s, self.axis_tickets, self.allied_tickets)
                     fht.personalMessage(msg, p)
                     
-                    msg2 = "Projected Battle Score after %i Round%s: §C1001Axis: %.0f    Allies:  %.0f"%(self.rounds_played, s, axis_score, allied_score)
+                    msg2 = "Projected Battle Score after %i Round%s: Â§C1001Axis: %.0f    Allies:  %.0f"%(self.rounds_played, s, axis_score, allied_score)
                     fht.personalMessage(msg2, p)
             except:
                     adf.Debug("Execption in TextScore()")
