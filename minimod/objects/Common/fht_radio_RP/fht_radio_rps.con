@@ -918,6 +918,8 @@ rem ================================= Team DE, Squad 0 (Fallback)===============
 ObjectTemplate.create PlayerControlObject fht_radio_rp_de_0
 ObjectTemplate.addTemplate rally_stuff_de
 ObjectTemplate.addTemplate e_rp_de 
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_de_0
 include fht_radio_rp_fallback.tweak
 
 rem ================================= Team GB, Squad 0 (Fallback)==========================
@@ -925,6 +927,8 @@ rem ================================= Team GB, Squad 0 (Fallback)===============
 ObjectTemplate.create PlayerControlObject fht_radio_rp_gb_0
 ObjectTemplate.addTemplate rally_stuff_gb
 ObjectTemplate.addTemplate e_rp_gb 
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_gb_0
 include fht_radio_rp_fallback.tweak
 
 rem ================================= Team IT, Squad 0 (Fallback)==========================
@@ -932,6 +936,8 @@ rem ================================= Team IT, Squad 0 (Fallback)===============
 ObjectTemplate.create PlayerControlObject fht_radio_rp_it_0
 ObjectTemplate.addTemplate rally_stuff_it
 ObjectTemplate.addTemplate e_rp_it 
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_it_0
 include fht_radio_rp_fallback.tweak
 
 rem ================================= Team CN, Squad 0 (Fallback)==========================
@@ -939,6 +945,8 @@ rem ================================= Team CN, Squad 0 (Fallback)===============
 ObjectTemplate.create PlayerControlObject fht_radio_rp_cn_0
 ObjectTemplate.addTemplate rally_stuff_cn
 ObjectTemplate.addTemplate e_rp_cn 
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_cn_0
 include fht_radio_rp_fallback.tweak
 
 rem ================================= Team US, Squad 0 (Fallback)==========================
@@ -946,6 +954,8 @@ rem ================================= Team US, Squad 0 (Fallback)===============
 ObjectTemplate.create PlayerControlObject fht_radio_rp_us_0
 ObjectTemplate.addTemplate rally_stuff_us
 ObjectTemplate.addTemplate e_rp_us 
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_us_0
 include fht_radio_rp_fallback.tweak
 
 rem ================================= Team AU, Squad 0 (Fallback)==========================
@@ -953,6 +963,8 @@ rem ================================= Team AU, Squad 0 (Fallback)===============
 ObjectTemplate.create PlayerControlObject fht_radio_rp_au_0
 ObjectTemplate.addTemplate rally_stuff_au
 ObjectTemplate.addTemplate e_rp_au 
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_au_0
 include fht_radio_rp_fallback.tweak
 
 rem ================================= Team NZ, Squad 0 (Fallback)==========================
@@ -960,6 +972,8 @@ rem ================================= Team NZ, Squad 0 (Fallback)===============
 ObjectTemplate.create PlayerControlObject fht_radio_rp_nz_0
 ObjectTemplate.addTemplate rally_stuff_nz
 ObjectTemplate.addTemplate e_rp_nz 
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_nz_0
 include fht_radio_rp_fallback.tweak
 
 rem ================================= Team PL, Squad 0 (Fallback)==========================
@@ -967,6 +981,8 @@ rem ================================= Team PL, Squad 0 (Fallback)===============
 ObjectTemplate.create PlayerControlObject fht_radio_rp_pl_0
 ObjectTemplate.addTemplate rally_stuff_pl
 ObjectTemplate.addTemplate e_rp_pl 
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_radio_rp_pl_0
 include fht_radio_rp_fallback.tweak
 
 rem ===============================================================================
