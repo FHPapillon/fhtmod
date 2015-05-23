@@ -112,6 +112,7 @@ fht_adminPowerLevels = {	    # Rights management. The lower the powerlevel, the 
         "kitlimit":             0,                                                              # Add/Change kitlimit of a slot.
 
         # Server control
+        "exec":                 0,                                                              # Executes fht_emergencyCode.py        
         "rcon":                 0,                                                              # Send rcon commands through chat.
         "setvalue":             0,                                                              # Change a value in fht_settings ingame.
         "getvalue":             0,                                                              # Get a value in fht_settings ingame.
