@@ -26,6 +26,7 @@ ObjectTemplate.physicsType Mesh
 ObjectTemplate.cullRadiusScale 6
 ObjectTemplate.DontClearTeamOnExit 1
 ObjectTemplate.addTemplate fht_radio_rp_SupplyObject
+ObjectTemplate.addTemplate MarkStrategicTeamOnly
 
 
 
