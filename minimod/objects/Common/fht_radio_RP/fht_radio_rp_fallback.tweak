@@ -1,5 +1,7 @@
 ObjectTemplate.setPosition 0/1/0
 ObjectTemplate.geometry fht_radio_rp
+ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_0.dds
+ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_0.dds
 ObjectTemplate.StrategicObject.isOnePiece 1
 ObjectTemplate.StrategicObject.3dMapIcon 0
 ObjectTemplate.collisionMesh fht_radio_rp
