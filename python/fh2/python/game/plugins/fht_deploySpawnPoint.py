@@ -313,7 +313,7 @@ class fht_deploySpawnPoint(base):
                                     fht.squadMessage(p, "%s: You cannot deploy a rally here - too close to fireteam %s's rally. (%.1fm away, %dm required)"%(p.getName(), str(r.squad), rDis, fhts.minDisTeamSP))
                                     return
                             else:
-                                self.clearMarker(rally)
+                                self.clearMarker(r)
                                 fhtd.dspRegister.remove(r)
                                 fht.deleteThing(r)
                             
