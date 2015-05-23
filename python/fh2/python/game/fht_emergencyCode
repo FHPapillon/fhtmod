@@ -109,4 +109,4 @@ instance.hooker.deregister('VehicleDestroyed', instance.onVehicleDestroyed)
 instance.onVehicleDestroyed = new.instancemethod(function, instance, fht_deploySpawnPoint)
 
 #           # Now we reregister the updated method.
-instance.hooker.register('VehicleDestroyed', instnace.onVehicleDestroyed)
+instance.hooker.register('VehicleDestroyed', instance.onVehicleDestroyed)
