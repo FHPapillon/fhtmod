@@ -6,3 +6,9 @@ ObjectTemplate.StrategicObject.strategicObjectName fht_rally_disabled_marker
 ObjectTemplate.StrategicObject.destroyedIcon Ingame\Vehicles\Icons\Minimap\fht_rally_disabled.dds
 ObjectTemplate.StrategicObject.intactIcon Ingame\Vehicles\Icons\Minimap\fht_rally_disabled.dds
 include fht_rally_marker.tweak
+
+
+ObjectTemplate.create PlayerControlObject fht_rally_active_dummy
+ObjectTemplate.createComponent StrategicObject
+ObjectTemplate.StrategicObject.strategicObjectName fht_rally_active_dummy
+include fht_rally_marker.tweak
