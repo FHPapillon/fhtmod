@@ -46,6 +46,7 @@ class fht_flagShuffle(base):
     def round_start(self, hooker):
         try:
             self.hooker = hooker
+            self.mbSelected = False            
             if self.noOfCPs:
                 self.hooker.later(3, self.getCandidates)
                 self.hooker.later(5, self.setTeamCPs)
@@ -127,7 +128,7 @@ class fht_flagShuffle(base):
                 try:
                     choice = int(args[0]) - 1
                 except:
-                    fht.personalMessage("§C1001Incorrect usage of '" + cmd + "'. Please specify the target mainbase as 1,2,... (from North to South)", p)
+                    fht.personalMessage("Â§C1001Incorrect usage of '" + cmd + "'. Please specify the target mainbase as 1,2,... (from North to South)", p)
                     return
                 mbName = self.mbChoices[choice]
                 mb = utils.getNamedCP(mbName)
