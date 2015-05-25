@@ -82,7 +82,9 @@ class fht_mainBaseKillCheck(base):
             fht.getSpawners()
             fht.setCPSpawnPoints()
             fht.sortCPs()
-            self.hooker.later(fhts.startDelay, self.findMainBases)
+            mbCheck = fhtd.fhtPluginObjects.get('fht_flagShuffle', None)
+            if not (mbCheck and mbCheck.mbTeam):
+                self.hooker.later(fhts.startDelay, self.findMainBases)
 
     def confirmList(self, p, safe = False):
         try:
