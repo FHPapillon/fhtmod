@@ -118,7 +118,7 @@ fht_adminPowerLevels = {	    # Rights management. The lower the powerlevel, the 
         "getvalue":             0,                                                              # Get a value in fht_settings ingame.
         "md5check":             0,                                                              # Enable/Disable md5 checks.
         "md5time":              0,                                                              # Set Interval between each md5 check.
-
+        "mbteam":               0,                                                              # Set the team that can select the mainbase; 1 or 2
 	# Drone Commands
 	"drone":		1,				                                # Create Admin Drone		    
 	"exit":			1,								# Turn off safe exit for current drone use.

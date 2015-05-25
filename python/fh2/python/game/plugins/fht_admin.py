@@ -75,6 +75,7 @@ class fht_admin(base):
                     "md5check":                     self.md5Check,
                     "md5time":                      self.md5Time,
                     "mbchange":                     self.mainBaseUpdate,
+                    "mbteam":                       self.mainBaseTeam,
                     "perimeter":                    self.textPerimeter,
                     "rank":                         self.setPermission,
                     "rcon":                         self.rconCommand,
@@ -502,6 +503,25 @@ class fht_admin(base):
                 shuffle.mainBaseSelection(cmd, args, p)           
         except Exception, e:
             fht.Debug("Exception in fht_admin.selectMainBaseLink(): " + str(e)) 
+
+    def mainBaseTeam(self, cmd, args, p):
+        try:
+            if not fhtd.fhtPluginObjects.has_key('fht_flagShuffle'):
+                fht.personalMessage("Mainbase Selection is not available on this map.", p)
+            else:
+                if len(args) is 1 and ( args[0].isdigit()):
+                    team = int(args[0])
+                    if team == 1 or team == 2:
+                        shuffle = fhtd.fhtPluginObjects['fht_flagShuffle']                        
+                        shuffle.selectingTeam = team
+                        shuffle.mbSelected = False
+                        fht.adminPM("%s has set the mainbase team to %s."%(p.getName(), team), p)
+                    else:
+                       fht.personalMessage("Only 1 or 2 are possible as team", p)
+                else:
+                   fht.personalMessage("Exactly one parameter is allowed: 1 or 2", p)
+        except Exception, e:
+            fht.Debug("Exception in fht_admin.mainBaseTeam(): " + str(e)) 
 
     def reloadSettings(self, cmd, args, p):
         try:

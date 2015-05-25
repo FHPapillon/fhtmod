@@ -38,23 +38,27 @@ class fht_flagShuffle(base):
             self.unusedCPs = [ int(x) for x in unusedCPs ]
             self.hooker = None
             self.mbSelected = False
+            self.selectingTeam = mbTeam
             self.shuffleThese = []
             self.activeCPs = []
         except Exception, e:
             fht.Debug("Exception in fht_flagShuffle.init(): " + str(e))            
     
     def round_start(self, hooker):
+        fht.Debug("fht_flagShuffle.round_start()")
+        self.mbSelected = False
         try:
             self.hooker = hooker
-            self.mbSelected = False            
             if self.noOfCPs:
                 self.hooker.later(3, self.getCandidates)
                 self.hooker.later(5, self.setTeamCPs)
                 self.hooker.later(5, fht.sortCPs)
         except Exception, e:
             fht.Debug("Exception in fht_flagShuffle.round_start(): " + str(e))
-            
+        self.mbSelected = False
+
     def round_end(self, hooker):
+        self.mbSelected = False
         try:
             self.hooker = None
 ##            fht.Debug(self.noOfCPs)
@@ -64,7 +68,7 @@ class fht_flagShuffle(base):
 ##                fht.reloadMap()
         except Exception, e:
             fht.Debug("Exception in fht_flagShuffle.round_end(): " + str(e))
-
+        self.mbSelected = False
     def setTeamCPs(self):
         try:
             for cp in fhtd.cpList:
@@ -118,7 +122,7 @@ class fht_flagShuffle(base):
             if not self.mbTeam: 
                 fht.personalMessage("Mainbase Selection is not available on this map.", p)
                 return
-            elif not pTeam is self.mbTeam:
+            elif not pTeam is self.selectingTeam:
                 fht.personalMessage("Your team is not entitled to Mainbase Selection", p)
                 return
             elif self.mbSelected:
@@ -132,8 +136,8 @@ class fht_flagShuffle(base):
                     return
                 mbName = self.mbChoices[choice]
                 mb = utils.getNamedCP(mbName)
-                utils.cp_setTeam(mb, pTeam, True)
-                utils.sayTeam("%s has selected the main base at %s."%(p.getName(), mbName), pTeam)
+                utils.cp_setTeam(mb, self.mbTeam, True)
+                utils.sayTeam("%s has selected the main base at %s."%(p.getName(), mbName), self.mbTeam)
                 fht.adminPM("%s has selected the main base at %s."%(p.getName(), mbName), p)
                 
                 mbOp = utils.getNamedCP(self.mbOpName)

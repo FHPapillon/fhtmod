@@ -75,6 +75,7 @@ class fht_admin(base):
                     "md5check":                     self.md5Check,
                     "md5time":                      self.md5Time,
                     "mbchange":                     self.mainBaseUpdate,
+                    "mbteam":                       self.mainBaseTeam,
                     "perimeter":                    self.textPerimeter,
                     "rank":                         self.setPermission,
                     "rcon":                         self.rconCommand,
@@ -247,7 +248,7 @@ class fht_admin(base):
                 fht.adminPM(("You cannot call a round live after round start, please restart."), p)
             else:
                 fhtd.isLive = True
-                utils.rconExec('game.sayall "§3LIVE"')
+                utils.rconExec('game.sayall "?LIVE"')
                 fht.adminPM("Round has been called live by: ", p)
                 fhtd.axisStartTickets = bf2.gameLogic.getTickets(1)
                 fhtd.alliedStartTickets = bf2.gameLogic.getTickets(2)
@@ -493,6 +494,28 @@ class fht_admin(base):
                 shuffle.mainBaseSelection(cmd, args, p)           
         except Exception, e:
             fht.Debug("Exception in fht_admin.selectMainBaseLink(): " + str(e)) 
+
+    def mainBaseTeam(self, cmd, args, p):
+        try:
+            if not fhtd.fhtPluginObjects.has_key('fht_flagShuffle'):
+                fht.personalMessage("Mainbase Selection is not available on this map.", p)
+            else:
+                if len(args) is 1 and ( args[0].isdigit()):
+                    team = int(args[1])
+                    if team == 1 or team == 2:
+                        shuffle = fhtd.fhtPluginObjects['fht_flagShuffle']                        
+                        shuffle.mbTeam = team
+                        if team ==1:
+                            shuffle.flagTeam = 2
+                        else:
+                            shuffle.flagTeam = 1
+                        fht.adminPM("%s has set the mainbase team to %s."%(p.getName(), team), p)
+                    else:
+                       fht.personalMessage("Only 1 or 2 are possible as team", p)
+                else:
+                   fht.personalMessage("Exactly one parameter is allowed: 1 or 2", p)
+        except Exception, e:
+            fht.Debug("Exception in fht_admin.mainBaseTeam(): " + str(e)) 
 
     def reloadSettings(self, cmd, args, p):
         try:
@@ -771,9 +794,9 @@ class fht_admin(base):
                         return False
 
                 command = msgText.split(" ")[0].replace(fhts.fht_commandSymbol, "", 1)
-
+                fht.Debug("Found command is %s" %(command))
                 if not self.fht_adminCommands.has_key(command):
-                    fht.Debug("The entered text was not a fht command")
+                    fht.Debug("The entered command %s was not a fht command" %(command))
                     return False
 
                 p = bf2.playerManager.getPlayerByIndex(playerID)
@@ -830,10 +853,10 @@ class fht_admin(base):
         try:
             if fhtd.isLive:
                 fht.personalMessage("Round is live.", p)
-                utils.rconExec('game.sayall "§3Round is LIVE."')
+                utils.rconExec('game.sayall "?Round is LIVE."')
             else:
                 fht.personalMessage("Round is NOT live.", p)
-                utils.rconExec('game.sayall "§3Round is NOT live."')
+                utils.rconExec('game.sayall "?Round is NOT live."')
         except Exception, e:
             fht.Debug("Exception in fht_admin.textLive(): " + str(e))  
 
