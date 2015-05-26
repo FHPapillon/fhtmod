@@ -37,7 +37,7 @@ class fht_flagShuffle(base):
             self.excludeCPs = [ int(x) for x in excludeCPs ]
             self.unusedCPs = [ int(x) for x in unusedCPs ]
             self.hooker = None
-            self.mbSelected = False
+            fhtd.mbSelected = False
             self.selectingTeam = mbTeam
             self.shuffleThese = []
             self.activeCPs = []
@@ -46,7 +46,7 @@ class fht_flagShuffle(base):
     
     def round_start(self, hooker):
         fht.Debug("fht_flagShuffle.round_start()")
-        self.mbSelected = False
+        fhtd.mbSelected = False
         try:
             self.hooker = hooker
             if self.noOfCPs:
@@ -55,10 +55,10 @@ class fht_flagShuffle(base):
                 self.hooker.later(5, fht.sortCPs)
         except Exception, e:
             fht.Debug("Exception in fht_flagShuffle.round_start(): " + str(e))
-        self.mbSelected = False
+        fhtd.mbSelected = False
 
     def round_end(self, hooker):
-        self.mbSelected = False
+        fhtd.mbSelected = False
         try:
             self.hooker = None
 ##            fht.Debug(self.noOfCPs)
