@@ -65,6 +65,11 @@ depRegister = {}
 deployerKits = []
 
 #-------------------------------
+#    fht_flagShuffle.py
+#-------------------------------
+mbSelected = False
+
+#-------------------------------
 #    fht_bleedReinforcements.py
 #-------------------------------
 bleedCPAxis = ""
