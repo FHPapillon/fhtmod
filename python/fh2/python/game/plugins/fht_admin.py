@@ -514,6 +514,7 @@ class fht_admin(base):
                     if team == 1 or team == 2:
                         shuffle = fhtd.fhtPluginObjects['fht_flagShuffle']                        
                         shuffle.selectingTeam = team
+                        fhtd.mbSelected = False
                         fht.adminPM("%s has set the mainbase team to %s."%(p.getName(), team), p)
                     else:
                        fht.personalMessage("Only 1 or 2 are possible as team", p)

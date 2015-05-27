@@ -125,7 +125,7 @@ class fht_flagShuffle(base):
             elif not pTeam is self.selectingTeam:
                 fht.personalMessage("Your team is not entitled to Mainbase Selection", p)
                 return
-            elif self.mbSelected:
+            elif fhtd.mbSelected:
                 fht.personalMessage("A Mainbase has already been selected", p)
                 return
             else:
@@ -142,10 +142,13 @@ class fht_flagShuffle(base):
                 
                 mbOp = utils.getNamedCP(self.mbOpName)
                 utils.cp_setTeam(mbOp, self.flagTeam, True)
-                self.mbSelected = True
+                fhtd.mbSelected = True
                 mBCK = fhtd.fhtPluginObjects.get('fht_mainBaseKillCheck', None)
                 if mBCK:
-                    mBCK.findMainBases()                
+                    mBCK.findMainBases() 
+                fht.getControlPoints() 
+                fht.getSpawnPoints()
+                fht.setCPSpawnPoints()
         except Exception, e:
             fht.Debug("Exception in fht_flagShuffle.mainBaseSelection(): " + str(e)) 
     
