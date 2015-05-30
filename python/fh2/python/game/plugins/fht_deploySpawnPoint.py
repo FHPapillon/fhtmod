@@ -156,7 +156,7 @@ class fht_deploySpawnPoint(base):
                             rSL = r.sL
                             if rSL:
                                 fht.Debug("SL dep")
-                                info = self.lastDeploySLOnly
+                                info = fhtd.dspLastDeploySLOnly
                                 if r.time:
                                     last = r.time
                                 else:
@@ -164,7 +164,7 @@ class fht_deploySpawnPoint(base):
                                 rTTL = fhts.rallyTTLSL - host.timer_getWallTime() + last
                                 ttl = fhts.rallyTTLSL
                             else:
-                                info = self.lastDeploy
+                                info = fhtd.dspLastDeploy
                                 if r.time:
                                     last = r.time
                                 else:
@@ -190,14 +190,14 @@ class fht_deploySpawnPoint(base):
             now = host.timer_getWallTime() - fhts.waitTimeRally
             self.lastRun = {}
             
-            self.lastDeploy = [
+            fhtd.dspLastDeploy = [
                 "Normal",
                 ["", now, now, now, now, now, now, now, now, now, now],
                 ["", now, now, now, now, now, now, now, now, now, now]
             ]
 
             now = host.timer_getWallTime() - fhts.waitTimeRallySL
-            self.lastDeploySLOnly = [
+            fhtd.dspLastDeploySLOnly = [
                 "SL",
                 ["", now, now, now, now, now, now, now, now, now, now],
                 ["", now, now, now, now, now, now, now, now, now, now]
@@ -260,7 +260,7 @@ class fht_deploySpawnPoint(base):
                             nearbySquadPs += 1
             if nearbySquadPs < fhts.minSquadPsNear:
                 if p.isSquadLeader():
-                    info = self.lastDeploySLOnly
+                    info = fhtd.dspLastDeploySLOnly
                     wTime = fhts.waitTimeRallySL - host.timer_getWallTime() + info[pTeam][pSquad]
                     if wTime > 0:
                         fht.personalMessage("You cannot deploy a squadleader rally - previous deployment too recent, retry in %.1f seconds"%(wTime), p)
@@ -273,7 +273,7 @@ class fht_deploySpawnPoint(base):
                     fht.squadMessage(p, "%s: You cannot deploy a rally - not enough squad members nearby (%d nearby, %d required)"%(p.getName(), nearbySquadPs, fhts.minSquadPsNear))
                     return
             else:
-                info = self.lastDeploy
+                info = fhtd.dspLastDeploy
                 wTime = fhts.waitTimeRally - host.timer_getWallTime() + info[pTeam][pSquad]
                 if wTime > 0:
                     fht.squadMessage(p, "Your squad cannot deploy a rally - previous deployment too recent, retry in %.1f seconds"%(wTime))
