@@ -289,6 +289,9 @@ ObjectTemplate.dontClearTeamOnExit 0
  
 ObjectTemplate.activeSafe PlayerControlObject marder_iii
 ObjectTemplate.dontClearTeamOnExit 0
+
+ObjectTemplate.activeSafe PlayerControlObject marder_iii_m
+ObjectTemplate.dontClearTeamOnExit 0
  
 ObjectTemplate.activeSafe PlayerControlObject panthera
 ObjectTemplate.dontClearTeamOnExit 0
@@ -498,6 +501,9 @@ ObjectTemplate.activeSafe PlayerControlObject churchillmkiv_75mm
 ObjectTemplate.dontClearTeamOnExit 0
  
 ObjectTemplate.activeSafe PlayerControlObject churchillmkiv_avre
+ObjectTemplate.dontClearTeamOnExit 0
+
+ObjectTemplate.activeSafe PlayerControlObject churchillmkiv_crocodile
 ObjectTemplate.dontClearTeamOnExit 0
  
 ObjectTemplate.activeSafe PlayerControlObject cromwell
