@@ -1,0 +1,460 @@
+bf109e7_greece, BF109E7 Trop
+bf109e7_trop, BF109E7 Trop
+bf109e7_greecealt, BF109E7 Trop
+bf109e7_tropalt, BF109E7 Trop
+bf109f4, BF109F4
+bf109f4_alt250kg, BF109 F4
+bf109f4_alt50kg, BF109 F4
+bf109f4_trop, BF109F4
+bf109f4_trop_alt250kg, BF109 F4
+bf109f4_trop_alt50kg, BF109 F4
+fw190, FW 190
+fw190_alt, FW 190
+ju52, Junkers 52
+JU52Rider_Left, Junkers 52
+JU52Rider_Right, Junkers 52
+ju87b2, Ju87B2 'Stuka'
+ju87b2alt, Ju87B2 'Stuka'
+ju87b2_greece, Ju87B2 'Stuka'
+ju87b2_libya, Ju87B2 'Stuka'
+ju87d1_trop, ju87d1_trop 'Stuka'
+rz20chute, RZ20 Parachute
+storch_france, Fieseler Storch
+storch_trop, Fieseler Storch
+beaufightermk1, Beaufighter Mk.I
+beaufightermk1_b, Beaufighter Mk.I
+hardy, Hardy
+horsa_glider, Horsa Glider
+horsa_glider_flyover, KILLMESSAGE_VEHICLE_c47
+hurricanemki, Hurricane Mk.I
+hurricanemki_b, Hurricane Mk.I
+hurricanemkiic, Hurricane Mk.IIC
+hurricanemkiic_alt_b, Hurricane Mk.IIC
+hurricanemkiic_b, Hurricane Mk.IIC
+hurricanemkiid, Hurricane Mk.IID
+pipercub_gb, Piper J-3 Cub
+spitfiremkv, Spitfire MK.V
+spitfiremkvb, Spitfire MK.Vb
+spitfiremkvb_usaaf, Spitfire MK.Vb
+Spitfire_IX, Spitfire MkIX
+swordfish, Fairey Swordfish Reargun
+swordfish_b, Fairey Swordfish
+typhoon_mk1b_late, Typhoon
+typhoon_mk1b_late_flyover, Typhoon
+x9chute, X9 Parachute
+mc200, Mc.200
+mc200_alt, BF109E7 Trop
+mc202, Mc.202
+mc202_objective, MC202
+AIX_P51D, P-51D 'Mustang'
+AIX_P51D_Bombs, P-51D 'Mustang'
+AIX_P51D_Rockets, P-51D 'Mustang'
+c47, C-47 'Sky Train'
+c47_spawn_flyover, C-47 'Sky Train'
+p-40e, P-40E 'Warhawk'
+p-40e_120lb, P-40E 'Warhawk'
+p-40e_250lb, P-40E 'Warhawk'
+p-40e_500lb, P-40E 'Warhawk'
+p-40e_kittyhawk, P-40 'Kittyhawk'
+p38_lightning, P-38 'Lightning'
+p38_r_lightning, P-38 'Lightning'
+p47_d, P-47 'Thunderbolt'
+p47_d_alt, P-47 'Thunderbolt'
+p47_d_rocket, P-47 'Thunderbolt'
+p51d_flyover, P-51D Mustang
+p51d_ramelle_flyover, P-51D Mustang
+pipercub_us, Piper J-3 Cub
+usair_c47_damaged_flyover, KILLMESSAGE_VEHICLE_c47
+usair_c47_flyover, C47 'Sky Train
+britcommradio, Commander Radio
+gercommradio, Commander Radio
+hqradio1, HQRadio
+hqradio2, HQRadio
+carrom13_40_au, Carro Armato M13/40
+civcoupe_black, Civilian Coupe
+civcoupe_green, Civilian Coupe
+civcoupe_red, Civilian Coupe
+civcoupe_rust, Civilian Coupe
+civtruck, Civilian Truck
+redtractor, Tractor
+rideable_bicycle, Bicycle
+50_turret_gunner, Gunner
+citroen_11cv, Citroen 11 CV
+citroen_11cv_black, Citroen 11 CV
+citroen_11cv_cream, Citroen 11 CV
+citroen_11cv_fr, Citroen 11 CV
+citroen_11cv_ger, Citroen 11 CV
+citroen_11cv_green, Citroen 11 CV
+citroen_11cv_peach, Citroen 11 CV
+citroen_11cv_red, Citroen 11 CV
+citroen_11cv_rust, Citroen 11 CV
+flak18, Flak 18 88mm
+flak18ns, Flak 18 88mm
+flak18ns_fr, Flak 18 88mm
+flak18ns_fr_two, Flak 18 88mm
+flak18ns_pg, Flak 18 88mm
+flak18_fr, Flak 18 88mm
+flak18_pg, Flak 18 88mm
+flak38, Flak 38 20mm
+flak38_france, Flak 38 20mm
+flak38_pan, Flak 38 20mm
+flakvierling38, FlaKVierling 38
+flakvierling38_pan, FlaKVierling 38
+flakvierling38_ai, FlaKVierling 38
+flakvierling38_france, FlaKVierling 38
+flakvierling_ard, FlaKVierling 38
+flakvierling_win, FlaKVierling 38
+fueltruck, Opel Blitz
+gpf_155mm, 15.5 cm K 418(f)
+hetzer, Jagdpanzer 38(t) Hetzer
+hetzer_alt, Hetzer
+hetzer_win, Jagdpanzer 38(t) Hetzer
+jagdpanther, JagDPanther
+jagdpanther_alt, jagdpanther_alt
+jagdpanther_win, JagDPanther_win
+jagdpanther_win_alt, JagDPanther_win_alt
+jagdpanzeriv, Panzer IV/70(V)
+jagdpanzeriv_win, Panzer IV/70(V)
+kettenkrad, KettenKrad
+kettenkrad_dak, KettenKrad
+kettenkrad_fr, KettenKrad
+kubeldak, Kubelwagen
+kubelwagen, Kubelwagen
+kubelwagen_fr, Kubelwagen
+kubelwagen_fr_alt, Kubelwagen
+kubelwagen_win, Kubelwagen
+kubelwagen_win_alt, Kubelwagen
+kwk_5cm, KwK 50mm
+kwk_5cm_fr, KwK 50mm
+lefh18, LeFH 18
+lefh18_AI, LeFH 18
+lefh18_france, LeFH 18
+lefh18_france_AI, LeFH 18
+marder1_39, Marder I
+marder_i, Marder I
+marder_iii, Marder III
+nebelwerfer, Nebelwerfer
+nebelwerfer_AI, Nebelwerfer
+nebelwerfer_ard, Nebelwerfer
+nebelwerfer_pan, Nebelwerfer
+nebelwerfer_win, Nebelwerfer
+opelblitz_ard, Opel Blitz
+opelblitz_ard_ammo, Opel Blitz
+opelblitz_ard_nocanvas, Opel Blitz
+opelblitz_ard_win, Opel Blitz
+opelblitz_ard_win_ammo, Opel Blitz
+opelblitz_ard_win_nocanvas, Opel Blitz
+opelblitz_dak, Opel Blitz
+opelblitz_dak_ammo, Opel Blitz
+opelblitz_dak_nocanvas, Opel Blitz
+opelblitz_dak_zw36, Opel Blitz (ZW36)
+opelblitz_flak38, Opel Blitz Flak 38
+opelblitz_flak38_dak, Opel Blitz Flak 38
+opelblitz_flak38_pan, Opel Blitz Flak 38
+opelblitz_fr, Opel Blitz
+opelblitz_fr_ammo, Opel Blitz
+opelblitz_fr_nocanvas, Opel Blitz
+opelblitz_fr_slats, Opel Blitz
+opelblitz_fr_zw36, Opel Blitz (ZW36)
+opelblitz_pan, Opel Blitz
+opelblitz_pan_ammo, Opel Blitz
+opelblitz_pan_nocanvas, Opel Blitz
+pak35, PaK 35
+pak35_europe, PaK 35
+pak35_greece, PaK 35
+pak35_europe_static, PaK 35
+pak35_greece_static, PaK 35
+pak35_static, PaK 35
+pak38, Pak38
+pak38_fr, Pak38
+pak38_pg, Pak38
+pak38_static, PaK 38
+pak38_static_fr, PaK 38
+pak38_static_pg, PaK 38
+pak40, Pak40
+pak40_ard, Pak40
+pak40_win, Pak40
+pak40_wp, Pak40
+pak40_ws, Pak40
+pak40_static, PaK 40
+pak40_static_ard, PaK 40
+pak40_static_win, PaK 40
+pak40_static_wp, PaK 40
+pak40_static_ws, PaK 40
+panthera, Panther A
+panthera_alt, Panther A
+panthera_late, Panther A
+panthera_late_alt, Panther A
+pantherg, Panther G
+panther_g_ard, Panther G
+panther_g_ard_alt, Panther G
+panther_g_win, Panther G
+panther_g_win_alt, Panther G
+puma, SdKfz 234 'Puma'
+pziic, Pz II Ausf. C
+pziic_greece, Pz II Ausf. C
+pziif, Pz II Ausf. F
+pziii_je_dak, PanzerIII Je
+pziii_je_greece, PanzerIII Je
+pziii_jl_dak, PanzerIII Jl
+pziii_l_dak, PanzerIII L
+pziii_l_camo, PanzerIII L
+pziii_m, PanzerIII L
+pziii_n, PanzerIII N
+pziii_n_dak, PanzerIII N
+pziii_hullmg, T34/76
+pzivd_greece, PanzerIV D
+pzivd_na, KILLMESSAGE_VEHICLE_PZIVD_NA
+pzivf1, KILLMESSAGE_VEHICLE_pzivf1
+pzivf2, KILLMESSAGE_VEHICLE_PZIVF2
+pzivh, PanzerIV H
+pzivh_811, PanzerIV H
+pzivh_ard, PanzerIV H
+pzivh_ard_win, PanzerIV H
+pzivh_noskirt, PanzerIV H
+schwimmwagen, Schwimmwagen
+sdkfz222, SdKfz 222
+sdkfz222_pan, SdKfz 222
+sdkfz222_win, SdKfz 222
+sdkfz231_1, SdKfz 231
+sdkfz231_1_france, SdKfz 231
+sdkfz231_1_pan, SdKfz 231
+sdkfz250_3, SdKfz 250/3 Ausf. C
+sdkfz250_3_alt, SdKfz 250/3 Ausf. C
+sdkfz251_1, SdKfz 251/1 Ausf. C
+sdkfz251_1_spawn, SdKfz 251/1 Ausf. C
+sdkfz251_10, SdKfz 251/10 Ausf. C
+sdkfz251_d, SdKfz251/1 .D
+sdkfz251_d_spawn, SdKfz251/1 .D
+sdkfz251_d_ard, SdKfz251/1 .D
+sdkfz251_d_win, SdKfz251/1 .D
+sdkfz251_d_sf, SdKfz251/1-II .D
+stuka_fuzz_rocketpod, Stuka Fuzz
+sdkfz7, SdKfz 7
+sdkfz7_camo, SdKfz 7
+sdkfz7_dak, SdKfz 7
+sdkfz7_flak, SdKfz 7
+sdkfz7_flak_camo, SdKfz 7
+sdkfz7_flak_dak, SdKfz 7
+sdkfz7_pak, SdKfz 7
+sdkfz7_pak_camo, SdKfz 7
+sdkfz7_pak_dak, SdKfz 7
+pak40_towed, Pak40
+sdkfz7_pak40, SdKfz 7
+sd_ah_51_flak38, Flak 38 20mm
+stug40, Stug40
+stug40r, Stug40
+stug40_g, StugIII G
+stug40_g_alt, StugIII G
+stug_iv, Stug IV
+stug_iv_alt, Stug IV
+stuh42, Stuh42
+tiger_dak, Tiger Ausf.E/H1
+kingtiger_1944easternfall, KingTiger Ausf.B
+kingtiger_1944fall, KingTiger Ausf.B
+kingtiger_1944winter, KingTiger Ausf.B
+kingtiger_1945spring, KingTiger Ausf.B
+kingtiger_night, KingTiger Ausf.B
+kingtiger_standard, Tiger Ausf.E/H1
+tiger_broken, Tiger Ausf.E/H1
+tiger_late, Tiger Ausf.E/H1
+tiger_late_132, Tiger Ausf.E/H1
+tiger_late_222, Tiger Ausf.E/H1
+vwtyp82, VW Type 82E
+wespe, Wespe
+wirbelwind, FlakPz IV 'Wirbelwind'
+wirbelwind_win, FlakPz IV 'wirbelwind_win'
+wurfgerat41, Wurfgerat 41
+25pdr, 25 Pounder
+25pdr_AI, 25 Pounder
+25pdr_mkiv, 25 Pounder
+25pdr_mkiv_AI, 25 Pounder
+6pdr, 57mm M1
+6pdr_mkiv, 57mm M1
+6pdr_mkiv_static, 6 Pounder
+6pdr_static, 6 Pounder
+achilles_iic, Achilles_IIC
+aecdorchester, AEC 'Dorchester'
+aecdorchester_de, AEC 'Dorchester'
+aecdorchester_france, AEC 'Dorchester'
+bedfordox, Bedford OYD
+bedfordox_nocanvas, Bedford OX
+bedfordox_france, Bedford OYD
+bedfordox_france_nocanvas, Bedford OX
+bedfordoyd, Bedford OYD
+bedfordoyd_ammo, Bedford OYD
+bedfordoyd_nocanvas, Bedford OYD
+bedfordoyd_france, Bedford OYD
+bedfordoyd_france_ammo, Bedford OYD
+bedfordoyd_france_nocanvas, Bedford OYD
+bedford_qlt, Bedford QLT
+bedford_qlt_6pdr, Bedford QLT
+bedford_qlt_ammo, Bedford QLT
+bishop, Bishop
+bofors40mm, Bofors 40mm
+bofors40mm_ai, Bofors 40mm
+bofors40mm_eu, Bofors 40mm
+chevy30cwt, Chevy 30CWT
+chevy30cwt_ammo, Chevy 30CWT
+chevy30cwt_breda, Chevy AA
+chevy30cwt_portee, 2Pdr Portee
+churchillmkiii, Churchill Mk.III
+churchillmkiv_6pdr, Churchill Mk.IV
+churchillmkiv_75mm, Churchill Mk.IV
+churchillmkiv_avre, Churchill Mk.IV AVRE
+cromwell, Cromwell Mk.IV
+cromwell_95, Cromwell Mk.VI
+cromwell_irishguard, Cromwell Mk.IV
+cromwell_polish, Cromwell Mk.IV
+cruiseriv, Cruiser Mk.IV
+crusadermk1early, Crusader Mk.1
+crusadermk1late, Crusader Mk.1
+crusadermk3, Crusader Mk.III
+crusadermk3_aa, Crusader Mk.III AA
+daimlermk1, Daimler Mk.I
+deacon, AEC 'Deacon'
+deacon_bofors, Bofors 40mm
+dingo_na, Daimler Dingo
+m3grant, M3 Grant
+m3stuarthoney, M3 Stuart 'Honey'
+m4a1early_eu_brit, Sherman II
+m4a1mid_eu_brit, Sherman II
+m5a1_halftrack, M5A1 Halftrack
+m5a1_halftrack_spawn, M5A1 Halftrack
+markvi, Vickers Mk.VI
+marmonherringtonmk3a, Marmon H. Mk.3A
+matildaii, Matilda Mk.II
+sherman_vc_early, Sherman VC 'Firefly'
+sherman_vc_early_olive, Sherman VC 'Firefly'
+sherman_vc_late, Sherman VC 'Firefly'
+sherman_vc_late_olive, Sherman VC 'Firefly'
+sherman_v_late, Sherman V
+sherman_v_late_olive, Sherman V
+sherman_v_late_alt, Sherman V
+sherman_v_late_alt_olive, Sherman V
+sherman_v_mid, Sherman V
+sherman_v_mid_olive, Sherman V
+universalcarrier, Universal Carrier
+universalcarrier_bren, Bren Carrier
+universalcarrier_france, Universal Carrier
+universalcarrier_france_bren, Bren Carrier
+universalcarrier_france_vickers, Bren Carrier
+universalcarrier_polish, Universal Carrier
+universalcarrier_polish_bren, Bren Carrier
+universalcarrier_polish_vickers, Bren Carrier
+universalcarrier_vickers, Bren Carrier
+universalcarrier_wasp, Wasp Universal Carrier
+valentineii, Valentine Mk.II
+willysmb, Willys MB
+willysmbsas, Willys MB
+willysmb_france, Willys MB
+breda_35_20mm, Breda 35 20mm
+breda_35_20mm_armament, Breda 35 20mm
+cannone_da_47_32, Cannone da 47/32
+cannone_da_47_32_static, Cannone da 47/32
+carrom11_39, M3 Grant
+carrom11_39_au, M3 Grant
+carrom13_40, Carro Armato M13/40
+fiat508, Kubelwagen
+fiat626, Vehicle Rider
+fiat626_47mm, Fiat 626
+fiat626_ammo, Fiat 626
+fiat626_ammo_ard, Fiat 626
+fiat626_ard, Fiat 626
+fiat626_breda, Fiat 626
+fiatl6_40, Fiat L6/40
+monster_fiat508, Kubelwagen
+monster_fiat626, Vehicle Rider
+sahariana, Sahariana
+schneider_1913, Cannone da 105/28
+semoventel40, Semovente L40
+37mm_m3, 37mm M3
+37mm_m3_static, 37mm M3
+57mm_m1_atgun, 57mm M1
+57mm_m1_atgun_win, 57mm M1
+57mm_m1_atgun_static, 57mm M1 AT Gun
+57mm_m1_atgun_win_static, 57mm M1 AT Gun
+76mm_m5_atgun, 76mm M5
+76mm_m5_atgun_win, 76mm M5
+76mm_m5_atgun_static, 76mm M5
+76mm_m5_atgun_static_win, 76mm M5
+fordgpa, Ford GPA
+gmc, GMC
+gmc_ammo, GMC
+gmc_nocanvas, GMC
+gmc_win, GMC
+gmc_win_ammo, GMC
+gmc_win_nocanvas, GMC
+gmc_m3_75mm, M3 75mm GMC
+m10, M10
+m10_win, m10_win
+m13_mgmc, M16 MGMC'
+m16_mgmc, M16 MGMC'
+m18_hellcat, M18 'Hellcat'
+m18_hellcat_win, M18 'Hellcat'
+m24_chaffee, M24 Light Tank
+m24_chaffee_win, M24 Light Tank
+m26_pershing, M26 Heavy Tank 'Pershing'
+m2a1_howitzer_105mm, 105mm Howitzer
+m2a1_howitzer_105mm_AI, 105mm Howitzer
+m2a1_howitzer_105mm_win, 105mm Howitzer
+m33, M33 'Twin 50'
+m36, M36 'Jackson' Tank Destroyer
+m36_win, m36 'Jackson' Tank Destroyer
+m3a1, M3A1'
+m3a1_spawn, M3A1'
+m3a1_win, m3a1
+m3a1_stuart, M3A1 Light Tank
+m3_halftrack, m3_halftrack'
+m3_lee, M3 Grant
+m3_scoutcar, Bedford OYD
+m4a1, Sherman II
+m4a1_76mm, M4A1(76)W Medium Tank
+m4a1_early, M4A1
+m4a1_early_hullmachinegun, M4A1
+m4a1early_eu, M4A1 Medium Tank
+m4a1mid_eu, M4A1 Medium Tank
+m4a1_turret_gunner, Gunner
+m4a1_turret_gunner_alt, Gunner
+m4a3, M4A3 Medium Tank
+m4a3_105, M4A3 105mm
+m4a3_76, M4A3(76)W Medium Tank
+m4a3_76_win, M4A3(76)W Medium Tank
+m4a3_76_win_alt, M4A3(76)W Medium Tank
+m4a3_win, M4A3 Medium Tank
+m4a3e2_jumbo75, M4A3E2(75) Assault Tank
+m4a3e2_jumbo75_win, M4A3E2(75) Assault Tank
+m4a3e2_jumbo76, M4A3E2(76) Assault Tank
+m4a3e2_jumbo76_win, M4A3E2(76) Assault Tank
+m51, M51 'Quad 50'
+m51_win, M51 'Quad 50'
+m5a1_stuart, M5A1 Light Tank
+m5a1_stuart_recon, M5A1 Stuart 'Reece'
+m8_greyhound, M8 'Greyhound'
+m8_greyhound_win, M8 'Greyhound'
+m8_greyhoundnf, M8 'Greyhound'
+m8_greyhound_winnf, M8 'Greyhound'
+willysmb_rocket, Willys MB Calliope
+willysmb_us, Willys MB
+willysmb_us_snow, Willys MB
+willysmb_us_alt, Willys MB
+willysmb_us_snow_alt, Willys MB
+lifeboat_flc, KILLMESSAGE_VEHICLE_LIFEBOAT
+lifeboat_qm1, KILLMESSAGE_VEHICLE_LIFEBOAT
+sturmboot39, Junkers 88A
+sturmboot39_passenger, Sturmboot 39
+subviib, KILLMESSAGE_VEHICLE_subviib
+subviib2, Sub VIIb
+U47, Sub VIIb U47
+audacity, HMS Audacity
+agassiz, KILLMESSAGE_VEHICLE_AGASSIZ
+landingcraftassault, LCA
+lct_mk5_gb_normandy, LCT Mk5
+libertyship, LCT Mk5
+lct_mk5_us_normandy, LCT Mk5
+lcvp, LCVP
+drg_gw_o_halle1, O_HALLE
+wr360c14_africa, WR360C14_Africa
+wr360c14_europe, WR360C14_Europe
+wr360c14_europe1942e, WR360C14_Europe1942E
+wr360c14_europe1942l, WR360C14_Europe1942L

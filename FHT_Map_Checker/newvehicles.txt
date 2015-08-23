@@ -1,0 +1,1078 @@
+AA, aa_ATBoys_Limited.inc
+AA, aa_EngineerEarly.inc
+AA, aa_EngineerEarly_limited.inc
+AA, aa_kits.inc
+AA, aa_kits_spawner.inc
+AA, aa_Limited_Assault_TommygunD_No4.inc
+AA, aa_Limited_Support_Bren_No4.inc
+AA, aa_NCOTommygunS.inc
+AA, aa_NCOTommygunS_rifle.inc
+AA, aa_NCOTommygunS_rifle_spawner.inc
+AA, aa_RiflemanEarly.inc
+AA, aa_ScoutEarly.inc
+BA, BA_AssaultTommygunD.inc
+BA, BA_Assault_m1928a1.inc
+BA, BA_Assault_m1928a1_30r.inc
+BA, BA_AT.inc
+BA, BA_ATBoys.inc
+BA, BA_ATBoys_hawkins.inc
+BA, BA_ATBoys_Limited.inc
+BA, BA_EngineerEarly.inc
+BA, BA_kits.inc
+BA, BA_kits_spawner.inc
+BA, BA_Limited_Assault_TommygunD_No4.inc
+BA, BA_Limited_Support_Bren_No4.inc
+BA, BA_Limited_Support_lewishandheld.inc
+BA, BA_NCO.inc
+BA, BA_NCOTommygunS.inc
+BA, BA_NCOTommygunS_rifle.inc
+BA, BA_NCOTommygunS_rifle_spawner.inc
+BA, BA_NCO_rifle.inc
+BA, BA_NCO_rifle_spawner.inc
+BA, BA_RiflemanEarly.inc
+BA, BA_RiflemanEarlyNight.inc
+BA, BA_RiflemanEarly_tunis.inc
+BA, BA_Riflemansmlenade_tunis.inc
+BA, BA_SapperNo1NightSB.inc
+BA, BA_SapperNo1NightST.inc
+BA, BA_ScoutEarly.inc
+BA, BA_ScoutEarly_tunis.inc
+BA, BA_TankerWebley.inc
+BA, BA_TankHunter_hawkin_rifle.inc
+BA, BA_TankHunter_rifle.inc
+BA, BA_TankHunter_smg.inc
+beret, ba_kits.inc
+BW, BW_Antitank.inc
+BW, BW_Antitank_Limited.inc
+BW, BW_AssaultEngineer.inc
+BW, BW_CommandoStenMK2S.inc
+BW, BW_Engineer.inc
+BW, BW_Engineer_Satchel.inc
+BW, BW_Engineer_Satchel_ancto.inc
+BW, BW_Engineer_Satchel_GWood.inc
+BW, BW_kits.inc
+BW, BW_kits_spawner.inc
+BW, BW_LMG_Limited.inc
+BW, BW_Medic.inc
+BW, BW_NCO.inc
+BW, BW_NCO_GWood.inc
+BW, BW_NCO_GWood_rifle.inc
+BW, BW_NCO_GWood_rifle_spawner.inc
+BW, BW_NCO_rifle.inc
+BW, BW_NCO_rifle_spawner.inc
+BW, BW_NCO_Sten.inc
+BW, BW_NCO_Stenmk5.inc
+BW, BW_NCO_Stenmk5_rifle.inc
+BW, BW_NCO_Stenmk5_rifle_spawner.inc
+BW, BW_NCO_Sten_rifle.inc
+BW, BW_NCO_Sten_rifle_spawner.inc
+BW, BW_Pilot.inc
+BW, BW_RifleAssault.inc
+BW, BW_Riflenadelauncher_ancto.inc
+BW, BW_Rifleonly_ancto.inc
+BW, BW_Scout.inc
+BW, BW_Scout_ancto.inc
+BW, BW_Scout_GWood.inc
+BW, BW_SMGAssault.inc
+BW, BW_SMGAssault_Limited.inc
+BW, BW_SMGAssault_m1928a1_Limited.inc
+BW, BW_SMGAssault_mk5.inc
+BW, BW_SMGAssault_no69.inc
+BW, BW_Tanker.inc
+Mareth, bw_kits.inc
+PEB, bw_kits.inc
+turtle, bw_kits.inc
+CW, CW_Antitank.inc
+CW, CW_Antitank_Limited.inc
+CW, CW_Engineer.inc
+CW, CW_Engineer_Satchel.inc
+CW, CW_kits.inc
+CW, CW_kits_spawner.inc
+CW, CW_LMG_Limited.inc
+CW, CW_Medic.inc
+CW, CW_NCO.inc
+CW, CW_NCO_rifle.inc
+CW, CW_NCO_rifle_spawner.inc
+CW, CW_Pilot.inc
+CW, CW_RifleAssault.inc
+CW, CW_Scout.inc
+CW, CW_SMGAssault.inc
+CW, CW_SMGAssault_Limited.inc
+CW, CW_Tanker.inc
+turtle, cw_kits.inc
+GA, GA_AntiTank_k98.inc
+GA, GA_AntiTank_k98_haft.inc
+GA, GA_ATPzB39.inc
+GA, GA_ATPzB39_Limited.inc
+GA, GA_EngineerK98Short.inc
+GA, ga_kits.inc
+GA, ga_kits_spawner.inc
+GA, GA_Limited_Assault_MP40_K98.inc
+GA, GA_Limited_Support_MG34_K98.inc
+GA, ga_LMG.inc
+GA, GA_MechanicWaltherP38.inc
+GA, ga_NCO.inc
+GA, GA_NCOMP40.inc
+GA, GA_NCOMP40_rifle.inc
+GA, GA_NCOMP40_rifle_spawner.inc
+GA, ga_NCO_rifle.inc
+GA, ga_NCO_rifle_spawner.inc
+GA, GA_PilotP08.inc
+GA, ga_RifleAssault_tunis.inc
+GA, GA_RiflemanK98.inc
+GA, GA_ScoutK98Short.inc
+GA, GA_ScoutK98Short_tunis.inc
+GA, GA_TankerP08.inc
+GC, gcsssnow_kits.inc
+GC, gcsssnow_kits_spawner.inc
+GC, gcwhcamo_kits.inc
+GC, gcwhcamo_kits_spawner.inc
+GC, gcwhsnow_kits.inc
+GC, gcwhsnow_kits_spawner.inc
+fj, gm_kits.inc
+GM, GM_ATPzB39.inc
+GM, GM_ATPzB39_Limited.inc
+GM, GM_EngineerK98Short.inc
+GM, gm_kits.inc
+GM, gm_kits_spawner.inc
+GM, GM_Limited_Assault_MP40_K98.inc
+GM, GM_Limited_Support_MG34_K98.inc
+GM, GM_NCOMP40.inc
+GM, GM_NCOMP40_para.inc
+GM, GM_NCOMP40_para_rifle.inc
+GM, GM_NCOMP40_rifle.inc
+GM, GM_NCOMP40_rifle_spawner.inc
+GM, GM_RiflemanK98.inc
+GM, GM_RiflemanK98_para.inc
+GM, GM_ScoutK98Short.inc
+fj, gs_kits.inc
+GS, GS_AntitankAssault.inc
+GS, GS_AntitankAssault_Limited.inc
+GS, GS_Engineer.inc
+GS, GS_Engineer_Satchel.inc
+GS, GS_Engineer_Satchel_ramelle.inc
+GS, gs_kits.inc
+GS, gs_kits_spawner.inc
+GS, GS_LMG_FG42_Limited.inc
+GS, GS_LMG_Limited.inc
+GS, GS_LMG_MG42_Limited.inc
+GS, GS_Medic.inc
+GS, GS_NCO.inc
+GS, GS_NCOStg44.inc
+GS, GS_NCOStg44_rifle.inc
+GS, GS_NCOStg44_rifle_spawner.inc
+GS, GS_NCO_GWood.inc
+GS, GS_NCO_GWood_rifle.inc
+GS, GS_NCO_GWood_rifle_spawner.inc
+GS, GS_NCO_mp40_g43.inc
+GS, GS_NCO_mp40_g43_rifle.inc
+GS, GS_NCO_mp40_g43_rifle_spawner.inc
+GS, GS_NCO_rifle.inc
+GS, GS_NCO_rifle_spawner.inc
+GS, GS_Pilot.inc
+GS, GS_RifleAssault.inc
+GS, GS_RifleAssault_G41_Limited.inc
+GS, GS_RifleAssault_G43_Limited.inc
+GS, GS_RifleAssault_ramelle.inc
+GS, GS_Rifleonly.inc
+GS, GS_Scout.inc
+GS, GS_SMGAssault.inc
+GS, GS_SMGAssault_Limited.inc
+GW, GW_AntitankAssault.inc
+GW, GW_AntitankAssault100m_Limited.inc
+GW, GW_AntitankAssault60m_Limited.inc
+GW, GW_AntitankAssault60m_smg.inc
+GW, GW_AntitankAssault_grenades.inc
+GW, GW_AntitankAssault_haft.inc
+GW, GW_AntitankAssault_heavy.inc
+GW, GW_AntitankAssault_Limited.inc
+GW, GW_AntitankAssault_patrone.inc
+GW, GW_AntitankAssault_smg_ladung.inc
+GW, GW_AntitankSchreck_Limited.inc
+GW, GW_Antitank_heatnades.inc
+GW, GW_Engineer.inc
+GW, GW_Engineer_Satchel.inc
+GW, GW_Engineer_Satchel_ancto.inc
+GW, GW_FlakGunner.inc
+GW, gw_kits.inc
+GW, gw_kits_spawner.inc
+GW, GW_LMG_Limited.inc
+GW, GW_LMG_Limited_GWood.inc
+GW, GW_LMG_MG26_Limited.inc
+GW, GW_LMG_MG42_Limited.inc
+GW, GW_Medic.inc
+GW, GW_NCO.inc
+GW, GW_NCO_rifle.inc
+GW, GW_NCO_rifle_spawner.inc
+GW, GW_NCO_SME.inc
+GW, GW_NCO_SME_rifle.inc
+GW, GW_NCO_SME_rifle_spawner.inc
+GW, GW_NCO_STG44.inc
+GW, GW_NCO_STG44_rifle.inc
+GW, GW_NCO_STG44_rifle_spawner.inc
+GW, GW_Pilot.inc
+GW, GW_RifleAssault.inc
+GW, GW_RifleAssault_G41_Limited.inc
+GW, GW_RifleAssault_G43.inc
+GW, GW_RifleAssault_G43_hurtgen_Limited.inc
+GW, GW_RifleAssault_G43_Limited.inc
+GW, GW_RifleAssault_hurtgen.inc
+GW, GW_RifleAssault_noNadeLauncher.inc
+GW, GW_Riflenadelauncher_ancto.inc
+GW, GW_Rifleonly_ancto.inc
+GW, GW_Scout.inc
+GW, GW_Scout_G41.inc
+GW, GW_Scout_G41_limited.inc
+GW, GW_Scout_G43.inc
+GW, GW_Scout_G43_limited.inc
+GW, GW_Scout_hurtgen.inc
+GW, GW_Scout_Limited.inc
+GW, GW_Scout_zf.inc
+GW, GW_SMGAssault.inc
+GW, GW_SMGAssault_Limited.inc
+GW, GW_SMGAssault_mp34_Limited.inc
+GW, GW_StG44Assault_hurtgen_Limited.inc
+GW, GW_StG44Assault_Limited.inc
+IA, IA_AntiTank_carcano.inc
+IA, IA_ATPzB39.inc
+IA, IA_ATPzB39_Limited.inc
+IA, IA_EngineerK98Short.inc
+IA, IA_kits.inc
+IA, IA_kits_spawner.inc
+IA, IA_Limited_Assault_Beretta38_K98.inc
+IA, IA_Limited_Support_MG34_K98.inc
+IA, IA_NCOBeretta38.inc
+IA, IA_NCOBeretta38_rifle.inc
+IA, IA_NCOBeretta38_rifle_spawner.inc
+IA, IA_Riflecarabine_tunis.inc
+IA, IA_RiflemanK98.inc
+IA, IA_RiflemanK98_tunis.inc
+IA, IA_Riflemanonly_tunis.inc
+IA, IA_ScoutK98Short.inc
+Spawnable, AA_PickupEasterEgg.inc
+Spawnable, BA_PickUpAmmokit.inc
+Spawnable, BA_PickUpAntitankBoys.inc
+Spawnable, BA_PickUpCommandoTommyD.inc
+Spawnable, BA_PickUpCommandoTommyD_Alam.inc
+Spawnable, BA_PickUPGrenadierNo4.inc
+Spawnable, BA_PickUpMedicWebley.inc
+Spawnable, BA_PickUpMortar.inc
+Spawnable, BA_PickUpPilotWebley.inc
+Spawnable, BA_PickUpSapperNo4Short.inc
+Spawnable, BA_PickUpSapperTommyS.inc
+Spawnable, BA_PickUpSniperNo4.inc
+Spawnable, BA_PickUpSupportBrenMK1.inc
+Spawnable, BA_PickUpSupportLewis.inc
+Spawnable, BA_PickUPTankerWebley.inc
+Spawnable, BA_PickUpTankHunterNo4Short.inc
+Spawnable, BA_PickUpVickers303.inc
+Spawnable, BW_PickUpAmmokit.inc
+Spawnable, BW_PickUpAntitankPiat.inc
+Spawnable, BW_PickUpAssault.inc
+Spawnable, BW_PickUpCommandoStenMK2S.inc
+Spawnable, BW_PickUpCommandoStenMK2S_hook.inc
+Spawnable, BW_PickUpEngineer.inc
+Spawnable, BW_PickUpMedicWebley.inc
+Spawnable, BW_PickUpPilotWebley.inc
+Spawnable, BW_PickUpSapperSten_GWood.inc
+Spawnable, BW_PickUpSniperNo4.inc
+Spawnable, BW_PickUpSniperNo4_GWood.inc
+Spawnable, BW_PickUpSupportBrenMK1.inc
+Spawnable, CW_PickUpMedicWebley.inc
+Spawnable, FA_PickUpAmmokit.inc
+Spawnable, FA_PickUpSapperMas36.inc
+Spawnable, FA_PickUpSniperBerthierAPX21.inc
+Spawnable, FA_PickUpSupportFM2429.inc
+Spawnable, GA_PickUpAmmokit.inc
+Spawnable, GA_PickUpAntitankPZB39.inc
+Spawnable, GA_PickUpCommandoMp40.inc
+Spawnable, GA_PickUpCommandoMp40_Alam.inc
+Spawnable, GA_PickUpEngineer.inc
+Spawnable, GA_PickUPGrenadierK98.inc
+Spawnable, GA_PickUpMedicP08.inc
+Spawnable, GA_PickUpMG34Lafette.inc
+Spawnable, GA_PickUpMortar.inc
+Spawnable, GA_PickUpPilotDrilling.inc
+Spawnable, GA_PickUpPilotP08.inc
+Spawnable, GA_PickUpSapperK98Short.inc
+Spawnable, GA_PickUpSapperMP40.inc
+Spawnable, GA_PickUpSniperK98.inc
+Spawnable, GA_PickUpSniperK98_para.inc
+Spawnable, GA_PickUpSupportMG34.inc
+Spawnable, GA_PickUpSupportMG42.inc
+Spawnable, GA_PickUPTankerWalther.inc
+Spawnable, GA_PickUpTankHunterK98Short.inc
+Spawnable, GS_PickUpMedicP08.inc
+Spawnable, GW_PickUpAmmokit.inc
+Spawnable, GW_PickUpAssaultBeretta.inc
+Spawnable, GW_PickUpAssaultG41.inc
+Spawnable, GW_PickUpAssaultG41_GWood.inc
+Spawnable, GW_PickUpAssaultG43.inc
+Spawnable, GW_PickUpAssaultG43_GWood.inc
+Spawnable, GW_PickUpAssaultK98hZf41.inc
+Spawnable, GW_PickUpAssaultK98RNade_hurtgen.inc
+Spawnable, GW_PickupAssaultPPsH41.inc
+Spawnable, GW_PickUpAssaultStG44.inc
+Spawnable, GW_PickUpCommandoStG44.inc
+Spawnable, GW_PickUpCommandoStG44_GWood.inc
+Spawnable, GW_PickUpCommandoStG44_ZF.inc
+Spawnable, GW_PickUpEngineer.inc
+Spawnable, GW_PickUpEngineer_Satchel.inc
+Spawnable, GW_PickUpFarmer.inc
+Spawnable, GW_PickUpGeballteLadung.inc
+Spawnable, GW_PickUphafthohlladung.inc
+Spawnable, GW_PickUpMedicP08.inc
+Spawnable, GW_PickUpMG42Lafette.inc
+Spawnable, GW_PickUpMortar.inc
+Spawnable, GW_PickUpPanzerfaust100m.inc
+Spawnable, GW_PickUpPanzerfaust100m_VS.inc
+Spawnable, GW_PickUpPanzerfaust30m.inc
+Spawnable, GW_PickUpPanzerfaust60m.inc
+Spawnable, GW_PickUpPanzerfaust60m_VS.inc
+Spawnable, GW_PickUpPanzerschreck.inc
+Spawnable, GW_PickUpPilotDrilling.inc
+Spawnable, GW_PickUpPilotP08.inc
+Spawnable, GW_PickUpSniperfg42_ZF.inc
+Spawnable, GW_PickUpSniperg43_ZF.inc
+Spawnable, GW_PickUpSniperg43_ZF_GWood.inc
+Spawnable, GW_PickUpSniperK98.inc
+Spawnable, GW_PickUpSniperK98_GWood.inc
+Spawnable, GW_PickUpSniperStG44_ZF.inc
+Spawnable, GW_PickUpSupportFG42.inc
+Spawnable, GW_PickUpSupportMG26.inc
+Spawnable, GW_PickUpSupportMG42.inc
+Spawnable, GW_PickUp_K98hZf41.inc
+Spawnable, IA_PickUpAmmokit.inc
+Spawnable, IA_PickUpAssaultCarcano91.inc
+Spawnable, IA_PickUpBredaM37.inc
+Spawnable, IA_PickUpCommandoBeretta38a.inc
+Spawnable, IA_PickUpMedicBeretta34.inc
+Spawnable, IA_PickUpPilotBeretta34.inc
+Spawnable, IA_PickUpSapperCarcano38.inc
+Spawnable, IA_PickUpSniperPattern.inc
+Spawnable, IA_PickUpSupportBreda.inc
+Spawnable, IA_PickUPTankerBeretta34.inc
+Spawnable, IA_PickUpTankHunterCarcano38.inc
+Spawnable, RE_PickUpAmmokit.inc
+Spawnable, RE_PickUpAntitankPTRD.inc
+Spawnable, RE_PickUpAntitankPTRS.inc
+Spawnable, RE_PickUpAssaultPps43.inc
+Spawnable, RE_PickupAssaultSVT40.inc
+Spawnable, RE_PickUpAssaultThompson.inc
+Spawnable, RE_PickupMG_DT.inc
+Spawnable, RE_PickUpSniper.inc
+Spawnable, RE_PickUpSniperSVT40.inc
+Spawnable, RE_PickupTankhunter.inc
+Spawnable, RE_PickupTankhunter_faust.inc
+Spawnable, SE_PickUpAmmokit.inc
+Spawnable, SE_PickupAssaultSVT40.inc
+Spawnable, SE_PickUpSniper.inc
+Spawnable, UA_PickUpBazooka.inc
+Spawnable, UA_PickUpHawkinsThompson1928a1.inc
+Spawnable, UW_PickUp30Cal.inc
+Spawnable, UW_PickUpAmmokit.inc
+Spawnable, UW_PickUpAssaultGarandRNade_hurtgen.inc
+Spawnable, UW_PickUpAssaultM1Garand.inc
+Spawnable, UW_PickUpAssaultM1Thompson.inc
+Spawnable, UW_PickUpAssaultM3Greasegun.inc
+Spawnable, UW_PickUpBazooka.inc
+Spawnable, UW_PickUpBazookaM9.inc
+Spawnable, UW_PickUpCommandoM3Greasegun.inc
+Spawnable, UW_PickUpEngineer.inc
+Spawnable, UW_PickUpEngineerHook.inc
+Spawnable, UW_PickUpEngineerMines.inc
+Spawnable, UW_PickUpEngineerWinchester.inc
+Spawnable, UW_PickUpEngineerWinchesterHook.inc
+Spawnable, UW_PickUpFlamethrower.inc
+Spawnable, UW_PickUpHawkinsM1Thompson.inc
+Spawnable, UW_PickUpM1917a1.inc
+Spawnable, UW_PickUpMedicColt1911.inc
+Spawnable, UW_PickUpMolotov.inc
+Spawnable, UW_PickUpMortar.inc
+Spawnable, UW_PickUpMortarPara.inc
+Spawnable, UW_PickUpPilotcolt1911.inc
+Spawnable, UW_PickUpSniperSpringfield.inc
+Spawnable, UW_PickUpSniperSpringfield_hurtgen.inc
+Spawnable, UW_PickUpSupportM1918BAR.inc
+Spawnable, UW_PickUpSupportm1919a6.inc
+Spawnable, UW_PickUpThermitePara.inc
+Spawnable, UW_PickUpWinchester.inc
+Spawnable, ZZ_PickUpFists.inc
+Spawnable, ZZ_PickupGold_Allied.inc
+Spawnable, ZZ_PickupGold_Axis.inc
+UA, UA_AT_Limited.inc
+UA, UA_Engineer.inc
+UA, UA_LMG_Limited.inc
+UA, UA_NCO.inc
+UA, UA_NCO_rifle.inc
+UA, UA_NCO_rifle_spawner.inc
+UA, UA_Rifle.inc
+UA, UA_Scout.inc
+UA, UA_SMGAssault_Limited.inc
+airborne, uc_kits.inc
+UC, UC_kits.inc
+UC, UC_kits_spawner.inc
+airborne, uw_kits.inc
+army, uw_kits.inc
+jump, uw_kits.inc
+omaha, uw_kits.inc
+radio, uw_kits.inc
+ramelle, uw_kits.inc
+UW, UW_AirborneScout.inc
+UW, UW_AntitankAssault.inc
+UW, UW_AntitankAssaultM9_Limited.inc
+UW, UW_AntitankAssault_Limited.inc
+UW, UW_Antitank_hawkins.inc
+UW, UW_Engineer.inc
+UW, UW_Engineer_bangalore.inc
+UW, UW_Engineer_Hawkins.inc
+UW, UW_Engineer_M1903a1.inc
+UW, UW_Engineer_M1903a1_Satchel.inc
+UW, UW_Engineer_Satchel.inc
+UW, UW_Engineer_Satchel_m1a1.inc
+UW, UW_Engineer_Satchel_ramelle.inc
+UW, UW_Engineer_Thermite.inc
+UW, UW_Engineer_Thermite_M1A1.inc
+UW, UW_Flamethrower.inc
+UW, UW_kits.inc
+UW, UW_kits_spawner.inc
+UW, UW_LMG_hurtgen_Limited.inc
+UW, UW_LMG_Limited.inc
+UW, UW_LMG_Limited_nobipod.inc
+UW, UW_LMG_m1919a6_Limited.inc
+UW, UW_m1Carabine_Limited.inc
+UW, UW_Medic.inc
+UW, UW_NCO.inc
+UW, UW_NCO_rifle.inc
+UW, UW_NCO_rifle_spawner.inc
+UW, UW_NCO_SME.inc
+UW, UW_NCO_SME_rifle.inc
+UW, UW_NCO_SME_rifle_spawner.inc
+UW, UW_Pilot.inc
+UW, UW_Ranger_Scout.inc
+UW, UW_Ranger_Scout_Limited.inc
+UW, UW_RifleAssault.inc
+UW, UW_RifleAssault_hurtgen.inc
+UW, UW_RifleAssault_noNadeLauncher.inc
+UW, UW_RifleAssault_SME.inc
+UW, UW_RifleGrenadier.inc
+UW, UW_Rifleonly.inc
+UW, UW_Scout.inc
+UW, UW_Scout_carbine.inc
+UW, UW_Scout_hurtgen.inc
+UW, UW_SMGAssault.inc
+UW, UW_SMGAssault_Limited.inc
+UW, UW_SMGAssault_Limited_GGun.inc
+UW, UW_SMGAssault_mk3_Limited.inc
+UW, UW_Tanker.inc
+UW, UW_Tanker_grease.inc
+UW, UW_TankHunter_GarandGrenade.inc
+UW, UW_TankHunter_grease.inc
+bf109e7_greece, BF109E7 Trop, true
+bf109e7_trop, BF109E7 Trop, true
+bf109e7_greecealt, BF109E7 Trop, true
+bf109e7_tropalt, BF109E7 Trop, true
+bf109f4, BF109F4, true
+bf109f4_alt250kg, BF109 F4, true
+bf109f4_alt50kg, BF109 F4, true
+bf109f4_trop, BF109F4, true
+bf109f4_trop_alt250kg, BF109 F4, true
+bf109f4_trop_alt50kg, BF109 F4, true
+flamingo, U12 Flamingo Special, true
+flamingo_camo, FH Barn Stormer, true
+flamingo_yellow, FH Barn Stormer, true
+fw190, FW 190, true
+fw190_alt, FW 190, true
+fw190_flyover, Focke Wulf 190, false
+he111, He 111, true
+hs129, Hs 129, true
+ju52, Junkers 52, true
+JU52Rider_Left, Junkers 52, true
+JU52Rider_Right, Junkers 52, true
+ju87b2, Ju87B2 'Stuka', true
+ju87b2alt, Ju87B2 'Stuka', true
+ju87b2_greece, Ju87B2 'Stuka', true
+ju87b2_libya, Ju87B2 'Stuka', true
+ju87d1_trop, Ju87D 'Stuka', true
+rz20chute, RZ20 Parachute, false
+storch_france, Fieseler Storch, true
+storch_trop, Fieseler Storch, true
+ms406, Morane-Saulnier M.S.406, true
+beaufightermk1, Beaufighter Mk.I, true
+beaufightermk1_b, Beaufighter Mk.I, true
+hardy, Hawker Hardy Mk.I, true
+horsa_glider, Horsa Glider, true
+horsa_glider_flyover, KILLMESSAGE_VEHICLE_c47, false
+hurricanemki, Hurricane Mk.I, true
+hurricanemki_b, Hurricane Mk.I, true
+hurricanemkiic, Hurricane Mk.IIC, true
+hurricanemkiic_alt_b, Hurricane Mk.IIC, true
+hurricanemkiic_b, Hurricane Mk.IIC, true
+hurricanemkiid, Hurricane Mk.IID, true
+pipercub_gb, Piper J-3 Cub, true
+spitfiremkv, Spitfire MK.V, true
+spitfiremkvb, Spitfire MK.Vb, true
+spitfiremkvb_usaaf, Spitfire MK.Vb, true
+Spitfire_IX, Spitfire MkIX, true
+swordfish, Fairey Swordfish, true
+swordfish_b, Fairey Swordfish, true
+typhoon_mk1b_late, Typhoon, true
+typhoon_mk1b_late_flyover, Typhoon, false
+x9chute, X9 Parachute, false
+mc200, Mc.200, true
+mc200_alt, Mc.200, true
+mc202, Mc.202, true
+mc202_objective, MC202, false
+42_zero, A6M2-A Zero Model 22, true
+aichi_val, Aichi D3A 'Val', true
+betty, G4M2 'Betty', true
+kate, Nakajima B5N 'Kate', true
+n1k1, Kawanishi N1K1-J 'George', true
+rufe, Mitsubishi A6M2-N 'Rufe', true
+AIX_P51D, P-51D 'Mustang', true
+AIX_P51D_Bombs, P-51D 'Mustang', true
+AIX_P51D_Rockets, P-51D 'Mustang', true
+b17, B17 Bomber, true
+b25, B25 Bomber, true
+b25_torp, B25 Torpedo Bomber, true
+c47, C-47 'Sky Train', true
+c47_waw, C-47 'Sky Train', true
+c47_waw2, C-47 'Sky Train', true
+c47_spawn_flyover, C-47 'Sky Train', true
+catfish, F4F-3S 'Wild Catfish', true
+dauntlesssbdtorch, Dauntless SBD, true
+dauntlesssbdtorch_torp, Dauntless SBD, true
+f4u1a_corsair, F4u 'Corsair', true
+hellcat, F6F 'Hellcat', true
+p-40e, P-40E 'Warhawk', true
+p-40e_120lb, P-40E 'Warhawk', true
+p-40e_250lb, P-40E 'Warhawk', true
+p-40e_500lb, P-40E 'Warhawk', true
+p-40e_kittyhawk, P-40 'Kittyhawk', true
+p38_lightning, P-38 'Lightning', true
+p38_r_lightning, P-38 'Lightning', true
+p47_d, P-47 'Thunderbolt', true
+p47_d_alt, P-47 'Thunderbolt', true
+p47_d_rocket, P-47 'Thunderbolt', true
+p51d_flyover, P-51D Mustang, false
+p51d_ramelle_flyover, P-51D Mustang, false
+pipercub_us, Piper J-3 Cub, true
+usair_c47_damaged_flyover, KILLMESSAGE_VEHICLE_c47, false
+usair_c47_flyover, C47 'Sky Train, false
+wildcat, F4F Wildcat, true
+britcommradio, Commander Radio, false
+gercommradio, Commander Radio, false
+hqradio1, HQRadio, false
+hqradio2, HQRadio, false
+carrom13_40_au, Carro Armato M13/40, true
+civcoupe_black, Civilian Coupe, false
+civcoupe_green, Civilian Coupe, false
+civcoupe_red, Civilian Coupe, false
+civcoupe_rust, Civilian Coupe, false
+civtruck, Civilian Truck, false
+redtractor, Tractor, false
+rideable_bicycle, Bicycle, false
+50_turret_gunner, Gunner, true
+bmw_r75, BMW R75, false
+bmw_r75_3pass, BMW R75, false
+bmw_r75_pg, BMW R75, false
+citroen_11cv, Citroen 11 CV, false
+citroen_11cv_black, Citroen 11 CV, false
+citroen_11cv_cream, Citroen 11 CV, false
+citroen_11cv_fr, Citroen 11 CV, false
+citroen_11cv_ger, Citroen 11 CV, false
+citroen_11cv_green, Citroen 11 CV, false
+citroen_11cv_peach, Citroen 11 CV, false
+citroen_11cv_red, Citroen 11 CV, false
+citroen_11cv_rust, Citroen 11 CV, false
+flak18, Flak 18 88mm, false
+flak18ns, Flak 18 88mm, false
+flak18ns_fr, Flak 18 88mm, false
+flak18ns_fr_two, Flak 18 88mm, false
+flak18ns_pg, Flak 18 88mm, false
+flak18_fr, Flak 18 88mm, false
+flak18_pg, Flak 18 88mm, false
+flak38, Flak 38 20mm, false
+flak38_france, Flak 38 20mm, false
+flak38_pan, Flak 38 20mm, false
+flak37, Flak 37 37mm AA, false
+flak43, Flak 43 37mm AA, false
+flak43_bundle, Flak 43 37mm, false
+flakvierling38, FlaKVierling 38, false
+flakvierling38_pan, FlaKVierling 38, false
+flakvierling38_france, FlaKVierling 38, false
+flakvierling_ard, FlaKVierling 38, false
+flakvierling_win, FlaKVierling 38, false
+fueltruck, Opel Blitz, false
+gpf_155mm, 15.5 cm K 418(f), false
+hetzer, Jagdpanzer 38(t) Hetzer, true
+hetzer_1945, Hetzer, true
+hetzer_alt, Hetzer, true
+hetzer_win, Jagdpanzer 38(t) Hetzer, true
+jagdpanther, Jagdpanther, true
+jagdpanther_1945, Jagdpanther, true
+jagdpanther_alt, Jagdpanther, true
+jagdpanther_win, Jagdpanther, true
+jagdpanther_win_alt, Jagdpanther, true
+jagdpanzeriv, Panzer IV/70(V), true
+jagdpanzeriv_win, Panzer IV/70(V), true
+kettenkrad, Kettenkrad, false
+kettenkrad_dak, Kettenkrad, false
+kettenkrad_fr, Kettenkrad, false
+kubeldak, Kübelwagen, false
+kubelwagen, Kübelwagen, false
+kubelwagen_fr, Kübelwagen, false
+kubelwagen_fr_alt, Kübelwagen, false
+kubelwagen_win, Kübelwagen, false
+kubelwagen_win_alt, Kübelwagen, false
+kwk_5cm, KwK 50mm, false
+kwk_5cm_fr, KwK 50mm, false
+lefh18, LeFH 18, false
+lefh18_AI, LeFH 18, false
+lefh18_france, LeFH 18, false
+lefh18_france_AI, LeFH 18, false
+marder1_39, Marder I, true
+marder_i, Marder I, true
+marder_iii, Marder III, true
+marder_iii_m, Marder III, true
+nebelwerfer, Nebelwerfer, false
+nebelwerfer_AI, Nebelwerfer, false
+nebelwerfer_ard, Nebelwerfer, false
+nebelwerfer_pan, Nebelwerfer, false
+nebelwerfer_win, Nebelwerfer, false
+opelblitz_ard, Opel Blitz, false
+opelblitz_ard_ammo, Opel Blitz (Ammo), false
+opelblitz_ard_nocanvas, Opel Blitz, false
+opelblitz_ard_win, Opel Blitz, false
+opelblitz_ard_win_ammo, Opel Blitz (Ammo), false
+opelblitz_ard_win_nocanvas, Opel Blitz, false
+opelblitz_dak, Opel Blitz, false
+opelblitz_dak_ammo, Opel Blitz (Ammo), false
+opelblitz_dak_nocanvas, Opel Blitz, false
+opelblitz_dak_zw36, Opel Blitz (ZW36), false
+opelblitz_flak38, Opel Blitz Flak 38, false
+opelblitz_flak38_dak, Opel Blitz Flak 38, false
+opelblitz_flak38_pan, Opel Blitz Flak 38, false
+opelblitz_fr, Opel Blitz, false
+opelblitz_fr_ammo, Opel Blitz (Ammo), false
+opelblitz_fr_nocanvas, Opel Blitz, false
+opelblitz_fr_slats, Opel Blitz, false
+opelblitz_fr_zw36, Opel Blitz (ZW36), false
+opelblitz_pan, Opel Blitz, false
+opelblitz_pan_ammo, Opel Blitz (Ammo), false
+opelblitz_pan_nocanvas, Opel Blitz, false
+pak35, PaK 35, false
+pak35_europe, PaK 35, false
+pak35_greece, PaK 35, false
+pak35_stgr41, PaK 35, false
+pak35_europe_static, PaK 35, false
+pak35_greece_static, PaK 35, false
+pak35_static, PaK 35, false
+pak38, PaK 38, false
+pak38_fr, PaK 38, false
+pak38_pg, PaK 38, false
+pak38_static, PaK 38, false
+pak38_static_fr, PaK 38, false
+pak38_static_pg, PaK 38, false
+pak40, PaK 40, false
+pak40_ard, PaK 40, false
+pak40_win, PaK 40, false
+pak40_wp, PaK 40, false
+pak40_ws, PaK 40, false
+pak40_static, PaK 40, false
+pak40_static_ard, PaK 40, false
+pak40_static_win, PaK 40, false
+pak40_static_wp, PaK 40, false
+pak40_static_ws, PaK 40, false
+panthera, Panther A, true
+panthera_alt, Panther A, true
+panthera_late, Panther A, true
+panthera_late_alt, Panther A, true
+pantherg, Panther G, true
+panther_g_1945, Panther G, true
+panther_g_ard, Panther G, true
+panther_g_ard_alt, Panther G, true
+panther_g_win, Panther G, true
+panther_g_win_alt, Panther G, true
+puma, SdKfz 234 'Puma', true
+pziic, Pz II Ausf. C, true
+pziic_greece, Pz II Ausf. C, true
+pziif, Pz II Ausf. F, true
+pziii_f_france, PanzerIII F, true
+pziii_je_dak, PanzerIII Je, true
+pziii_je_greece, PanzerIII Je, true
+pziii_jl_dak, PanzerIII Jl, true
+pziii_l_camo, PanzerIII L, true
+pziii_l_dak, PanzerIII L, true
+pziii_l_skirts, PanzerIII L, true
+pziii_m, PanzerIII L, true
+pziii_n, PanzerIII N, true
+pziii_n_dak, PanzerIII N, true
+pziii_hullmg, T34/76, true
+pzivd_greece, PanzerIV D, true
+pzivd_na, PanzerIV D, true
+pzivf1, PanzerIV F1, true
+pzivf2, PanzerIV F2, true
+pzivh, PanzerIV H, true
+pzivh_811, PanzerIV H, true
+pzivh_ard, PanzerIV H, true
+pzivh_ard_win, PanzerIV H, true
+pzivh_noskirt, PanzerIV H, true
+schwimmwagen, Schwimmwagen, false
+sdkfz222, SdKfz 222, true
+sdkfz222_pan, SdKfz 222, true
+sdkfz222_win, SdKfz 222, true
+sdkfz231_1, SdKfz 231, true
+sdkfz231_1_france, SdKfz 231, true
+sdkfz231_1_pan, SdKfz 231, true
+sdkfz250_3, SdKfz 250/3 Ausf. C, true
+sdkfz250_3_alt, SdKfz 250/3 Ausf. C, false
+sdkfz251_1, SdKfz 251/1 Ausf. C, false
+sdkfz251_1_spawn, SdKfz 251/1 Ausf. C, false
+sdkfz251_10, SdKfz 251/10 Ausf. C, false
+sdkfz251_d, SdKfz 251/1 Ausf. D, false
+sdkfz251_d_spawn, SdKfz 251/1 Ausf. D, true
+sdkfz251_d_ard, SdKfz 251/1 Ausf. D, false
+sdkfz251_d_win, SdKfz 251/1 Ausf. D, false
+sdkfz251_d_sf, SdKfz 251/1-II Ausf. D, true
+stuka_fuzz_rocketpod, Stuka Fuzz, true
+sdkfz7, SdKfz 7, false
+sdkfz7_camo, SdKfz 7, false
+sdkfz7_dak, SdKfz 7, false
+sdkfz7_flak, SdKfz 7, false
+sdkfz7_flak_camo, SdKfz 7, false
+sdkfz7_flak_dak, SdKfz 7, false
+sdkfz7_pak, SdKfz 7, false
+sdkfz7_pak_camo, SdKfz 7, false
+sdkfz7_pak_dak, SdKfz 7, false
+pak40_towed, PaK 40, false
+sdkfz7_pak40, SdKfz 7, false
+sd_ah_51_flak38, Flak 38 20mm, false
+stug40, StugIII G, true
+stug40r, StugIII G, true
+stug40_g, StugIII G, true
+stug40_g_alt, StugIII G, true
+stug_iv, Stug IV, true
+stug_iv_alt, Stug IV, true
+stuh42, Stuh42, true
+tiger_dak, Pz VI Ausf. H 'Tiger', true
+kingtiger_1944easternfall, Pz VI Ausf. B 'Tiger II', true
+kingtiger_1944fall, Pz VI Ausf. B 'Tiger II', true
+kingtiger_1944winter, Pz VI Ausf. B 'Tiger II', true
+kingtiger_1945spring, Pz VI Ausf. B 'Tiger II', true
+kingtiger_night, Pz VI Ausf. B 'Tiger II', true
+kingtiger_standard, Pz VI Ausf. B 'Tiger II', true
+tiger_broken, Pz VI Ausf. E 'Tiger', true
+tiger_late, Pz VI Ausf. E 'Tiger', true
+tiger_late_132, Pz VI Ausf. E 'Tiger', true
+tiger_late_222, Pz VI Ausf. E 'Tiger', true
+vwtyp82, VW Type 82E, false
+wespe, Wespe, true
+wirbelwind, FlakPz IV 'Wirbelwind', true
+wirbelwind_win, FlakPz IV 'wirbelwind', true
+wurfgerat41, Wurfgerat 41, false
+h39, H-39, true
+h39_tobruk, Panzerturm H-39, true
+25pdr, 25 Pounder, false
+25pdr_AI, 25 Pounder, false
+25pdr_mkiv, 25 Pounder, false
+25pdr_mkiv_AI, 25 Pounder, false
+6pdr, 6 Pounder, false
+6pdr_mkiv, 6 Pounder, false
+6pdr_mkiv_static, 6 Pounder, false
+6pdr_static, 6 Pounder, false
+achilles_iic, Achilles IIC, true
+aecdorchester, AEC 'Dorchester', true
+aecdorchester_de, AEC 'Dorchester', true
+aecdorchester_france, AEC 'Dorchester', true
+bedfordox, Bedford OX, false
+bedfordox_nocanvas, Bedford OX, false
+bedfordox_france, Bedford OX, false
+bedfordox_france_nocanvas, Bedford OX, false
+bedfordoyd, Bedford OYD, false
+bedfordoyd_ammo, Bedford OYD (Ammo), false
+bedfordoyd_nocanvas, Bedford OYD, false
+bedfordoyd_france, Bedford OYD, false
+bedfordoyd_france_ammo, Bedford OYD (Ammo), false
+bedfordoyd_france_nocanvas, Bedford OYD, false
+bedford_qlt, Bedford QLT, false
+bedford_qlt_6pdr, Bedford QLT, false
+bedford_qlt_ammo, Bedford QLT (Ammo), false
+bishop, Bishop, true
+bofors40mm, Bofors 40mm, false
+bofors40mm_eu, Bofors 40mm, false
+chevy30cwt, Chevy 30CWT, false
+chevy30cwt_ammo, Chevy 30CWT (Ammo), false
+chevy30cwt_breda, Chevy AA, false
+chevy30cwt_portee, 2Pdr Portee, false
+churchillmkiii, Churchill Mk.III, true
+churchillmkiv_6pdr, Churchill Mk.IV, true
+churchillmkiv_75mm, Churchill Mk.IV, true
+churchillmkiv_avre, Churchill Mk.IV AVRE, true
+churchillmkiv_crocodile, Churchill Mk.IV 'Crocodile', true
+cromwell, Cromwell Mk.IV, true
+cromwell_95, Cromwell Mk.VI, true
+cromwell_irishguard, Cromwell Mk.IV, true
+cromwell_polish, Cromwell Mk.IV, true
+cruiseriv, Cruiser Mk.IV, true
+crusadermk1early, Crusader Mk.I, true
+crusadermk1late, Crusader Mk.I, true
+crusadermk3, Crusader Mk.III, true
+crusadermk3_aa, Crusader Mk.III AA, true
+daimlermk1, Daimler Mk.I, true
+deacon, AEC 'Deacon', false
+deacon_bofors, Bofors 40mm, false
+dingo_na, Daimler Dingo, false
+m3grant, Grant I, true
+m3stuarthoney, Stuart II 'Honey', true
+m4a1early_eu_brit, Sherman II, true
+m4a1mid_eu_brit, Sherman II, true
+m5a1_halftrack, M5A1 Halftrack, false
+m5a1_halftrack_spawn, M5A1 Halftrack, true
+markvi, Vickers Mk.VI, true
+marmonherringtonmk3a, Marmon H. Mk.3A, true
+matildaii, Matilda Mk.II, true
+sherman_vc_early, Sherman VC 'Firefly', true
+sherman_vc_early_olive, Sherman VC 'Firefly', true
+sherman_vc_late, Sherman VC 'Firefly', true
+sherman_vc_late_olive, Sherman VC 'Firefly', true
+sherman_v_late, Sherman V, true
+sherman_v_late_olive, Sherman V, true
+sherman_v_late_alt, Sherman V, true
+sherman_v_late_alt_olive, Sherman V, true
+sherman_v_mid, Sherman V, true
+sherman_v_mid_olive, Sherman V, true
+universalcarrier, Universal Carrier, false
+universalcarrier_bren, Bren Carrier, false
+universalcarrier_france, Universal Carrier, false
+universalcarrier_france_bren, Bren Carrier, false
+universalcarrier_france_vickers, Bren Carrier, false
+universalcarrier_polish, Universal Carrier, false
+universalcarrier_polish_bren, Bren Carrier, false
+universalcarrier_polish_vickers, Bren Carrier, false
+universalcarrier_vickers, Bren Carrier, false
+universalcarrier_wasp, Wasp Universal Carrier, false
+valentineii, Valentine Mk.II, true
+willysmb, Willys MB, false
+willysmbsas, Willys MB, false
+willysmb_france, Willys MB, false
+breda_35_20mm, Breda 35 20mm, false
+breda_35_20mm_armament, Breda 35 20mm, false
+cannone_da_47_32, Cannone da 47/32, false
+cannone_da_47_32_static, Cannone da 47/32, false
+carrom11_39, Carro Armato M11/39, true
+carrom11_39_au, Carro Armato M11/39, true
+carrom13_40, Carro Armato M13/40, true
+fiat508, Fiat 508, false
+fiat626, Fiat 626, false
+fiat626_47mm, Fiat 626, false
+fiat626_ammo, Fiat 626 (Ammo), false
+fiat626_ammo_ard, Fiat 626 (Ammo), false
+fiat626_ard, Fiat 626, false
+fiat626_breda, Fiat 626 20mm, false
+fiatl6_40, Fiat L6/40, true
+monster_fiat508, Fiat 508, false
+monster_fiat626, Monster Fiat 626, false
+sahariana, Sahariana, false
+schneider_1913, Cannone da 105/28, false
+schneider_1913_AI, Cannone da 105/28, false
+semoventel40, Semovente L40, true
+75mmdp, Type 88 75mm, false
+chi_ha, Chi-Ha, true
+hoha, Ho Ha, false
+kurogane, Type 95 'Kurogane', false
+type94, Type 94, false
+type94_ammo, Type 94 (Ammo), false
+type95_hago, Type 95 Ha-Go, true
+type97_chiha, Chi-Ha, true
+panhard178, Panhard 178, true
+37mm_m3, 37mm M3, false
+37mm_m3_static, 37mm M3, false
+57mm_m1_atgun, 57mm M1 AT Gun, false
+57mm_m1_atgun_win, 57mm M1 AT Gun, false
+57mm_m1_atgun_static, 57mm M1 AT Gun, false
+57mm_m1_atgun_win_static, 57mm M1 AT Gun, false
+76mm_m5_atgun, 76mm M5, false
+76mm_m5_atgun_win, 76mm M5, false
+76mm_m5_atgun_static, 76mm M5, false
+76mm_m5_atgun_static_win, 76mm M5, false
+90mm_aa_at_m1, 90mm M1 AA Gun, false
+90mm_aa_at_m2, 90mm M2 AA/AT Gun, false
+fordgpa, Ford GPA, false
+fordgpa_fix, Ford GPA, false
+fordgpa_fixed, Ford GPA, true
+fordgpa_fix_spawn, Ford GPA Spawner, true
+gmc, GMC, false
+gmc_ammo, GMC (Ammo), false
+gmc_nocanvas, GMC, false
+gmc_win, GMC, false
+gmc_win_ammo, GMC (Ammo), false
+gmc_win_nocanvas, GMC, false
+gmc_m3_75mm, M3 75mm, true
+m10, M10 Tank Destroyer, true
+m10_win, M10 Tank Destroyer, true
+m13_mgmc, M13 MGMC, false
+m16_mgmc, M16 MGMC, false
+m18_hellcat, M18 'Hellcat' Tank Destroyer, true
+m18_hellcat_win, M18 'Hellcat' Tank Destroyer, true
+m24_chaffee, M24 Light Tank, true
+m24_chaffee_win, M24 Light Tank, true
+m26_pershing, M26 Heavy Tank 'Pershing', true
+m2a1_howitzer_105mm, 105mm Howitzer, false
+m2a1_howitzer_105mm_AI, 105mm Howitzer, false
+m2a1_howitzer_105mm_win, 105mm Howitzer, false
+m2a1_howitzer_105mm_win_AI, 105mm Howitzer, false
+m33, M33 'Twin 50', false
+m36, M36 Tank Destroyer, true
+m36_win, M36 Tank Destroyer, true
+m3a1, M3A1 Halftrack, false
+m3a1_spawn, M3A1 Halftrack, true
+m3a1_win, M3A1 Halftrack, false
+m3a1_stuart, M3A1 Light Tank, true
+m3_halftrack, M3 Halftrack, false
+m3_lee, M3 Lee, true
+m3_scoutcar, M3 Scoutcar, false
+m3_scoutcar_ru, M3 Scoutcar, false
+m4a1, Sherman II, true
+m4a1_76mm, M4A1(76)W Medium Tank, true
+m4a1_76mm_flamethrower, M4A1(76)W Flame Tank, true
+m4a1_early, M4A1, true
+m4a1_early_hullmachinegun, M4A1, true
+m4a1early_eu, M4A1 Medium Tank, true
+m4a1mid_eu, M4A1 Medium Tank, true
+m4a1_flame, M4A3R Trogdor, true
+m4a1_turret_gunner, Gunner, true
+m4a1_turret_gunner_alt, Gunner, true
+m4a3, M4A3 Medium Tank, true
+m4a3_105, M4A3 105mm, true
+m4a3_76, M4A3(76)W Medium Tank, true
+m4a3_76_win, M4A3(76)W Medium Tank, true
+m4a3_76_win_alt, M4A3(76)W Medium Tank, true
+m4a3_win, M4A3 Medium Tank, true
+m4a3e2_jumbo75, M4A3E2(75) Assault Tank, true
+m4a3e2_jumbo75_win, M4A3E2(75) Assault Tank, true
+m4a3e2_jumbo76, M4A3E2(76) Assault Tank, true
+m4a3e2_jumbo76_win, M4A3E2(76) Assault Tank, true
+m51, M51 'Quad 50', false
+m51_win, M51 'Quad 50', false
+m5a1_stuart, M5A1 Light Tank, true
+m5a1_stuart_recon, M5A1 Stuart Recce, true
+m8_greyhound, M8 Light Armored Car, true
+m8_greyhound_win, M8 Light Armored Car, true
+m8_greyhoundnf, M8 Light Armored Car, true
+m8_greyhound_winnf, M8 Light Armored Car, true
+willysmb_rocket, Willys MB Calliope, false
+willysmb_rocket_AI, Willys MB Calliope, false
+willysmb_us, Willys MB, false
+willysmb_us_snow, Willys MB, false
+willysmb_us_alt, Willys MB, false
+willysmb_us_snow_alt, Willys MB, false
+lifeboat_flc, Lifeboat, false
+lifeboat_qm1, Lifeboat, false
+us05insinglemk30_arty, 127mm US-Ship-Gun, false
+us05insinglemk30_arty_1, 127mm US-Ship-Gun, false
+8inch_defgun, 8 Inch Costal Gun, false
+bismarck_20mm, KMS Bismarck, true
+bismarck_vierling_front, KMS Bismarck, true
+bismarck_vierling_top, KMS Bismarck, true
+fh1_bismarck, KMS Bismarck, true
+fh1_bismarck_objective, KMS Bismarck, true
+dithmarschen_flak, KMS Dithmarschen, true
+fh1_dithmarschen, KMS Dithmarschen, true
+fh1_dithmarschen_objective0, KMS Nordmarck, true
+fh1_dithmarschen_objective1, KMS Uckermarck, true
+fh1_dithmarschen_objective2, KMS Franken, true
+fh1_dithmarschen_objective3, KMS Ermland, true
+fh1_dithmarschen_objective4, KMS Westerwald, true
+fh1_dithmarschen_objective5, KMS Saarland, true
+fh1_admiral_hipper, KSM Admiral Hipper, true
+fh1_admiral_hipper_objective, KSM Prinz Eugen, true
+fh1_prinz_eugen, KSM Prinz Eugen, true
+fh1_prinz_eugen_objective, KSM Prinz Eugen, true
+prinz_eugen_flak43, KMS Admiral Hipper, true
+prinz_eugen_vierling_front, KMS Admiral Hipper, true
+prinz_eugen_vierling_top, KMS Admiral Hipper, true
+fh1_sboot, Schnellboot 29, true
+fht_sturmboot, Sturmboot 39, false
+fht_sturmboot_passenger, Sturmboot 39, true
+lct_mk5_us_captured, LCT Mk5, false
+lct_mk5_us_captured_2, LCT Mk5, false
+sturmboot39, Sturmboot 39, false
+sturmboot39_passenger, Sturmboot 39, true
+sturmboot_39, Sturmboot 39, false
+sturmboot_39_passenger, Sturmboot 39, true
+subviib, Sub VIIb, true
+subviib2, Sub VIIb, true
+subviib_waw, Sub VIIb U47, true
+subviib_waw_static, Sub VIIb U47, true
+U47, Sub VIIb U47, true
+88mmL45SKC35_defgun, 88mm Defense Gun, false
+arkroyal, Ark Royal, true
+audacity, HMS Audacity, true
+fh1_dualbofors_40mm, Bofors 40mm, false
+fh1_dualbofors_40mm_fletcher, Bofors 40mm, false
+4inchtwinaa_1, 4 inch Mk XVI, false
+4inchtwinaa_2, 4 inch Mk XVI, false
+fh1_hood, HMS Hood, true
+fh1_hood_objective, HMS Hood, true
+fh1_prince_of_wales, HMS Prince of Wales, true
+fh1_prince_of_wales_objective, HMS Prince of Wales, true
+fh1_qf2pdrPomPom_hood, HMS Hood, true
+fh1_qf2pdrPomPom_PoW, HMS Prince of Wales, true
+agassiz, HMCS Agassiz, true
+agassiz_waw, HMCS Agassiz, true
+agassiz_waw_lcvp, HMCS Beaver, true
+agassiz_waw_objective0, HMCS Asbestos, true
+agassiz_waw_objective1, HMCS Bittersweet, true
+agassiz_waw_objective2, HMS Heliotrope, true
+agassiz_waw_objective3, HMS Windflower, true
+agassiz_waw_objective4, HMS Gentian, true
+agassiz_waw_objective5, HMCS Moosejaw, true
+agassiz_waw_supply, HMCS Kitchener, true
+pa_1, PA 1, true
+pa_1_lcvp, PA 2, true
+pa_1_supply, PA 3, true
+landingcraftassault, LCA, true
+landingcraftassault_waw, LCA, true
+lct_mk5_gb_normandy, LCT Mk5, false
+lct_mk5_gb_normandy_2_waw, LCT Mk5, false
+lct_mk5_gb_normandy_waw, LCT Mk5, true
+lct_secondaryseats, LCT Mk5, true
+libertyship, LCT Mk5, true
+fh1_daihatsu, Daihatsu, true
+fh1_daihatsu_gunner, Bren AA, true
+fh1_25mmaa, Type 96 25mm AA, false
+fh1_25mmaa_bundle, Type 96 25mm AA, false
+fh1_25mmaa_bundle_alt, Type 96 25mm AA, false
+fh1_25mmaa_hatsuzuki, Type 96 25mm AA, true
+fh1_hatsuzuki, IJN Hatsuzuki, true
+fh1_hatsuzuki_lcvp, IJN Hatsuzuki, true
+fh1_shokaku_guns, IJN Shokaku, true
+fh1_yamato, IJN Yamato, true
+dd_gleaversclass_Measure21_Arty, USN DD Gleaver Class, true
+fh1_enterprise_guns, USS Enterprise, true
+fh1_fletcher, USN Fletcher, true
+fh1_fletcher_lcvp, USN Fletcher, true
+fh1_gato, Gato Class 'Alligator', true
+fh1_oerlikon20mm, 20mm Oerlikon, false
+fh1_pt_boat, ELCO 80 PT Boat, true
+fh1_pt_boat_jap, Type 38 PT Boat, true
+lct_mk5_us_normandy, LCT Mk5, false
+lct_mk5_us_normandy_2_waw, LCT Mk5, false
+lct_mk5_us_normandy_waw, LCT Mk5, false
+lcvp, LCVP, true
+lcvp_waw, LCVP, true
+liberty_ship_waw, SS Jeremiah O'Brien, true
+liberty_ship_waw_objective0, SS John W. Brown, true
+liberty_ship_waw_objective1, SS John W. Brown, true
+liberty_ship_waw_objective2, SS John W. Brown, true
+liberty_ship_waw_objective3, SS John W. Brown, true
+liberty_ship_waw_objective4, SS John W. Brown, true
+liberty_ship_waw_objective5, SS John W. Brown, true
+lvt-4, LVT-4, true
+lvt-5, Lvt-5, true
+drg_gw_o_halle1, O_HALLE, false
+wr360c14_africa, WR360C14, false
+wr360c14_europe, V36, false
+wr360c14_europe1942e, WR360C14, false
+wr360c14_europe1942l, WR360C14, false
