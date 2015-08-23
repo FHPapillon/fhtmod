@@ -40,6 +40,7 @@ public class BaseChecker {
 
 	public HashMap<String, String> vehicle_names;
 	private HashMap<String, Float> kitLimit;
+	public HashMap<String, String> spawnerCondition;
 	private HashMap<String, GenericType> vehicleTypes;
 
 	private HashMap<String, GenericType> weaponTypes;
@@ -48,23 +49,7 @@ public class BaseChecker {
 
 	private HashMap<String, FH2Object> vehicles;
 
-	public HashMap<String, String> getFlagNames() {
-		return flagNames;
-	}
-
-	public void setFlagNames(HashMap<String, String> flagNames) {
-		this.flagNames = flagNames;
-	}
-
 	private HashMap<String, String> flagNames;
-
-	public HashMap<String, FH2Object> getVehicles() {
-		return vehicles;
-	}
-
-	public void setVehicles(HashMap<String, FH2Object> vehicles) {
-		this.vehicles = vehicles;
-	}
 
 	public HashMap<String, ControlPoint> controlPointsObjects;
 
@@ -219,8 +204,6 @@ public class BaseChecker {
 				FhtConstants.serverArchiveLines);
 	}
 
-
-
 	public void checkTmp(String basePath, Collection<String> errors) {
 		String line, lineTmp, kitCompare;
 		boolean found = false;
@@ -337,7 +320,7 @@ public class BaseChecker {
 
 			td = new Td();
 			tr.appendChild(td);
-			td.appendChild(new Text(it_kits1.next() + " " + kitLimit.get(arg0)));
+			td.appendChild(new Text(getKit(it_kits1.next())));
 
 			td = new Td();
 			tr.appendChild(td);
@@ -345,7 +328,7 @@ public class BaseChecker {
 
 			td = new Td();
 			tr.appendChild(td);
-			td.appendChild(new Text(it_kits2.next()));
+			td.appendChild(new Text(getKit(it_kits2.next())));
 			counter++;
 		}
 
@@ -476,12 +459,30 @@ public class BaseChecker {
 		return tr;
 	}
 
-	private String getLocalizedFlagName(String flag) {
-		if (getFlagNames().containsKey(flag.trim()))
-			return getFlagNames().get(flag.trim());
-		else
-			return flag.trim();
+	private HashMap<String, GenericType> fillTypeMap(String source) {
+		Collection<String> types = FhtFileReader.getFile(source);
+		String template, type;
+		StringTokenizer tok;
+
+		HashMap<String, GenericType> map = new HashMap<String, GenericType>();
+		Iterator<String> it = types.iterator();
+		while (it.hasNext()) {
+			tok = new StringTokenizer(it.next(), ":");
+			while (tok.hasMoreTokens()) {
+				template = tok.nextToken();
+				type = tok.nextToken();
+				if (WeaponTypes.contains(type.trim()))
+					map.put(template, WeaponTypes.valueOf(type));
+				if (KitTypes.contains(type.trim()))
+					map.put(template, KitTypes.valueOf(type));
+				if (VehicleTypes.contains(type.trim()))
+					map.put(template, VehicleTypes.valueOf(type));
+			}
+		}
+		return map;
 	}
+
+
 
 	private String findValueInCollection(String value, Collection<String> col) {
 		boolean found = false;
@@ -499,9 +500,13 @@ public class BaseChecker {
 		}
 		return ret;
 	}
-
+	
 	public String getBasePath() {
 		return basePath;
+	}
+
+	public HashMap<String, String> getFlagNames() {
+		return flagNames;
 	}
 
 	public Collection<String> getGamePlayObjects() {
@@ -510,6 +515,24 @@ public class BaseChecker {
 
 	public Collection<String> getInitLines() {
 		return initLines;
+	}
+
+	private String getKit(String kit){
+		
+		if (kitLimit.containsKey(kit)) {
+			return kit + " limited to " + kitLimit.get(kit).toString();
+		}
+		else
+			return kit;
+	}
+
+	private String getKitFromLimitKitMapdata(String line){
+		String kit = new String();
+		int start, end;
+		start = line.indexOf("'")+1;
+		end = line.lastIndexOf("'");					
+		kit = line.substring(start,  end );
+		return kit;
 	}
 
 	private String getKitNameFromLine(String line) {
@@ -546,6 +569,15 @@ public class BaseChecker {
 		return kitTypes;
 	}
 
+	private Float getLimitfromLimitKitMapdata(String line){
+		int start, end;
+		String strLimit;
+		start = line.lastIndexOf("=") + 1;
+		end = line.lastIndexOf(")");					
+		strLimit = line.substring(start,  end );		
+		return new Float(strLimit.trim());
+	}
+
 	private Div getLinkToTemplateImage(ObjectSpawner spawner, String team) {
 		String fh2imagename;
 		Div div = new Div();
@@ -578,6 +610,13 @@ public class BaseChecker {
 		link.appendChild(image);
 
 		return div;
+	}
+
+	private String getLocalizedFlagName(String flag) {
+		if (getFlagNames().containsKey(flag.trim()))
+			return getFlagNames().get(flag.trim());
+		else
+			return flag.trim();
 	}
 
 	private String getMapName(String basePath, String mapname) {
@@ -673,6 +712,10 @@ public class BaseChecker {
 	private String getTicketTeam2() {
 		return getNumberOfTicketsFromLine(findValueInCollection(
 				FhtConstants.numberOfTickets64 + " 2", getInitLines()));
+	}
+
+	public HashMap<String, FH2Object> getVehicles() {
+		return vehicles;
 	}
 
 	public HashMap<String, GenericType> getVehicleTypes() {
@@ -1014,7 +1057,7 @@ public class BaseChecker {
 		}
 		body.appendChild(table);
 	}
-
+	
 	private void readFiles() {
 		// Check the file Init.con
 		setInitLines(FhtFileReader.getFile(getBasePath() + FhtConstants.init));
@@ -1024,62 +1067,6 @@ public class BaseChecker {
 				+ FhtConstants.mapdata));
 	}
 	
-	private String getKitFromLimitKitMapdata(String line){
-		String kit = new String();
-		int start, end;
-		start = line.indexOf("'");
-		end = line.lastIndexOf("'");					
-		kit = line.substring(start,  end );
-		return kit;
-	}
-	
-	private Float getLimitfromLimitKitMapdata(String line){
-		int start, end;
-		String strLimit;
-		start = line.lastIndexOf("=") + 1;
-		end = line.lastIndexOf(")");					
-		strLimit = line.substring(start,  end );		
-		return new Float(strLimit.trim());
-	}
-	
-	private void setMapdata(Collection<String> mapdata_lines){
-		kitLimit = new HashMap<String, Float>();
-		Iterator<String> it = mapdata_lines.iterator();
-		
-		String line = new String();
-		while (it.hasNext()){
-			line = it.next().trim();
-			if (line.contains("plugin(limitKit")){
-				kitLimit.put(getKitFromLimitKitMapdata(line), getLimitfromLimitKitMapdata(line));
-			}
-			System.out.println(it.next());
-		}
-	}
-	
-
-	private HashMap<String, GenericType> fillTypeMap(String source) {
-		Collection<String> types = FhtFileReader.getFile(source);
-		String template, type;
-		StringTokenizer tok;
-
-		HashMap<String, GenericType> map = new HashMap<String, GenericType>();
-		Iterator<String> it = types.iterator();
-		while (it.hasNext()) {
-			tok = new StringTokenizer(it.next(), ":");
-			while (tok.hasMoreTokens()) {
-				template = tok.nextToken();
-				type = tok.nextToken();
-				if (WeaponTypes.contains(type.trim()))
-					map.put(template, WeaponTypes.valueOf(type));
-				if (KitTypes.contains(type.trim()))
-					map.put(template, KitTypes.valueOf(type));
-				if (VehicleTypes.contains(type.trim()))
-					map.put(template, VehicleTypes.valueOf(type));
-			}
-		}
-		return map;
-	}
-
 	private void readObjects() {
 
 		setVehicleTypes(fillTypeMap("f://VehicleTypes.txt"));
@@ -1099,6 +1086,38 @@ public class BaseChecker {
 			vehicle_names.put(objectEntry.getValue().getTemplate(), objectEntry
 					.getValue().getDisplayName());
 		}
+	}
+	
+	private void readVehicleMasterdata() {
+		Collection<String> types = FhtFileReader
+				.getFile("f://vehicles_with_imagenames.txt");
+		String template, hudName, fh2ImageName;
+		StringTokenizer tok;
+		FH2Object o;
+		template = new String();
+		hudName = new String();
+		fh2ImageName = new String();
+		HashMap<String, FH2Object> map = new HashMap<String, FH2Object>();
+		Iterator<String> it = types.iterator();
+		while (it.hasNext()) {
+			o = new FH2Object();
+			tok = new StringTokenizer(it.next(), ",");
+			while (tok.hasMoreTokens()) {
+				template = tok.nextToken();
+				hudName = tok.nextToken();
+				fh2ImageName = tok.nextToken();
+			}
+			o.setDisplayName(hudName);
+			o.setTemplate(template);
+			o.setFh2ImageName(fh2ImageName);
+			map.put(template, o);
+		}
+		setVehicles(map);
+	}
+	
+
+	public void setBasePath(String basePath) {
+		this.basePath = basePath;
 	}
 
 	private void setFlagNames() {
@@ -1127,35 +1146,8 @@ public class BaseChecker {
 		}
 	}
 
-	private void readVehicleMasterdata() {
-		Collection<String> types = FhtFileReader
-				.getFile("f://vehicles_with_imagenames.txt");
-		String template, hudName, fh2ImageName;
-		StringTokenizer tok;
-		FH2Object o;
-		template = new String();
-		hudName = new String();
-		fh2ImageName = new String();
-		HashMap<String, FH2Object> map = new HashMap<String, FH2Object>();
-		Iterator<String> it = types.iterator();
-		while (it.hasNext()) {
-			o = new FH2Object();
-			tok = new StringTokenizer(it.next(), ",");
-			while (tok.hasMoreTokens()) {
-				template = tok.nextToken();
-				hudName = tok.nextToken();
-				fh2ImageName = tok.nextToken();
-			}
-			o.setDisplayName(hudName);
-			o.setTemplate(template);
-			o.setFh2ImageName(fh2ImageName);
-			map.put(template, o);
-		}
-		setVehicles(map);
-	}
-
-	public void setBasePath(String basePath) {
-		this.basePath = basePath;
+	public void setFlagNames(HashMap<String, String> flagNames) {
+		this.flagNames = flagNames;
 	}
 
 	public void setGamePlayObjects(Collection<String> gamePlayObjects) {
@@ -1168,6 +1160,36 @@ public class BaseChecker {
 
 	public void setKitTypes(HashMap<String, GenericType> kitTypes) {
 		this.kitTypes = kitTypes;
+	}
+
+	private void setMapdata(Collection<String> mapdata_lines){
+		kitLimit = new HashMap<String, Float>();
+		Iterator<String> it = mapdata_lines.iterator();
+		
+		String line = new String();
+		while (it.hasNext()){
+			line = it.next().trim();
+			if (line.contains("plugin(limitKit")){
+				kitLimit.put(getKitFromLimitKitMapdata(line), getLimitfromLimitKitMapdata(line));
+			}
+//			if (line.contains("plugin(spawnerCondition")) {
+//				spawnerCondition.put(getSpawnerFromSpawnerCondition(line), getTeamFlagFromSpawnerCondition(line));
+//			}
+			
+		}
+	}
+	
+	private String getSpawnerFromSpawnerCondition(String line){
+		String ret = new String();
+		return ret;
+	}
+
+	private String getTeamFlagFromSpawnerCondition(String line){
+		String ret = new String();
+		return ret;
+	}
+	public void setVehicles(HashMap<String, FH2Object> vehicles) {
+		this.vehicles = vehicles;
 	}
 
 	public void setVehicleTypes(HashMap<String, GenericType> vehicleTypes) {
