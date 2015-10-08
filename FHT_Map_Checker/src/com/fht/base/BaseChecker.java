@@ -58,6 +58,8 @@ public class BaseChecker {
 	public HashMap<String, String> controlPoints;
 
 	public HashMap<String, String> objectControlPoints;
+	
+	public FhtFileReader fileReader;
 
 	public void check(String[] args) {
 		String path, layer, mapname, displayMapname, team1, team2, tickets1, tickets2;
@@ -65,6 +67,7 @@ public class BaseChecker {
 		Collection<String> errors = new ArrayList<>();
 		Collection<String> kits_team1 = new ArrayList<>();
 		Collection<String> kits_team2 = new ArrayList<>();
+		fileReader = new FhtFileReader();
 
 		objectSpawners = new HashMap<String, ObjectSpawner>();
 		objectControlPoints = new HashMap<String, String>();
@@ -118,7 +121,7 @@ public class BaseChecker {
 
 		Iterator<String> it = errors.iterator();
 		while (it.hasNext()) {
-			System.out.println(it.next());
+			//System.out.println(it.next());
 		}
 
 	}
@@ -432,17 +435,17 @@ public class BaseChecker {
 		html.appendChild(body);
 
 		try {
-			File output = new File("f://" + mapname + ".html");
+			File output = new File("" + mapname + ".html");
 			PrintWriter out = new PrintWriter(new FileOutputStream(output));
 			out.println(html.write());
-			System.out.println(html.write());
+			//System.out.println(html.write());
 			out.close();
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 
 		}
-		System.out.println(html.write());
+		//System.out.println(html.write());
 
 	}
 
@@ -460,7 +463,7 @@ public class BaseChecker {
 	}
 
 	private HashMap<String, GenericType> fillTypeMap(String source) {
-		Collection<String> types = FhtFileReader.getFile(source);
+		Collection<String> types = fileReader.getFile(source);
 		String template, type;
 		StringTokenizer tok;
 
@@ -624,7 +627,7 @@ public class BaseChecker {
 		String line, name;
 		boolean found = false;
 		name = mapname;
-		col = FhtFileReader.getFile(basePath + "//info//" + mapname + ".desc");
+		col = fileReader.getFh2File(basePath + "//info//" + mapname + ".desc");
 		if (col != null) {
 			Iterator<String> it = col.iterator();
 			while (it.hasNext() && !found) {
@@ -676,7 +679,7 @@ public class BaseChecker {
 
 	private String getTemplateName(ObjectSpawner spawner, String team) {
 		String ret = new String();
-		System.out.println(team);
+		//System.out.println(team);
 		switch (team) {
 		case "1":
 			return getTeamTemplateName(spawner, team);
@@ -794,7 +797,7 @@ public class BaseChecker {
 		Iterator<ControlPoint> cpit = controlPointsObjects.values().iterator();
 		while (cpit.hasNext()) {
 			cp = cpit.next();
-			System.out.println(cp.toString());
+			//System.out.println(cp.toString());
 			/*
 			 * System.out.println("ID:              " + cp.getId());
 			 * System.out.println("Name:            " + cp.getName());
@@ -1060,18 +1063,18 @@ public class BaseChecker {
 	
 	private void readFiles() {
 		// Check the file Init.con
-		setInitLines(FhtFileReader.getFile(getBasePath() + FhtConstants.init));
-		setGamePlayObjects(FhtFileReader.getFile(getBasePath()
+		setInitLines(fileReader.getFh2File(getBasePath() + FhtConstants.init));
+		setGamePlayObjects(fileReader.getFh2File(getBasePath()
 				+ FhtConstants.gamePlayObjects_64));
-		setMapdata(FhtFileReader.getFile(getBasePath()
+		setMapdata(fileReader.getFh2File(getBasePath()
 				+ FhtConstants.mapdata));
 	}
 	
 	private void readObjects() {
 
-		setVehicleTypes(fillTypeMap("f://VehicleTypes.txt"));
-		setWeaponTypes(fillTypeMap("f://WeaponTypes.txt"));
-		setKitTypes(fillTypeMap("f:/KitTypes.txt"));
+		setVehicleTypes(fillTypeMap("VehicleTypes.txt"));
+		setWeaponTypes(fillTypeMap("WeaponTypes.txt"));
+		setKitTypes(fillTypeMap("KitTypes.txt"));
 		setFlagNames();
 		readVehicleMasterdata();
 
@@ -1089,8 +1092,7 @@ public class BaseChecker {
 	}
 	
 	private void readVehicleMasterdata() {
-		Collection<String> types = FhtFileReader
-				.getFile("f://vehicles_with_imagenames.txt");
+		Collection<String> types = fileReader.getFile("vehicles_with_imagenames.txt");
 		String template, hudName, fh2ImageName;
 		StringTokenizer tok;
 		FH2Object o;
@@ -1121,8 +1123,7 @@ public class BaseChecker {
 	}
 
 	private void setFlagNames() {
-		Collection<String> localizations = FhtFileReader
-				.getFile(("F:/fht_maps.txt"));
+		Collection<String> localizations = fileReader.getFile(("fht_maps.txt"));
 		Iterator<String> it = localizations.iterator();
 		StringTokenizer tok;
 		String string;
