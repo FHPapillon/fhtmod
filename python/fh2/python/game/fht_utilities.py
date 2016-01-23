@@ -22,8 +22,8 @@ import game.fht_data as fhtd
 import game.fht_settings as fhts
 import game.gamemodes.gpm_cq as gpm
 rcon = utils.rconExec
-debugFileName = "mods/fh2/fht/fhtdebug.log"
-errorFileName = "mods/fh2/fht/fhterrors.log"
+debugFileName = "mods/fh2/python/game/fhtdebug.log"
+errorFileName = "mods/fh2/python/game/fhterrors.log"
 
 
 def getPluginObjects():
