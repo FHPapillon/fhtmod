@@ -50,7 +50,7 @@ public class Kill extends LogEntry {
 		
 		switch (getKillType()) {
 		case SUICIDE:
-			ret = getPlayer() + " killed himself";
+			ret = getPlayer() + " suicided";
 			break;
 		case INF_INF:
 			ret = getPlayer() + ((isTeamkill()) ? " teamkilled "  : " killed ") + getVictim() + " with " + getWeapon();
