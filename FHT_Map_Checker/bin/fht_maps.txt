@@ -1,0 +1,1256 @@
+GAMEMODE_DESCRIPTION_fht_flagrush                           ;This is a Forgotten Honor Flagrush map. All cappable flags are grey at the beginning of the round.;
+
+GAMEMODE_DESCRIPTION_fht_standard32                         ;This is a Forgotten Honor standard 32 player map. Each team has a main base and there are 3 flags that can be captured, 2 are needed to bleed the enemy.;
+GAMEMODE_DESCRIPTION_fht_standard16                         ;This is a Forgotten Honor standard 16 player map. Each team has a main base and there are 3 flags that can be captured, 2 are needed to bleed the enemy.;
+
+GAMEMODE_DESCRIPTION_fht_standard64                         ;This is a Forgotten Honor standard 64 player map. Each team needs 3 of the 5 capture-able flags to bleed the enemy. Your team wins when your enemy's tickets reach 0.;
+
+GAMEMODE_DESCRIPTION_fht_standard64r                        ;This is a Forgotten Honor standard 64 player map with bleed reinforcements. Each team needs 3 of the 5 capture-able flags to bleed the enemy. Your team wins when your enemy's tickets reach 0. The team that is bleeding will receive assets to reinforce their attacks.;
+
+GAMEMODE_DESCRIPTION_fht_standard64r_7f                     ;This is a Forgotten Honor standard 64 player map with bleed reinforcements. Each team needs 4 of the 7 capture-able flags to bleed the enemy. Your team wins when your enemy's tickets reach 0. The team that is bleeding will receive assets to reinforce their attacks.;
+
+GAMEMODE_DESCRIPTION_fht_amfreville                         ;This is a Forgotten Honor 64 player map. Church has no value towards the bleed and is locked until Epicerie and Hotel are taken. 3 of the other 5 flags are needed to control the bleed. C47s are tied to the bleed as is German armour reinforcements. Your team wins when your enemy's tickets reach 0.;
+
+GAMEMODE_DESCRIPTION_fht_infantry_1                         ;This is a Forgotten Honor 64 player infantry map. 4 of the 7 flags are needed to control the bleed. All control points need 3 people to capture. Your team wins when your enemy's tickets reach 0.
+
+GAMEMODE_DESCRIPTION_fht_fs_mb                              ;This is a Forgotten Honor 64 player Mainbase Selection and Flagshuffle map. The attacking team can select one of two available mainbases. The capturable flags will be chosen randomly on each round start.
+
+GAMEMODE_DESCRIPTION_fht_fs                                 ;This is a Forgotten Honor 64 player Flagshuffle map. The capturable flags will be chosen randomly on each round start.
+
+
+BEWARE, SELECTING THE WRONG RALLY POINT MEANS DEATH!!!;
+
+GAMEMODE_DESCRIPTION_fht_bloody_gulch                       ;This is a Conquest: Push map. The attackers will win if they capture the control points in the order marked by the blue arrows. Either team needs 4 of the 7 flags to bleed the enemy.
+Allies will receive reinforcements in the form of equipment when each frontline pair is taken by the Germans. At the same time the Germans will lose some assets with each frontline pair.;
+
+GAMEMODE_DESCRIPTION_fht_stoumont                           ;This is a Conquest: Push map with bleed reinforcements. German team must cap and hold 2 flags from the 2nd line in order to win. Axis arty position and Targnon flag don't have any influence on the bleed;
+
+GAMEMODE_DESCRIPTION_fht_phl                                ;This is a Forgotten Honor 64 player infantry map. 3 or the 5 flags are needed to control the bleed. Some Allied assets are tied to the bleed. Axis will receive artillery after 10 minutes and can be pushed off the map.;
+
+GAMEMODE_DESCRIPTION_fht_airborne_defense                   ;This is a Forgotten Honor 64 player airborne defense map. When the defending team loses half it's flags they get reinforcements in the form of Paratrooper Planes. The attacking loses some or all of their assets when they take half the defender's flags. Your team wins when your enemy's tickets reach 0.;
+
+GAMEMODE_DESCRIPTION_fht_assault                            ;This is a Forgotten Honor Assault Map. The attacking team must capture the defending team's final flag or reduce the enemy ticket count to zero to win. The defenders must hold out until the attacking team's tickets run out. When the final flag is taken, the defenders will lose 1000 tickets per minute. Flags can only be taken in the order indicated via Push.;
+
+GAMEMODE_DESCRIPTION_fht_op_diadem                          ;This is a Forgotten Honor 64 player map. The attacking team can win by holding more than half of the flags or by capturing all the enemy flags. The defending team can only win by holding half the flags. Ausonia is the defending teams primary base and as such takes more time to capture. Your team wins when your enemy's tickets reach 0.;
+
+LOADINGSCREEN_MAPDESCRIPTION_fht_op_epsom_1944;June 26th, 1944. It has been 20 days since the Allied armies landed in Normandy and the D-day goal of capturing the city of Caen has yet to be met. Now 3 British Divisions are attempting to outflank the city by driving across the River Odon in what is being called Operation Epsom. Advancing behind a rolling artillery barrage, the 15th Scottish Infantry Division leads the charge...Map by : F|H Mapping Team: Deek_101;
+CP_64_Axis_Main            ;II SS Panzer Corps;
+CP_64_Allied_Main            ;15th Scottish Infantry Division;
+CP_64_Mouen            ;Mouen;
+CP_64_Tourmauville            ;Tourmauville;
+CP_64_Windmill            ;Windmill;
+CP_64_Communications_Headquarters            ;Communications Headquarters;
+CP_64_Farm            ;Farmstead;
+CP_64_Baron_sur_Odon;Baron sur Odon;
+CP_64_Axis_Reinforcements;Axis Reinforcements;
+CP_64_Allied_Reinforcements;Allied Reinforcements;
+
+HUD_LEVELNAME_fht_anzio                                     ;FHT Anzio;
+
+LOADINGSCREEN_MAPDESCRIPTION_fht_anzio                      ;February 1944. The past month has been especially bloody for the men on the Anzio beachhead. In January VI Corps, consisting of both British and American forces, landed unopposed on the beaches around Anzio and Nettuno, pushing 5km inland. Surprised by these landings, Kesselring quickly dispatched the 4th Parachute Division and the Hermann Goring Panzer Division to drive the Allied troops back into the sea. After repeated attacks, the Germans have yet to push the Allies back...;
+
+CP_64_fht_anzio_overpass                                    ;Overpass;
+CP_64_fht_anzio_anzio                                       ;Anzio;
+CP_64_fht_anzio_genio_civile                                ;Genio Civile;
+CP_64_fht_anzio_lxxvi_panzerkorps                           ;LXXVI Panzerkorps;
+64_fht_anzio_padiglione_woods                               ;Padiglione Woods;
+64_fht_anzio_padiglione_marshes                             ;Marshes;
+CP_64_fht_anzio_forward_hq                                  ;Forward HQ;
+
+HUD_LEVELNAME_fht_biazza_ridge                              ;FHT Biazza Ridge;
+
+LOADINGSCREEN_MAPDESCRIPTION_fht_biazza_ridge               ;July 10th, 1943. Allied paratroopers, after defeating the Italian garrison in the area, have secured the vital Biazza Ridge. Overlooking the road to Gela where the US 1st Infantry Division has landed, this ridge is where the paratroopers are to make their stand. Now the Tiger tanks of the Hermann Goring Panzer Division are pushing down the road to the landing beaches, and it falls to the paratroopers to stop them...;
+
+CP_64_fht_biazza_bunkers                                    ;Piano Lupo;
+CP_64_fht_biazza_dirillo                                    ;Ponte Dirillo;
+CP_64_fht_biazza_farm                                	    ;Fattoria;
+CP_64_fht_biazza_crossroads                                 ;Biscari Bivio;
+CP_64_fht_biazza_ridge                                      ;Biazza Ridge;
+CP_64_fht_biazza_hgd                                        ;Hermann Goring Division;
+CP_64_fht_biazza_bleed_dummy                                ; ;
+
+HUD_LEVELNAME_fht_etna_line                                 ;FHT Etna Line;
+
+LOADINGSCREEN_MAPDESCRIPTION_fht_etna_line                  ;July 31st, 1943. The Axis armies in Sicily are withdrawing through the port of Messina to the Italian mainland. All that stands between the retreating Axis forces and the advancing Allied armies is the 15th Panzer Genadier Division and the 28 Infantry Division Aosta, dug in along the heavily fortified Etna Line. Considered to be one of the main anchors of the Etna Line, the Allied armies are beginning their assault on the town of Troina...;
+
+CP_64_fht_etna_15_Pzg_Division                              ;15. Panzergrenadier-Division;
+CP_64_fht_etna_7th_Army                                     ;US 7th Army;
+CP_64_fht_etna_Road_Block                                   ;Roadblock;
+CP_64_fht_etna_troina_south                                 ;Troina South;
+CP_64_fht_etna_troina_north                                 ;Troina North;
+CP_64_fht_etna_troina_centre                                ;Troina Center;
+CP_64_fht_etna_mountain_camp      	                        ;Mountain Camp;
+CP_64_fht_etna_monte_basilio   	                            ;Headquarters;
+CP_64_fht_etna_valley_battery                               ;Valley Battery;
+CP_64_fht_etna_monastery                                    ;Monastery;
+CP_64_fht_etna_Allied_Reinforcements                        ;Allied Reinforcements;
+CP_64_fht_etna_Axis_Reinforcements                          ;Axis Reinforcements;
+
+CP_32_fht_etna_15_Pzg_Division                              ;15. Panzergrenadier-Division;
+CP_32_fht_etna_7th_Army                                     ;US 7th Army;
+CP_32_fht_etna_Road_Block                                   ;Roadblock;
+CP_32_fht_etna_troina_south                                 ;Troina South;
+CP_32_fht_etna_troina_north                                 ;Troina North;
+CP_32_fht_etna_troina_centre                                ;Troina Center;
+CP_32_fht_etna_mountain_camp      	                        ;Mountain Camp;
+CP_32_fht_etna_monte_basilio   	                            ;Headquarters;
+CP_32_fht_etna_valley_battery                               ;Valley Battery;
+CP_32_fht_etna_monastery                                    ;Monastery;
+CP_32_fht_etna_Allied_Reinforcements                        ;Allied Reinforcements;
+CP_32_fht_etna_Axis_Reinforcements                          ;Axis Reinforcements;
+
+CP_16_fht_etna_cemetery                                     ;Cemetery;
+CP_16_fht_etna_tunnel                                       ;Bank;
+CP_16_fht_etna_troina_center                                ;Alley;
+CP_16_fth_etna_axis_main                                    ;15. Panzergrenadier-Division;
+CP_16_fht_etna_allied_main                                  ;US 7th Army;
+
+HUD_LEVELNAME_fht_fort_capuzzo                              ;FHT Fort Capuzzo;
+
+LOADINGSCREEN_MAPDESCRIPTION_fht_fort_capuzzo               ;On 26th of November, 15th Panzer Division bypassed Sidi Azeiz and headed for Bardia to resupply, arriving around midday. Meanwhile the remains of 21st Panzer Division attacked northwest from Halfaya towards Capuzzo and Bardia. The Italian Ariete Division who were approaching Bir Ghirba from the west, were ordered towards Fort Capuzzo to clear any opposition and link with 21st Panzer. They were to be supported by 15th Panzer's depleted 115th Infantry Regiment which was ordered to advance with some artillery southeast from Bardia towards Fort Capuzzo. The two battalions of 5th NZ Brigade positioned between Fort Capuzzo and Sollum Barracks were engaged by the converging elements of 15th and 21st Panzer at dusk on 26 November.;
+
+CP_64_fht_fort_capuzzo_fort_capuzzo                         ;Fort Capuzzo;
+CP_64_fht_fort_capuzzo_mosque                               ;Mosque;
+CP_64_fht_fort_capuzzo_airfield                             ;Disused Airfield;
+CP_64_fht_fort_capuzzo_north                                ;Northern Strongpoint;
+CP_64_fht_fort_capuzzo_south                                ;Southern Strongpoint;
+CP_64_fht_fort_capuzzo_axis_main                      	    ;15th Panzer Division;
+CP_64_fht_capuzzo_railyard                       	    ;Railyard;
+CP_64_fht_fort_capuzzo_allied_main       	            ;2nd New Zealand Division;
+CP_64_fht_fort_capuzzo_allied_reinforcements                        ;Allied Reinforcements;
+CP_64_fht_capuzzo_axis_reinforcements                          ;Axis Reinforcements;
+
+HUD_LEVELNAME_fht_hill_107                                  ;FHT Hill 107;
+
+CP_32_hill107_daskalinana                                   ;Daskalinana;
+CP_32_hill107_pyrgos                                        ;Pyrgos;
+CP_32_hill107_farm                                          ;Farm;
+CP_32_hill107_hill107                                       ;Hill 107;
+
+64_hill_107                                                 ;Hill 107;
+64_aerodrome                                                ;Aerodrome;
+64_pyrgos                                                   ;Pyrgos;
+64_daskalinana                                              ;Daskalinana;
+64_kantomari                                                ;Kantomari;
+64_farm                                                     ;Farm;
+64_vlachernitsa                                             ;Vlachernitsa;
+bleed                                 	                    ; ;
+
+HUD_LEVELNAME_fht_hill262                                   ;FHT Hill 262;
+
+hill262                                                     ;Hill 262;
+south_allies_main                      	                    ;90th Infantry Division;
+near_chambois                                               ;Near Chambois;
+mont_ormel                                                  ;Mont Ormel;
+coudehard                                                   ;Coudehard;
+manoir                                 	                    ;Manoir;
+hill247                                                     ;Hill 247;
+la_bruyere_fresnay                                          ;la Bruyere Fresnay;
+les_lignerits                                               ;les Lignerits;
+bleed                                 	                    ; ;
+
+HUD_LEVELNAME_fht_majardah_river_valley                     ;FHT Majardah River Valley;
+
+LOADINGSCREEN_MAPDESCRIPTION_fht_majardah_river_valley      ;December, 1942. The British 1st Army and US II Corp have crossed the Algerian border into Tunisia and are pushing towards Tunis and Bizerte. In the valley of the River Majardah, lies the town of Tebourba, a railway hub and agricultural center, a stepping stone on the path to Tunis and victory in North Africa. Now Blade Force, a combined group of armoured and other units from both the US II Corp and British 1st Army, is attacking the valley from the North. Being in such close proximity to Tunis, Axis forces will surely make the Anglo-American forces pay in blood for every meter they take...;
+
+CP_64_fht_majardah_river_valley_field_hospital              ;Field Hospital;
+CP_64_fht_majardah_river_valley_flak_battery                ;Flak Battery;
+CP_64_fht_majardah_river_valley_western_town                ;Shuwat;
+CP_64_fht_majardah_river_valley_Southern_Town               ;Fuma;
+CP_64_fht_majardah_river_valley_German_Camp                 ;10th Panzer Division;
+CP_64_fht_majardah_river_valley_blade_force                 ;Blade Force;
+CP_64_fht_majardah_river_valley_Tebourba_North              ;Tebourba_North;
+CP_64_fht_majardah_river_valley_Rail_Yard                   ;Rail Yard;
+CP_64_fht_majardah_river_valley_Tebourba_South              ;Tebourba South;
+CP_64_fht_majardah_river_valley_Axis_Bleed                  ;Axis Reinforcements;
+CP_64_fht_majardah_river_valley_Allied_Bleed                ;Allied Reinforcements;
+
+HUD_LEVELNAME_fht_mount_olympus                             ;FHT Mount Olympus;
+
+CP_32_fht_mount_olympus_surprise                            ;SURPRISE!;
+
+CP_32_fht_mount_olympus_rapsani_station                     ;Rapsani Station;
+CP_32_fht_mount_olympus_leptokaria                          ;Leptokaria;
+CP_32_fht_mount_olympus_castle                              ;Platamon Castle;
+CP_32_fht_mount_olympus_kafeteria                           ;Kafeteria;
+CP_32_fht_mount_olympus_town_center                         ;Town Center;
+
+HUD_LEVELNAME_fht_op_epsom_1944                             ;FHT Operation Epsom;
+
+Axis_Main                                                   ;1-SS Panzer Corps;
+15th_Scottish_Infantry_Division                             ;15th Scottish Infantry Division;
+Mouen                                 	                    ;Mouen;
+Tourmauville_64                                             ;Tourmauville;
+Windmill_64                                                 ;Windmill;
+Communications_Headquarters_64                              ;Communications Headquarters;
+Farm_64                                                     ;Farm;
+Baron_sur_Odon_64                      	                    ;Baron-sur-Odon;
+bleed_flag                                                  ; ;
+
+HUD_LEVELNAME_fht_road_to_kairouan                          ;FHT Road to Kairouan;
+
+LOADINGSCREEN_MAPDESCRIPTION_fht_road_to_kairouan           ;April 1943. Gabes has fallen and foothills overlooking the plains of Kairouan are the Afrika Korps last hope for stopping the advancing 8th Army. The final stand before Tunis will be made at a strong defensive line near a small river. Each building in the area is fortified and German elite armoured units are in reserve, waiting to strike at any bridgehead the Allies make. British troops will have to plunge through into hell in order to reach Kairouan, but they are ready for that...;
+
+CP_64_Axis_Main                                             ;15th Panzer Division;
+CP_64_Allied_Main_North                                     ;XXX Corps;
+CP_64_Check_Point                                           ;Check Point;
+CP_64_Outpost                                               ;Outpost;
+CP_64_Oil_Refinery                                          ;Supply Station;
+CP_64_Village                                               ;Hebira;
+CP_64_Allied_Main_South                                     ;HQ;
+CP_64_South_Bridgehead                      	            ;Southern Bridgehead;
+CP_64_Observation_Post                      	            ;Observation Post;
+CP_64_Town                      	                        ;Surban;
+CP_64_fht_road_to_kairouan_Allied_Reinforcements            ;Allied Reinforcements;
+CP_64_fht_road_to_kairouan_Axis_Reinforcements              ;Axis Reinforcements;
+
+
+HUD_LEVELNAME_fht_husky_landing                             ;FHT Husky Landing;
+
+LOADINGSCREEN_MAPDESCRIPTION_fht_husky_landing              ;July 10th, 1943. Overlooking the road to Gela, Biazza Ridge is one of the only points at which an attack against the 1st Infantry Division can come. It now falls to the paratroopers of the 82nd Airborne to capture this high ground and stop the Herman Goering Panzer Division in their tracks...;
+
+CP_64_huskylanding_bunkers                                  ;Bunkers;
+CP_64_huskylanding_dirillo_bridge                           ;Dirillo Bridge;
+CP_64_huskylanding_homestead                                ;Homestead;
+CP_64_huskylanding_crossroads                               ;Crossroads;
+CP_64_huskylanding_biazza_ridge                             ;Biazza Ridge;
+CP_64_huskylanding_reinforcements_dummy                     ; ;
+CP_64_huskylanding_herman_goering_division                  ;Herman Goering Division;
+CP_64_huskylanding_82nd                                     ; ;
+
+CP_32_huskylanding_bunkers                                  ;Bunkers;
+CP_32_huskylanding_dirillo_bridge                           ;Dirillo Bridge;
+CP_32_huskylanding_homestead                                ;Homestead;
+CP_32_huskylanding_crossroads                               ;Crossroads;
+CP_32_huskylanding_biazza_ridge                             ;Biazza Ridge;
+CP_32_huskylanding_reinforcements_dummy                     ; ;
+CP_32_huskylanding_herman_goering_division                  ;Herman Goering Division;
+CP_32_huskylanding_82nd                                     ; ;
+
+
+HUD_LEVELNAME_fht_ste_mere_eglise                           ;FHT Ste. Mere-Eglise;
+
+LOADINGSCREEN_MAPDESCRIPTION_fht_ste_mere_eglise            ;June 7th, 1944. Paratroopers of the 82nd Airborne have held the town of Sainte-Mere-Eglise for nearly 24 hours against numerous counterattacks. Now the 4th Armored Division coming from Utah Beach has linked up with the troops in the town, just in time for the next German counterattack...;
+
+CP_64_sme_82nd_airborne_division                            ;82nd Airborne Division;
+CP_64_sme_checkpoint                                        ;Checkpoint;
+CP_64_sme_town_center                                       ;Town Center;
+CP_64_sme_supply_dump                                       ;Supply Dump;
+CP_64_sme_warehouse                                         ;Warehouse;
+CP_64_sme_barracks                                          ;Barracks;
+CP_64_sme_709_infanterie_division                           ;709. Infanterie Division;
+CP_64_sme_reinforcement_dummy                               ; ;
+
+
+HUD_LEVELNAME_fht_argentan                                  ;FHT Argentan;
+
+LOADINGSCREEN_MAPDESCRIPTION_fht_argentan                   ;After their defeat in Operations Lüttich and Totalize, the Germans have been driven back to the region around Falaise. Now the American XV Corps is moving on Argentan in an effort to link up with the Poles and Canadians at Chambois. The Germans however have deployed the 9th Panzer Division and the 2nd SS Panzer Division in and around Argentan to keep the gap open as long as possible. It now falls to the Americans to push the Germans out of the town and surrounding area...;
+
+CP_64_fht_argentan_US_base                                      ;XV Corps;
+CP_64_fht_argentan_church                                       ;Church;
+CP_64_fht_argentan_Axis_base                                    ;9.Panzer-Division;
+CP_64_fht_argentan_cafe                                         ;Cafe;
+CP_64_fht_argentan_Garrison_HQ                                  ;Garrison HQ;
+CP_64_fht_argentan_bridge                                       ;Captured AT Position;
+CP_64_fht_argentan_train_station                                ;Train Station;
+CP_64_fht_argentan_Captured_AT_positions                        ;German Outpost;
+CP_64_fht_argentan_2_SS_Panzer_Division_HQ                      ;2.SS-Panzer-Division HQ;
+CP_64_fht_argentan_bridge_north                                 ;Bridge North;
+CP_64_fht_argentan_bridge_south                                 ;Bridge South;
+
+CP_32_fht_argentan_US_base                                      ;XV Corps;
+CP_32_fht_argentan_church                                       ;Church;
+CP_32_fht_argentan_Axis_base                                    ;9.Panzer-Division;
+CP_32_fht_argentan_cafe                                         ;Cafe;
+CP_32_fht_argentan_Garrison_HQ                                  ;Garrison HQ;
+CP_32_fht_argentan_bridge                                       ;Captured AT Position;
+CP_32_fht_argentan_train_station                                ;Train Station;
+CP_32_fht_argentan_Captured_AT_positions                        ;German Outpost;
+CP_32_fht_argentan_2_SS_Panzer_Division_HQ                      ;2.SS-Panzer-Division HQ;
+
+CP_16_fht_argentan_church                                       ;Church;
+CP_16_fht_argentan_cafe                                         ;Cafe;
+CP_16_fht_argentan_Garrison_HQ                                  ;Garrison HQ;
+CP_16_fht_argentan_bridge                                       ;Captured AT Position;
+CP_16_fht_argentan_train_station                                ;Train Station;
+CP_16_fht_argentan_factory                                      ;Factory;
+CP_16_fht_argentan_fuelstation                                  ;Fuelstation;
+CP_64_fht_argentan_bleed_dummy                                  ; ;
+
+
+HUD_LEVELNAME_fht_amfreville                                ;FHT Amfreville;
+
+LOADINGSCREEN_MAPDESCRIPTION_fht_amfreville                 ;In the early hours of D-Day, a second wave of C-47's carrying airborne infantry over the coast of Normandy, heads towards the Merderet River. Their mission: To secure or destory bridges over the Merderet River leading to the beaches at Utah. Despite flying at low levels, the heavy cloud cover and fog, along with the heavy fire from the German AA flak batteries, disperses the C-47's and their paradrops over a wide area. Far from their original objectives and with equipment lost, the airbourne infantry must find a way to group up and secure the roads in and leading out of a little town called Amfreville.;
+
+CP_64_amfreville_southern_checkpoint                        ;Southern Checkpoint;
+CP_64_amfreville_flak_battery                               ;Flak Battery;
+CP_64_amfreville_grocery                                    ;Epicerie;
+CP_64_amfreville_church                                     ;Church;
+CP_64_amfreville_hotel                                      ;Hotel;
+CP_64_amfreville_northern_checkpoint_0                      ;Northern Checkpoint;
+CP_64_amfreville_bleedflag                                  ; ;
+
+
+HUD_LEVELNAME_fht_st_marie_du_mont                          ;FHT St. Marie-du-Mont;
+
+LOADINGSCREEN_MAPDESCRIPTION_fht_st_marie_du_mont           ;The second wave, assigned to drop the 506th PIR on Drop Zone C1 1.6 KM west of Sainte Marie-du-Mont, was badly dispersed by the clouds, then subjected to intense antiaircraft fire for 16 km. Three of the 81 C-47s were lost before or during the jump. Despite the opposition, the 506th's 1st Battalion was dropped accurately on DZ C, landing two-thirds of its sticks and regimental commander Col. Robert F. Sink on or within a mile of the drop zone. After clearing the village and setting up defences they are now preparing for the coming German counterattack...;
+
+CP_64_fht_stmarie_axis_main                                 ;91st HQ;
+CP_64_fht_stmarie_la_princerie                              ;La Princerie;
+CP_64_fht_stmarie_ruedumont                                 ;Rue du Mont;
+CP_64_fht_stmarie_hameau                                    ;Hameua;
+CP_64_fht_stmarie_holdy                                     ;Holdy;
+CP_64_fht_stmarie_allied_main                               ;101st HQ;
+CP_64_fht_stmarie_chateau                                   ;Chateau St .Marie;
+CP_64_fht_stmarie_roadblock                                 ;Roadblock;
+CP_64_fht_stmarie_courtyard                                 ;Courtyard;
+CP_64_fht_stmarie_allied_airborne                           ;Airborne;
+
+HUD_LEVELNAME_fht_foucarville                               ;FHT Foucarville;
+
+LOADINGSCREEN_MAPDESCRIPTION_fht_foucarville                ;In the early morning hours of June 6th, the 101st Airborne dropped into occupied France behind the invasion beaches of Operation Overlord. The 502nd was tasked with jumping on Drop Zone A and securing the two northern exits behind Utah Beach. 3rd Battalion would secure Exits 3 and 4 near the village of Foucarville, while 1st Battalion would destroy the four German roadblocks in the area. In the darkness, the 502nd went about their tasks, the Allied invasion of Europe had begun...;
+
+CP_64_foucarville_landingZone                               ;Landing Zone;
+CP_64_foucarville_crossroads                                ;Crossroads;
+CP_64_foucarville_eastBridge                                ;East Bridge;
+CP_64_foucarville_checkpoint                                ;Checkpoint;
+CP_64_foucarville_depot                                     ;Depot;
+CP_64_foucarville_village                                   ;Foucarville;
+CP_64_foucarville_church                                    ;Church;
+
+
+HUD_LEVELNAME_fht_bloody_gulch                              ;FHT Bloody Gulch;
+
+LOADINGSCREEN_MAPDESCRIPTION_fht_c17_bloody_gulch         ;When the 101st Airborne entered the town of Carentan on June 12, 1944 after heavy fighting on the two previous days, they met relatively light resistance. The bulk of the surviving German defenders had withdrawn to the southwest the previous night after a heavy Allied naval and artillery bombardment. Both sides realised the importance of the city: for the Americans, it was a link between Utah Beach and Omaha Beach, and would provide a base for further attacks deeper into German-occupied France. For the Germans, recapturing Carentan would be the first step towards driving a wedge between the two U.S. landing beaches, and possibly destroying or severely disrupting the Allied invasion. At dawn on June 13th the counterattack by the 6th FJR and 17th SS Panzergrenadier Division came...;
+CP_64_fht_bloodygulch_bridge                               ;Fortified Bridge;
+CP_64_fht_bloodygulch_supplydepot                          ;Supply Depot;
+CP_64_fht_bloodygulch_hill819                              ;Hill 819;
+CP_64_fht_bloodygulch_riverfarm                            ;Mortar Emplacement;
+CP_64_fht_bloodygulch_allied_main                          ;Forest Camp;
+CP_64_fht_bloodygulch_windmill                             ;Allied Field HQ;
+CP_64_fht_bloodygulch_axis_main                            ;FJ-Regiment 6;
+CP_64_fht_bloodygulch_bunker                               ;Command Bunker;
+CP_64_fht_bloodygulch_chateau                              ;Chateua;
+
+HUD_LEVELNAME_fht_phl                                       ;FHT Purple Heart Lane;
+
+CP_64_fphl_101airborne                                      ;101st Airborne Division;
+CP_64_fphl_bridgeNo4                                        ;Bridge No. 4;
+CP_64_fphl_ingoufFarm                                       ;Ingouf Farm;
+CP_64_fphl_westernFlank                                     ;Western Flank;
+CP_64_fphl_cafe                                             ;Cafe;
+CP_64_fphl_commandPost                                      ;Command Post;
+CP_64_fphl_bleed_dummy                                      ; ;
+CP_64_fphl_timer_dummy                                      ; ;
+
+
+HUD_LEVELNAME_fht_montebourg_station                        ;FHT Montebourg Station;
+
+LOADINGSCREEN_MAPDESCRIPTION_fht_montebourg_station         ;Rommel became increasingly aware of the threat to Cherbourg and feared that the Cotentin Peninsula was about to be cut off. On 7 June he rushed more troops to the area, including the 77. Infanterie-Division which was eventually sent to Montebourg. From 8 June to 1 July, General von Schlieben set up a defensive line from le Ham to the west of the N13, through Montebourg to Quineville on the coast to the east. On 10 June the 505th Parachute Infantry attacked le Ham, with the objective of taking Montebourg station...;
+
+CP_64_fht_montebourg_allied_main                                    ;82nd Airborne;
+CP_64_fht_montebourg_axis_main                                      ;77. Infanterie-Division;
+CP_64_fht_montebourg_w48                                            ;Widerstandsnest 48;
+CP_64_fht_montebourg_w45                                            ;Widerstandsnest 45;
+CP_64_fht_montebourg_le_ham                                         ;le Ham;
+CP_64_fht_montebourg_chateau                                        ;Chateau;
+CP_64_fht_montebourg_station                                        ;Montebourg Station;
+CP_64_fht_montebourg_allied_reinforcements                          ;Allied Reinforcements ;
+CP_64_fht_montebourg_axis_reinforcements                            ;Axis Reinforcements ;
+
+HUD_LEVELNAME_fht_montebourg_station                        ;FHT Montebourg Station;
+
+LOADINGSCREEN_MAPDESCRIPTION_fht_graignes        	    ;Shortly after 0200 hours on D-Day, twelve planeloads of paratroopers from the 3rd Battalion 507th PIR were scattered throughout the marshes south of Carentan. They were supposed to have been dropped eighteen miles to the northwest at drop zone T near Amfreville, but instead ended-up in the vicinity of the French village of Graignes. Theirs was the worst misdrop of any airborne unit on 6 June 1944. On Saturday, 10 June elements of the 17. SS-Panzergrenadier-Division attempted to move through the village on their way to Carentan, not expecting the men of the 507th to be there...;
+
+GAMEMODE_DESCRIPTION_fht_graignes                           ;This is a Forgotten Honor Tournament 64 player infantry map. 3 or the 5 capable flags are needed to control the bleed. Axis has a main base, while allied main base can be captured after capturing headquarters. Some of the assets are bound to the bleed. When loosing church, allies loose the two mortars there and get only one as compensation in main base.;
+
+CP_64_graignes_507th                                        ;507th PIR;
+CP_64_graignes_hq                                           ;Headquarters;
+CP_64_graignes_northern                                     ;Northern Strongpoint;
+CP_64_graignes_southern                                     ;Southern Strongpoint;
+CP_64_graignes_town                                         ;Town;
+CP_64_graignes_17panzergrenadier                            ;17. SS-Panzergrenadier-Division;
+bleed_dummy                            			    ; ;
+
+HUD_LEVELNAME_fht_operation_cobra                           ;FHT Op. Cobra;
+
+CP_64_cobra_axis_main                                       ;Axis HQ;
+CP_64_cobra_allied_main                                     ;Allied HQ;
+CP_64_cobra_rampan                                          ;Rampan;
+CP_64_cobra_flour_mill                                      ;Flour Mill;
+CP_64_cobra_homestead                                       ;Homestead;
+CP_64_cobra_train_station                                   ;Train Station;
+CP_64_cobra_hebecrevon                            	    ;Hebecrevon;
+
+
+
+
+
+
+
+HUD_LEVELNAME_fht_beda_fomm                                 ;FHT Beda Fomm;
+
+LOADINGSCREEN_MAPDESCRIPTION_fht_beda_fomm                  ;In late January 1941, the British learned that the Italians were evacuating Cyrenaica along the coastal road from Benghazi. The British 7th Armoured Division under Major General Sir Michael O'Moore Creagh was dispatched to intercept the remnants of the fleeing Italian Tenth Army via Msus and Antelat while the Australian 6th Division chased the Italians along the coast road round the north of the Jebel Akhdar mountains. The poor terrain was hard going for the tanks, and Creagh took the bold decision to send a flying column on wheels only south-west across the virtually unmapped Libyan Desert. In the afternoon of 5 February 1941, Combe Force arrived at the Benghazi  Tripoli road and set up road blocks near Sidi Saleh, some 20 miles north of Ajedabia and 30 miles southwest of Antelat. The leading elements of the Italian Tenth Army arrived 30 minutes later...;
+
+CP_64_beda_fomm_agedabia                                    ;Agedabia;
+CP_64_beda_fomm_west                                        ;Beda Fomm West;
+CP_64_beda_fomm_east                                        ;Beda Fomm East;
+CP_64_beda_fomm_sidi_north                                  ;Sidi Saleh North;
+CP_64_beda_fomm_sidi_south                                  ;Sidi Saleh South;
+CP_64_beda_fomm_antalat                                     ;Antalat;
+CP_64_beda_fomm_10army                                      ;Italian 10th Army;
+CP_64_beda_fomm_bleed_dummy                            	    ; ;
+
+HUD_LEVELNAME_fht_el_agheila                                ;FHT El Agheila;
+
+LOADINGSCREEN_MAPDESCRIPTION_fht_el_agheila                 ;Following their destruction of the Italian Tenth Army in Operation Compass, the British Western Desert Force halted their advance at El Agheila in February 1941 so that units could be sent to assist in the defence of Greece. On February 14 the first units of the Afrika Korps started to arrive in Libya under General Erwin Rommel. Rommel starts his first offensive in North Africa by attacking the British forces near El Agheila...;
+
+CP_64_fht_el_agheila_el_agheila                             ;El Agheila;
+CP_64_fht_el_agheila_maaten_giofer                          ;Maaten Giofer;
+CP_64_fht_el_agheila_mersa_brega                            ;Mersa Brega;
+CP_64_fht_el_agheila_front_line                             ;Front Line;
+CP_64_fht_el_agheila_fortress                               ;Fortress;
+CP_64_fht_el_agheila_marble_arch                            ;Marble Arch;
+CP_64_fht_el_agheila_wadi_er_faregh                         ;Wadi er Faregh;
+CP_64_fht_el_agheila_outpost                                ;Outpost;
+CP_64_fht_el_agheila_southoutpost                           ;Village;
+CP_64_fht_el_agheila_bleed_dummy                            ; ;
+CP_64_fht_el_agheila_wadi_dummy                             ; ;
+CP_64_fht_el_agheila_maaten_dummy                           ; ;
+CP_64_fht_el_agheila_agheila_dummy                          ; ;
+
+
+HUD_LEVELNAME_fht_el_agheila                                ;FHT El Agheila;
+
+LOADINGSCREEN_MAPDESCRIPTION_fht_el_agheila                 ;Following their destruction of the Italian Tenth Army in Operation Compass, the British Western Desert Force halted their advance at El Agheila in February 1941 so that units could be sent to assist in the defence of Greece. On February 14 the first units of the Afrika Korps started to arrive in Libya under General Erwin Rommel. Rommel starts his first offensive in North Africa by attacking the British forces near El Agheila...;
+
+CP_64_fht_ai_el_agheila_el_agheila                             ;El Agheila;
+CP_64_fht_ai_el_agheila_maaten_giofer                          ;Maaten Giofer;
+CP_64_fht_ai_el_agheila_mersa_brega                            ;Mersa Brega;
+CP_64_fht_ai_el_agheila_front_line                             ;Front Line;
+CP_64_fht_ai_el_agheila_fortress                               ;Fortress;
+CP_64_fht_ai_el_agheila_marble_arch                            ;Marble Arch;
+CP_64_fht_ai_el_agheila_wadi_er_faregh                         ;Wadi er Faregh;
+CP_64_fht_ai_el_agheila_outpost                                ;Outpost;
+CP_64_fht_ai_el_agheila_southoutpost                           ;Village;
+CP_32_fht_ai_el_agheila_el_agheila                             ;El Agheila;
+CP_32_fht_ai_el_agheila_maaten_giofer                          ;Maaten Giofer;
+CP_32_fht_ai_el_agheila_mersa_brega                            ;Mersa Brega;
+CP_32_fht_ai_el_agheila_front_line                             ;Front Line;
+CP_32_fht_ai_el_agheila_fortress                               ;Fortress;
+CP_32_fht_ai_el_agheila_marble_arch                            ;Marble Arch;
+CP_32_fht_ai_el_agheila_wadi_er_faregh                         ;Wadi er Faregh;
+CP_32_fht_ai_el_agheila_outpost                                ;Outpost;
+CP_32_fht_ai_el_agheila_southoutpost                           ;Old Airfield;
+CP_64_fht_ai_el_agheila_bleed_dummy                            ; ;
+CP_64_fht_ai_el_agheila_wadi_dummy                             ; ;
+CP_64_fht_ai_el_agheila_maaten_dummy                           ; ;
+CP_64_fht_ai_el_agheila_agheila_dummy                          ; ;
+cp_16_fht_ai_el_agheila_el_agheila                             ;El Agheila;
+cp_16_fht_ai_el_agheila_maaten_giofer                          ;Old Airfield;
+cp_16_fht_ai_el_agheila_front_line                             ;Front Line;
+CP_16_fht_el_agheila_fortress_ne                               ;Fortress North-East;
+CP_16_fht_el_agheila_fortress_sw                               ;Fortress South-West;
+
+
+HUD_LEVELNAME_fht_sidi_muftah                               ;FHT Sidi Muftah;
+
+LOADINGSCREEN_MAPDESCRIPTION_fht_sidi_muftah                ;December 16th, 1941. After three days of bitter fighting, as the 8th Army relentlessly attacks the Gazala line, Rommel orders the Afrika Korps' withdrawal. Now, British troops are about to engage the Italian rearguard near Sidi Muftah who did not receive an withdrawal order and are ready to fight to the last round. Map donated by http://www.batalhapelomundo.com.br - BpM, modified by FHT;
+
+CP_64_fht_muftah_allied_main                               ;8th Army;
+CP_64_fht_muftah_barracks                                  ;Barracks;
+CP_64_fht_muftah_hq                                        ;German HQ;
+CP_64_fht_muftah_airfield                                  ;Airfield;
+CP_64_fht_muftah_gatsa                                     ;Gafsa;
+CP_64_fht_muftah_fountain                                  ;Fountain;
+CP_64_fht_muftah_frontline                   	           ;Northern Outpost;
+CP_64_fht_muftah_center                      	           ;Center;
+CP_64_fht_muftah_axis_main                   	           ;102 Divisione Trento;
+CP_64_fht_muftah_plateau                   	               ;Southern Outpost;
+CP_64_fht_muftah_roadblock                   	           ;Roadblock;
+CP_64_fht_muftah_allied_reinforcements                     ;Allied Reinforcements;
+CP_64_fht_muftah_axis_reinforcements                       ;Axis Reinforcements;
+CP_32_fht_muftah_allied_main                               ;8th Army;
+CP_32_fht_muftah_barracks                                  ;Barracks;
+CP_32_fht_muftah_hq                                        ;German HQ;
+CP_32_fht_muftah_airfield                                  ;Airfield;
+CP_32_fht_muftah_gatsa                                     ;Gafsa;
+CP_32_fht_muftah_fountain                                  ;Fountain;
+CP_32_fht_muftah_frontline                   	           ;Northern Outpost;
+CP_32_fht_muftah_axis_main                   	           ;102 Divisione Trento;
+CP_32_fht_muftah_plateau                   	               ;Southern Outpost;
+CP_32_fht_muftah_roadblock                   	           ;Roadblock;
+CP_32_fht_muftah_allied_reinforcements                     ;Allied Reinforcements;
+CP_32_fht_muftah_axis_reinforcements                       ;Axis Reinforcements;
+CP_16_fht_muftah_center                                    ;Muftah Center;
+CP_16_fht_muftah_gatsa                                     ;Gafsa;
+CP_16_fht_muftah_fountain                                  ;Fountain;
+CP_16_fht_muftah_allied_main                               ;8th Army;
+CP_16_fht_muftah_axis_main                   	           ;102 Divisione Trento;
+
+HUD_LEVELNAME_fht_gazala                                    ;FHT Gazala;
+
+CP_64_fht_gazala_DAK_Base                                ;DAK;
+CP_64_fht_gazala_Dabir                                   ;Dabir;
+CP_64_fht_gazala_FrontlineBunker                         ;Frontline;
+CP_64_fht_gazala_GabrSaleh                               ;Gabr Saleh;
+CP_64_fht_gazala_OldBunker                               ;Old Bunker;
+CP_64_fht_gazala_8thArmy_Base                            ;8th Army;
+CP_64_fht_gazala_Capuzzo                                 ;Capuzzo;
+CP_64_fht_gazala_oasis                                   ;Oasis;
+CP_64_fht_gazala_center_bunker                           ;Center Bunker;
+
+CP_32_fht_gazala_DAK_Base                                ;DAK;
+CP_32_fht_gazala_Dabir                                   ;Dabir;
+CP_32_fht_gazala_FrontlineBunker                         ;Frontline;
+CP_32_fht_gazala_GabrSaleh                               ;Old Bunker;
+CP_32_fht_gazala_8thArmy_Base                            ;8th Army;
+CP_32_fht_gazala_Capuzzo                                 ;Capuzzo;
+CP_32_fht_gazala_oasis                                   ;Oasis;
+CP_32_fht_gazala_center_bunker                           ;Center Bunker;
+
+CP_16_fht_gazala_axis_main                               ;DAK;
+CP_16_fht_gazala_GabrSaleh                               ;Gabr Saleh;
+CP_16_fht_gazala_allied_main                             ;8th Army;
+CP_16_fht_gazala_bridges                                 ;Bridges;
+CP_16_fht_gazala_center_bunker                           ;Center Bunker;
+
+HUD_LEVELNAME_fht_el_alamein                                ;FHT El Alamein;
+
+CP_64_fht_alamein_ridge_line                                ;Western Ridge Line;
+CP_64_fht_alamein_bleed_dummy                               ; ;
+
+
+
+
+
+
+
+
+HUD_LEVELNAME_fht_salerno                                   ;FHT Salerno;
+
+LOADINGSCREEN_MAPDESCRIPTION_fht_salerno                    ;Prior to Sicily, Allied plans envisioned crossing the Strait of Messina, a limited invasion in the instep area (Taranto), and advancing up the toe of Italy, anticipating a defense by both German and Italian forces. They had a choice of two landing areas: one at the Volturno River basin and the other at Salerno, both at the range limits of Allied fighter planes based in Sicily. Salerno was chosen because it was closer to air bases, experienced better surf conditions for landing, allowed transport ships to anchor closer to the beaches, had narrower beaches for the rapid construction of exit roads, and had an excellent pre-existing road network behind the beaches. Early morning in the deep mist the attack began...;
+
+CP_64_fht_salerno_16_panzer_div                             ;16. Panzer-Division;
+CP_64_fht_salerno_lungomare_di_salerno                      ;Lungomare di Salerno;
+CP_64_fht_salerno_castello_arechi                           ;Castello Arechi;
+CP_64_fht_salerno_porto_di_salerno                          ;Porto di Salerno;
+CP_64_fht_salerno_chiesa                                    ;Chiesa;
+CP_64_fht_salerno_allied_invasion_force                     ;Allied Invasion Fleet;
+CP_64_fht_salerno_fabbrica                                  ;Fabbrica;
+CP_64_fht_salerno_lungomare_dummy                           ; ;
+CP_64_fht_salerno_porto_dummy                               ; ;
+CP_64_fht_salerno_fabbrica_dummy                            ; ;
+CP_64_fht_salerno_timer_dummy                               ; ;
+
+HUD_LEVELNAME_fht_san_pietro                                ;FHT San Pietro;
+
+LOADINGSCREEN_MAPDESCRIPTION_fht_san_pietro                 ;Fall 1943. Operation Avalanche has been a success and Allied forces have taken the city of Naples. The town of San Pietro Infine is situated in the Mignano Gap on Route 6, the main road running up the centre of Italy from Naples to Rome. In September, the Germans occupied and fortified the town and surrounding mountains as part of the 'Winter Line' fortifications. On December 8th, II Corps along with, for the first time, the Italian 1st Motorized Group launched their attack on the German positions in the Gap...;
+
+CP_64_fht_san_pietro_san_pietro_infine                      ;San Pietro Infine;
+CP_64_fht_san_pietro_m_lungo                                ;Mt. Lungo;
+CP_64_fht_san_pietro_mignano                                ;Mignano;
+CP_64_fht_san_pietro_fattoria                               ;Fattoria;
+CP_64_fht_san_pietro_xiv_panzer_corps                       ;XIV Panzerkorps;
+CP_64_fht_san_pietro_m_rotondo                              ;Mt. Rotondo;
+CP_64_fht_san_pietro_eastern_pass                           ;Eastern Pass;
+CP_64_fht_san_pietro_bleed_dummy                            ; ;
+
+HUD_LEVELNAME_fht_op_husky                                  ;FHT Operation Husky;
+
+LOADINGSCREEN_MAPDESCRIPTION_fht_op_husky                   ;The plan for Operation Husky called for the amphibious assault of the island by two armies, one landing on the south eastern and one on the central southern coast. The amphibious assaults were to be supported by naval gunfire, and tactical bombing, interdiction and close air support by the combined air forces. The Allied land forces were drawn from the American, British and Canadian armies, and were structured as two task forces. The Eastern Task Force was led by General Bernard Montgomery and consisted of the British 8th Army. The Western Task Force was commanded by Lieutenant General George S. Patton and consisted of the US 7th Army. On the morning of July 10th, American forces assaulted the beaches between Licata and Cassibile.;
+
+CP_64_fht_op_husky_west                                     ;West Bunkers;
+CP_64_fht_op_husky_centre                                   ;Central Bunkers;
+CP_64_fht_op_husky_east                                     ;East Bunkers;
+CP_64_fht_op_husky_munitions_bunker                         ;Munitions Depot;
+CP_64_fht_op_husky_headquarters                             ;Headquarters;
+CP_64_fht_op_husky_barracks                                 ;Barracks;
+CP_64_fht_op_husky_allied_fleet                             ;Allied Task Force;
+CP_64_fht_op_husky_farm                                     ;Farm;
+
+HUD_LEVELNAME_fht_operation_avalanche                       ;FHT Operation Avalanche;
+
+LOADINGSCREEN_MAPDESCRIPTION_fht_operation_avalanche        ;September 1943. Allied forces have successfully landed in mainland Italy and the Germans are launching their counteroffensive. Two Allied Corps landed in the vicinity of Salerno during the invasion, one near the town itself and the other near Agropoli, forming a 30-mile beachhead 5 miles wide in the Northwest, 10 miles wide in the Southeast, and thinest between the two Corps. While the Herman Goring Division attacks the northern flank of the beachhead, the 16. Panzer-Division will attack the boundary between the two Allied Corps which runs roughly from Battipaglia to the sea. Should they succeed in crushing the defences in this sector the Allies could face the possibility of being thrown back off the beaches they just secured...;
+
+CP_64_fht_operation_avalanche_church                        ;Church;
+CP_64_fht_operation_avalanche_lumbermill                    ;Lumbermill;
+CP_64_fht_operation_avalanche_persano                       ;Persano;
+CP_64_fht_operation_avalanche_factory                       ;Fabbrica;
+CP_64_fht_operation_avalanche_bridgehead                    ;Bridgehead;
+CP_64_fht_operation_avalanche_axis_main                     ;16. Panzer-Division;
+CP_64_fht_operation_avalanche_allied_main                   ;VI Corps;
+CP_64_operation_avalanche_bleed_attack_dummy                ; ;
+CP_64_operation_avalanche_bleed_defense_dummy               ; ;
+
+HUD_LEVELNAME_fht_operation_diadem                          ;FHT Operation Diadem;
+
+LOADINGSCREEN_MAPDESCRIPTION_fht_operation_diadem           ;Operation Diadem. The Allied advance through the Italian mainland has has been stalled on the German Winter Line since January and VI Corps has failed to break out of the beachhead at Anzio. The plan for Diadem called for the French Expeditionary Corps to advance through Aurunci mountains and attacks the city of Pico while the British XIII Corps punched through the Liri Valley to the Northeast and US II Corps to push up Route 7 along the coast. Now Free French troops are crossing the Garigliano River towards Monte Faito and their objective beyond...;
+
+CP_64_fht_op_diadem_m_ornito                                ;Monte Ornito;
+CP_64_fht_op_diadem_m_majo                                  ;Monte Majo;
+CP_64_fht_op_diadem_m_faito                                 ;Monte Faito;
+CP_64_fht_op_diadem_castelforte                             ;Castelforte;
+CP_64_fht_op_diadem_correno                                 ;Correno;
+CP_64_fht_op_diadem_ausonia                                 ;Ausonia;
+CP_64_fht_op_diadem_french_expeditionary_corps              ;French Expeditionary Corps;
+
+CP_32_fht_op_diadem_m_ornito                                ;Monte Ornito;
+CP_32_fht_op_diadem_m_majo                                  ;Monte Majo;
+CP_32_fht_op_diadem_m_faito                                 ;Monte Faito;
+CP_32_fht_op_diadem_castelforte                             ;Castelforte;
+CP_32_fht_op_diadem_correno                                 ;Correno;
+CP_32_fht_op_diadem_ausonia                                 ;Ausonia;
+CP_32_fht_op_diadem_french_expeditionary_corps              ;French Expeditionary Corps;
+
+GAMEMODE_DESCRIPTION_nc_koth                       ;This is a Nations Cup: King of the Hill map. The team that holds the centre flag will bleed the opposing team. Your team wins when  the opposing team's tickets reach 0.;
+
+
+
+HUD_LEVELNAME_fht_ramelle                                   ;FHT Ramelle-Neuville;
+
+CP_64_fht_ramelle_right_flank                               ;Right Flank;
+CP_64_fht_ramelle_fountain                                  ;Fountain;
+CP_64_fht_ramelle_historical_centre                         ;Historical Centre;
+CP_64_fht_ramelle_us_main                                   ;Allied Base;
+CP_64_fht_ramelle_de_main                                   ;Axis Base;
+CP_64_fht_ramelle_bridge                                    ;Bridge;
+CP_64_fht_ramelle_boulangerie                               ;Boulangerie;
+CP_64_fht_ramelle_bleed_dummy                               ; ;
+
+HUD_LEVELNAME_fht_vossenack                                 ;FHT Vossenack 1944;
+
+CP_64_fht_vo_bleed_dummy                                    ; ;
+
+HUD_LEVELNAME_fht_meuse_river                               ;FHT Meuse River;
+
+CP_64_fht_meuseriver_town_centre                            ;Town Centre;
+
+HUD_LEVELNAME_fht_eppeldorf                                 ;FHT Eppeldorf;
+
+CP_64_fht_eppeldorf_bleed_dummy                             ; ;
+
+cp_64_fht_eppeldorf_Allied_main        		;American base;
+cp_64_fht_eppeldorf_center_village        	;Eppeldorf;
+cp_64_fht_eppeldorf_forest_ruin         ;Forest Ruin;
+cp_64_fht_eppeldorf_Hill             		;The Hill;
+cp_64_fht_eppeldorf_East_Farm               ;East Farm;
+cp_64_fht_eppeldorf_South_Farm              ;South Farm;
+cp_64_fht_eppeldorf_Axis_main               ;German base;
+cp_64_fht_eppeldorf_Axis_reinforcements               ;Axis Reinforcements;
+cp_64_fht_eppeldorf_Allied_reinforcements               ;Allied Reinforcements;
+
+HUD_LEVELNAME_fht_advance_on_foy                    ;FHT Advance on Foy;
+LOADINGSCREEN_MAPDESCRIPTION_fht_advance_on_foy     ;On the evening of 15 December, the 26th Volksgrenadier established an outpost line on the west bank of the Our. The Germans attacked swiftly, their advances made possible by sheer weight of numbers. Worried about the threat to its left flank in Bastogne, the German army organized a major combined arms attack to seize Noville. By the time the 1st Battalion pulled out of Noville on the 20th, it had lost 13 officers and 199 enlisted men, out of about 600 troops..;
+LOADINGSCREEN_MAPDESCRIPTION_fht_c16_advance_on_foy   ;On the evening of 15 December, the 26th Volksgrenadier established an outpost line on the west bank of the Our. The Germans attacked swiftly, their advances made possible by sheer weight of numbers. Worried about the threat to its left flank in Bastogne, the German army organized a major combined arms attack to seize Noville. By the time the 1st Battalion pulled out of Noville on the 20th, it had lost 13 officers and 199 enlisted men, out of about 600 troops..;
+
+CP_64_fht_advanceonfoy_axismain        	            ;2. Panzerdivision;
+CP_64_fht_advamceonfoy_axismain                     ;2. Panzerdivision;
+CP_64_fht_advanceonfoy_allied_main    	            ;501 PIR;
+CP_64_fht_advamceonfoy_allied_main                  ;501 PIR;
+CP_64_fht_advanceonfoy_bunkers                      ;Bunkers;
+CP_64_fht_advanceonfoy_secondline             		;2nd Line;
+CP_64_fht_advanceonfoy_farm                         ;Farm;
+CP_64_fht_advanceonfoy_factory                      ;Factory;
+CP_64_fht_advanceonfoy_village                      ;Noville;
+CP_64_fht_advanceonfoy_axis_reinforcements          ;Axis Reinforcements;
+CP_64_fht_advanceonfoy_allied_reinforcements        ;Allied Reinforcements;
+
+CP_32_fht_advanceonfoy_axismain        	            ;2. Panzerdivision;
+CP_32_fht_advanceonfoy_allied_main    	            ;501 PIR;
+CP_32_fht_advanceonfoy_bunkers                      ;Bunkers;
+CP_32_fht_advanceonfoy_secondline             		;2nd Line;
+CP_32_fht_advanceonfoy_farm                         ;Farm;
+CP_32_fht_advanceonfoy_2ndfarm                      ;Bauernhof;
+CP_32_fht_advanceonfoy_factory                      ;Factory;
+CP_32_fht_advanceonfoy_village                      ;Noville;
+
+CP_16_fht_advanceonfoy_allied_main    	            ;501 PIR;
+CP_16_fht_advanceonfoy_axis_main                    ;2. Panzerdivision;
+CP_16_fht_advanceonfoy_farm          	            ;Farm;
+CP_16_fht_advanceonfoy_bunkers                      ;Bunkers;
+CP_16_fht_advanceonfoy_secondline             		;2nd Line;
+
+
+HUD_LEVELNAME_fht_liberation_of_bastogne            ;FHT Liberation of Bastogne;
+LOADINGSCREEN_MAPDESCRIPTION_fht_liberation_of_bastogne     ;XLVII Panzer Corps commander Gen. von Lüttwitz decided to encircle Bastogne and strike from the south and southwest. The American soldiers were outnumbered approximately 5-1 and were lacking in cold-weather gear, ammunition, food, medical supplies, and senior leadership. By nightfall on the 21st December the conglomeration of airborne and armored infantry forces were recognized by both sides as being surrounded. However, the 101st. held its original positions and repulsed tank and infantry assaults that followed. Allied control of Bastogne was a major obstacle to the German armored advance. When the 3rd. Army succeeded in punching through to Bastogne from Assensois, the men of the 101st expected to be relieved, but were given orders to resume the offensive..;
+
+CP_64_fht_bastogne_benonchamps                      ;Benonchamp;
+CP_64_fht_bastogne_assenois                         ;Assenois;
+CP_64_fht_bastogne_sawmill_outpost                  ;Longvilly Sawmill;
+CP_64_fht_bastogne_bastogne                         ;Bastogne;
+CP_64_fht_bastogne_bunkers                          ;Bunkers;
+CP_64_fht_bastogne_trainstation                     ;Neffe Trainstation;
+
+CP_32_fht_bastogne_benonchamps                      ;Benonchamp;
+CP_32_fht_bastogne_assenois                         ;Assenois;
+CP_32_fht_bastogne_sawmill_outpost                  ;Longvilly Sawmill;
+CP_32_fht_bastogne_bastogne                         ;Bastogne;
+CP_32_fht_bastogne_bunkers                          ;Bunkers;
+CP_32_fht_bastogne_trainstation                     ;Neffe Trainstation;
+conq_32_bizory ;Bizory;
+conq_32_marvie ;Marvie;
+conq_32_wardin ;Wardin;
+conq_32_mageret ;Mageret;
+
+LOADINGSCREEN_MAPDESCRIPTION_fht_elsenborn_ridge    ;The Elsenborn Ridge was the blocking line on the northern shoulder of the Battle of the Bulge. The main drive against Elsenborn Ridge was launched in the forests east of the twin villages on the early morning of 17 December. This attack was begun by tank and Panzergrenadier units of the 12th SS Panzer Division Hitlerjugend. By 11:00, this attack had driven units of the U.S. 99th Infantry Division back into the area of the twin villages. The U.S. forces responded with a powerful artillery barrage supported by mortar fire, bazooka rockets, and anti-tank mines. A fierce battle lasting 10 days developed around the Ridge.;
+
+CP_64_Camp_Elsenborn        	                    ;Camp Elsenborn;
+CP_64_12th_Volksgrenadier_Division                  ;12. Volksgrenadier Division;
+CP_64_fht_elsenborn_allied_main                     ;Camp Elsenborn;
+CP_64_fht_elsenborn_axis_main                  ;12. Volksgrenadier Division;
+CP_64_12th_SS_Panzer_Division             			;12. SS Panzer Division;
+CP_64_Rocherath_Krinkelt                         	;Rocherath-Krinkelt;
+CP_64_Elsenborn_Ridge                      			;Elsenborn Ridge;
+CP_64_Castle                      					;Reuland Castle;
+CP_64_Heartbreak_Crossroads          				;Heartbreak Crossroads;
+CP_64_Wirtzfeld        								;Wirtzfeld;
+CP_64_Buellingen          							;Buellingen;
+CP_64_Lumbermill        							;Lumbermill;
+CP_64_Allied_Reinforcements          				;Allied Reinforcements;
+CP_64_Allied_Reinforcements_Last_Resort        		;Allied Reinforcements Last Resort;
+CP_64_Axis_Reinforcements          					;Axis Reinforcements;
+CP_64_Axis_Reinforcements_Last_Resort        		;Axis Reinforcements Last Resort;
+CP_64_fht_elsenborn_farm        					;Farm;
+CP_64_fht_elsenborn_village          				;Village;
+CP_64_fht_elsenborn_crossroads        				;Crossroads;
+CP_64_fht_elsenborn_axis_main_north        	        ;12. Volksgrenadier Division;
+
+
+CP_32_Camp_Elsenborn        	                    ;Camp Elsenborn;
+CP_32_12th_SS_Panzer_Division             			;12. SS Panzer Division;
+CP_32_Rocherath_Krinkelt                         	;Rocherath-Krinkelt;
+CP_32_Elsenborn_Ridge                      			;Elsenborn Ridge;
+CP_32_Castle                      					;Reuland Castle;
+CP_32_Heartbreak_Crossroads          				;Heartbreak Crossroads;
+CP_32_Wirtzfeld        								;Wirtzfeld;
+CP_32_Buellingen          							;Buellingen;
+CP_32_Lumbermill        							;Lumbermill;
+CP_32_Allied_Reinforcements          				;Allied Reinforcements;
+CP_32_fht_elsenborn_allied_main               		;Camp Elsenborn;
+CP_32_Axis_Reinforcements          					;Axis Reinforcements;
+CP_32_fht_elsenborn_axis_main               		;12. SS Panzer Division;
+CP_32_fht_elsenborn_farm        					;Farm;
+CP_32_fht_elsenborn_village          				;Village;
+CP_32_fht_elsenborn_crossroads        				;Crossroads;
+CP_32_fht_elsenborn_axis_main_north        	        ;12. Volksgrenadier Division;
+CP_16_Camp_Elsenborn        	                    ;Camp Elsenborn;
+CP_16_12th_SS_Panzer_Division             			;12. SS Panzer Division;
+CP_16_Rocherath_Krinkelt                         	;Rocherath-Krinkelt;
+CP_16_Elsenborn_Ridge                      			;Elsenborn Ridge;
+CP_16_Castle                      					;Reuland Castle;
+CP_16_Heartbreak_Crossroads          				;Heartbreak Crossroads;
+CP_16_Wirtzfeld        								;Wirtzfeld;
+CP_16_Buellingen          							;Buellingen;
+CP_16_Lumbermill        							;Lumbermill;
+CP_16_Allied_Reinforcements          				;Allied Reinforcements;
+CP_16_Allied_Reinforcements_Last_Resort        		;Allied Reinforcements Last Resort;
+CP_16_Axis_Reinforcements          					;Axis Reinforcements;
+CP_16_Axis_Reinforcements_Last_Resort        		;Axis Reinforcements Last Resort;
+
+HUD_LEVELNAME_fht_operation_greif            ;FHT Operation Greif;
+LOADINGSCREEN_MAPDESCRIPTION_fht_operation_greif     ;Waffen-SS commando Otto Skorzeny  had become one of Hitler's favorites following the success of "Operation Panzerfaust" in which he had supervised the kidnapping of Miklós Horthy, Jr., the son of Hungary's Regent. Skorzeny was to form a special brigade - Panzer Brigade 150 - for a very special purpose: "I want you to command a group of American and British troops and get them across the Meuse and seize one of the bridges. Not, my dear Skorzeny, real Americans or British. I want you to create special units wearing American and British uniforms. They will travel in captured Allied tanks. Think of the confusion you could cause! I envisage a whole string of false orders which will upset communications and attack morale." Hitler, The Black Angels, 1979;
+
+CP_64_fht_greif_axis_main                           ;Panzer Brigade 150;
+CP_64_fht_greif_bunkers                             ;Bunker Hill;
+CP_64_fht_greif_mill                                ;Paper Mill;
+CP_64_fht_greif_crossing                            ;Crossing;
+CP_64_fht_greif_church                              ;Malmedy;
+CP_64_fht_greif_village                             ;Abandoned Village;
+CP_64_fht_greif_allied_main                         ;823rd TD Battalion;
+CP_64_fht_greif_forward_hq                          ;Forward HQ;
+CP_64_fht_greif_forest_outpost                      ;Forest Outpost;
+
+CP_32_fht_greif_axis_main                           ;Panzer Brigade 150;
+CP_32_fht_greif_bunkers                             ;Bunker Hill;
+CP_32_fht_greif_mill                                ;Paper Mill;
+CP_32_fht_greif_crossing                            ;Crossing;
+CP_32_fht_greif_church                              ;Malmedy;
+CP_32_fht_greif_village                             ;Abandoned Village;
+CP_32_fht_greif_allied_main                         ;823rd TD Battalion;
+
+HUD_LEVELNAME_fht_st_vith                           ;FHT St. Vith;
+LOADINGSCREEN_MAPDESCRIPTION_fht_st_vith            ;The town of St. Vith, a vital road junction, was close to the boundary between the 5th and Sepp Dietrichs Sixth Panzer Army, the two strongest units of the attack. As the encirclement trap snapped shut on the Schnee Eifel on 17 December, rapid change was occurring at the headquarters of the 106th Division in St. Vith. By midnight  Brigadier General Bruce Cooper Clarke had managed to set up the beginnings of what was called the horseshoe defense of St. Vith, a line of units to the north, east and south of town. When the final attack on St. Vith was launched, the town had become more of a liability than an asset. The Allied retreated out of St. Vith to the west, and German forces poured into the town, happily looting the remaining American supplies and equipment. But soon the US started an attack to re-conquer St. Vith;
+
+CP_64_fht_stvith_trainstation                       ;Trainstation;
+CP_64_fht_stvith_farm                               ;Rosenhuegels Farms;
+CP_64_fht_stvith_crossroads                         ;Crossroads;
+CP_64_fht_stvith_forestcamp                         ;Walleroder Wood;
+CP_64_fht_stvith_cloister                           ;St Joseph;
+CP_64_fht_stvith_allied_base                        ;106th Division;
+CP_64_fht_stvith_axis_main                          ;LVIII Panzer Corps;
+CP_64_fht_stvith_Main_Street                        ;Main Street;
+CP_64_fht_stvith_Depo                               ;Trainstation Depot;
+CP_64_fht_stvith_Supply_Depo                        ;Supply Depot;
+CP_64_fht_stvith_Ruins                              ;Town Center;
+CP_64_fht_stvith_allied_base                        ;106th Division;
+
+HUD_LEVELNAME_fht_buetgenbach                       ;FHT Buetgenbach;
+LOADINGSCREEN_MAPDESCRIPTION_fht_buetgenbach        ;The entire Battle of the Bulge was a massive encounter between German and Allied forces. Dietrichs Sixth Army was tasked to clear Rollbahn C through the town of Bullingen to Bütgenbach. The Sixth was made up of elite SS armored divisions, its attack began at 0530. It was not an easy battle. The 26th Infantrys command post was overrun three times by German tanks. The men in the command post scraped together all the weapons, ammunition, and courage they could in order to push back the Germans. A weeklong battle developed in the area with the town changing ownership several times.....Original map by den75, French Hope. Adapted to FHT by Papillon;
+CP_32_Allied_Main                                   ;26th Infantry Division;
+CP_32_Residence                                     ;Residence;
+CP_32_Centre_Ville                                  ;Town Center;
+CP_32_Quartier_General                              ;Quartier General;
+CP_32_Depot                                         ;Depot;
+CP_32_Dom_Buetgenbach                               ;Domaine;
+CP_32_Axis_Main                                     ;Sixth Army;
+CP_32_Checkpoint                                    ;Fortifications;
+CP_32_Western_Suburb                                ;Western Suburb;
+
+HUD_LEVELNAME_fht_herrlisheim_outskirts             ;FHT Herrlisheim Outskirts;
+LOADINGSCREEN_MAPDESCRIPTION_fht_herrlisheim_outskirts  ;On 31 December 1944, German Army Group G launched a major offensive against the thinly stretched, 110 kilometres long front line held by the U.S. 7th Army. The 553rd Volksgrenadier Division crossed the Rhine River and and established a bridgehead around Gambsheim on January 5th.They were to capture Herrlisheim to widen their bridgehead.
+On the outskirts of Herrlisheim 12th US Armored Division were ready and waiting for them.;
+
+CP_64_fht_ho_axis_main                              ;553rd Volksgrenadier Division;
+CP_64_fht_ho_herrlisheim                            ;Herrlisheim;
+CP_64_fht_ho_sawmill                                ;Sawmill;
+CP_64_fht_ho_lookout                                ;Lookout;
+CP_64_fht_ho_farm                                   ;Farm;
+CP_64_fht_ho_12th_armored_division                  ;12th Armored Division;
+CP_64_fht_ho_forest_hut                             ;Forest Hut;
+CP_64_fht_ho_axis_reinforcements                    ;Axis Reinforcements;
+CP_64_fht_ho_allied_reinforcements                  ;Allied Reinforcements;
+
+HUD_LEVELNAME_fht_op_nordwind                       ;FHT Operation Nordwind;
+LOADINGSCREEN_MAPDESCRIPTION_fht_op_nordwind        ;Operation North Wind (Unternehmen Nordwind) was the last major German offensive of World War II on the Western Front. The objective was simple. The offensive was to break through the lines of the Allied Army in the Upper Vosges mountains and the Alsatian Plain, and destroy them. This would leave the way open for Operation Dentist (Unternehmen Zahnarzt), a planned major thrust into the rear of the U.S. 3rd Army. The U.S. VI Corps  which bore the brunt of the German attacks  was fighting on three sides by 15 January. With casualties mounting, and running severely short on reinforcements, tanks, ammunition, and supplies, Eisenhower, fearing the outright destruction of the U.S. 7th Army, rushed divisions hurriedly relieved from the Ardennes, southeast over 100 km, to reinforce the 7th Army..Donated by WAW, FHT changes by Papillon;
+
+CP_64_fht_nordwind_himmelsdorf                      ;Village
+CP_64_fht_nordwind_allied_main                      ;12th Armored Division;
+CP_64_fht_nordwind_axis_main                        ;LXIV Corps;
+CP_64_fht_nordwind_farm                             ;Farmstead;
+CP_64_fht_nordwind_woods                            ;Bunker Outpost;
+CP_64_fht_nordwind_bauernhof                        ;Estate;
+CP_64_fht_nordwind_factory                          ;Factory;
+CP_64_fht_nordwind_eastern_village                  ;Rouffach;
+CP_64_fht_nordwind_depot                            ;Depot;
+CP_64_c16_fht_op_nordwind_sawmill                          ;Sawmill;
+CP_64_c16_fht_op_nordwind_himmelsdorf_posten                  ;Farm Outpost;
+CP_64_c16_fht_op_nordwind_rouffach                            ;Rouffach;
+
+HUD_LEVELNAME_fht_c16_op_nordwind                   ;FHT Operation Nordwind;
+LOADINGSCREEN_MAPDESCRIPTION_fht_c16_op_nordwind     ;Operation North Wind (Unternehmen Nordwind) was the last major German offensive of World War II on the Western Front. The objective was simple. The offensive was to break through the lines of the Allied Army in the Upper Vosges mountains and the Alsatian Plain, and destroy them. This would leave the way open for Operation Dentist (Unternehmen Zahnarzt), a planned major thrust into the rear of the U.S. 3rd Army. The U.S. VI Corps  which bore the brunt of the German attacks  was fighting on three sides by 15 January. With casualties mounting, and running severely short on reinforcements, tanks, ammunition, and supplies, Eisenhower, fearing the outright destruction of the U.S. 7th Army, rushed divisions hurriedly relieved from the Ardennes, southeast over 100 km, to reinforce the 7th Army..Donated by WAW, FHT changes by Papillon;
+
+CP_64_c16_fht_op_nordwind_himmelsdorf                      ;Village
+CP_64_c16_fht_op_nordwind_allied_main                      ;12th Armored Division;
+CP_64_c16_fht_op_nordwind_axis_main                        ;LXIV Corps;
+CP_64_c16_fht_op_nordwind_farm                             ;Farmstead;
+CP_64_c16_fht_op_nordwind_woods                            ;Bunker Outpost;
+CP_64_c16_fht_op_nordwind_factory                          ;Factory;
+CP_64_c16_fht_op_nordwind_depot                            ;Depot;
+
+CP_32_c16_fht_op_nordwind_himmelsdorf                      ;Village
+CP_32_c16_fht_op_nordwind_allied_main                      ;12th Armored Division;
+CP_32_c16_fht_op_nordwind_axis_main                        ;LXIV Corps;
+CP_32_c16_fht_op_nordwind_farm                             ;Farmstead;
+CP_32_c16_fht_op_nordwind_woods                            ;Bunker Outpost;
+CP_32_c16_fht_op_nordwind_factory                          ;Factory;
+CP_32_c16_fht_op_nordwind_depot                            ;Depot;
+CP_32_c16_fht_op_nordwind_sawmill                          ;Sawmill;
+CP_32_c16_fht_op_nordwind_himmelsdorf_posten               ;Outpost;
+CP_32_c16_fht_op_nordwind_rouffach                         ;Rouffach;
+
+CP_32_fht_nordwind_allied_main                      ;12th Armored Division;
+CP_32_fht_nordwind_axis_main                        ;LXIV Corps;
+CP_32_fht_nordwind_farm                             ;Farmstead;
+CP_32_fht_nordwind_woods                            ;Bunker Outpost;
+CP_32_fht_nordwind_factory                          ;Factory;
+CP_32_fht_nordwind_eastern_village                  ;Rouffach;
+CP_32_fht_nordwind_depot                            ;Depot;
+
+CP_16_fht_nordwind_western_town                     ;Rouffach West;
+CP_16_fht_nordwind_eastern_town                     ;Rouffach East;
+CP_16_fht_nordwind_church                           ;Church;
+CP_16_fht_nordwind_allied_main                      ;12th Armored Division;
+CP_16_fht_nordwind_axis_main                        ;LXIV Corps;
+
+HUD_LEVELNAME_fht_longstop_hill                     ;FHT Longstop Hill;
+LOADINGSCREEN_MAPDESCRIPTION_fht_op_nordwind        ;On the night of 22/23 December 1942, the 2nd Battalion Coldstream Guards mounted an attack, capturing what was thought to be all of the massif, before being relieved by the 18th US Regimental Combat Team while heavy rain fell. The Germans counter-attacked driving the Americans off Djebel el Ahmera. The next night the Guards successfully recaptured the hill only to find, when daylight came, that another summit, Djebel Rhar, remained to be assaulted. During the night the Guards once again attacked but, after capturing the second hill, were driven off by a furious counter-attack by the Germans on Christmas Day. Thereafter the massif was known by the Allies as Longstop Hill and by the Germans Der Weihnachten Hügel. Map created by Sorken and reworked by Kwiot;
+CP_64_fht_longstop_hill_Smidia                      ;Smidia
+CP_64_fht_longstop_hill_Longstop_Hill               ;Longstop Hill;
+CP_64_fht_longstop_hill_Toungar                     ;Toungar;
+CP_64_fht_longstop_hill_Grich_el_Oued               ;Grich el Oued;
+CP_64_fht_longstop_hill_78th_Battleaxe_Division     ;78th_Battleaxe_Division;
+CP_64_fht_longstop_hill_Road_to_El_Bathan           ;Road to El Bathan;
+CP_64_fht_longstop_hill_Farm                        ;Farm;
+CP_64_fht_longstop_hill_Axis_airfield               ;Airfield;
+CP_64_fht_longstop_hill_Axis_Reinforcements         ;Axis Reinforcements  ;
+CP_64_fht_longstop_hill_British_reinforcements      ;British Reinforcements;
+
+HUD_LEVELNAME_fht_sollum_1941                      ;FHT Sollum 1941;
+LOADINGSCREEN_MAPDESCRIPTION_fht_sollum_1941       ;Operation Battleaxe (also known as the Battle of Sollum) was a British Army operation during the Second World War in June 1941 with the goal of clearing eastern Cyrenaica of German and Italian forces. In the centre and along the coast were two groups, "Coast Force" and "Escarpment Force". The former was responsible for capturing Halfaya Pass, while the latter was to capture the remainder of the frontier, namely Fort Capuzzo, Musaid and Sollum. At 05:15, Coast Force charged....Map donated by http://www.batalhapelomundo.com.br - BpM, modified by FHT;
+CP_64_Sollum_Port_Entrance                         ;Sollum Port;
+CP_64_Sollum_British_Main                          ;Coast Force;
+CP_64_Sollum_Axis_Main                             ;Afrika Korps;
+CP_64_Sollum_Barracks                              ;Barracks;
+CP_64_Sollum_Fort_Village                          ;Fort;
+CP_64_Sollum_Harbour                      	       ;Harbour;
+CP_64_Sollum_Ruins       	                       ;Halfaya;
+CP_64_Sollum_West_Road                             ;Hafid;
+CP_64_Sollum_Axis_Reinforcements       	           ;Axis Reinforcements;
+CP_64_Allied_Reinforcements       	               ;Allied Reinforcements;
+CP_64_fht_sollum_outpost       	                   ;Perimeter;
+
+
+HUD_LEVELNAME_fht_faid_pass                        ;FHT Faid Pass;
+LOADINGSCREEN_MAPDESCRIPTION_fht_faid_pass         ;February 14, 1943–St. Valentine's Day. At 0400 hours, elements of the crack 10th and 21st Panzer divisions had launched an attack through Faid and Maizila passes. The German tanks were bound for the village of Sidi Bou Zid. Strenuous efforts to hold the line continued through the morning, but by dusk, the Germans had captured Sidi Bou Zid. In the vanguard of the counterattacking force would be Alger's 2nd Battalion. It had never been in combat before. The unit had been conducting reconnaissance forays into Ousseltia Valley to the north when the attack through Faid Pass began. Custom map by Nerdsturm, modified by Papillon;
+CP_64_fht_faidpass_allied_main                     ;1st Armored Division ;
+CP_64_fht_faidpass_axis_main                       ;21st Panzer division;
+CP_64_fht_faidpass_airfield                        ;Airfield;
+CP_64_fht_faidpass_atscreen                        ;AT Screen;
+CP_64_fht_faidpass_outpost                         ;Outpost;
+CP_64_fht_faidpass_maknassy                        ;Maknassy;
+CP_64_fht_faidpass_depot       	                   ;Depot;
+CP_64_fht_faidpass_tradingpost                     ;Trading Post;
+CP_64_fht_faidpass_allied_reinforcements       	   ;Allied Reinforcements;
+CP_64_fht_faidpass_axis_reinforcements       	   ;Axis Reinforcements;
+CP_64_fht_faidpass_mountain       	               ;Lonely Mountain;
+CP_64_fht_faidpass_hq           	               ;HQ;
+CP_64_fht_faidpass_axisairfield       	           ;Axis Airfield;
+CP_64_fht_faid_alliedairfield           	       ;Allied Airfield;
+
+
+HUD_LEVELNAME_fht_catania                          ;FHT Catania;
+LOADINGSCREEN_MAPDESCRIPTION_fht_catania           ;Operation Fustian. The British forces in Sicily are desperately trying to reach Messina before the Americans and are ready to risk in order to accomplish that. On their way to the city of Catania, they will have to cross the Simeto River. Capturing the Primosole Bridge intact is vital, so that their tanks can cross the river fast. A large airborne operation is taking place right above the Axis defenders at the Bridge in the 14th of July. The Germans are aware of the importance of Primosole Bridge and have their mechanized reserves in the area, as it is expected for the Allied armoured forefront to reach the battlefield once the bridge is captured. ;
+LOADINGSCREEN_MAPDESCRIPTION_fht_ai_catania           ;Operation Fustian. The British forces in Sicily are desperately trying to reach Messina before the Americans and are ready to risk in order to accomplish that. On their way to the city of Catania, they will have to cross the Simeto River. Capturing the Primosole Bridge intact is vital, so that their tanks can cross the river fast. A large airborne operation is taking place right above the Axis defenders at the Bridge in the 14th of July. The Germans are aware of the importance of Primosole Bridge and have their mechanized reserves in the area, as it is expected for the Allied armoured forefront to reach the battlefield once the bridge is captured. ;
+CP_64_fht_catania_village                          ;Piana Della Catana;
+CP_64_fht_catania_south_bridge                     ;South Bridge;
+CP_64_fht_catania_beach                            ;Primosole Beach;
+CP_64_fht_catania_primosole_beach                  ;Primosole Beach;
+CP_64_fht_catania_farm                             ;Farm;
+CP_64_fht_catania_north_bridge                     ;North Bridge;
+CP_64_fht_catania_axis_main       	               ;1. FJ Division;
+CP_64_fht_catania_allied_main       	           ;Vaccarizzo-Delfino;
+CP_64_fht_catania_delfino                          ;Vaccarizzo-Delfino;
+CP_64_fht_catania_axis_reinforcements       	   ;Axis Reinforcements;
+CP_64_fht_catania_allied_reinforcements            ;Allied Reinforcements;
+CP_64_fht_catania_barracks       	               ;Barracks;
+CP_64_fht_catania_bartoli       	               ;Bartoli;
+CP_32_fht_catania_village                          ;Piana Della Catana;
+CP_32_fht_catania_south_bridge                     ;South Bridge;
+CP_32_fht_catania_beach                            ;Primosole Beach;
+CP_32_fht_catania_north_bridge                     ;North Bridge;
+CP_32_fht_catania_axis_main       	               ;1. FJ Division;
+CP_32_fht_catania_delfino                          ;Vaccarizzo-Delfino;
+CP_32_fht_catania_axis_reinforcements       	   ;Axis Reinforcements;
+CP_32_fht_catania_allied_reinforcements            ;Allied Reinforcements;
+CP_64_fht_ai_catania_village                          ;Piana Della Catana;
+CP_64_fht_ai_catania_south_bridge                     ;South Bridge;
+CP_64_fht_ai_catania_beach                            ;Primosole Beach;
+CP_64_fht_ai_catania_north_bridge                     ;North Bridge;
+CP_64_fht_ai_catania_axis_main       	               ;1. FJ Division;
+CP_64_fht_ai_catania_delfino                          ;Vaccarizzo-Delfino;
+CP_64_fht_ai_catania_axis_reinforcements       	   ;Axis Reinforcements;
+CP_64_fht_ai_catania_allied_reinforcements            ;Allied Reinforcements;
+CP_64_fht_ai_catania_barracks       	               ;Barracks;
+CP_64_fht_ai_catania_bartoli       	               ;Bartoli;
+CP_32_fht_ai_catania_village                          ;Piana Della Catana;
+CP_32_fht_ai_catania_south_bridge                     ;South Bridge;
+CP_32_fht_ai_catania_beach                            ;Primosole Beach;
+CP_32_fht_ai_catania_north_bridge                     ;North Bridge;
+CP_32_fht_ai_catania_axis_main       	               ;1. FJ Division;
+CP_32_fht_ai_catania_delfino                          ;Vaccarizzo-Delfino;
+CP_32_fht_ai_catania_axis_reinforcements       	   ;Axis Reinforcements;
+CP_32_fht_ai_catania_allied_reinforcements            ;Allied Reinforcements;
+CP_16_fht_catania_south_bridge                     ;South Bridge;
+CP_16_fht_catania_rocks                            ;Bella Isola;
+CP_16_fht_catania_north_bridge                     ;North Bridge;
+CP_16_fht_catania_allied_main                      ;1st Parachute Brigade;
+CP_16_fht_catania_axis_main                        ;1. FJ Division;
+
+CP_64_fht_battle_of_keren_agordat                    ;Agordat;
+CP_64_fht_battle_of_keren_village                    ;Village;
+CP_64_fht_battle_of_keren_ascidera_valley            ;Ascidera Valley;
+CP_64_fht_battle_of_keren_sammana                    ;Mt. Sammana;
+CP_64_fht_battle_of_keren_sanchil                    ;Camp;
+CP_64_fht_battle_of_keren_fort                       ;Fort Dologorodoc;
+CP_64_fht_battle_of_keren_Keren                      ;Keren;
+CP_64_fht_battle_of_keren_Italian_Mainbase           ;Granatiere;
+CP_64_fht_battle_of_keren_British_Mainbase           ;Gazelle Force;
+CP_64_fht_battle_of_keren_Italian_Reinforcements     ;Axis Reinforcements;
+CP_64_fht_battle_of_keren_AlliedReinforcements       ;Allied Reinforcements;
+
+
+LOADINGSCREEN_MAPDESCRIPTION_fht_battle_of_keren  ;The Battle of Keren was fought from 3 February 1941 to 1 April 1941 between the colonial Italian army defending Eritrea and the invading British and Commonwealth forces. Keren was a town located in the Italian colony of Eritrea and was of strategic importance to both the Italian and the British forces. The road and railway routes through Keren were the key to access the city of Asmara and the Red Sea port of Massawa.;
+
+HUD_LEVELNAME_fht_kasserine_pass                   ;FHT Kasserine Pass;
+LOADINGSCREEN_MAPDESCRIPTION_fht_kasserine_pass    ;The Battle of Kasserine Pass was a battle that took place during the Tunisia Campaign of World War II in February 1943. It was a series of battles fought around Kasserine Pass, a 3.2 km wide gap in the Grand Dorsal chain of the Atlas Mountains in west central Tunisia. The Axis forces involved, led by Field Marshal Erwin Rommel, were primarily from the Afrika Korps Assault Group, elements of the Italian Centauro Armoured Division and two Panzer divisions detached from the 5th Panzer Army. The Allied forces involved came from the U.S Army's II Corps commanded by Major General Lloyd Fredendall, and the British 6th Armoured Division commanded by Major-General Charles Keightley, which were part of the British 1st Army commanded by Lieutenant-General Kenneth Anderson. FH1 port created by Papillon and Kwiot.;
+CP_64_fht_kasserine_axis_main                     ;Kasserine;
+CP_64_kasserine_center                            ;Bunker Mountain;
+CP_64_kasserine_south                             ;Roman Ruins;
+CP_64_kasserine_village                           ;Thelepte;
+CP_64_kasserine_north                             ;Camp;
+CP_64_kasserine_barracks                          ;Fort;
+CP_64_kasserine_fousanna       	                  ;Fousanna;
+CP_64_US_bleed                                    ;Allied Reinforcements;
+CP_64_fht_kasserine_pass_Axis_bleed               ;Axis Reinforcements;
+
+HUD_LEVELNAME_fht_kasserine_pass                   ;FHT Kasserine Pass;
+LOADINGSCREEN_MAPDESCRIPTION_fht_c16_kasserine_pass    ;The Battle of Kasserine Pass was a battle that took place during the Tunisia Campaign of World War II in February 1943. It was a series of battles fought around Kasserine Pass, a 3.2 km wide gap in the Grand Dorsal chain of the Atlas Mountains in west central Tunisia. The Axis forces involved, led by Field Marshal Erwin Rommel, were primarily from the Afrika Korps Assault Group, elements of the Italian Centauro Armoured Division and two Panzer divisions detached from the 5th Panzer Army. The Allied forces involved came from the U.S Army's II Corps commanded by Major General Lloyd Fredendall, and the British 6th Armoured Division commanded by Major-General Charles Keightley, which were part of the British 1st Army commanded by Lieutenant-General Kenneth Anderson. FH1 port created by Papillon and Kwiot.;
+CP_64_fht_c16_axis_main                          ;Kasserine;
+CP_64_fht_c16_kasserine_center                   ;Bunker Mountain;
+CP_64_fht_c16_kasserine_south                    ;Roman Ruins;
+CP_64_fht_c16_kasserine_village                  ;Thelepte;
+CP_64_fht_c16_kasserine_north                    ;Camp;
+CP_64_fht_c16_kasserine_barracks                 ;Fort;
+CP_64_fht_c16_kasserine_fousanna       	         ;Fousanna;
+CP_64_fht_c16_US_bleed                           ;Allied Reinforcements;
+CP_64_fht_c16_fht_kasserine_pass_Axis_bleed      ;Axis Reinforcements;
+
+
+HUD_LEVELNAME_fht_gela                            ;FHT Gela;
+LOADINGSCREEN_MAPDESCRIPTION_fht_gela             ;The amphibious Battle of Gela was the opening engagement of the United States portion of the Allied Invasion of Sicily. The transports started unloading shortly after midnight, and General Guzzoni declared an emergency at 01:00. The first assault wave from Barnett, Lyon, Thurston and Stanton landed about 02:45. After sunrise, minesweepers began clearing mines near the beach so the LSTs could start landing vehicles at 08:00, and the battle began in earnest. Map created by WaW, modified by Papillon;
+CP_64_fht_gela_gela                               ;Gela;
+CP_64_fht_gela_manfria                            ;Manfria;
+CP_64_fht_gela_monastery                          ;Monastery;
+CP_64_fht_gela_niscemi                            ;Niscemi;
+CP_64_fht_gela_camp                               ;Camp;
+CP_64_fht_gela_axis_main                          ;Italian 6th Army;
+CP_64_fht_gela_hill       	                      ;Fortified Position;
+CP_64_fht_gela_ruins       	                      ;Greek Village;
+CP_64_fht_gela_allied_reinforcements              ;Allied Reinforcements;
+CP_64_fht_gela_allied_main                        ;Invasion Fleet;
+CP_64_fht_gela_allied_landbase                    ;Allied Army;
+CP_64_fht_gela_axis_reinforcements                ;Axis Reinforcements;
+
+HUD_LEVELNAME_fht_ortona                          ;FHT Ortona;
+LOADINGSCREEN_MAPDESCRIPTION_fht_ortona           ;The amphibious Battle of Gela was the opening engagement of the United States portion of the Allied Invasion of Sicily. The transports started unloading shortly after midnight, and General Guzzoni declared an emergency at 01:00. The first assault wave from Barnett, Lyon, Thurston and Stanton landed about 02:45. After sunrise, minesweepers began clearing mines near the beach so the LSTs could start landing vehicles at 08:00, and the battle began in earnest. Map created by WaW, modified by Papillon;
+CP_64_fht_ortona_allied_main                      ;Canadian 1st ID;
+CP_64_fht_ortona_axis_main                        ;1. FJ-Division;
+CP_64_fht_ortona_vittoria                         ;Vittoria;
+CP_64_fht_Piazza_Municipali                       ;P.za Municipali;
+CP_64_fht_Piazza_S_Francesco                      ;P.za San Francesco;
+CP_64_fht_Piazza_San_Tomasso                      ;P.za San Tomasse;
+CP_64_fht_ortona_Castello                         ;Castello;
+CP_64_fht_ortona_Piazza_Plebiscila                ;P.za Plebiscila;
+CP_64_fht_ortona_allied_reinforcements            ;Allied Reinforcements;
+CP_64_fht_ortona_Trainstation                     ;Trainstation;
+cp_64_fht_ortona_axis_reinforcements              ;Axis Reinforcements;
+CP_32_fht_ortona_allied_main                      ;Canadian 1st ID;
+CP_32_fht_ortona_axis_main                        ;1. FJ-Division;
+CP_32_fht_ortona_vittoria                         ;Vittoria;
+CP_32_fht_Piazza_Municipali                       ;P.za Municipali;
+CP_32_fht_Piazza_S_Francesco                      ;P.za San Francesco;
+CP_32_fht_Piazza_San_Tomasso                      ;P.za San Tomasse;
+CP_32_fht_ortona_Piazza_Plebiscila                ;P.za Plebiscila;
+CP_32_fht_ortona_allied_reinforcements            ;Allied Reinforcements;
+cp_32_fht_ortona_axis_reinforcements              ;Axis Reinforcements;
+
+HUD_LEVELNAME_fht_monte_la_difensa                ;FHT monte La Difensa;
+LOADINGSCREEN_MAPDESCRIPTION_fht_gela             ;Shortly after its arrival in late November, the 1st Special Service Force received its initial mission. Looming over Fifth Army's front, the twin peaks of Monte La Difensa and Monte La Rementanea presented formidable barriers to the Allied advance into the Liri River Valley.  It took 5 days heavy fighting for the Camino hill mass to be cleared. Casualties were high. 
+After losing the 3,000-foot La Difensa to this surprise attack from Frederick, Germans counter attacked and fought ferociously for regaining the control of this strategic Hill.;
+CP_64_fht_monte_la_difensa_Allied_Mainbase        ;36th Infantry Division;
+CP_64_fht_monte_la_difensa_Axis_Mainbase          ;15th Panzer Grenadier Division;
+CP_64_fht_monte_la_difensa_Hill_960               ;Hill 960;
+CP_64_fht_monte_la_difensa_Camino                 ;Camino;
+CP_64_fht_monte_la_difensa_Village                ;Village;
+CP_64_fht_monte_la_difensa_Rocca                  ;Rocca;
+CP_64_fht_monte_la_difensa_Monte_La_Rementanea    ;Monte La Rementanea;
+CP_64_fht_monte_la_difensa_Allied_Reinforcements  ;Allied Reinforcements;
+CP_64_fht_monte_la_difensa_Axis_Reinforcements    ;Axis Reinforcements;
+
+HUD_LEVELNAME_fht_breakthrough_at_cassino                   ;FHT Breakthrough at Cassino;
+LOADINGSCREEN_MAPDESCRIPTION_fht_breakthrough_at_cassino    ;Operation Diadem. The Allied advance through the Italian mainland has has been stalled on the German Winter Line since January and VI Corps has failed to break out of the beachhead at Anzio. The plan for Diadem called for the French Expeditionary Corps to advance through Aurunci mountains and attacks the city of Pico while the British XIII Corps punched through the Liri Valley to the Northeast and US II Corps to push up Route 7 along the coast. Now Free French troops are crossing the Garigliano River towards Monte Faito and their objective beyond...;
+CP_64_fht_cassino_ornito                                    ;Monte Ornito;
+CP_64_fht_cassino_majo                                      ;Monte Majo;
+CP_64_fht_cassino_faito                                     ;Monte Faito;
+CP_64_fht_cassino_castelforte                               ;Castelforte;
+CP_64_fht_cassino_correno                                   ;Correno;
+CP_64_fht_cassino_axis_main                                 ;Ausonia;
+CP_64_fht_cassino_allied_main                               ;French Expeditionary Corps;
+CP_16_fht_cassino_ornito                                    ;Monte Ornito;
+CP_16_fht_cassino_majo                                      ;Monte Majo;
+CP_16_fht_cassino_fajito                                     ;Monte Faito;
+CP_16_fht_cassino_axis_main                                 ;Correno;
+CP_16_fht_cassino_allied_main                               ;Castelforte;
+
+HUD_LEVELNAME_fht_c16_thermopyles              ;FHT Thermopyles;
+LOADINGSCREEN_MAPDESCRIPTION_fht_thermopyles   ;The Olympus line is outflanked and the Allies are on the run, trying to reach their ships in time. But 2 brigades from the British Commonwealth Forces have to cover the retreat, with no hope for victory. The place they have chosen couldn’t match better to their cause. The sacred place of Thermopyles is about to face one more struggle. The Allies, few against many, inspired by the sacrifice of the Spartans nearly 2500 years ago, are determined to hold the Germans for as long as it is needed. They are the last obstacle before the enemy conquers Athens, just like Leonidas and his 300 were standing with no fear against the Persians. In the morning of the 24th of April, the Germans unleash their armored hordes. Glory is about to crown the arms of the defenders of freedom once more…;
+CP_64_fht_thermopyles_allied_main              ;6th New Zealand;
+CP_64_fht_thermopyles_axis_main                ;5. Panzer-Division;
+CP_64_fht_thermopyles_anthili                  ;Anthili;
+CP_64_fht_thermopyles_hot_springs              ;Hot Springs;
+CP_64_fht_thermopyles_camp                     ;Encampement;
+CP_64_fht_thermopyles_damasta                  ;Damasta;
+CP_64_fht_thermopyles_loutron                  ;Loutron;
+
+HUD_LEVELNAME_fht_gothic_line              ;FHT Gothic Line;
+LOADINGSCREEN_MAPDESCRIPTION_fht_thermopyles   ;The Battle of Gemmano was part of the Allies' Operation Olive, the offensive in August 1944 on the Gothic Line, the German line of defence in the Apennines in northern Italy. It consisted of a series of four British attacks between 4 September to 15 September 1944, on the German defences in and around the village of Gemmano. The village itself was taken on 9 September during the second attack, two more actions being required to take the surrounding area. Fighting was heavy, and the Battle of Gemmano has been called the Cassino of the Adriatic by some historians. FH1 port created by Kwiot.;
+CP_64_fht_gothic_line_monastery             ;Monastery;
+CP_64_fht_gothic_line_gemmano                ;Gemmano;
+CP_64_fht_gothic_line_allied_base                  ;Allied Base;
+CP_64_fht_gothic_line_Outpost              ;Outpost;
+CP_64_fht_gothic_line_farm                     ;Farm;
+CP_64_fht_gothic_line_axis_base                  ;Axis Base;
+CP_64_fht_gothic_line_village                  ;Village;
+
+HUD_LEVELNAME_fht_c16_buetgenbach                   ;FHT Buetgenbach;
+LOADINGSCREEN_MAPDESCRIPTION_fht_c16_buetgenbach    ;The entire Battle of the Bulge was a massive encounter between German and Allied forces. Dietrichs Sixth Army was tasked to clear Rollbahn C through the town of Bullingen to Bütgenbach. The Sixth was made up of elite SS armored divisions, its attack began at 0530. It was not an easy battle. The 26th Infantrys command post was overrun three times by German tanks. The men in the command post scraped together all the weapons, ammunition, and courage they could in order to push back the Germans. A weeklong battle developed in the area with the town changing ownership several times.....Original map by den75, French Hope. Adapted to FHT by Papillon;
+CP_64_fht_buetgenbach_allied_main                   ;26th Infantry Division;
+CP_64_fht_buetgenbach_residence                     ;Strongpoint;
+CP_64_fht_buetgenbach_crossroads                    ;Crossroads;
+CP_64_fht_buetgenbach_bunkers                       ;Bunkers;
+CP_64_fht_buetgenbach_arcades                       ;Arcades;
+CP_64_fht_buetgenbach_axis_main                     ;Sixth Army;
+CP_64_fht_buetgenbach_church                        ;Domaine;
+CP_64_fht_buetgenbach_hq                            ;HQ;
+CP_64_fht_buetgenbach_westerntown                   ;Western Suburb;
+CP_64_fht_buetgenbach_south_city                    ;Maison Capitaine;
+CP_64_fht_buetgenbach_cathedral                     ;Cathedrale;
+CP_64_fht_buetgenbach_factory                       ;Factory;
+CP_32_fht_buetgenbach_allied_main                   ;26th Infantry Division;
+CP_32_fht_buetgenbach_residence                     ;Strongpoint;
+CP_32_fht_buetgenbach_crossroads                    ;Crossroads;
+CP_32_fht_buetgenbach_bunkers                       ;Bunkers;
+CP_32_fht_buetgenbach_arcades                       ;Arcades;
+CP_32_fht_buetgenbach_axis_main                     ;Sixth Army;
+CP_32_fht_buetgenbach_church                        ;Domaine;
+CP_32_fht_buetgenbach_hq                            ;HQ;
+CP_32_fht_buetgenbach_westerntown                   ;Western Suburb;
+CP_32_fht_buetgenbach_south_city                    ;Maison Capitaine;
+CP_32_fht_buetgenbach_cathedral                     ;Cathedrale;
+CP_32_fht_buetgenbach_factory                       ;Factory;
+
+HUD_LEVELNAME_fht_stoumont                          ;FHT Stoumont;
+LOADINGSCREEN_MAPDESCRIPTION_fht_stoumont           ;The entire Battle of the Bulge was a massive encounter between German and Allied forces. Dietrichs Sixth Army was tasked to clear Rollbahn C through the town of Bullingen to Bütgenbach. The Sixth was made up of elite SS armored divisions, its attack began at 0530. It was not an easy battle. The 26th Infantrys command post was overrun three times by German tanks. The men in the command post scraped together all the weapons, ammunition, and courage they could in order to push back the Germans. A weeklong battle developed in the area with the town changing ownership several times.....Original map by den75, French Hope. Adapted to FHT by Papillon;
+CP_16_fht_stoumont_Bunker                           ;Bunker;
+CP_16_fht_stoumont_Axis_base                        ;Kampfgruppe Peiper;
+CP_16_fht_stoumont_US_base                          ;119th Infantry Regiment;
+CP_32_fht_stoumont_La_Gleize                        ;La Gleize;
+CP_32_fht_stoumont_Targnon                          ;Targnon;
+CP_32_fht_stoumont_River_crossing                   ;River Crossing;
+CP_32_fht_stoumont_Cheneux                          ;Cheneux;
+CP_32_fht_stoumont_Farm                             ;Farm;
+CP_32_fht_stoumont_Stoumont                         ;Stoumont;
+CP_32_fht_stoumont_Frontline                        ;Frontline;
+CP_32_fht_stoumont_Axis_bleed                       ;Axis Bleed;
+CP_32_fht_stoumont_US_bleed                         ;US Bleed;
+CP_64_fht_stoumont_La_Gleize                       ;La Gleize;
+CP_64_fht_stoumont_Targnon                         ;Targnon;
+CP_64_fht_stoumont_River_crossing                  ;River Crossing;
+CP_64_fht_stoumont_Cheneux                         ;Cheneux;
+CP_64_fht_stoumont_Farm                            ;Farm;
+CP_64_fht_stoumont_Stoumont                        ;Stoumont;
+CP_64_fht_stoumont_Frontline                       ;Frontline;
+CP_64_fht_stoumont_Rouat                           ;Rouat;
+CP_64_fht_stoumont_Sawmill                         ;Sawmill;
+CP_64_fht_stoumont_Axis_bleed                      ;Axis Bleed;
+CP_32_fht_stoumont_US_bleed                        ;US bleed;
+
+CP_32_c16_fht_stoumont_La_Gleize                        ;La Gleize;
+CP_32_c16_fht_stoumont_Targnon                          ;Targnon;
+CP_32_c16_fht_stoumont_River_crossing                   ;River Crossing;
+CP_32_c16_fht_stoumont_Cheneux                          ;Cheneux;
+CP_32_c16_fht_stoumont_Farm                             ;Farm;
+CP_32_c16_fht_stoumont_Stoumont                         ;Stoumont;
+CP_32_c16_fht_stoumont_Frontline                        ;Frontline;
+CP_32_c16_fht_stoumont_Axis_bleed                       ;Axis Bleed;
+CP_32_c16_fht_stoumont_US_bleed                         ;US Bleed;
+CP_64_c16_fht_stoumont_La_Gleize                       ;La Gleize;
+CP_64_c16_fht_stoumont_Targnon                         ;Targnon;
+CP_64_c16_fht_stoumont_River_crossing                  ;River Crossing;
+CP_64_c16_fht_stoumont_Cheneux                         ;Cheneux;
+CP_64_c16_fht_stoumont_Farm                            ;Farm;
+CP_64_c16_fht_stoumont_Stoumont                        ;Stoumont;
+CP_64_c16_fht_stoumont_Frontline                       ;Frontline;
+CP_64_c16_fht_stoumont_Rouat                           ;Rouat;
+CP_64_c16_fht_stoumont_Sawmill                         ;Sawmill;
+CP_64_c16_fht_stoumont_Axis_bleed                      ;Axis Bleed;
+CP_32_c16_fht_stoumont_US_bleed                        ;US bleed;
+
+HUD_LEVELNAME_fht_wacht_am_rhein                    ;FHT Wacht am Rhein;
+LOADINGSCREEN_MAPDESCRIPTION_fht_wacht_am_rhein     ;The entire Battle of the Bulge was a massive encounter between German and Allied forces. Dietrichs Sixth Army was tasked to clear Rollbahn C through the town of Bullingen to Bütgenbach. The Sixth was made up of elite SS armored divisions, its attack began at 0530. It was not an easy battle. The 26th Infantrys command post was overrun three times by German tanks. The men in the command post scraped together all the weapons, ammunition, and courage they could in order to push back the Germans. A weeklong battle developed in the area with the town changing ownership several times.....Original map by den75, French Hope. Adapted to FHT by Papillon;
+CP_64_fht_wacht_am_rhein_Town                       ;Town;
+CP_64_fht_wacht_am_rhein_Village                    ;Village;
+CP_64_wacht_am_rhein_Inn                            ;Inn;
+CP_64_fht_wacht_am_rhein_Outpost                    ;Outpost;
+CP_64_fht_wacht_am_rhein_Farm                       ;Farm;
+CP_64_fht_wacht_am_rhein_Axis_base                  ;German Base;
+CP_64_fht_wacht_am_rhein_US_base                    ;Allied Base;
+CP_64_fht_wacht_am_rhein_Axis_bleed                 ;Axis bleed;
+CP_64_fht_wacht_am_rhein_US_bleed                   ;Allied bleed;
+
+HUD_LEVELNAME_fht_c16_brecourt_manor                ;FHT Brecourt Manor;
+LOADINGSCREEN_MAPDESCRIPTION_fht_c16_brecourt_manor ;The German gun battery, in vicinity of Brecourt Manor was situated about 6 miles from Utah beach. The battery had initially been reported to be 88 mm guns firing onto causeway exit #2 leading off Utah Beach and disrupting landing forces of the U.S. 4th Infantry Division advancing inland on this route.  As a result of the crash of a C-47 having killed its company commander, Thomas Meehan III, command of Company E, 2nd Battalion, 506th Parachute Infantry Regiment of the 101st Airborne Division devolved to the company executive officer, 1st Lt. Richard Winters. After linking up with his parent unit at the hamlet of Le Grand Chemin on the morning of June 6, 1944, Winters was ordered up front away from his company. With minimal instructions of: There's fire along that hedgerow there. Take care of it. Createy by Aserafimov, edited by Erwin;
+CP_64_fht_c16_bm_Axis_Mainbase                      ;6. FJ Regiment;
+CP_64_fht_c16_bm_Allied_MainEast                    ;Company E;
+CP_64_fht_c16_bm_Allied_MainWest                    ;Company D;
+CP_64_fht_c16_bm_Farm                               ;Farm;
+CP_64_fht_c16_bm_Franqueville                       ;Franqueville;
+CP_64_fht_c16_bm_Brecourt_Manor                     ;Brecourt Manor;
+CP_64_fht_c16_bm_Radar_Bunker                       ;Radar Bunker;
+CP_64_c16_bm_Mortar_Bunker                          ;Mortar Bunker;
+CP_32_fht_c16_bm_Axis_Mainbase                      ;6. FJ Regiment;
+CP_32_fht_c16_bm_Allied_MainEast                    ;Company E;
+CP_32_fht_c16_bm_Allied_MainWest                    ;Company D;
+CP_32_fht_c16_bm_Farm                               ;Farm;
+CP_32_fht_c16_bm_Franqueville                       ;Franqueville;
+CP_32_fht_c16_bm_Brecourt_Manor                     ;Brecourt Manor;
+CP_32_fht_c16_bm_Radar_Bunker                       ;Radar Bunker;
+CP_32_c16_bm_Mortar_Bunker                          ;Turqueville;
+
+HUD_TEXT_MENU_SPAWN_ARMY_PL   ;PL;
+HUD_TEAMNAME_pl               ;POLAND;
+EOR_winningteam_pl            ;POLAND HAS WON THE ROUND;
+ARMY_pl                       ;POLAND;
+ARMY_plcap                    ;POLAND;
+EOR_bestplsquad               ;BEST POLISH SQUAD;
+
+HUD_LEVELNAME_fht_c16_hill262                  ;FHT Hill 262;
+LOADINGSCREEN_MAPDESCRIPTION_fht_c16_hill262   ;Hill 262, or the Mont Ormel ridge, is an area of high ground above the village of Coudehard in Normandy that was the location of a bloody engagement in the final stages of the Normandy Campaign during the Second World War. By late summer 1944, the bulk of two German armies had become surrounded by the Allies near the town of Falaise. The Mont Ormel ridge, with its commanding view of the area, sat astride the Germans' only escape route. Polish forces seized the ridge's northern height on 19 August and, despite being isolated and coming under sustained attack, held it until noon on 21 August, contributing greatly to the decisive Allied victory that followed.;
+CP_64_fht_c16_hill262_les_lignerits            ;Polish 1st Armored Div.;
+CP_64_fht_c16_hill262_hill262                  ;Hill 262;
+CP_64_fht_c16_hill262_hill247                  ;Hill 247;
+CP_64_fht_c16_hill262_manoir                   ;Manoir;
+CP_64_fht_c16_hill262_mont_ormel               ;Mont Ormel;
+CP_64_fht_c16_hill262_coudehard                ;Coudehard;
+CP_64_fht_c16_hill262_la_bruyere_fresnay       ;5th Panzer Army;
+CP_64_fht_c16_hill262_near_chambois            ;7th Army;
+CP_64_fht_c16_hill262_south_allied_main        ;US 90th Infantry Div.;
+
+HUD_LEVELNAME_fht_c17_mont_castre                  ;FHT Hill 262;
+LOADINGSCREEN_MAPDESCRIPTION_fht_mont_castre       ;The Germans had dug themselves in all over the Foret du Mont Castre on Hitler’s orders to stop the American advance to the south. They called it the Mahlmann Line and it was defended by an elite Regiment the 15th Regiment of the 5th Parachute Division. On July 3rd at 05:30 the attack began with three Infantry Divisions, from east to west they were 79th and 82nd Airborne, plus the 90th starting in a line from Port Bail to Pretot. It took until July 12th to reach Plessis-Lastelle at enormous cost to both armies, over 5,000 casualties in the 90th Division.;
+CP_64_fht_montcastre_axis_main                     ;15. FJ Division;
+CP_64_fht_montcastre_allied_main                   ;90th Infantry Div.;
+CP_64_fht_montcastre_wn63                          ;WN63;
+CP_64_fht_montcastre_farm                          ;Farm;
+CP_64_fht_montcastre_strongpoint                   ;Roadblock;
+CP_64_fht_montcastre_wn31                          ;WN31;
+CP_64_fht_montcastre_camp                          ;Hill 122;
+
+HUD_LEVELNAME_fht_c17_the_dutch_border             ;FHT The Dutch Border;
+LOADINGSCREEN_MAPDESCRIPTION_fht_c17_the_dutch_border     ;The Germans had dug themselves in all over the Foret du Mont Castre on Hitler’s orders to stop the American advance to the south. They called it the Mahlmann Line and it was defended by an elite Regiment the 15th Regiment of the 5th Parachute Division. On July 3rd at 05:30 the attack began with three Infantry Divisions, from east to west they were 79th and 82nd Airborne, plus the 90th starting in a line from Port Bail to Pretot. It took until July 12th to reach Plessis-Lastelle at enormous cost to both armies, over 5,000 casualties in the 90th Division.;
+CP_64_fht_dutchborder_axis_main                    ;15. Armee;
+CP_64_fht_dutchborder_axis_reinforcements          ;Axis Reinforcements;
+CP_64_fht_dutchborder_allied_main                  ;2nd Canadian Infantry Division;
+CP_64_fht_dutchborder_allied_reinforcements        ;Allied Reinforcements;
+CP_64_fht_dutchborder_westerhoven                  ;Westerhoven;
+CP_64_fht_duchtborder_sterksel                     ;Sterksel;
+CP_64_fht_dutchborder_strongpoint                  ;Strongpoint;
+CP_64_fht_dutchborder_crossing                     ;Crossing;
+CP_64_fht_dutchborder_swamp                        ;Swamp;
+
+HUD_LEVELNAME_fht_c17_battle_of_metz               ;FHT Battle of Metz;
+LOADINGSCREEN_MAPDESCRIPTION_fht_c17_the_dutch_border     ;The Germans had dug themselves in all over the Foret du Mont Castre on Hitler’s orders to stop the American advance to the south. They called it the Mahlmann Line and it was defended by an elite Regiment the 15th Regiment of the 5th Parachute Division. On July 3rd at 05:30 the attack began with three Infantry Divisions, from east to west they were 79th and 82nd Airborne, plus the 90th starting in a line from Port Bail to Pretot. It took until July 12th to reach Plessis-Lastelle at enormous cost to both armies, over 5,000 casualties in the 90th Division.;
+CP_64_fht_metz_axis_main                    ;17. SS Pz.Gren. Division;
+CP_64_fht_metz_axis_reinforcements          ;Axis Reinforcements;
+CP_64_fht_metz_allied_main                  ;5th Infantry Division;
+CP_64_fht_metz_allied_reinforcements        ;Allied Reinforcements;
+CP_64_fht_metz_MOuest                       ;Metz-West;
+CP_64_fht_metz_rivier                       ;Rivier;
+CP_64_fht_metz_camp                         ;Camp;
+CP_64_fht_metz_MEst                         ;Metz-East;
+CP_64_fht_metz_MSud                         ;Metz-Sud;
+CP_64_fht_metz_hauconcourt                  ;Hauconcourt;
+CP_64_fht_metz_lookout                      ;Lookout;
+
+HUD_LEVELNAME_fht_c17_orscholz_switch       ;FHT Operation Undertone;
+LOADINGSCREEN_MAPDESCRIPTION_fht_c17_the_dutch_border ;The Orscholz Switch Line was part of the Westwall defensive system in the triangle between Saar and Moselle. Between 14 Jan 1945 and 24 Jan 1945 the 94th Infantry division has penetrated the first defensive lines around the Butzdorf-Tettingen area. After failure to crack the Orscholz Switch around the village of Sinz in the end of January, the 94th Infantry division started a new attempt. On 7th Feb 1945 on muddy terrain the second battle of Sinz began.;
+CP_64_fht_operation_undertone_axis_mainbase           ;17. SS Pz.Gren. Division;
+CP_64_fht_operation_undertone_axis_reinforcements     ;Axis Reinforcements;
+CP_64_fht_operation_undertone_allied_main             ;94th Infantry Division;
+CP_64_fht_operation_undertone_allied_reinforcements   ;Allied Reinforcements;
+CP_64_fht_operation_undertone_Dreisbach               ;Dreisbach;
+CP_64_fht_operation_undertone_Hellendorf              ;Hellendorf;
+CP_64_fht_operation_undertone_Orscholz                ;Orscholz;
+CP_64_fht_operation_undertone_Buschdorf               ;Buschdorf;
+CP_64_fht_operation_undertone_Tuensdorf               ;Tünsdorf;
