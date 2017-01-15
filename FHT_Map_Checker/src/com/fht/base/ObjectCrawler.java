@@ -32,6 +32,10 @@ public class ObjectCrawler {
 		vehiclesWithTeamlock = new ArrayList<>();
 		allVehicles = new ArrayList<>();
 	}
+	
+	public void getGPODump(String basePath) {
+		
+	}
 
 	public HashMap<String, String> getObjects(String basePath) {
 		// Kits
@@ -86,6 +90,52 @@ public class ObjectCrawler {
 
 		return null;
 	}
+	
+	private void walkOverGPOs(String basePath) {
+		Path p = Paths.get(basePath);
+		
+		FileVisitor<Path> fv = new SimpleFileVisitor<Path>() {
+			@Override
+			public FileVisitResult visitFile(Path file,
+					BasicFileAttributes attrs) throws IOException {
+				
+				
+				if (file.getFileName().toString().equals(FhtConstants.gpo_name)) {
+					System.out.println(file);
+					//System.out.println();
+					String fileName = file.getFileName().toString();
+					switch (suffix) {
+					case "con":
+						String realName = getObjectNameFromTweak(
+								file.getParent(), file.getFileName());
+						System.out.println(realName);
+						boolean teamlock = getTeamlockInfo(file.getParent(), file.getFileName());
+						if (realName != null)
+							temp_list.add(fileName.substring(0, fileName.lastIndexOf(".")) + ", "
+									+ realName + ", " + teamlock);
+						break;
+					case "inc":
+						temp_list.add(file.getParent().getFileName() + ", "
+								+ file.getFileName().toString());
+
+					default:
+						break;
+					}
+
+				}
+
+				return FileVisitResult.CONTINUE;
+			}
+
+		};
+
+		try {
+			Files.walkFileTree(p, fv);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+	}	
 
 	private void dumpAvailableObjects(String basePath) {
 		Path p = Paths.get(basePath);

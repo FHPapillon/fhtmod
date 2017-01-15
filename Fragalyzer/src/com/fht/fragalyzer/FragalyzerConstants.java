@@ -1,0 +1,42 @@
+package com.fht.fragalyzer;
+
+public class FragalyzerConstants {
+	public final static String logfilename = "faLog";
+	public final static String logDelimiter = ";";
+	public final static String tokenDelimiter = "=";
+	public final static String KILL = "KILL";
+	public final static String INIT = "INIT";
+	public final static String AttackerName= "AttackerName";
+	public final static String AttackerTeam= "AttackerTeam";
+	public final static String AttackerPos= "AttackerPos";
+	public final static String VictimName= "VictimName";
+	public final static String VictimTeam= "VictimTeam";
+	public final static String VictimPos= "VictimPos";
+	public final static String VictimKit= "VictimKit";
+	public final static String VictimVehicle= "VictimVehicle";
+	public final static String AttackerKit= "AttackerKit";
+	public final static String AttackerVehicle= "AttackerVehicle";
+	public final static String AttackerWeapon= "AttackerWeapon";
+	public final static String Time= "Time";
+	public final static String ba = "ba_";
+	public final static String bj= "bj_";
+	public final static String bw= "bw_";
+	public final static String ch= "ch_";
+	public final static String cw= "cw_";	
+	public final static String eu= "eu_";		
+	public final static String ga = "ga_";
+	public final static String gc= "gc_";
+	public final static String gm= "gm_";
+	public final static String gw= "gw_";
+	public final static String gs= "gs_";
+	public final static String ia= "ia_";	
+	public final static String jp= "jp_";	
+	public final static String re = "re_";
+	public final static String se= "se_";
+	public final static String ua= "ua_";
+	public final static String uc= "uc_";
+	public final static String up= "up_";	
+	public final static String us= "us_";
+	public final static String uw= "uw_";	
+	public final static String waw= "waw_";	
+}

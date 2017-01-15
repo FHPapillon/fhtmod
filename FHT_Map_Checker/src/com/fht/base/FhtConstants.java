@@ -5,10 +5,12 @@ import java.util.Collections;
 import java.util.List;
 
 public interface FhtConstants {
+	public static String gpo_name = "GamePlayObjects.con";
 	public static String clientArchives = "//ClientArchives.con";
 	public static String map_desc_file_path = "//info//";
 	public static String serverArchives = "//ServerArchives.con";
 	public static String fh2_path = "C://Program Files (x86)//EA GAMES//Battlefield 2//mods//fh2//levels//";
+	public static String localization_path = "C://Program Files (x86)//EA GAMES//Battlefield 2//mods//fh2//localization//german//fht_maps_cmp.txt";
 	public static String name_tag_in_desc = "<name>";
 	public static String name_tag_close_in_desc = "</name>";
 	public static String tmp = "//tmp.con";
@@ -65,8 +67,9 @@ public interface FhtConstants {
 	public static final String objectTimeToLive = "ObjectTemplate.TimeToLive";	
 	public static final String objectTeamlocked = "ObjectTemplate.teamOnVehicle";	
 	public static final String objectMaxNrOfObjectSpawned = "ObjectTemplate.maxNrOfObjectSpawned";	
-	public static final String numberOfTickets64 = "gameLogic.setDefaultNumberOfTicketsEx 64";
+	public static final String numberOfTickets = "gameLogic.setDefaultNumberOfTicketsEx ";
 	public static final String fh2VehicleImageLinkPrefix = "http://forgottenhope.warumdarum.de/imagesfh2/vehicles/";
+	public static final String cmpVehicleImageLinkPrefix = "http://files.forgottenhonor.com/fh2/FH2_Maps/Images/";
 	public static final String smallgif = "small.gif";
 	public static final String bigjpg = "big.jpg";
 }

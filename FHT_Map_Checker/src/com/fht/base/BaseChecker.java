@@ -6,13 +6,15 @@ import java.io.FileOutputStream;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
-import java.util.StringTokenizer;
+import java.util.Map;
 import java.util.Map.Entry;
 import java.util.SortedSet;
+import java.util.StringTokenizer;
+import java.util.TreeMap;
 import java.util.TreeSet;
 
 import com.hp.gagawa.java.elements.A;
@@ -20,7 +22,6 @@ import com.hp.gagawa.java.elements.Body;
 import com.hp.gagawa.java.elements.Div;
 import com.hp.gagawa.java.elements.H1;
 import com.hp.gagawa.java.elements.H2;
-import com.hp.gagawa.java.elements.H3;
 import com.hp.gagawa.java.elements.H4;
 import com.hp.gagawa.java.elements.Head;
 import com.hp.gagawa.java.elements.Html;
@@ -58,15 +59,18 @@ public class BaseChecker {
 	public HashMap<String, String> controlPoints;
 
 	public HashMap<String, String> objectControlPoints;
-	
+
 	public FhtFileReader fileReader;
 
+	private Collection<String> flagsMissingLocalization;
+
 	public void check(String[] args) {
-		String path, layer, mapname, displayMapname, team1, team2, tickets1, tickets2;
+		String path, layer, mapname, gpo, displayMapname, team1, team2, tickets1, tickets2;
 
 		Collection<String> errors = new ArrayList<>();
 		Collection<String> kits_team1 = new ArrayList<>();
 		Collection<String> kits_team2 = new ArrayList<>();
+		flagsMissingLocalization = new ArrayList<>();
 		fileReader = new FhtFileReader();
 
 		objectSpawners = new HashMap<String, ObjectSpawner>();
@@ -82,9 +86,23 @@ public class BaseChecker {
 		layer = args[1];
 		path = FhtConstants.fh2_path + mapname;
 		setBasePath(path);
-
+		switch (layer) {
+		case "64":
+			gpo = FhtConstants.gamePlayObjects_64;
+		
+			break;
+			case "32":
+				gpo = FhtConstants.gamePlayObjects_32;
+				break;
+			case "16":
+				gpo = FhtConstants.gamePlayObjects_16;
+				break;
+			default:
+				return;
+				
+			}
 		readObjects();
-		readFiles();
+		readFiles(gpo);
 		populateCPs();
 		populateObjectsSpawners();
 
@@ -93,36 +111,73 @@ public class BaseChecker {
 		team2 = getTeam2();
 		kits_team1 = getKits("1");
 		kits_team2 = getKits("2");
-		tickets1 = getTicketTeam1();
-		tickets2 = getTicketTeam2();
+		tickets1 = getTicketTeam1(layer);
+		tickets2 = getTicketTeam2(layer);
 		checkClientArchives(path, errors);
 		checkServerArchives(path, errors);
+
 		// checkInit(path, errors);
 		// checkGamePlayObjects(path, errors);
-		switch (layer) {
-		case "64":
-			layer = FhtConstants.gamePlayObjects_64;
-			break;
-		case "32":
-			layer = FhtConstants.gamePlayObjects_32;
-			break;
-		case "16":
-			layer = FhtConstants.gamePlayObjects_16;
-			break;
-		default:
-			layer = FhtConstants.gamePlayObjects_64;
-			break;
-		}
+		
 
-		createHTMLReport(path, layer, displayMapname, team1, team2, kits_team1,
-				kits_team2, tickets1, tickets2);
+		checkWhichKitsAreUsed();
+
+		createHTMLReport(path, layer, gpo, mapname, displayMapname, team1, team2,
+				kits_team1, kits_team2, tickets1, tickets2);
 
 		checkTmp(path, errors);
 
-		Iterator<String> it = errors.iterator();
+		// Iterator<String> it = errors.iterator();
+		// while (it.hasNext()) {
+		// //System.out.println(it.next());
+		// }
+
+	}
+
+	private void checkWhichKitsAreUsed() {
+
+		// Iterator<ObjectSpawner> it = spawner_list.iterator();
+		Iterator<Entry<String, ObjectSpawner>> it = objectSpawners.entrySet()
+				.iterator();
+		HashMap<String, Integer> kits = new HashMap<>();
+		Entry<String, ObjectSpawner> objectEntry;
+		Integer num;
+		int count;
+		ObjectSpawner spawner;
 		while (it.hasNext()) {
-			//System.out.println(it.next());
+			objectEntry = it.next();
+			spawner = objectEntry.getValue();
+			if (spawner.getTemplate1() != null) {
+				if (kits.containsKey(spawner.getTemplate1())) {
+					num = kits.get(spawner.getTemplate1());
+					count = num.intValue() + 1;
+					kits.remove(spawner.getTemplate1());
+					kits.put(spawner.getTemplate1(), new Integer(count));
+				} else {
+					kits.put(spawner.getTemplate1(), new Integer(1));
+				}
+			}
+
+			if (spawner.getTemplate2() != null) {
+				if (kits.containsKey(spawner.getTemplate2())) {
+					num = kits.get(spawner.getTemplate2());
+					count = num.intValue() + 1;
+					kits.remove(spawner.getTemplate2());
+					kits.put(spawner.getTemplate2(), new Integer(count));
+				} else {
+					kits.put(spawner.getTemplate2(), new Integer(1));
+				}
+			}
 		}
+
+		List<Map.Entry<String, Integer>> sorted = MapUtilities
+				.sortByValue(kits);
+		Iterator<Map.Entry<String, Integer>> ite = sorted.iterator();
+		Map.Entry<String, Integer> ent;
+//		while (ite.hasNext()) {
+//			ent = ite.next();
+//			//System.out.println(ent.getValue() + " " + ent.getKey());
+//		}
 
 	}
 
@@ -168,7 +223,7 @@ public class BaseChecker {
 	public void checkInit(String basePath, Collection<String> errors) {
 
 		String line, kit;
-		
+
 		kit = new String();
 
 		// Find out which kits shall be used in the map
@@ -191,10 +246,10 @@ public class BaseChecker {
 
 			}
 
-			if (line.startsWith(FhtConstants.numberOfTickets64)) {
+			if (line.startsWith(FhtConstants.numberOfTickets)) {
 
 				System.out.println(line
-						.substring(FhtConstants.numberOfTickets64.length()));
+						.substring(FhtConstants.numberOfTickets.length()));
 
 			}
 		}
@@ -236,9 +291,10 @@ public class BaseChecker {
 		}
 	}
 
-	private void createHTMLReport(String basePath, String gpo, String mapname,
-			String team1, String team2, Collection<String> kits_team1,
-			Collection<String> kits_team2, String tickets1, String tickets2) {
+	private void createHTMLReport(String basePath, String layer, String gpo,
+			String raw_mapname, String mapname, String team1, String team2,
+			Collection<String> kits_team1, Collection<String> kits_team2,
+			String tickets1, String tickets2) {
 		int counter = 0;
 		ControlPoint cp;
 		// String vehicle, cpName;
@@ -263,6 +319,22 @@ public class BaseChecker {
 		H1 h1 = new H1();
 		h1.appendChild(new Text(mapname));
 		body.appendChild(h1);
+
+		Div minimap_link = new Div();
+		minimap_link.setId("mydiv").setCSSClass("myclass");
+
+		A link = new A();
+		minimap_link.appendChild(link);
+
+		link.setHref(
+				"http://files.forgottenhonor.com/fh2/FH2_Maps/" + raw_mapname
+						+ layer +"_minimap.png").setTarget("_blank");
+
+		Img image = new Img("some alt",
+				"http://files.forgottenhonor.com/fh2/FH2_Maps/" + raw_mapname + layer + "_minimap_small.png");
+		image.setCSSClass("frame").setId("myimageid");
+		link.appendChild(image);
+		body.appendChild(link);
 		H2 h2 = new H2();
 		h2.appendChild(new Text("Teams"));
 		body.appendChild(h2);
@@ -430,22 +502,28 @@ public class BaseChecker {
 		// Object Spawner
 
 		table = new Table();
+		Iterator<String> ite = flagsMissingLocalization.iterator();
+		while (ite.hasNext()) {
+			h4 = new H4();
+			h4.appendChild(new Text(ite.next() + " misses Localization!"));
+			body.appendChild(h4);
+		}
 
 		// body.appendChild(table);
 		html.appendChild(body);
 
 		try {
-			File output = new File("" + mapname + ".html");
+			File output = new File("" + mapname + "_" + layer + ".html");
 			PrintWriter out = new PrintWriter(new FileOutputStream(output));
 			out.println(html.write());
-			//System.out.println(html.write());
+			// System.out.println(html.write());
 			out.close();
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 
 		}
-		//System.out.println(html.write());
+		// System.out.println(html.write());
 
 	}
 
@@ -485,8 +563,6 @@ public class BaseChecker {
 		return map;
 	}
 
-
-
 	private String findValueInCollection(String value, Collection<String> col) {
 		boolean found = false;
 		String line, ret;
@@ -503,7 +579,7 @@ public class BaseChecker {
 		}
 		return ret;
 	}
-	
+
 	public String getBasePath() {
 		return basePath;
 	}
@@ -520,21 +596,20 @@ public class BaseChecker {
 		return initLines;
 	}
 
-	private String getKit(String kit){
-		
+	private String getKit(String kit) {
+
 		if (kitLimit.containsKey(kit)) {
 			return kit + " limited to " + kitLimit.get(kit).toString();
-		}
-		else
+		} else
 			return kit;
 	}
 
-	private String getKitFromLimitKitMapdata(String line){
+	private String getKitFromLimitKitMapdata(String line) {
 		String kit = new String();
 		int start, end;
-		start = line.indexOf("'")+1;
-		end = line.lastIndexOf("'");					
-		kit = line.substring(start,  end );
+		start = line.indexOf("'") + 1;
+		end = line.lastIndexOf("'");
+		kit = line.substring(start, end);
 		return kit;
 	}
 
@@ -572,17 +647,18 @@ public class BaseChecker {
 		return kitTypes;
 	}
 
-	private Float getLimitfromLimitKitMapdata(String line){
+	private Float getLimitfromLimitKitMapdata(String line) {
 		int start, end;
 		String strLimit;
 		start = line.lastIndexOf("=") + 1;
-		end = line.lastIndexOf(")");					
-		strLimit = line.substring(start,  end );		
+		end = line.lastIndexOf(")");
+		strLimit = line.substring(start, end);
 		return new Float(strLimit.trim());
 	}
 
 	private Div getLinkToTemplateImage(ObjectSpawner spawner, String team) {
 		String fh2imagename;
+		String spawnerName;
 		Div div = new Div();
 		div.setId("mydiv").setCSSClass("myclass");
 
@@ -592,34 +668,53 @@ public class BaseChecker {
 		switch (team) {
 		case "1":
 			fh2imagename = spawner.getFh2ImageName1();
+			spawnerName = spawner.getTemplate1();
+			if (spawnerName == null)
+				return null;
 			break;
 		case "2":
 			fh2imagename = spawner.getFh2ImageName2();
+			spawnerName = spawner.getTemplate2();
+			if (spawnerName == null)
+				return null;
 			break;
 
 		default:
-			fh2imagename = spawner.getFh2ImageName1();
-			break;
-		}
-		if (fh2imagename == null)
 			return null;
-		link.setHref(
-				FhtConstants.fh2VehicleImageLinkPrefix + fh2imagename + "/"
-						+ FhtConstants.bigjpg).setTarget("_blank");
+		}
+		if (fh2imagename == null || fh2imagename.equals("na")) {
+			link.setHref(
+					FhtConstants.cmpVehicleImageLinkPrefix + spawnerName  + ".jpg").setTarget("_blank");
 
-		Img image = new Img("some alt", FhtConstants.fh2VehicleImageLinkPrefix
-				+ fh2imagename + "/" + FhtConstants.smallgif);
-		image.setCSSClass("frame").setId("myimageid");
-		link.appendChild(image);
+			Img image = new Img("some alt",
+					FhtConstants.cmpVehicleImageLinkPrefix + spawnerName + "_small.jpg");
+							
+			image.setCSSClass("frame").setId("myimageid");
+			link.appendChild(image);
+		} else {
+			link.setHref(
+					FhtConstants.fh2VehicleImageLinkPrefix + fh2imagename + "/"
+							+ FhtConstants.bigjpg).setTarget("_blank");
 
+			Img image = new Img("some alt",
+					FhtConstants.fh2VehicleImageLinkPrefix + fh2imagename + "/"
+							+ FhtConstants.smallgif);
+			image.setCSSClass("frame").setId("myimageid");
+			link.appendChild(image);
+
+			
+		}
 		return div;
 	}
 
 	private String getLocalizedFlagName(String flag) {
 		if (getFlagNames().containsKey(flag.trim()))
 			return getFlagNames().get(flag.trim());
-		else
+		else {
+			flagsMissingLocalization.add(flag);
 			return flag.trim();
+		}
+
 	}
 
 	private String getMapName(String basePath, String mapname) {
@@ -640,7 +735,7 @@ public class BaseChecker {
 				}
 			}
 		}
-		return name;
+		return name.trim();
 	}
 
 	private String getNumberOfTicketsFromLine(String line) {
@@ -679,7 +774,7 @@ public class BaseChecker {
 
 	private String getTemplateName(ObjectSpawner spawner, String team) {
 		String ret = new String();
-		//System.out.println(team);
+		// System.out.println(team);
 		switch (team) {
 		case "1":
 			return getTeamTemplateName(spawner, team);
@@ -707,14 +802,14 @@ public class BaseChecker {
 
 	}
 
-	private String getTicketTeam1() {
+	private String getTicketTeam1(String layer) {
 		return getNumberOfTicketsFromLine(findValueInCollection(
-				FhtConstants.numberOfTickets64 + " 1", getInitLines()));
+				FhtConstants.numberOfTickets + layer + " 1", getInitLines()));
 	}
 
-	private String getTicketTeam2() {
+	private String getTicketTeam2(String layer) {
 		return getNumberOfTicketsFromLine(findValueInCollection(
-				FhtConstants.numberOfTickets64 + " 2", getInitLines()));
+				FhtConstants.numberOfTickets + layer + " 2", getInitLines()));
 	}
 
 	public HashMap<String, FH2Object> getVehicles() {
@@ -797,7 +892,7 @@ public class BaseChecker {
 		Iterator<ControlPoint> cpit = controlPointsObjects.values().iterator();
 		while (cpit.hasNext()) {
 			cp = cpit.next();
-			//System.out.println(cp.toString());
+			// System.out.println(cp.toString());
 			/*
 			 * System.out.println("ID:              " + cp.getId());
 			 * System.out.println("Name:            " + cp.getName());
@@ -941,14 +1036,19 @@ public class BaseChecker {
 				oName = line.trim().substring(line.trim().lastIndexOf(" ") + 1);
 
 			}
-			if (line.trim().startsWith(FhtConstants.objectControlPointID)) {
-				// cpID = line.trim().substring(line.trim().lastIndexOf(" ") +
-				// 1);
-
-				objectSpawners.get(oName)
-						.setCpID(
-								line.trim().substring(
-										line.trim().lastIndexOf(" ") + 1));
+			try {
+				if (line.trim().startsWith(FhtConstants.objectControlPointID)) {
+					// cpID = line.trim().substring(line.trim().lastIndexOf(" ") +
+					// 1);
+					System.out.println("working on " + oName + " line: " + line);
+					objectSpawners.get(oName)
+							.setCpID(
+									line.trim().substring(
+											line.trim().lastIndexOf(" ") + 1));
+				}
+			} catch (NullPointerException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
 
 		}
@@ -974,26 +1074,31 @@ public class BaseChecker {
 
 		sortedSpawners.clear();
 		countSpawnersOfSameTemplate.clear();
-		while (it.hasNext()) {
-			objectEntry = it.next();
-			spawner = objectEntry.getValue();
-
-			if (spawner.getCpID().equals(cp.getId())
-					&& spawner.getType().equals(type)) {
-				if (countSpawnersOfSameTemplate.containsKey(spawner
-						.getTemplate1() + spawner.getTemplate2())) {
-					count = countSpawnersOfSameTemplate.get(spawner
-							.getTemplate1() + spawner.getTemplate2());
-					count = new Integer(count.intValue() + 1);
-					countSpawnersOfSameTemplate.put(spawner.getTemplate1()
-							+ spawner.getTemplate2(), count);
-				} else
-					countSpawnersOfSameTemplate.put(spawner.getTemplate1()
-							+ spawner.getTemplate2(), new Integer(1));
-				sortedSpawners.put(
-						spawner.getTemplate1() + spawner.getTemplate2(),
-						spawner);
+		
+		try {
+			while (it.hasNext()) {
+				objectEntry = it.next();
+				spawner = objectEntry.getValue();
+				if (spawner.getCpID().equals(cp.getId())
+						&& spawner.getType().equals(type)) {
+					if (countSpawnersOfSameTemplate.containsKey(spawner
+							.getTemplate1() + spawner.getTemplate2())) {
+						count = countSpawnersOfSameTemplate.get(spawner
+								.getTemplate1() + spawner.getTemplate2());
+						count = new Integer(count.intValue() + 1);
+						countSpawnersOfSameTemplate.put(spawner.getTemplate1()
+								+ spawner.getTemplate2(), count);
+					} else
+						countSpawnersOfSameTemplate.put(spawner.getTemplate1()
+								+ spawner.getTemplate2(), new Integer(1));
+					sortedSpawners.put(
+							spawner.getTemplate1() + spawner.getTemplate2(),
+							spawner);
+				}
 			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		keys = new TreeSet<String>(sortedSpawners.keySet());
 		for (String key : keys) {
@@ -1031,45 +1136,50 @@ public class BaseChecker {
 			}
 			td = new Td();
 
-			additionalInfo = new String("ttl: " + sortedSpawner.getTimeToLive()
-					+ ", " + sortedSpawner.getMinSpawnDelay() + "/"
-					+ sortedSpawner.getMaxSpawnDelay());
+			additionalInfo = new String(
+					  ((sortedSpawner.getTimeToLive() == null) ? " " :  "ttl: " + sortedSpawner.getTimeToLive() + "/")
+					+ ((sortedSpawner.getMinSpawnDelay() == null ? " " : "min: " + sortedSpawner.getMinSpawnDelay() + "/") 
+					+ ((sortedSpawner.getMaxSpawnDelay() == null) ? " " : "max: " + sortedSpawner.getMaxSpawnDelay() + " ")));
 			if (repeatTemplates) {
 				switch (team) {
 				case "":
-					additionalInfo = additionalInfo + " ("
-							+ sortedSpawner.getTemplate1() + "/"
-							+ sortedSpawner.getTemplate2() + ")";
+					
+					
+					if (sortedSpawner.getTemplate1() != null)
+						additionalInfo = additionalInfo + sortedSpawner.getTemplate1() + "/";
+					if (sortedSpawner.getTemplate2() != null)
+						additionalInfo = additionalInfo + sortedSpawner.getTemplate2();
+							
 					break;
 				case "1":
-					additionalInfo = additionalInfo + " ("
-							+ sortedSpawner.getTemplate1() + ")";
+					additionalInfo = additionalInfo 
+							+ sortedSpawner.getTemplate1() ;
 					break;
 				case "2":
-					additionalInfo = additionalInfo + " ("
-							+ sortedSpawner.getTemplate2() + ")";
+					additionalInfo = additionalInfo 
+							+ sortedSpawner.getTemplate2() ;
 					break;
 				default:
 					break;
 				}
 			}
 
-			td.appendChild(new Text(additionalInfo));
+			td.appendChild(new Text(additionalInfo + " (" +(sortedSpawner.getName())+ ") "));
 			tr.appendChild(td);
 
 		}
 		body.appendChild(table);
 	}
-	
-	private void readFiles() {
+
+	private void readFiles(String gpo) {
+		System.out.print("Reading " + gpo);
 		// Check the file Init.con
 		setInitLines(fileReader.getFh2File(getBasePath() + FhtConstants.init));
 		setGamePlayObjects(fileReader.getFh2File(getBasePath()
-				+ FhtConstants.gamePlayObjects_64));
-		setMapdata(fileReader.getFh2File(getBasePath()
-				+ FhtConstants.mapdata));
+				+ gpo));
+		setMapdata(fileReader.getFh2File(getBasePath() + FhtConstants.mapdata));
 	}
-	
+
 	private void readObjects() {
 
 		setVehicleTypes(fillTypeMap("VehicleTypes.txt"));
@@ -1090,9 +1200,10 @@ public class BaseChecker {
 					.getValue().getDisplayName());
 		}
 	}
-	
+
 	private void readVehicleMasterdata() {
-		Collection<String> types = fileReader.getFile("vehicles_with_imagenames.txt");
+		Collection<String> types = fileReader
+				.getFile("vehicles_with_imagenames.txt");
 		String template, hudName, fh2ImageName;
 		StringTokenizer tok;
 		FH2Object o;
@@ -1116,14 +1227,14 @@ public class BaseChecker {
 		}
 		setVehicles(map);
 	}
-	
 
 	public void setBasePath(String basePath) {
 		this.basePath = basePath;
 	}
 
 	private void setFlagNames() {
-		Collection<String> localizations = fileReader.getFile(("fht_maps.txt"));
+		Collection<String> localizations = fileReader.getFh2File(FhtConstants.localization_path);
+				//fileReader.getFile(("fht_maps.txt"));
 		Iterator<String> it = localizations.iterator();
 		StringTokenizer tok;
 		String string;
@@ -1132,7 +1243,7 @@ public class BaseChecker {
 		int count = 0;
 		while (it.hasNext()) {
 			string = it.next();
-			System.out.println("Line: " + string);
+			// System.out.println("Line: " + string);
 			tok = new StringTokenizer(string, ";");
 			tokens.clear();
 			count = 0;
@@ -1140,7 +1251,7 @@ public class BaseChecker {
 				tokens.add(tok.nextToken().trim());
 				count++;
 			}
-			if (count == 2) {
+			if (count > 1) {
 				getFlagNames().put(tokens.get(0), tokens.get(1));
 
 			}
@@ -1163,32 +1274,35 @@ public class BaseChecker {
 		this.kitTypes = kitTypes;
 	}
 
-	private void setMapdata(Collection<String> mapdata_lines){
+	private void setMapdata(Collection<String> mapdata_lines) {
 		kitLimit = new HashMap<String, Float>();
 		Iterator<String> it = mapdata_lines.iterator();
-		
+
 		String line = new String();
-		while (it.hasNext()){
+		while (it.hasNext()) {
 			line = it.next().trim();
-			if (line.contains("plugin(limitKit")){
-				kitLimit.put(getKitFromLimitKitMapdata(line), getLimitfromLimitKitMapdata(line));
+			if (line.contains("plugin(limitKit")) {
+				kitLimit.put(getKitFromLimitKitMapdata(line),
+						getLimitfromLimitKitMapdata(line));
 			}
-//			if (line.contains("plugin(spawnerCondition")) {
-//				spawnerCondition.put(getSpawnerFromSpawnerCondition(line), getTeamFlagFromSpawnerCondition(line));
-//			}
-			
+			// if (line.contains("plugin(spawnerCondition")) {
+			// spawnerCondition.put(getSpawnerFromSpawnerCondition(line),
+			// getTeamFlagFromSpawnerCondition(line));
+			// }
+
 		}
 	}
-	
-	private String getSpawnerFromSpawnerCondition(String line){
+
+	private String getSpawnerFromSpawnerCondition(String line) {
 		String ret = new String();
 		return ret;
 	}
 
-	private String getTeamFlagFromSpawnerCondition(String line){
+	private String getTeamFlagFromSpawnerCondition(String line) {
 		String ret = new String();
 		return ret;
 	}
+
 	public void setVehicles(HashMap<String, FH2Object> vehicles) {
 		this.vehicles = vehicles;
 	}
