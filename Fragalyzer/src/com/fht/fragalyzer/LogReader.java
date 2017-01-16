@@ -11,35 +11,42 @@ import java.nio.file.Paths;
 import java.nio.file.SimpleFileVisitor;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Iterator;
-import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
+import java.util.Set;
 
+import org.json.simple.JSONObject;
+
+import com.fht.fragalyzer.types.DataPoint;
 
 
 public class LogReader {
-	
+
 	public ArrayList<LogEntry> ret;
-	
+
 	public ArrayList<LogEntry> readBattleLogs(String basePath) {
 		System.out.println(basePath);
 		Path p = Paths.get(basePath);
 		ret = new ArrayList<>();
 		LogMapper mapper = new LogMapper();
-		
+		LogEntry logEntry;
+		HashMap<String, DataPoint> heatmapHM = new HashMap<>();
+		String heatmapCoord;
+		Kill kill;
+
+		//Walk over all faLog files
 		int count = 0;
 		FileVisitor<Path> fv = new SimpleFileVisitor<Path>() {
 			@Override
-			public FileVisitResult visitFile(Path file,
-					BasicFileAttributes attrs) throws IOException {
+			public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
 				Scanner scanner;
 				int dot = file.toString().lastIndexOf(".");
 				LogEntry entry;
-				if (file.toString().substring(dot -5, dot).equals(FragalyzerConstants.logfilename)) {
+				if (file.toString().substring(dot - 5, dot).equals(FragalyzerConstants.logfilename)) {
 					System.out.println(file);
-					//System.out.println();
-					String fileName = file.getFileName().toString();
-				
+										
 					try {
 						scanner = new Scanner(file);
 					} catch (FileNotFoundException e) {
@@ -48,15 +55,17 @@ public class LogReader {
 					// now read the file line by line...
 
 					while (scanner.hasNextLine()) {
-						String line = scanner.nextLine();						
-						//System.out.println(line);
+						//Read each file from the from the log..
+						String line = scanner.nextLine();
+						//..and create a proper entry from it
 						entry = mapper.createLogEntryFromLogLine(line);
+						//If an entry was created, add it to the List
 						if (entry != null)
 							ret.add(entry);
-						
+
 					}
 					scanner.close();
-					
+
 				}
 
 				return FileVisitResult.CONTINUE;
@@ -69,13 +78,44 @@ public class LogReader {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		
+		//Create from the now created Entries a human-readable list of events
 		FileWriter fw = null;
+		DataPoint dpo;
 		try {
-			 fw = new FileWriter(basePath + "//result.txt");
+			fw = new FileWriter(basePath + "//result.txt");
 			Iterator<LogEntry> it = ret.iterator();
 			while (it.hasNext()) {
+				logEntry = it.next();
+				//Right now we are only interested in Kills
+				if (logEntry instanceof Kill) {
+					kill = (Kill) logEntry;
+					//If a Position is given, then..
+					if (kill.getPlayerPosition() != null) {
+						
+						//..determine the Coordinate where it occured
+						heatmapCoord = Double.toString(kill.getPlayerPosition().getXNormalizedDatapointRounded(1)) + "/" +
+								Double.toString(kill.getPlayerPosition().getZNormalizedDatapointRounded(1));
+						
+						//Check if a kill has already occured at that coordinate...
+						if (heatmapHM.containsKey(heatmapCoord)) {
+							//..and add this to it if so
+							dpo = heatmapHM.get(heatmapCoord);
+							dpo.setNumber(dpo.getNumber() + 1);
+							heatmapHM.put(heatmapCoord, dpo);
+						} else {
+							//Otherwise create a new DataPoint for this kill
+							dpo = new DataPoint();
+							dpo.setX(kill.getPlayerPosition().getXNormalizedDatapointRounded(1));
+							dpo.setY(kill.getPlayerPosition().getZNormalizedDatapointRounded(1));
+							dpo.setNumber(1);
+							heatmapHM.put(heatmapCoord, dpo);
+						}
+					}
 
-				fw.write(it.next().toString());
+				}
+				//Write the event to the file
+				fw.write(logEntry.toString());
 				fw.append(System.getProperty("line.separator")); // e.g. "\n"
 
 			}
@@ -88,9 +128,74 @@ public class LogReader {
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
-		}		
-		
+		}
+
+		Iterator<String> itkit = mapper.missingKits.iterator();
+		while (itkit.hasNext())
+			System.out.println(itkit.next());
+
+		// Getting a Set of Key-value pairs
+		Set entrySet = heatmapHM.entrySet();
+
+		// Obtaining an iterator for the entry set
+		Iterator it = entrySet.iterator();
+		JSONObject obj;
+		String x, y;
+		fw = null;
+		try {
+			fw = new FileWriter(basePath + "//heatmap_with_number.json");
+			fw.write("[");
+			
+			fw.append(System.getProperty("line.separator")); // e.g.
+			while (it.hasNext()) {
+				obj = new JSONObject();
+				Map.Entry me = (Map.Entry) it.next();
+				dpo = (DataPoint) me.getValue();
+
+				obj.put("x", dpo.getX());
+				obj.put("y", dpo.getY());
+				obj.put("value", dpo.getNumber());
+				
+				fw.write(obj.toJSONString() + ",");
+				
+				fw.append(System.getProperty("line.separator")); // e.g.
+																	// "\n"
+
+			}
+			fw.write("]");
+
+		} catch (IOException e) {
+			System.err.println("Konnte Datei nicht erstellen");
+		} finally {
+			if (fw != null)
+				try {
+					fw.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+		}
+
+		/*
+		 * Iterator<LogEntry> dp_it = ret.iterator();
+		 * 
+		 * fw = null; try { fw = new FileWriter(basePath + "//heatmap.json");
+		 * while (dp_it.hasNext()) { obj = new JSONObject(); logEntry =
+		 * dp_it.next(); if (logEntry.getPlayerPosition() != null) {
+		 * obj.put("x",
+		 * logEntry.getPlayerPosition().getXNormalizedDatpointRep());
+		 * obj.put("y",
+		 * logEntry.getPlayerPosition().getZNormalizedDatapointRep());
+		 * obj.put("value", logEntry.toString());
+		 * 
+		 * fw.write(obj.toJSONString());
+		 * fw.append(System.getProperty("line.separator")); // e.g. // "\n"
+		 * 
+		 * } } } catch (IOException e) { System.err.println(
+		 * "Konnte Datei nicht erstellen"); } finally { if (fw != null) try {
+		 * fw.close(); } catch (IOException e) { e.printStackTrace(); } }
+		 */
 		return ret;
-		
+
 	}
+
 }

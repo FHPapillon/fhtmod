@@ -2,6 +2,8 @@ package com.fht.fragalyzer;
 
 import java.util.Date;
 
+import com.fht.fragalyzer.types.EventType;
+
 public abstract class LogEntry {
 	private EventType eventType;
     private Position playerPosition;

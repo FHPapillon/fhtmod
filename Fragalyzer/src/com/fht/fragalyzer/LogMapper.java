@@ -1,13 +1,21 @@
 package com.fht.fragalyzer;
 
+import java.util.ArrayList;
 import java.util.StringTokenizer;
 
+import com.fht.fragalyzer.types.EventType;
+import com.fht.fragalyzer.types.KillType;
+
 public class LogMapper {
+	
+	public ArrayList<String> missingKits;
+	
 	public LogEntry createLogEntryFromLogLine(String logLine) {
 		String token;
 		int tokenCounter = 0;
 		boolean relevant = true;
 		LogEntry entry = null;
+		missingKits = new ArrayList<>();
 		StringTokenizer tok = new StringTokenizer(logLine, FragalyzerConstants.logDelimiter);
 		while (tok.hasMoreTokens() && relevant) {
 			token = tok.nextToken();
@@ -89,7 +97,8 @@ public class LogMapper {
 					break;
 				}
 			}
-
+			kill = sanitizeKill(kill);
+			kill = addMetaData(kill);
 			return sanitizeKill(kill);
 
 		default:
@@ -97,9 +106,29 @@ public class LogMapper {
 		}
 		return null;
 	}
+	
+	private Kill addMetaData(Kill kill){
+		switch (kill.getKillType()) {
+		case INF_INF:
+			if (FragalyzerConstants.kitTypes.containsKey(kill.getPlayerKit()))
+				kill.setAttackerKitType(FragalyzerConstants.kitTypes.get(kill.getPlayerKit()));
+			else
+				missingKits.add(kill.getPlayerKit());
+			if (FragalyzerConstants.kitTypes.containsKey(kill.getVictimKit()))
+				kill.setVictimKitType(FragalyzerConstants.kitTypes.get(kill.getVictimKit()));
+			else
+				missingKits.add(kill.getVictimKit());
+			break;
+
+		default:
+			break;
+		}
+		return kill;
+	}
 
 	private Position getPositionFromLog(String logPosition) {
 		Position pos = new Position();
+		double value;
 		StringTokenizer tok = new StringTokenizer(logPosition, ",");
 		String token;
 		int count = 0;
@@ -123,6 +152,8 @@ public class LogMapper {
 		return pos;
 
 	}
+	
+
 
 	private Kill sanitizeKill(Kill kill) {
 		// Suicide
@@ -193,4 +224,6 @@ public class LogMapper {
 
 		}
 	}
+	
+	
 }

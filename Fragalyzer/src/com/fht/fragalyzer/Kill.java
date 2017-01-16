@@ -1,5 +1,10 @@
 package com.fht.fragalyzer;
 
+import com.fht.fragalyzer.types.KillType;
+import com.fht.fragalyzer.types.KitType;
+import com.fht.fragalyzer.types.VehicleType;
+import com.fht.fragalyzer.types.WeaponType;
+
 public class Kill extends LogEntry {
 	private KillType killType;
 	private String victim;
@@ -8,6 +13,49 @@ public class Kill extends LogEntry {
 	private String victimKit;
 	private String victimTeam;
 	private boolean teamkill;
+	private WeaponType attackerWeaponType;
+	private WeaponType victimWeaponType;
+	private KitType attackerKitType;
+	public WeaponType getAttackerWeaponType() {
+		return attackerWeaponType;
+	}
+	public void setAttackerWeaponType(WeaponType attackerWeaponType) {
+		this.attackerWeaponType = attackerWeaponType;
+	}
+	public WeaponType getVictimWeaponType() {
+		return victimWeaponType;
+	}
+	public void setVictimWeaponType(WeaponType victimWeaponType) {
+		this.victimWeaponType = victimWeaponType;
+	}
+	public KitType getAttackerKitType() {
+		return attackerKitType;
+	}
+	public void setAttackerKitType(KitType attackerKitType) {
+		this.attackerKitType = attackerKitType;
+	}
+	public KitType getVictimKitType() {
+		return victimKitType;
+	}
+	public void setVictimKitType(KitType victimKitType) {
+		this.victimKitType = victimKitType;
+	}
+	public VehicleType getAttackerVehicleType() {
+		return attackerVehicleType;
+	}
+	public void setAttackerVehicleType(VehicleType attackerVehicleType) {
+		this.attackerVehicleType = attackerVehicleType;
+	}
+	public VehicleType getVictimVehicleType() {
+		return victimVehicleType;
+	}
+	public void setVictimVehicleType(VehicleType victimVehicleType) {
+		this.victimVehicleType = victimVehicleType;
+	}
+	private KitType victimKitType;
+	private VehicleType attackerVehicleType;
+	private VehicleType victimVehicleType;
+	
 	public String getVictim() {
 		return victim;
 	}
@@ -53,7 +101,7 @@ public class Kill extends LogEntry {
 			ret = getPlayer() + " suicided";
 			break;
 		case INF_INF:
-			ret = getPlayer() + ((isTeamkill()) ? " teamkilled "  : " killed ") + getVictim() + " with " + getWeapon();
+			ret = getPlayer() + ((isTeamkill()) ? " teamkilled "  : " killed ") + getVictim() + " with " + getWeapon() + ": " + FragalyzerConstants.kitNames.get(getAttackerKitType()) + " vs " + FragalyzerConstants.kitNames.get(getVictimKitType());
 			break;
 		case INF_VEHICLE:
 			ret = getPlayer() +  ((isTeamkill()) ? " teamkilled with"  : " killed with")  + getWeapon() + " " + getVictim() + " in his " + getVictimVehicle()  ;
@@ -67,7 +115,7 @@ public class Kill extends LogEntry {
 		default:
 			break;
 		}
-
+		
 		return ret;
 	}
 	public boolean isTeamkill() {

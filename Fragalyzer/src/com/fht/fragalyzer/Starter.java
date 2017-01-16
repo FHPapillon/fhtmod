@@ -1,5 +1,4 @@
 package com.fht.fragalyzer;
-
 public class Starter {
 
 	public static void main(String[] args) {
