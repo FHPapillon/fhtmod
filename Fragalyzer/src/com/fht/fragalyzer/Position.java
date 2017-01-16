@@ -4,7 +4,7 @@ public class Position {
 	private double x;
 	private double y;
 	private double z;
-	private static final double calculationFactor = 9.5;
+	private static final double calculationFactor = 4.096;
 	private static final int scale = 2048;
 	private static final int mapSizeFactor = 2;
 
@@ -33,11 +33,11 @@ public class Position {
 	}
 
 	public double getZNormalized() {
-		return convertBF2CoordinateToNormalOne(z);
+		return convertBF2CoordinateToNormal(z);
 	}
 
 	public double getXNormalized() {
-		return convertBF2CoordinateToNormalOne(x);
+		return convertBF2CoordinateToNormal(x);
 	}
 	
 	public String getZNormalizedDatapointRep() {
@@ -57,11 +57,28 @@ public class Position {
 	}	
 	
 
+	private Double convertBF2CoordinateToNormal(double bf2CoordinateValue) {
+		double value, scaled_value;
+		value = bf2CoordinateValue;
+
+		scaled_value = value + 250;
+		
+		scaled_value = scaled_value * calculationFactor;
+		
+		if (scaled_value <0)
+			scaled_value = 0;
+		if (scaled_value > 2048)
+			scaled_value = 2048;
+		return new Double(scaled_value);
+	}
 
 	private Double convertBF2CoordinateToNormalOne(double bf2CoordinateValue) {
 		double value, scaled_value;
 		value = bf2CoordinateValue;
 
+		scaled_value = value + 250;
+		
+		
 		scaled_value = value * calculationFactor;
 		value = scale + scaled_value;
 

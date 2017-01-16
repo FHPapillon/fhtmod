@@ -94,8 +94,8 @@ public class LogReader {
 					if (kill.getPlayerPosition() != null) {
 						
 						//..determine the Coordinate where it occured
-						heatmapCoord = Double.toString(kill.getPlayerPosition().getXNormalizedDatapointRounded(1)) + "/" +
-								Double.toString(kill.getPlayerPosition().getZNormalizedDatapointRounded(1));
+						heatmapCoord = Double.toString(kill.getPlayerPosition().getXNormalizedDatapointRounded(50)) + "/" +
+								Double.toString(kill.getPlayerPosition().getZNormalizedDatapointRounded(50));
 						
 						//Check if a kill has already occured at that coordinate...
 						if (heatmapHM.containsKey(heatmapCoord)) {
@@ -106,8 +106,8 @@ public class LogReader {
 						} else {
 							//Otherwise create a new DataPoint for this kill
 							dpo = new DataPoint();
-							dpo.setX(kill.getPlayerPosition().getXNormalizedDatapointRounded(1));
-							dpo.setY(kill.getPlayerPosition().getZNormalizedDatapointRounded(1));
+							dpo.setX(kill.getPlayerPosition().getXNormalizedDatapointRounded(50));
+							dpo.setY(kill.getPlayerPosition().getZNormalizedDatapointRounded(50));
 							dpo.setNumber(1);
 							heatmapHM.put(heatmapCoord, dpo);
 						}
