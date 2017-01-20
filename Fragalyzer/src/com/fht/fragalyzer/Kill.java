@@ -15,7 +15,29 @@ public class Kill extends LogEntry {
 	private boolean teamkill;
 	private WeaponType attackerWeaponType;
 	private WeaponType victimWeaponType;
+	private KitType victimKitType;
+	private VehicleType attackerVehicleType;
+	private VehicleType victimVehicleType;
+	private String attackerVehicleName;
+	private String victimVehicleName;
+
 	private KitType attackerKitType;
+	
+	
+	public String getAttackerVehicleName() {
+		return attackerVehicleName;
+	}
+	public void setAttackerVehicleName(String attackerVehicleName) {
+		this.attackerVehicleName = attackerVehicleName;
+	}
+	public String getVictimVehicleName() {
+		return victimVehicleName;
+	}
+	public void setVictimVehicleName(String victimVehicleName) {
+		this.victimVehicleName = victimVehicleName;
+	}
+
+
 	public WeaponType getAttackerWeaponType() {
 		return attackerWeaponType;
 	}
@@ -52,10 +74,7 @@ public class Kill extends LogEntry {
 	public void setVictimVehicleType(VehicleType victimVehicleType) {
 		this.victimVehicleType = victimVehicleType;
 	}
-	private KitType victimKitType;
-	private VehicleType attackerVehicleType;
-	private VehicleType victimVehicleType;
-	
+
 	public String getVictim() {
 		return victim;
 	}
@@ -95,22 +114,37 @@ public class Kill extends LogEntry {
 	
 	public String toString() {
 		String ret = new String();
+		String killtext = new String();
+		
+		if (isTeamkill())
+			killtext =  " teamkilled " ;
+		else
+			killtext = " killed ";				
+		
+		killtext = getPlayer() + killtext + getVictim();
 		
 		switch (getKillType()) {
+		
 		case SUICIDE:
-			ret = getPlayer() + " suicided";
+			ret = getKillType() + "  " + getPlayer() + " suicided";
 			break;
 		case INF_INF:
-			ret = getPlayer() + ((isTeamkill()) ? " teamkilled "  : " killed ") + getVictim() + " with " + getWeapon() + ": " + FragalyzerConstants.kitNames.get(getAttackerKitType()) + " vs " + FragalyzerConstants.kitNames.get(getVictimKitType());
+			ret = killtext + " with " + getWeapon() + " (" + getKillType() + " " + FragalyzerConstants.kitNames.get(getAttackerKitType()) + " vs " +  FragalyzerConstants.kitNames.get(getVictimKitType()) +  ")";
+			//;ret = getKillType() + "  " +getPlayer() + ((isTeamkill()) ? " teamkilled "  : " killed ") + getVictim() + " with " + getWeapon() + ": " + FragalyzerConstants.kitNames.get(getAttackerKitType()) + " vs " + FragalyzerConstants.kitNames.get(getVictimKitType());
 			break;
 		case INF_VEHICLE:
-			ret = getPlayer() +  ((isTeamkill()) ? " teamkilled with"  : " killed with")  + getWeapon() + " " + getVictim() + " in his " + getVictimVehicle()  ;
+			ret = killtext + " with " + getWeapon() + " (" + getKillType() + " " + FragalyzerConstants.kitNames.get(getAttackerKitType()) + " vs " +  getVehicleName(getVictimVehicle()) +  ")";
+			
+			//ret = getKillType() + "  " +getPlayer() +  ((isTeamkill()) ? " teamkilled with"  : " killed with")  + getWeapon() + " " + getVictim() + " in his " + getVictimVehicle()  ;
 			break;		
 		case VEHICLE_INF:
-			ret = getPlayer() +  ((isTeamkill()) ? " teamkilled "  : " killed ")  + getVictim() + " with " + getVehicle() + "/" + getWeapon();
+			ret = killtext + " with " + getVehicleName(getVehicle())+ " (" + getKillType() + " " + FragalyzerConstants.vehicleNames.get(getVehicle()) + " vs " +  FragalyzerConstants.kitNames.get(getVictimKitType()) +  ")";
+			
+			//ret = getKillType() + "  " +getPlayer() +  ((isTeamkill()) ? " teamkilled "  : " killed ")  + getVictim() + " with " + getAttackerVehicleName() + "/" + getWeapon();
 			break;	
 		case VEHICLE_VEHICLE:
-			ret = getPlayer() +  ((isTeamkill()) ? " teamkilled with"  : " killed with ") + getVehicle() + "/" + getWeapon() + getVictim() + " in his " + getVictimVehicle();
+			ret = killtext + " with " + getVehicleName(getVehicle())+ " (" + getKillType() + " " + FragalyzerConstants.vehicleNames.get(getVehicle()) + " vs " +  FragalyzerConstants.vehicleNames.get(getVictimVehicle()) +  ")";
+			
 			break;								
 		default:
 			break;
@@ -118,6 +152,14 @@ public class Kill extends LogEntry {
 		
 		return ret;
 	}
+	
+	private String getVehicleName(String name){
+		if (FragalyzerConstants.vehicleNames.containsKey(name))
+			return FragalyzerConstants.vehicleNames.get(name);
+		else
+			return name;
+	}
+	
 	public boolean isTeamkill() {
 		return teamkill;
 	}

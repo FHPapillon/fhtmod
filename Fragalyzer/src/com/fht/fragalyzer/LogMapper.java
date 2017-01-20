@@ -1,6 +1,7 @@
 package com.fht.fragalyzer;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.StringTokenizer;
 
 import com.fht.fragalyzer.types.EventType;
@@ -8,14 +9,14 @@ import com.fht.fragalyzer.types.KillType;
 
 public class LogMapper {
 	
-	public ArrayList<String> missingKits;
+	public HashMap<String, String> missingKits;
 	
-	public LogEntry createLogEntryFromLogLine(String logLine) {
+	public LogEntry createLogEntryFromLogLine(HashMap<String, String> in_missingKits, String logLine) {
 		String token;
 		int tokenCounter = 0;
 		boolean relevant = true;
 		LogEntry entry = null;
-		missingKits = new ArrayList<>();
+		missingKits =in_missingKits;
 		StringTokenizer tok = new StringTokenizer(logLine, FragalyzerConstants.logDelimiter);
 		while (tok.hasMoreTokens() && relevant) {
 			token = tok.nextToken();
@@ -25,7 +26,7 @@ public class LogMapper {
 			case 1:
 				if (token.equals(FragalyzerConstants.KILL)) {
 					entry = populateLogEntry(logLine, EventType.KILL);
-					System.out.println(entry.toString());
+					//System.out.println(entry.toString());
 					return entry;
 				}
 				break;
@@ -64,7 +65,7 @@ public class LogMapper {
 					kill.setPlayer(logValue);
 					break;
 				case (FragalyzerConstants.AttackerKit):
-					kill.setPlayerKit(logValue);
+					kill.setPlayerKit(logValue.toLowerCase());
 					break;
 				case (FragalyzerConstants.AttackerTeam):
 					kill.setPlayerTeam(logValue);
@@ -76,7 +77,7 @@ public class LogMapper {
 					kill.setWeapon(logValue);
 					break;
 				case (FragalyzerConstants.VictimKit):
-					kill.setVictimKit(logValue);
+					kill.setVictimKit(logValue.toLowerCase());
 					break;
 				case (FragalyzerConstants.VictimName):
 					kill.setVictim(logValue);
@@ -109,20 +110,65 @@ public class LogMapper {
 	
 	private Kill addMetaData(Kill kill){
 		switch (kill.getKillType()) {
+
+		case VEHICLE_INF:
+		case INF_VEHICLE:
+		case VEHICLE_VEHICLE:		
 		case INF_INF:
 			if (FragalyzerConstants.kitTypes.containsKey(kill.getPlayerKit()))
 				kill.setAttackerKitType(FragalyzerConstants.kitTypes.get(kill.getPlayerKit()));
 			else
-				missingKits.add(kill.getPlayerKit());
+				missingKits.put("k: " +kill.getPlayerKit(), "");
 			if (FragalyzerConstants.kitTypes.containsKey(kill.getVictimKit()))
 				kill.setVictimKitType(FragalyzerConstants.kitTypes.get(kill.getVictimKit()));
 			else
-				missingKits.add(kill.getVictimKit());
-			break;
+				missingKits.put("v: " +kill.getVictimKit(), "");			
+			if (FragalyzerConstants.vehicleTypes.containsKey(kill.getVehicle()))
+				kill.setAttackerVehicleType(FragalyzerConstants.vehicleTypes.get(kill.getVehicle()));
+			else
+				missingKits.put("v: " +kill.getVehicle(), "");
+			if (FragalyzerConstants.vehicleTypes.containsKey(kill.getVictimVehicle()))
+				kill.setVictimVehicleType(FragalyzerConstants.vehicleTypes.get(kill.getVictimVehicle()));
+			else
+				missingKits.put("v: " +kill.getVictimVehicle(), "");
+			if (FragalyzerConstants.weaponTypes.containsKey(kill.getWeapon()))
+				kill.setAttackerWeaponType(FragalyzerConstants.weaponTypes.get(kill.getWeapon()));
+			else
+				missingKits.put("w: " +kill.getWeapon(), "");			
 
+			if (FragalyzerConstants.vehicleNames.containsKey(kill.getVehicle()))
+				kill.setAttackerVehicleName(FragalyzerConstants.vehicleNames.get(kill.getVehicle()));
+			else
+				missingKits.put("w: " +kill.getVehicle(), "");			
+			
+			if (FragalyzerConstants.vehicleNames.containsKey(kill.getVictimVehicle()))
+				kill.setVictimVehicleName(FragalyzerConstants.vehicleNames.get(kill.getVictimVehicle()));
+			else
+				missingKits.put("w: " +kill.getVictimVehicle(), "");						
+			break;			
+			
 		default:
+			/*
+			if (FragalyzerConstants.kitTypes.containsKey(kill.getPlayerKit()))
+				kill.setAttackerKitType(FragalyzerConstants.kitTypes.get(kill.getPlayerKit()));
+			else
+				missingKits.put(kill.getPlayerKit(), "");
+			if (FragalyzerConstants.kitTypes.containsKey(kill.getVictimKit()))
+				kill.setVictimKitType(FragalyzerConstants.kitTypes.get(kill.getVictimKit()));
+			else
+				missingKits.put(kill.getVictimKit(), "");
+			
+			if (FragalyzerConstants.weaponTypes.containsKey(kill.getWeapon()))
+				kill.setAttackerWeaponType(FragalyzerConstants.weaponTypes.get(kill.getWeapon()));
+			else
+				missingKits.put(kill.getWeapon(), "");
+	*/
 			break;
 		}
+		return kill;
+	}
+	
+	private Kill setKitAndWeapon(Kill kill){
 		return kill;
 	}
 

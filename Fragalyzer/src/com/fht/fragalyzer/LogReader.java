@@ -21,7 +21,6 @@ import org.json.simple.JSONObject;
 
 import com.fht.fragalyzer.types.DataPoint;
 
-
 public class LogReader {
 
 	public ArrayList<LogEntry> ret;
@@ -32,11 +31,12 @@ public class LogReader {
 		ret = new ArrayList<>();
 		LogMapper mapper = new LogMapper();
 		LogEntry logEntry;
+		HashMap<String, String> missingKits = new HashMap<>();
 		HashMap<String, DataPoint> heatmapHM = new HashMap<>();
 		String heatmapCoord;
 		Kill kill;
 
-		//Walk over all faLog files
+		// Walk over all faLog files
 		int count = 0;
 		FileVisitor<Path> fv = new SimpleFileVisitor<Path>() {
 			@Override
@@ -46,7 +46,7 @@ public class LogReader {
 				LogEntry entry;
 				if (file.toString().substring(dot - 5, dot).equals(FragalyzerConstants.logfilename)) {
 					System.out.println(file);
-										
+
 					try {
 						scanner = new Scanner(file);
 					} catch (FileNotFoundException e) {
@@ -55,11 +55,11 @@ public class LogReader {
 					// now read the file line by line...
 
 					while (scanner.hasNextLine()) {
-						//Read each file from the from the log..
+						// Read each file from the from the log..
 						String line = scanner.nextLine();
-						//..and create a proper entry from it
-						entry = mapper.createLogEntryFromLogLine(line);
-						//If an entry was created, add it to the List
+						// ..and create a proper entry from it
+						entry = mapper.createLogEntryFromLogLine(missingKits, line);
+						// If an entry was created, add it to the List
 						if (entry != null)
 							ret.add(entry);
 
@@ -78,8 +78,8 @@ public class LogReader {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
-		//Create from the now created Entries a human-readable list of events
+
+		// Create from the now created Entries a human-readable list of events
 		FileWriter fw = null;
 		DataPoint dpo;
 		try {
@@ -87,34 +87,14 @@ public class LogReader {
 			Iterator<LogEntry> it = ret.iterator();
 			while (it.hasNext()) {
 				logEntry = it.next();
-				//Right now we are only interested in Kills
+				// Right now we are only interested in Kills
 				if (logEntry instanceof Kill) {
 					kill = (Kill) logEntry;
-					//If a Position is given, then..
-					if (kill.getPlayerPosition() != null) {
-						
-						//..determine the Coordinate where it occured
-						heatmapCoord = Double.toString(kill.getPlayerPosition().getXNormalizedDatapointRounded(1)) + "/" +
-								Double.toString(kill.getPlayerPosition().getZNormalizedDatapointRounded(1));
-						
-						//Check if a kill has already occured at that coordinate...
-						if (heatmapHM.containsKey(heatmapCoord)) {
-							//..and add this to it if so
-							dpo = heatmapHM.get(heatmapCoord);
-							dpo.setNumber(dpo.getNumber() + 1);
-							heatmapHM.put(heatmapCoord, dpo);
-						} else {
-							//Otherwise create a new DataPoint for this kill
-							dpo = new DataPoint();
-							dpo.setX(kill.getPlayerPosition().getXNormalizedDatapointRounded(1));
-							dpo.setY(kill.getPlayerPosition().getZNormalizedDatapointRounded(1));
-							dpo.setNumber(1);
-							heatmapHM.put(heatmapCoord, dpo);
-						}
-					}
+					// If a Position is given, then..
+					heatmapHM =  getDataPoints(heatmapHM, kill);
 
 				}
-				//Write the event to the file
+				// Write the event to the file
 				fw.write(logEntry.toString());
 				fw.append(System.getProperty("line.separator")); // e.g. "\n"
 
@@ -130,9 +110,9 @@ public class LogReader {
 				}
 		}
 
-		Iterator<String> itkit = mapper.missingKits.iterator();
+		Iterator  itkit = missingKits.entrySet().iterator();
 		while (itkit.hasNext())
-			System.out.println(itkit.next());
+			System.out.println(((Map.Entry)itkit.next()).getKey());
 
 		// Getting a Set of Key-value pairs
 		Set entrySet = heatmapHM.entrySet();
@@ -145,7 +125,7 @@ public class LogReader {
 		try {
 			fw = new FileWriter(basePath + "//heatmap_with_number.json");
 			fw.write("[");
-			
+
 			fw.append(System.getProperty("line.separator")); // e.g.
 			while (it.hasNext()) {
 				obj = new JSONObject();
@@ -155,9 +135,9 @@ public class LogReader {
 				obj.put("x", dpo.getX());
 				obj.put("y", dpo.getY());
 				obj.put("value", dpo.getNumber());
-				
+
 				fw.write(obj.toJSONString() + ",");
-				
+
 				fw.append(System.getProperty("line.separator")); // e.g.
 																	// "\n"
 
@@ -198,4 +178,53 @@ public class LogReader {
 
 	}
 
+	private HashMap<String, DataPoint> getDataPoints(HashMap<String, DataPoint> heatmap, Kill kill) {
+		String heatmapCoord;
+		DataPoint dpo;
+
+		if (kill.getPlayerPosition() != null) {
+
+			// ..determine the Coordinate where it occured
+			heatmapCoord = Double.toString(kill.getPlayerPosition().getXNormalizedDatapointRounded(1)) + "/"
+					+ Double.toString(kill.getPlayerPosition().getZNormalizedDatapointRounded(1));
+
+			// Check if a kill has already occured at that coordinate...
+			if (heatmap.containsKey(heatmapCoord)) {
+				// ..and add this to it if so
+				dpo = heatmap.get(heatmapCoord);
+				dpo.setNumber(dpo.getNumber() + 1);
+				heatmap.put(heatmapCoord, dpo);
+			} else {
+				// Otherwise create a new DataPoint for this kill
+				dpo = new DataPoint();
+				dpo.setX(kill.getPlayerPosition().getXNormalizedDatapointRounded(1));
+				dpo.setY(kill.getPlayerPosition().getZNormalizedDatapointRounded(1));
+				dpo.setNumber(1);
+				heatmap.put(heatmapCoord, dpo);
+			}
+		}
+		
+		if (kill.getVictimPosition() != null) {
+
+			// ..determine the Coordinate where it occured
+			heatmapCoord = Double.toString(kill.getVictimPosition().getXNormalizedDatapointRounded(1)) + "/"
+					+ Double.toString(kill.getVictimPosition().getZNormalizedDatapointRounded(1));
+
+			// Check if a kill has already occured at that coordinate...
+			if (heatmap.containsKey(heatmapCoord)) {
+				// ..and add this to it if so
+				dpo = heatmap.get(heatmapCoord);
+				dpo.setNumber(dpo.getNumber() + 1);
+				heatmap.put(heatmapCoord, dpo);
+			} else {
+				// Otherwise create a new DataPoint for this kill
+				dpo = new DataPoint();
+				dpo.setX(kill.getVictimPosition().getXNormalizedDatapointRounded(1));
+				dpo.setY(kill.getVictimPosition().getZNormalizedDatapointRounded(1));
+				dpo.setNumber(1);
+				heatmap.put(heatmapCoord, dpo);
+			}
+		}		
+		return heatmap;
+	}
 }

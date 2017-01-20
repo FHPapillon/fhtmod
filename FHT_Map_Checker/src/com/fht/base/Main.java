@@ -7,11 +7,11 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 		
-		//ObjectCrawler oc = new ObjectCrawler();
-		//oc.getObjects("d://fh2_fht_dev//objects//");
+		ObjectCrawler oc = new ObjectCrawler();
+		oc.getObjects("C://Program Files (x86)//EA Games//Battlefield 2//mods//fh2//objects//");
 		
-		BaseChecker bc = new BaseChecker();
-		bc.check(args);
+		//BaseChecker bc = new BaseChecker();
+		//bc.check(args);
 		
 
 	}
