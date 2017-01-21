@@ -224,7 +224,7 @@ public class ObjectCrawler {
 						if (realName != null)  {
 							if (onlyTeamlock &&  isTeamlocked)
 								try {
-								temp_list.add("put(" +'\u0022' + fileName.substring(0, fileName.lastIndexOf(".")) + ", "
+								temp_list.add("put(" +'\u0022' + fileName.substring(0, fileName.lastIndexOf(".")) +'\u0022' + ", "
 										+ '\u0022' + realName + '\u0022' + ");");
 								} catch (NullPointerException e) {
 									temp_list.add(fileName + ", "
@@ -234,7 +234,7 @@ public class ObjectCrawler {
 								
 							if (!onlyTeamlock && !isTeamlocked)
 								try {
-									temp_list.add("put(" +'\u0022' + fileName.substring(0, fileName.lastIndexOf(".")) + ", "
+									temp_list.add("put(" +'\u0022' + fileName.substring(0, fileName.lastIndexOf(".")) +'\u0022' + ", "
 											+ '\u0022' +  realName+ '\u0022' + ");" );
 								} catch (NullPointerException e) {
 									temp_list.add(realName );

@@ -6,7 +6,7 @@ public class Starter {
 		
 		
 		Ranker ranker = new Ranker();
-		ranker.rank(lr.readBattleLogs("c://data//Fragalyzer"));
+		ranker.rank(lr.readBattleLogs("E://fht//fh2//Campaign_19//Fragalyzer"));
 
 	}
 

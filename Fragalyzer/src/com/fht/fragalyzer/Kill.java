@@ -126,24 +126,21 @@ public class Kill extends LogEntry {
 		switch (getKillType()) {
 		
 		case SUICIDE:
-			ret = getKillType() + "  " + getPlayer() + " suicided";
+			ret =  getPlayer() + " suicided";
 			break;
 		case INF_INF:
-			ret = killtext + " with " + getWeapon() + " (" + getKillType() + " " + FragalyzerConstants.kitNames.get(getAttackerKitType()) + " vs " +  FragalyzerConstants.kitNames.get(getVictimKitType()) +  ")";
-			//;ret = getKillType() + "  " +getPlayer() + ((isTeamkill()) ? " teamkilled "  : " killed ") + getVictim() + " with " + getWeapon() + ": " + FragalyzerConstants.kitNames.get(getAttackerKitType()) + " vs " + FragalyzerConstants.kitNames.get(getVictimKitType());
+			ret = killtext + " with " + getWeaponName(getWeapon()) + " (" + " " + FragalyzerConstants.kitNames.get(getAttackerKitType()) + " vs " +  FragalyzerConstants.kitNames.get(getVictimKitType()) +  ")";
 			break;
 		case INF_VEHICLE:
-			ret = killtext + " with " + getWeapon() + " (" + getKillType() + " " + FragalyzerConstants.kitNames.get(getAttackerKitType()) + " vs " +  getVehicleName(getVictimVehicle()) +  ")";
+			ret = killtext + " with " + getWeaponName(getWeapon()) + " ("  + " " + FragalyzerConstants.kitNames.get(getAttackerKitType()) + " vs " +  getVehicleName(getVictimVehicle()) +  ")";
 			
-			//ret = getKillType() + "  " +getPlayer() +  ((isTeamkill()) ? " teamkilled with"  : " killed with")  + getWeapon() + " " + getVictim() + " in his " + getVictimVehicle()  ;
 			break;		
 		case VEHICLE_INF:
-			ret = killtext + " with " + getVehicleName(getVehicle())+ " (" + getKillType() + " " + FragalyzerConstants.vehicleNames.get(getVehicle()) + " vs " +  FragalyzerConstants.kitNames.get(getVictimKitType()) +  ")";
+			ret = killtext + " with " + getVehicleName(getVehicle())+ " ("  + " " + FragalyzerConstants.vehicleNames.get(getVehicle()) + " vs " +  FragalyzerConstants.kitNames.get(getVictimKitType()) +  ")";
 			
-			//ret = getKillType() + "  " +getPlayer() +  ((isTeamkill()) ? " teamkilled "  : " killed ")  + getVictim() + " with " + getAttackerVehicleName() + "/" + getWeapon();
 			break;	
 		case VEHICLE_VEHICLE:
-			ret = killtext + " with " + getVehicleName(getVehicle())+ " (" + getKillType() + " " + FragalyzerConstants.vehicleNames.get(getVehicle()) + " vs " +  FragalyzerConstants.vehicleNames.get(getVictimVehicle()) +  ")";
+			ret = killtext + " with " + getVehicleName(getVehicle())+ " (" + " " + FragalyzerConstants.vehicleNames.get(getVehicle()) + " vs " +  FragalyzerConstants.vehicleNames.get(getVictimVehicle()) +  ")";
 			
 			break;								
 		default:
@@ -152,6 +149,15 @@ public class Kill extends LogEntry {
 		
 		return ret;
 	}
+	
+	private String getWeaponName(String name){
+		if (FragalyzerConstants.weaponNames.containsKey(name))
+			return FragalyzerConstants.weaponNames.get(name);
+		else
+			return name;
+	}
+			
+	
 	
 	private String getVehicleName(String name){
 		if (FragalyzerConstants.vehicleNames.containsKey(name))

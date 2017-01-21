@@ -155,25 +155,7 @@ public class LogReader {
 				}
 		}
 
-		/*
-		 * Iterator<LogEntry> dp_it = ret.iterator();
-		 * 
-		 * fw = null; try { fw = new FileWriter(basePath + "//heatmap.json");
-		 * while (dp_it.hasNext()) { obj = new JSONObject(); logEntry =
-		 * dp_it.next(); if (logEntry.getPlayerPosition() != null) {
-		 * obj.put("x",
-		 * logEntry.getPlayerPosition().getXNormalizedDatpointRep());
-		 * obj.put("y",
-		 * logEntry.getPlayerPosition().getZNormalizedDatapointRep());
-		 * obj.put("value", logEntry.toString());
-		 * 
-		 * fw.write(obj.toJSONString());
-		 * fw.append(System.getProperty("line.separator")); // e.g. // "\n"
-		 * 
-		 * } } } catch (IOException e) { System.err.println(
-		 * "Konnte Datei nicht erstellen"); } finally { if (fw != null) try {
-		 * fw.close(); } catch (IOException e) { e.printStackTrace(); } }
-		 */
+
 		return ret;
 
 	}
