@@ -1,5 +1,7 @@
 package com.fht.fragalyzer;
 
+import java.time.LocalDateTime;
+
 import com.fht.fragalyzer.types.KillType;
 import com.fht.fragalyzer.types.KitType;
 import com.fht.fragalyzer.types.VehicleType;
@@ -20,9 +22,30 @@ public class Kill extends LogEntry {
 	private VehicleType victimVehicleType;
 	private String attackerVehicleName;
 	private String victimVehicleName;
-
+	private String mapname;
+	private int roundNumber;
+	private LocalDateTime datetime;
 	private KitType attackerKitType;
 	
+
+	public String getMapname() {
+		return mapname;
+	}
+	public void setMapname(String mapname) {
+		this.mapname = mapname;
+	}
+	public int getRoundNumber() {
+		return roundNumber;
+	}
+	public void setRoundNumber(int roundNumber) {
+		this.roundNumber = roundNumber;
+	}
+	public LocalDateTime getDatetime() {
+		return datetime;
+	}
+	public void setDatetime(LocalDateTime datetime) {
+		this.datetime = datetime;	
+	}
 	
 	public String getAttackerVehicleName() {
 		return attackerVehicleName;

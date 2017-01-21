@@ -1,22 +1,29 @@
 package com.fht.fragalyzer;
 
-import java.util.ArrayList;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.StringTokenizer;
 
 import com.fht.fragalyzer.types.EventType;
 import com.fht.fragalyzer.types.KillType;
 
 public class LogMapper {
-	
+
 	public HashMap<String, String> missingKits;
-	
+	private int roundCount;
+	private String mapname;
+
 	public LogEntry createLogEntryFromLogLine(HashMap<String, String> in_missingKits, String logLine) {
 		String token;
 		int tokenCounter = 0;
 		boolean relevant = true;
 		LogEntry entry = null;
-		missingKits =in_missingKits;
+		Kill kill;
+		missingKits = in_missingKits;
 		StringTokenizer tok = new StringTokenizer(logLine, FragalyzerConstants.logDelimiter);
 		while (tok.hasMoreTokens() && relevant) {
 			token = tok.nextToken();
@@ -25,12 +32,21 @@ public class LogMapper {
 			switch (tokenCounter) {
 			case 1:
 				if (token.equals(FragalyzerConstants.KILL)) {
-					entry = populateLogEntry(logLine, EventType.KILL);
-					//System.out.println(entry.toString());
-					return entry;
+
+					entry = getKillDataFromLog(logLine, EventType.KILL);
+					kill = (Kill) entry;
+					kill.setMapname(mapname);
+					kill.setRoundNumber(roundCount);
+					
+					// System.out.println(entry.toString());
+				}
+
+				if (token.startsWith(FragalyzerConstants.INIT)) {
+
+					entry = getRoundDataFromLog(logLine, EventType.INIT);
+					// System.out.println(entry.toString());
 				}
 				break;
-
 			default:
 				break;
 			}
@@ -39,7 +55,55 @@ public class LogMapper {
 		return entry;
 	}
 
-	private LogEntry populateLogEntry(String logLine, EventType eventType) {
+	private LogEntry getRoundDataFromLog(String logLine, EventType eventType) {
+		Round round = new Round();
+		String token;
+		String logKey;
+		String logValue;
+		StringTokenizer tok = new StringTokenizer(logLine, FragalyzerConstants.logDelimiter);
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern ( "yyyy.MM.dd,HH:mm" , Locale.GERMANY );
+		
+		while (tok.hasMoreTokens()) {
+			token = tok.nextToken();
+			StringTokenizer tokenTokenizer = new StringTokenizer(token, FragalyzerConstants.tokenDelimiter);
+			// System.out.println(token);
+
+			logKey = tokenTokenizer.nextToken();
+			logValue = tokenTokenizer.nextToken();
+
+			switch (logKey) {
+
+			case (FragalyzerConstants.LevelName):
+				round.setMapname(logValue);
+				if (round.getMapname().equals(mapname))
+					roundCount++;
+				else
+				{
+					mapname = round.getMapname();
+					roundCount = 1;
+				}
+					
+				break;
+			case (FragalyzerConstants.StartDate):
+				LocalDateTime ldt = null;
+				try {
+					
+					ldt = LocalDateTime.parse(logValue, formatter);
+					
+				} catch (Exception e) {
+					
+				}
+				round.setDatetime(ldt);
+				break;
+			default:
+				break;
+			}
+		}
+
+		return round;
+	}
+
+	private LogEntry getKillDataFromLog(String logLine, EventType eventType) {
 		String token;
 		String logKey;
 		String logValue;
@@ -93,7 +157,7 @@ public class LogMapper {
 					break;
 				case (FragalyzerConstants.VictimPos):
 					kill.setVictimPosition(getPositionFromLog(logValue));
-					break;					
+					break;
 				default:
 					break;
 				}
@@ -107,68 +171,68 @@ public class LogMapper {
 		}
 		return null;
 	}
-	
-	private Kill addMetaData(Kill kill){
+
+	private Kill addMetaData(Kill kill) {
 		switch (kill.getKillType()) {
 
 		case VEHICLE_INF:
 		case INF_VEHICLE:
-		case VEHICLE_VEHICLE:		
+		case VEHICLE_VEHICLE:
 		case INF_INF:
 			if (FragalyzerConstants.kitTypes.containsKey(kill.getPlayerKit()))
 				kill.setAttackerKitType(FragalyzerConstants.kitTypes.get(kill.getPlayerKit()));
 			else
-				missingKits.put("k: " +kill.getPlayerKit(), "");
+				missingKits.put("k: " + kill.getPlayerKit(), "");
 			if (FragalyzerConstants.kitTypes.containsKey(kill.getVictimKit()))
 				kill.setVictimKitType(FragalyzerConstants.kitTypes.get(kill.getVictimKit()));
 			else
-				missingKits.put("v: " +kill.getVictimKit(), "");			
+				missingKits.put("v: " + kill.getVictimKit(), "");
 			if (FragalyzerConstants.vehicleTypes.containsKey(kill.getVehicle()))
 				kill.setAttackerVehicleType(FragalyzerConstants.vehicleTypes.get(kill.getVehicle()));
 			else
-				missingKits.put("v: " +kill.getVehicle(), "");
+				missingKits.put("v: " + kill.getVehicle(), "");
 			if (FragalyzerConstants.vehicleTypes.containsKey(kill.getVictimVehicle()))
 				kill.setVictimVehicleType(FragalyzerConstants.vehicleTypes.get(kill.getVictimVehicle()));
 			else
-				missingKits.put("v: " +kill.getVictimVehicle(), "");
+				missingKits.put("v: " + kill.getVictimVehicle(), "");
 			if (FragalyzerConstants.weaponTypes.containsKey(kill.getWeapon()))
 				kill.setAttackerWeaponType(FragalyzerConstants.weaponTypes.get(kill.getWeapon()));
 			else
-				missingKits.put("w: " +kill.getWeapon(), "");			
+				missingKits.put("w: " + kill.getWeapon(), "");
 
 			if (FragalyzerConstants.vehicleNames.containsKey(kill.getVehicle()))
 				kill.setAttackerVehicleName(FragalyzerConstants.vehicleNames.get(kill.getVehicle()));
 			else
-				missingKits.put("w: " +kill.getVehicle(), "");			
-			
+				missingKits.put("w: " + kill.getVehicle(), "");
+
 			if (FragalyzerConstants.vehicleNames.containsKey(kill.getVictimVehicle()))
 				kill.setVictimVehicleName(FragalyzerConstants.vehicleNames.get(kill.getVictimVehicle()));
 			else
-				missingKits.put("w: " +kill.getVictimVehicle(), "");						
-			break;			
-			
+				missingKits.put("w: " + kill.getVictimVehicle(), "");
+			break;
+
 		default:
 			/*
-			if (FragalyzerConstants.kitTypes.containsKey(kill.getPlayerKit()))
-				kill.setAttackerKitType(FragalyzerConstants.kitTypes.get(kill.getPlayerKit()));
-			else
-				missingKits.put(kill.getPlayerKit(), "");
-			if (FragalyzerConstants.kitTypes.containsKey(kill.getVictimKit()))
-				kill.setVictimKitType(FragalyzerConstants.kitTypes.get(kill.getVictimKit()));
-			else
-				missingKits.put(kill.getVictimKit(), "");
-			
-			if (FragalyzerConstants.weaponTypes.containsKey(kill.getWeapon()))
-				kill.setAttackerWeaponType(FragalyzerConstants.weaponTypes.get(kill.getWeapon()));
-			else
-				missingKits.put(kill.getWeapon(), "");
-	*/
+			 * if
+			 * (FragalyzerConstants.kitTypes.containsKey(kill.getPlayerKit()))
+			 * kill.setAttackerKitType(FragalyzerConstants.kitTypes.get(kill.
+			 * getPlayerKit())); else missingKits.put(kill.getPlayerKit(), "");
+			 * if
+			 * (FragalyzerConstants.kitTypes.containsKey(kill.getVictimKit()))
+			 * kill.setVictimKitType(FragalyzerConstants.kitTypes.get(kill.
+			 * getVictimKit())); else missingKits.put(kill.getVictimKit(), "");
+			 * 
+			 * if
+			 * (FragalyzerConstants.weaponTypes.containsKey(kill.getWeapon()))
+			 * kill.setAttackerWeaponType(FragalyzerConstants.weaponTypes.get(
+			 * kill.getWeapon())); else missingKits.put(kill.getWeapon(), "");
+			 */
 			break;
 		}
 		return kill;
 	}
-	
-	private Kill setKitAndWeapon(Kill kill){
+
+	private Kill setKitAndWeapon(Kill kill) {
 		return kill;
 	}
 
@@ -198,8 +262,6 @@ public class LogMapper {
 		return pos;
 
 	}
-	
-
 
 	private Kill sanitizeKill(Kill kill) {
 		// Suicide
@@ -270,6 +332,5 @@ public class LogMapper {
 
 		}
 	}
-	
-	
+
 }
