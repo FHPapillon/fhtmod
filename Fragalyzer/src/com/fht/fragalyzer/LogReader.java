@@ -34,7 +34,7 @@ public class LogReader {
 		HashMap<String, String> missingKits = new HashMap<>();
 		HashMap<String, DataPoint> heatmapHM = new HashMap<>();
 		String heatmapCoord;
-		Kill kill;
+		
 
 		// Walk over all faLog files
 		int count = 0;
@@ -88,12 +88,11 @@ public class LogReader {
 			while (it.hasNext()) {
 				logEntry = it.next();
 				// Right now we are only interested in Kills
-				if (logEntry instanceof Kill) {
-					kill = (Kill) logEntry;
+				
 					// If a Position is given, then..
-					heatmapHM =  getDataPoints(heatmapHM, kill);
+					heatmapHM =  getDataPoints(heatmapHM, logEntry);
 
-				}
+				
 				// Write the event to the file
 				fw.write(logEntry.toString());
 				fw.append(System.getProperty("line.separator")); // e.g. "\n"
@@ -160,7 +159,7 @@ public class LogReader {
 
 	}
 
-	private HashMap<String, DataPoint> getDataPoints(HashMap<String, DataPoint> heatmap, Kill kill) {
+	private HashMap<String, DataPoint> getDataPoints(HashMap<String, DataPoint> heatmap, LogEntry kill) {
 		String heatmapCoord;
 		DataPoint dpo;
 

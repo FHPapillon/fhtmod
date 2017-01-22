@@ -1,8 +1,6 @@
 package com.fht.fragalyzer;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Locale;
@@ -13,39 +11,47 @@ import com.fht.fragalyzer.types.KillType;
 
 public class LogMapper {
 
+	public LogMapper() {
+		super();
+		
+	}
+
 	public HashMap<String, String> missingKits;
 	private int roundCount;
 	private String mapname;
+	private LocalDateTime datetime;
+	private HashMap<String, EventType> rounds;
 
 	public LogEntry createLogEntryFromLogLine(HashMap<String, String> in_missingKits, String logLine) {
 		String token;
 		int tokenCounter = 0;
 		boolean relevant = true;
 		LogEntry entry = null;
-		Kill kill;
+		String prevLogLine;
+		
+		
 		missingKits = in_missingKits;
 		StringTokenizer tok = new StringTokenizer(logLine, FragalyzerConstants.logDelimiter);
 		while (tok.hasMoreTokens() && relevant) {
 			token = tok.nextToken();
 			tokenCounter++;
-
+			prevLogLine = logLine;
 			switch (tokenCounter) {
 			case 1:
 				if (token.equals(FragalyzerConstants.KILL)) {
 
 					entry = getKillDataFromLog(logLine, EventType.KILL);
-					kill = (Kill) entry;
-					kill.setMapname(mapname);
-					kill.setRoundNumber(roundCount);
+					
+					entry.setMapname(mapname);
+					entry.setRoundNumber(roundCount);
 					
 					// System.out.println(entry.toString());
 				}
 
-				if (token.startsWith(FragalyzerConstants.INIT)) {
-
+				if (token.startsWith(FragalyzerConstants.INIT)) 
 					entry = getRoundDataFromLog(logLine, EventType.INIT);
 					// System.out.println(entry.toString());
-				}
+				
 				break;
 			default:
 				break;
@@ -56,7 +62,8 @@ public class LogMapper {
 	}
 
 	private LogEntry getRoundDataFromLog(String logLine, EventType eventType) {
-		Round round = new Round();
+		LogEntry round = new LogEntry();
+		round.setEventType(EventType.INIT);
 		String token;
 		String logKey;
 		String logValue;
@@ -75,14 +82,7 @@ public class LogMapper {
 
 			case (FragalyzerConstants.LevelName):
 				round.setMapname(logValue);
-				if (round.getMapname().equals(mapname))
-					roundCount++;
-				else
-				{
-					mapname = round.getMapname();
-					roundCount = 1;
-				}
-					
+				
 				break;
 			case (FragalyzerConstants.StartDate):
 				LocalDateTime ldt = null;
@@ -98,8 +98,19 @@ public class LogMapper {
 			default:
 				break;
 			}
+			
 		}
-
+		if (round.getMapname().equals(mapname)) {
+			if (!(round.getDatetime().equals(datetime)))
+				roundCount++;
+		}
+		else
+		{
+			mapname = round.getMapname();
+			datetime = round.getDatetime();
+			roundCount = 1;
+		}
+		round.setRoundNumber(roundCount);
 		return round;
 	}
 
@@ -109,7 +120,8 @@ public class LogMapper {
 		String logValue;
 		switch (eventType) {
 		case KILL:
-			Kill kill = new Kill();
+			LogEntry kill = new LogEntry();
+			kill.setEventType(EventType.KILL);
 			// System.out.println(logLine);
 			StringTokenizer tok = new StringTokenizer(logLine, FragalyzerConstants.logDelimiter);
 			// System.out.println("KILL");
@@ -172,7 +184,7 @@ public class LogMapper {
 		return null;
 	}
 
-	private Kill addMetaData(Kill kill) {
+	private LogEntry addMetaData(LogEntry kill) {
 		switch (kill.getKillType()) {
 
 		case VEHICLE_INF:
@@ -232,9 +244,7 @@ public class LogMapper {
 		return kill;
 	}
 
-	private Kill setKitAndWeapon(Kill kill) {
-		return kill;
-	}
+
 
 	private Position getPositionFromLog(String logPosition) {
 		Position pos = new Position();
@@ -263,7 +273,7 @@ public class LogMapper {
 
 	}
 
-	private Kill sanitizeKill(Kill kill) {
+	private LogEntry sanitizeKill(LogEntry kill) {
 		// Suicide
 		if (kill.getPlayer() == null || kill.getPlayer().equals(kill.getVictim())) {
 			kill.setKillType(KillType.SUICIDE);

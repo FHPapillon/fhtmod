@@ -26,7 +26,7 @@ public class FragalyzerConstants {
 	public final static String AttackerKit = "AttackerKit";
 	public final static String AttackerVehicle = "AttackerVehicle";
 	public final static String AttackerWeapon = "AttackerWeapon";
-	public final static String LevelName = "LevelName";
+	public final static String LevelName = "INIT LevelName";
 	public final static String StartDate = "StartDate";
 	public final static String Time = "Time";
 	public final static String ba = "ba_";
