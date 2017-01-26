@@ -1,5 +1,5 @@
 package com.fht.fragalyzer.types;
 
 public enum EventType {
-	INIT, KILL
+	INIT, KILL, SCORE, CAP
 }

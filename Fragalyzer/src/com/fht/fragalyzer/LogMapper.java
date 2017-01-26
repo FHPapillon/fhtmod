@@ -6,14 +6,16 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.StringTokenizer;
 
+import com.fht.fragalyzer.types.CPEvents;
 import com.fht.fragalyzer.types.EventType;
 import com.fht.fragalyzer.types.KillType;
+import com.fht.fragalyzer.types.WeaponType;
 
 public class LogMapper {
 
 	public LogMapper() {
 		super();
-		
+		lastEnteredVehicleByPlayer = new HashMap<>();
 	}
 
 	public HashMap<String, String> missingKits;
@@ -21,44 +23,88 @@ public class LogMapper {
 	private String mapname;
 	private LocalDateTime datetime;
 	private HashMap<String, EventType> rounds;
+	private HashMap<String, String> lastEnteredVehicleByPlayer;
 
 	public LogEntry createLogEntryFromLogLine(HashMap<String, String> in_missingKits, String logLine) {
 		String token;
 		int tokenCounter = 0;
 		boolean relevant = true;
 		LogEntry entry = null;
-		String prevLogLine;
 		
-		
+
 		missingKits = in_missingKits;
 		StringTokenizer tok = new StringTokenizer(logLine, FragalyzerConstants.logDelimiter);
 		while (tok.hasMoreTokens() && relevant) {
 			token = tok.nextToken();
 			tokenCounter++;
-			prevLogLine = logLine;
+			
 			switch (tokenCounter) {
 			case 1:
 				if (token.equals(FragalyzerConstants.KILL)) {
 
 					entry = getKillDataFromLog(logLine, EventType.KILL);
-					
+
 					entry.setMapname(mapname);
 					entry.setRoundNumber(roundCount);
-					
+
 					// System.out.println(entry.toString());
 				}
 
-				if (token.startsWith(FragalyzerConstants.INIT)) 
+				if (token.startsWith(FragalyzerConstants.INIT))
 					entry = getRoundDataFromLog(logLine, EventType.INIT);
-					// System.out.println(entry.toString());
-				
+
+				if (token.startsWith(FragalyzerConstants.SCORE))
+					entry = getScoreDataFromLog(logLine, EventType.SCORE);
+				// System.out.println(entry.toString());
+
+				if (token.startsWith(FragalyzerConstants.ENTER))
+					findOutWhoEnteredWhat(logLine);
+
 				break;
+
 			default:
 				break;
 			}
 
 		}
 		return entry;
+	}
+
+	private void findOutWhoEnteredWhat(String logLine) {
+
+		String token;
+		String logKey;
+		String logValue;
+		StringTokenizer tok = new StringTokenizer(logLine, FragalyzerConstants.logDelimiter);
+		String player, vehicle;
+		player = new String();
+		vehicle = new String();
+
+		while (tok.hasMoreTokens()) {
+
+			token = tok.nextToken();
+			StringTokenizer tokenTokenizer = new StringTokenizer(token, FragalyzerConstants.tokenDelimiter);
+			// System.out.println(token);
+
+			logKey = tokenTokenizer.nextToken();
+			logValue = tokenTokenizer.nextToken();
+
+			switch (logKey) {
+
+			case (FragalyzerConstants.PlayerEntered):
+				player = logValue;
+				break;
+			case (FragalyzerConstants.VehicleName):
+				vehicle = logValue;
+				break;
+			default:
+				break;
+			}
+
+		}
+		lastEnteredVehicleByPlayer.put(player, vehicle);
+		// System.out.println(player + ": " +
+		// lastEnteredVehicleByPlayer.get(player));
 	}
 
 	private LogEntry getRoundDataFromLog(String logLine, EventType eventType) {
@@ -68,8 +114,8 @@ public class LogMapper {
 		String logKey;
 		String logValue;
 		StringTokenizer tok = new StringTokenizer(logLine, FragalyzerConstants.logDelimiter);
-		DateTimeFormatter formatter = DateTimeFormatter.ofPattern ( "yyyy.MM.dd,HH:mm" , Locale.GERMANY );
-		
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy.MM.dd,HH:mm", Locale.GERMANY);
+
 		while (tok.hasMoreTokens()) {
 			token = tok.nextToken();
 			StringTokenizer tokenTokenizer = new StringTokenizer(token, FragalyzerConstants.tokenDelimiter);
@@ -82,30 +128,28 @@ public class LogMapper {
 
 			case (FragalyzerConstants.LevelName):
 				round.setMapname(logValue);
-				
+
 				break;
 			case (FragalyzerConstants.StartDate):
 				LocalDateTime ldt = null;
 				try {
-					
+
 					ldt = LocalDateTime.parse(logValue, formatter);
-					
+
 				} catch (Exception e) {
-					
+
 				}
 				round.setDatetime(ldt);
 				break;
 			default:
 				break;
 			}
-			
+
 		}
 		if (round.getMapname().equals(mapname)) {
 			if (!(round.getDatetime().equals(datetime)))
 				roundCount++;
-		}
-		else
-		{
+		} else {
 			mapname = round.getMapname();
 			datetime = round.getDatetime();
 			roundCount = 1;
@@ -118,6 +162,7 @@ public class LogMapper {
 		String token;
 		String logKey;
 		String logValue;
+		String player;
 		switch (eventType) {
 		case KILL:
 			LogEntry kill = new LogEntry();
@@ -147,7 +192,13 @@ public class LogMapper {
 					kill.setPlayerTeam(logValue);
 					break;
 				case (FragalyzerConstants.AttackerVehicle):
-					kill.setVehicle(logValue);
+					if (!logValue.equals(FragalyzerConstants.MultiPlayerFreeCamera))
+						kill.setVehicle(logValue);
+					else {
+						// System.out.println(kill.getPlayer() + ": " +
+						// lastEnteredVehicleByPlayer.get(kill.getPlayer()));
+						kill.setVehicle(lastEnteredVehicleByPlayer.get(kill.getPlayer()));
+					}
 					break;
 				case (FragalyzerConstants.AttackerWeapon):
 					kill.setWeapon(logValue);
@@ -184,6 +235,69 @@ public class LogMapper {
 		return null;
 	}
 
+	private LogEntry getScoreDataFromLog(String logLine, EventType eventType) {
+		String token;
+		String logKey;
+		String logValue;
+		switch (eventType) {
+		case SCORE:
+			LogEntry score = new LogEntry();
+			score.setEventType(EventType.SCORE);
+
+			StringTokenizer tok = new StringTokenizer(logLine, FragalyzerConstants.logDelimiter);
+
+			token = tok.nextToken();
+			while (tok.hasMoreTokens()) {
+				token = tok.nextToken();
+				StringTokenizer tokenTokenizer = new StringTokenizer(token, FragalyzerConstants.tokenDelimiter);
+				// System.out.println(token);
+
+				logKey = tokenTokenizer.nextToken();
+				logValue = tokenTokenizer.nextToken();
+				score.setKillType(KillType.NONE);
+
+				switch (logKey) {
+
+				case (FragalyzerConstants.PlayerName):
+					score.setPlayer(logValue);
+					break;
+
+				case (FragalyzerConstants.Scoretype):
+					switch (logValue) {
+					case FragalyzerConstants.cpAssists:
+						score.setCpEvent(CPEvents.cpAssists);
+						break;
+					case FragalyzerConstants.cpCaptures:
+						score.setCpEvent(CPEvents.cpCaptures);
+						break;						
+					case FragalyzerConstants.cpDefends:
+						score.setCpEvent(CPEvents.cpDefends);
+						break;						
+					case FragalyzerConstants.cpNeutralizeAssists:
+						score.setCpEvent(CPEvents.cpNeutralizeAssists);
+						break;						
+					case FragalyzerConstants.cpNeutralizes:
+						score.setCpEvent(CPEvents.cpNeutralizes);
+						break;
+
+					default:
+						//others are not of interest
+						return null;
+					}
+
+				default:
+					break;
+				}
+			}
+		
+			return score;
+
+		default:
+			break;
+		}
+		return null;
+	}
+
 	private LogEntry addMetaData(LogEntry kill) {
 		switch (kill.getKillType()) {
 
@@ -212,15 +326,31 @@ public class LogMapper {
 			else
 				missingKits.put("w: " + kill.getWeapon(), "");
 
+			if (FragalyzerConstants.weaponNames.containsKey(kill.getWeapon()))
+				kill.setWeaponName((FragalyzerConstants.weaponNames.get(kill.getWeapon())));
+			else
+				missingKits.put("w: " + kill.getWeapon(), "");
+
 			if (FragalyzerConstants.vehicleNames.containsKey(kill.getVehicle()))
 				kill.setAttackerVehicleName(FragalyzerConstants.vehicleNames.get(kill.getVehicle()));
-			else
-				missingKits.put("w: " + kill.getVehicle(), "");
+			else if (FragalyzerConstants.weaponNames.containsKey(kill.getWeapon()))
+				kill.setAttackerVehicleName(FragalyzerConstants.weaponNames.get(kill.getVehicle()));
 
 			if (FragalyzerConstants.vehicleNames.containsKey(kill.getVictimVehicle()))
 				kill.setVictimVehicleName(FragalyzerConstants.vehicleNames.get(kill.getVictimVehicle()));
 			else
 				missingKits.put("w: " + kill.getVictimVehicle(), "");
+			/*
+			 * switch (kill.getKillType()) { case INF_VEHICLE: case INF_INF:
+			 * switch (kill.getAttackerKitType()) { case KIT_TYPE_RIFLEASSAULT:
+			 * kill.setAttackerWeaponType(WeaponType.WEAPON_TYPE_SMG); break;
+			 * 
+			 * default:
+			 * kill.setAttackerWeaponType(WeaponType.WEAPON_TYPE_RIFLE); break;
+			 * } break;
+			 * 
+			 * default: break; }
+			 */
 			break;
 
 		default:
@@ -243,8 +373,6 @@ public class LogMapper {
 		}
 		return kill;
 	}
-
-
 
 	private Position getPositionFromLog(String logPosition) {
 		Position pos = new Position();

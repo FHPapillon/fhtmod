@@ -23,30 +23,50 @@ import com.fht.fragalyzer.types.DataPoint;
 
 public class LogReader {
 
-	public ArrayList<LogEntry> ret;
+	public LogReader() {
+		super();
+		rounds = new HashMap<>();
+		battles = new HashMap<>();
+		logEntries = new ArrayList<>();
+		setRoundNumber(0);
+		setMapname("");
+		setRoundname("");
+		setBattle(new ArrayList<>());
+	}
 
-	public ArrayList<LogEntry> readBattleLogs(String basePath) {
+	private ArrayList<LogEntry> logEntries;
+	private HashMap<String, ArrayList<LogEntry>> rounds;
+	private HashMap<String, ArrayList<LogEntry>> battles;
+	private ArrayList<LogEntry> battle;
+
+	private String basePath;
+	private int roundNumber;
+	private String mapname;
+
+	private String roundname;
+
+	public void readBattleLogs(String basePath) {
 		System.out.println(basePath);
 		Path p = Paths.get(basePath);
-		ret = new ArrayList<>();
+		this.basePath = basePath;
 		LogMapper mapper = new LogMapper();
-		LogEntry logEntry;
 		HashMap<String, String> missingKits = new HashMap<>();
-		HashMap<String, DataPoint> heatmapHM = new HashMap<>();
-		String heatmapCoord;
-		
 
 		// Walk over all faLog files
-		int count = 0;
+
 		FileVisitor<Path> fv = new SimpleFileVisitor<Path>() {
 			@Override
 			public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
 				Scanner scanner;
 				int dot = file.toString().lastIndexOf(".");
-				LogEntry entry;
+				LogEntry logEntry;
+				ArrayList<LogEntry> round = new ArrayList<>();
+
+				int roundnumber = 0;
+
 				if (file.toString().substring(dot - 5, dot).equals(FragalyzerConstants.logfilename)) {
 					System.out.println(file);
-
+					round = new ArrayList<>();
 					try {
 						scanner = new Scanner(file);
 					} catch (FileNotFoundException e) {
@@ -58,14 +78,46 @@ public class LogReader {
 						// Read each file from the from the log..
 						String line = scanner.nextLine();
 						// ..and create a proper entry from it
-						entry = mapper.createLogEntryFromLogLine(missingKits, line);
+						logEntry = mapper.createLogEntryFromLogLine(missingKits, line);
 						// If an entry was created, add it to the List
-						if (entry != null)
-							ret.add(entry);
+						if (logEntry != null) {
+							getLogEntries().add(logEntry);
+
+							switch (logEntry.getEventType()) {
+							case INIT:
+								if (!getMapname().equals(logEntry.getMapname())) {
+									// Mapname has changed. Save battle bucket
+									if (getBattle().size() > 0)
+										getBattles().put(mapname, getBattle());
+									
+									setMapname(logEntry.getMapname());
+									//getBattles().put(mapname, getBattle());
+									setBattle(new ArrayList<>());
+
+									System.out.println("Mapname is " + getMapname());
+								}
+
+								setRoundname(getMapname() + "_round_" + logEntry.getRoundNumber());
+								setRoundNumber(logEntry.getRoundNumber());
+
+								System.out.println("roundname is " + getRoundname());
+
+								break;
+							case KILL:
+							case SCORE:
+								getBattle().add(logEntry);
+								round.add(logEntry);
+								break;
+							default:
+
+								break;
+							}
+						}
 
 					}
 					scanner.close();
-
+					getRounds().put(roundname, round);
+					getBattles().put(getMapname(), battle);
 				}
 
 				return FileVisitResult.CONTINUE;
@@ -79,20 +131,25 @@ public class LogReader {
 			e.printStackTrace();
 		}
 
+	}
+
+	private void dumpHeatMapDataPointsAndEventList() {
+		HashMap<String, DataPoint> heatmapHM = new HashMap<>();
+		String heatmapCoord;
 		// Create from the now created Entries a human-readable list of events
 		FileWriter fw = null;
 		DataPoint dpo;
+		LogEntry logEntry;
 		try {
 			fw = new FileWriter(basePath + "//result.txt");
-			Iterator<LogEntry> it = ret.iterator();
+			Iterator<LogEntry> it = logEntries.iterator();
 			while (it.hasNext()) {
 				logEntry = it.next();
 				// Right now we are only interested in Kills
-				
-					// If a Position is given, then..
-					heatmapHM =  getDataPoints(heatmapHM, logEntry);
 
-				
+				// If a Position is given, then..
+				heatmapHM = getDataPoints(heatmapHM, logEntry);
+
 				// Write the event to the file
 				fw.write(logEntry.toString());
 				fw.append(System.getProperty("line.separator")); // e.g. "\n"
@@ -108,10 +165,6 @@ public class LogReader {
 					e.printStackTrace();
 				}
 		}
-
-		Iterator  itkit = missingKits.entrySet().iterator();
-		while (itkit.hasNext())
-			System.out.println(((Map.Entry)itkit.next()).getKey());
 
 		// Getting a Set of Key-value pairs
 		Set entrySet = heatmapHM.entrySet();
@@ -154,9 +207,6 @@ public class LogReader {
 				}
 		}
 
-
-		return ret;
-
 	}
 
 	private HashMap<String, DataPoint> getDataPoints(HashMap<String, DataPoint> heatmap, LogEntry kill) {
@@ -184,7 +234,7 @@ public class LogReader {
 				heatmap.put(heatmapCoord, dpo);
 			}
 		}
-		
+
 		if (kill.getVictimPosition() != null) {
 
 			// ..determine the Coordinate where it occured
@@ -205,7 +255,64 @@ public class LogReader {
 				dpo.setNumber(1);
 				heatmap.put(heatmapCoord, dpo);
 			}
-		}		
+		}
 		return heatmap;
 	}
+
+	public ArrayList<LogEntry> getLogEntries() {
+		return logEntries;
+	}
+
+	public void setLogEntries(ArrayList<LogEntry> logEntries) {
+		this.logEntries = logEntries;
+	}
+
+	public HashMap<String, ArrayList<LogEntry>> getRounds() {
+		return rounds;
+	}
+
+	public void setRounds(HashMap<String, ArrayList<LogEntry>> rounds) {
+		this.rounds = rounds;
+	}
+
+	public HashMap<String, ArrayList<LogEntry>> getBattles() {
+		return battles;
+	}
+
+	public void setBattles(HashMap<String, ArrayList<LogEntry>> battles) {
+		this.battles = battles;
+	}
+
+	public int getRoundNumber() {
+		return roundNumber;
+	}
+
+	public void setRoundNumber(int roundNumber) {
+		this.roundNumber = roundNumber;
+	}
+
+	public String getMapname() {
+		return mapname;
+	}
+
+	public void setMapname(String mapname) {
+		this.mapname = mapname;
+	}
+
+	public String getRoundname() {
+		return roundname;
+	}
+
+	public void setRoundname(String roundname) {
+		this.roundname = roundname;
+	}
+
+	public ArrayList<LogEntry> getBattle() {
+		return battle;
+	}
+
+	public void setBattle(ArrayList<LogEntry> battle) {
+		this.battle = battle;
+	}
+
 }

@@ -15,6 +15,15 @@ public class FragalyzerConstants {
 	public final static String tokenDelimiter = "=";
 	public final static String KILL = "KILL";
 	public final static String INIT = "INIT";
+	public final static String ENTER = "ENTER";
+	public final static String SCORE = "SCORE";	
+	public final static String cpNeutralizeAssists = "cpNeutralizeAssists";
+	public final static String cpNeutralizes = "cpNeutralizes";
+	public final static String cpAssists = "cpAssists";
+	public final static String cpCaptures = "cpCaptures";
+	public final static String cpDefends = "cpDefends";
+	public final static String Scoretype = "Scoretype";
+	public final static String PlayerName = "PlayerName";
 	public final static String AttackerName = "AttackerName";
 	public final static String AttackerTeam = "AttackerTeam";
 	public final static String AttackerPos = "AttackerPos";
@@ -27,7 +36,11 @@ public class FragalyzerConstants {
 	public final static String AttackerVehicle = "AttackerVehicle";
 	public final static String AttackerWeapon = "AttackerWeapon";
 	public final static String LevelName = "INIT LevelName";
+	public final static String PlayerEntered = "ENTER PlayerName";
+	public final static String PlayerScored = "SCORE ScoreDiff";
+	public final static String VehicleName = "VehicleName";
 	public final static String StartDate = "StartDate";
+	public final static String MultiPlayerFreeCamera = "MultiPlayerFreeCamera";
 	public final static String Time = "Time";
 	public final static String ba = "ba_";
 	public final static String bj = "bj_";
@@ -107,6 +120,7 @@ public class FragalyzerConstants {
 			put(WeaponType.WEAPON_TYPE_CLOSE, "Close combat");
 			put(WeaponType.WEAPON_TYPE_NONLETHAL, "Non-lethal");
 			put(WeaponType.WEAPON_TYPE_SNIPER, "Sniper rifle");
+			put(WeaponType.WEAPON_TYPE_UNKNOWN, "Unknown");			
 		}
 	});	
 	
@@ -881,13 +895,10 @@ public class FragalyzerConstants {
 					put("zis3_static_de", VehicleType.VEHICLE_TYPE_ATGUN);
 					put("zwillingssockel36", VehicleType.VEHICLE_TYPE_MACHINEGUN);
 					put("lvt-4", VehicleType.VEHICLE_TYPE_ARMOREDCAR);
-	
-					put("lvt-4", VehicleType.VEHICLE_TYPE_ARMOREDCAR);
 					put("type95_hago", VehicleType.VEHICLE_TYPE_LIGHTARMOR);
 					put("kurogane", VehicleType.VEHICLE_TYPE_TRANSPORT);					
 					put("m3a1_stuart_pacific", VehicleType.VEHICLE_TYPE_LIGHTARMOR);
 					put("type97_chiha", VehicleType.VEHICLE_TYPE_MEDIUMARMOR);	
-					
 					put("8inch_defgun", VehicleType.VEHICLE_TYPE_ARTILLERY);
 					put("type94", VehicleType.VEHICLE_TYPE_TRANSPORT);
 					put("hellcat", VehicleType.VEHICLE_TYPE_AIR);					
@@ -896,7 +907,7 @@ public class FragalyzerConstants {
 					put("type99_emp_bipod", VehicleType.VEHICLE_TYPE_MACHINEGUN);
 					put("fh1_25mmaa", VehicleType.VEHICLE_TYPE_ANTIAIR);
 					put("a6m_zero", VehicleType.VEHICLE_TYPE_AIR);
-
+					put("null", VehicleType.VEHICLE_TYPE_UKNOWN);
 				}
 			});
 
@@ -1223,7 +1234,10 @@ public class FragalyzerConstants {
 					put("type99_kassault", WeaponType.WEAPON_TYPE_LMG);
 					put("turtlemine", WeaponType.WEAPON_TYPE_ATMINE);
 					put("arisaka_grenade", WeaponType.WEAPON_TYPE_GRENADE);
-					put("type89mortar", WeaponType.WEAPON_TYPE_EXPLOSIVE);					
+					put("type89mortar", WeaponType.WEAPON_TYPE_EXPLOSIVE);		
+					put("type93_mine", WeaponType.WEAPON_TYPE_ATMINE);
+					put("m1917a1", WeaponType.WEAPON_TYPE_LMG);
+					put("null", WeaponType.WEAPON_TYPE_UNKNOWN);
 				}
 			});
 
@@ -2530,7 +2544,8 @@ public class FragalyzerConstants {
 			put("wr360c14_europe", "V36");
 			put("wr360c14_europe1942e", "WR360C14");
 			put("wr360c14_europe1942l", "WR360C14");
-
+			put("type99_emp_bipod", "Type99");
+			put("null", "unknown");
 		}
 	});			
 	public static final Map<String, String> weaponNames = Collections.unmodifiableMap(new HashMap<String, String>() {
@@ -2828,7 +2843,7 @@ public class FragalyzerConstants {
 			put("ls_26_deployed", "Lahti-Saloranta M/26");
 			put("m18_recoilless_at", "M18 Recoilless");
 			put("m18_recoilless_he", "M18 Recoilless");
-			put("m1903a1", "Springfield M1903A1 HEAT Grenade");
+			put("m1903a1", "Springfield M1903A1");
 			put("m1903a1bayo", "Springfield M1903A1 Bayonet");
 			put("m1903a1heat", "Springfield M1903A1 HEAT Grenade");
 			put("m1914enfieldscope", "Pattern 14 (Scope)");
@@ -2837,7 +2852,7 @@ public class FragalyzerConstants {
 			put("m1917enfieldgrenade", "M1917 Enfield Riflegrenade");
 			put("m1a1carbine", "M1A1 Carbine");
 			put("m1carbine", "M1 Carbine");
-			put("m1garand", "M1 Garand HEAT Grenade");
+			put("m1garand", "M1 Garand");
 			put("m1garandbayonet", "M1 Garand Bayonet");
 			put("m1garandbayonetm1905", "M1 Garand Bayonet");
 			put("m1garandfrag", "M1 Garand Mk II Grenade");
@@ -2956,7 +2971,8 @@ public class FragalyzerConstants {
 			put("dual_hmg_m2hb", "Dual .50cal");
 			put("dual_hmg_m2hb_air", "Dual .50cal");
 			put("hmg_m2hb", "M2 HB");
-			
+			put("jap_bayonet", "Bayonet");
+			put("null", "unknown");
 		}
 	});			
 }
