@@ -130,6 +130,10 @@ public class LogReader {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		for (Map.Entry<String, String> entry : mapper.missingKits
+				.entrySet()) {
+			System.out.println(entry.getKey() + " " + entry.getValue());
+		}
 
 	}
 

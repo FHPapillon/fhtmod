@@ -908,6 +908,21 @@ public class FragalyzerConstants {
 					put("fh1_25mmaa", VehicleType.VEHICLE_TYPE_ANTIAIR);
 					put("a6m_zero", VehicleType.VEHICLE_TYPE_AIR);
 					put("null", VehicleType.VEHICLE_TYPE_UKNOWN);
+					put("type92_nambu_bipod", VehicleType.VEHICLE_TYPE_MACHINEGUN);
+					put("betty", VehicleType.VEHICLE_TYPE_AIR);
+					put("fh1_pt_boat_jap", VehicleType.VEHICLE_TYPE_NAVAL);
+					put("fh1_fletcher_lcvp", VehicleType.VEHICLE_TYPE_DESTROYER);
+					put("ki27", VehicleType.VEHICLE_TYPE_AIR);
+					put("a6m_zero_early", VehicleType.VEHICLE_TYPE_AIR);
+					put("hoha", VehicleType.VEHICLE_TYPE_APC);
+					put("sampan", VehicleType.VEHICLE_TYPE_NAVAL);
+					put("fh1_gato", VehicleType.VEHICLE_TYPE_NAVAL);
+					put("kate", VehicleType.VEHICLE_TYPE_AIR);
+					put("chi_ha", VehicleType.VEHICLE_TYPE_MEDIUMARMOR);
+					put("fh1_pt_boat", VehicleType.VEHICLE_TYPE_NAVAL);
+					put("wildcat", VehicleType.VEHICLE_TYPE_AIR);
+					put("fh1_daihatsu", VehicleType.VEHICLE_TYPE_LANDINGBOAT);
+					put("fh1_hatsuzuki_lcvp", VehicleType.VEHICLE_TYPE_DESTROYER);
 				}
 			});
 
@@ -1238,6 +1253,7 @@ public class FragalyzerConstants {
 					put("type93_mine", WeaponType.WEAPON_TYPE_ATMINE);
 					put("m1917a1", WeaponType.WEAPON_TYPE_LMG);
 					put("null", WeaponType.WEAPON_TYPE_UNKNOWN);
+					put("81mm_mortar_m1", WeaponType.WEAPON_TYPE_EXPLOSIVE);
 				}
 			});
 
@@ -1773,6 +1789,13 @@ public class FragalyzerConstants {
 			put("jp_nco", KitType.KIT_TYPE_RIFLEASSAULT);
 			put("up_lmg_limited", KitType.KIT_TYPE_LMG);
 			put("jp_antitank_turtlemine", KitType.KIT_TYPE_AT);
+			put("jp_kneemortar", KitType.KIT_TYPE_MORTAR);
+			put("jp_pickupengineer", KitType.KIT_TYPE_ENGINEER);
+			put("jp_smgassault", KitType.KIT_TYPE_SMGASSAULT);
+			put("up_riflegrenadier", KitType.KIT_TYPE_RIFLEASSAULT);
+			put("jp_pickupammokit", KitType.KIT_TYPE_ENGINEER);
+			put("up_engineer_m1903a1_satchel_nowrench", KitType.KIT_TYPE_ENGINEER);
+			put("jp_engineer_turtlemine_nowrench", KitType.KIT_TYPE_ENGINEER);
 		}
 	});
 	
@@ -2545,6 +2568,7 @@ public class FragalyzerConstants {
 			put("wr360c14_europe1942e", "WR360C14");
 			put("wr360c14_europe1942l", "WR360C14");
 			put("type99_emp_bipod", "Type99");
+			put("81mm_mortar_m1", "81mm Mortar M1");
 			put("null", "unknown");
 		}
 	});			
@@ -2973,6 +2997,7 @@ public class FragalyzerConstants {
 			put("hmg_m2hb", "M2 HB");
 			put("jap_bayonet", "Bayonet");
 			put("null", "unknown");
+			put("m3_knife", "M3 Knife");
 		}
 	});			
 }

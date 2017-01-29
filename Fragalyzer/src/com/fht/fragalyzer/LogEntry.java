@@ -156,6 +156,9 @@ public  class LogEntry {
 		case INIT:
 			ret = getMapname() + " Round " + getRoundNumber() + " on " + getDatetime();
 			break;
+			
+		case SCORE:
+			ret = getPlayer() + " " + getCpEvent();
 		
 		case KILL:
 			
@@ -174,18 +177,18 @@ public  class LogEntry {
 				ret =  getPlayer() + " suicided";
 				break;
 			case INF_INF:
-				ret = getKillType() + " " +killtext + " with " + getWeaponName(getWeapon()) + " (" + " " + FragalyzerConstants.kitNames.get(getAttackerKitType()) + " vs " +  FragalyzerConstants.kitNames.get(getVictimKitType()) +  ")";
+				ret = getKillType() + " " +killtext + " with " + getWeaponName(getWeapon()) + "/" + getAttackerWeaponType()+ " (" + " " + FragalyzerConstants.kitNames.get(getAttackerKitType()) + " vs " +  FragalyzerConstants.kitNames.get(getVictimKitType()) +  ")";
 				break;
 			case INF_VEHICLE:
-				ret = getKillType() + " " +killtext + " with " + getWeaponName(getWeapon()) + " ("  + " " + FragalyzerConstants.kitNames.get(getAttackerKitType()) + " vs " +  getVehicleName(getVictimVehicle()) +  ")";
+				ret = getKillType() + " " +killtext + " with " + getWeaponName(getWeapon()) + "/" + getAttackerWeaponType() + " ("  + " " + FragalyzerConstants.kitNames.get(getAttackerKitType()) + " vs " +  getVehicleName(getVictimVehicle()) + "/" + getVictimVehicleType() + ")";
 				
 				break;		
 			case VEHICLE_INF:
-				ret = getKillType() + " " +killtext + " with " + getVehicleName(getVehicle())+ " ("  + " " + FragalyzerConstants.vehicleNames.get(getVehicle()) + " vs " +  FragalyzerConstants.kitNames.get(getVictimKitType()) +  ")";
+				ret = getKillType() + " " +killtext + " with " + getVehicleName(getVehicle())+ " ("  + " " + FragalyzerConstants.vehicleNames.get(getVehicle()) + "/" + getAttackerVehicleType() + " vs " +  FragalyzerConstants.kitNames.get(getVictimKitType()) +  ")";
 				
 				break;	
 			case VEHICLE_VEHICLE:
-				ret = getKillType() + " " +killtext + " with " + getVehicleName(getVehicle())+ " (" + " " + FragalyzerConstants.vehicleNames.get(getVehicle()) + " vs " +  FragalyzerConstants.vehicleNames.get(getVictimVehicle()) +  ")";
+				ret = getKillType() + " " +killtext + " with " + getVehicleName(getVehicle())+ " (" + " " + FragalyzerConstants.vehicleNames.get(getVehicle()) + "/" + getAttackerVehicleType()  + " vs " +  FragalyzerConstants.vehicleNames.get(getVictimVehicle()) + "/" + getVictimVehicleType()  +  ")";
 				
 				break;								
 			default:

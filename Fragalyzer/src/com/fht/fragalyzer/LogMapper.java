@@ -67,6 +67,7 @@ public class LogMapper {
 			}
 
 		}
+		
 		return entry;
 	}
 

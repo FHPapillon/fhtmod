@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
+import java.util.Map.Entry;
 
 import javax.print.attribute.HashPrintJobAttributeSet;
 
@@ -41,7 +42,8 @@ public class Ranker {
 	private HashMap<String, Integer> cpNeutralizeRanking;
 
 	private HashMap<String, Integer> cpNeutralizeAssistRanking;
-
+	
+	
 	public Ranker(String basePath) {
 		super();
 		this.setBasePath(basePath);
@@ -363,11 +365,45 @@ public class Ranker {
 
 		return stats;
 	}
+	
+	private String dumpRank(String name, HashMap<String, Integer> ranks){
+		JSONObject obj, event;
+		JSONArray list;
+		obj = new JSONObject();
+		list = new JSONArray();
+		for (Map.Entry<String, Integer> entry : MapUtil.sortByValueDesc(ranks)
+				.entrySet()) {
+			event = new JSONObject();
+			event.put(entry.getKey(), entry.getValue());
+			list.add(event);
+		}
+		obj.put(name,list);
+		return obj.toJSONString();
+	}
+	
+	private String dumpRankDouble(String name, HashMap<String, Double> ranks){
+
+		DecimalFormat df = new DecimalFormat("##.##");
+		df.setRoundingMode(RoundingMode.CEILING);
+
+		JSONObject obj, event;
+		JSONArray list;
+		obj = new JSONObject();
+		list = new JSONArray();
+		for (Map.Entry<String, Double> entry : MapUtil.sortByValueDesc(ranks)
+				.entrySet()) {
+			event = new JSONObject();
+			event.put(entry.getKey(), String.format(df.format(entry.getValue().doubleValue())));
+			list.add(event);
+		}
+		obj.put(name,list);
+		return obj.toJSONString();
+	}	
 
 	private void dumpRanks(HashMap<String, PlayerStats> playerEvents, String name) {
 
 		// Getting a Set of Key-value pairs
-		Set entrySet = playerEvents.entrySet();
+		Set<Entry<String, PlayerStats>> entrySet = playerEvents.entrySet();
 
 		String player;
 		PlayerStats stats;
@@ -378,9 +414,6 @@ public class Ranker {
 		JSONObject obj, event;
 		
 
-		DecimalFormat df = new DecimalFormat("##.##");
-		df.setRoundingMode(RoundingMode.CEILING);
-
 		
 		FileWriter fw = null;
 		String line = new String();
@@ -388,129 +421,18 @@ public class Ranker {
 			fw = new FileWriter(getBasePath() + "//" + getScope() + "_" + name +  "_stats.json");
 			fw.append(System.getProperty("line.separator")); // e.g.
 			fw.write("[");
-			obj = new JSONObject();
-			
-			list = new JSONArray();
-			for (Map.Entry<String, Integer> entry : MapUtil.sortByValueDesc(getKillRanking())
-					.entrySet()) {
-				event = new JSONObject();
-				event.put(entry.getKey(), entry.getValue());
-				list.add(event);
-			}
-			obj.put("killrankings",list);
-			line = obj.toJSONString();
-			fw.write(line + ",");
-			
-			obj = new JSONObject();
 
-			list = new JSONArray();
-			for (Map.Entry<String, Integer> entry : MapUtil.sortByValueDesc(getDeathsRanking())
-					.entrySet()) {
-				event = new JSONObject();
-				event.put(entry.getKey(), entry.getValue());
-				list.add(event);
-			}
-			obj.put("deathrankings", list);
-			line = obj.toJSONString();
-			fw.write(line + ",");		
+			fw.write(dumpRank("killrankings", getKillRanking()) + ",");
+			fw.write(dumpRank("deathrankings", getDeathsRanking()) + ",");
+			fw.write(dumpRank("tkrankings", getTkRanking()) + ",");
+			fw.write(dumpRank("cpcapassistranking", getCpCapAassistRanking()) + ",");
+			fw.write(dumpRank("cpcapranking", getCpCapRanking()) + ",");
+			fw.write(dumpRank("cpdefendranking", getCpDefendRanking()) + ",");
+			fw.write(dumpRank("cpneutralizeassistranking", getCpNeutralizeAssistRanking()) + ",");
+			fw.write(dumpRank("cpneutralizeranking", getCpNeutralizeRanking()) + ",");
+			fw.write(dumpRankDouble("kdrranking", getKdrRanking()) + ",");
 			
-			obj = new JSONObject();
-			
-			list = new JSONArray();
-			for (Map.Entry<String, Integer> entry : MapUtil.sortByValueDesc(getTkRanking())
-					.entrySet()) {
-				event = new JSONObject();
-				event.put(entry.getKey(), entry.getValue());
-				list.add(event);
-			}
-			obj.put("tkrankings", list);
-			line = obj.toJSONString();
-			fw.write(line + ",");	
-			
-			obj = new JSONObject();
-			
-			list = new JSONArray();
-			for (Map.Entry<String, Double> entry : MapUtil.sortByValueDesc(getKdrRanking())
-					.entrySet()) {
-				event = new JSONObject();
 				
-				event.put(entry.getKey(), String.format(df.format(entry.getValue().doubleValue())));
-				list.add(event);
-			}
-			obj.put("kdrranking", list);
-			line = obj.toJSONString();
-			fw.write(line + ",");			
-			
-			obj = new JSONObject();
-			
-			list = new JSONArray();
-			for (Map.Entry<String, Integer> entry : MapUtil.sortByValueDesc(getCpCapRanking())
-					.entrySet()) {
-				event = new JSONObject();
-				
-				event.put(entry.getKey(), entry.getValue());
-				list.add(event);
-			}
-			obj.put("cpcapranking", list);
-			line = obj.toJSONString();
-			fw.write(line + ",");			
-			
-			obj = new JSONObject();
-			
-			list = new JSONArray();
-			for (Map.Entry<String, Integer> entry : MapUtil.sortByValueDesc(getCpCapAassistRanking())
-					.entrySet()) {
-				event = new JSONObject();
-				
-				event.put(entry.getKey(), entry.getValue());
-				list.add(event);
-			}
-			obj.put("cpcapassistranking", list);
-			line = obj.toJSONString();
-			fw.write(line + ",");							
-			
-obj = new JSONObject();
-			
-			list = new JSONArray();
-			for (Map.Entry<String, Integer> entry : MapUtil.sortByValueDesc(getCpDefendRanking())
-					.entrySet()) {
-				event = new JSONObject();
-				
-				event.put(entry.getKey(), entry.getValue());
-				list.add(event);
-			}
-			obj.put("cpdefendranking", list);
-			line = obj.toJSONString();
-			fw.write(line + ",");					
-			
-			
-obj = new JSONObject();
-			
-			list = new JSONArray();
-			for (Map.Entry<String, Integer> entry : MapUtil.sortByValueDesc(getCpNeutralizeAssistRanking())
-					.entrySet()) {
-				event = new JSONObject();
-				
-				event.put(entry.getKey(), entry.getValue());
-				list.add(event);
-			}
-			obj.put("cpneutralizeassistranking", list);
-			line = obj.toJSONString();
-			fw.write(line + ",");		
-			
-obj = new JSONObject();
-			
-			list = new JSONArray();
-			for (Map.Entry<String, Integer> entry : MapUtil.sortByValueDesc(getCpNeutralizeRanking())
-					.entrySet()) {
-				event = new JSONObject();
-				
-				event.put(entry.getKey(), entry.getValue());
-				list.add(event);
-			}
-			obj.put("cpneutralizeranking", list);
-			line = obj.toJSONString();
-			fw.write(line + ",");					
 			while (it.hasNext()) {
 
 				obj = new JSONObject();
@@ -535,6 +457,17 @@ obj = new JSONObject();
 				obj.put("cpdefends", stats.getFlagDefends());
 				obj.put("cpneutralizes", stats.getFlagNeutralizes());
 				obj.put("cpneutralizeassists", stats.getFlagNeutralizeAssist());
+				
+				list = new JSONArray();
+				for (Map.Entry<VehicleType, Integer> entry : MapUtil.sortByValueDesc(stats.getVehicleTypeKills())
+						.entrySet()) {
+					event = new JSONObject();
+					event.put(FragalyzerConstants.vehicleTypeNames.get(entry.getKey()), entry.getValue());
+					list.add(event);
+				}
+				obj.put("vehicletypekills", list);
+				
+				list = new JSONArray();
 				for (Map.Entry<String, Integer> entry : MapUtil.sortByValueDesc(stats.getWeaponNameKills())
 						.entrySet()) {
 					event = new JSONObject();
