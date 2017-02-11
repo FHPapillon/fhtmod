@@ -282,7 +282,6 @@ public class LogMapper {
 						break;
 
 					default:
-						//others are not of interest
 						return null;
 					}
 

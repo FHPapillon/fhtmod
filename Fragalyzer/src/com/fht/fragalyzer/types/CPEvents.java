@@ -6,4 +6,5 @@ public enum CPEvents {
 	cpAssists,
 	cpCaptures,
 	cpDefends ,
+	unknown
 }
