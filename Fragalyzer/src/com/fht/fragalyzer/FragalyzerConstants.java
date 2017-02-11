@@ -40,6 +40,7 @@ public class FragalyzerConstants {
 	public final static String PlayerScored = "SCORE ScoreDiff";
 	public final static String VehicleName = "VehicleName";
 	public final static String StartDate = "StartDate";
+	public final static String time = "Time";
 	public final static String MultiPlayerFreeCamera = "MultiPlayerFreeCamera";
 	public final static String Time = "Time";
 	public final static String ba = "ba_";
@@ -63,6 +64,8 @@ public class FragalyzerConstants {
 	public final static String us = "us_";
 	public final static String uw = "uw_";
 	public final static String waw = "waw_";
+	
+	public final static int heatmapDataPointMultiplicationFactor = 3;
 
 	public final static String WEAPON_TYPE_RIFLE = "Rifle";
 	public final static String WEAPON_TYPE_GRENADE = "Grenade";
@@ -98,6 +101,7 @@ public class FragalyzerConstants {
 			put(KitType.KIT_TYPE_LMG, "LMG");
 			put(KitType.KIT_TYPE_HMG, "HMG");
 			put(KitType.KIT_TYPE_SCOUT, "Scout");
+			put(KitType.UNKNOWN, "Unknown");
 		}
 	});
 	
@@ -137,14 +141,17 @@ public class FragalyzerConstants {
 			put(VehicleType.VEHICLE_TYPE_ARMOREDCAR, "Armored Car");
 			put(VehicleType.VEHICLE_TYPE_ARTILLERY, "Artillery");
 			put(VehicleType.VEHICLE_TYPE_ATGUN, "Anti-tank Gun");
-			put(VehicleType.VEHICLE_TYPE_MACHINEGUN, "Machinegun");
-			put(VehicleType.VEHICLE_TYPE_NAVAL, "Naval");
+			put(VehicleType.VEHICLE_TYPE_MACHINEGUN, "Emplaced Machinegun");
+			put(VehicleType.VEHICLE_TYPE_NAVAL, "Naval Transport");
 			put(VehicleType.VEHICLE_TYPE_PARACHUTE, "Parachute");
 			put(VehicleType.VEHICLE_TYPE_SOLDIER, "Soldier");
 			put(VehicleType.VEHICLE_TYPE_BICYCLE, "Bicycle");
 			put(VehicleType.VEHICLE_TYPE_DESTROYER, "Destroyer");
 			put(VehicleType.VEHICLE_TYPE_BATTLESHIP, "Battleship");
 			put(VehicleType.VEHICLE_TYPE_LANDINGBOAT, "Landingboat");
+			put(VehicleType.VEHICLE_TYPE_PATROLBOAT, "Patrolboat");
+			put(VehicleType.VEHICLE_TYPE_SUB, "Submarine");
+			put(VehicleType.VEHICLE_TYPE_UKNOWN, "Unknown");
 		}
 	});	
 
@@ -189,7 +196,7 @@ public class FragalyzerConstants {
 					put("aecdorchester", VehicleType.VEHICLE_TYPE_RADIO);
 					put("aecdorchester_de", VehicleType.VEHICLE_TYPE_RADIO);
 					put("aecdorchester_france", VehicleType.VEHICLE_TYPE_TRANSPORT);
-					put("agassiz", VehicleType.VEHICLE_TYPE_NAVAL);
+					put("agassiz", VehicleType.VEHICLE_TYPE_DESTROYER);
 					put("aix_p51d", VehicleType.VEHICLE_TYPE_AIR);
 					put("aix_p51d_bombs", VehicleType.VEHICLE_TYPE_AIR);
 					put("aix_p51d_rockets", VehicleType.VEHICLE_TYPE_AIR);
@@ -480,11 +487,11 @@ public class FragalyzerConstants {
 					put("kwk_5cm_fr", VehicleType.VEHICLE_TYPE_ATGUN);
 					put("kv1_s", VehicleType.VEHICLE_TYPE_HEAVYARMOR);
 					put("la-5_fn", VehicleType.VEHICLE_TYPE_AIR);
-					put("landingcraftassault", VehicleType.VEHICLE_TYPE_NAVAL);
-					put("lct_mk5_gb_normandy", VehicleType.VEHICLE_TYPE_NAVAL);
-					put("lct_mk5_stat_gb_normandy", VehicleType.VEHICLE_TYPE_NAVAL);
-					put("lct_mk5_us_normandy", VehicleType.VEHICLE_TYPE_NAVAL);
-					put("lcvp", VehicleType.VEHICLE_TYPE_NAVAL);
+					put("landingcraftassault", VehicleType.VEHICLE_TYPE_LANDINGBOAT);
+					put("lct_mk5_gb_normandy", VehicleType.VEHICLE_TYPE_LANDINGBOAT);
+					put("lct_mk5_stat_gb_normandy", VehicleType.VEHICLE_TYPE_LANDINGBOAT);
+					put("lct_mk5_us_normandy", VehicleType.VEHICLE_TYPE_LANDINGBOAT);
+					put("lcvp", VehicleType.VEHICLE_TYPE_LANDINGBOAT);
 					put("lefh18", VehicleType.VEHICLE_TYPE_ARTILLERY);
 					put("lefh18_ai", VehicleType.VEHICLE_TYPE_ARTILLERY);
 					put("lefh18_france", VehicleType.VEHICLE_TYPE_ARTILLERY);
@@ -797,12 +804,12 @@ public class FragalyzerConstants {
 					put("stug40", VehicleType.VEHICLE_TYPE_MEDIUMARMOR);
 					put("stug40r", VehicleType.VEHICLE_TYPE_MEDIUMARMOR);
 					put("stuh42", VehicleType.VEHICLE_TYPE_MEDIUMARMOR);
-					put("sturmboot39", VehicleType.VEHICLE_TYPE_NAVAL);
+					put("sturmboot39", VehicleType.VEHICLE_TYPE_LANDINGBOAT);
 					put("su_12", VehicleType.VEHICLE_TYPE_MEDIUMARMOR);
 					put("su_76m", VehicleType.VEHICLE_TYPE_MEDIUMARMOR);
 					put("su_152", VehicleType.VEHICLE_TYPE_HEAVYARMOR);
-					put("subviib", VehicleType.VEHICLE_TYPE_NAVAL);
-					put("subviib2", VehicleType.VEHICLE_TYPE_NAVAL);
+					put("subviib", VehicleType.VEHICLE_TYPE_SUB);
+					put("subviib2", VehicleType.VEHICLE_TYPE_SUB);
 					put("swordfish", VehicleType.VEHICLE_TYPE_AIR);
 					put("swordfish_b", VehicleType.VEHICLE_TYPE_AIR);
 					put("t20", VehicleType.VEHICLE_TYPE_APC);
@@ -824,7 +831,7 @@ public class FragalyzerConstants {
 					put("tiger_p_early", VehicleType.VEHICLE_TYPE_HEAVYARMOR);
 					put("typhoon_mk1b_late", VehicleType.VEHICLE_TYPE_AIR);
 					put("typhoon_mk1b_late_flyover", VehicleType.VEHICLE_TYPE_UNUSABLE);
-					put("u47", VehicleType.VEHICLE_TYPE_NAVAL);
+					put("u47", VehicleType.VEHICLE_TYPE_SUB);
 					put("uc_airborne_cpl", VehicleType.VEHICLE_TYPE_SOLDIER);
 					put("uc_airborne_mack", VehicleType.VEHICLE_TYPE_SOLDIER);
 					put("uc_airborne_nco", VehicleType.VEHICLE_TYPE_SOLDIER);
@@ -910,19 +917,25 @@ public class FragalyzerConstants {
 					put("null", VehicleType.VEHICLE_TYPE_UKNOWN);
 					put("type92_nambu_bipod", VehicleType.VEHICLE_TYPE_MACHINEGUN);
 					put("betty", VehicleType.VEHICLE_TYPE_AIR);
-					put("fh1_pt_boat_jap", VehicleType.VEHICLE_TYPE_NAVAL);
+					put("fh1_pt_boat_jap", VehicleType.VEHICLE_TYPE_PATROLBOAT);
 					put("fh1_fletcher_lcvp", VehicleType.VEHICLE_TYPE_DESTROYER);
 					put("ki27", VehicleType.VEHICLE_TYPE_AIR);
 					put("a6m_zero_early", VehicleType.VEHICLE_TYPE_AIR);
 					put("hoha", VehicleType.VEHICLE_TYPE_APC);
 					put("sampan", VehicleType.VEHICLE_TYPE_NAVAL);
-					put("fh1_gato", VehicleType.VEHICLE_TYPE_NAVAL);
+					put("fh1_gato", VehicleType.VEHICLE_TYPE_SUB);
 					put("kate", VehicleType.VEHICLE_TYPE_AIR);
 					put("chi_ha", VehicleType.VEHICLE_TYPE_MEDIUMARMOR);
-					put("fh1_pt_boat", VehicleType.VEHICLE_TYPE_NAVAL);
+					put("fh1_pt_boat", VehicleType.VEHICLE_TYPE_PATROLBOAT);
 					put("wildcat", VehicleType.VEHICLE_TYPE_AIR);
 					put("fh1_daihatsu", VehicleType.VEHICLE_TYPE_LANDINGBOAT);
 					put("fh1_hatsuzuki_lcvp", VehicleType.VEHICLE_TYPE_DESTROYER);
+					put("type92_nambu_tripod", VehicleType.VEHICLE_TYPE_MACHINEGUN);
+					put("type92_nambu_tripod_dep", VehicleType.VEHICLE_TYPE_MACHINEGUN);
+					put("Unknown", VehicleType.VEHICLE_TYPE_UKNOWN);
+					put("vickers303_tripod_dep", VehicleType.VEHICLE_TYPE_MACHINEGUN);
+					put("vickers303_tripod", VehicleType.VEHICLE_TYPE_MACHINEGUN);
+					
 				}
 			});
 
@@ -1222,6 +1235,8 @@ public class FragalyzerConstants {
 					put("vengeur_de_1870", WeaponType.WEAPON_TYPE_CLOSE);
 					put("vgk98", WeaponType.WEAPON_TYPE_RIFLE);
 					put("vickers303_dep", WeaponType.WEAPON_TYPE_NONLETHAL);
+					put("vickers303", WeaponType.WEAPON_TYPE_LMG);
+					put("vickers303_tripod_dep", WeaponType.WEAPON_TYPE_LMG);
 					put("volksgewehr45", WeaponType.WEAPON_TYPE_RIFLE);
 					put("waltherp38", WeaponType.WEAPON_TYPE_PISTOL);
 					put("waltherp38-i3", WeaponType.WEAPON_TYPE_PISTOL);
@@ -1254,6 +1269,14 @@ public class FragalyzerConstants {
 					put("m1917a1", WeaponType.WEAPON_TYPE_LMG);
 					put("null", WeaponType.WEAPON_TYPE_UNKNOWN);
 					put("81mm_mortar_m1", WeaponType.WEAPON_TYPE_EXPLOSIVE);
+					put("type99_k_scoped", WeaponType.WEAPON_TYPE_LMG);
+					put("type99_k_scoped_assault", WeaponType.WEAPON_TYPE_LMG);
+					put("type92_nambu_bipod", WeaponType.WEAPON_TYPE_LMG);
+					put("3inchmortar_deployed", WeaponType.WEAPON_TYPE_EXPLOSIVE);
+					put("Unknown", WeaponType.WEAPON_TYPE_UNKNOWN);
+					put("type91", WeaponType.WEAPON_TYPE_GRENADE);
+					put("type89mortarfrag", WeaponType.WEAPON_TYPE_GRENADE);
+					
 				}
 			});
 
@@ -1706,7 +1729,7 @@ public class FragalyzerConstants {
 			put("uw_nco_sme", KitType.KIT_TYPE_NCO);
 			put("uw_nco_sme_rifle", KitType.KIT_TYPE_NCO);
 			put("uw_pickup30cal", KitType.KIT_TYPE_HMG);
-			put("uw_pickupammokit", KitType.KIT_TYPE_MAGIC);
+			put("uw_pickupammokit", KitType.KIT_TYPE_RIFLEASSAULT);
 			put("uw_pickupassaultgarandrnade_hurtgen", KitType.KIT_TYPE_RIFLEASSAULT);
 			put("uw_pickupassaultm1garand", KitType.KIT_TYPE_SMGASSAULT);
 			put("uw_pickupassaultm1thompson", KitType.KIT_TYPE_SMGASSAULT);
@@ -1719,7 +1742,7 @@ public class FragalyzerConstants {
 			put("uw_pickupengineermines", KitType.KIT_TYPE_ENGINEER);
 			put("uw_pickupengineerwinchester", KitType.KIT_TYPE_ENGINEER);
 			put("uw_pickupengineerwinchesterhook", KitType.KIT_TYPE_ENGINEER);
-			put("uw_pickupflamethrower", KitType.KIT_TYPE_MAGIC);
+			put("uw_pickupflamethrower", KitType.KIT_TYPE_SAPPER);
 			put("uw_pickuphawkinsm1thompson", KitType.KIT_TYPE_SMGASSAULT);
 			put("uw_pickupm1917a1", KitType.KIT_TYPE_HMG);
 			put("uw_pickupmediccolt1911", KitType.KIT_TYPE_MEDIC);
@@ -1796,6 +1819,12 @@ public class FragalyzerConstants {
 			put("jp_pickupammokit", KitType.KIT_TYPE_ENGINEER);
 			put("up_engineer_m1903a1_satchel_nowrench", KitType.KIT_TYPE_ENGINEER);
 			put("jp_engineer_turtlemine_nowrench", KitType.KIT_TYPE_ENGINEER);
+			put("jp_lmg_limited_scoped", KitType.KIT_TYPE_LMG);
+			put("jp_pickupsniper_type99", KitType.KIT_TYPE_LMG);
+			put("Unknown", KitType.UNKNOWN);
+			put("", KitType.UNKNOWN);
+			put("unknown", KitType.UNKNOWN);
+			put("null", KitType.UNKNOWN);
 		}
 	});
 	
@@ -2569,7 +2598,20 @@ public class FragalyzerConstants {
 			put("wr360c14_europe1942l", "WR360C14");
 			put("type99_emp_bipod", "Type99");
 			put("81mm_mortar_m1", "81mm Mortar M1");
+			put("3inchmortar_deployed", "3in Mortar");
 			put("null", "unknown");
+			put("type92_nambu_bipod", "Nambu Type 92");
+			put("type92_nambu_tripod", "Nambu Type 92");
+			put("Unknown", "Unknown");
+			put("vickers303_tripod", "Vickers Tripod");
+			put("vickers303_tripod_dep", "Vickers Tripod");
+			put("50cal_tripod", ".50 Browning");
+			put("m1917_tripod", "M1917 .30");
+			put("m1917_tripod_deployed", "M1917 .30");
+			put("m1919a4", "M1919A4 Tripod");
+			put("m1919a4_emplaced", "M1919A4 Tripod");
+			put("M1919A4notri", "M1919A4");
+			put("m1919a6_emplaced", "M1919A6");
 		}
 	});			
 	public static final Map<String, String> weaponNames = Collections.unmodifiableMap(new HashMap<String, String>() {
@@ -2813,11 +2855,11 @@ public class FragalyzerConstants {
 			put("tellermine35_timed", "Tellermine 35");
 			put("tellermine43", "Tellermine 43");
 			put("turtlemine", "Turtlemine");
-			put("type91", "type91 Grenade");
+			put("type91", "Type91 Grenade");
 			put("type93_mine", "Type 93 landmine");
 			put("type97-i7", "Type97 Grenade");
 			put("type97", "Type97 Grenade");
-			put("type97_smine", "Type97");
+			put("type97_smine", "Type97 S-Mine");
 			put("us_satchel-i4", "Sprengladung");
 			put("us_satchel", "Sprengladung");
 			put("winebottle", "Petrol Bomb");
@@ -2905,13 +2947,13 @@ public class FragalyzerConstants {
 			put("mosinnagantm9130hbayonet", "Mosin Nagant M91/30 Bayonet");
 			put("mosinnagantm9130pu", "Mosin Nagant M91/30 (scope)");
 			put("nambu", "Nambu");
-			put("no1smle", "No.1 SMLE Rifle Grenade");
-			put("no1smle_short", "No.1 SMLE Rifle Grenade");
+			put("no1smle", "No.1 SMLE");
+			put("no1smle_short", "No.1 SMLE");
 			put("no1smlebayonet", "No.1 SMLE Bayonet");
 			put("no1smlegrenade-5", "No.1 SMLE Rifle Grenade");
 			put("no1smlegrenade", "No.1 SMLE Rifle Grenade");
 			put("no4", "No. 4 (Scope)");
-			put("No4_short", "No. 4 (Scope)");
+			put("No4_short", "No. 4");
 			put("no4bayonet", "No. 4 Bayonet");
 			put("no4grenade-1", "No. 4 Rifle Grenade");
 			put("no4grenade-3", "No. 4 Rifle Grenade");
@@ -2998,6 +3040,8 @@ public class FragalyzerConstants {
 			put("jap_bayonet", "Bayonet");
 			put("null", "unknown");
 			put("m3_knife", "M3 Knife");
+			put("sykes_knife","Sykes Knife");
+			put("Unknown", "Unknown");
 		}
 	});			
 }

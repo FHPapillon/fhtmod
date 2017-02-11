@@ -9,6 +9,7 @@ import java.util.StringTokenizer;
 import com.fht.fragalyzer.types.CPEvents;
 import com.fht.fragalyzer.types.EventType;
 import com.fht.fragalyzer.types.KillType;
+import com.fht.fragalyzer.types.KitType;
 import com.fht.fragalyzer.types.WeaponType;
 
 public class LogMapper {
@@ -65,9 +66,14 @@ public class LogMapper {
 			default:
 				break;
 			}
-
+			
 		}
-		
+		if (entry != null) {
+			if(entry.toString().contains("null")) {
+				System.out.println("IN:  " + logLine);
+				System.out.println("OUT: " + entry.toString());
+			}
+		}
 		return entry;
 	}
 
@@ -148,8 +154,11 @@ public class LogMapper {
 
 		}
 		if (round.getMapname().equals(mapname)) {
-			if (!(round.getDatetime().equals(datetime)))
+			if (!(round.getDatetime().equals(datetime))) {
 				roundCount++;
+				mapname = round.getMapname();
+				datetime = round.getDatetime();				
+			}
 		} else {
 			mapname = round.getMapname();
 			datetime = round.getDatetime();
@@ -222,6 +231,9 @@ public class LogMapper {
 				case (FragalyzerConstants.VictimPos):
 					kill.setVictimPosition(getPositionFromLog(logValue));
 					break;
+				case (FragalyzerConstants.Time):
+					kill.setTime(logValue);
+					break;					
 				default:
 					break;
 				}
@@ -262,6 +274,10 @@ public class LogMapper {
 				case (FragalyzerConstants.PlayerName):
 					score.setPlayer(logValue);
 					break;
+					
+				case (FragalyzerConstants.Time):
+					score.setTime(logValue);
+					break;					
 
 				case (FragalyzerConstants.Scoretype):
 					switch (logValue) {
@@ -282,15 +298,16 @@ public class LogMapper {
 						break;
 
 					default:
-						return null;
+						//others are not of interest
+						break;
 					}
 
 				default:
 					break;
 				}
 			}
-		
-			return score;
+			if (score.getCpEvent() != null)
+				return score;
 
 		default:
 			break;
@@ -340,35 +357,12 @@ public class LogMapper {
 				kill.setVictimVehicleName(FragalyzerConstants.vehicleNames.get(kill.getVictimVehicle()));
 			else
 				missingKits.put("w: " + kill.getVictimVehicle(), "");
-			/*
-			 * switch (kill.getKillType()) { case INF_VEHICLE: case INF_INF:
-			 * switch (kill.getAttackerKitType()) { case KIT_TYPE_RIFLEASSAULT:
-			 * kill.setAttackerWeaponType(WeaponType.WEAPON_TYPE_SMG); break;
-			 * 
-			 * default:
-			 * kill.setAttackerWeaponType(WeaponType.WEAPON_TYPE_RIFLE); break;
-			 * } break;
-			 * 
-			 * default: break; }
-			 */
+
 			break;
 
 		default:
-			/*
-			 * if
-			 * (FragalyzerConstants.kitTypes.containsKey(kill.getPlayerKit()))
-			 * kill.setAttackerKitType(FragalyzerConstants.kitTypes.get(kill.
-			 * getPlayerKit())); else missingKits.put(kill.getPlayerKit(), "");
-			 * if
-			 * (FragalyzerConstants.kitTypes.containsKey(kill.getVictimKit()))
-			 * kill.setVictimKitType(FragalyzerConstants.kitTypes.get(kill.
-			 * getVictimKit())); else missingKits.put(kill.getVictimKit(), "");
-			 * 
-			 * if
-			 * (FragalyzerConstants.weaponTypes.containsKey(kill.getWeapon()))
-			 * kill.setAttackerWeaponType(FragalyzerConstants.weaponTypes.get(
-			 * kill.getWeapon())); else missingKits.put(kill.getWeapon(), "");
-			 */
+
+		
 			break;
 		}
 		return kill;
@@ -415,28 +409,50 @@ public class LogMapper {
 			String attackerVehicle = kill.getVehicle().toLowerCase().substring(0, 3);
 			attackerIsInf = isInfantry(attackerVehicle);
 		}
+		else	
+			attackerIsInf = true;
 		boolean victimIsInf = false;
 		if (kill.getVictimVehicle() != null) {
 			String victimVehicle = kill.getVictimVehicle().toLowerCase().substring(0, 3);
 			victimIsInf = isInfantry(victimVehicle);
 		}
+		else
+			victimIsInf = true;
 
 		if (attackerIsInf && victimIsInf)
 			kill.setKillType(KillType.INF_INF);
 
-		if (attackerIsInf && !victimIsInf)
-			kill.setKillType(KillType.INF_VEHICLE);
+		if (attackerIsInf && !victimIsInf){
+			if (!kill.getVictimVehicle().equals("LadderContainer"))
+				kill.setKillType(KillType.INF_VEHICLE);
+			else
+				kill.setKillType(KillType.INF_INF);
+		}
 
 		if (!attackerIsInf && victimIsInf)
 			kill.setKillType(KillType.VEHICLE_INF);
 
 		if (!attackerIsInf && !victimIsInf)
-			kill.setKillType(KillType.VEHICLE_VEHICLE);
+			if (!kill.getVictimVehicle().equals("LadderContainer"))
+				kill.setKillType(KillType.VEHICLE_VEHICLE);
+			else
+				kill.setKillType(KillType.VEHICLE_INF);			
+			//kill.setKillType(KillType.VEHICLE_VEHICLE);
 
 		if (kill.getPlayerTeam().equals(kill.getVictimTeam()))
 			kill.setTeamkill(true);
 		else
 			kill.setTeamkill(false);
+		
+		if (kill.getKillType().equals(KillType.INF_INF) || kill.getKillType().equals(KillType.INF_VEHICLE)){
+			if (kill.getWeapon() == null)
+				kill.setWeapon("Unknown");
+			if (kill.getPlayerKit() == null) {
+				kill.setPlayerKit("Unknown");
+			}
+				
+		}
+		
 		return kill;
 	}
 

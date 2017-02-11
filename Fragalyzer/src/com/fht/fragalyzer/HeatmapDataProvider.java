@@ -77,7 +77,7 @@ public class HeatmapDataProvider {
 
 				obj.put("x", dpo.getX());
 				obj.put("y", dpo.getY());
-				obj.put("value", dpo.getNumber());
+				obj.put("value", dpo.getNumber() > 1 ? dpo.getNumber() * FragalyzerConstants.heatmapDataPointMultiplicationFactor : dpo.getNumber());
 
 				fw.write(obj.toJSONString() + ",");
 

@@ -8,29 +8,28 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
-import java.util.Set;
 import java.util.Map.Entry;
-
-import javax.print.attribute.HashPrintJobAttributeSet;
+import java.util.Set;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 import com.fht.fragalyzer.types.EventType;
 import com.fht.fragalyzer.types.KillType;
+import com.fht.fragalyzer.types.KitType;
 import com.fht.fragalyzer.types.PlayerStats;
 import com.fht.fragalyzer.types.StatScope;
 import com.fht.fragalyzer.types.VehicleType;
 import com.fht.fragalyzer.types.WeaponType;
 
 public class Ranker {
-	
+
 	private String basePath;
 	private StatScope scope;
-	
+
 	private HashMap<String, Integer> killRanking;
 	private HashMap<String, Integer> deathsRanking;
-	private HashMap<String, Integer> tkRanking;	
+	private HashMap<String, Integer> tkRanking;
 	private HashMap<String, Double> kdrRanking;
 
 	private HashMap<String, Integer> cpCapRanking;
@@ -42,8 +41,11 @@ public class Ranker {
 	private HashMap<String, Integer> cpNeutralizeRanking;
 
 	private HashMap<String, Integer> cpNeutralizeAssistRanking;
-	
-	
+
+	private HashMap<VehicleType, HashMap<String, Integer>> vehicleTypeRanking;
+	private HashMap<WeaponType, HashMap<String, Integer>> weaponTypeRanking;
+	private HashMap<String, HashMap<KitType, Integer>> weaponRanking;
+
 	public Ranker(String basePath) {
 		super();
 		this.setBasePath(basePath);
@@ -55,6 +57,9 @@ public class Ranker {
 		setCpDefendRanking(new HashMap<>());
 		setCpNeutralizeAssistRanking(new HashMap<>());
 		setCpNeutralizeRanking(new HashMap<>());
+		setVehicleTypeRanking(new HashMap<>());
+		setWeaponTypeRanking(new HashMap<>());
+		setWeaponRanking(new HashMap<>());
 	}
 
 	/*
@@ -62,7 +67,7 @@ public class Ranker {
 	 */
 	private PlayerStats countCPStuff(PlayerStats stats) {
 		Iterator<LogEntry> it = stats.getEvents().iterator();
-		
+
 		LogEntry logEntry;
 		int cpCaptures = 0;
 		int cpCaptureAssists = 0;
@@ -88,7 +93,7 @@ public class Ranker {
 					break;
 				case cpNeutralizeAssists:
 					cpNeutralizeAssists++;
-					break;					
+					break;
 				default:
 					break;
 				}
@@ -96,7 +101,6 @@ public class Ranker {
 
 		}
 
-		
 		stats.setFlagCaps(cpCaptures);
 		stats.setFlagCapAssists(cpCaptureAssists);
 		stats.setFlagDefends(cpDefends);
@@ -107,8 +111,10 @@ public class Ranker {
 		getCpDefendRanking().put(stats.getPlayerName(), new Integer(stats.getFlagDefends()));
 		getCpNeutralizeRanking().put(stats.getPlayerName(), new Integer(stats.getFlagNeutralizes()));
 		getCpNeutralizeAssistRanking().put(stats.getPlayerName(), new Integer(stats.getFlagNeutralizeAssist()));
-		
-		System.out.println("Player  " + cpCaptures + " " + cpCaptureAssists + " " + cpNeutralizeAssists + " " +cpNeutralizes + " " + cpDefends + " " + stats.getPlayerName());
+
+		// System.out.println("Player " + cpCaptures + " " + cpCaptureAssists +
+		// " " + cpNeutralizeAssists + " " +cpNeutralizes + " " + cpDefends + "
+		// " + stats.getPlayerName());
 
 		return stats;
 	}
@@ -118,13 +124,14 @@ public class Ranker {
 	 */
 	private PlayerStats countDeaths(PlayerStats stats) {
 		Iterator<LogEntry> it = stats.getEvents().iterator();
-		
+
 		LogEntry logEntry;
 		int deaths = 0;
 
 		while (it.hasNext()) {
 			logEntry = it.next();
-			if (logEntry.getEventType().equals(EventType.KILL)&&!logEntry.getKillType().equals(KillType.SUICIDE) && logEntry.getVictim().equals(stats.getPlayerName())) {
+			if (logEntry.getEventType().equals(EventType.KILL) && !logEntry.getKillType().equals(KillType.SUICIDE)
+					&& logEntry.getVictim().equals(stats.getPlayerName())) {
 				deaths++;
 			}
 
@@ -133,10 +140,9 @@ public class Ranker {
 		stats.setDeaths(deaths);
 		getDeathsRanking().put(stats.getPlayerName(), new Integer(stats.getDeaths()));
 
-		
-
 		return stats;
-	}	
+	}
+
 	/*
 	 * Per player, count the kills with a special WeaponType
 	 */
@@ -148,7 +154,8 @@ public class Ranker {
 
 		while (it.hasNext()) {
 			logEntry = it.next();
-			if (logEntry.getEventType().equals(EventType.KILL)&&!logEntry.getKillType().equals(KillType.SUICIDE) && logEntry.getVictim().equals(stats.getPlayerName())) {
+			if (logEntry.getEventType().equals(EventType.KILL) && !logEntry.getKillType().equals(KillType.SUICIDE)
+					&& logEntry.getVictim().equals(stats.getPlayerName())) {
 				// System.out.println(logEntry.getAttackerWeaponType() + ": " +
 				// logEntry.getWeapon());
 				if (opponents.containsKey(logEntry.getPlayer()))
@@ -162,22 +169,21 @@ public class Ranker {
 
 		stats.setEnemies(opponents);
 
-		
-
 		return stats;
-	}	
+	}
+
 	/*
-	 * Per player, count how many kills he had
+	 * Per player, count how many kills he had without TKs and Suicides
 	 */
 	private PlayerStats countKills(PlayerStats stats) {
 		Iterator<LogEntry> it = stats.getEvents().iterator();
-		
+
 		LogEntry logEntry;
 		int kills = 0;
 
 		while (it.hasNext()) {
 			logEntry = it.next();
-			if (!logEntry.getKillType().equals(KillType.SUICIDE) && logEntry.getPlayer().equals(stats.getPlayerName())) {
+			if (isRealKill(logEntry) && logEntry.getPlayer().equals(stats.getPlayerName())) {
 				kills++;
 			}
 
@@ -185,15 +191,16 @@ public class Ranker {
 
 		stats.setKills(kills);
 		getKillRanking().put(stats.getPlayerName(), new Integer(stats.getKills()));
-		
+
 		return stats;
-	}	
+	}
+
 	/*
 	 * Per player, count how often he teamkilled
 	 */
 	private PlayerStats countTeamKills(PlayerStats stats) {
 		Iterator<LogEntry> it = stats.getEvents().iterator();
-		
+
 		LogEntry logEntry;
 		int tks = 0;
 
@@ -208,10 +215,9 @@ public class Ranker {
 		stats.setTeamKills(tks);
 		getTkRanking().put(stats.getPlayerName(), new Integer(stats.getTeamKills()));
 
-		
-
 		return stats;
-	}	
+	}
+
 	/*
 	 * Per player, count the kills with a special VehicleType
 	 */
@@ -219,11 +225,12 @@ public class Ranker {
 		Iterator<LogEntry> it = stats.getEvents().iterator();
 		HashMap<String, Integer> vehicleKill = new HashMap<>();
 		HashMap<VehicleType, Integer> vehicleTypeKill = new HashMap<>();
+		HashMap<String, Integer> vehicleTypeKillRankingForVehicleType;
 		LogEntry logEntry = null;
 
 		while (it.hasNext()) {
 			logEntry = it.next();
-			if (logEntry.getPlayer().equals(stats.getPlayerName())) {
+			if (logEntry.getPlayer().equals(stats.getPlayerName()) && isRealKill(logEntry)) {
 				switch (logEntry.getKillType()) {
 				case VEHICLE_INF:
 				case VEHICLE_VEHICLE:
@@ -238,6 +245,20 @@ public class Ranker {
 					else
 						vehicleTypeKill.put(logEntry.getAttackerVehicleType(), new Integer(1));
 
+					if (!getVehicleTypeRanking().containsKey((logEntry.getAttackerVehicleType())))
+						vehicleTypeKillRankingForVehicleType = new HashMap<>();
+					else
+						vehicleTypeKillRankingForVehicleType = getVehicleTypeRanking()
+								.get(logEntry.getAttackerVehicleType());
+
+					if (!vehicleTypeKillRankingForVehicleType.containsKey(logEntry.getPlayer()))
+						vehicleTypeKillRankingForVehicleType.put(logEntry.getPlayer(), new Integer(1));
+					else
+						vehicleTypeKillRankingForVehicleType.put(logEntry.getPlayer(), new Integer(
+								vehicleTypeKillRankingForVehicleType.get(logEntry.getPlayer()).intValue() + 1));
+
+					getVehicleTypeRanking().put(logEntry.getAttackerVehicleType(),
+							vehicleTypeKillRankingForVehicleType);
 					break;
 				default:
 					break;
@@ -249,10 +270,9 @@ public class Ranker {
 		stats.setVehicleNameKills(vehicleKill);
 		stats.setVehicleTypeKills(vehicleTypeKill);
 
-
-
 		return stats;
-	}	
+	}
+
 	private PlayerStats countVictims(PlayerStats stats) {
 		Iterator<LogEntry> it = stats.getEvents().iterator();
 		HashMap<String, Integer> opponents = new HashMap<>();
@@ -261,7 +281,7 @@ public class Ranker {
 
 		while (it.hasNext()) {
 			logEntry = it.next();
-			if (logEntry.getEventType().equals(EventType.KILL)&&!logEntry.getKillType().equals(KillType.SUICIDE) && !logEntry.getVictim().equals(stats.getPlayerName())) {
+			if (isRealKill(logEntry) && !logEntry.getVictim().equals(stats.getPlayerName())) {
 				// System.out.println(logEntry.getAttackerWeaponType() + ": " +
 				// logEntry.getWeapon());
 				if (opponents.containsKey(logEntry.getVictim()))
@@ -275,11 +295,9 @@ public class Ranker {
 
 		stats.setVictims(opponents);
 
-
-
 		return stats;
-	}	
-	
+	}
+
 	/*
 	 * Per player, count the kills with a special WeaponType
 	 */
@@ -287,27 +305,47 @@ public class Ranker {
 		Iterator<LogEntry> it = stats.getEvents().iterator();
 		HashMap<String, Integer> weaponKill = new HashMap<>();
 		HashMap<WeaponType, Integer> weaponTypeKill = new HashMap<>();
+		HashMap<String, Integer> weaponTypeKillRankingForVehicleType;
+		
+
 		LogEntry logEntry;
 
 		while (it.hasNext()) {
 			logEntry = it.next();
-			if (logEntry.getPlayer().equals(stats.getPlayerName())) {
+			if (logEntry.getPlayer().equals(stats.getPlayerName()) && isRealKill(logEntry)) {
 				switch (logEntry.getKillType()) {
 				case INF_INF:
 				case INF_VEHICLE:
-					// System.out.println(logEntry.getAttackerWeaponType() + ":
-					// " +
-					// logEntry.getWeapon());
+					// Count weapon Kills
 					if (weaponKill.containsKey(logEntry.getWeaponName()))
 						weaponKill.put(logEntry.getWeaponName(),
 								new Integer(weaponKill.get(logEntry.getWeaponName()).intValue() + 1));
 					else
 						weaponKill.put(logEntry.getWeaponName(), new Integer(1));
+
+					// Count weaponType kills
 					if (weaponTypeKill.containsKey(logEntry.getAttackerWeaponType()))
 						weaponTypeKill.put(logEntry.getAttackerWeaponType(),
 								new Integer(weaponTypeKill.get(logEntry.getAttackerWeaponType()).intValue() + 1));
 					else
 						weaponTypeKill.put(logEntry.getAttackerWeaponType(), new Integer(1));
+
+					if (!getWeaponTypeRanking().containsKey((logEntry.getAttackerWeaponType())))
+						weaponTypeKillRankingForVehicleType = new HashMap<>();
+					else
+						weaponTypeKillRankingForVehicleType = getWeaponTypeRanking()
+								.get(logEntry.getAttackerWeaponType());
+
+					if (!weaponTypeKillRankingForVehicleType.containsKey(logEntry.getPlayer()))
+						weaponTypeKillRankingForVehicleType.put(logEntry.getPlayer(), new Integer(1));
+					else
+						weaponTypeKillRankingForVehicleType.put(logEntry.getPlayer(), new Integer(
+								weaponTypeKillRankingForVehicleType.get(logEntry.getPlayer()).intValue() + 1));
+
+					getWeaponTypeRanking().put(logEntry.getAttackerWeaponType(), weaponTypeKillRankingForVehicleType);
+					
+
+				
 					break;
 				default:
 					break;
@@ -319,11 +357,8 @@ public class Ranker {
 		stats.setWeaponNameKills(weaponKill);
 		stats.setWeaponTypeKills(weaponTypeKill);
 
-		
-	
-
 		return stats;
-	}	
+	}
 
 	private HashMap<String, PlayerStats> createPlayerStats(HashMap<String, PlayerStats> playerEvents) {
 		// Walk over each player
@@ -332,32 +367,32 @@ public class Ranker {
 			String player = entry.getKey();
 			PlayerStats playerStats = entry.getValue();
 
-			// Count number of kill per WeaponType
+			// Count number of kill per Weapon
 			playerStats = countWeaponKills(playerStats);
 
-			// Count number of kill per VehicleType
+			// Count number of kill per Vehicle
 			playerStats = countVehicleKills(playerStats);
 
 			// Count number of victims
 			playerStats = countVictims(playerStats);
-			
+
 			// Count number of enemies
-			playerStats = countEnemies(playerStats);	
-			
+			playerStats = countEnemies(playerStats);
+
 			// Count number of kills
 			playerStats = countKills(playerStats);
-					
+
 			// Count number of deaths
 			playerStats = countDeaths(playerStats);
-			
+
 			// Count number of TKs
-			playerStats = countTeamKills(playerStats);			
-			
+			playerStats = countTeamKills(playerStats);
+
 			// Count number of CP Things
-			playerStats = countCPStuff(playerStats);				
-			
+			playerStats = countCPStuff(playerStats);
+
 			if (playerStats.getDeaths() > 0)
-				playerStats.setKdrRatio((double)playerStats.getKills() / (double)playerStats.getDeaths());
+				playerStats.setKdrRatio((double) playerStats.getKills() / (double) playerStats.getDeaths());
 			getKdrRanking().put(playerStats.getPlayerName(), new Double(playerStats.getKdrRatio()));
 
 			stats.put(player, playerStats);
@@ -365,23 +400,48 @@ public class Ranker {
 
 		return stats;
 	}
-	
-	private String dumpRank(String name, HashMap<String, Integer> ranks){
+
+	private void dumpVehicleTypeRank(String name, HashMap<VehicleType, HashMap<String, Integer>> ranks, FileWriter fw) {
+
+		for (Map.Entry<VehicleType, HashMap<String, Integer>> entry : ranks.entrySet()) {
+			try {
+				fw.write(dumpRank(FragalyzerConstants.vehicleTypeNames.get(entry.getKey()), entry.getValue()) + ",");
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+
+	}
+
+	private void dumpWeaponTypeRank(String name, HashMap<WeaponType, HashMap<String, Integer>> ranks, FileWriter fw) {
+
+		for (Map.Entry<WeaponType, HashMap<String, Integer>> entry : ranks.entrySet()) {
+			try {
+				fw.write(dumpRank(FragalyzerConstants.weaponTypeNames.get(entry.getKey()), entry.getValue()) + ",");
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+
+	}
+
+	private String dumpRank(String name, HashMap<String, Integer> ranks) {
 		JSONObject obj, event;
 		JSONArray list;
 		obj = new JSONObject();
 		list = new JSONArray();
-		for (Map.Entry<String, Integer> entry : MapUtil.sortByValueDesc(ranks)
-				.entrySet()) {
+		for (Map.Entry<String, Integer> entry : MapUtil.sortByValueDesc(ranks).entrySet()) {
 			event = new JSONObject();
 			event.put(entry.getKey(), entry.getValue());
 			list.add(event);
 		}
-		obj.put(name,list);
+		obj.put(name, list);
 		return obj.toJSONString();
 	}
-	
-	private String dumpRankDouble(String name, HashMap<String, Double> ranks){
+
+	private String dumpRankDouble(String name, HashMap<String, Double> ranks) {
 
 		DecimalFormat df = new DecimalFormat("##.##");
 		df.setRoundingMode(RoundingMode.CEILING);
@@ -390,15 +450,14 @@ public class Ranker {
 		JSONArray list;
 		obj = new JSONObject();
 		list = new JSONArray();
-		for (Map.Entry<String, Double> entry : MapUtil.sortByValueDesc(ranks)
-				.entrySet()) {
+		for (Map.Entry<String, Double> entry : MapUtil.sortByValueDesc(ranks).entrySet()) {
 			event = new JSONObject();
 			event.put(entry.getKey(), String.format(df.format(entry.getValue().doubleValue())));
 			list.add(event);
 		}
-		obj.put(name,list);
+		obj.put(name, list);
 		return obj.toJSONString();
-	}	
+	}
 
 	private void dumpRanks(HashMap<String, PlayerStats> playerEvents, String name) {
 
@@ -412,13 +471,11 @@ public class Ranker {
 		// Obtaining an iterator for the entry set
 		Iterator<Map.Entry<String, PlayerStats>> it = entrySet.iterator();
 		JSONObject obj, event;
-		
 
-		
 		FileWriter fw = null;
 		String line = new String();
 		try {
-			fw = new FileWriter(getBasePath() + "//" + getScope() + "_" + name +  "_stats.json");
+			fw = new FileWriter(getBasePath() + "//" + getScope() + "_" + name + "_stats.json");
 			fw.append(System.getProperty("line.separator")); // e.g.
 			fw.write("[");
 
@@ -431,8 +488,9 @@ public class Ranker {
 			fw.write(dumpRank("cpneutralizeassistranking", getCpNeutralizeAssistRanking()) + ",");
 			fw.write(dumpRank("cpneutralizeranking", getCpNeutralizeRanking()) + ",");
 			fw.write(dumpRankDouble("kdrranking", getKdrRanking()) + ",");
-			
-				
+			dumpVehicleTypeRank("vehicletype", getVehicleTypeRanking(), fw);
+			dumpWeaponTypeRank("weapontype", getWeaponTypeRanking(), fw);
+
 			while (it.hasNext()) {
 
 				obj = new JSONObject();
@@ -451,13 +509,13 @@ public class Ranker {
 				obj.put("player", player);
 				obj.put("kills", stats.getKills());
 				obj.put("deaths", stats.getDeaths());
-				obj.put("teamkills", stats.getTeamKills());			
+				obj.put("teamkills", stats.getTeamKills());
 				obj.put("cpcaps", stats.getFlagCaps());
 				obj.put("cpcapassists", stats.getFlagCapAssists());
 				obj.put("cpdefends", stats.getFlagDefends());
 				obj.put("cpneutralizes", stats.getFlagNeutralizes());
 				obj.put("cpneutralizeassists", stats.getFlagNeutralizeAssist());
-				
+
 				list = new JSONArray();
 				for (Map.Entry<VehicleType, Integer> entry : MapUtil.sortByValueDesc(stats.getVehicleTypeKills())
 						.entrySet()) {
@@ -466,7 +524,7 @@ public class Ranker {
 					list.add(event);
 				}
 				obj.put("vehicletypekills", list);
-				
+
 				list = new JSONArray();
 				for (Map.Entry<String, Integer> entry : MapUtil.sortByValueDesc(stats.getWeaponNameKills())
 						.entrySet()) {
@@ -492,7 +550,6 @@ public class Ranker {
 					list.add(event);
 				}
 				obj.put("victims", list);
-				
 
 				list = new JSONArray();
 				for (Map.Entry<String, Integer> entry : MapUtil.sortByValueDesc(stats.getEnemies()).entrySet()) {
@@ -500,8 +557,8 @@ public class Ranker {
 					event.put(entry.getKey(), entry.getValue());
 					list.add(event);
 				}
-				obj.put("enemies", list);			
-				
+				obj.put("enemies", list);
+
 				line = obj.toJSONString();
 				if (it.hasNext())
 					line = line + ",";
@@ -538,24 +595,23 @@ public class Ranker {
 	public HashMap<String, Integer> getCpCapAassistRanking() {
 		return cpCapAassistRanking;
 	}
-	
+
 	public HashMap<String, Integer> getCpCapRanking() {
 		return cpCapRanking;
-	}			
-	
+	}
+
 	public HashMap<String, Integer> getCpDefendRanking() {
 		return cpDefendRanking;
-	}		
+	}
 
 	public HashMap<String, Integer> getCpNeutralizeAssistRanking() {
 		return cpNeutralizeAssistRanking;
-	}	
-	
+	}
+
 	public HashMap<String, Integer> getCpNeutralizeRanking() {
 		return cpNeutralizeRanking;
-	}	
-		
-	
+	}
+
 	public HashMap<String, Integer> getDeathsRanking() {
 		return deathsRanking;
 	}
@@ -576,18 +632,24 @@ public class Ranker {
 		return tkRanking;
 	}
 
+	private boolean isRealKill(LogEntry logEntry) {
+		return logEntry.getEventType().equals(EventType.KILL) && !logEntry.getKillType().equals(KillType.SUICIDE)
+				&& !logEntry.isTeamkill();
+	}
+
 	public void rank(ArrayList<LogEntry> logEntries, String name, StatScope scope) {
 		setScope(scope);
 		Iterator<LogEntry> it = logEntries.iterator();
-		
-		
+
 		LogEntry kill;
 
 		setKillRanking(new HashMap<>());
 		setDeathsRanking(new HashMap<>());
-		setTkRanking(new HashMap<>());		
+		setTkRanking(new HashMap<>());
 		setKdrRanking(new HashMap<>());
 		setCpCapRanking(new HashMap<>());
+		setVehicleTypeRanking(new HashMap<>());
+		setWeaponTypeRanking(new HashMap<>());
 
 		PlayerStats stats = new PlayerStats();
 		HashMap<String, PlayerStats> playerEvents = new HashMap<>();
@@ -609,17 +671,17 @@ public class Ranker {
 
 				stats.getEvents().add(kill);
 				playerEvents.put(kill.getPlayer(), stats);
-				
-				if (logEntry.getEventType().equals(EventType.KILL)) {
-				if (!playerEvents.containsKey(kill.getVictim())) {
-					stats = new PlayerStats();
-					stats.setPlayerName(kill.getVictim());
-				} else {
-					stats = playerEvents.get(kill.getVictim());
-				}
 
-				stats.getEvents().add(kill);
-				playerEvents.put(kill.getVictim(), stats);
+				if (logEntry.getEventType().equals(EventType.KILL)) {
+					if (!playerEvents.containsKey(kill.getVictim())) {
+						stats = new PlayerStats();
+						stats.setPlayerName(kill.getVictim());
+					} else {
+						stats = playerEvents.get(kill.getVictim());
+					}
+
+					stats.getEvents().add(kill);
+					playerEvents.put(kill.getVictim(), stats);
 				}
 
 			}
@@ -630,13 +692,12 @@ public class Ranker {
 
 		dumpRanks(playerEvents, name);
 
-
 	}
 
 	public void setBasePath(String basePath) {
 		this.basePath = basePath;
 	}
-	
+
 	public void setCpCapAassistRanking(HashMap<String, Integer> cpCapAassistRanking) {
 		this.cpCapAassistRanking = cpCapAassistRanking;
 	}
@@ -677,5 +738,28 @@ public class Ranker {
 		this.tkRanking = tkRanking;
 	}
 
+	public HashMap<VehicleType, HashMap<String, Integer>> getVehicleTypeRanking() {
+		return vehicleTypeRanking;
+	}
+
+	public void setVehicleTypeRanking(HashMap<VehicleType, HashMap<String, Integer>> vehicleTypeRanking) {
+		this.vehicleTypeRanking = vehicleTypeRanking;
+	}
+
+	public HashMap<WeaponType, HashMap<String, Integer>> getWeaponTypeRanking() {
+		return weaponTypeRanking;
+	}
+
+	public void setWeaponTypeRanking(HashMap<WeaponType, HashMap<String, Integer>> weaponTypeRanking) {
+		this.weaponTypeRanking = weaponTypeRanking;
+	}
+
+	public HashMap<String, HashMap<KitType, Integer>> getWeaponRanking() {
+		return weaponRanking;
+	}
+
+	public void setWeaponRanking(HashMap<String, HashMap<KitType, Integer>> weaponRanking) {
+		this.weaponRanking = weaponRanking;
+	}
 
 }

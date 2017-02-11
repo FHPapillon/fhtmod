@@ -39,6 +39,7 @@ public  class LogEntry {
 	private LocalDateTime datetime;
 	private KitType attackerKitType;
 	private CPEvents cpEvent;
+	private String time;
 	
 	
 
@@ -174,21 +175,21 @@ public  class LogEntry {
 			switch (getKillType()) {
 			
 			case SUICIDE:
-				ret =  getPlayer() + " suicided";
+				ret =  getPlayer() + " suicided " + getTime();
 				break;
 			case INF_INF:
-				ret = getKillType() + " " +killtext + " with " + getWeaponName(getWeapon()) + "/" + getAttackerWeaponType()+ " (" + " " + FragalyzerConstants.kitNames.get(getAttackerKitType()) + " vs " +  FragalyzerConstants.kitNames.get(getVictimKitType()) +  ")";
+				ret = getKillType() + " " +killtext + " with " + getWeaponName(getWeapon()) + "/" + getAttackerWeaponType()+ " (" + " " + FragalyzerConstants.kitNames.get(getAttackerKitType()) + " vs " +  FragalyzerConstants.kitNames.get(getVictimKitType()) +  ")"+ getTime();
 				break;
 			case INF_VEHICLE:
-				ret = getKillType() + " " +killtext + " with " + getWeaponName(getWeapon()) + "/" + getAttackerWeaponType() + " ("  + " " + FragalyzerConstants.kitNames.get(getAttackerKitType()) + " vs " +  getVehicleName(getVictimVehicle()) + "/" + getVictimVehicleType() + ")";
+				ret = getKillType() + " " +killtext + " with " + getWeaponName(getWeapon()) + "/" + getAttackerWeaponType() + " ("  + " " + FragalyzerConstants.kitNames.get(getAttackerKitType()) + " vs " +  getVehicleName(getVictimVehicle()) + "/" + getVictimVehicleType() + ")"+ getTime();
 				
 				break;		
 			case VEHICLE_INF:
-				ret = getKillType() + " " +killtext + " with " + getVehicleName(getVehicle())+ " ("  + " " + FragalyzerConstants.vehicleNames.get(getVehicle()) + "/" + getAttackerVehicleType() + " vs " +  FragalyzerConstants.kitNames.get(getVictimKitType()) +  ")";
+				ret = getKillType() + " " +killtext + " with " + getVehicleName(getVehicle())+ " ("  + " " + FragalyzerConstants.vehicleNames.get(getVehicle()) + "/" + getAttackerVehicleType() + " vs " +  FragalyzerConstants.kitNames.get(getVictimKitType()) +  ")"+ getTime();
 				
 				break;	
 			case VEHICLE_VEHICLE:
-				ret = getKillType() + " " +killtext + " with " + getVehicleName(getVehicle())+ " (" + " " + FragalyzerConstants.vehicleNames.get(getVehicle()) + "/" + getAttackerVehicleType()  + " vs " +  FragalyzerConstants.vehicleNames.get(getVictimVehicle()) + "/" + getVictimVehicleType()  +  ")";
+				ret = getKillType() + " " +killtext + " with " + getVehicleName(getVehicle())+ " (" + " " + FragalyzerConstants.vehicleNames.get(getVehicle()) + "/" + getAttackerVehicleType()  + " vs " +  FragalyzerConstants.vehicleNames.get(getVictimVehicle()) + "/" + getVictimVehicleType()  +  ")"+ getTime();
 				
 				break;								
 			default:
@@ -287,5 +288,11 @@ public  class LogEntry {
 	}
 	public void setCpEvent(CPEvents cpEvent) {
 		this.cpEvent = cpEvent;
+	}
+	public String getTime() {
+		return time;
+	}
+	public void setTime(String time) {
+		this.time = time;
 	}
 }
