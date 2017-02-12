@@ -1,7 +1,11 @@
 package com.fht.fragalyzer;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -21,11 +25,30 @@ import com.fht.fragalyzer.types.PlayerStats;
 import com.fht.fragalyzer.types.StatScope;
 import com.fht.fragalyzer.types.VehicleType;
 import com.fht.fragalyzer.types.WeaponType;
+import com.hp.gagawa.java.elements.A;
+import com.hp.gagawa.java.elements.Body;
+import com.hp.gagawa.java.elements.Div;
+import com.hp.gagawa.java.elements.H1;
+import com.hp.gagawa.java.elements.H2;
+import com.hp.gagawa.java.elements.H4;
+import com.hp.gagawa.java.elements.Head;
+import com.hp.gagawa.java.elements.Html;
+import com.hp.gagawa.java.elements.Img;
+import com.hp.gagawa.java.elements.Table;
+import com.hp.gagawa.java.elements.Td;
+import com.hp.gagawa.java.elements.Text;
+import com.hp.gagawa.java.elements.Title;
+import com.hp.gagawa.java.elements.Tr;
 
 public class Ranker {
 
 	private String basePath;
 	private StatScope scope;
+	private String scopeName;
+	private Html report;
+	private int td_counter;
+	private Tr tr;
+	private Table table;
 
 	private HashMap<String, Integer> killRanking;
 	private HashMap<String, Integer> deathsRanking;
@@ -60,6 +83,12 @@ public class Ranker {
 		setVehicleTypeRanking(new HashMap<>());
 		setWeaponTypeRanking(new HashMap<>());
 		setWeaponRanking(new HashMap<>());
+		setReport(new Html());
+		Head head = new Head();
+		getReport().appendChild(head);
+		setTd_counter(0);
+		tr = new Tr();
+		table = new Table();
 	}
 
 	/*
@@ -438,6 +467,9 @@ public class Ranker {
 			list.add(event);
 		}
 		obj.put(name, list);
+		
+		appendToHTLMReport(name, getScope().name(), ranks);
+		
 		return obj.toJSONString();
 	}
 
@@ -457,6 +489,271 @@ public class Ranker {
 		}
 		obj.put(name, list);
 		return obj.toJSONString();
+	}
+	
+	private void appendToHTLMReport(String map_round, String scope, HashMap<String, Integer> ranks){
+		
+		
+		Title title = new Title();
+		title.appendChild(new Text(map_round + " " + getScopeName()));
+		getReport(). appendChild(title);
+
+		Body body = new Body();
+
+		Table table = new Table();
+		Tr tr = new Tr();
+		Td td = new Td();
+
+//		H1 h1 = new H1();
+//		h1.appendChild(new Text(scope));
+//		body.appendChild(h1);
+
+		
+		table = new Table();
+	
+		H2 h2 = new H2();
+		h2.appendChild(new Text(map_round));
+		body.appendChild(h2);
+
+		for (Map.Entry<String, Integer> entry : MapUtil.sortByValueDesc(ranks).entrySet()) {
+			 tr = new Tr();
+			 //tr = new Tr();
+			 table.appendChild(tr);
+			 td = new Td();
+			 td.appendChild(new Text(entry.getKey()));
+			 tr.appendChild(td);		
+			 td = new Td();
+			 td.appendChild(new Text(entry.getValue()));
+			 tr.appendChild(td);
+		}
+		body.appendChild(table);
+		getReport().appendChild(body);
+
+	}
+	
+	private void appendPlayerStats(String player, PlayerStats stats){
+
+
+
+		Body body = new Body();
+
+		Table table = new Table();
+		Tr tr = new Tr();
+		Td td = new Td();
+
+		H1 h1 = new H1();
+		h1.appendChild(new Text("Stats for: " + player));
+		body.appendChild(h1);
+
+		tr = new Tr();
+		table.appendChild(tr);
+
+		td = new Td();
+		tr.appendChild(td);
+		td.appendChild(new Text("Kills"));
+
+		td = new Td();
+		tr.appendChild(td);
+		td.appendChild(new Text(stats.getKills()));
+
+		tr = new Tr();
+		table.appendChild(tr);
+
+		td = new Td();
+		tr.appendChild(td);
+		td.appendChild(new Text("Deaths"));
+
+		td = new Td();
+		tr.appendChild(td);
+		td.appendChild(new Text(stats.getDeaths()));
+		
+		tr = new Tr();
+		table.appendChild(tr);
+
+		td = new Td();
+		tr.appendChild(td);
+		td.appendChild(new Text("Teamkills"));
+
+		td = new Td();
+		tr.appendChild(td);
+		td.appendChild(new Text(stats.getTeamKills()));		
+
+		tr = new Tr();
+		table.appendChild(tr);
+
+		td = new Td();
+		tr.appendChild(td);
+		td.appendChild(new Text("Flag Captures"));
+
+		td = new Td();
+		tr.appendChild(td);
+		td.appendChild(new Text(stats.getFlagCaps()));					
+		
+
+		tr = new Tr();
+		table.appendChild(tr);
+
+		td = new Td();
+		tr.appendChild(td);
+		td.appendChild(new Text("Flag Capture Assists"));
+
+		td = new Td();
+		tr.appendChild(td);
+		td.appendChild(new Text(stats.getFlagCapAssists()));						
+
+
+		tr = new Tr();
+		table.appendChild(tr);
+
+		td = new Td();
+		tr.appendChild(td);
+		td.appendChild(new Text("Flag Neutralizes"));
+
+		td = new Td();
+		tr.appendChild(td);
+		td.appendChild(new Text(stats.getFlagNeutralizes()));					
+		
+
+		tr = new Tr();
+		table.appendChild(tr);
+
+		td = new Td();
+		tr.appendChild(td);
+		td.appendChild(new Text("Flag Neutralize Assits"));
+
+		td = new Td();
+		tr.appendChild(td);
+		td.appendChild(new Text(stats.getFlagNeutralizeAssist()));					
+		
+
+		tr = new Tr();
+		table.appendChild(tr);
+
+		td = new Td();
+		tr.appendChild(td);
+		td.appendChild(new Text("Flag Defends"));
+
+		td = new Td();
+		tr.appendChild(td);
+		td.appendChild(new Text(stats.getFlagDefends()));					
+		
+		H4 h2 = new H4();
+		h2.appendChild(new Text(FragalyzerConstants.vehicletypekills));
+		
+		body.appendChild(table);
+		body.appendChild(h2);
+		table = new Table();
+
+		for (Map.Entry<VehicleType, Integer> entry : MapUtil.sortByValueDesc(stats.getVehicleTypeKills()).entrySet()) {
+			 tr = new Tr();
+			 //tr = new Tr();
+			
+			 td = new Td();
+			 td.appendChild(new Text(FragalyzerConstants.vehicleTypeNames.get(entry.getKey())));
+			 tr.appendChild(td);		
+			 td = new Td();
+			 td.appendChild(new Text(entry.getValue()));
+			 tr.appendChild(td);
+			 table.appendChild(tr);
+		}
+		body.appendChild(table);	
+		
+		h2 = new H4();
+		h2.appendChild(new Text(FragalyzerConstants.vehiclekill));
+
+		body.appendChild(h2);
+		table = new Table();
+
+		for (Map.Entry<String, Integer> entry : MapUtil.sortByValueDesc(stats.getVehicleNameKills()).entrySet()) {
+			 tr = new Tr();
+			 //tr = new Tr();
+			
+			 td = new Td();
+			 td.appendChild(new Text(entry.getKey()));
+			 tr.appendChild(td);		
+			 td = new Td();
+			 td.appendChild(new Text(entry.getValue()));
+			 tr.appendChild(td);
+			 table.appendChild(tr);
+		}
+		body.appendChild(table);			
+		
+		
+		h2 = new H4();
+		h2.appendChild(new Text(FragalyzerConstants.weaponkill));
+
+		body.appendChild(h2);
+		table = new Table();
+
+		for (Map.Entry<String, Integer> entry : MapUtil.sortByValueDesc(stats.getWeaponNameKills()).entrySet()) {
+			 tr = new Tr();
+			 //tr = new Tr();
+			
+			 td = new Td();
+			 td.appendChild(new Text(entry.getKey()));
+			 tr.appendChild(td);		
+			 td = new Td();
+			 td.appendChild(new Text(entry.getValue()));
+			 tr.appendChild(td);
+			 table.appendChild(tr);
+		}
+		body.appendChild(table);		
+		
+		h2 = new H4();
+		h2.appendChild(new Text(FragalyzerConstants.enemies));
+
+		body.appendChild(h2);
+		table = new Table();
+
+		for (Map.Entry<String, Integer> entry : MapUtil.sortByValueDesc(stats.getEnemies()).entrySet()) {
+			 tr = new Tr();
+			 //tr = new Tr();
+			
+			 td = new Td();
+			 td.appendChild(new Text(entry.getKey()));
+			 tr.appendChild(td);		
+			 td = new Td();
+			 td.appendChild(new Text(entry.getValue()));
+			 tr.appendChild(td);
+			 table.appendChild(tr);
+		}
+		body.appendChild(table);				
+		
+		h2 = new H4();
+		h2.appendChild(new Text(FragalyzerConstants.victims));
+
+		body.appendChild(h2);
+		table = new Table();
+
+		for (Map.Entry<String, Integer> entry : MapUtil.sortByValueDesc(stats.getVictims()).entrySet()) {
+			 tr = new Tr();
+			 //tr = new Tr();
+			
+			 td = new Td();
+			 td.appendChild(new Text(entry.getKey()));
+			 tr.appendChild(td);		
+			 td = new Td();
+			 td.appendChild(new Text(entry.getValue()));
+			 tr.appendChild(td);
+			 table.appendChild(tr);
+		}
+		body.appendChild(table);				
+		
+		getReport().appendChild(body);
+
+	}
+		
+	
+	private Tr getTr(){
+		int c = getTd_counter();
+		c++;
+		if (getTd_counter()== 8){
+			tr = new Tr();
+			c = 1;
+			
+		}
+		setTd_counter(c);
+		return tr;
 	}
 
 	private void dumpRanks(HashMap<String, PlayerStats> playerEvents, String name) {
@@ -479,17 +776,17 @@ public class Ranker {
 			fw.append(System.getProperty("line.separator")); // e.g.
 			fw.write("[");
 
-			fw.write(dumpRank("killrankings", getKillRanking()) + ",");
-			fw.write(dumpRank("deathrankings", getDeathsRanking()) + ",");
-			fw.write(dumpRank("tkrankings", getTkRanking()) + ",");
-			fw.write(dumpRank("cpcapassistranking", getCpCapAassistRanking()) + ",");
-			fw.write(dumpRank("cpcapranking", getCpCapRanking()) + ",");
-			fw.write(dumpRank("cpdefendranking", getCpDefendRanking()) + ",");
-			fw.write(dumpRank("cpneutralizeassistranking", getCpNeutralizeAssistRanking()) + ",");
-			fw.write(dumpRank("cpneutralizeranking", getCpNeutralizeRanking()) + ",");
-			fw.write(dumpRankDouble("kdrranking", getKdrRanking()) + ",");
-			dumpVehicleTypeRank("vehicletype", getVehicleTypeRanking(), fw);
-			dumpWeaponTypeRank("weapontype", getWeaponTypeRanking(), fw);
+			fw.write(dumpRank(FragalyzerConstants.killrankings, getKillRanking()) + ",");
+			fw.write(dumpRank(FragalyzerConstants.deathrankings, getDeathsRanking()) + ",");
+			fw.write(dumpRank(FragalyzerConstants.tkrankings, getTkRanking()) + ",");
+			fw.write(dumpRank(FragalyzerConstants.cpcapassistranking, getCpCapAassistRanking()) + ",");
+			fw.write(dumpRank(FragalyzerConstants.cpcapranking, getCpCapRanking()) + ",");
+			fw.write(dumpRank(FragalyzerConstants.cpdefendranking, getCpDefendRanking()) + ",");
+			fw.write(dumpRank(FragalyzerConstants.cpneutralizeassistranking, getCpNeutralizeAssistRanking()) + ",");
+			fw.write(dumpRank(FragalyzerConstants.cpneutralizeranking, getCpNeutralizeRanking()) + ",");
+			fw.write(dumpRankDouble(FragalyzerConstants.kdrranking, getKdrRanking()) + ",");
+			dumpVehicleTypeRank(FragalyzerConstants.vehicletype, getVehicleTypeRanking(), fw);
+			dumpWeaponTypeRank(FragalyzerConstants.weapontype, getWeaponTypeRanking(), fw);
 
 			while (it.hasNext()) {
 
@@ -515,6 +812,8 @@ public class Ranker {
 				obj.put("cpdefends", stats.getFlagDefends());
 				obj.put("cpneutralizes", stats.getFlagNeutralizes());
 				obj.put("cpneutralizeassists", stats.getFlagNeutralizeAssist());
+				
+				appendPlayerStats(player, stats);
 
 				list = new JSONArray();
 				for (Map.Entry<VehicleType, Integer> entry : MapUtil.sortByValueDesc(stats.getVehicleTypeKills())
@@ -522,6 +821,8 @@ public class Ranker {
 					event = new JSONObject();
 					event.put(FragalyzerConstants.vehicleTypeNames.get(entry.getKey()), entry.getValue());
 					list.add(event);
+					
+					
 				}
 				obj.put("vehicletypekills", list);
 
@@ -575,6 +876,7 @@ public class Ranker {
 			fw.append(System.getProperty("line.separator")); // e.g.
 			fw.write("]"); // "\n"
 			fw.close();
+			
 		} catch (IOException e) {
 			System.err.println("Konnte Datei nicht erstellen");
 		} finally {
@@ -585,6 +887,16 @@ public class Ranker {
 					e.printStackTrace();
 				}
 		}
+		
+		try {
+			fw = new FileWriter(getBasePath() + "//" + getScope() + "_" + getScopeName() + "_stats.html");
+			fw.write(getReport().write());
+			fw.close();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+
+		}		
 
 	}
 
@@ -639,8 +951,12 @@ public class Ranker {
 
 	public void rank(ArrayList<LogEntry> logEntries, String name, StatScope scope) {
 		setScope(scope);
+		setScopeName(name);
 		Iterator<LogEntry> it = logEntries.iterator();
-
+		setReport(new Html());
+		tr = new Tr();
+		table = new Table();
+		setTd_counter(0);
 		LogEntry kill;
 
 		setKillRanking(new HashMap<>());
@@ -760,6 +1076,30 @@ public class Ranker {
 
 	public void setWeaponRanking(HashMap<String, HashMap<KitType, Integer>> weaponRanking) {
 		this.weaponRanking = weaponRanking;
+	}
+
+	public String getScopeName() {
+		return scopeName;
+	}
+
+	public void setScopeName(String scopeName) {
+		this.scopeName = scopeName;
+	}
+
+	public Html getReport() {
+		return report;
+	}
+
+	public void setReport(Html report) {
+		this.report = report;
+	}
+
+	public int getTd_counter() {
+		return td_counter;
+	}
+
+	public void setTd_counter(int td_counter) {
+		this.td_counter = td_counter;
 	}
 
 }

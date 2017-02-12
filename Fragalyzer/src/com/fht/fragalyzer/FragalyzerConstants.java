@@ -40,6 +40,26 @@ public class FragalyzerConstants {
 	public final static String PlayerScored = "SCORE ScoreDiff";
 	public final static String VehicleName = "VehicleName";
 	public final static String StartDate = "StartDate";
+	
+	public final static String killrankings = "Most Kills";
+	public final static String deathrankings = "Most Deaths";
+	public final static String tkrankings = "Most TKs";
+	public final static String cpcapassistranking = "Most Flag Capture Assists";
+	public final static String cpcapranking = "Most Flag Captures";
+	public final static String cpneutralizeassistranking = "Most Flag Neutralize Assists";
+	public final static String cpneutralizeranking = "Most Flag Neutralizes";
+	public final static String cpdefendranking = "Most Flag Defends";
+	public final static String kdrranking = "Kill/Death Ratio";
+	public final static String vehicletype = "Vehicle Type Kills";
+	public final static String weapontype = "Weapon Type Kills";
+
+	public final static String vehicletypekills = "Vehicle Type Kills";
+	public final static String weaponkill = "Weapon Kills";
+	public final static String vehiclekill = "Vehicle Kills";
+	public final static String victims = "Victims";
+	public final static String enemies = "Enemies";
+
+	
 	public final static String time = "Time";
 	public final static String MultiPlayerFreeCamera = "MultiPlayerFreeCamera";
 	public final static String Time = "Time";
@@ -930,12 +950,17 @@ public class FragalyzerConstants {
 					put("wildcat", VehicleType.VEHICLE_TYPE_AIR);
 					put("fh1_daihatsu", VehicleType.VEHICLE_TYPE_LANDINGBOAT);
 					put("fh1_hatsuzuki_lcvp", VehicleType.VEHICLE_TYPE_DESTROYER);
+					put("fh1_hatsuzuki", VehicleType.VEHICLE_TYPE_DESTROYER);
 					put("type92_nambu_tripod", VehicleType.VEHICLE_TYPE_MACHINEGUN);
 					put("type92_nambu_tripod_dep", VehicleType.VEHICLE_TYPE_MACHINEGUN);
 					put("Unknown", VehicleType.VEHICLE_TYPE_UKNOWN);
 					put("vickers303_tripod_dep", VehicleType.VEHICLE_TYPE_MACHINEGUN);
 					put("vickers303_tripod", VehicleType.VEHICLE_TYPE_MACHINEGUN);
-					
+					put("subviib_waw", VehicleType.VEHICLE_TYPE_SUB);
+					put("lvt-5", VehicleType.VEHICLE_TYPE_ARMOREDCAR);
+					put("lct_mk5_us_normandy_waw", VehicleType.VEHICLE_TYPE_LANDINGBOAT);
+					put("rufe", VehicleType.VEHICLE_TYPE_AIR);
+					put("type1_atgun", VehicleType.VEHICLE_TYPE_ATGUN);
 				}
 			});
 
@@ -1825,6 +1850,7 @@ public class FragalyzerConstants {
 			put("", KitType.UNKNOWN);
 			put("unknown", KitType.UNKNOWN);
 			put("null", KitType.UNKNOWN);
+			put("jp_antitank_type93", KitType.KIT_TYPE_AT);
 		}
 	});
 	
@@ -2612,6 +2638,7 @@ public class FragalyzerConstants {
 			put("m1919a4_emplaced", "M1919A4 Tripod");
 			put("M1919A4notri", "M1919A4");
 			put("m1919a6_emplaced", "M1919A6");
+			put("type1_atgun", "47mm Type 1 AT Gun");
 		}
 	});			
 	public static final Map<String, String> weaponNames = Collections.unmodifiableMap(new HashMap<String, String>() {
