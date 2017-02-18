@@ -171,6 +171,7 @@ public class FragalyzerConstants {
 			put(VehicleType.VEHICLE_TYPE_LANDINGBOAT, "Landingboat");
 			put(VehicleType.VEHICLE_TYPE_PATROLBOAT, "Patrolboat");
 			put(VehicleType.VEHICLE_TYPE_SUB, "Submarine");
+			put(VehicleType.VEHICLE_TYPE_CRUISER, "Cruiser");
 			put(VehicleType.VEHICLE_TYPE_UKNOWN, "Unknown");
 		}
 	});	
@@ -961,6 +962,17 @@ public class FragalyzerConstants {
 					put("lct_mk5_us_normandy_waw", VehicleType.VEHICLE_TYPE_LANDINGBOAT);
 					put("rufe", VehicleType.VEHICLE_TYPE_AIR);
 					put("type1_atgun", VehicleType.VEHICLE_TYPE_ATGUN);
+					put("mogami", VehicleType.VEHICLE_TYPE_CRUISER);
+					put("b26", VehicleType.VEHICLE_TYPE_AIR);
+					put("fh1_yamato", VehicleType.VEHICLE_TYPE_BATTLESHIP);
+					put("fh1_dithmarschen", VehicleType.VEHICLE_TYPE_NAVAL);
+					put("liberty_ship_waw", VehicleType.VEHICLE_TYPE_NAVAL);
+					put("b25_torp", VehicleType.VEHICLE_TYPE_AIR);
+					put("southdakota", VehicleType.VEHICLE_TYPE_BATTLESHIP);
+					put("catfish", VehicleType.VEHICLE_TYPE_AIR);
+					put("dauntlesssbdtorch_torp", VehicleType.VEHICLE_TYPE_AIR);
+					put("ki61", VehicleType.VEHICLE_TYPE_AIR);
+					put("90mm_aa_at_m1", VehicleType.VEHICLE_TYPE_ARTILLERY); 
 				}
 			});
 
@@ -1851,6 +1863,8 @@ public class FragalyzerConstants {
 			put("unknown", KitType.UNKNOWN);
 			put("null", KitType.UNKNOWN);
 			put("jp_antitank_type93", KitType.KIT_TYPE_AT);
+			put("jp_pickupmortarat", KitType.KIT_TYPE_AT);
+			put("up_scout_m1903", KitType.KIT_TYPE_SCOUT);
 		}
 	});
 	
@@ -3069,6 +3083,7 @@ public class FragalyzerConstants {
 			put("m3_knife", "M3 Knife");
 			put("sykes_knife","Sykes Knife");
 			put("Unknown", "Unknown");
+			put("90mm_aa_at_m1", "90mm M1");
 		}
 	});			
 }
