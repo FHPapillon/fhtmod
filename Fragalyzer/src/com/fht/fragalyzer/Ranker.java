@@ -68,10 +68,22 @@ public class Ranker {
 	private HashMap<VehicleType, HashMap<String, Integer>> vehicleTypeRanking;
 	private HashMap<WeaponType, HashMap<String, Integer>> weaponTypeRanking;
 	private HashMap<String, HashMap<KitType, Integer>> weaponRanking;
+	private String team;
 
 	public Ranker(String basePath) {
 		super();
 		this.setBasePath(basePath);
+		init();
+		setReport(new Html());
+		Head head = new Head();
+		getReport().appendChild(head);
+		setTd_counter(0);
+		tr = new Tr();
+		table = new Table();
+		setTeam(new String(""));
+	}
+	
+	private void init(){
 		setKillRanking(new HashMap<>());
 		setDeathsRanking(new HashMap<>());
 		setTkRanking(new HashMap<>());
@@ -83,12 +95,8 @@ public class Ranker {
 		setVehicleTypeRanking(new HashMap<>());
 		setWeaponTypeRanking(new HashMap<>());
 		setWeaponRanking(new HashMap<>());
-		setReport(new Html());
-		Head head = new Head();
-		getReport().appendChild(head);
-		setTd_counter(0);
-		tr = new Tr();
-		table = new Table();
+		setKdrRanking(new HashMap<>());
+		
 	}
 
 	/*
@@ -464,6 +472,7 @@ public class Ranker {
 		for (Map.Entry<String, Integer> entry : MapUtil.sortByValueDesc(ranks).entrySet()) {
 			event = new JSONObject();
 			event.put(entry.getKey(), entry.getValue());
+		
 			list.add(event);
 		}
 		obj.put(name, list);
@@ -959,13 +968,7 @@ public class Ranker {
 		setTd_counter(0);
 		LogEntry kill;
 
-		setKillRanking(new HashMap<>());
-		setDeathsRanking(new HashMap<>());
-		setTkRanking(new HashMap<>());
-		setKdrRanking(new HashMap<>());
-		setCpCapRanking(new HashMap<>());
-		setVehicleTypeRanking(new HashMap<>());
-		setWeaponTypeRanking(new HashMap<>());
+		init();
 
 		PlayerStats stats = new PlayerStats();
 		HashMap<String, PlayerStats> playerEvents = new HashMap<>();
@@ -981,10 +984,13 @@ public class Ranker {
 				if (!playerEvents.containsKey(kill.getPlayer())) {
 					stats = new PlayerStats();
 					stats.setPlayerName(kill.getPlayer());
+					
+						
+						
 				} else {
 					stats = playerEvents.get(kill.getPlayer());
 				}
-
+			
 				stats.getEvents().add(kill);
 				playerEvents.put(kill.getPlayer(), stats);
 
@@ -1007,6 +1013,8 @@ public class Ranker {
 		playerEvents = createPlayerStats(playerEvents);
 
 		dumpRanks(playerEvents, name);
+		
+
 
 	}
 
@@ -1100,6 +1108,14 @@ public class Ranker {
 
 	public void setTd_counter(int td_counter) {
 		this.td_counter = td_counter;
+	}
+
+	public String getTeam() {
+		return team;
+	}
+
+	public void setTeam(String team) {
+		this.team = team;
 	}
 
 }

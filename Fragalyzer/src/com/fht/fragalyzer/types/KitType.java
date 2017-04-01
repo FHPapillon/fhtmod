@@ -16,6 +16,7 @@ public enum KitType {
 	KIT_TYPE_HMG, 
 	KIT_TYPE_SCOUT, 
 	KIT_TYPE_MAGIC, 
+	KIT_TYPE_AMMO, 
 	NUM_KIT_TYPES,
 	UNKNOWN
 }

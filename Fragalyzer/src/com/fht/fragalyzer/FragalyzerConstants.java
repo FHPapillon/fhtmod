@@ -64,6 +64,7 @@ public class FragalyzerConstants {
 	public final static String MultiPlayerFreeCamera = "MultiPlayerFreeCamera";
 	public final static String Time = "Time";
 	public final static String ba = "ba_";
+	public final static String aa = "aa_";	
 	public final static String bj = "bj_";
 	public final static String bw = "bw_";
 	public final static String ch = "ch_";
@@ -83,6 +84,7 @@ public class FragalyzerConstants {
 	public final static String up = "up_";
 	public final static String us = "us_";
 	public final static String uw = "uw_";
+	public final static String be = "be_";
 	public final static String waw = "waw_";
 	
 	public final static int heatmapDataPointMultiplicationFactor = 3;
@@ -121,6 +123,7 @@ public class FragalyzerConstants {
 			put(KitType.KIT_TYPE_LMG, "LMG");
 			put(KitType.KIT_TYPE_HMG, "HMG");
 			put(KitType.KIT_TYPE_SCOUT, "Scout");
+			put(KitType.KIT_TYPE_MAGIC, "Support");
 			put(KitType.UNKNOWN, "Unknown");
 		}
 	});
@@ -512,11 +515,14 @@ public class FragalyzerConstants {
 					put("lct_mk5_gb_normandy", VehicleType.VEHICLE_TYPE_LANDINGBOAT);
 					put("lct_mk5_stat_gb_normandy", VehicleType.VEHICLE_TYPE_LANDINGBOAT);
 					put("lct_mk5_us_normandy", VehicleType.VEHICLE_TYPE_LANDINGBOAT);
+					put("lct_mk5_us_normandy_2_waw", VehicleType.VEHICLE_TYPE_LANDINGBOAT);
 					put("lcvp", VehicleType.VEHICLE_TYPE_LANDINGBOAT);
 					put("lefh18", VehicleType.VEHICLE_TYPE_ARTILLERY);
 					put("lefh18_ai", VehicleType.VEHICLE_TYPE_ARTILLERY);
 					put("lefh18_france", VehicleType.VEHICLE_TYPE_ARTILLERY);
 					put("lefh18_france_ai", VehicleType.VEHICLE_TYPE_ARTILLERY);
+					put("lefh18_fht", VehicleType.VEHICLE_TYPE_ARTILLERY);
+					
 					put("lewis_bipod", VehicleType.VEHICLE_TYPE_MACHINEGUN);
 					put("libertyship", VehicleType.VEHICLE_TYPE_NAVAL);
 					put("lifeboat_flc", VehicleType.VEHICLE_TYPE_NAVAL);
@@ -810,7 +816,7 @@ public class FragalyzerConstants {
 					put("spitfiremkvb", VehicleType.VEHICLE_TYPE_AIR);
 					put("spitfiremkvb_usaaf", VehicleType.VEHICLE_TYPE_AIR);
 					put("spitfire_ix", VehicleType.VEHICLE_TYPE_AIR);
-					put("spotlight", VehicleType.VEHICLE_TYPE_MACHINEGUN);
+					put("spotlight", VehicleType.VEHICLE_TYPE_UNUSABLE);
 					put("storch_france", VehicleType.VEHICLE_TYPE_AIR);
 					put("storch_trop", VehicleType.VEHICLE_TYPE_AIR);
 					put("studebaker_us6", VehicleType.VEHICLE_TYPE_TRANSPORT);
@@ -962,6 +968,7 @@ public class FragalyzerConstants {
 					put("lct_mk5_us_normandy_waw", VehicleType.VEHICLE_TYPE_LANDINGBOAT);
 					put("rufe", VehicleType.VEHICLE_TYPE_AIR);
 					put("type1_atgun", VehicleType.VEHICLE_TYPE_ATGUN);
+					put("type1_atgun_static", VehicleType.VEHICLE_TYPE_ATGUN);
 					put("mogami", VehicleType.VEHICLE_TYPE_CRUISER);
 					put("b26", VehicleType.VEHICLE_TYPE_AIR);
 					put("fh1_yamato", VehicleType.VEHICLE_TYPE_BATTLESHIP);
@@ -972,7 +979,17 @@ public class FragalyzerConstants {
 					put("catfish", VehicleType.VEHICLE_TYPE_AIR);
 					put("dauntlesssbdtorch_torp", VehicleType.VEHICLE_TYPE_AIR);
 					put("ki61", VehicleType.VEHICLE_TYPE_AIR);
+					put("ki84", VehicleType.VEHICLE_TYPE_AIR);					
 					put("90mm_aa_at_m1", VehicleType.VEHICLE_TYPE_ARTILLERY); 
+					put("ho-ki", VehicleType.VEHICLE_TYPE_APC);
+					put("type94_teke", VehicleType.VEHICLE_TYPE_LIGHTARMOR);
+					put("GleavesClass", VehicleType.VEHICLE_TYPE_DESTROYER);
+					put("type94_ammo", VehicleType.VEHICLE_TYPE_TRANSPORT);
+					put("j2f", VehicleType.VEHICLE_TYPE_AIR);
+					put("fh1_enterprise_guns", VehicleType.VEHICLE_TYPE_ANTIAIR);
+					put("f4u1a_corsair_usmc_late", VehicleType.VEHICLE_TYPE_AIR);
+					put("m4a1_flame", VehicleType.VEHICLE_TYPE_MEDIUMARMOR);
+					put("MultiPlayerFreeCamera", VehicleType.VEHICLE_TYPE_UKNOWN);
 				}
 			});
 
@@ -1104,6 +1121,7 @@ public class FragalyzerConstants {
 					put("k98h_short", WeaponType.WEAPON_TYPE_RIFLE);
 					put("k98hheatgrenade_30", WeaponType.WEAPON_TYPE_GRENADE);
 					put("k98hheatgrenade_4x", WeaponType.WEAPON_TYPE_GRENADE);
+					
 					put("k98h-panzerfaust", WeaponType.WEAPON_TYPE_RIFLE);
 					put("k98h-panzerfaust100", WeaponType.WEAPON_TYPE_RIFLE);
 					put("k98h-panzerfaust60", WeaponType.WEAPON_TYPE_RIFLE);
@@ -1237,6 +1255,7 @@ public class FragalyzerConstants {
 					put("scottishclaymore", WeaponType.WEAPON_TYPE_CLOSE);
 					put("sgwr34_dep", WeaponType.WEAPON_TYPE_NONLETHAL);
 					put("sgwr34_france_dep", WeaponType.WEAPON_TYPE_NONLETHAL);
+					put("sgwr34_france", WeaponType.WEAPON_TYPE_EXPLOSIVE);
 					put("smine", WeaponType.WEAPON_TYPE_APMINE);
 					put("smine_gb", WeaponType.WEAPON_TYPE_APMINE);
 					put("spsh1", WeaponType.WEAPON_TYPE_PISTOL);
@@ -1301,11 +1320,13 @@ public class FragalyzerConstants {
 					put("type99_kassault", WeaponType.WEAPON_TYPE_LMG);
 					put("turtlemine", WeaponType.WEAPON_TYPE_ATMINE);
 					put("arisaka_grenade", WeaponType.WEAPON_TYPE_GRENADE);
-					put("type89mortar", WeaponType.WEAPON_TYPE_EXPLOSIVE);		
+					put("type89mortar", WeaponType.WEAPON_TYPE_EXPLOSIVE);	
+					put("type89mortarheat", WeaponType.WEAPON_TYPE_EXPLOSIVE);	
 					put("type93_mine", WeaponType.WEAPON_TYPE_ATMINE);
 					put("m1917a1", WeaponType.WEAPON_TYPE_LMG);
 					put("null", WeaponType.WEAPON_TYPE_UNKNOWN);
 					put("81mm_mortar_m1", WeaponType.WEAPON_TYPE_EXPLOSIVE);
+					put("81mm_mortar_m1_MortarFirearm", WeaponType.WEAPON_TYPE_EXPLOSIVE);
 					put("type99_k_scoped", WeaponType.WEAPON_TYPE_LMG);
 					put("type99_k_scoped_assault", WeaponType.WEAPON_TYPE_LMG);
 					put("type92_nambu_bipod", WeaponType.WEAPON_TYPE_LMG);
@@ -1313,7 +1334,7 @@ public class FragalyzerConstants {
 					put("Unknown", WeaponType.WEAPON_TYPE_UNKNOWN);
 					put("type91", WeaponType.WEAPON_TYPE_GRENADE);
 					put("type89mortarfrag", WeaponType.WEAPON_TYPE_GRENADE);
-					
+					put("arisaka_heatgrenade", WeaponType.WEAPON_TYPE_EXPLOSIVE);
 				}
 			});
 
@@ -1865,6 +1886,27 @@ public class FragalyzerConstants {
 			put("jp_antitank_type93", KitType.KIT_TYPE_AT);
 			put("jp_pickupmortarat", KitType.KIT_TYPE_AT);
 			put("up_scout_m1903", KitType.KIT_TYPE_SCOUT);
+			put("jp_pickupsupport", KitType.KIT_TYPE_LMG);
+			put("be_scoutearly", KitType.KIT_TYPE_SCOUT);
+			put("be_limited_assault_tommygund_no4", KitType.KIT_TYPE_SMGASSAULT);
+			put("be_riflemanearly", KitType.KIT_TYPE_RIFLEASSAULT);
+			put("be_limited_support_bren_no4", KitType.KIT_TYPE_LMG);			
+			put("be_engineerearly", KitType.KIT_TYPE_ENGINEER);
+			put("be_atboys_limited", KitType.KIT_TYPE_AT);
+			put("be_ncotommyguns", KitType.KIT_TYPE_NCO);
+			put("be_ncotommyguns_rifle", KitType.KIT_TYPE_NCO);		
+			put("jp_arisakaheat", KitType.KIT_TYPE_RIFLEASSAULT);
+			put("up_smgassault_limited_ggun", KitType.KIT_TYPE_SMGASSAULT);
+			put("uw_pickupengisatchel", KitType.KIT_TYPE_ENGINEER);
+			put("up_nco_resing_spring_rifle", KitType.KIT_TYPE_NCO);
+			put("up_nco_resing_spring",KitType.KIT_TYPE_NCO);
+			put("up_antitankassault_limited", KitType.KIT_TYPE_AT);
+			put("jp_engineer_turtlemine", KitType.KIT_TYPE_ENGINEER);
+			put("jp_m81pickupmortar", KitType.KIT_TYPE_MORTAR);
+			put("up_engineer_m1903a1_satchel", KitType.KIT_TYPE_ENGINEER);
+			put("up_scout_spring", KitType.KIT_TYPE_SCOUT);
+			put("jp_pickupshotgun", KitType.KIT_TYPE_RIFLEASSAULT);
+			put("uw_rifleassault_fht_nadelauncher", KitType.KIT_TYPE_RIFLEASSAULT);
 		}
 	});
 	
@@ -1962,6 +2004,7 @@ public class FragalyzerConstants {
 			put("dauntlesssbdtorch", "Dauntless SBD");
 			put("dauntlesssbdtorch_torp", "Dauntless SBD");
 			put("f4u1a_corsair", "Vought F4U Corsair");
+			put("f4u1a_corsair_usmc_late", "Vought F4U Corsair");
 			put("hellcat", "Grumman F6F Hellcat");
 			put("helldiver", "Curtiss SBC-2 Helldiver");
 			put("j2f", "Grumman J2F 'Duck'");
@@ -2251,6 +2294,7 @@ public class FragalyzerConstants {
 			put("GleavesClass", "USS Edward DD-619");
 			put("lct_mk5_us_normandy_2_waw", "LCT Mk5");
 			put("lct_mk5_us_normandy_waw", "LCT Mk5");
+			put("j2f", "J2F Duck");
 			put("lcvp", "LCVP");
 			put("liberty_ship_waw", "SS Jeremiah O'Brien");
 			put("liberty_ship_waw_objective0", "SS John W. Brown");
@@ -2638,7 +2682,12 @@ public class FragalyzerConstants {
 			put("wr360c14_europe1942l", "WR360C14");
 			put("type99_emp_bipod", "Type99");
 			put("81mm_mortar_m1", "81mm Mortar M1");
+			put("81mm_mortar_m1_MortarFirearm", "81mm Mortar M1");
+			put("81mm_mortar_m1_deployed", "81mm Mortar M1");
+			
 			put("3inchmortar_deployed", "3in Mortar");
+			put("3inchmortar", "3in Mortar");
+			
 			put("null", "unknown");
 			put("type92_nambu_bipod", "Nambu Type 92");
 			put("type92_nambu_tripod", "Nambu Type 92");
@@ -2653,6 +2702,15 @@ public class FragalyzerConstants {
 			put("M1919A4notri", "M1919A4");
 			put("m1919a6_emplaced", "M1919A6");
 			put("type1_atgun", "47mm Type 1 AT Gun");
+			put("type1_atgun_static", "47mm Type 1 AT Gun");
+			put("ho-ki", "Type 1 Ho-Ki APC");
+			put("type94_teke", "Type 94 Te-Ke Tankette");			
+			put("sgwr34_france", "Granatwerfer 34");
+			put("lewis_bipod", "Lewis Bipod");
+			put("m4a1_flame", "M4A1 Flamethrower");
+			put("MultiPlayerFreeCamera", "3rd Person View");
+			put("spotlight", "Spotlight");
+			put("2pdr", "2 Pdr");
 		}
 	});			
 	public static final Map<String, String> weaponNames = Collections.unmodifiableMap(new HashMap<String, String>() {
@@ -2746,7 +2804,7 @@ public class FragalyzerConstants {
 			put("sgwr34_france_deployed", "Granatwerfer 34");
 			put("zwillingssockel36", "ZW36");
 			put("zwillingssockel36_noArmor", "ZW36");
-			put("2pdr", "2 Pounder");
+			put("", "2 Pounder");
 			put("3inchmortar", "3in Mortar");
 			put("3inchmortar_AI", "3in Mortar");
 			put("3inchmortar_deployed", "3in Mortar");
@@ -3023,6 +3081,7 @@ public class FragalyzerConstants {
 			put("25Pdr_dep", "25Pdr Deployable");
 			put("25Pdr_MkIV_dep", "25Pdr MkIV Deployable");
 			put("2pdr_dep", "2Pdr Deployable");
+			put("2pdr", "2Pdr");
 			put("57mm_m1_atgun_static_dep", "57mm M1 Deployable");
 			put("6pdr_mkiv_static_dep", "6Pdr MkIV Deployable");
 			put("6pdr_static_dep", "6Pdr Deployable");
@@ -3059,6 +3118,7 @@ public class FragalyzerConstants {
 			put("tt33", "TT-33");
 			put("type100", "Type 100");
 			put("type89mortar", "Type 89 Mortar");
+			put("type89mortarheat", "Type 89 Mortar HEAT");
 			put("type89mortarfrag", "Type 89 Mortar");
 			put("type99_k", "Type 99");
 			put("type99_kassault", "Type 99");

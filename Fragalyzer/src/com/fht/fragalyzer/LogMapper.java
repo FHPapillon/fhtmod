@@ -459,6 +459,7 @@ public class LogMapper {
 	private boolean isInfantry(String log) {
 		switch (log) {
 		case FragalyzerConstants.ba:
+		case FragalyzerConstants.aa:
 		case FragalyzerConstants.bj:
 		case FragalyzerConstants.bw:
 		case FragalyzerConstants.ch:
@@ -479,6 +480,7 @@ public class LogMapper {
 		case FragalyzerConstants.us:
 		case FragalyzerConstants.waw:
 		case FragalyzerConstants.uw:
+		case FragalyzerConstants.be:
 			return true;
 
 		default:

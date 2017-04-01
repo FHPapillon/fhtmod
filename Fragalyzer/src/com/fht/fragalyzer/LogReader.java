@@ -1,5 +1,6 @@
 package com.fht.fragalyzer;
 
+import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -44,7 +45,10 @@ public class LogReader {
 		setMapname("");
 		setRoundname("");
 		setBattle(new ArrayList<>());
+		setLog(new StringBuffer());
 	}
+	
+	private StringBuffer log;
 
 	private void dumpHeatMapDataPointsAndEventList() {
 		HashMap<String, DataPoint> heatmapHM = new HashMap<>();
@@ -194,9 +198,9 @@ public class LogReader {
 
 	private String getPaddedRoundNumber(int number){
 		
-		if (number < 10)
-			return "0" + number;
-		else 
+//		if (number < 10)
+//			return "0" + number;
+//		else 
 			return Integer.toString(number);
 			
 	}
@@ -253,7 +257,7 @@ public class LogReader {
 
 							switch (logEntry.getEventType()) {
 							case INIT:
-								if (!mapname.equals(logEntry.getMapname())) {
+								if (!getMapname().equals(logEntry.getMapname())) {
 									// Mapname has changed. Save battle bucket
 									if (getBattle().size() > 0){
 										System.out.println("Increasing mapnumber from " + getMapnumber());
@@ -263,9 +267,10 @@ public class LogReader {
 									}
 									
 									setMapname(logEntry.getMapname());
+									
 									//getBattles().put(mapname, getBattle());
 									setBattle(new ArrayList<>());
-
+									
 									System.out.println("Mapname is " + getMapname());
 								}
 
@@ -273,12 +278,14 @@ public class LogReader {
 								setRoundNumber(logEntry.getRoundNumber());
 
 								System.out.println("roundname is " + getRoundname());
-
+								getLog().append("\n" + getMapname() + " " + getRoundname());	
 								break;
 							case KILL:
 							case SCORE:
+								//System.out.println(logEntry.toString());
 								getBattle().add(logEntry);
 								round.add(logEntry);
+								getLog().append("\n" + logEntry.toString());
 								break;
 							default:
 
@@ -289,7 +296,10 @@ public class LogReader {
 					}
 					scanner.close();
 					getRounds().put(roundname, round);
-					getBattles().put(getMapname(), battle);
+					getBattles().put(getMapname(), getBattle());
+					
+					//round = new ArrayList<>();
+					
 				}
 
 				return FileVisitResult.CONTINUE;
@@ -306,8 +316,17 @@ public class LogReader {
 				.entrySet()) {
 			System.out.println(entry.getKey() + " " + entry.getValue());
 		}
+		
+		try (BufferedWriter bw = new BufferedWriter(new FileWriter(basePath + "//log.txt"))) {
+			bw.append(getLog());//Internally it does aSB.toString();
+			bw.flush();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 
 	}
+	
+
 
 	public void setBattle(ArrayList<LogEntry> battle) {
 		this.battle = battle;
@@ -339,6 +358,14 @@ public class LogReader {
 
 	public void setRounds(HashMap<String, ArrayList<LogEntry>> rounds) {
 		this.rounds = rounds;
+	}
+
+	public StringBuffer getLog() {
+		return log;
+	}
+
+	public void setLog(StringBuffer log) {
+		this.log = log;
 	}
 
 }

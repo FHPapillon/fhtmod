@@ -79,7 +79,7 @@ public class HeatmapDataProvider {
 				obj.put("y", dpo.getY());
 				obj.put("value", dpo.getNumber() > 1 ? dpo.getNumber() * FragalyzerConstants.heatmapDataPointMultiplicationFactor : dpo.getNumber());
 
-				fw.write(obj.toJSONString() + ",");
+				fw.write(obj.toJSONString() + (it.hasNext() ? "," : ""));
 
 				fw.append(System.getProperty("line.separator")); // e.g.
 																	// "\n"
